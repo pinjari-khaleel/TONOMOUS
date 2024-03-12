@@ -1,0 +1,113 @@
+.b-legalContent {
+  position: relative;
+  padding: 200px 0 120px;
+
+  &__container {
+    @include container();
+
+    max-width: 1000px;
+  }
+
+  &__page {
+    background-color: var(--color-white);
+    display: grid;
+    grid-gap: var(--grid-gap);
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  &__header {
+    margin: 0 0 60px;
+  }
+
+  &__content {
+    grid-column: 2 / span 6;
+    padding: 60px 0;
+  }
+
+  .s-content {
+    --heading-color: var(--color-black);
+    --text-color: var(--color-black-75);
+  }
+
+  .o-accordion {
+    &__items {
+      flex-direction: column;
+    }
+
+    &__item {
+      --accordion-item-border-color: transparent;
+      --accordion-item-margin: 0;
+      --collapsible-item-padding-inline: 0;
+
+      border-top: 1px solid var(--color-tonomus-gray-secondary-gray);
+      width: 100%;
+
+      &:last-child {
+        border-bottom: 1px solid var(--color-tonomus-gray-secondary-gray);
+      }
+    }
+
+    .o-collapsibleItem {
+      --collapsible-item-padding-inline: 0;
+
+      border: none;
+
+      &__content {
+        padding-inline-start: 10px;
+      }
+
+      &__body {
+        line-height: 1.25;
+      }
+
+      ul {
+        list-style-position: outside;
+      }
+    }
+
+    .m-toggleButton {
+      .a-label {
+        @include type("subTitle", "large");
+
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      &__chevron {
+        margin-inline-start: 0;
+      }
+    }
+  }
+
+  @include respond-to("XSMALL") {
+    &__container {
+      padding: 0;
+    }
+  }
+
+  @include respond-to("LARGE") {
+    &__content {
+      padding: 120px 0 60px;
+    }
+  }
+
+  @include theme("tonomus") {
+    color: var(--color-tonomus-purple);
+
+    --component-heading-color: currentColor;
+    --accordion-text-color: currentColor;
+    --accordion-item-checkron-color: currentColor;
+
+    .s-content {
+      --heading-color: var(--component-heading-color);
+      --text-color: var(--color-tonomus-purple);
+      --component-text-color: var(--color-tonomus-purple);
+      --component-highlight-color: var(--color-tonomus-purple);
+
+      b,
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+}

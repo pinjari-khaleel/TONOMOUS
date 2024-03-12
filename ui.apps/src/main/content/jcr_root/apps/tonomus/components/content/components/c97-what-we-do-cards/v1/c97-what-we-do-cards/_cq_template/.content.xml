@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          scrollComponent="{Boolean}true"
+          textIsRich="true">
+  <opportunity_card
+      cq:panelTitle="Workshop and Classes"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/components/c97-what-we-do-cards/v1/opportunity-cards">
+      <title
+        jcr:primaryType="nt:unstructured"
+        title="Workshop and Classes"/>
+      <image
+        jcr:primaryType="nt:unstructured"
+        src="/content/dam/tonomus/components/c97-what-we-do/workshops-classes.svg"/>
+  </opportunity_card>
+  <opportunity_card_1
+      cq:panelTitle="Venture Competitions"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/components/c97-what-we-do-cards/v1/opportunity-cards">
+      <title
+        jcr:primaryType="nt:unstructured"
+        title="Venture Competitions"/>
+      <image
+        jcr:primaryType="nt:unstructured"
+        src="/content/dam/tonomus/components/c97-what-we-do/venture-competitions.svg"/>
+  </opportunity_card_1>
+  <opportunity_card_2
+      cq:panelTitle="Venture Building Experise"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/components/c97-what-we-do-cards/v1/opportunity-cards">
+      <title
+        jcr:primaryType="nt:unstructured"
+        title="Venture Building Experise"/>
+      <image
+        jcr:primaryType="nt:unstructured"
+        src="/content/dam/tonomus/components/c97-what-we-do/venture-building-expertise.svg"/>
+  </opportunity_card_2>
+  <opportunity_card_3
+      cq:panelTitle="Ecosystem Mapping"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/components/c97-what-we-do-cards/v1/opportunity-cards">
+      <title
+        jcr:primaryType="nt:unstructured"
+        title="Ecosystem Mapping"/>
+      <image
+        jcr:primaryType="nt:unstructured"
+        src="/content/dam/tonomus/components/c97-what-we-do/ecosystem-mapping.svg"/>
+  </opportunity_card_3>
+</jcr:root>

@@ -1,0 +1,11 @@
+title: s10-tonomus-footer
+tonomus: true
+meta:
+  id: 's10'
+  status: 'done'
+  notes: ''
+  category: 'Structural (Site) Components'
+
+blocks:
+  - name: 's10-tonomus-footer'
+    data: 'import!../app/component/block/s10-tonomus-footer/data/en.yaml'

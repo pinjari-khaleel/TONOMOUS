@@ -1,0 +1,13 @@
+.m-videoTime {
+  @include type("body", "small");
+
+  color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  font-weight: 400;
+  white-space: nowrap;
+
+  &__timeDivider {
+    margin: 0 5px;
+  }
+}

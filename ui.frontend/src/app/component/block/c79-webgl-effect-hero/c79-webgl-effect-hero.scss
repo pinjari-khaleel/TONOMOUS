@@ -1,0 +1,144 @@
+.b-webglEffectHero {
+  --video-mask-button-spacing: 30%;
+  --component-highlight-color: var(--color-tonomus-green);
+
+  position: relative;
+
+  .a-tonomusLine {
+    position: absolute;
+    inset-inline-start: 15px;
+    inset-block-start: 15px;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  &__shapeBorder {
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    // Normalized position/scale from the Figma design, normalized position is
+    // multiplied by 100 to get percentages.
+    inset-block-start: 40%;
+    inset-inline-start: 50%;
+    inline-size: calc((100% * 1.5) - 4px);
+
+    @include respond-to(LARGE) {
+      inset-inline-start: 63.3%;
+      inset-block-start: 49%;
+      inline-size: calc((100% * 0.58125) - 4px);
+    }
+
+    [dir="rtl"] & {
+      transform: translate(50%, -50%) scaleX(-1);
+    }
+  }
+
+  &__buttonWrapper {
+    position: fixed;
+    inset-inline-end: 30px;
+    inset-block-end: 30px;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__playButton {
+    --icon-fill: var(--color-tonomus-purple-300);
+
+    visibility: visible;
+    opacity: 1;
+
+    &.-isHidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__muteButton {
+    [data-icon="muted"] {
+      display: none;
+    }
+
+    &.-isMuted {
+      .m-button__container {
+        background: var(--color-white-80a);
+      }
+
+      [data-icon="muted"] {
+        display: block;
+      }
+
+      [data-icon="unmuted"] {
+        display: none;
+      }
+    }
+
+    &.-isHidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__openVideoMask {
+    position: absolute;
+    inset-inline-end: 15%;
+    inset-block-start: 30%;
+  }
+
+  .o-heroContent {
+    background-color: transparent;
+
+    &__content {
+      padding-block-end: 80px;
+      justify-content: end;
+
+      .m-componentHeader {
+        inline-size: 100%;
+
+        .a-heading {
+          max-width: none;
+          inline-size: 100%;
+        }
+      }
+
+      @include respond-to(LARGE) {
+        justify-content: center;
+      }
+    }
+  }
+
+  @include respond-to(LARGE) {
+    .a-tonomusLine {
+      inset-inline-start: 40px;
+      inset-block-start: 40px;
+    }
+
+    &__openVideoMask {
+      inset-inline-end: 25%;
+      inset-block-end: 30%;
+      inset-block-start: auto;
+    }
+
+    &__getInTouch {
+      display: none;
+    }
+
+    &__playButton {
+      --play-button-spacing: 80px;
+    }
+  }
+
+  @include respond-to(XXLARGE) {
+    &__openVideoMask {
+      inset-block-end: 22%;
+      inset-inline-end: 28%;
+    }
+  }
+
+  @include theme("tonomus") {
+    .a-heading {
+      --component-highlight-color: var(--color-tonomus-green);
+    }
+  }
+}

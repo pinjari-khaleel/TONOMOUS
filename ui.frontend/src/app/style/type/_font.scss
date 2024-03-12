@@ -1,0 +1,11 @@
+/* Import webfonts custom for current project, using the `font-face` mixing from seng-scss  */
+@include fontFace("Brown", "brown", "brown-regular", 400, normal, swap);
+@include fontFace("Brown", "brown", "brown-light", 100, normal, swap);
+@include fontFace("Zarid", "zarid", "zarid-regular", 100, normal, swap);
+@include fontFace("Zarid", "zarid", "29LTZaridText-Bold", 400, normal, swap);
+@include fontFace("Bukra", "bukra", "bukra-regular", 400, normal, swap);
+@include fontFace("Bukra Alt", "bukra", "bukra-alt", 400, normal, swap);
+
+@include fontFace("MR Eaves", "mr-eaves", "mreavesmodot-book-webfont", 300, normal, swap);
+@include fontFace("MR Eaves", "mr-eaves", "mreavesmodot-reg-webfont", 400, normal, swap);
+@include fontFace("MR Eaves", "mr-eaves", "mreavesmodot-bold-webfont", 700, normal, swap);

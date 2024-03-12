@@ -1,0 +1,87 @@
+scrollComponent: true
+
+sitemap:
+  - label: 'Entdecken Sie NEOM'
+    items:
+      - label: 'Über NEOM'
+        href: '#'
+      - label: 'Unsere Mitarbeiter'
+        href: '#'
+
+  - label: 'Regionen'
+    items:
+      - label: 'Trojena'
+        href: '#'
+      - label: 'Oxagon'
+        href: '#'
+      - label: 'The Line'
+        href: '#'
+
+  - label: 'Sektoren'
+    items:
+      - label: 'Design & Konstruktion'
+        href: '#'
+      - label: 'Ausbildung'
+        href: '#'
+      - label: 'Energie'
+        href: '#'
+      - label: 'Unterhaltung & Kultur'
+        href: '#'
+      - label: 'Finanzdienstleistungen'
+        href: '#'
+      - label: 'Essen'
+        href: '#'
+      - label: 'Gesundheit, Wohlbefinden & Biotechnologie'
+        href: '#'
+      - label: 'Herstellung'
+        href: '#'
+      - label: 'Medien'
+        href: '#'
+      - label: 'Mobilität'
+        href: '#'
+      - label: 'Sport'
+        href: '#'
+      - label: 'Technik & Digital'
+        href: '#'
+      - label: 'Tourismus'
+        href: '#'
+      - label: 'Wasser'
+        href: '#'
+
+  - label: 'Werde teil von NEOM'
+    items:
+      - label: 'Investieren'
+        href: '#'
+      - label: 'Ein Geschäfft eröffnen'
+        href: '#'
+      - label: 'Lieferant werden'
+        href: '#'
+      - label: 'Partner'
+        href: '#'
+      - label: 'Arbeiten'
+        href: '#'
+
+  - label: 'Nachrichten & Soziales'
+    items:
+      - label: 'Neuzugänge'
+        href: '#'
+      - label: 'Pressemeldungen'
+        href: '#'
+      - label: 'Medien Gallerie'
+        href: '#'
+social:
+  items: 'import!../../../molecule/m12-social/data/tonomus.yaml'
+
+marginalia:
+  items:
+    - label: Datenschutz-Bestimmungen
+      href: 'privacy-policy.html'
+      target: '_blank'
+    - label: Nutzungsbedingungen
+      href: 'terms-of-use.html'
+      target: '_blank'
+    - label: Cookie-Richtlinie
+      href: 'cookie-policy.html'
+      target: '_blank'
+
+copyrightNotice: '© 2022 NEOM'

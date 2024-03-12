@@ -1,0 +1,40 @@
+<sly data-sly-template.select="${ @
+  selectModel='instance of forms.FormSelectModel with properties',
+  placeholder='Custom placeholder',
+  attribute='attribute'}"
+     data-sly-set.placeholderVal="${placeholder || selectModel.placeholder}"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+     data-sly-set.dataID="${[selectModel.id ? 'data-' : '', selectModel.id] @ join = '', context='attributeName'}"
+     data-sly-set.dataAttribute="${[attribute ? 'data-' : '', attribute] @ join = '', context='attributeName'}"
+     data-sly-set.dataAttributeCommon="${[dataID, dataAttribute] @ join = '||', context='text'}"
+     data-sly-use.attributesModel="${'com.tonomus.core.slingmodels.common.v1.AttributeCreatorModel' @ attrs=dataAttributeCommon}"
+     data-sly-set.iconName="${selectModel.iconName || 'chevron-down'}"
+>
+
+    <div class="a-select ${selectModel.disabled ? '-isDisabled' : ''}"
+         data-component="a15-select">
+        <select class="a-select__select"
+                data-sly-attribute.autocomplete="${selectModel.autocomplete}"
+                data-sly-attribute.disabled="${selectModel.disabled}"
+                data-sly-attribute.id="${selectModel.id}"
+                data-sly-attribute.name="${selectModel.name}"
+                data-sly-attribute.required="${selectModel.required}"
+                data-title-in-english="${selectModel.titleInEnglish}"
+                data-sly-attribute.data-validate="${selectModel.validate.json}"
+                data-sly-attribute="${attributesModel.attributes}"
+                data-select>
+
+            <option value="" data-sly-attribute.disabled="${selectModel.required}" selected>
+                ${placeholderVal}
+            </option>
+            <option data-sly-repeat.option="${selectModel.items}"
+                    value="${option.value}" data-sly-attribute.selected="${option.selected}">
+                ${option.label @ context='text'}
+            </option>
+        </select>
+        <div class="a-select__chevron">
+            <sly data-sly-call="${iconTemplate.icon @ name=iconName}"></sly>
+        </div>
+    </div>
+
+</sly>

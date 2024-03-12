@@ -1,0 +1,21 @@
+@media (max-width: @screen-mobile-max) {
+  .cmp-banner {
+    &__image img {
+      height: 100%;
+    }
+
+    &__content {
+      align-items: flex-start;
+      padding-block: 3rem;
+      padding-inline: 1.25rem;
+    }
+
+    &__action-container {
+      margin-block-start: 3.5rem;
+      width: 100%;
+      a {
+        .button-primary();
+      }
+    }
+  }
+}

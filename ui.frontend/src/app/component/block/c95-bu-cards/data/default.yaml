@@ -1,0 +1,88 @@
+scrollComponent: true
+id: 'c95-bu-cards'
+padding:
+  start: 'large'
+  end: 'large'
+header:
+  heading:
+    text: 'What We <strong>Do</strong>'
+
+items:
+  - content:
+      heading:
+        text: 'Cognitive Solutions'
+      description:
+        text:
+          'Developing and commercializing next-gen digital cognitive platforms, applications, and
+          solutions'
+      image:
+        src: 'image/c95-bu-cards/Cognitive-Solutions.png'
+        alt: 'Photo example'
+      logoImage:
+        src: 'image/business-units/cognitive-solutions.svg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'Compute'
+      description:
+        text:
+          'Delivering vital cloud services and hyperscale data centers through cutting-edge
+          infrastucture'
+      image:
+        src: 'image/c95-bu-cards/Compute.png'
+        alt: 'Photo example'
+      logoImage:
+        src: 'image/business-units/compute.svg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'Connect'
+      description:
+        text:
+          'Designing and operating advanced network infrustructre to deliver rapid and reliable
+          connectivity'
+      image:
+        src: 'image/c95-bu-cards/Connect.png'
+        alt: 'Photo example'
+      logoImage:
+        src: 'image/business-units/connect.svg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'Professional Services'
+      description:
+        text:
+          'Pioneering cognitive strategies, and super-charging the adoption of cognitive products
+          and services'
+      image:
+        src: 'image/c95-bu-cards/Professional-Services.png'
+        alt: 'Photo example'
+      logoImage:
+        src: 'image/business-units/professional-services.svg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'Security'
+      description:
+        text:
+          "Creating the world's first Al-powered security platform and offering unprecedented
+          cybersecurity"
+      image:
+        src: 'image/c95-bu-cards/Security.png'
+        alt: 'Photo example'
+      logoImage:
+        src: 'image/business-units/security.svg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'Venture Studio'
+      description:
+        text:
+          'Building a portfolio of ventures and talent capabiliies to launch a new generation of
+          entrepreneurs'
+      image:
+        src: 'image/c95-bu-cards/Venture-Studio.png'
+        alt: 'Photo example'
+      logoImage:
+        src: 'image/business-units/venture-studio.svg'
+        alt: 'Photo example'

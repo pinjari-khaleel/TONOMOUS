@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="./m28-radio-option.scss">
+<script src="./M28RadioOption.ts"></script>
+
+
+<div class="m-radioOption{{#if disabled}} -isDisabled{{/if}}"
+     data-component="m28-radio-option"
+     {{#if scrollComponent}}data-scroll-component{{/if}}
+>
+  <label class="m-radioOption__label">
+    {{> atom/a12-radio}}
+    <span class="m-radioOption__textLabel">
+      {{> atom/a07-label text=label size="small"}}
+    </span>
+  </label>
+</div>

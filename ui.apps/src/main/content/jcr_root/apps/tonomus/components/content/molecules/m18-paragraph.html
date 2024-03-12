@@ -1,0 +1,35 @@
+<sly data-sly-template.paragraph="${@
+       paragraphModel='ContentGridParagraphItemContentItem with properties',
+       contentCssClasses='CSS classes that is applied to the content copy'}"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+     data-sly-use.eyebrowTemplate="/apps/tonomus/components/content/atoms/a04-eyebrow.html"
+     data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html"
+     data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+     data-sly-use.moustacheTemplate="/apps/tonomus/components/content/atoms/a05-moustache.html"
+     data-sly-set.copySize="${paragraphModel.copy.size || paragraphModel.size}"
+     data-sly-set.sizeClass="${[copySize ? '-' : '', copySize] @ join = '', context='styleString'}"
+     data-sly-set.sizeValue="${contentCssClasses || sizeClass}">
+  <div class="m-paragraph" data-component="m18-paragraph">
+    <div class="m-paragraph__asset ${paragraphModel.image.src ? '-image' : ''}
+        ${[paragraphModel.image.type ? '-' : '', paragraphModel.image.type] @ join = '', context='styleString'}
+        ${[paragraphModel.alignAsset ? '-' : '', paragraphModel.alignAsset] @ join = '', context='styleString'}"
+         data-slide-in data-sly-test="${paragraphModel.icon || paragraphModel.image.src}">
+      <sly data-sly-test="${paragraphModel.image.src}"
+           data-sly-call="${imageTemplate.image @ imageModel=paragraphModel.image, variant='block', disableTransition=true}"></sly>
+      <sly data-sly-test="${!paragraphModel.image.src && paragraphModel.icon}"
+           data-sly-call="${iconTemplate.icon @ name=paragraphModel.icon}"></sly>
+    </div>
+    <sly data-sly-test="${paragraphModel.eyebrow.text}"
+         data-sly-call="${eyebrowTemplate.eyebrow @ eyebrowModel=paragraphModel.eyebrow}"></sly>
+    <div class="m-paragraph__heading" data-paragraph-heading
+         data-sly-test="${paragraphModel.heading.text}"
+         data-sly-call="${headingTemplate.heading @ headingModel=paragraphModel.heading}">
+    </div>
+  <sly data-sly-test="${paragraphModel.moustache.text}"
+       data-sly-call="${moustacheTemplate.moustache @ moustacheModel=paragraphModel.moustache}"></sly>
+    <div data-sly-set.content="${paragraphModel.copy.content || paragraphModel.copy}"
+        class="m-paragraph__content s-content ${sizeValue ? sizeValue : '-medium'}" data-paragraph-content>
+      ${content @ context='html'}
+    </div>
+  </div>
+</sly>

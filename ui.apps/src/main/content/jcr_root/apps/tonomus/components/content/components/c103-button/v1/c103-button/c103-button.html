@@ -1,0 +1,17 @@
+<sly
+  data-sly-use.commonCmpModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+  data-sly-use.button="com.tonomus.core.slingmodels.common.v1.ButtonModel"
+  data-sly-use.btnTpl="/apps/tonomus/components/content/molecules/m02-button.html"
+  data-sly-use.tpl="core/wcm/components/commons/v1/templates.html"
+  data-sly-call="${tpl.placeholder @ isEmpty=true}">
+</sly>
+
+<section
+  class="b-button"
+  data-component="c103-button"
+  style="${commonCmpModel.padding.styleInline @ context='styleString'}"
+  data-sly-attribute.data-scroll-component="${commonCmpModel.scrollComponent}"
+  data-sly-attribute.id="${commonCmpModel.anchorId}"
+  data-sly-set.id="${commonCmpModel.anchorId}">
+	<sly data-sly-call="${btnTpl.button @ buttonModel=button}"></sly>
+</section>

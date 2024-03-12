@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="./m17-list.scss">
+<script src="./M17List.ts"></script>
+
+<div class="m-list{{#if variant}} -{{variant}}{{/if}}" data-component="m17-list">
+  {{#with header}}
+    {{#with heading}}
+      {{> atom/a03-heading this }}
+    {{/with}}
+    {{#with copy}}
+      <div class="m-list__description s-content{{#if size}} -{{size}}{{^}} -medium{{/if}}">
+        {{{ content }}}
+      </div>
+    {{/with}}
+  {{/with}}
+  <{{#if ordered}}ol{{^}}ul{{/if}} class="m-list__items"{{#if ordered}} data-list-ordered{{/if}}>
+    {{#each items}}
+    <li class="m-list__item" data-list-item>
+      {{#if (condition ../variant '===' 'definitions') }}
+        <p class="m-list__title" data-list-item-title>{{{ title }}}</p>
+        <div class="m-list__copy s-content{{#if ../size}} -{{../size}}{{^}} -medium{{/if}}" data-list-item-copy>{{{ copy }}}</div>
+      {{^}}
+      <div class="s-content{{#if ../size}} -{{../size}}{{^}} -medium{{/if}}">{{{ this }}}</div>
+      {{/if}}
+    </li>
+    {{/each}}
+  </{{#if ordered}}ol{{^}}ul{{/if}}>
+</div>
+

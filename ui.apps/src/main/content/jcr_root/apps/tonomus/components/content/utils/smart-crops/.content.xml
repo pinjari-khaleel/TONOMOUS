@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Smart Crop Config"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+  <content
+      granite:class="dialog-container"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+      <columns
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+          jcr:title="Dynamic Media"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <column
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/container"
+              maximized="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <transparency-support
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                  fieldDescription="Check this to maintain alpha channel for all images inside this component. Not all image types are supported."
+                  name="./transparent"
+                  text="Images with transparency"
+                  value="{Boolean}true"
+                  uncheckedValue="{Boolean}false"/>
+              <crops
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                  composite="{Boolean}true"
+                  fieldDescription="Select dynamic crop to be shown for the view port breakpoint..."
+                  fieldLabel="Smart Crop"
+                  renderReadOnly="{Boolean}true">
+                <field
+                    granite:class="cmp-options--editor-item-multifield-composite-item coral-Well"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    name="./crops">
+                  <items jcr:primaryType="nt:unstructured">
+                    <option
+                        granite:class="cmp-options--editor-item-multifield-composite-item-container"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                      <items jcr:primaryType="nt:unstructured">
+                        <breakpoint
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                            fieldDescription="Select the breakpoint value in CSS px (the maximum is 2000, empty field allowed)"
+                            fieldLabel="Breakpoint (as Max Width)"
+                            max="2000"
+                            min="100"
+                            name="./breakpoint"/>
+                        <rendition
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                            fieldDescription="Smart Crop Renditions"
+                            fieldLabel="Smart Crop Rendition"
+                            name="./rendition">
+                          <datasource
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="tonomus/generic/datasource"
+                              path="tonomus/components/content/utils/dynamic-media-crops"/>
+                        </rendition>
+                        <image-relative-width
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Image slot relative width"
+                            emptyText="default: 100vw"
+                            fieldDescription="Specify relative image slot width at this breakpoint if less than 100 of viewport width"
+                            maxlength="{Long}6"
+                            name="./imgRelativeWidth"/>
+                        <widths
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Image Widths"
+                            emptyText="768,1024,1200"
+                            required="{Boolean}true"
+                            fieldDescription="Enter the pixel widths of images for DM to return, up to 2000 (no units). Separate entries with commas"
+                            name="./widths"/>
+                      </items>
+                    </option>
+                  </items>
+                </field>
+              </crops>
+            </items>
+          </column>
+        </items>
+      </columns>
+    </items>
+  </content>
+</jcr:root>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="C30 Downloads"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[tonomus.author]">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <downloads-tab
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Downloads"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <title
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter the download title."
+                      fieldLabel="Download title"
+                      name="./downloads/title"/>
+                  <downloads
+                      jcr:primaryType="nt:unstructured"
+                      fieldLabel="Downloads"
+                      fieldDescription="Click 'Add' to add a new download"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                      class="multifield-full-width"
+                      composite="{Boolean}true">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Downloads"
+                        name="./downloads/items"
+                        granite:class="accordion-multifield-item"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                      <items
+                          jcr:primaryType="nt:unstructured">
+                        <tab
+                            jcr:title="Download"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            jcr:primaryType="nt:unstructured">
+                          <items jcr:primaryType="nt:unstructured">
+                            <headingText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please enter the component Heading Text."
+                                fieldLabel="Heading Text"
+                                name="./heading/text"/>
+                            <headingElement
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                fieldDescription="Please select the component Heading Element Size/Weight."
+                                fieldLabel="Heading Element Size"
+                                name="./heading/element"/>
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldDescription="Please enter the description."
+                                fieldLabel="Description"
+                                name="./description"
+                                required="{Boolean}false"/>
+                            <link-href
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Please enter the Link."
+                                rootPath="/content/dam"
+                                fieldLabel="Link"
+                                name="./link/href"/>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                allowUpload="{Boolean}false"
+                                autoStart="{Boolean}false"
+                                class="cq-droptarget"
+                                dropZone="{Boolean}true"
+                                fieldDescription="Drag and Drop Image"
+                                fieldLabel="Image"
+                                fileNameParameter="./image/parameter"
+                                fileReferenceParameter="./image/src"
+                                mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                                multiple="{Boolean}false"
+                                name="name"
+                                title="Upload Image Asset"
+                                useHTML5="{Boolean}true"
+                                required="{Boolean}false"/>
+                            <eventTracking
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldLabel="Event tracking"
+                                fieldDescription="Event tracking if checked"
+                                name="./enabledEventTracking"
+                                text="Event tracking"
+                                value="true"
+                                uncheckedValue="false"/>
+                          </items>
+                        </tab>
+                      </items>
+                    </field>
+                  </downloads>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </downloads-tab>
+      <padding
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/foundation/include"
+              path="tonomus/components/content/utils/padding/content"/>
+      <advanced
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/advanced/content"/>
+    </items>
+  </content>
+</jcr:root>

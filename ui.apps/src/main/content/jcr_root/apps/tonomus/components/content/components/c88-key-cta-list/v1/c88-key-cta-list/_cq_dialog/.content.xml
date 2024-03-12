@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="C88 Key CTA List"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[tonomus.author]">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <general
+          jcr:primaryType="nt:unstructured"
+          jcr:title="General"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <headingText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                      sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext-semantic-markup"
+                      fieldDescription="Please enter Heading Text."
+                      fieldLabel="Heading Text"
+                      name="./heading/text"
+                      useFixedInlineToolbar="{Boolean}true">
+                  </headingText>
+                  <headingSize
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Size/Weight."
+                      fieldLabel="Heading Size"
+                      name="./heading/size">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingSize>
+                  <text
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                      sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext"
+                      fieldDescription="Please enter Text."
+                      fieldLabel="Text"
+                      name="./text"
+                      useFixedInlineToolbar="{Boolean}true">
+                  </text>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </general>
+      <list
+          jcr:primaryType="nt:unstructured"
+          jcr:title="CTA List"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <items
+                      jcr:primaryType="nt:unstructured"
+                      fieldLabel="CTA"
+                      fieldDescription="Click 'Add' to add a new CTA"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                      class="multifield-full-width"
+                      validation="multifield-max-8"
+                      composite="{Boolean}true">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="CTA"
+                        name="./list"
+                        granite:class="accordion-multifield-item"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                      <items
+                          jcr:primaryType="nt:unstructured">
+                        <tab
+                            jcr:title="CTA"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            jcr:primaryType="nt:unstructured">
+                          <items jcr:primaryType="nt:unstructured">
+                            <text
+                                granite:class="accordion-multifield-item-title"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="CTA Text."
+                                fieldLabel="CTA Text"
+                                name="./text"/>
+                            <icon
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Please select Icon."
+                                fieldLabel="Icon"
+                                name="./icon">
+                              <items jcr:primaryType="nt:unstructured">
+                                <none
+                                    jcr:primaryType="nt:unstructured"
+                                    selected="{Boolean}true"
+                                    text="None"
+                                    value=""/>
+                                <play-solid
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Play Solid"
+                                    value="play-solid"/>
+                                <play-outline
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Play Outline"
+                                    value="play-outline"/>
+                                <arrow-right
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Arrow Right"
+                                    value="arrow-right"/>
+                              </items>
+                            </icon>
+                            <description
+                                granite:class="accordion-multifield-item-title"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="CTA description."
+                                fieldLabel="CTA description"
+                                name="./description"/>
+                            <cta-ref
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Please select the cta reference."
+                                fieldLabel="CTA Reference"
+                                name="./href"
+                                rootPath="/content"/>
+                            <cta-ref-target
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Please select cta reference target."
+                                fieldLabel="CTA Reference Target"
+                                name="./target">
+                              <items jcr:primaryType="nt:unstructured">
+                                <blank
+                                    jcr:primaryType="nt:unstructured"
+                                    text="New frame"
+                                    value="_blank"/>
+                                <self
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Same frame"
+                                    value="_self"/>
+                              </items>
+                            </cta-ref-target>
+                          </items>
+                        </tab>
+                      </items>
+                    </field>
+                  </items>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </list>
+      <padding
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/padding/content"/>
+      <advanced
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/advanced/content"/>
+    </items>
+  </content>
+</jcr:root>

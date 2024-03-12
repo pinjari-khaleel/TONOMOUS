@@ -1,0 +1,25 @@
+<sly data-sly-template.countryDropDown="${ @
+  countryDropDownModel='CountrySelectModel dropdown model'
+  }"
+     data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html"
+     data-sly-use.countrySelectTemplate="/tonomus/tonomus/components/content/atoms/a23-country-select.html"
+     data-sly-use.selectTemplate="/apps/tonomus/components/content/atoms/a15-select.html"
+     data-sly-use.formErrorTemplate="/apps/tonomus/components/content/atoms/a25-form-error.html">
+
+    <div class="m-countryDropdown" data-component="m41-country-dropdown"
+         data-sly-attribute.id="${countryDropDownModel.id}"
+         data-sly-attribute.data-items="${countryDropDownModel.itemsJson}">
+
+        <label class="m-countryDropdown__textLabel"
+               for="country-dropdown-${countryDropDownModel.titleInEnglish}"
+                data-sly-test="${countryDropDownModel.label}">
+            <sly data-sly-call="${labelTemplate.label @ size='small', text=countryDropDownModel.label}"></sly>
+        </label>
+
+        <sly data-sly-test="${countryDropDownModel.name}"
+             data-sly-call="${countrySelectTemplate.countryDropDownModel @ countryDropDownModel=countryDropDownModel}"></sly>
+        <sly data-sly-test="${countryDropDownModel.name}"
+             data-sly-call="${selectTemplate.select @ selectModel=countryDropDownModel}"></sly>
+        <sly data-sly-call="${formErrorTemplate.formError @ id=countryDropDownModel.id}"></sly>
+    </div>
+</sly>

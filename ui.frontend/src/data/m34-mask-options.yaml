@@ -1,0 +1,127 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'M34 Mask Options'
+
+meta:
+  id: ''
+  status: 'done'
+  notes: ''
+  category: 'Style Guide'
+
+blocks:
+  - name: 'c79-webgl-effect-hero'
+    data:
+      background:
+        mask:
+          opacity: 0.75
+        image:
+          src: './image/gold-placeholder.png'
+      scrollComponent: true
+
+      align:
+        horizontal: start
+
+      loopingVideo:
+        props:
+          src: 'video/video-preview.mp4'
+          type: video/mp4
+
+      content:
+        header:
+          heading:
+            element: 'h1'
+            size: 'h2'
+            text:
+              'The future is<br /> <strong>Cognitive.</strong><br />The future is<br
+              /><strong>Tonomus.</strong>'
+      openVideoButton:
+        level: primary
+        theme: white
+        label: 'Start'
+      muteButton:
+        level: primary
+        theme: white
+      playButton:
+        level: primary
+        theme: white
+        data:
+          video-button: null
+        variant: play
+        video:
+          props:
+            sources:
+              - src: 'video/video-preview.mp4'
+                type: video/mp4
+            originalWidth: 16
+            originalHeight: 9
+            autoplay: true
+            muted: false
+            loop: false
+            disablePreload: true
+            controls:
+              playPause: true
+              fullscreen: true
+              seek: true
+      getInTouch:
+        level: primary
+        theme: green
+        href: '#get-in-touch'
+  - name: 'c79-webgl-effect-hero'
+    data:
+      background:
+        mask:
+          opacity: 0.25
+        image:
+          src: './image/gold-placeholder.png'
+      scrollComponent: true
+
+      align:
+        horizontal: start
+
+      loopingVideo:
+        props:
+          src: 'video/video-preview.mp4'
+          type: video/mp4
+
+      content:
+        header:
+          heading:
+            element: 'h1'
+            size: 'h2'
+            text:
+              'The future is<br /> <strong>Cognitive.</strong><br />The future is<br
+              /><strong>Tonomus.</strong>'
+      openVideoButton:
+        level: primary
+        theme: white
+        label: 'Start'
+      muteButton:
+        level: primary
+        theme: white
+      playButton:
+        level: primary
+        theme: white
+        data:
+          video-button: null
+        variant: play
+        video:
+          props:
+            sources:
+              - src: 'video/video-preview.mp4'
+                type: video/mp4
+            originalWidth: 16
+            originalHeight: 9
+            autoplay: true
+            muted: false
+            loop: false
+            disablePreload: true
+            controls:
+              playPause: true
+              fullscreen: true
+              seek: true
+      getInTouch:
+        level: primary
+        theme: green
+        href: '#get-in-touch'

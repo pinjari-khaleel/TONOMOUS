@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Advanced"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+  <content
+      jcr:primaryType="nt:unstructured"
+      jcr:title="Advanced"
+      sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+      <columns
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <column
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/container">
+            <items jcr:primaryType="nt:unstructured">
+              <id
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                  fieldDescription="Enter the Anchor Link ID for this component. This ID will be utilized to scroll to this component when used in a link."
+                  fieldLabel="Anchor Link ID"
+                  name="./anchorId"/>
+              <label
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                  fieldDescription="Enter the Anchor Link Label for this component. This label will be utilized to display name in sidebar navigation."
+                  fieldLabel="Anchor Link Label"
+                  name="./anchorLabel"/>
+              <scrollComponent
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                  fieldDescription="Data Scroll Component."
+                  name="./scrollComponent"
+                  text="Data Scroll Component"
+                  value="{Boolean}true"
+                  uncheckedValue="{Boolean}false"/>
+            </items>
+          </column>
+        </items>
+      </columns>
+    </items>
+  </content>
+</jcr:root>

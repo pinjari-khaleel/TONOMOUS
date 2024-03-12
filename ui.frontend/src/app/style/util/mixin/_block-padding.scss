@@ -1,0 +1,4 @@
+@mixin blockPadding() {
+  box-sizing: border-box;
+  padding: var(--block-padding) 0;
+}

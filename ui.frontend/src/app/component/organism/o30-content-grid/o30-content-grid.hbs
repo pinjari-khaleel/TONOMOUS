@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="./o30-content-grid.scss">
+<script src="./O30ContentGrid.ts"></script>
+
+<div class="o-contentGrid
+  {{#if variant}} -{{variant}}{{/if}}
+  {{#if contentWidth}} -{{contentWidth}}{{else}} -small{{/if}}
+  {{#if theme}} t-{{theme}}{{/if}}
+  {{#if background}}-hasBackgroundImage{{/if}}"
+  data-component="o30-content-grid"
+  {{#if (condition backgroundColor '||' padding)}}
+  style="{{#with padding}}--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};{{/with}}
+    {{#with backgroundColor}}--component-background-color: {{#unless (condition this '===' transparent)}}var(--color-{{this}}){{^}}transparent{{/unless}};{{/with}}"
+  {{/if}}
+>
+  {{#with background}}{{> molecule/m34-component-background scrollComponent=true disableTransition=true }}{{/with}}
+
+  <div class="o-contentGrid__container">
+    {{#each items}}
+      <div class="o-contentGrid__item
+        {{#if type}} -{{type}}{{/if}}
+        {{#with align}}
+          {{#if horizontal}} -{{horizontal}}{{^}} -start{{/if}}
+          {{#if vertical}} -{{vertical}}{{^}} -middle{{/if}}
+        {{/with}}"
+           data-content-item
+      >
+
+        {{#if (condition type '===' 'list')}}
+          {{> molecule/m17-list content }}
+        {{/if}}
+
+        {{#if (condition type '===' 'paragraph')}}
+          {{> molecule/m18-paragraph content }}
+        {{/if}}
+
+        {{#if (condition type '===' 'asset')}}
+          {{#if content.image }}
+            {{> molecule/m16-figure content }}
+          {{/if}}
+          {{#if content.video }}
+            {{> atom/a19-video content.video }}
+          {{/if}}
+        {{/if}}
+
+        {{#if content.buttons}}
+          <div class="o-contentGrid__buttons{{#with content.buttonType}} -{{this}}{{/with}}" data-content-buttons>
+            {{#each content.buttons}}
+              {{#if (condition ../content.buttonType '===' 'pillar')}}
+                {{> molecule/m58-pillar-cta }}
+              {{else}}
+                {{> molecule/m02-button }}
+              {{/if}}
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+</div>

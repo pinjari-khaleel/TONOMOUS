@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./m59-opportunity-card.scss">
+<script src="./M59OpportunityCard.ts"></script>
+
+
+<div class="m-opportunityCard"
+  data-component="m59-opportunity-card"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+>
+  <div class="m-opportunityCard__content" data-carousel-content>
+    {{#with icon}}
+      {{> atom/a01-image this disableTransition=true }}
+    {{/with}}
+    <p class="m-opportunityCard__cardTitle">{{title}}</p>
+  </div>
+</div>

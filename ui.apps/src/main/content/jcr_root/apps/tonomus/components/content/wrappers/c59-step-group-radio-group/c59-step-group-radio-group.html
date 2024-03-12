@@ -1,0 +1,8 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly
+    data-sly-use.radioGroupTemplate="/apps/tonomus/components/content/organisms/o76-radio-group.html"
+    data-sly-use.stepGroupModel="com.tonomus.core.slingmodels.components.v1.forms.multistep.MultiStepFormGroupModel"
+    data-sly-call="${radioGroupTemplate.radioGroup @ stepGroupModel=stepGroupModel}">
+</sly>

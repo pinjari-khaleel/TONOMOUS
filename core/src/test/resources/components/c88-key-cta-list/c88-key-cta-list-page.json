@@ -1,0 +1,62 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Thu Sep 08 2022 14:51:48 GMT+0600",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "jcr:title": "Test",
+    "cq:template": "/conf/tonomus/settings/wcm/templates/t04-home",
+    "jcr:created": "Thu Sep 08 2022 14:51:48 GMT+0600",
+    "cq:lastModified": "Sun Sep 18 2022 19:09:43 GMT+0600",
+    "isRightToLeftLanguage": "ltr",
+    "sling:resourceType": "neom/components/structure/tonomus-home-page",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c88_key_cta_list": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Sun Sep 18 2022 19:06:44 GMT+0600",
+          "text": "<p>To create a cognitive world, it’s everybody in. As we set a new standard for what’s possible,   we recognize that potential is everywhere: It’s in our partners, it’s in our customers, it’s in   our team, it’s in you.</p><p>Leverage our innovative technologies as a business partner, transform   your career on our inclusive team, or make your vision a reality as an entrepreneur—however you   contribute, we welcome your collaboration on a future created by us and for us.</p>",
+          "jcr:lastModified": "Sun Sep 18 2022 19:09:43 GMT+0600",
+          "scrollComponent": "false",
+          "sling:resourceType": "neom/components/content/components/c88-key-cta-list/v1/c88-key-cta-list",
+          "textIsRich": [
+            "true",
+            "true"
+          ],
+          "heading": {
+            "jcr:primaryType": "nt:unstructured",
+            "size": "h2",
+            "text": "<p>Join the&nbsp;</p>\r\n<p><strong>movement</strong></p>\r\n"
+          },
+          "list": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+              "jcr:primaryType": "nt:unstructured",
+              "href": "#form-id",
+              "icon": "arrow-right",
+              "text": "GET IN TOUCH"
+            },
+            "item1": {
+              "jcr:primaryType": "nt:unstructured",
+              "icon": "arrow-right",
+              "text": "STAY INFORMED"
+            },
+            "item2": {
+              "jcr:primaryType": "nt:unstructured",
+              "icon": "arrow-right",
+              "text": "BECOME PART OF THE TEAM"
+            }
+          }
+        }
+      }
+    }
+  }
+}

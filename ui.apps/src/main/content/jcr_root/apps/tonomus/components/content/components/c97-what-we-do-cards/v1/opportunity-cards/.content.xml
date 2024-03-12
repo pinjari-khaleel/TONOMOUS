@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          cq:icon="card"
+          jcr:description="Single item for the C97 What We Do Cards component (Opportunity Card)"
+          jcr:primaryType="cq:Component"
+          jcr:title="C97 What We Do | Opportunity Card"
+          componentGroup="Tonomus.Content"/>

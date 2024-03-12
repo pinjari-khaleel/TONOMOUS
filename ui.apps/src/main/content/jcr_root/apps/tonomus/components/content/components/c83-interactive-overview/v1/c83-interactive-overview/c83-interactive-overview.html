@@ -1,0 +1,31 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+<sly
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.interactiveModel="com.tonomus.core.slingmodels.components.v1.interactive_overview.InteractiveOverviewModel"
+    data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+    data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html"
+    data-sly-set.pixelatedBackgroundImagePath="/etc.clientlibs/tonomus/clientlibs/clientlib-site/resources/asset/image/c83-pixelated-background.0a50940.png"></sly>
+
+<section class="b-interactiveOverview" data-component="c83-interactive-overview"
+         data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+         data-sly-attribute.id="${commonComponentModel.anchorId}"
+         data-sly-attribute.data-items="${interactiveModel.itemsJson}"
+         style="${commonComponentModel.padding.styleInline @ context='styleString'}"
+         data-lazy-component>
+  <div class="b-interactiveOverview__container">
+    <sly data-sly-call="${headingTemplate.heading @ text=interactiveModel.header.heading.text,
+    size='h1', element='h1'}" data-sly-test="${interactiveModel.header.heading.text}"></sly>
+
+    <ul class="b-interactiveOverview__items" data-sly-list.item="${interactiveModel.items}" data-items>
+      <li class="b-interactiveOverview__item ${itemList.index == 0 ? '-isActive' : '' @ context='styleString'}">
+        <button class="b-interactiveOverview__card" data-card-button>
+          <sly data-sly-call="${imageTemplate.image @ imagePath=pixelatedBackgroundImagePath,
+          disableTransition=true}" data-sly-test="${item.content.image}"></sly>
+
+          <span data-sly-test="${item.content.heading.text}">${item.content.heading.text @ context='text'}</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+@media (max-width: @screen-mobile-max) {
+  .cmp-marquee {
+    padding-block-start: 1rem;
+    --gap: 2.896rem;
+    &__content {
+      img {
+        height: 52px;
+      }
+    }
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: ~'translateX(calc(-100% - var(--gap)))';
+    }
+  }
+}

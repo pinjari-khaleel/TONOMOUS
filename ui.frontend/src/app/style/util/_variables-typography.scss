@@ -1,0 +1,584 @@
+$type: (
+  heading: (
+    h1: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 119px,
+        letterSpacing: 0.12em,
+        lineHeight: 134%,
+      ),
+      mobile: (
+        fontSize: 67px,
+        letterSpacing: 0.09em,
+        lineHeight: 119%,
+      ),
+    ),
+    h2: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 89px,
+        letterSpacing: 0.12em,
+        lineHeight: 135%,
+      ),
+      mobile: (
+        fontSize: 50px,
+        letterSpacing: 0.09em,
+        lineHeight: 120%,
+      ),
+    ),
+    h3: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 67px,
+        letterSpacing: 0.12em,
+        lineHeight: 119%,
+      ),
+      mobile: (
+        fontSize: 37px,
+        letterSpacing: 0.09em,
+        lineHeight: 110%,
+      ),
+    ),
+    h4: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 50px,
+        letterSpacing: 0.12em,
+        lineHeight: 120%,
+      ),
+      mobile: (
+        fontSize: 28px,
+        letterSpacing: 0.09em,
+        lineHeight: 143%,
+      ),
+    ),
+    h5: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 37px,
+        letterSpacing: 0.12em,
+        lineHeight: 120%,
+      ),
+      mobile: (
+        fontSize: 28px,
+        letterSpacing: 0.09em,
+        lineHeight: 143%,
+      ),
+    ),
+    h6: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 28px,
+        letterSpacing: 0.12em,
+        lineHeight: 143%,
+      ),
+      mobile: (
+        fontSize: 21px,
+        letterSpacing: 0.09em,
+        lineHeight: 135%,
+      ),
+    ),
+  ),
+  overline: (
+    large: (
+      fontWeight: 400,
+      lineHeight: 120%,
+      desktop: (
+        fontSize: 21px,
+        letterSpacing: 0.12em,
+      ),
+      mobile: (
+        fontSize: 16px,
+        letterSpacing: 0.09em,
+      ),
+    ),
+    medium: (
+      fontWeight: 400,
+      fontSize: 16px,
+      desktop: (
+        letterSpacing: 0.12em,
+        lineHeight: 140%,
+      ),
+      mobile: (
+        letterSpacing: 0.09em,
+        lineHeight: 120%,
+      ),
+    ),
+    small: (
+      fontWeight: 400,
+      fontSize: 12px,
+      lineHeight: 120%,
+      desktop: (
+        letterSpacing: 0.12em,
+      ),
+      mobile: (
+        letterSpacing: 0.09em,
+      ),
+    ),
+  ),
+  button: (
+    large: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 16px,
+        letterSpacing: 0.06em,
+        lineHeight: 120%,
+      ),
+      mobile: (
+        fontSize: 16px,
+        letterSpacing: 0.06em,
+        lineHeight: 120%,
+      ),
+      ar: (
+        fontSize: 20px,
+        lineHeight: 120%,
+      ),
+    ),
+    small: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 12px,
+        letterSpacing: 0.12em,
+        lineHeight: 120%,
+      ),
+      mobile: (
+        fontSize: 12px,
+        letterSpacing: 0.12em,
+        lineHeight: 120%,
+      ),
+      ar: (
+        fontSize: 14px,
+        lineHeight: 140%,
+      ),
+    ),
+  ),
+  capsCopy: (
+    large: (
+      fontWeight: 100,
+      desktop: (
+        fontSize: 21px,
+        letterSpacing: 0.12em,
+        lineHeight: 190%,
+      ),
+      mobile: (
+        fontSize: 16px,
+        letterSpacing: 0.09em,
+        lineHeight: 166%,
+      ),
+    ),
+    small: (
+      fontWeight: 100,
+      fontSize: 16px,
+      desktop: (
+        letterSpacing: 0.12em,
+        lineHeight: 166%,
+      ),
+      mobile: (
+        letterSpacing: 0.09em,
+        lineHeight: 135%,
+      ),
+    ),
+    xsmall: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 12px,
+        letterSpacing: 0.06em,
+        lineHeight: 120%,
+      ),
+      mobile: (
+        fontSize: 10px,
+        letterSpacing: 0.06em,
+        lineHeight: 120%,
+      ),
+    ),
+  ),
+  subTitle: (
+    large: (
+      fontWeight: 100,
+      desktop: (
+        fontSize: 28px,
+        letterSpacing: 0,
+        lineHeight: 142%,
+      ),
+      mobile: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+    ),
+    small: (
+      fontWeight: 100,
+      desktop: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 144%,
+      ),
+      mobile: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+    ),
+  ),
+  body: (
+    xxlarge: (
+      fontWeight: 100,
+      desktop: (
+        fontSize: 50px,
+        letterSpacing: 0,
+        lineHeight: 132%,
+      ),
+      mobile: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+      ar: (
+        fontSize: 66px,
+        lineHeight: 92%,
+      ),
+    ),
+    xlarge: (
+      fontWeight: 100,
+      desktop: (
+        fontSize: 37px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+      mobile: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+      ar: (
+        fontSize: 48px,
+        lineHeight: 126%,
+      ),
+    ),
+    large: (
+      fontWeight: 100,
+      desktop: (
+        fontSize: 28px,
+        letterSpacing: 0,
+        lineHeight: 143%,
+      ),
+      mobile: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+      ar: (
+        fontSize: 38px,
+        lineHeight: 106%,
+      ),
+    ),
+    medium: (
+      fontWeight: 100,
+      desktop: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 148%,
+      ),
+      mobile: (
+        fontSize: 16px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+      ar: (
+        fontSize: 26px,
+        lineHeight: 120%,
+      ),
+    ),
+    small: (
+      fontWeight: 100,
+      letterSpacing: 0,
+      lineHeight: 150%,
+      desktop: (
+        fontSize: 16px,
+      ),
+      mobile: (
+        fontSize: 16px,
+        letterSpacing: 0,
+        lineHeight: 150%,
+      ),
+      ar: (
+        fontSize: 20px,
+        lineHeight: 120%,
+      ),
+    ),
+    xsmall: (
+      fontWeight: 100,
+      fontSize: 12px,
+      letterSpacing: 0.02em,
+      lineHeight: 150%,
+      ar: (
+        fontSize: 14px,
+        lineHeight: 140%,
+      ),
+    ),
+  ),
+  navigation: (
+    large: (
+      fontWeight: 400,
+      letterSpacing: 0.12em,
+      textTransform: uppercase,
+      lineHeight: 188%,
+      desktop: (
+        fontSize: 14px,
+      ),
+      mobile: (
+        fontSize: 14px,
+      ),
+    ),
+    small: (
+      fontWeight: 100,
+      textTransform: uppercase,
+      desktop: (
+        fontSize: 12px,
+        letterSpacing: 0.12em,
+        lineHeight: 100%,
+      ),
+      mobile: (
+        fontSize: 12px,
+        letterSpacing: 0.12em,
+        lineHeight: 237%,
+      ),
+    ),
+    secondary: (
+      fontWeight: 100,
+      textTransform: uppercase,
+      desktop: (
+        fontSize: 14px,
+        letterSpacing: 0,
+        lineHeight: 120%,
+      ),
+      mobile: (
+        fontSize: 14px,
+        letterSpacing: 0,
+        lineHeight: 120%,
+      ),
+    ),
+  ),
+  tag: (
+    medium: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 12px,
+        letterSpacing: 0.12em,
+        lineHeight: 120%,
+      ),
+      mobile: (
+        fontSize: 12px,
+        letterSpacing: 0.12em,
+        lineHeight: 120%,
+      ),
+    ),
+  ),
+  exception: (
+    fullWidthHeading: (
+      fontWeight: 400,
+      textTransform: uppercase,
+      desktop: (
+        fontSize: 89px,
+        letterSpacing: 0.12em,
+        lineHeight: 135%,
+      ),
+      mobile: (
+        fontSize: 37px,
+        letterSpacing: 0.09em,
+        lineHeight: 126%,
+      ),
+    ),
+    blockquote: (
+      fontWeight: 100,
+      desktop: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 148%,
+      ),
+      mobile: (
+        fontSize: 16px,
+        letterSpacing: 0,
+        lineHeight: 150%,
+      ),
+    ),
+    filters: (
+      fontWeight: 400,
+      letterSpacing: 0.06em,
+      lineHeight: 20%,
+      desktop: (
+        fontSize: 12px,
+      ),
+      mobile: (
+        fontSize: 12px,
+      ),
+    ),
+    body14: (
+      fontWeight: 100,
+      letterSpacing: 0,
+      lineHeight: 150%,
+      desktop: (
+        fontSize: 14px,
+      ),
+      mobile: (
+        fontSize: 14px,
+      ),
+    ),
+    small-description: (
+      fontWeight: 100,
+      letterSpacing: 0,
+      lineHeight: 150%,
+      desktop: (
+        fontSize: 14px,
+      ),
+      mobile: (
+        fontSize: 14px,
+      ),
+    ),
+    floating-button-link: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 12px,
+        letterSpacing: 0.12em,
+        lineHeight: 120%,
+      ),
+      mobile: (
+        fontSize: 12px,
+        letterSpacing: 0.12em,
+        lineHeight: 120%,
+      ),
+    ),
+    small-links: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 12px,
+        letterSpacing: 0,
+        lineHeight: 164%,
+      ),
+      mobile: (
+        fontSize: 12px,
+        letterSpacing: 0,
+        lineHeight: 164%,
+      ),
+    ),
+    factsNumber: (
+      fontWeight: 100,
+      desktop: (
+        fontSize: 89px,
+        letterSpacing: 0,
+        lineHeight: 100%,
+      ),
+      mobile: (
+        fontSize: 50px,
+        letterSpacing: 0,
+        lineHeight: 134%,
+      ),
+    ),
+    factsNumberOutline: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 67px,
+        letterSpacing: 0,
+        lineHeight: 100%,
+      ),
+      mobile: (
+        fontSize: 50px,
+        letterSpacing: 0,
+        lineHeight: 134%,
+      ),
+    ),
+    footerLink: (
+      fontWeight: 100,
+      fontSize: 16px,
+      letterSpacing: 0,
+      lineHeight: 100%,
+    ),
+    smallLinks: (
+      fontWeight: 400,
+      fontSize: 12px,
+      letterSpacing: 0.12em,
+      lineHeight: 120%,
+    ),
+    sectorsTitle: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 50px,
+        letterSpacing: 0.12em,
+        lineHeight: 120%,
+      ),
+      mobile: (
+        fontSize: 28px,
+        letterSpacing: 0.09em,
+        lineHeight: 143%,
+      ),
+    ),
+    sectorLabel: (
+      fontWeight: 400,
+      letterSpacing: 0.06em,
+      lineHeight: 120%,
+      desktop: (
+        fontSize: 12px,
+      ),
+      mobile: (
+        fontSize: 9px,
+      ),
+    ),
+    download-zip: (
+      fontWeight: 400,
+      letterSpacing: 0.02em,
+      lineHeight: 150%,
+      desktop: (
+        fontSize: 14px,
+      ),
+      mobile: (
+        fontSize: 12px,
+      ),
+    ),
+    countdownNumbers: (
+      fontWeight: 400,
+      letterSpacing: 0.02em,
+      lineHeight: 134%,
+      desktop: (
+        fontSize: 140px,
+      ),
+      mobile: (
+        fontSize: 37px,
+      ),
+    ),
+    countdownColon: (
+      fontWeight: 400,
+      letterSpacing: 0.02em,
+      lineHeight: 134%,
+      desktop: (
+        fontSize: 89px,
+      ),
+      mobile: (
+        fontSize: 28px,
+      ),
+    ),
+    timeline: (
+      fontWeight: 400,
+      letterSpacing: 0.03em,
+      lineHeight: 120%,
+      desktop: (
+        fontSize: 32px,
+      ),
+      mobile: (
+        fontSize: 21px,
+      ),
+    ),
+    scrollGallery: (
+      fontWeight: 400,
+      lineHeight: 143%,
+      desktop: (
+        fontSize: 28px,
+      ),
+      mobile: (
+        fontSize: 23px,
+      ),
+    ),
+  ),
+);
+
+$type-kind: body !default;
+$type-variant: medium !default;

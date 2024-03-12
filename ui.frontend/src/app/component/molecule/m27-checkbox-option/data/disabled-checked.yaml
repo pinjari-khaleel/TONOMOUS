@@ -1,0 +1,6 @@
+id: checkbox-option-example-4
+label: Disabled and checked checkbox option example
+name: checkbox-option-example-4
+checked: true
+disabled: true
+value: baz

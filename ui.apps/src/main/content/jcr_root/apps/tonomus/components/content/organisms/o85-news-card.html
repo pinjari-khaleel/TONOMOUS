@@ -1,0 +1,23 @@
+<sly data-sly-template.newsCard="${ @ newsCardModel='News card model. CardSliderBaseCardModel.java'}"
+     data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html">
+<a class="o-newsCard" href="#"
+  data-component="o85-news-card"
+     data-sly-attribute.data-scroll-component="${newsCardModel.scrollComponent}"
+     data-sly-attribute.id="${newsCardModel.anchorId}"
+     data-sly-attribute.href="${newsCardModel.link.href}"
+     data-sly-attribute.target="${newsCardModel.link.target}"
+>
+  <sly data-sly-call="${imageTemplate.image @ imageModel=newsCardModel.image,
+  disableTransition=true}"></sly>
+
+  <div class="o-newsCard__content">
+    <div class="o-newsCard__title">
+      ${newsCardModel.title @context='html'}
+    </div>
+
+    <div class="o-newsCard__metaWrapper">
+      ${newsCardModel.meta @ context='text'}
+    </div>
+  </div>
+</a>
+</sly>

@@ -1,0 +1,167 @@
+.o-modal {
+  @include position(0);
+  @include vh(100, height, dvh);
+
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: none;
+  position: fixed;
+  z-index: zindex($zLayout, modal);
+
+  &__container {
+    @include size(100%);
+  }
+
+  &__mask {
+    @include size(100%);
+
+    background: var(--modal-mask-color);
+    position: absolute;
+  }
+
+  &__content {
+    overflow: auto;
+    height: 100%;
+  }
+
+  &__panel {
+    @include position(0, 0, 0, auto);
+
+    background: var(--modal-background-color);
+    color: var(--modal-text-color);
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+
+    .a-heading {
+      color: var(--modal-heading-color);
+    }
+  }
+
+  &__controls {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+  }
+
+  .m-button.-close {
+    --button-background-color: var(--color-white);
+    --button-border-color: var(--color-white-20a);
+    --button-size: 60px;
+    --button-text-color: var(--color-black);
+
+    border-radius: 50%;
+    box-shadow: 0 4px 6px var(--button-shadow-color);
+  }
+
+  &.t-dark,
+  &.t-navy {
+    --modal-background-color: var(--color-black);
+    --modal-text-color: var(--color-black-20);
+
+    .m-button.-close {
+      --button-background-color: transparent;
+      --button-border-color: var(--color-white-20a);
+      --button-text-color: var(--color-white);
+      --button-border-width: 1px;
+
+      box-shadow: none;
+    }
+  }
+
+  &.t-navy {
+    --modal-background-color: var(--color-nic-navy);
+  }
+
+  &.-transparentPanel {
+    --modal-background-color: transparent;
+    --modal-mask-color: var(--modal-dark-mask-color);
+  }
+
+  &.-isOpen {
+    pointer-events: all;
+  }
+
+  &.-fullBleedCarousel {
+    .o-modal__content {
+      padding: 0;
+    }
+    .o-modal__panel {
+      max-width: 560px;
+    }
+  }
+
+  @include respond-to("LARGE") {
+    .m-button.-close {
+      --button-background-color: transparent;
+      --button-border-color: var(--color-white-20a);
+      --button-size: 80px;
+      --button-text-color: var(--color-white);
+    }
+
+    &__controls {
+      right: 840px;
+      top: 40px;
+    }
+
+    &.-fullBleedCarousel {
+      .o-modal__content {
+        padding: 0;
+      }
+
+      .o-modal__controls {
+        right: 600px;
+      }
+    }
+  }
+
+  @include theme("tonomus") {
+    @include tonomus-overlay-controls;
+
+    &__panel {
+      @include position(10vh, 0, 0);
+
+      background: var(--color-tonomus-white-high-emphasis);
+      inline-size: 100%;
+      block-size: 90vh;
+      margin-inline: auto;
+      max-inline-size: 768px;
+    }
+
+    &__controls {
+      position: absolute;
+      left: calc(100% - 50px);
+
+      @include respond-to(MEDIUM) {
+        left: calc(100% - 70px);
+        top: -70px;
+      }
+
+      @include respond-to(LARGE) {
+        left: calc(100% + 40px);
+        top: 0;
+      }
+    }
+
+    [dir="rtl"] & {
+      &__controls {
+        left: 0px;
+
+        @include respond-to(LARGE) {
+          left: calc(0% - 80px);
+        }
+      }
+    }
+
+    @include respond-to(LARGE) {
+      &__panel {
+        max-inline-size: 710px;
+      }
+    }
+  }
+}

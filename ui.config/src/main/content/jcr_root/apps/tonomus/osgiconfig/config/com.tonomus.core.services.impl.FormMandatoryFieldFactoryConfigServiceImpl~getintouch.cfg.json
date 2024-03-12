@@ -1,0 +1,4 @@
+{
+    "formID":"tonomus_getintouch_form",
+    "mandatoryFields":"$[env:TONOMUS_GET_IN_TOUCH_FORM;default=FNAME,LNAME,email,global-hq-location,LANGUAGE,contact-permission]"
+}

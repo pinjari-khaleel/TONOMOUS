@@ -1,0 +1,26 @@
+<sly data-sly-template.contentGridItem="${ @ partialBlock, partialModel }"
+     data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"
+     data-sly-use.pillarCtaTemplate="/apps/tonomus/components/content/molecules/m58-pillar-cta.html">
+
+  <div data-content-item class="o-contentGrid__item
+          ${partialModel.type ? ' -{0}' : '' @ format=[partialModel.type], context='styleString'}
+          ${partialModel.align.horizontal ? ' -{0}' : '' @ format=[partialModel.align.horizontal], context='styleString'}
+          ${!partialModel.align.horizontal ? '-start' : '' @ context='styleString'}
+          ${partialModel.align.vertical ? ' -{0}' : '' @ format=[partialModel.align.vertical], context='styleString'}
+          ${!partialModel.align.vertical ? '-middle' : '' @ context='styleString'}">
+
+    <sly data-sly-call="${partialBlock @ partialModel=partialModel}"></sly>
+
+    <div class="o-contentGrid__buttons${[partialModel.content.buttonType ? ' -' : '', partialModel.content.buttonType] @ join = '', context='styleString'}"
+         data-content-buttons
+         data-sly-test="${partialModel.content.buttons}">
+      <sly data-sly-test.isPillarButtonType="${partialModel.content.buttonType == 'pillar'}"
+           data-sly-repeat.button="${partialModel.content.buttons}"
+           data-sly-call="${pillarCtaTemplate.pillarCta @ buttonModel=button}"></sly>
+      <sly data-sly-test="${!isPillarButtonType}"
+           data-sly-repeat.button="${partialModel.content.buttons}"
+           data-sly-call="${buttonTemplate.button @ buttonModel=button}"></sly>
+    </div>
+  </div>
+
+</sly>

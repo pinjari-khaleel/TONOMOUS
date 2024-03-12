@@ -1,0 +1,24 @@
+<sly data-sly-template.collapsibleItem="${ @
+  label='Label of the collapsible item',
+  content='Label of the collapsible item',
+  eventTracking='Analytics event tracking data'
+  }"
+     data-sly-use.toggleButtonTemplate="/apps/tonomus/components/content/molecules/m14-toggle-button.html"
+>
+
+  <sly data-sly-test="${eventTracking.enabled}"
+       data-sly-use.eventTrackingModel="${'com.tonomus.core.slingmodels.common.v1.JsonModel' @ input=eventTracking.data}"></sly>
+
+  <div class="o-collapsibleItem" data-component="o06-collapsible-item"
+       data-event-tracking="${eventTrackingModel['json']}">
+    <sly data-sly-call="${toggleButtonTemplate.toggleButton @ label=label,
+    variant='accordion'}"></sly>
+    <div class="o-collapsibleItem__container" data-collapsible-item-content>
+      <div class="o-collapsibleItem__content">
+        <div class="o-collapsibleItem__body s-content -collapsible">
+          ${content @ context='html'}
+        </div>
+      </div>
+    </div>
+  </div>
+</sly>

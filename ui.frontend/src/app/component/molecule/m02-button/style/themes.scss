@@ -1,0 +1,177 @@
+& {
+  --button-background-color-hover: var(--color-tonomus-green);
+  --button-background-color-ripple: var(--color-white-20a);
+  --button-border-color-disabled: var(--color-black-10);
+  --button-border-color-hover: transparent;
+  --button-text-color-disabled: var(--color-black-20);
+  --button-text-color-hover: var(--color-black);
+  --button-affix-color: var(--button-text-color);
+}
+
+&.-black {
+  --button-border-color: transparent;
+  --button-text-color-hover: var(--color-black);
+  --button-background-color-disabled: var(--color-black-15a);
+  --button-border-color-disabled: transparent;
+  --button-text-color-disabled: var(--color-black-30a);
+
+  &.-primary {
+    --button-affix-color: var(--button-background-color);
+    --button-background-color: var(--color-black);
+    --button-text-color: var(--color-white);
+  }
+
+  &.-secondary,
+  &.-tertiary {
+    --button-background-color: transparent;
+    --button-text-color: var(--color-black);
+  }
+
+  &.-secondary {
+    --button-border-color: var(--color-black-20a);
+  }
+
+  &.-tertiary {
+    --button-background-color-hover: transparent;
+    --button-text-color-hover: var(--color-tonomus-purple);
+  }
+}
+
+&.-blackTransparent {
+  @include size(var(--button-size));
+
+  --button-background-color: linear-gradient(30deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0) 100%);
+  --button-background-color-hover: linear-gradient(
+    30deg,
+    rgba(97, 255, 177, 0.39) 0%,
+    rgba(97, 255, 177, 0) 100%
+  );
+  --button-background-color-disabled: var(--color-black-15a);
+  --button-text-color-disabled: var(--color-black-30a);
+  --button-text-color: var(--color-tonomus-green);
+  --button-text-color-hover: var(--color-tonomus-green);
+  --button-size: 100px;
+  --button-border-width: 2px;
+
+  border-radius: var(--button-size);
+  --button-border-color: rgba(255, 255, 255, 0.46);
+  --button-border-color-hover: rgba(255, 255, 255, 0.46);
+
+  .m-button__container {
+    --button-border-color: rgba(255, 255, 255, 0.46);
+  }
+
+  .a-label {
+    font-size: 24px;
+  }
+
+  @include respond-to("LARGE") {
+    --button-size: 120px;
+
+    .a-label {
+      font-size: 24px;
+    }
+  }
+}
+
+&.-white {
+  --button-background-color-disabled: var(--color-white-30a);
+  --button-border-color-disabled: transparent;
+  --button-text-color-disabled: var(--color-white-70a);
+
+  &.-primary {
+    --button-affix-color: var(--button-background-color);
+    --button-background-color: var(--color-white);
+    --button-border-color: var(--color-black-10a);
+    --button-text-color: var(--color-black);
+  }
+
+  &.-secondary,
+  &.-tertiary {
+    --button-text-color: var(--color-white);
+  }
+
+  &.-secondary {
+    --button-border-color: var(--color-white-10a);
+    --button-text-color: var(--color-white);
+  }
+
+  &.-tertiary {
+    --button-background-color-hover: transparent;
+    --button-text-color-hover: var(--color-tonomus-green);
+  }
+}
+
+&.-green {
+  --button-affix-color: var(--button-background-color);
+  --button-background-color-hover: var(--color-tonomus-green-200);
+  --button-background-color-ripple: var(--color-white-20a);
+  --button-border-color-hover: transparent;
+  --button-border-color: transparent;
+  --button-text-color-hover: var(--button-text-color);
+  --button-text-color: var(--color-white);
+  --button-background-color-disabled: var(--color-tonomus-green-100);
+  --button-border-color-disabled: var(--button-background-color-disabled);
+  --button-text-color-disabled: var(--color-black-30a);
+
+  &.-primary {
+    --button-background-color: var(--color-tonomus-green);
+    --button-text-color: var(--color-black);
+  }
+
+  &.-secondary,
+  &.-tertiary {
+    --button-text-color: var(--color-tonomus-green);
+    --button-text-color-disabled: var(--color-tonomus-green-100);
+    --button-border-color-disabled: var(--button-text-color-disabled);
+    --button-background-color-disabled: transparent;
+  }
+
+  &.-secondary {
+    --button-border-color: var(--color-tonomus-green);
+    --button-background-color-hover: var(--color-tonomus-green);
+    --button-text-color-hover: var(--color-black);
+  }
+
+  &.-tertiary {
+    --button-background-color-hover: transparent;
+    --button-text-color-hover: var(--button-background-color-hover);
+  }
+}
+
+&.-pink {
+  --button-affix-color: var(--button-background-color);
+  --button-background-color-hover: var(--color-tonomus-pink-200);
+  --button-background-color-ripple: var(--color-white-20a);
+  --button-border-color-hover: transparent;
+  --button-border-color: transparent;
+  --button-text-color-hover: var(--button-text-color);
+  --button-text-color: var(--color-white);
+  --button-background-color-disabled: var(--color-tonomus-pink-100);
+  --button-border-color-disabled: var(--button-background-color-disabled);
+  --button-text-color-disabled: var(--color-white-30a);
+
+  &.-primary {
+    --button-background-color: var(--color-tonomus-pink);
+    --button-text-color: var(--color-white);
+  }
+
+  &.-secondary,
+  &.-tertiary {
+    --button-text-color: var(--color-tonomus-pink);
+    --button-text-color-disabled: var(--color-tonomus-pink-100);
+    --button-border-color-disabled: var(--button-text-color-disabled);
+    --button-background-color-disabled: transparent;
+  }
+
+  &.-secondary {
+    --button-border-color: var(--color-tonomus-pink);
+    --button-background-color-hover: var(--color-tonomus-pink);
+    --button-text-color-hover: var(--color-white);
+  }
+
+  &.-tertiary {
+    --button-background-color-hover: transparent;
+    --button-text-color-hover: var(--button-background-color-hover);
+  }
+}

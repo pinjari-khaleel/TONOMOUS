@@ -1,0 +1,23 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Thu Jun 23 2022 21:21:08 GMT+0600",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "cq:cloudserviceconfigs": [
+      "/etc/cloudservices/form-collector/configuration",
+      "/etc/cloudservices/google-recaptcha/configuration"
+    ]
+  },
+  "en-us": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Thu Jun 23 2022 21:21:08 GMT+0600",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "HOME"
+    }
+  }
+}

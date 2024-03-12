@@ -1,0 +1,25 @@
+<div class="cmp-form-textarea"
+     data-sly-use.formtext="com.tonomus.core.slingmodels.components.v2.form.TextModel"
+     data-sly-set.text="${formtext.text}"
+     data-cmp-is="formText"
+     data-cmp-constraint-message="${text.constraintMessage}"
+     data-cmp-required-message="${text.requiredMessage}">
+    <textarea data-sly-test.useTextarea="${text.type == 'textarea'}"
+              class="cmp-form-text__textarea"
+              data-cmp-hook-form-text="input"
+              aria-label="${text.hideTitle && text.title}"
+              id="${text.id}"
+              placeholder="${text.placeholder ? text.placeholder : formtext.placeholder} "
+              name="${text.name}"
+              readonly="${text.readOnly}"
+              required="${text.required}"
+              rows="${text.rows}"
+              spellcheck="true"
+              data-sly-attribute.aria-describedby="${text.helpMessage ? [text.id, 'helpMessage'] : '' @ join = '-'}">${text.value}</textarea>
+    <label for="${text.id}" class="cmp-form-text__label" data-sly-test="${text.title && !text.hideTitle}">${text.title}</label>
+    <span class="cmp-icon"></span> 
+    <p id="${text.id}-helpMessage" data-sly-test="${!text.placeholder && text.helpMessage}"
+              class="cmp-form-text__help-message" data-for="${text.id}" data-help-message>${text.helpMessage}</p>
+     <p id="${text.id}-errorMessage" class="cmp-form-text__error-message" data-for="${text.id}" data-error-message>
+          ${text.requiredMessage}</p>
+</div>

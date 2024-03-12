@@ -1,0 +1,30 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "sling:resourceType": "neom/components/structure/page",
+    "jcr:language": "ar",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c59_multi_step_form": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "neom/components/content/components/c59-multi-step-form/v1/c59-multi-step-form",
+          "c59_step_1006455254": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "tonomus/components/content/wrappers/c59-step",  
+            "header" : {
+              "heading" : {
+                "text": "test"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

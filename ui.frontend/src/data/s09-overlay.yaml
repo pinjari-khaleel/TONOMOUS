@@ -1,0 +1,15 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'Overlay'
+
+meta:
+  id: 's09'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Structural (Site) Components'
+
+blocks:
+  - name: 's09-overlay'
+    data: 'import!../app/component/block/s09-overlay/data/default.yaml'

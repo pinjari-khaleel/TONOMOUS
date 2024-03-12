@@ -1,0 +1,23 @@
+<sly data-sly-template.checkboxOption="${ @
+      checkBoxModel='FormCheckBoxModel with properties'}"
+     data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html"
+     data-sly-use.checkboxTemplate="/apps/tonomus/components/content/atoms/a11-checkbox.html">
+
+  <div class="m-checkboxOption ${checkBoxModel.disabled ? '-isDisabled' : ''}"
+       data-component="m27-checkbox-option">
+    <label class="m-checkboxOption__label" data-sly-test.withCopy="${checkBoxModel.copy}">
+      <sly data-sly-call="${checkboxTemplate.checkbox @ checkBoxModel=checkBoxModel}"></sly>
+      <div class="m-checkboxOption__copy">
+        ${checkBoxModel.copy @ context='text'}
+      </div>
+    </label>
+
+    <label class="m-checkboxOption__label" data-sly-test="${!withCopy}">
+      <sly data-sly-call="${checkboxTemplate.checkbox @ checkBoxModel=checkBoxModel}"></sly>
+      <span class="m-checkboxOption__textLabel ${checkBoxModel.required ? '-isRequired' : ''}">
+        <sly data-sly-call="${labelTemplate.label @ size='checkbox', text=checkBoxModel.label}"></sly>
+      </span>
+    </label>
+  </div>
+
+</sly>

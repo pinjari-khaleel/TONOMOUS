@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="./m06-link.scss">
+<script src="./M06Link.ts"></script>
+
+
+<a class="m-link{{#if variant}} -{{variant}}{{/if}}" data-component="m06-link" {{#with href}}href="{{ this }}"{{/with}}
+  {{#if target }}
+     target="{{ target }}"
+    {{#if (condition target '===' '_blank' )}}rel="noopener"{{/if}}
+  {{/if}}
+>
+  {{> atom/a07-label text=label }}
+  {{#if icon}}
+    {{> atom/a02-icon name=icon }}
+  {{/if}}
+</a>

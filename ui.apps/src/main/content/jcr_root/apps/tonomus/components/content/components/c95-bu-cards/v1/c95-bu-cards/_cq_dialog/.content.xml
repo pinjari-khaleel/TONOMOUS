@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="C95 Business Unit (BU) Cards"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[tonomus.author]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        maximized="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+            <general
+                jcr:primaryType="nt:unstructured"
+                jcr:title="General"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <heading-text
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext-semantic-markup"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="Please enter the component Heading Text."
+                                        fieldLabel="Heading Text"
+                                        name="./header/heading/text"
+                                        removeSingleParagraphContainer="{Boolean}true"
+                                        useFixedInlineToolbar="{Boolean}true"/>
+                                    <heading-size
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Please select the component Heading Size/Weight."
+                                        fieldLabel="Heading Size"
+                                        name="./header/heading/size">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="tonomus/generic/datasource"
+                                            path="tonomus/components/content/utils/headingweight"/>
+                                    </heading-size>
+                                </items>
+                            </column>
+                        </items>
+                    </columns>
+                </items>
+            </general>
+            <bucards
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Cards"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <bucards
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        class="multifield-full-width"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Click 'Add' to add a new BU card. Card entries should be divible by 3 and 2 to get the best table layout outcome."
+                                        fieldLabel="Business Units">
+                                        <field
+                                            granite:class="accordion-multifield-item"
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Card Item"
+                                            sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                            name="./buCards">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <tab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    jcr:title="Card Item"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <title
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Enter card title."
+                                                            fieldLabel="Title"
+                                                            name="./title/text"
+                                                            maxlength="{Long}100"
+                                                            required="{Boolean}true"/>
+                                                        <description
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Enter card description."
+                                                            fieldLabel="Description"
+                                                            maxlength="{Long}100"
+                                                            name="./description/text"/>
+                                                        <altImage
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Please enter Image Alt Text."
+                                                            fieldLabel="Card Image Alt Text"
+                                                            name="./image/alt"/>
+                                                        <image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                            allowUpload="{Boolean}false"
+                                                            autoStart="{Boolean}false"
+                                                            class="cq-droptarget"
+                                                            dropZone="{Boolean}true"
+                                                            fieldDescription="Drag and Drop Image"
+                                                            fieldLabel="Card Image"
+                                                            fileNameParameter="./image/parameter"
+                                                            fileReferenceParameter="./image/src"
+                                                            mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                                                            multiple="{Boolean}false"
+                                                            name="name"
+                                                            required="{Boolean}true"
+                                                            title="Upload Image Asset"
+                                                            useHTML5="{Boolean}true"/>
+                                                        <href
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Select Business Unit (BU) target path"
+                                                            fieldLabel="Business Unit (BU) Path"
+                                                            name="./link/href"
+                                                            rootPath="/content"/>
+                                                        <target
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                            fieldDescription="Open new window (tab) if checked."
+                                                            name="./link/target"
+                                                            text="New window"
+                                                            uncheckedValue="_self"
+                                                            value="_blank"/>
+                                                        <alt-logo
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Please enter Logo Alt Text."
+                                                            fieldLabel="Business Unit Logo Alt Text"
+                                                            name="./logo/alt"/>
+                                                        <logo-image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                            allowUpload="{Boolean}false"
+                                                            autoStart="{Boolean}false"
+                                                            class="cq-droptarget"
+                                                            dropZone="{Boolean}true"
+                                                            fieldDescription="Drag and Drop Image"
+                                                            fieldLabel="Business Unit Logo"
+                                                            fileNameParameter="./logo/parameter"
+                                                            fileReferenceParameter="./logo/src"
+                                                            mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                                                            multiple="{Boolean}false"
+                                                            name="name"
+                                                            required="{Boolean}true"
+                                                            title="Upload Image Asset"
+                                                            useHTML5="{Boolean}true"/>
+                                                    </items>
+                                                </tab>
+                                            </items>
+                                        </field>
+                                    </bucards>
+                                </items>
+                            </column>
+                        </items>
+                    </columns>
+                </items>
+            </bucards>
+            <padding
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="tonomus/components/content/utils/padding/content"/>
+            <advanced
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="tonomus/components/content/utils/advanced/content"/>
+        </items>
+    </content>
+</jcr:root>

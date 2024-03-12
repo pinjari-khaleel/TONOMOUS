@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="./o73-submit-step.scss">
+<script src="./O73SubmitStep.ts"></script>
+
+
+<div class="o-submitStep"
+         data-component="o73-submit-step"
+         {{#if scrollComponent}}data-scroll-component{{/if}}
+         {{#if id}} id="{{id}}"{{/if}}>
+  <div class="o-submitStep__wrapper">
+    {{> molecule/m34-component-background background }}
+    <div class="o-submitStep__content">
+      <div class="o-submitStep__messages">
+        <div  class="o-submitStep__message">
+          {{#with success}}
+          <div class="o-submitStep__success" data-submit-success>
+            {{> molecule/m18-paragraph this}}
+          </div>
+          {{/with}}
+          {{#with error}}
+          <div class="o-submitStep__error" data-submit-error>
+            {{> molecule/m18-paragraph this}}
+          </div>
+          {{/with}}
+        </div>
+        <div class="o-submitStep__buttonsWrapper">
+          <ul class="o-submitStep__buttons">
+            {{#if buttons.done}}
+              <li class="o-submitStep__button">
+                  {{> molecule/m02-button
+                    data=(object done-button=null)
+                    level="primary"
+                    label=@root.i18n.done
+                    theme="dark-gold"
+                    href="#"
+                    size="small"
+                  }}
+              </li>
+            {{/if}}
+            {{#if buttons.retry}}
+              <li class="o-submitStep__button">
+                  {{> molecule/m02-button
+                    data=(object retry-button=null)
+                    level="primary"
+                    label=@root.i18n.tryAgain
+                    theme="white"
+                    href="#"
+                    size="small"
+                  }}
+              </li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+      {{#with social}}
+      <div class="o-submitStep__social">
+        <p class="o-submitStep__socialCallToAction">{{ @root.i18n.followUs }}</p>
+        {{> molecule/m12-social this }}
+      </div>
+      {{/with}}
+    </div>
+  </div>
+</div>
+ 
+ 

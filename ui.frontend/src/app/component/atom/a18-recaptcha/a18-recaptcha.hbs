@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="./a18-recaptcha.scss">
+<script src="./A18Recaptcha.ts"></script>
+
+
+<div class="a-recaptcha"
+     data-component="a18-recaptcha"
+     data-sitekey="{{sitekey}}"
+     {{#if language}}data-language="{{language}}"{{/if}}
+>
+  <div data-recaptcha></div>
+  <p class="a-recaptcha__statement">
+    {{{statement}}}
+  </p>
+</div>

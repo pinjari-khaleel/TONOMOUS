@@ -1,0 +1,19 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.webGlScrollSpacer="com.tonomus.core.slingmodels.components.v1.AssetAndGradientColorsModel"
+></sly>
+
+<section class="b-webglScrollSpacer"
+         data-component="c93-webgl-scroll-spacer"
+         data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+         style="${commonComponentModel.padding.styleInline @ context='styleString'}"
+         data-sly-attribute.data-asset="${webGlScrollSpacer.asset}"
+         data-sly-attribute.id="${commonComponentModel.anchorId}"
+         data-sly-attribute.data-gradient-colors="${webGlScrollSpacer.gradientColorsString}"
+         data-lazy-component
+>
+</section>
+

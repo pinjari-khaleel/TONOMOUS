@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="C81 Content Roadmap"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[tonomus.author]">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <general
+          jcr:primaryType="nt:unstructured"
+          jcr:title="General"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <headingText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                      sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext-semantic-markup"
+                      fieldDescription="Please enter Heading Text."
+                      fieldLabel="Heading Text"
+                      name="./heading/text"
+                      useFixedInlineToolbar="{Boolean}true">
+                  </headingText>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </general>
+      <step1
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Step 1"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <headingText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                      sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext-semantic-markup"
+                      fieldDescription="Please enter Heading Text."
+                      fieldLabel="Heading Text"
+                      name="./step1/heading/text"
+                      useFixedInlineToolbar="{Boolean}true">
+                  </headingText>
+                  <headingWeight
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Size/Weight."
+                      fieldLabel="Heading Size"
+                      name="./step1/heading/size">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingWeight>
+                  <headingElement
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Element Size/Weight."
+                      fieldLabel="Heading Element Size/Weight"
+                      name="./step1/heading/element">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingElement>
+                  <text
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                      sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext-semantic-markup"
+                      fieldDescription="Please enter Heading Text."
+                      fieldLabel="Copy Text"
+                      name="./step1/text"
+                      useFixedInlineToolbar="{Boolean}true">
+                  </text>
+
+                  <image
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                      allowUpload="{Boolean}false"
+                      autoStart="{Boolean}false"
+                      class="cq-droptarget"
+                      dropZone="{Boolean}true"
+                      fieldDescription="Drag and Drop Background Image"
+                      fieldLabel="Image"
+                      fileNameParameter="./step1/image/parameter"
+                      fileReferenceParameter="./step1/image/src"
+                      mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                      multiple="{Boolean}false"
+                      name="name"
+                      title="Upload Image Asset"
+                      useHTML5="{Boolean}true"
+                      required="{Boolean}true"/>
+                  <altImage
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter Image Alt Text."
+                      fieldLabel="Image Alt Text"
+                      name="./step1/image/alt"
+                      required="{Boolean}true"/>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </step1>
+      <step2
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Step 2"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <headingText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                      sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext-semantic-markup"
+                      fieldDescription="Please enter Heading Text."
+                      fieldLabel="Heading Text"
+                      name="./step2/heading/text"
+                      useFixedInlineToolbar="{Boolean}true">
+                  </headingText>
+                  <headingWeight
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Size/Weight."
+                      fieldLabel="Heading Size"
+                      name="./step2/heading/size">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingWeight>
+                  <headingElement
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Element Size/Weight."
+                      fieldLabel="Heading Element Size/Weight"
+                      name="./step2/heading/element">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingElement>
+                  <text
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                      sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext-semantic-markup"
+                      fieldDescription="Please enter Heading Text."
+                      fieldLabel="Copy Text"
+                      name="./step2/text"
+                      useFixedInlineToolbar="{Boolean}true">
+                  </text>
+
+                  <image
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                      allowUpload="{Boolean}false"
+                      autoStart="{Boolean}false"
+                      class="cq-droptarget"
+                      dropZone="{Boolean}true"
+                      fieldDescription="Drag and Drop Background Image"
+                      fieldLabel="Image"
+                      fileNameParameter="./step2/image/parameter"
+                      fileReferenceParameter="./step2/image/src"
+                      mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                      multiple="{Boolean}false"
+                      name="name"
+                      title="Upload Image Asset"
+                      useHTML5="{Boolean}true"
+                      required="{Boolean}true"/>
+                  <altImage
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter Image Alt Text."
+                      fieldLabel="Image Alt Text"
+                      name="./step2/image/alt"
+                      required="{Boolean}true"/>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </step2>
+
+      <step3
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Step 3"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <headingText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                      sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext-semantic-markup"
+                      fieldDescription="Please enter Heading Text."
+                      fieldLabel="Heading Text"
+                      name="./step3/heading/text"
+                      useFixedInlineToolbar="{Boolean}true">
+                  </headingText>
+                  <headingWeight
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Size/Weight."
+                      fieldLabel="Heading Size"
+                      name="./step3/heading/size">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingWeight>
+                  <headingElement
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Element Size/Weight."
+                      fieldLabel="Heading Element Size/Weight"
+                      name="./step3/heading/element">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingElement>
+                  <text
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                      sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext-semantic-markup"
+                      fieldDescription="Please enter Heading Text."
+                      fieldLabel="Copy Text"
+                      name="./step3/text"
+                      useFixedInlineToolbar="{Boolean}true">
+                  </text>
+
+                  <image
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                      allowUpload="{Boolean}false"
+                      autoStart="{Boolean}false"
+                      class="cq-droptarget"
+                      dropZone="{Boolean}true"
+                      fieldDescription="Drag and Drop Background Image"
+                      fieldLabel="Image"
+                      fileNameParameter="./step3/image/parameter"
+                      fileReferenceParameter="./step3/image/src"
+                      mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                      multiple="{Boolean}false"
+                      name="name"
+                      title="Upload Image Asset"
+                      useHTML5="{Boolean}true"
+                      required="{Boolean}true"/>
+                  <altImage
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter Image Alt Text."
+                      fieldLabel="Image Alt Text"
+                      name="./step3/image/alt"
+                      required="{Boolean}true"/>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </step3>
+      <button
+          jcr:title="Button"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+          <label
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+              fieldDescription="Please enter the Label."
+              fieldLabel="Label"
+              name="./button/label"/>
+          <video
+              jcr:primaryType="nt:unstructured"
+              fieldLabel="Popup Video"
+              fieldDescription="Click 'Add' to add a new Popup video"
+              sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+              class="multifield-full-width"
+              validation="multifield-max-1"
+              composite="{Boolean}true">
+            <field
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Video Item"
+                name="./button/video/props/sources"
+                granite:class="accordion-multifield-item"
+                sling:resourceType="granite/ui/components/coral/foundation/accordion">
+              <items
+                  jcr:primaryType="nt:unstructured">
+                <tab
+                    jcr:title="Popup Video"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    jcr:primaryType="nt:unstructured">
+                  <items jcr:primaryType="nt:unstructured">
+                    <video
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        fieldDescription="Select the background video to be used. If there is a background video the image will be overwritten"
+                        autoStart="{Boolean}false"
+                        class="cq-droptarget"
+                        fieldLabel="Background Video Asset"
+                        fileNameParameter="./backgroundVideoFileName"
+                        fileReferenceParameter="./src"
+                        mimeTypes="[video]"
+                        multiple="{Boolean}false"
+                        name="./backgroundVideoFile"
+                        title="Video Asset for Background"
+                        uploadUrl="${suffix.path}"
+                        allowUpload="{Boolean}false"
+                        useHTML5="{Boolean}true"/>
+                  </items>
+                </tab>
+              </items>
+            </field>
+          </video>
+          <event-tracking-text-in-english
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+              fieldDescription="Please enter the component Title in English."
+              fieldLabel="Title in English"
+              name="./button/video/props/eventTracking/video/titleInEnglish"
+              required="{Boolean}true"/>
+          <event-tracking-name
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+              name="./button/video/props/eventTracking/event"
+              value="video_start"/>
+          <video-play-button-tracking
+              granite:class="js-dialog-showhide"
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+              fieldDescription="Enable Analytics Tracking"
+              name="./button/enableTracking"
+              text="Track Analytics for Play button"
+              value="{Boolean}true"
+              uncheckedValue="{Boolean}false">
+            <granite:data
+                jcr:primaryType="nt:unstructured"
+                showhide-target=".js-enable-tracking"/>
+          </video-play-button-tracking>
+          <video-play-button-tracking-id
+              granite:class="js-enable-tracking"
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+              fieldDescription="Please enter the unique ID for Analytics tracking"
+              fieldLabel="Analytics ID"
+              maxlength="{Long}30"
+              validation="required-when-visible"
+              name="./button/eventTrackingId">
+            <granite:data
+                jcr:primaryType="nt:unstructured"
+                showhide-target-value="true"/>
+          </video-play-button-tracking-id>
+          <video-play-button-tracking-event-action
+              granite:class="js-enable-tracking"
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+              fieldDescription="Please enter the eventAction text"
+              fieldLabel="eventAction text"
+              maxlength="{Long}30"
+              name="./button/eventAction">
+            <granite:data
+                jcr:primaryType="nt:unstructured"
+                showhide-target-value="true"/>
+          </video-play-button-tracking-event-action>
+          <originalWidth
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+              name="./button/video/props/originalWidth"
+              value="16"/>
+          <originalHeight
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+              name="./button/video/props/originalHeight"
+              value="9"/>
+          <autoplay
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+              name="./button/video/props/autoplay"
+              value="true"/>
+          <muted
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+              name="./button/video/props/muted"
+              value="false"/>
+          <loop
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+              name="./button/video/props/loop"
+              value="false"/>
+          <disablePreload
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+              name="./button/video/props/disablePreload"
+              value="true"/>
+          <playPause
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+              name="./button/video/props/controls/playPause"
+              value="true"/>
+          <fullscreen
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+              name="./button/video/props/controls/fullscreen"
+              value="true"/>
+          <seek
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+              name="./button/video/props/controls/seek"
+              value="true"/>
+        </items>
+      </button>
+      <padding
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/padding/content"/>
+      <advanced
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/advanced/content"/>
+    </items>
+  </content>
+</jcr:root>

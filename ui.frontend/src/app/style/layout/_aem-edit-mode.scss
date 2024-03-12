@@ -1,0 +1,173 @@
+/**
+ * AEM edit mode custom styles for components where necessary
+ *
+ * Use this selector to find the iframe in the browser and start debugging your component's appearance in edit mode
+ */
+
+[data-editor="true"] {
+  .app,
+  .app__content {
+    height: initial;
+    overflow: initial;
+  }
+
+  .b-map.-loading {
+    min-height: 960px;
+  }
+
+  .-fullMinHeight {
+    min-height: 800px !important;
+  }
+
+  @include respond-to("MEDIUM") {
+    .b-multiStepForm,
+    .b-motionSlider,
+    .b-articleContent__banner,
+    .b-heroSlider,
+    .b-highlightSlideshow,
+    .b-scrollGallery,
+    .b-scrollGallery__container,
+    .b-scrollGallery__horizontalWrapper,
+    .b-groupedContentSlider,
+    .b-contentSlider,
+    .b-promotionHero,
+    .b-webglScrollSpacer,
+    .b-webglEffectHero,
+    .b-webglEffectHero__buttonWrapper {
+      height: 800px;
+    }
+
+    .b-blinds,
+    .b-countdownTimer,
+    .b-factsFigures,
+    .b-hero,
+    .b-heroComponent,
+    .b-heroStickyHeader .b-heroStickyHeader__heroWrapper,
+    .b-hotspots,
+    .b-mediaList,
+    .b-warningMessage,
+    .o-heroContent,
+    .o-submitStep,
+    .b-factsList,
+    .b-factsList__item {
+      max-height: 800px;
+    }
+
+    .b-oxagonForm {
+      height: 800px;
+      visibility: hidden;
+    }
+
+    .b-fullWidthAsset,
+    .b-cardList,
+    .b-tabbedCta,
+    .b-dynamicQuote,
+    .b-pageNotFound {
+      max-height: 800px;
+      min-height: 700px;
+    }
+
+    .b-logos {
+      height: auto;
+      min-height: 800px;
+    }
+
+    .o-scrollGalleryItem {
+      max-height: 400px;
+      max-width: 400px;
+    }
+
+    .b-scrollGallery__header,
+    .o-scrollGalleryItem:nth-child(2) {
+      align-self: center;
+    }
+
+    .b-scrollGallery__horizontalWrapper {
+      width: 100%;
+    }
+
+    .b-warningMessage__content {
+      position: relative;
+    }
+
+    .o-contentGrid.-hasBackgroundImage {
+      min-height: 800px;
+    }
+
+    .o-expertCardsGrid {
+      height: 800px;
+      min-height: initial;
+    }
+
+    .o-richQuoteCarousel__asset,
+    .o-richQuoteCarousel__quote {
+      &:first-of-type {
+        display: block;
+        opacity: 1;
+        position: absolute;
+      }
+    }
+
+    .o-scrollGalleryItem__image {
+      max-height: 400px;
+      max-width: 400px;
+    }
+
+    .b-map.-loading {
+      min-height: 1800px;
+    }
+  }
+
+  @include respond-to("LARGE") {
+    .b-windows {
+      max-height: 800px;
+    }
+  }
+}
+
+/*
+  AemEditorMessage
+  ----------------
+  Adds a message visible to the content editors only.
+  Example usage:
+
+  .b-deprecatedComponentExample {
+    @include AemEditorMessage(
+      "⚠ [X] is a deprecated component. Please replace it with [Y] at your earliest convenience."
+    );
+  }
+
+ */
+@mixin AemEditorMessage($message) {
+  position: relative;
+
+  &::before {
+    background-color: var(--color-black);
+    box-sizing: border-box;
+    color: var(--color-bright-yellow);
+    content: $message;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    line-height: 1.25;
+    max-width: 100%;
+    outline: 1px solid black;
+    padding: 1.5ex 1em 1.5ex;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    z-index: zindex($zLayout, modal);
+  }
+}
+
+.b-paragraphPlaceholder {
+  @include AemEditorMessage(
+    "⚠ C02 is a deprecated component. Please replace it with c24 or c45 at your earliest convenience"
+  );
+}
+
+.b-timeline {
+  @include AemEditorMessage(
+    "⚠ C31 is a deprecated component. Please replace it with c33 at your earliest convenience️"
+  );
+}

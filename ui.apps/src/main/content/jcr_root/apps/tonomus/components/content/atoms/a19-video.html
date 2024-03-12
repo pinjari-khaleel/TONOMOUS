@@ -1,0 +1,36 @@
+<sly data-sly-template.preview="${@
+    props='Video properties model with properties',
+    autoloop='Automatic video setup to play preview video with attributes by default: loop, muted, autoplay, playsinline',
+    poster='The link to the image in the DAM that will be used as a poster for the video',
+    variant='Variant',
+    lazy='Boolean value - Lazy loading of the video',
+    isObserved='Boolean value - Is observed'
+    }">
+<sly data-sly-use.smartImageModel="${'com.tonomus.core.models.dmedia.DynamicMediaModel' @
+    assetPath=poster}"> </sly>
+
+  <div class="a-video
+       ${variant ? ' -{0}' : '' @ format=[variant], context='styleString'}"
+       data-component="a19-video"
+       data-sly-attribute.data-lazy="${lazy}"
+       data-sly-attribute.data-is-observed="${isObserved}">
+
+    <video class="a-video__video" data-video
+           data-sly-attribute.poster="${poster ? smartImageModel.src || poster : true}"
+           data-sly-attribute.loop="${autoloop || props.loop}"
+           data-sly-attribute.muted="${autoloop || props.muted}"
+           data-sly-attribute.autoplay="${autoloop || props.autoplay}"
+           data-sly-attribute.playsinline="${autoloop || props.playsInline}"
+           data-sly-attribute.type="${props.video.type}"
+           data-sly-attribute.src="${props.video.src}"
+           data-sly-attribute.crossorigin="${props.crossOrigin ? props.crossOrigin : ''}"
+    >
+      <sly data-sly-repeat.item="${props.sources}">
+        <source src=${item.src} type=${item.type} data-sly-attribute.media="${item.media}">
+      </sly>
+      <source src=${props.video.src}
+              type=${props.video.type}>
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</sly>

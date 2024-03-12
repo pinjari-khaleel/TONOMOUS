@@ -1,0 +1,9 @@
+<sly data-sly-template.action="${@ action}">
+    <a class="cmp-herobanner__action-link"
+       data-sly-attribute="${action.link.htmlAttributes}"
+       data-sly-unwrap="${!action.link.valid}"
+       id="${action.id}"
+       data-cmp-data-layer="${action.data.json}"
+       data-cmp-clickable="${action.data ? true : false}"
+       data-has-modal="${'#' in action.link.htmlAttributes.href}">${action.title}</a>
+</sly>

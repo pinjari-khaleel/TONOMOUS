@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          type="radioStylized"
+          name="category_interest"
+          id="category_interest"
+          required="{Boolean}true">
+    <validate jcr:primaryType="nt:unstructured">
+      <presence
+          jcr:primaryType="nt:unstructured"
+          message="^Please select at least one"/>
+    </validate>
+    <fieldsetLegend
+        jcr:primaryType="nt:unstructured"
+        text="I work in (tick one)"
+    />
+    <showTextareaForOtherChoice
+        jcr:primaryType="nt:unstructured"
+        id="category_interest_clarification"
+        label="Please explain your choice"
+        name="category_interest_clarification"
+        placeholder="Type here"
+        required="true"
+        titleInEnglish="Other choice explanation"
+        wide="false">
+      <validate jcr:primaryType="nt:unstructured">
+        <presence
+            jcr:primaryType="nt:unstructured"
+            message="^Please enter an explanation for your choice"/>
+      </validate>
+    </showTextareaForOtherChoice>
+    <m52_stylized_radio
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="tonomus/components/content/wrappers/m52-stylized-radio"
+        id="category_interest"
+        label="Food &amp; drink"
+        name="category_interest"
+        type="radio"
+        value="food &amp; drink">
+      <image
+          jcr:primaryType="nt:unstructured"
+          alt="Option"
+          src="/content/dam/neom/components/c58-highlight-slideshow/highlight-3.jpg"/>
+    </m52_stylized_radio>
+</jcr:root>

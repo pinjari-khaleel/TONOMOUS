@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="./c101-teaser-card.scss">
+<script src="./C101TeaserCard.ts"></script>
+
+<div class="cmp cmp-c101-teaser-card">
+  <div class="b-teaserCard"
+    data-component="c101-teaser-card"
+    {{#if scrollComponent}}data-scroll-component{{/if}}
+    {{#if id}} id="{{id}}"{{/if}}
+  >
+    <div class="b-teaserCard__container">
+      {{> atom/a03-heading text=name element="h3" size="h3" }}
+      <div class="b-teaserCard__items" data-image>
+        {{> atom/a01-image image disableTransition=true }}
+        {{> atom/a01-image image2 disableTransition=true }}
+        {{> atom/a01-image image3 disableTransition=true }}
+      </div>
+
+      <div class="b-teaserCard__content" data-card-content>
+        {{!-- {{> atom/a03-heading text=name element="h3" size="h3" }} --}}
+        <div class="s-content">
+          {{{ text }}}
+        </div>
+        {{#with button}}
+          {{> molecule/m02-button
+            size="small"
+            level="primary"
+            theme="green"
+            label=label
+          }}
+        {{/with}}
+      </div>
+    </div>
+  </div>
+</div>
+

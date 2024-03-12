@@ -1,0 +1,10 @@
+image:
+  src: './image/o85-news-card/news-card-2.jpg'
+meta: "3 MIN READ\nMAY 21, 2013"
+title: 'ZEROPOINT DC HYPERSCALE DATA CENTER TO SUPPORT ECOSYSTEM OF COGNITIVE TECHNOLOGIES'
+link:
+  href: '#'
+  target: '_blank'
+button:
+  label: 'Learn more'
+  theme: green

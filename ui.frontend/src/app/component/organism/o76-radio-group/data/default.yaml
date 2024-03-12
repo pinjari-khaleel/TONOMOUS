@@ -1,0 +1,27 @@
+type: 'radioGroup'
+legend: 'My radio group'
+name: 'radio-group'
+id: 'radio-group'
+copy: 'This is my copy that goes below the radio group.'
+required: true
+items:
+  - name: 'radio-group'
+    label: 'foo'
+    id: 'foo'
+    value: 'foo'
+  - name: 'radio-group'
+    label: 'bar'
+    id: 'bar'
+    value: 'bar'
+  - name: 'radio-group'
+    label: 'other'
+    id: 'other'
+    value: 'other'
+showTextareaForOtherChoice:
+  name: 'my-textarea'
+  label: 'My textarea'
+  id: 'my-textarea'
+  titleInEnglish: 'my-textarea'
+  placeholder: 'write something'
+  required: true
+  wide: true

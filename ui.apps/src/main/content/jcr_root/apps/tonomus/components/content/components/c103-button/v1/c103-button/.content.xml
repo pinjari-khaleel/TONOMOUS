@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    cq:icon="button"
+    jcr:description="C103 Button"
+    jcr:primaryType="cq:Component"
+    jcr:title="C103 Button"
+    componentGroup="Tonomus.Content"/>

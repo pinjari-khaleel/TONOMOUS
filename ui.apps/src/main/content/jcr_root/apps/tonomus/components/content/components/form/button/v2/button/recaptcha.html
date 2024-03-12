@@ -1,0 +1,5 @@
+<sly data-sly-template.recaptcha="${@ sitekey, isRecaptchaConfigured}">
+    <div data-sly-test="${isRecaptchaConfigured}" class="cmp-form-recaptcha" data-sitekey="${sitekey}"></div>
+    <input data-sly-test="${isRecaptchaConfigured}" type="hidden" name="g-recaptcha-response" value/>
+	<span data-sly-test="${!isRecaptchaConfigured}" class="cmp-form-recaptcha__errormessage">Configuration missing, please contact IT support.</span>
+</sly>

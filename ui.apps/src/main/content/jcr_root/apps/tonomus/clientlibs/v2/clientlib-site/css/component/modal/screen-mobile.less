@@ -1,0 +1,46 @@
+@media (max-width: @screen-mobile-max) {
+  .cmp-modal {
+    &__container {
+      &:after {
+        display: none;
+      }
+    }
+    &__content {
+      width: 100%;
+      border-radius: 1.25rem;
+      margin-block-start: 2.5rem;
+      padding: 2.816rem 1.25rem 2.5rem;
+    }
+    &__close-button {
+      width: 32px;
+      height: 32px;
+      transform: translateY(10px);
+      right: 1.25rem;
+    }
+  }
+  .cmp-modal-success {
+    .cmp-container__heading {
+      padding-block-end: 3rem;
+    }
+
+    .cmp-container__content {
+      align-items: start;
+    }
+
+    .cmp-modal__close-button {
+      transform: translateY(0px);
+    }
+
+    .cmp-modal__content {
+      transition: unset;
+      overflow-y: auto;
+      margin-inline-end: 0;
+      margin-block-start: 0;
+      padding: 3rem 1.25rem 2.5rem;
+      min-height: 422px;
+      height: 422px;
+      bottom: 0;
+      top: unset;
+    }
+  }
+}

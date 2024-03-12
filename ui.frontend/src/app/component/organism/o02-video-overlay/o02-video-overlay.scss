@@ -1,0 +1,61 @@
+.o-videoOverlay {
+  @include vh(100, height);
+  @include offset();
+
+  width: 100%;
+  position: fixed;
+  z-index: zindex($zLayout, video-overlay);
+
+  &__wrapper {
+    @include offset(50%, 50%);
+
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  &__container,
+  .o-video {
+    @include size(100%);
+  }
+
+  .o-video {
+    margin: auto;
+    max-height: calc(100vh - 120px);
+    max-width: calc(100vw - 30px);
+    z-index: 1;
+  }
+
+  > .m-button {
+    --button-border-color: var(--color-white-30a);
+
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+  }
+
+  &__mask {
+    @include size(100%);
+    @include offset();
+
+    background: var(--modal-mask-color);
+    position: fixed;
+  }
+
+  @media (max-width: 768px) and (orientation: landscape) {
+    &__wrapper {
+      width: 100%;
+    }
+  }
+
+  @include respond-to("MEDIUM") {
+    &__wrapper {
+      @include size(100%, auto);
+    }
+  }
+
+  @include theme("tonomus") {
+    @include tonomus-overlay-controls;
+  }
+}

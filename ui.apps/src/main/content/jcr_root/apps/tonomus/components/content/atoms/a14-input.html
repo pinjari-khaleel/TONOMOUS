@@ -1,0 +1,38 @@
+<sly data-sly-template.input="${ @
+  textModel='instance of forms.FormTextModel with properties',
+  type='custom type',
+  id='custom id',
+  placeholder='custom placeholder',
+  name='name'}"
+
+     data-sly-set.typeVal="${type || textModel.type}"
+     data-sly-set.idVal="${id || textModel.id}"
+     data-sly-set.placeholderVal="${placeholder || textModel.placeholder}"
+     data-sly-set.dataAttribute="${idVal ? 'data-{0}' : '' @ format=[idVal], context='attributeName'}"
+     data-sly-use.attributesModel="${'com.tonomus.core.slingmodels.common.v1.AttributeCreatorModel' @ attrs=dataAttribute}">
+
+  <sly data-sly-set.patternValue="[^@\s]+@[^@\s]+\.[^@\s]+">
+  </sly>
+
+  <div
+      class="a-input ${[typeVal ? '-' : '', typeVal] @ join = '', context='styleString'}"
+      data-component="a14-input">
+    <input class="a-input__input"
+           data-sly-attribute.disabled="${textModel.disabled}"
+           data-sly-attribute.id="${idVal}"
+           data-sly-attribute.maxlength="${textModel.maxlength}"
+           data-sly-attribute.min="${typeVal == 'number' ? '0' : ''}"
+           data-sly-attribute.name="${name || textModel.name}"
+           data-sly-attribute.placeholder="${placeholderVal}"
+           data-sly-attribute.pattern="${typeVal == 'email' ? patternValue : ''}"
+           data-sly-attribute.readonly="${textModel.readonly}"
+           data-sly-attribute.required="${textModel.required}"
+           data-sly-attribute.data-title-in-english="${textModel.titleInEnglish}"
+           data-sly-attribute.type="${typeVal || 'text'}"
+           data-sly-attribute.value="${textModel.value}"
+           data-sly-attribute="${attributesModel.attributes}"
+           data-sly-attribute.data-validate="${textModel.validate.json}"
+    />
+  </div>
+
+</sly>

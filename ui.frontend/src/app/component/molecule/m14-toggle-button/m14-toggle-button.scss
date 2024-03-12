@@ -1,0 +1,70 @@
+.m-toggleButton {
+  --toggle-button-icon-color: var(--color-accent);
+  --toggle-button-text-color: var(--color-gold);
+  --icon-size: 100%;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  align-items: center;
+  appearance: none;
+  background: none;
+  border: 0;
+  color: var(--toggle-button-text-color);
+  cursor: pointer;
+  display: flex;
+  line-height: 1;
+  overflow: visible;
+  padding: 0;
+
+  &__chevron {
+    @include size(40px);
+
+    box-sizing: border-box;
+    color: var(--toggle-button-icon-color);
+    flex: 0 0 auto;
+    margin-inline-start: 16px;
+    padding: 12px;
+    position: relative;
+  }
+
+  .a-icon {
+    display: block;
+    transition: transform 0.3s $easeOutExpo;
+
+    .-isExpanded & {
+      transform: rotate(180deg);
+    }
+
+    &::before {
+      @include pseudo;
+      @include size(75%);
+      @include offset(50%, 50%);
+
+      background: var(--color-white-10a);
+      border-radius: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s $easeOutExpo;
+    }
+  }
+
+  @include hover {
+    .a-icon::before {
+      opacity: 1;
+    }
+  }
+
+  &.-accordion {
+    @include type("overline", "medium");
+
+    box-sizing: border-box;
+    justify-content: space-between;
+    min-height: 120px;
+    padding: 0 var(--collapsible-item-padding-inline);
+    text-align: start;
+    width: 100%;
+
+    .m-toggleButton__chevron {
+      margin-inline-start: var(--collapsible-item-padding-block);
+    }
+  }
+}

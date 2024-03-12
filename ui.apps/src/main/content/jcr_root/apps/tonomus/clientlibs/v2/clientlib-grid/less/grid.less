@@ -1,0 +1,81 @@
+/*
+ *  Copyright 2018 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+@import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
+
+/* padding for each column */
+@gutter-default: 2rem; // 32px each side
+@gutter-tablet: 1rem; // 16px each side
+@gutter-mobile: 0; // 0px each side
+
+/* maximum amount of grid cells to be provided */
+@max_col: 12;
+
+/* default breakpoint */
+.aem-Grid {
+  .generate-grid(default, @max_col);
+}
+
+/* phone breakpoint */
+@media (max-width: 768px) {
+  .aem-Grid {
+    .generate-grid(phone, @max_col);
+  }
+}
+
+/* tablet breakpoint */
+@media (min-width: 769px) and (max-width: 1439px) {
+  .aem-Grid {
+    .generate-grid(tablet, @max_col);
+  }
+}
+
+/* column of a grid */
+.aem-GridColumn {
+  	padding-inline: @gutter-default;
+	@media (max-width: 1439px) {
+	  	padding-inline: @gutter-tablet;
+    }
+	@media (max-width: 768px) {
+	  	padding-inline: @gutter-mobile;
+    }
+}
+
+/* force showing hidden components in unhide mode */
+.aem-GridShowHidden > .cmp-container > .aem-Grid > .aem-GridColumn {
+  display: block !important;
+}
+
+/* Remove padding of the following elements:
+    1. direct child of .root.responsivegrid - because any direct child should have full width
+    2. OOTB layout container as all padding should be on overlay or custom component for TONOMUS
+    3. All layout container or cmp-container should not have padding
+ */
+.root > .aem-Grid > .aem-GridColumn {
+    padding-inline: 0;
+}
+.root > .aem-Grid > .layoutcontainer.responsivegrid {
+    padding-inline: 0;
+
+    > .aem-Grid > .aem-GridColumn {
+        padding-inline: 0;
+
+        .layoutcontainer.responsivegrid,
+        .cmp-container {
+            padding-inline: 0;
+        }
+    }
+}

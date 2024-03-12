@@ -1,0 +1,113 @@
+.o-popupMessage {
+  @include vh(100, height);
+  @include offset();
+
+  position: fixed;
+  width: 100%;
+  z-index: zindex($zLayout, modal);
+
+  .m-button.-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: zindex($zLayout, modal);
+  }
+
+  &__mask {
+    @include size(100%);
+    @include offset();
+
+    position: fixed;
+    background: var(--mask-background-color);
+    z-index: zindex($zLayout, modal);
+  }
+
+  &__messageWrapper {
+    @include offset(50%, 100px);
+    @include vh(80, max-height);
+
+    width: 90%;
+    height: auto;
+    position: absolute;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    color: var(--color-black);
+    overflow: scroll;
+    z-index: zindex($zLayout, modal);
+  }
+
+  &.-isExpertPopup {
+    .o-popupMessage__mask {
+      background: transparent;
+    }
+
+    .m-button.-close {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .o-popupMessage__messageWrapper {
+      @include vh(100, height);
+      max-height: inherit;
+      padding: 20px 0;
+      top: 0;
+      border-radius: 0;
+      overflow: initial;
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    .m-button.-close {
+      right: 40px;
+      top: 40px;
+    }
+
+    &__messageWrapper {
+      @include offset(50%, 50%);
+
+      width: 85%;
+      max-width: 580px;
+      transform: translate(-50%, -50%);
+    }
+
+    &.-isExpertPopup {
+      .o-popupMessage__messageWrapper {
+        width: 100vw;
+        height: 100vh;
+        max-width: initial;
+        max-height: initial;
+        top: 50%;
+      }
+    }
+  }
+
+  @include respond-to(LARGE) {
+    &__messageWrapper {
+      @include offset(50%, 50%);
+
+      width: 100%;
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    &.-isExpertPopup {
+      .o-popupMessage__messageWrapper {
+        padding: 0;
+      }
+    }
+  }
+
+  @include theme("tonomus") {
+    @include tonomus-overlay-controls;
+
+    &__messageWrapper {
+      max-inline-size: 710px;
+    }
+
+    [dir="rtl"] & {
+      .m-button.-close {
+        left: 20px;
+      }
+    }
+  }
+}

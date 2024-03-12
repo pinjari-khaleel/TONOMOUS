@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 71.5 8.6" style="enable-background:new 0 0 71.5 8.6;" xml:space="preserve">
+<style type="text/css">
+	.arrow-body{fill:currentColor;}
+	.arrow-point{fill:currentColor;stroke:currentColor;stroke-width:0.8571;stroke-linejoin:round;}
+</style>
+  <path class="arrow-body" d="M70.3,4.9H0.6C0.3,4.9,0,4.6,0,4.3c0-0.4,0.3-0.6,0.6-0.6h69.7c0.4,0,0.6,0.3,0.6,0.6
+    C71,4.6,70.7,4.9,70.3,4.9z"/>
+  <path class="arrow-point" d="M71.5,4.3l-4.9,4.3l2.8-4.3L66.6,0L71.5,4.3z"/>
+</svg>

@@ -1,0 +1,16 @@
+language: en
+dir: ltr
+tonomus: true
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+meta:
+  id: 's11'
+  status: 'done'
+  notes: ''
+  category: 'Structural (Site) Components'
+
+blocks:
+  - name: 'c90-card-slider'
+    data: 'import!../app/component/block/c90-card-slider/data/default-o84.yaml'
+  - name: 'c90-card-slider'
+    data: 'import!../app/component/block/c90-card-slider/data/default-o85.yaml'

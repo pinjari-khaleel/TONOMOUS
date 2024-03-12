@@ -1,0 +1,12 @@
+image:
+  src: 'image/logo-mark-neom.png'
+  alt: 'NEOM logo mark'
+heading:
+  size: h4
+  text: 'Heading Title'
+copy:
+  size: 'medium'
+  content:
+    '<p>NEOM has an unprecedented opportunity to become a global leader in water production,
+    distribution, treatment and reuse by constantly innovating to find better ways to use and
+    protect this valuable resource.</p>'

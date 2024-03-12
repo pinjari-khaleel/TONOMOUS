@@ -1,0 +1,9 @@
+alt: 'A road leading to a mountain range'
+src: './image/c43-hotspot-map/ski-village.jpg'
+sources:
+  - src: './image/oxagon-hero.jpg'
+    media: '(min-width: 414px)'
+  - src: './image/procurement-background.jpg'
+    media: '(min-width: 834px)'
+  - src: './image/homepage-mountain-background.jpg'
+    media: '(min-width: 1024px)'

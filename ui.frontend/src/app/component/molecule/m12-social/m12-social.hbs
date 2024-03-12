@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="./m12-social.scss">
+<script src="./M12Social.ts"></script>
+
+
+<div class="m-social" data-component="m12-social">
+  <ul class="m-social__items">
+    {{#each items}}
+      <li class="m-social__item" data-social-item>
+        <a class="m-social__link"
+           {{#with label}}aria-label="{{ this }}" data-label="{{this}}"{{/with}}
+           data-social-link
+           href="{{ href }}"
+           {{#with target}}target="{{ this }}"{{#if (condition this '===' '_blank')}} rel="noopener"{{/if}}{{/with}}
+           {{#with title}}title="{{ this }}"{{/with}}
+        >
+          {{> atom/a02-icon name=icon }}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+</div>

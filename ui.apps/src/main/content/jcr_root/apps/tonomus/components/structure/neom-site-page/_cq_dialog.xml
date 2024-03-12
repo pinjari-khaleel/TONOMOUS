@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Page"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[cq.common.wcm,core.wcm.components.page.v2.editor,cq.wcm.msm.properties,cq.siteadmin.admin.properties]"
+          helpPath="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/page.html?lang=en#usage"
+          mode="edit">
+  <content
+      granite:class="cq-dialog-content-page"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+      <tabs
+          granite:class="cq-siteadmin-admin-properties-tabs"
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/coral/foundation/tabs"
+          size="L">
+        <items jcr:primaryType="nt:unstructured">
+          <neom-configs
+              cq:showOnCreate="{Boolean}true"
+              jcr:primaryType="nt:unstructured"
+              jcr:title="Neom site configs"
+              sling:orderBefore="thumbnail"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <section
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                      <domain-name
+                          jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                          fieldDescription="Please enter the site domain name."
+                          cq:showOnCreate="{Boolean}true"
+                          fieldLabel="Site domain name"
+                          name="./domainName">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-msm-lockable="domainName"/>
+                      </domain-name>
+                      <feature-image
+                          cq:showOnCreate="{Boolean}true"
+                          jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                          fieldDescription="Select an defaut image to be used as Feature image of news page."
+                          fieldLabel="Default News Feature Image"
+                          name="./defaultNewsFeatureImage/src"
+                          rootPath="/content/dam">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-msm-lockable="featureImage"/>
+                      </feature-image>
+                      <nav-image
+                          cq:showOnCreate="{Boolean}true"
+                          jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                          fieldDescription="Select an defaut image to be used as Navigation image of news page."
+                          fieldLabel="Default News Nav Image"
+                          name="./defaultNewsNavImage/src"
+                          rootPath="/content/dam">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-msm-lockable="navImage"/>
+                      </nav-image>
+                      <disablePageTransition
+                          jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                          fieldLabel="Disable Page Transition"
+                          fieldDescription="Disable Page Transition"
+                          name="./disablePageTransition"
+                          text="Disable Page Transition"
+                          value="true"
+                          uncheckedValue="false"/>
+                      <default-robots-tags
+                          jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                          fieldDescription="Please enter the site default robots tags (for example, max-image-preview:large). This will be added only in case 'noindex' or 'nofollow' wasn't selected for the Robots Tags in the SEO section."
+                          cq:showOnCreate="{Boolean}true"
+                          fieldLabel="Default robots tags"
+                          name="./defaultRobotsTags">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-msm-lockable="robotsTags"/>
+                      </default-robots-tags>
+                    </items>
+                  </section>
+                </items>
+              </column>
+            </items>
+          </neom-configs>
+        </items>
+      </tabs>
+    </items>
+  </content>
+</jcr:root>

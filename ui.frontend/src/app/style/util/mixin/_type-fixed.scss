@@ -1,0 +1,37 @@
+/*
+ * Renders a typography style without responsive/dynamic scaling.
+ *
+ * example: @include typeFixed('heading', 'h1', 'desktop');
+ *
+ */
+
+@mixin typeFixed($kind, $variant, $size, $typeMap: $type) {
+  $values: type-values($typeMap, $kind, $variant);
+  $breakpoint: map_get($values, $size);
+
+  @if map-get($values, fontSize) {
+    font-size: map-get($values, fontSize);
+  } @else {
+    font-size: map_get($breakpoint, fontSize);
+  }
+  font-weight: map_get($values, fontWeight);
+  @if map-get($values, letterSpacing) {
+    letter-spacing: map-get($values, letterSpacing);
+  } @else {
+    letter-spacing: map_get($breakpoint, letterSpacing);
+  }
+  @if map-get($values, lineHeight) {
+    line-height: map-get($values, letterSpacing);
+  } @else {
+    line-height: map_get($breakpoint, lineHeight);
+  }
+
+  @if $kind == heading or $kind == capsCopy or $kind == overline or $kind == tag {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+  }
+
+  [lang="ar"] & {
+    letter-spacing: 0;
+  }
+}

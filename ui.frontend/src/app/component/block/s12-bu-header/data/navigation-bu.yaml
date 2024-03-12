@@ -1,0 +1,67 @@
+scrollComponent: true
+logo:
+  src: './image/logo-tonomus.png'
+
+navigation:
+  main:
+    dropdownLabel: 'Meet Tonomous'
+    items:
+      - label: 'Who We Are'
+        href: './'
+      - label: 'What We do'
+        href: '#c82-card-list'
+      - label: 'Our Leaders'
+        href: '#c84-tabbed-cta'
+      - label: 'Our Achievements'
+        href: '#c88-key-cta-list'
+      - label: 'How to get involved'
+        href: '#c84-tabbed-cta'
+      - label: 'Careers'
+        href: '#c88-key-cta-list'
+      - label: 'Get in Touch'
+        href: '#c82-card-list'
+  highlightedLink:
+    label: 'Join us'
+    href: '#'
+
+languages:
+  activeLanguageCode: en
+  options:
+    - languageCode: en
+      label: English
+      href: '/homepage.html'
+    - languageCode: nl
+      label: Nederlands
+      href: '/homepage.html'
+    - languageCode: ar
+      shortLabel: عربي
+      label: العربية
+      href: '/homepage-ar.html'
+
+businessUnits:
+  activeBusinessUnit: Venture Studio
+  options:
+    - businessUnit: Venture Studio
+      src: './image/business-units/venture-studio.svg'
+      alt: Venture Studio
+      href: '/homepage.html'
+    - businessUnit: Cognitive Solutions
+      src: './image/business-units/cognitive-solutions.svg'
+      alt: Cognitive Solutions
+      href: '/homepage.html'
+    - businessUnit: Compute
+      src: './image/business-units/compute.svg'
+      alt: Compute
+      href: '/homepage.html'
+    - businessUnit: Connect
+      src: './image/business-units/connect.svg'
+      alt: Connect
+      href: '/homepage.html'
+    - businessUnit: Professional Services
+      src: './image/business-units/professional-services.svg'
+      alt: Professional Services
+      href: '/homepage.html'
+    - businessUnit: Security
+      src: './image/business-units/security.svg'
+      alt: Security
+      href: '/homepage.html'

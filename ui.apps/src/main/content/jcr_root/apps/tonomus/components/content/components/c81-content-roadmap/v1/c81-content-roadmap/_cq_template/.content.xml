@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          scrollComponent="{Boolean}false">
+  <heading
+      jcr:primaryType="nt:unstructured"
+      text="We are &lt;strong&gt;Tonomus&lt;/strong&gt;">
+  </heading>
+  <step1
+      jcr:primaryType="nt:unstructured"
+      text="Tonomus is the first subsidiary of NEOM, a region in Saudi Arabia building a  future fueled by
+    the power of cognitive technology.">
+    <heading
+        jcr:primaryType="nt:unstructured"
+        element="h3"
+        size="h4"
+        text="&lt;strong&gt;01&lt;/strong&gt;">
+    </heading>
+    <image
+        jcr:primaryType="nt:unstructured"
+        src="/content/dam/tonomus/components/c81-content-roadmap/c81-content-roadmap-01.png"
+        mask="./image/c81-content-roadmap/masks.svg#mask-1"
+    />
+  </step1>
+  <step2
+      jcr:primaryType="nt:unstructured"
+      text="A cognitive world is built on trust, using more than 90% of consented data rather than the 1%
+    used by today’s smart cities. Hyper-connected cognitive cities will use that data to seamlessly
+    interact with community members, interpreting and mapping future needs and adding unprecedented
+    value to humanity.">
+    <heading
+        jcr:primaryType="nt:unstructured"
+        element="h3"
+        size="h4"
+        text="&lt;strong&gt;02&lt;/strong&gt;">
+    </heading>
+    <image
+        jcr:primaryType="nt:unstructured"
+        src="/content/dam/tonomus/components/c81-content-roadmap/c81-content-roadmap-02.png"
+        mask="./image/c81-content-roadmap/masks.svg#mask-2"
+    />
+  </step2>
+  <step3
+      jcr:primaryType="nt:unstructured"
+      text="Cognitive technology moves data and decision-making closer to the user, promoting inclusivity,
+    and helping to close the digital divide. In partnership with global industry leaders, we are
+    co-inventing the future of work, living, and sustainability.">
+    <heading
+        jcr:primaryType="nt:unstructured"
+        element="h3"
+        size="h4"
+        text="&lt;strong&gt;03&lt;/strong&gt;">
+    </heading>
+    <image
+        jcr:primaryType="nt:unstructured"
+        src="/content/dam/tonomus/components/c81-content-roadmap/c81-content-roadmap-03.png"
+        mask="./image/c81-content-roadmap/masks.svg#mask-3"
+    />
+  </step3>
+  <button
+      jcr:primaryType="nt:unstructured"
+      label="Discover Tonomus"
+      icon="play"
+  />
+</jcr:root>

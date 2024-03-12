@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="./o85-news-card.scss">
+<script src="./O85NewsCard.ts"></script>
+
+
+<a class="o-newsCard"
+  data-component="o85-news-card"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with link}}href="{{href}}" target="{{target}}"{{/with}}
+>
+  {{> atom/a01-image image disableTransition=true }}
+
+  <div class="o-newsCard__content">
+    <div class="o-newsCard__title">
+      {{title}}
+    </div>
+
+    <div class="o-newsCard__metaWrapper">
+      {{meta}}
+    </div>
+  </div>
+</a>

@@ -1,0 +1,13 @@
+.a-icon {
+  @include size(var(--icon-size, 24px));
+
+  display: inline-block;
+  vertical-align: middle;
+
+  svg {
+    @include size(100%);
+
+    display: block;
+    fill: var(--icon-fill, currentColor);
+  }
+}

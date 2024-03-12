@@ -1,0 +1,76 @@
+<sly
+  data-sly-use.commonCmpModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+  data-sly-use.carousel="com.adobe.cq.wcm.core.components.models.Carousel"
+  data-sly-use.styleModel="com.adobe.cq.wcm.style.ComponentStyleInfo"
+  data-sly-use.tpl="core/wcm/components/commons/v1/templates.html"
+  data-sly-use.hTpl="/apps/tonomus/components/content/atoms/a03-heading.html"
+  data-sly-use.pgTpl="/apps/tonomus/components/content/molecules/m55-image-pagination.html"
+  data-sly-use.ctrlTpl="/apps/tonomus/components/content/organisms/o42-slider-controls.html"
+  data-sly-set.isAuthoring="${wcmmode.edit || wcmmode.preview}"
+  data-sly-set.isEmpty="${carousel.items.size == 0}"
+  data-sly-set.id="${commonCmpModel.anchorId || carousel.id @ context='attribute'}"
+  data-sly-call="${tpl.placeholder @ isEmpty=true}"
+></sly>
+
+<!--/* Carousel Edit mode client library */-->
+<sly
+  data-sly-test="${isAuthoring}"
+  data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+  data-sly-call="${clientlib.all @ categories='core.wcm.components.carousel.v1'}"
+></sly>
+
+<!--/*
+  In Edit mode the default Core Components' behavior is used, so html code differs from hbs.
+  "isAuthoring" and some aria- properties are for Core Components' carousel functionality.
+*/-->
+<section
+  class="b-whatWeDoCards ${isAuthoring ? 'cmp-carousel' : ''}"
+  style="${commonCmpModel.padding.styleInline @ context='styleString'}"
+  data-sly-attribute.data-component="${!isAuthoring && 'c97-what-we-do-cards'}"
+  data-sly-attribute.data-panelcontainer="${isAuthoring && 'carousel'}"
+  data-sly-attribute.data-cmp-is="${isAuthoring && 'carousel'}"
+  data-sly-attribute.id="${id}"
+  data-sly-attribute.data-lazy-component="${!isAuthoring}"
+  data-sly-attribute.aria-label="${carousel.accessibilityLabel}"
+  data-sly-attribute.data-placeholder-text="${isAuthoring && 'Please add Carousel components here' @ i18n}"
+>
+  <div class="b-whatWeDoCards__container">
+    <div
+      class="b-whatWeDoCards__cardContainer ${isAuthoring ? 'cmp-carousel__content' : ''}"
+      data-carousel-container
+    >
+      <div class="b-whatWeDoCards__cards" data-carousel>
+        <div
+          data-sly-repeat.item="${carousel.items}"
+          class="b-whatWeDoCards__cardItem ${isAuthoring ? 'cmp-carousel__item' : ''} ${isAuthoring && itemList.first ? 'cmp-carousel__item--active' : ''}"
+          data-carousel-item
+          role="tabpanel"
+          aria-roledescription="slide"
+          data-sly-attribute.id="${isAuthoring ? '{0}-tabpanel' : '' @ format=[item.id]}"
+          data-sly-attribute.aria-labelledby="${isAuthoring ? '{0}-tab': '' @ format=[item.id]}"
+          data-sly-attribute.data-cmp-hook-carousel="${isAuthoring && 'item'}"
+        >
+          <sly data-sly-resource="${item.name @ decoration=isAuthoring}"></sly>
+        </div>
+
+        <!--/* Edit mode placeholder for adding a new component */-->
+        <div
+          class="b-whatWeDoCards__cardItem"
+          data-carousel-item
+          data-sly-test="${isAuthoring && isEmpty}"
+        >
+          <div class="m-opportunityCard" data-component="m59-opportunity-card">
+            <div class="m-opportunityCard__cardItem" data-carousel-item>
+              <sly
+                data-sly-resource="${resource.path @ resourceType='wcm/foundation/components/parsys/newpar',
+               appendPath='/*', decorationTagName='div',
+               cssClassName='new section aem-Grid-newComponent'}"
+              ></sly>
+            </div>
+          </div>
+        </div>
+        <!--/* Edit mode placeholder -- End */-->
+      </div>
+    </div>
+  </div>
+</section>

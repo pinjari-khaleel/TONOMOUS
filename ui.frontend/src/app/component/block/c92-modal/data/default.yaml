@@ -1,0 +1,3 @@
+id: 'get-in-touch'
+name: 'o86-modal-form'
+data: 'import!../../../organism/o86-modal-form/data/default.yaml'

@@ -1,0 +1,40 @@
+<template data-sly-template.headAnalytics="${ @ dataLayer, page }"
+          data-sly-use.runModeModel="com.tonomus.core.slingmodels.common.v1.RunMode"
+          data-sly-use.gtmTemplate="neom-gtm-head.html">
+    <script>
+        var dataLayer = window.dataLayer || [];
+        window.appEventData = window.appEventData || [];
+    </script>
+
+    <!--/* Data Layer attributes */-->
+    <sly data-sly-set.date="${'yyyy-MM-dd' @ format=dataLayer.lastModified}"></sly>
+    <sly data-sly-set.time="${'hh:mm:ss' @ format=dataLayer.lastModified}"></sly>
+    <!--/* Data Layer Google Analytics */-->
+    <script>
+        dataLayer.push({
+            'page': [{
+                'docUpdate': '${'yyyy-MM-dd' @ format=dataLayer.lastModified,context='text'}',
+                'environment': '${runModeModel.environment @ context='text'}',
+                'language': '${page.language @ context='text'}',
+                'pageType': '${dataLayer.pageType @ context='text'}',
+                'siteName': '${dataLayer.site @ context='text'}',
+                'siteSection': '${dataLayer.siteSection @ context='text'}',
+                'titleLocal': '${page.title @ context='text'}',
+                'titleEnglish': '${dataLayer.englishTitle @ context='text'}',
+                'urlActual': '${dataLayer.url @ context='text'}',
+                'urlCanonical': '${dataLayer.canonicalUrl @ context='text'}'
+            }]
+        });
+        window.appEventData.push({
+            "event": "Data Layer Established",
+            "page": {
+                "canonicalURL": "${dataLayer.canonicalUrl @ context='text'}",
+                "locale": "${dataLayer.locale @ context='text'}",
+                "lastModifiedDate": '${'{0}T{1}Z' @ format=[date, time],context='text'}'
+            }
+        });
+    </script>
+
+    <!--/* GTM script */-->
+    <sly data-sly-call="${gtmTemplate.gtm @ gtmId=dataLayer.gtmId}"></sly>
+</template>

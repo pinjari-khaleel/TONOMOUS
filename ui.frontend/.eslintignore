@@ -1,0 +1,7 @@
+build/**/*
+build-tools/**/*
+template/**/*
+script/**/*
+src/app/vendor/
+*.ts
+src/app/webgl/**/*.js

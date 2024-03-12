@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="./c100-tabs.scss">
+<script src="./C100Tabs.ts"></script>
+
+<div class="tabs panelcontainer">
+  <div id="tabs-9fea6f9326" class="cmp-tabs" data-cmp-data-layer="{&quot;tabs-9fea6f9326&quot;:{&quot;shownItems&quot;:[&quot;tabs-9fea6f9326-item-d5441fb8ea&quot;],&quot;@type&quot;:&quot;core-components-examples/components/tabs&quot;}}" data-placeholder-text="false">
+    <ol role="tablist" class="cmp-tabs__tablist" aria-multiselectable="false">
+      {{#each items}}
+        <li role="tab" class="cmp-tabs__tab cmp-tabs__tab{{#if active}}--isActive{{/if}}" data-tab>
+          {{label}}
+        </li>
+      {{/each}}
+    </ol>
+    {{#each items}}
+      <div tabindex="0" class="cmp-tabs__tabpanel cmp-tabs__tabpanel{{#if active}}--isActive{{/if}}">
+        <div class="responsivegrid">
+          <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+            <p>Tab 1</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

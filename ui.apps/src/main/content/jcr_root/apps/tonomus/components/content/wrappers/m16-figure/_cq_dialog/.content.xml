@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="M16 Figure"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <general
+          jcr:primaryType="nt:unstructured"
+          jcr:title="General"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <alignment-horizontal
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select Horizontal alignment."
+                      fieldLabel="Horizontal alignment"
+                      name="./align/horizontal">
+                    <items jcr:primaryType="nt:unstructured">
+                      <start
+                          jcr:primaryType="nt:unstructured"
+                          text="Start"
+                          value="start"/>
+                      <center
+                          jcr:primaryType="nt:unstructured"
+                          text="Center"
+                          value="center"/>
+                      <end
+                          jcr:primaryType="nt:unstructured"
+                          text="End"
+                          value="end"/>
+                    </items>
+                  </alignment-horizontal>
+                  <alignment-vertical
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select Vertical alignment."
+                      fieldLabel="Vertical alignment"
+                      name="./align/vertical">
+                    <items jcr:primaryType="nt:unstructured">
+                      <top
+                          jcr:primaryType="nt:unstructured"
+                          text="Top"
+                          value="top"/>
+                      <middle
+                          jcr:primaryType="nt:unstructured"
+                          text="Middle"
+                          value="middle"/>
+                      <bottom
+                          jcr:primaryType="nt:unstructured"
+                          text="Bottom"
+                          value="bottom"/>
+                    </items>
+                  </alignment-vertical>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </general>
+      <details
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Image Details"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <variant
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select image variant."
+                      fieldLabel="Image variant"
+                      name="./content/variant">
+                    <items jcr:primaryType="nt:unstructured">
+                      <circle
+                          jcr:primaryType="nt:unstructured"
+                          text="Circle"
+                          value="circle"/>
+                      <landscape
+                          jcr:primaryType="nt:unstructured"
+                          text="Landscape"
+                          value="landscape"/>
+                      <portrait
+                          jcr:primaryType="nt:unstructured"
+                          text="Portrait"
+                          value="portrait"/>
+                      <square
+                          jcr:primaryType="nt:unstructured"
+                          text="Square"
+                          value="square"/>
+                      <widescreen
+                          jcr:primaryType="nt:unstructured"
+                          text="Widescreen"
+                          value="widescreen"/>
+                    </items>
+                  </variant>
+                  <assetPropsVariant
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select asset properties variant."
+                      fieldLabel="Asset Properties Variant"
+                      name="./content/assetPropsVariant">
+                    <items jcr:primaryType="nt:unstructured">
+                      <none
+                          jcr:primaryType="nt:unstructured"
+                          text="None"
+                          value=""/>
+                      <contain
+                          jcr:primaryType="nt:unstructured"
+                          text="Contain"
+                          value="contain"/>
+                      <block
+                          jcr:primaryType="nt:unstructured"
+                          text="Block"
+                          value="block"/>
+                    </items>
+                  </assetPropsVariant>
+                  <image
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                      allowUpload="{Boolean}false"
+                      autoStart="{Boolean}false"
+                      class="cq-droptarget"
+                      dropZone="{Boolean}true"
+                      fieldDescription="Drag and Drop Image"
+                      fieldLabel="Image"
+                      fileNameParameter="./content/image/parameter"
+                      fileReferenceParameter="./content/image/src"
+                      mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                      multiple="{Boolean}false"
+                      name="name"
+                      title="Upload Image Asset"
+                      useHTML5="{Boolean}true"
+                      required="{Boolean}true"/>
+                  <mobileImage
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                      allowUpload="{Boolean}false"
+                      autoStart="{Boolean}false"
+                      class="cq-droptarget"
+                      dropZone="{Boolean}true"
+                      fieldDescription="Drag and Drop Mobile Image"
+                      fieldLabel="Mobile Image"
+                      fileNameParameter="./content/mobileImage/parameter"
+                      fileReferenceParameter="./content/mobileImage/src"
+                      mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                      multiple="{Boolean}false"
+                      name="name"
+                      title="Upload Mobile Image Asset"
+                      useHTML5="{Boolean}true"/>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </details>
+    </items>
+  </content>
+</jcr:root>

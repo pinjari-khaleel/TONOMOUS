@@ -1,0 +1,20 @@
+@mixin imageRatio() {
+  @include aspect-ratio(1);
+
+  &.-portrait {
+    @include aspect-ratio(4, 5);
+  }
+
+  &.-landscape {
+    @include aspect-ratio(3, 2);
+  }
+
+  &.-widescreen {
+    @include aspect-ratio(16, 9);
+  }
+
+  &.-circle {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}

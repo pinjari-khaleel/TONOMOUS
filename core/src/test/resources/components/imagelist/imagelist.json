@@ -1,0 +1,25 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "imageFromPageImage": "false",
+  "sling:resourceType": "tonomus/components/content/components/imagelist/v2/imagelist",
+  "images": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "src": "/content/dam/tonomus/components/v2/small-card.png"
+    },
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "src": "/content/dam/tonomus/components/v2/small-card.png"
+    },
+    "item2": {
+      "jcr:primaryType": "nt:unstructured",
+      "src": "/content/dam/tonomus/components/v2/small-card.png"
+    }
+  }, 
+  "component-no-images" : {
+    "jcr:primaryType": "nt:unstructured",
+    "imageFromPageImage": "false",
+    "sling:resourceType": "tonomus/components/content/components/imagelist/v2/imagelist"
+  }
+}

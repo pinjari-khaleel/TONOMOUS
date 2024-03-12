@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="C77 Slider Item"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <general
+          jcr:primaryType="nt:unstructured"
+          jcr:title="General"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <uppercaseCopy
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                      fieldDescription="Check if you want to uppercase the copy."
+                      name="./uppercaseCopy"
+                      text="Is uppercase copy?"
+                      value="{Boolean}true"
+                      uncheckedValue="{Boolean}false"/>
+                  <cream
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                      fieldDescription="Check if you want a cream."
+                      name="./cream"
+                      text="Is cream?"
+                      value="{Boolean}true"
+                      uncheckedValue="{Boolean}false"/>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </general>
+      <images
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Images"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <imageDesktop
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                      allowUpload="{Boolean}false"
+                      autoStart="{Boolean}false"
+                      class="cq-droptarget"
+                      dropZone="{Boolean}true"
+                      fieldDescription="Drag and Drop Image"
+                      fieldLabel="Desktop Image"
+                      fileNameParameter="./imageDesktop/parameter"
+                      fileReferenceParameter="./imageDesktop/src"
+                      mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                      multiple="{Boolean}false"
+                      name="imageDesktop/name"
+                      title="Upload Image Asset"
+                      useHTML5="{Boolean}true"/>
+                  <altImage
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter Image Alt Text."
+                      fieldLabel="Image Alt Text"
+                      name="./imageDesktop/alt"
+                      required="{Boolean}false"/>
+                  <imageMobile
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                      allowUpload="{Boolean}false"
+                      autoStart="{Boolean}false"
+                      class="cq-droptarget"
+                      dropZone="{Boolean}true"
+                      fieldDescription="Drag and Drop Image"
+                      fieldLabel="Mobile Image"
+                      fileNameParameter="./imageMobile/parameter"
+                      fileReferenceParameter="./imageMobile/src"
+                      mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                      multiple="{Boolean}false"
+                      name="imageMobile/name"
+                      title="Upload Image Asset"
+                      useHTML5="{Boolean}true"/>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </images>
+      <copies
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Copies"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <headingText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter the component Heading Text."
+                      fieldLabel="Heading Text"
+                      name="./multipleCopy/heading/text"/>
+                  <headingWeight
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Size/Weight."
+                      fieldLabel="Heading Size"
+                      name="./multipleCopy/heading/size">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingWeight>
+                  <headingElement
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Element Size/Weight."
+                      fieldLabel="Heading Element Size/Weight"
+                      name="./multipleCopy/heading/element">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingElement>
+                  <copies
+                      jcr:primaryType="nt:unstructured"
+                      fieldLabel="Copies Placeholder"
+                      fieldDescription="Click 'Add' to add a new copy item"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                      class="multifield-full-width"
+                      composite="{Boolean}true">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Copies"
+                        name="./multipleCopy/copy"
+                        granite:class="accordion-multifield-item"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                      <items
+                          jcr:primaryType="nt:unstructured">
+                        <tab
+                            jcr:title="Copy"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            jcr:primaryType="nt:unstructured">
+                          <items jcr:primaryType="nt:unstructured">
+                            <copy-content-text
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext"
+                                fieldDescription="Please enter the Copy."
+                                fieldLabel="Copy"
+                                name="./content"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                            <highlight
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Check if you want to highlight first item."
+                                name="./highlight"
+                                text="Highlighted"
+                                value="{Boolean}true"
+                                uncheckedValue="{Boolean}false"/>
+                          </items>
+                        </tab>
+                      </items>
+                    </field>
+                  </copies>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </copies>
+      <grid-content
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Grid Content"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <grid-content-enabled
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                      fieldDescription="Enable Grid Content"
+                      name="./enableGridContent"
+                      text="Enable Grid Content"
+                      value="{Boolean}true"
+                      uncheckedValue="{Boolean}false"/>
+                  <variant
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select container variant."
+                      fieldLabel="Container variant"
+                      name="./gridContent/variant">
+                    <items jcr:primaryType="nt:unstructured">
+                      <single
+                          jcr:primaryType="nt:unstructured"
+                          text="Single"
+                          value="single"/>
+                      <double
+                          jcr:primaryType="nt:unstructured"
+                          text="Double"
+                          value="double"/>
+                      <double-1-2
+                          jcr:primaryType="nt:unstructured"
+                          text="Double 1-2"
+                          value="double-1-2"/>
+                      <double-2-1
+                          jcr:primaryType="nt:unstructured"
+                          text="Double 2-1"
+                          value="double-2-1"/>
+                      <triple
+                          jcr:primaryType="nt:unstructured"
+                          text="Triple"
+                          value="triple"/>
+                      <triple-1-1-2
+                          jcr:primaryType="nt:unstructured"
+                          text="Triple 1-1-2"
+                          value="triple-1-1-2"/>
+                      <triple-1-2-1
+                          jcr:primaryType="nt:unstructured"
+                          text="Triple 1-2-1"
+                          value="triple-1-2-1"/>
+                      <triple-2-1-1
+                          jcr:primaryType="nt:unstructured"
+                          text="Triple 2-1-1"
+                          value="triple-2-1-1"/>
+                      <quadruple
+                          jcr:primaryType="nt:unstructured"
+                          text="Quadruple"
+                          value="quadruple"/>
+                    </items>
+                  </variant>
+                  <backgroundMaskOpacity
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select Background Mask Opacity."
+                      fieldLabel="Background Mask Opacity"
+                      name="./gridContent/background/mask/opacity">
+                    <items jcr:primaryType="nt:unstructured">
+                      <zero
+                          jcr:primaryType="nt:unstructured"
+                          text="0"
+                          value="0"/>
+                      <twofive
+                          jcr:primaryType="nt:unstructured"
+                          text="0.25"
+                          value="0.25"/>
+                      <five
+                          jcr:primaryType="nt:unstructured"
+                          text="0.5"
+                          value="0.5"/>
+                      <sevenfive
+                          jcr:primaryType="nt:unstructured"
+                          text="0.75"
+                          value="0.75"/>
+                    </items>
+                  </backgroundMaskOpacity>
+                  <backgroundMaskSolid
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                      fieldDescription="Check if Background Mask Solid."
+                      name="./gridContent/background/mask/solid"
+                      text="Background Mask Solid"
+                      value="{Boolean}true"
+                      uncheckedValue="{Boolean}false"/>
+                  <backgroundImage
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                      allowUpload="{Boolean}false"
+                      autoStart="{Boolean}false"
+                      class="cq-droptarget"
+                      dropZone="{Boolean}true"
+                      fieldDescription="Drag and Drop Image"
+                      fieldLabel="Background image"
+                      fileNameParameter="./gridContent/background/image/parameter"
+                      fileReferenceParameter="./gridContent/background/image/src"
+                      mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                      multiple="{Boolean}false"
+                      name="name"
+                      title="Upload Background Image Asset"
+                      useHTML5="{Boolean}true"/>
+                  <altImage
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter Image Alt Text."
+                      fieldLabel="Image Alt Text"
+                      name="./gridContent/background/image/alt"/>
+                  <backgroundImageMobile
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                      allowUpload="{Boolean}false"
+                      autoStart="{Boolean}false"
+                      class="cq-droptarget"
+                      dropZone="{Boolean}true"
+                      fieldDescription="Drag and Drop Mobile Image"
+                      fieldLabel="Background Mobile image"
+                      fileNameParameter="./gridContent/background/imageMobile/parameter"
+                      fileReferenceParameter="./gridContent/background/imageMobile/src"
+                      mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                      multiple="{Boolean}false"
+                      name="name"
+                      title="Upload Background Mobile Image Asset"
+                      useHTML5="{Boolean}true"/>
+                  <mobileAltImage
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter Mobile Image Alt Text."
+                      fieldLabel="Mobile Image Alt Text"
+                      name="./gridContent/background/imageMobile/alt"/>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </grid-content>
+    </items>
+  </content>
+</jcr:root>

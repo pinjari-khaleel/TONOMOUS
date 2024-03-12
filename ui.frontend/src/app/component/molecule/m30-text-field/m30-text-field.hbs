@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="./m30-text-field.scss">
+<script src="./M30TextField.ts"></script>
+
+
+<div class="m-textField{{#with type}} -{{this}}{{/with}}" data-component="m30-text-field">
+  <label class="m-textField__label">
+    <div class="m-textField__textLabel{{#if required}} -isRequired{{/if}}">
+      {{> atom/a07-label text=label size="small" }}
+      {{#if maxlength}}
+      <span class="m-textField__limit" data-text-field-limit>{{maxlength}} {{@root.i18n.characters}}</span>
+      {{/if}}
+    </div>
+    {{#if (condition type '===' 'textarea')}}
+    {{#if blockValidation}}
+    {{> atom/a16-textarea dataAttribute="block-validation"}}
+    {{^}}
+    {{> atom/a16-textarea }}
+    {{/if}}
+    {{^}}
+    {{> atom/a14-input }}
+    {{/if}}
+    
+    {{> atom/a25-form-error }}
+  </label>
+</div>

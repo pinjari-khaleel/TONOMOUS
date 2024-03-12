@@ -1,0 +1,8 @@
+@mixin vh($value, $prop: height, $unit: svh) {
+  #{$prop}: $value * 1vh;
+  #{$prop}: calc(var(--vh) * #{$value});
+
+  @supports (height: 1 + $unit) {
+    #{$prop}: $value * 1 + $unit;
+  }
+}

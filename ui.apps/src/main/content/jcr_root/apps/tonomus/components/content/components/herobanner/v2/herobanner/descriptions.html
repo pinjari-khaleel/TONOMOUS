@@ -1,0 +1,5 @@
+<sly data-sly-template.descriptions="${@ teaser}">
+    <div class="cmp-herobanner__container" data-sly-test="${teaser.descriptions}" data-sly-list="${teaser.descriptions}" data-sly-use.descriptionTemplate="description.html">
+    	<sly data-sly-call="${descriptionTemplate.description @ teaser=item}"></sly>
+    </div>
+</sly>

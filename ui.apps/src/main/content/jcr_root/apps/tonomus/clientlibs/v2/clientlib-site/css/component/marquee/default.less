@@ -1,0 +1,38 @@
+.cmp-marquee {
+  --gap: 8.75rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  padding-block-start: 2.5rem;
+
+  &__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    list-style: none;
+    padding-inline: 0;
+    animation: scroll 30s linear infinite;
+
+    img {
+      height: 89.98px;
+      aspect-ratio: 1.5;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: ~'translateX(calc(-100% - var(--gap)))';
+  }
+}

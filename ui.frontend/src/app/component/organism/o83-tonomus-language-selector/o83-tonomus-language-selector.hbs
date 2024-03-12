@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="./o83-tonomus-language-selector.scss">
+<script src="./O83TonomusLanguageSelector.ts"></script>
+
+<div class="o-tonomusLanguageSelector" data-component="o83-tonomus-language-selector">
+  <input type="checkbox" id="language_toggle" data-language-toggle />
+  {{#each languages.options }}
+    {{#if (condition languageCode '===' ../languages.activeLanguageCode)}}
+      <label class="o-tonomusLanguageSelector__toggle {{#if shortLabel}}-{{languageCode}}{{/if}}" for="language_toggle" data-toggle data-language="{{languageCode}}">
+        {{> atom/a02-icon name="globe-bold" }}
+        <span class="o-tonomusLanguageSelector__code">{{#if shortLabel}}{{shortLabel}}{{^}}{{ languageCode }}{{/if}}</span>
+        {{> atom/a02-icon name="icon-chevron-down" }}
+      </label>
+    {{/if}}
+  {{/each}}
+
+  <div class="o-tonomusLanguageSelector__list">
+    <div class="o-tonomusLanguageSelector__wrapper">
+      <ul class="o-tonomusLanguageSelector__items" data-language-list>
+        {{#each languages.options }}
+          <li class="
+              o-tonomusLanguageSelector__item
+              {{#if (condition languageCode '===' ../languages.activeLanguageCode)}} -isActive{{/if}}"
+              data-language="{{languageCode}}"
+          >
+            <a
+              href="{{ href }}"
+              class="o-tonomusLanguageSelector__link{{#if languageCode}} -{{languageCode}}{{/if}}"
+            >
+              {{ label }}
+              {{#if (condition languageCode '===' ../languages.activeLanguageCode)}}
+                {{> atom/a02-icon name="hard-checkmark" className="checkmark" }}
+              {{/if}}
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>

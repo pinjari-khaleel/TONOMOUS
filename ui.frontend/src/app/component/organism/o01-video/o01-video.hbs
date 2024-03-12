@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="./o01-video.scss">
+<script src="./O01Video.ts"></script>
+
+<div class="o-video{{#if className}} {{className}}{{/if}}{{#if props.cover}} -cover{{/if}}"
+    data-component="o01-video"
+    style="
+      --originalWidth: {{props.originalWidth}};
+      --originalHeight: {{props.originalHeight}};
+    "
+    data-props="{{toJson props}}"
+    {{#each data}}data-{{@key}}="{{this}}" {{/each}}
+>
+  {{#if props.youtube}}
+    {{> ./component/atom/youtube-video props }}
+  {{else}}
+    {{> ./component/atom/native-video props }}
+  {{/if}}
+
+  {{#if props.controls}}
+    {{> ./component/organism/video-controls this }}
+  {{/if}}
+</div>

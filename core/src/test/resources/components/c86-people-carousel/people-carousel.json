@@ -1,0 +1,313 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "root": {
+            "responsivegrid": {
+                "peoplecarousel": {
+                    "jcr:primaryType": "nt:unstructured",
+
+                    "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/c86-people-carousel",
+                    "textIsRich": "true",
+                    "heading": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "text": "Our Leadership"
+                    },
+                    "padding": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "start": "large"
+                    },
+                    "business_card_1944128410": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "yerlan.akmaganbetov@mediamonks.com",
+                        "cq:panelTitle": "Joseph Bradley",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 19 2022 06:39:35 GMT+0000",
+                        "biography": "As Chief Executive Officer of TONOMUS, Joseph Bradley is responsible for formulating the vision and delivery of the technology and digital ecosystem for NEOM, building the foundation and infrastructure for the cognitive cities of the future. Prior to TONOMUS, Joseph served in senior roles at Cisco Systems over the course of 15 years.",
+                        "jcr:lastModified": "Sun Dec 03 2023 13:03:28 GMT+0000",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/josephmbradley/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Chief Executive Officer",
+                            "department": "Sample"
+                        },
+                        "image": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/tonomus/components/c86-people-carousel/v2/JosephBradley.jpg"
+                        }
+                    },
+                    "business_card_1879541447": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "ivan.horbatiuk@mediamonks.com",
+                        "cq:panelTitle": "Olivier Sage",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 26 2022 14:11:09 GMT+0000",
+                        "biography": "Olivier Sage is responsible for charting the financial and operational course of TONOMUS, as well as ensuring that it has the people and processes in place to create lasting value. Prior to joining TONOMUS in 2022, Olivier served as Chief Revenue Officer at MBC Group, and was previously Group CEO of Lebara, a mobile virtual network operator with a presence in eight countries, including Saudi Arabia.",
+                        "jcr:lastModified": "Sun Dec 03 2023 13:04:28 GMT+0000",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/olivier-sage/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Chief Financial Officer"
+                        },
+                        "thumbnail": {
+                            "jcr:primaryType": "nt:unstructured"
+                        },
+                        "uploadingIsDisabled": {
+                            "jcr:primaryType": "nt:unstructured"
+                        }
+                    },
+                    "business_card_1197808891": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "yerlan.akmaganbetov@mediamonks.com",
+                        "cq:panelTitle": "Elaine Grunewald",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 19 2022 06:39:27 GMT+0000",
+                        "biography": "Elaine Grunewald is responsible for ensuring that TONOMUS lives by its sustainable values. She brings more than two decades of experience and advocacy for the private sector’s role in solving sustainability challenges, most recently as Senior Vice President and Chief Sustainability and Public Affairs Officer at Ericsson, and a member of the Executive Team.",
+                        "jcr:lastModified": "Sun Dec 03 2023 13:07:01 GMT+0000",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/elaine-weidman-grunewald/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Chief Sustainability Officer"
+                        },
+                        "image": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/tonomus/components/c86-people-carousel/v2/Elaine Grunewald.jpg"
+                        }
+                    },
+                    "business_card_646496944": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "ivan.horbatiuk@mediamonks.com",
+                        "cq:panelTitle": "Andrew Winters",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 26 2022 14:06:48 GMT+0000",
+                        "biography": "As TONOMUS’ Chief Governance, Risk &amp; Compliance Officer, Andrew Winters is a key source of guidance on cyber, technology, digital and data risk. Andrew commands a comprehensive understanding of the wider NEOM organization where he has held a range of leadership roles, as well as more than 20 years of experience at PwC and Deloitte.",
+                        "jcr:lastModified": "Sun Dec 03 2023 13:08:09 GMT+0000",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/andrew-winters-7263a818b/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Chief Governance & Risk Officer"
+                        },
+                        "image": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/tonomus/components/c86-people-carousel/v2/Andrew Winters.jpg"
+                        },
+                        "thumbnail": {
+                            "jcr:primaryType": "nt:unstructured"
+                        },
+                        "uploadingIsDisabled": {
+                            "jcr:primaryType": "nt:unstructured"
+                        }
+                    },
+                    "business_card_646496": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "ivan.horbatiuk@mediamonks.com",
+                        "cq:panelTitle": "Doha Marzouk",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 26 2022 14:06:48 GMT+0000",
+                        "biography": "As Chief Marketing Officer of TONOMUS, Doha leads the Marcoms portfolio comprising brand, product marketing, events, stakeholder engagements, research, thought leadership, and communications. An industry veteran, Doha has identified and delivered B2C and B2B marketing opportunities for the world’s leading technology companies, including Huawei, Google, Yahoo and Vodafone.",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/dohamarzouk/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Chief Marketing Officer"
+                        },
+                        "image": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/tonomus/components/c86-people-carousel/v2/DohaMarzouk.jpg"
+                        },
+                        "thumbnail": {
+                            "jcr:primaryType": "nt:unstructured"
+                        },
+                        "uploadingIsDisabled": {
+                            "jcr:primaryType": "nt:unstructured"
+                        }
+                    },
+                    "business_card_646496_1449241992": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "ivan.horbatiuk@mediamonks.com",
+                        "cq:panelTitle": "Yousef Khalili",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 26 2022 14:06:48 GMT+0000",
+                        "biography": "Yousef Khalili manages TONOMUS’ global sales, pre-sales, and partnerships across the company’s portfolio, as well as TONOMUS’ Professional Services. Prior to joining TONOMUS, he spent more than eight years at NXN, heading up the Smart City and Digital Government practices and serving as General Manager of the company’s UAE office.",
+                        "jcr:lastModified": "Sun Dec 03 2023 13:15:17 GMT+0000",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/yousef-khalili-4741871/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Chief Commercial Officer, Professional Services Unit"
+                        },
+                        "image": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/tonomus/components/c86-people-carousel/v2/YousefKhalili_NEW.jpg"
+                        },
+                        "thumbnail": {
+                            "jcr:primaryType": "nt:unstructured"
+                        },
+                        "uploadingIsDisabled": {
+                            "jcr:primaryType": "nt:unstructured"
+                        }
+                    },
+                    "business_card_646496_1932224874": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "ivan.horbatiuk@mediamonks.com",
+                        "cq:panelTitle": "Esraa Alsharief",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 26 2022 14:06:48 GMT+0000",
+                        "biography": "In her capacity as Chief Human Resources Officer, Esraa Alsharief works on aligning TONOMUS’ talent agenda to its business strategy by assessing teams and recruiting executive talent. An award-winning HR executive, she has 15 years of experience helping large businesses successfully navigate transformational and change management initiatives across several industries, including banking, real estate, education and retail.",
+                        "jcr:lastModified": "Sun Dec 03 2023 13:17:30 GMT+0000",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/esraa-m-a-858a2348/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Chief Human Resources Officer"
+                        },
+                        "image": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/tonomus/components/c86-people-carousel/v2/EsraaAlsharief Flipped.jpg"
+                        },
+                        "thumbnail": {
+                            "jcr:primaryType": "nt:unstructured"
+                        },
+                        "uploadingIsDisabled": {
+                            "jcr:primaryType": "nt:unstructured"
+                        }
+                    },
+                    "business_card": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "yerlan.akmaganbetov@mediamonks.com",
+                        "cq:panelTitle": "Fabio Fontana",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 19 2022 06:38:57 GMT+0000",
+                        "biography": "As Head of Compute &amp; Innovation at NEOM, Chief Growth Officer at TONOMUS and CEO of ZeroPoint DC, Fabio Fontana is overseeing the successful delivery of NEOM’s next-generation hyperscale data center. With more than 25 years’ experience working with some of the world’s fastest moving and digitally advanced technologies, Fabio has been in a variety of senior executive and managerial roles, including at Hewlett-Packard (HP) and Hewlett-Packard Enterprise (HPE).",
+                        "jcr:lastModified": "Sun Dec 03 2023 13:22:19 GMT+0000",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/fabio-fontana/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Chief Growth Officer & CEO of ZeroPoint Holdings"
+                        },
+                        "image": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/tonomus/components/c86-people-carousel/v2/FabioFontana.jpg"
+                        },
+                        "thumbnail": {
+                            "jcr:primaryType": "nt:unstructured"
+                        },
+                        "uploadingIsDisabled": {
+                            "jcr:primaryType": "nt:unstructured"
+                        }
+                    },
+                    "business_card_646496_1287076535": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "ivan.horbatiuk@mediamonks.com",
+                        "cq:panelTitle": "Fayiaz Chaudhri",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 26 2022 14:06:48 GMT+0000",
+                        "jcr:lastModified": "Sun Dec 03 2023 18:13:02 GMT+0000",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/fayiaz-chaudhri-0a7a178/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Chief Legal Officer"
+                        },
+                        "image": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/tonomus/components/c86-people-carousel/v2/FayiazChaudhri.jpg"
+                        },
+                        "thumbnail": {
+                            "jcr:primaryType": "nt:unstructured"
+                        },
+                        "uploadingIsDisabled": {
+                            "jcr:primaryType": "nt:unstructured"
+                        }
+                    },
+                    "business_card_762447850": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "yerlan.akmaganbetov@mediamonks.com",
+                        "cq:panelTitle": "Laith Hamad",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 19 2022 06:39:53 GMT+0000",
+                        "biography": "Laith Hamad is the Chief Executive Officer of OneWeb where he is responsible for developing a commercial space infrastructure business, focusing on managing government relations, market access, lawful interception and maintenance of state security compliance. Prior to leading OneWeb, Laith worked as a consultant for major telecommunications players providing advice and advocacy on global satellite, mobile internet, data and cloud regulations.",
+                        "jcr:lastModified": "Sun Dec 03 2023 18:11:58 GMT+0000",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/laith-hamad/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "CEO, OneWeb"
+                        },
+                        "image": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/tonomus/components/c86-people-carousel/v2/LaithHamad Flipped.jpg"
+                        }
+                    },
+                    "business_card_762447850_": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "yerlan.akmaganbetov@mediamonks.com",
+                        "cq:panelTitle": "Peter Watson",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 19 2022 06:39:53 GMT+0000",
+                        "biography": "Peter Watson is responsible for the delivery of TONOMUS communications infrastructure to support the NEOM region. Prior to joining TONOMUS, Peter had an illustrious career as a Chief Security Advisor for over 25 years, working at companies such as IBM, Microsoft, CGI, and most recently Cisco.",
+                        "jcr:lastModified": "Sun Dec 03 2023 18:12:28 GMT+0000",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/peter-watson-a6384814/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "Head of Connect"
+                        },
+                        "image": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/tonomus/components/c86-people-carousel/v2/PeterWatson.jpg"
+                        }
+                    },
+                    "business_card_762447850_123": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "jcr:createdBy": "yerlan.akmaganbetov@mediamonks.com",
+                        "cq:panelTitle": "Scott Gegenheimer",
+                        "jcr:lastModifiedBy": "menisa.b.a.mendoza@accenture.com",
+                        "jcr:created": "Mon Sep 19 2022 06:39:53 GMT+0000",
+                        "biography": "Scott is responsible for building the digital connectivity, information security and network resilience that is needed to achieve NEOM’s vision for the future of smart, cutting-edge urban technology. He has a distinguished track record as an executive in the telecommunications and technology sectors, working in leadership roles across the US, Eastern Europe, Middle East and Africa.",
+                        "jcr:lastModified": "Sun Dec 03 2023 12:57:37 GMT+0000",
+                        "scrollComponent": "false",
+                        "linkedin": "https://www.linkedin.com/in/scottgegenheimer/",
+                        "sling:resourceType": "tonomus/components/content/components/c86-people-carousel/v1/business-card",
+                        "textIsRich": "true",
+                        "job": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "title": "President of Infrastructure"
+                        },
+                        "image": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/tonomus/components/c86-people-carousel/v2/ScottGegenheimer.jpg"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

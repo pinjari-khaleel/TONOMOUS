@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          copyrightSiteName="TONOMUS"
+          socialItemsTitle="Follow us on social"
+          recaptcha=" "
+          scrollComponent="{Boolean}true">
+  <logo
+      jcr:primaryType="nt:unstructured"
+      href="/content/dam/tonomus/components/tonomus-footer-logo/tonomus-footer-logo.png">
+    <image
+        jcr:primaryType="nt:unstructured"
+        alt="logo alt text"
+        src="/content/dam/tonomus/components/tonomus-footer-logo/logo-en.png"/>
+  </logo>
+  <sitemapItems
+      jcr:primaryType="nt:unstructured">
+    <item0
+        jcr:primaryType="nt:unstructured"
+        path="/content/tonomus/en-us/conf/foter-top-links/join-the-movement"
+        target="_self"/>
+    <item1
+        jcr:primaryType="nt:unstructured"
+        path="/content/tonomus/en-us/conf/foter-top-links/neom"
+        target="_blank"/>
+  </sitemapItems>
+  <links jcr:primaryType="nt:unstructured">
+    <item0
+        jcr:primaryType="nt:unstructured"
+        href="#"
+        label="&lt;p&gt;Tech and Digital sector&lt;/p&gt; "
+        target="_self"/>
+    <item1
+        jcr:primaryType="nt:unstructured"
+        href="#"
+        label="&lt;p&gt;NEOM.com&lt;/p&gt; "
+        target="_blank"/>
+    <item2
+        jcr:primaryType="nt:unstructured"
+        label="&lt;p&gt;News&lt;/p&gt; "
+        target="_self"/>
+  </links>
+</jcr:root>

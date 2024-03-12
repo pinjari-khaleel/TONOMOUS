@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="./a19-video.scss">
+<script src="./A19Video.ts"></script>
+
+
+<div class="a-video {{#if variant}} -{{variant}}{{/if}}"
+     data-component="a19-video"
+>
+{{#with props}}
+  <video
+    class="a-video__video "
+    poster="{{poster}}"
+    {{#if ../autoloop}}autoplay loop muted playsinline
+    {{^}}
+      {{#if loop}}loop{{/if}}
+      {{#if muted}}muted{{/if}}
+      {{#if autoplay}}autoplay{{/if}}
+      {{#if playsinline}}playsinline{{/if}}
+    {{/if}}
+    {{#if crossorigin}}crossorigin="{{crossorigin}}"{{/if}}
+    data-video
+  >
+    {{#each sources}}
+      <source src="{{src}}" type="{{type}}" {{#if media}} media="{{media}}" {{/if}}  />
+    {{/each}}
+      <source src="{{src}}" type="{{type}}"/>
+    Your browser does not support the video tag.
+  </video>
+{{/with}}
+</div>
+

@@ -1,0 +1,79 @@
+scrollComponent: true
+
+downloads:
+  title: Downloads
+  items:
+    - heading:
+        text: NEOM MASTERBRAND FULL ASSET PACK
+        element: h3
+      description: 1 Jun 2021
+      image:
+        src: 'image/c30-downloads/promo-pack.jpg'
+      link:
+        label: ZIP file 33.2MB
+        href: 'downloads/download-placeholder.zip'
+      eventTracking:
+        event: 'download'
+        eventCategory: 'Download'
+        eventAction: 'Download - zip'
+        eventLabel: 'Download - NEOM Information pack'
+
+    - heading:
+        text: NEOM MASTERBRAND ECONOMIC SECTOR ICONS
+        element: h3
+      description: 1 Jun 2021
+      image:
+        src: 'image/c30-downloads/brandbook/download-02.jpg'
+      link:
+        label: ZIP file 33.2MB
+        href: 'downloads/download-placeholder.zip'
+      eventTracking:
+        event: 'download'
+        eventCategory: 'Download'
+        eventAction: 'Download - zip'
+        eventLabel: 'Download - NEOM Information pack'
+
+    - heading:
+        text: NEOM MASTERBRAND<br/> LOGO SUITE
+        element: h3
+      description: 1 Jun 2021
+      image:
+        src: 'image/c30-downloads/brandbook/download-03.jpg'
+      link:
+        label: ZIP file 33.2MB
+        href: 'downloads/download-placeholder.zip'
+      eventTracking:
+        event: 'download'
+        eventCategory: 'Download'
+        eventAction: 'Download - zip'
+        eventLabel: 'Download - NEOM Information pack'
+
+    - heading:
+        text: NEOM MASTERBRAND PATTERNS
+        element: h3
+      description: 1 Jun 2021
+      image:
+        src: 'image/c30-downloads/brandbook/download-04.jpg'
+      link:
+        label: ZIP file 33.2MB
+        href: 'downloads/download-placeholder.zip'
+      eventTracking:
+        event: 'download'
+        eventCategory: 'Download'
+        eventAction: 'Download - zip'
+        eventLabel: 'Download - NEOM Information pack'
+
+    - heading:
+        text: NEOM MASTERBRAND<br/>GENERAL ICONS
+        element: h3
+      description: 1 Jun 2021
+      image:
+        src: 'image/c30-downloads/brandbook/download-05.jpg'
+      link:
+        label: ZIP file 33.2MB
+        href: 'downloads/download-placeholder.zip'
+      eventTracking:
+        event: 'download'
+        eventCategory: 'Download'
+        eventAction: 'Download - zip'
+        eventLabel: 'Download - NEOM Information pack'

@@ -1,0 +1,8 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly
+    data-sly-use.checkboxOptionModel="com.tonomus.core.slingmodels.components.v1.forms.FormCheckBoxModel"
+    data-sly-use.stylizedOptionTemplate="/apps/tonomus/components/content/molecules/m52-stylized-option.html"></sly>
+
+<sly data-sly-call="${stylizedOptionTemplate.stylizedOption @ checkBoxModel=checkboxOptionModel}"></sly>

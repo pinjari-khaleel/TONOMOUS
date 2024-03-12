@@ -1,0 +1,21 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Fri Apr 09 2021 14:06:49 GMT+0200",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "changefreq": "weekly",
+    "jcr:createdBy": "admin",
+    "jcr:title": "English",
+    "pwaOrientation": "any",
+    "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+    "jcr:created": "Fri Apr 09 2021 14:06:49 GMT+0200",
+    "englishTitle": "English Title",
+    "pwaDisplay": "standalone",
+    "cq:lastModified": "Thu Apr 15 2021 09:53:56 GMT+0200",
+    "siteSection": "home",
+    "sling:resourceType": "neom/components/structure/page",
+    "cq:lastModifiedBy": "admin",
+    "root": {}
+  }
+}

@@ -1,0 +1,21 @@
+<template data-sly-template.subitems="${@ subitems='The navigation items for the current level'}"
+          data-sly-use.navigationItemTemplate="navigationitem.html"
+          data-sly-use.internalLinkTemplate="/apps/tonomus/components/common/link-internal.html"
+          data-sly-use.externalLinkTemplate="/apps/tonomus/components/common/link-external.html">
+    <div class="cmp-footer__navigation-subitem-container" data-sly-list.subItem="${subItems}">
+        <div data-sly-set.hasSubItems="${subitem.children.size > 0}"
+             class="cmp-footer__navigation-subitem${hasChildren ? ' cmp-footer__navigation-subitem--parent' : ''}${subItem.active ? ' cmp-footer__navigation-subitem--active' : ''}">
+            <a data-sly-attribute="${subItem.link.htmlAttributes}"
+               aria-current="${subItem.current && 'page'}"
+               data-sly-unwrap="${!subItem.link.valid}"
+               class="cmp-footer__navigation-subitem-link">
+                <span>
+                    <span>${subItem.title}</span>
+                    <sly data-sly-call="${internalLinkTemplate.internalLink}"></sly>
+                    <sly data-sly-call="${externalLinkTemplate.externalLink}"></sly>
+                </span>
+            </a>
+            <sly data-sly-test="${hasSubItems}" data-sly-call="${navigationItemTemplate.subItems @ subitems=subItem.children}"></sly>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,91 @@
+<sly data-sly-template.button="${@
+    buttonModel='Sling model for button (class ButtonModel)',
+    label='Button label (also may come within buttonModel)',
+    href='Button href (also may come within buttonModel)',
+    title='Button title (also may come within buttonModel)',
+    ariaLabel='Button aria label',
+    ariaControls='Button aria controls',
+    size='Button size (medium, small)',
+    level='Button level (primary, secondary, tertiary)',
+    theme='Button theme (white, black, cream, dark-gold, glass)',
+    variant='Button variant (play, close)',
+    icon='Button icon name',
+    secondIcon='Button second icon name',
+    iconAlignment='Button icon alignment',
+    disabled='Boolean flag for disabled button',
+    attrs='List of space- or comma-separated attributes with/without values: data-something1 attr2 attr3=attr3value',
+    videoJson='JSON with video data',
+    modalJson='JSON with modal data',
+    type='Button type',
+    share='Share attribute containing json for articles',
+    iconClassName='Name of the class for the icon in the button'
+    }"
+     data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+     data-sly-set.hrefVal="${href || buttonModel.href}"
+     data-sly-set.attrsVal="${attrs || buttonModel.attrs}"
+     data-sly-use.attributesModel="${'com.tonomus.core.slingmodels.common.v1.AttributeCreatorModel' @ attrs=attrsVal}"
+     data-sly-set.labelVal="${label || buttonModel.label}"
+     data-sly-set.titleVal="${title || buttonModel.title}"
+     data-sly-set.themeVal="${theme || buttonModel.theme}"
+     data-sly-set.sizeVal="${size || buttonModel.size}"
+     data-sly-set.iconVal="${icon || buttonModel.icon}"
+     data-sly-set.secondIconVal="${secondIcon || buttonModel.secondIcon}"
+     data-sly-set.variantVal="${variant || buttonModel.variant}"
+     data-sly-set.levelVal="${level || buttonModel.level}"
+     data-sly-set.videoJsonVal="${variantVal == 'play' ? (videoJson || buttonModel.video.props.json) : ''}"
+     data-sly-set.modalJsonVal="${modalJson || buttonModel.modalJson}"
+     data-sly-set.typeVal="${type || buttonModel.type}"
+     data-sly-set.iconAlignmentVal="${iconAlignment || buttonModel.iconAlignment}"
+
+>
+  <!--/* TODO: video JSON structure needs to be clarified */-->
+  <!--/* TODO: modal JSON structure needs to be clarified */-->
+
+  <sly
+      data-sly-test="${buttonModel.eventTracking.enabled}"
+      data-sly-use.eventTrackingModel=
+          "${'com.tonomus.core.slingmodels.common.v1.JsonModel' @ input=buttonModel.eventTracking.data}"></sly>
+
+  <button data-component="m02-button"
+          data-sly-element="${hrefVal ? 'a' : 'button'}"
+          href="${hrefVal}"
+          rel="${buttonModel.target == '_blank' ? 'noopener' : ''}"
+          target="${buttonModel.target @ context='text'}"
+          aria-label="${ariaLabel}"
+          aria-controls="${ariaControls}"
+          data-sly-attribute.data-event-tracking="${eventTrackingModel['json'] @ context='unsafe'}"
+
+          class="m-button
+            ${['', levelVal || 'primary'] @ join = '-', context='styleString'}
+            ${['', themeVal || 'black'] @ join = '-', context='styleString'}
+            ${['', sizeVal || 'large'] @ join = '-', context='styleString'}
+            ${[variantVal ? '-' : '', variantVal] @ join = '', context='styleString'}
+            ${!labelVal ? ' -iconOnly' : ''}
+            ${!iconVal ? ' -labelOnly' : ''}
+            ${[iconAlignmentVal ? '-' : '', iconAlignmentVal, iconAlignmentVal ? 'Icon' : ''] @ join = '', context='styleString'}"
+
+          data-close-button="${variantVal == 'close'}"
+          data-play-button="${variantVal == 'play'}"
+          data-navigation-button="${variantVal == 'navigation'}"
+          data-sly-attribute="${attributesModel.attributes}"
+          data-sly-attribute.data-share="${share}"
+          disabled="${disabled ? 'true' : ''}"
+          title="${titleVal ? titleVal : labelVal}"
+          data-video="${videoJsonVal @ context='attribute'}"
+          data-modal="${modalJsonVal @ context='attribute'}"
+          type="${typeVal @ context='attribute'}">
+
+    <span class="m-button__prefix" data-sly-test="${buttonModel.prefix}" >${buttonModel.prefix}</span>
+    <span class="m-button__container" data-button-container>
+      <sly data-sly-test="${labelVal}"
+           data-sly-call="${labelTemplate.label @ size=sizeVal, text=labelVal}"></sly>
+      <sly data-sly-test="${iconVal}"
+           data-sly-call="${iconTemplate.icon @ name=iconVal, variant=variantVal,
+           className=iconClassName}"></sly>
+      <sly data-sly-test="${secondIconVal}"
+           data-sly-call="${iconTemplate.icon @ name=secondIconVal}"></sly>
+    </span>
+    <span class="m-button__suffix" data-sly-test="${buttonModel.suffix}" >${buttonModel.suffix}</span>
+  </button>
+</sly>

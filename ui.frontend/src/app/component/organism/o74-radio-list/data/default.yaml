@@ -1,0 +1,26 @@
+type: 'radio'
+legend: 'My radio list'
+name: 'radio-list'
+id: 'radio-list'
+items:
+  - name: 'radio-list'
+    label: 'foo'
+    id: 'foo'
+    value: 'foo'
+  - name: 'radio-list'
+    label: 'bar'
+    id: 'bar'
+    value: 'bar'
+  - name: 'radio-list'
+    label: 'other'
+    id: 'other'
+    value: 'other'
+required: true
+showTextareaForOtherChoice:
+  name: 'my-textarea'
+  label: 'My textarea'
+  id: 'my-textarea'
+  titleInEnglish: 'my-textarea'
+  placeholder: 'write something'
+  required: true
+  wide: true

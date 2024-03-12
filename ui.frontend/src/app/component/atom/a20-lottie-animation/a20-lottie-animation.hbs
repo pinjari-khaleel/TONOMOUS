@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="./a20-lottie-animation.scss">
+<script src="./A20LottieAnimation.ts"></script>
+<div class="a-lottie-animation" data-component="a20-lottie-animation">
+  <div
+    class="a-lottie-animation__container"
+    aria-hidden="true"
+    data-lottie-container
+    data-lottie-json-file-path="{{jsonFilePath}}"
+    data-lottie-assets-folder-path="{{assetsFolderPath}}"
+    data-lottie-autoplay="{{#if autoplay}}{{autoplay}}{{^}}false{{/if}}"
+    data-lottie-loop="{{#if loop}}{{loop}}{{^}}false{{/if}}">
+  </div>
+  {{#if alt}}<div class="u-srOnly">{{alt}}</div>{{/if}}
+</div>

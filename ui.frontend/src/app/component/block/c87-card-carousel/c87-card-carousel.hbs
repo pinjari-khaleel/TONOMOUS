@@ -1,0 +1,55 @@
+
+
+
+
+<section class="b-cardCarousel"
+  data-component="c87-card-carousel"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with padding}}
+    style="--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};"
+  {{/with}}
+  data-lazy-component
+>
+  {{> atom/a27-tonomus-line }}
+
+  <div class="b-cardCarousel__container">
+    {{#with header.heading}}
+      <div class="b-cardCarousel__header">
+        {{> atom/a03-heading }}
+      </div>
+    {{/with}}
+
+    <div class="b-cardCarousel__content" data-carousel-container>
+      <div class="swiper__container" data-slider>
+        <div class="swiper-wrapper">
+          {{#each items}}
+            <div class="swiper-slide">
+              {{#if link}}<a href="{{link.href}}"{{else}}<div{{/if}} class="b-cardCarousel__slideButton" data-slide-button {{#if video}}data-video="{{ toJson video }}" {{/if}}>
+                  {{#if image }}
+                    <div class="b-cardCarousel__media" data-update-card>
+                      {{> atom/a01-image image disableTransition=true }}
+                    </div>
+                  {{/if}}
+                  {{#if heading}}
+                    <div class="b-cardCarousel__slideCopy">
+                          {{heading.text}}
+                    </div>
+                {{/if}}
+              {{#if video}}
+                {{> molecule/m02-button eventTracking=video.playButtonEventTracking icon="play-solid" theme="green" variant="play"}}
+              {{/if}}
+              {{#unless link}}</div>{{else}}</a>{{/unless}}
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <footer class="b-cardCarousel__footer">
+      <div class="b-cardCarousel__controls" data-controls>
+        {{> organism/o42-slider-controls }}
+      </div>
+    </footer>
+  </div>
+</section>

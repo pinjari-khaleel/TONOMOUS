@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          addShareOptions="true"
+          disableEventTracking="false"
+          content="&lt;p&gt;&lt;b&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritati.&lt;/b&gt;&lt;/p&gt; &lt;p&gt;Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/content/dam/tonomus/components/c83-interactive-overview/Tonomus_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; "
+          scrollComponent="{Boolean}false">
+  <heading
+      jcr:primaryType="nt:unstructured"
+      element="h1"
+      size="h4"
+      text="&lt;p&gt;ZEROPOINT DC hyperscale data center to support ecosystem of cognitive technologies&lt;/p&gt; "/>
+  <image
+      jcr:primaryType="nt:unstructured"
+      alt="alt text"
+      src="/content/dam/tonomus/components/c83-interactive-overview/Tonomus_4.png"/>
+  <meta
+      jcr:primaryType="nt:unstructured">
+    <datetime
+        jcr:primaryType="nt:unstructured"
+        text="FRIDAY MAY 21, 2023"/>
+    <duration
+        jcr:primaryType="nt:unstructured"
+        text="11 MIN READ"/>
+    <share
+        jcr:primaryType="nt:unstructured"/>
+  </meta>
+  <padding
+      jcr:primaryType="nt:unstructured"
+      start="large"/>
+  <shareOptions
+      jcr:primaryType="nt:unstructured">
+    <heading
+        jcr:primaryType="nt:unstructured"
+        text="share article"/>
+  </shareOptions>
+</jcr:root>

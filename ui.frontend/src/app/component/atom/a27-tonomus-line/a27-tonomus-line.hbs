@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="./a27-tonomus-line.scss">
+<script src="./A27TonomusLine.ts"></script>
+
+
+<div
+  class="a-tonomusLine"
+  data-component="a27-tonomus-line"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+>
+  <svg
+    class="a-tonomusLine__mobileSvg"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 247 735"
+  >
+    <path
+      stroke="url(#mobile-tonomus-line-gradient)"
+      stroke-width="1.35"
+      d="M246.95 1H41.55A40.54 40.54 0 0 0 1 41.54v693.24"
+    />
+    <defs>
+      <linearGradient
+        id="mobile-tonomus-line-gradient"
+        x1="311.81"
+        x2="184.08"
+        y1="1"
+        y2="715.75"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop
+          stop-color="currentColor"
+          stop-opacity="0"
+        />
+        <stop
+          offset=".11"
+          stop-color="currentColor"
+        />
+        <stop
+          offset=".82"
+          stop-color="currentColor"
+        />
+        <stop
+          offset="1"
+          stop-color="currentColor"
+          stop-opacity="0"
+        />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <svg
+    class="a-tonomusLine__desktopSvg"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 183 801"
+  >
+    <path
+      stroke="url(#desktop-tonomus-line-gradient)"
+      stroke-width="1.48"
+      d="M183 1H31A30 30 0 0 0 1 31v770"
+    />
+    <defs>
+      <linearGradient
+        id="desktop-tonomus-line-gradient"
+        x1="231"
+        x2="33"
+        y1="1"
+        y2="753"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop
+          stop-color="currentColor"
+          stop-opacity="0"
+        />
+        <stop
+          offset=".11"
+          stop-color="currentColor"
+        />
+        <stop
+          offset=".82"
+          stop-color="currentColor"
+        />
+        <stop
+          offset="1"
+          stop-color="currentColor"
+          stop-opacity="0"
+        />
+      </linearGradient>
+    </defs>
+  </svg>
+  <div class="a-tonomusLine__mouseIcon">
+    {{>atom/a02-icon name="mouse"}}
+    {{>atom/a02-icon name="chevron-down-tonomus"}}
+  </div>
+</div>

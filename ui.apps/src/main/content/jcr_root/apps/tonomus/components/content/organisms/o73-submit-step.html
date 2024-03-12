@@ -1,0 +1,48 @@
+<sly data-sly-template.submitStep="${ @
+     finalStepModel = 'the instance of class MultiStepFormFinalStepModel with properties'}"
+     data-sly-use.backgroundTemplate="/apps/tonomus/components/content/molecules/m34-component-background.html"
+     data-sly-use.paragraphTemplate="/apps/tonomus/components/content/molecules/m18-paragraph.html"
+     data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"
+     data-sly-use.socialTemplate="/apps/tonomus/components/content/molecules/m12-social.html">
+
+  <div class="o-submitStep"
+       data-component="o73-submit-step"
+       data-sly-attribute.id="${finalStepModel.id}"
+       data-sly-attribute.data-scroll-component="${finalStepModel.scrollComponent}">
+  <div class="o-submitStep__wrapper">
+    <sly
+        data-sly-call="${backgroundTemplate.background @ backgroundModel=finalStepModel.background, disableTransition=true}"></sly>
+    <div class="o-submitStep__content">
+      <div class="o-submitStep__messages">
+        <div  class="o-submitStep__message">
+          <div class="o-submitStep__success" data-submit-success
+               data-sly-test="${finalStepModel.success.heading.text || finalStepModel.success.eyebrow.text}">
+            <sly data-sly-call="${paragraphTemplate.paragraph @ paragraphModel=finalStepModel.success}"></sly>
+          </div>
+          <div class="o-submitStep__error" data-submit-error
+               data-sly-test="${finalStepModel.error.heading.text || finalStepModel.error.eyebrow.text}">
+            <sly data-sly-call="${paragraphTemplate.paragraph @ paragraphModel=finalStepModel.error}"></sly>
+          </div>
+        </div>
+        <div class="o-submitStep__buttonsWrapper">
+          <ul class="o-submitStep__buttons">
+            <li class="o-submitStep__button" data-sly-test="${finalStepModel.doneButtonLabel}"
+                data-sly-call="${buttonTemplate.button @ level='primary', label=finalStepModel.doneButtonLabel,
+                                theme='dark-gold', attrs='data-done-button', size='small'}">
+            </li>
+            <li class="o-submitStep__button" data-sly-test="${finalStepModel.tryAgainButtonLabel}"
+                data-sly-call="${buttonTemplate.button @ level='primary', label=finalStepModel.tryAgainButtonLabel,
+                                theme='white', type='reset', attrs='data-retry-button', size='small'}">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="o-submitStep__social" data-sly-test="${finalStepModel.social.items && finalStepModel.social.items.size > 0}">
+        <p class="o-submitStep__socialCallToAction">${finalStepModel.followUsLabel}</p>
+        <sly data-sly-call="${socialTemplate.socialIcons @ items=finalStepModel.social.items}"></sly>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</sly>

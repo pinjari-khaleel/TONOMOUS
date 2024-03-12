@@ -1,0 +1,22 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "contentFragmentsPath": "/path/to/content/fragments",
+  "optionsSource": "contentFragments",
+  "jcr:lastModifiedBy": "admin",
+  "titleInEnglish": "Country",
+  "autocomplete": "false",
+  "required": "false",
+  "id": "Country",
+  "name": "Country",
+  "label": "Country",
+  "disabled": "false",
+  "placeholder": "placeholder",
+  "jcr:lastModified": "Thu Oct 20 2022 16:26:46 GMT+0600",
+  "sling:resourceType": "neom/components/content/wrappers/m31-dropdown-field",
+  "validate": {
+    "jcr:primaryType": "nt:unstructured"
+  },
+  "items": {
+    "jcr:primaryType": "nt:unstructured"
+  }
+}

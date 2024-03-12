@@ -1,0 +1,23 @@
+scrollComponent: true
+id: 'c88-key-cta-list'
+padding:
+  start: 'large'
+heading:
+  text: "Join the\n<strong>movement</strong>"
+  size: h2
+text:
+  '<p>To create a cognitive world, it’s everybody in. As we set a new standard for what’s possible,
+  we recognize that potential is everywhere: It’s in our partners, it’s in our customers, it’s in
+  our team, it’s in you.</p><p>Leverage our innovative technologies as a business partner, transform
+  your career on our inclusive team, or make your vision a reality as an entrepreneur—however you
+  contribute, we welcome your collaboration on a future created by us and for us.</p>'
+list:
+  - text: GET IN TOUCH
+    icon: arrow-right
+    description: SEND US YOUR REQUEST
+  - text: STAY INFORMED
+    icon: arrow-right
+    description: WE’LL UPDATE YOU WITH THE LAST NEWS
+  - text: BECOME PART OF THE TEAM
+    icon: arrow-right
+    description: TELL US ABOUT YOURSELF AND INCLUDE YOUR CV

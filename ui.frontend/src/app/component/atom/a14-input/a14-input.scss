@@ -1,0 +1,41 @@
+.a-input {
+  position: relative;
+
+  &__input {
+    appearance: none;
+    background-color: var(--input-background-color);
+    border-radius: var(--input-border-radius);
+    border: var(--input-border-width) solid var(--input-border-color);
+    box-sizing: border-box;
+    color: var(--input-text-color);
+    display: block;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: var(--input-height);
+    margin: 0;
+    padding: 8.5px;
+    text-transform: none;
+    width: 100%;
+
+    &:active {
+      outline: none;
+      border-color: var(--input-border-color-focus);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--input-border-color-focus);
+      box-shadow: 0 0 0 var(--input-border-radius) var(--input-box-shadow-focus);
+    }
+
+    &.-hasError {
+      border-color: var(--form-error-color);
+    }
+  }
+
+  @include theme("tonomus") {
+    &__input {
+      @include type("body", "medium");
+    }
+  }
+}

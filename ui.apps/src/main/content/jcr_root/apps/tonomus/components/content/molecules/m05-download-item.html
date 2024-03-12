@@ -1,0 +1,29 @@
+<sly data-sly-template.download="${@
+       downloadModel='Sling Model for download item molecule (class DownloadModel)',
+       variant='variant'
+     }"
+     data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+     data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html"
+>
+
+  <div class="m-downloadItem ${[variant ? '-' : '', variant] @ join = ''}"
+       data-component="m05-download-item"
+       data-event-tracking="${downloadModel.eventTrackingJson}">
+    <div class="m-downloadItem__image">
+      <sly data-sly-test.imageModel="${downloadModel.image}"
+           data-sly-call="${imageTemplate.image @ imageModel=imageModel, disableTransition=true}">
+      </sly>
+    </div>
+    <div class="m-downloadItem__content">
+      <sly data-sly-call="${headingTemplate.heading @ headingModel=downloadModel.heading}"></sly>
+      <p class="m-downloadItem__description">${downloadModel.description @ context='html'}</p>
+      <a data-sly-test.href="${downloadModel.link.href}"
+         href="${href}"
+         class="m-downloadItem__link" data-download data-title="${downloadModel.heading.text}">
+        ${downloadModel.link.label}
+        <sly data-sly-call="${iconTemplate.icon @ name='download'}"></sly>
+      </a>
+    </div>
+  </div>
+</sly>

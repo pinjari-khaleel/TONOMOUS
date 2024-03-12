@@ -1,0 +1,10 @@
+- icon: arrow-right
+  label: Text Button
+
+- label: Text Button
+
+- icon: arrow-left
+  iconAlignment: left
+  label: Text Button
+
+- icon: play-solid

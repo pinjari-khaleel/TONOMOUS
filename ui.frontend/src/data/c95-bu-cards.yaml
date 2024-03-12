@@ -1,0 +1,13 @@
+dir: ltr
+language: en
+# navigation: 'import!../app/component/block/s01-navigation/data/navigation-en.yaml'
+
+meta:
+  id: 'c95'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 'c95-bu-cards'
+    data: 'import!../app/component/block/c95-bu-cards/data/default.yaml'

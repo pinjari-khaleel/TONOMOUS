@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="./c95-bu-cards.scss">
+
+
+<section class="b-buCards"
+  data-component="c95-bu-cards"
+  data-items="{{toJson items}}"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#if (condition backgroundColor '||' padding)}}
+    style="{{#with padding}}--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};{{/with}}
+    {{#with backgroundColor}}--component-background-color: {{#unless (condition this '===' transparent)}}var(--color-{{this}}){{^}}transparent{{/unless}};{{/with}}"
+  {{/if}}
+>
+  <div class="b-buCards__container">
+    {{> ./shapes/line-1 className="b-buCards__lineShape1" }}
+    {{> ./shapes/line-2 className="b-buCards__lineShape2" }}
+    <div class="b-buCards__header">
+      {{#with header}}
+        {{> atom/a03-heading text=heading.text size="h1" element="h2" }}
+      {{/with}}
+    </div>
+    <div class="b-buCards__items">
+      {{#each items}}
+        <a class="b-buCards__link" href="#">
+          <div class="b-buCards__item" tabindex="1">
+            <div class="b-buCards__backgroundImage">
+              {{#with content.image}}
+                {{> atom/a01-image this disableTransition=true }}
+              {{/with}}
+            </div>
+            <div class="b-buCards__content">
+              {{> ./shapes/shady-shape className="b-buCards__shadyShape" }}
+              <p class="b-buCards__title">{{content.heading.text}}</p>
+              {{#with content.logoImage}}
+                {{> atom/a01-image this disableTransition=true }}
+              {{/with}}
+              <div class="s-content">
+                <p>{{content.description.text}}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      {{/each}}
+    </div>
+    {{> ./shapes/line-3 className="b-buCards__lineShape3" }}
+  </div>
+</section>
+

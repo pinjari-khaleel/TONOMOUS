@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./o24-popup-message.scss">
+<script src="./O24PopupMessage.ts"></script>
+
+<div class="o-popupMessage" data-component="o24-popup-message">
+  <div class="o-popupMessage__mask" data-mask></div>
+  <div class="o-popupMessage__controls">
+    {{#if tonomus}}
+    {{> molecule/m02-button level="primary" icon="close" theme="white" variant="close"}}
+    {{else}}
+    {{> molecule/m02-button level="secondary" icon="close" theme="white" variant="close"}}
+    {{/if}}
+  </div>
+  <div class="o-popupMessage__messageWrapper" data-popup-container>
+    {{!-- Popup content injected here --}}
+  </div>
+</div>

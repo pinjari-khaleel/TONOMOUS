@@ -1,0 +1,27 @@
+<sly data-sly-template.modal="${@ background,
+  themeCssClasses='String value contains CSS class names theme. Like t-dark or etc.',
+  variant}"
+     data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html">
+  <div data-component="o10-modal"
+       class="o-modal ${background ? '-{0}' : '' @ format=[background]}
+       ${themeCssClasses @ context='styleString'}
+       ${variant ? '-{0}' : '' @ format=[variant], context='styleString'}"
+       data-i18n='{"biography": {"region": "${"Region" @ i18n}", "sector": "${"Sector" @ i18n}"}, "common": {"back": "${"Back to overview" @ i18n}"}}'>
+    <div class="o-modal__container">
+      <div class="o-modal__mask" data-mask></div>
+      <div class="o-modal__panel" data-panel>
+        <div class="o-modal__controls">
+          <sly data-sly-test="${inheritedPageProperties.brandSite == 'tonomus'}"
+               data-sly-call="${buttonTemplate.button @ level='primary', icon='close',
+               theme='white', variant='close'}"></sly>
+          <sly data-sly-test="${inheritedPageProperties.brandSite != 'tonomus'}"
+               data-sly-call="${buttonTemplate.button @ level='secondary', icon='close',
+               theme='white', variant='close'}"></sly>
+        </div>
+        <div class="o-modal__content" data-modal-container>
+          <!-- Modal content injected here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</sly>

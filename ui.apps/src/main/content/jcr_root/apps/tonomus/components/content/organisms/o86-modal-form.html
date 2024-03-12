@@ -1,0 +1,8 @@
+<sly data-sly-template.modalForm="${ @ formModel='Form model.'}"
+     data-sly-use.formTemplate="/apps/tonomus/components/content/organisms/o45-form.html">
+  <div
+      class="o-modalForm"
+      data-component="o86-modal-form">
+    <sly data-sly-call="${formTemplate.form @ formModel=formModel}"></sly>
+  </div>
+</sly>

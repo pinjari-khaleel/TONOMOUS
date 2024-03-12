@@ -1,0 +1,30 @@
+<sly data-sly-template.tileCta="${@ buttonModel='Sling model for button (class ButtonModel)',
+  videoJson='JSON with video data',
+  ariaLabel='Button aria label',
+  ariaControls='Button aria controls'
+}"
+     data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+     data-sly-use.attributesModel="${'com.tonomus.core.slingmodels.common.v1.AttributeCreatorModel' @ attrs=buttonModel.attrs}"
+     data-sly-set.videoJsonVal="${videoJson || buttonModel.video.props.json}"
+>
+  <button data-component="m53-tile-cta" class="m-tileCta"
+          data-sly-element="${buttonModel.href ? 'a' : 'button'}"
+          href="${buttonModel.href}"
+          rel="${buttonModel.target == '_blank' ? 'noopener' : ''}"
+          target="${buttonModel.target @ context='text'}"
+          aria-label="${ariaLabel}"
+          aria-controls="${ariaControls}"
+          data-sly-attribute="${attributesModel.attributes}"
+          disabled="${buttonModel.disabled ? 'true' : ''}"
+          title="${buttonModel.title ? buttonModel.title : buttonModel.label}"
+          data-video="${videoJsonVal}"
+          data-modal="${buttonModel.modalJson @ context='attribute'}"
+          type="${buttonModel.type @ context='attribute'}">
+
+    <sly data-sly-test="${buttonModel.icon}"
+         data-sly-call="${iconTemplate.icon @ name=buttonModel.icon, variant=buttonModel.variant}"></sly>
+    <span class="m-tileCta__label" data-sly-test="${buttonModel.label}">${buttonModel.label}</span>
+
+  </button>
+</sly>

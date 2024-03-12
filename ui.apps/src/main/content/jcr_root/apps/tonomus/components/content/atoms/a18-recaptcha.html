@@ -1,0 +1,17 @@
+<sly data-sly-template.recaptcha="${ @
+  sitekey='Recaptcha sitekey',
+  language='Current language',
+  branding='Google reCaptcha branding text'}">
+
+  <div class="a-recaptcha"
+       data-component="a18-recaptcha"
+       data-sitekey="${sitekey}"
+       data-sly-attribute.data-language="${language}"
+  >
+    <div data-recaptcha></div>
+    <p class="a-recaptcha__statement" data-sly-test="${branding}">
+      ${branding @ context='html'}
+    </p>
+  </div>
+
+</sly>

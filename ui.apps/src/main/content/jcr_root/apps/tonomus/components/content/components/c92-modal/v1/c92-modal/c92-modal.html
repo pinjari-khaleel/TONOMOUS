@@ -1,0 +1,19 @@
+<sly
+    data-sly-use.formModel="com.tonomus.core.slingmodels.components.v1.forms.ModalFormModel"
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.modalFormTemplate="/apps/tonomus/components/content/organisms/o86-modal-form.html">
+</sly>
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit && formModel.empty}"></div>
+
+<div class="b-modal"
+     data-component="c92-modal"
+     data-name="o86-modal-form"
+     data-sly-attribute.id="${commonComponentModel.anchorId}"
+     data-sly-attribute.data-data="${formModel.toJson}"
+     data-sly-attribute.data-lazy-component="${!wcmmode.edit}">
+  <div class="b-modal__editorPreview" data-sly-test="${wcmmode.edit}">
+    <sly data-sly-call="${modalFormTemplate.modalForm @ formModel=formModel}"></sly>
+    <a href="#${commonComponentModel.anchorId}">Go to popup</a>
+  </div>
+</div>

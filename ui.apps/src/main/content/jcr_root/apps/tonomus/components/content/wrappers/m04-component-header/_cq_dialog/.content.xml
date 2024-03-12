@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="M04 Component Header"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[tonomus.author]">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <general
+          jcr:primaryType="nt:unstructured"
+          jcr:title="General"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <alignment
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select header text alignment."
+                      fieldLabel="Alignment"
+                      name="./alignment">
+                    <items jcr:primaryType="nt:unstructured">
+                      <left
+                          jcr:primaryType="nt:unstructured"
+                          text="Left"
+                          value="left"/>
+                      <center
+                          jcr:primaryType="nt:unstructured"
+                          text="Center"
+                          value="center"/>
+                      <right
+                          jcr:primaryType="nt:unstructured"
+                          text="Right"
+                          value="right"/>
+                    </items>
+                  </alignment>
+                  <headingText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Heading Text."
+                      fieldLabel="Heading Text"
+                      maxlength="{Long}100"
+                      required="{Boolean}true"
+                      name="./heading/text"/>
+                  <headingWeight
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Size/Weight."
+                      fieldLabel="Heading Size"
+                      name="./heading/size">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingWeight>
+                  <moustacheText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter the component Moustache text."
+                      fieldLabel="Moustache text"
+                      maxlength="{Long}500"
+                      name="./moustache/text"/>
+                  <moustacheSize
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select header moustache size."
+                      fieldLabel="Moustache size"
+                      name="./moustache/size">
+                    <items jcr:primaryType="nt:unstructured">
+                      <none
+                          jcr:primaryType="nt:unstructured"
+                          text="None"
+                          value=""/>
+                      <large
+                          jcr:primaryType="nt:unstructured"
+                          text="Large"
+                          value="large"/>
+                      <small
+                          jcr:primaryType="nt:unstructured"
+                          text="Small"
+                          value="small"/>
+                    </items>
+                  </moustacheSize>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </general>
+    </items>
+  </content>
+</jcr:root>

@@ -1,0 +1,23 @@
+<sly data-sly-template.video="${@ card, hasHTMLContent, hasURLContent}" data-sly-set.video=${card.video}>
+    <div class="cmp-card__image-wrapper" data-sly-test.hasVideoContent="${hasHTMLContent || hasURLContent}">
+    	<div class="cmp-card__image" data-sly-test="${card.teaser.imageResource}" data-sly-resource="${card.teaser.imageResource @ wcmmode=disabled}"></div>
+    	<div class="cmp-card__play-btn">
+			<sly data-sly-use.iconModel="${'com.tonomus.core.slingmodels.components.v2.IconModelImpl' @ path='/content/dam/tonomus/system-resources/play-arrow.svg'}">
+				<span class="cmp-icon">
+					${iconModel.originalAsSvg @ context='unsafe'}
+				</span>
+		</div>
+    </div>
+    
+	<div class="cmp-card__modal" data-sly-test="${hasVideoContent}" id="${card.teaser.id}">
+    	<div class="cmp-card__modal-dialog">
+        	<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      		<div class="cmp-card__modal-content">
+          		<sly data-sly-test="${hasHTMLContent}">${card.html @context = 'html'}</sly>
+        		<video data-sly-test="${hasURLContent}" controls autoplay="${video.autoplay}" muted="${video.muted}" loop="${video.loop}" poster="${card.imageFileReference}">
+					<source src="${video.src}" type="${video.mediaType}">            
+        		</video>
+      		</div>
+    	</div>
+  	</div>
+</sly>

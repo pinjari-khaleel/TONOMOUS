@@ -1,0 +1,52 @@
+
+
+
+<section class="b-webglEffectHero"
+  data-component="c79-webgl-effect-hero"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with padding}}
+    style="--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};"
+  {{/with}}
+>
+  <div
+    class="b-webglEffectHero__shapeBorder"
+    data-shape-border
+  >
+    {{> ./c79-shape-border }}
+  </div>
+
+  {{> atom/a27-tonomus-line }}
+
+  {{> atom/a19-video loopingVideo autoloop=true }}
+
+  {{> organism/o60-hero-content }}
+
+  {{#with openVideoButton}}
+    <div class="b-webglEffectHero__openVideoMask" data-video-mask>
+      {{>molecule/m02-button this size="large" theme="blackTransparent"}}
+    </div>
+  {{/with}}
+
+  <div class="b-webglEffectHero__buttonWrapper">
+
+    {{#with playButton}}
+      <div class="b-webglEffectHero__playButton -isHidden" data-play-button>
+        {{>molecule/m02-button icon="expand" }}
+      </div>
+    {{/with}}
+
+    {{#with muteButton}}
+      <div class="b-webglEffectHero__muteButton -isHidden" data-mute-button>
+        {{>molecule/m02-button icon="muted" secondIcon="unmuted" }}
+      </div>
+    {{/with}}
+
+    {{#with getInTouch}}
+      <div class="b-webglEffectHero__getInTouch">
+        {{>molecule/m02-button icon="chat" }}
+      </div>
+    {{/with}}
+  </div>
+</section>

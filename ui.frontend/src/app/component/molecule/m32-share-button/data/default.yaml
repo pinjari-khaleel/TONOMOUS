@@ -1,0 +1,24 @@
+- id: twitter
+  href: 'https://example.com/twitter/'
+  icon: twitter-gold
+  label: Twitter
+- id: facebook
+  href: 'https://example.com/facebook/'
+  icon: facebook-gold
+  label: Facebook
+- id: linkedin
+  href: 'https://example.com/linkedin/'
+  icon: linkedin-gold
+  label: Linkedin
+- id: whatsapp
+  href: 'https://example.com/whatsapp/'
+  icon: whatsapp-gold
+  label: Whatsapp
+- id: clipboard
+  href: 'https://example.com/clipboard-link/'
+  icon: link-gold
+  label: Copy Link
+- network: email
+  href: 'https://example.com/linkedin/'
+  icon: email-gold
+  label: Email

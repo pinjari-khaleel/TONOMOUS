@@ -1,0 +1,95 @@
+.cmp-card-with-icon {
+  .title {
+    display: flex;
+    align-items: center;
+    margin-block-end: 1.5rem;
+    column-gap: 0.5rem;
+
+    &-link {
+      display: flex;
+      flex-direction: column-reverse;
+      .gradient-text-link-button();
+      .header3();
+    }
+  }
+
+  &__generic {
+    .cmp-card-with-icon {
+      &__icon {
+        height: 80px;
+        margin-block-end: 2.5rem;
+      }
+
+      &__title {
+        .title();
+      }
+
+      &__description {
+        p {
+          .paragraph1();
+        }
+      }
+    }
+  }
+
+  &__quote {
+    .cmp-card-with-icon {
+      &__top-container {
+        display: flex;
+        column-gap: 1.5rem;
+        align-items: center;
+        margin-block-end: 1.5rem;
+      }
+
+      &__icon {
+        width: 48.05px;
+        height: 33px;
+      }
+
+      &__title {
+        .paragraph3();
+
+        &-pretitle {
+          .label1();
+          .regular();
+        }
+      }
+
+      &__description {
+        p {
+          .paragraph2();
+        }
+      }
+    }
+  }
+
+  &__product {
+    .cmp-card-with-icon {
+
+      &__icon {
+        height: 80px;
+        margin-block-end: 2.5rem;
+      }
+
+      &__title {
+        margin-block-end: 1.5rem;
+
+        &-link {
+          .header4();
+          .text-link-button(var(--color-black));
+        }
+
+        & .link-external,
+        & .link-internal {
+          display: inline-block;
+        }
+      }
+
+      &__description {
+        p {
+          .paragraph2();
+        }
+      }
+    }
+  }
+}

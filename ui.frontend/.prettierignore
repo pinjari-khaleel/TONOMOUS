@@ -1,0 +1,8 @@
+# for potential vendor files in src
+src/app/data/shared-variable/media-queries.json
+.cache-loader/
+dist/
+build-tools/plop-template/
+node_modules/
+src/app/webgl/**/*.ts
+

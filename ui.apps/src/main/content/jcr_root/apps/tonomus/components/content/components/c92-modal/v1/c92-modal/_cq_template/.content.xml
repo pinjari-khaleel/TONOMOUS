@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          id="the_line_form"
+          scrollComponent="false"
+          text="Stay informed"
+          titleInEnglish="Stay informed">
+  <c48_forms_group
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/wrappers/c48-forms-group"
+      required="false"
+      type="double">
+    <m30_text_field_firstname
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="tonomus/components/content/wrappers/m30-text-field"
+        charactersLabel="characters"
+        disabled="false"
+        id="firstname"
+        label="First name"
+        maxlength="100"
+        name="FNAME"
+        placeholder="Please type here"
+        readonly="false"
+        required="true"
+        titleInEnglish="First name"
+        type="text">
+      <validate jcr:primaryType="nt:unstructured">
+        <presence
+            jcr:primaryType="nt:unstructured"
+            message="^Please enter your first name"/>
+        <length
+            jcr:primaryType="nt:unstructured"
+            tooLong="^The first name is too long"/>
+        <format
+            jcr:primaryType="nt:unstructured"
+            message="^Please only use letters"
+            pattern="\[^0-9!-\\/:-@\\\\[-`{-~]+"/>
+      </validate>
+    </m30_text_field_firstname>
+    <m30_text_field_lastname
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="tonomus/components/content/wrappers/m30-text-field"
+        charactersLabel="characters"
+        disabled="false"
+        id="lastname"
+        label="Last name"
+        maxlength="100"
+        name="LNAME"
+        placeholder="Please type here"
+        readonly="false"
+        required="true"
+        titleInEnglish="Last name"
+        type="text">
+      <validate jcr:primaryType="nt:unstructured">
+        <presence
+            jcr:primaryType="nt:unstructured"
+            message="^Please enter your last name"/>
+        <length
+            jcr:primaryType="nt:unstructured"
+            tooLong="^The last name is too long"/>
+        <format
+            jcr:primaryType="nt:unstructured"
+            message="^Please only use letters"
+            pattern="\[^0-9!-\\/:-@\\\\[-`{-~]+"/>
+      </validate>
+    </m30_text_field_lastname>
+    <m30_text_field_email
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="tonomus/components/content/wrappers/m30-text-field"
+        disabled="false"
+        id="email"
+        label="Business mail address"
+        name="email"
+        placeholder="Email address"
+        readonly="false"
+        required="true"
+        titleInEnglish="Business mail address"
+        type="email">
+      <validate jcr:primaryType="nt:unstructured">
+        <presence
+            jcr:primaryType="nt:unstructured"
+            message="^Please enter your email address"/>
+        <email
+            jcr:primaryType="nt:unstructured"
+            message="^Please enter valid email address"/>
+      </validate>
+    </m30_text_field_email>
+  </c48_forms_group>
+  <messages jcr:primaryType="nt:unstructured">
+    <success
+        jcr:primaryType="nt:unstructured"
+        icon="checkmark">
+      <heading
+          jcr:primaryType="nt:unstructured"
+          text="Your request sent successfully"/>
+    </success>
+    <error
+        jcr:primaryType="nt:unstructured"
+        icon="cross">
+      <heading
+          jcr:primaryType="nt:unstructured"
+          text="An error occurred during the preparation of the despatch."/>
+    </error>
+  </messages>
+  <buttons jcr:primaryType="nt:unstructured">
+    <item0
+        jcr:primaryType="nt:unstructured"
+        label="Submit Now"
+        level="primary"
+        size="small"
+        target="_self"
+        theme="green"
+        type="submit"/>
+  </buttons>
+
+</jcr:root>

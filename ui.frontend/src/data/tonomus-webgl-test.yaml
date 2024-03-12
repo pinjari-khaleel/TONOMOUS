@@ -1,0 +1,14 @@
+dir: ltr
+language: en
+head: 'import!../app/data/yaml/head-en.yaml'
+tonomus: true
+webglContainer:
+  webglTest: true
+
+meta:
+  id: 'p01'
+  status: 'test'
+  notes: ''
+  category: 'Pages'
+
+blocks:

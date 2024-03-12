@@ -1,0 +1,107 @@
+<sly
+  data-sly-use.headerNavModel="com.tonomus.core.slingmodels.components.v1.bu_header.BusinessUnitHeaderModel"
+  data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+  data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+  data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+  data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"
+  data-sly-use.languageSelectorTemplate="/apps/tonomus/components/content/organisms/o83-tonomus-language-selector.html"
+  data-sly-use.buDropdownTemplate="/apps/tonomus/components/content/organisms/o93-tonomus-bu-dropdown.html"
+  data-sly-use.sideBarItemsTemplate="/apps/tonomus/components/content/organisms/o94-tonomus-sidebar.html"
+  data-sly-set.backItem="${headerNavModel.backItem}"
+  data-sly-set._hasBackItem="${backItem.label && backItem.href && true}"
+  data-sly-use.tpl="core/wcm/components/commons/v1/templates.html"
+  data-sly-call="${tpl.placeholder @ isEmpty=true}"
+>
+</sly>
+<header
+  class="b-tonomusBuNavigation"
+  data-component="s12-bu-header"
+  data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+>
+  <div class="b-tonomusBuNavigation__container" data-navigation-container>
+    <div class="b-tonomusBuNavigation__logoWrapper">
+      <a
+        href="${headerNavModel.link.href}"
+        class="b-tonomusBuNavigation__logo"
+        data-sly-attribute.target="${headerNavModel.link.target @ context='attributeName'}"
+        data-sly-attribute.rel="${headerNavModel.link.target == '_blank' ? 'no opener' : '' @ context='attributeName'}"
+        data-sly-test="${headerNavModel.logoImage}"
+      >
+        <sly
+          data-sly-call="${imageTemplate.image @ imageModel=headerNavModel.logoImage,
+        disableTransition=true, variant='block'}"
+        ></sly>
+      </a>
+      <sly
+        data-sly-call="${buDropdownTemplate.buDropdown @ navLinks=headerNavModel.buNav,selectedBuNav=headerNavModel.selectedBuNav}"
+        data-sly-test="${headerNavModel.buNav}"
+      ></sly>
+    </div>
+
+    <div
+      class="b-tonomusBuNavigation__linkWrapper ${_hasBackItem ? '-backLinkOnly' : ''}"
+    >
+      <input
+        type="checkbox"
+        id="tonomus_navigation_toggle"
+        class="b-tonomusBuNavigation__dropdownToggle"
+        data-toggle-checkbox
+      />
+      <label
+        class="b-tonomusBuNavigation__toggleLabel"
+        for="tonomus_navigation_toggle"
+        data-dropdown-toggle
+      >
+        <sly data-sly-call="${iconTemplate.icon @ name='hamburger'}"></sly>
+        <sly data-sly-call="${iconTemplate.icon @ name='cross'}"></sly>
+      </label>
+      <div class="b-tonomusBuNavigation__dropdownContent">
+        <a
+          class="b-tonomusBuNavigation__backLink"
+          data-link
+          href="#"
+          data-sly-test="${_hasBackItem}"
+          data-sly-attribute.href="${backItem.href}"
+          data-sly-attribute.target="${backItem.target}"
+          data-sly-attribute.rel="${backItem.target == '_blank' && 'noopener'}"
+        >
+          <sly
+            data-sly-call="${iconTemplate.icon @ name='arrow-left-short'}"
+          ></sly>
+          <span>${backItem.label @ context='text'}</span>
+        </a>
+
+        <ul
+          class="b-tonomusBuNavigation__linkList"
+          data-link-list
+          data-sly-test.navLinks="${headerNavModel.sideBarItems}"
+          data-sly-list="${sideBarItems}"
+        >
+          <li class="b-tonomusBuNavigation__listItem">
+            <a
+              class="b-tonomusBuNavigation__link"
+              data-link
+              href="${item.anchorId}"
+              data-sly-attribute.href="${item.href}"
+            >
+              <span>${item.label @context='text'}</span>
+            </a>
+          </li>
+        </ul>
+
+        <sly
+          data-sly-call="${languageSelectorTemplate.languageSelector @
+              languages=headerNavModel.languages}"
+          data-sly-test="${headerNavModel.languages}"
+        ></sly>
+      </div>
+    </div>
+
+    <!-- SIDEBAR START -->
+    <sly
+      data-sly-call="${sideBarItemsTemplate.sideBar @ sideBarItems=headerNavModel.sideBarItems}"
+      data-sly-test="${headerNavModel.sideBarItems}"
+    ></sly>
+    <!-- SIDEBAR END -->
+  </div>
+</header>

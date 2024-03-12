@@ -1,0 +1,27 @@
+<div data-sly-use.video="com.tonomus.core.slingmodels.components.v2.video.VideoModel"
+     data-sly-set.embed="${video.embed}" data-sly-use.internalTemplate="internal.html"
+     data-sly-use.commonsTemplates="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${(embed.result && embed.result.processor) || embed.html || embed.embeddableResourceType || video.src}"
+     data-cmp-data-layer="${embed.data.json}"
+     id="${embed.id}"
+     class="cmp-video__container">
+     <div class="cmp-video__thumbnail-wrapper">
+     	<img data-sly-test="${video.poster}" class="cmp-video__thumbnail" src="${video.poster}" alt="Video Preview" />
+     </div>
+    <div class="cmp-video__play-btn">
+          <sly data-sly-use.iconModel="${'com.tonomus.core.slingmodels.components.v2.IconModelImpl' @ path='/content/dam/tonomus/system-resources/play-arrow.svg'}">
+          <span class="cmp-icon">
+              ${iconModel.originalAsSvg @ context='unsafe'}
+          </span>
+      </sly>
+    </div>
+    <sly data-sly-test="${embed.result && embed.result.processor}"
+         data-sly-use.processorTemplate="processors/${embed.result.processor}.html"
+         data-sly-call="${processorTemplate.render @ options=embed.result.options, classAppend='cmp-video__video'}"></sly>
+    <sly data-sly-test="${embed.html}">${embed.html @context = 'html'}</sly>
+    <sly data-sly-test="${embed.embeddableResourceType}"
+         data-sly-resource="${resource.path @ resourceType=embed.embeddableResourceType, wcmmode='disabled'}"></sly>
+    <sly data-sly-test="${video.src && (video.videoType == 'internal')}"
+         data-sly-call="${internalTemplate.video @ video=video, classAppend='cmp-video__video'}"></sly>
+</div>
+<sly data-sly-call="${commonsTemplates.placeholder @ isEmpty = !hasContent, classAppend='cmp-video'}"></sly>

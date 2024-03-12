@@ -1,0 +1,107 @@
+@mixin customSelect {
+  &__valueWrapper {
+    background-color: var(--input-background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--input-border-radius);
+    border: var(--input-border-width) solid var(--input-border-color);
+    box-sizing: border-box;
+    color: var(--input-text-color);
+    font-size: 16px;
+    font-weight: 100;
+    line-height: var(--input-height);
+    margin: 0;
+    padding: 8.5px;
+    padding-inline-end: var(--grid-gap);
+    text-transform: none;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+
+    &:focus {
+      outline: none;
+      border-color: var(--input-border-color-focus);
+      box-shadow: 0 0 0 var(--input-border-radius) var(--input-box-shadow-focus);
+    }
+
+    .-hasError & {
+      border-color: var(--form-error-color);
+    }
+  }
+
+  &__value {
+    height: var(--input-height);
+    display: flex;
+    align-items: center;
+  }
+
+  &__chevron {
+    --icon-fill: var(--component-highlight-color, var(--color-dark-gold));
+    --icon-size: 12px;
+
+    @include size(var(--icon-size));
+
+    transform-origin: center;
+    transform: rotate(0deg);
+    transition: transform 0.25s linear;
+    top: 24px;
+    pointer-events: none;
+
+    [dir="rtl"] & {
+      left: var(--grid-gap);
+      right: auto;
+    }
+
+    .a-icon {
+      @include position(0);
+
+      position: absolute;
+    }
+
+    &.-isOpen {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__options,
+  [data-scrollbar] {
+    background: var(--color-white);
+    border-radius: var(--input-border-radius);
+    border: var(--input-border-width) solid var(--input-border-color);
+    display: none;
+    list-style: none;
+    max-height: 350px;
+    overflow-y: auto;
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    z-index: zindex($zLayout, dropdown);
+
+    &.-isOpen {
+      display: block;
+    }
+  }
+
+  &__button {
+    @include type("body", "xsmall");
+    @include size(100%);
+
+    background: transparent;
+    border: none;
+    text-align: start;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background: var(--input-border-color);
+    }
+
+    &:focus {
+      outline: none;
+      background: var(--input-border-color);
+    }
+  }
+}

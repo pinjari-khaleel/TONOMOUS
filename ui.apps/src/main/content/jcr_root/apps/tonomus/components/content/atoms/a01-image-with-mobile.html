@@ -1,0 +1,41 @@
+<sly data-sly-template.image="${@
+    imageModel='Image model with properties: src, alt',
+    mobileImageModel='Mobile Image model with properties: src, alt',
+    disableTransition='Boolean flag to disable transition',
+    attrs='List of space- or comma-separated attributes with/without values, f.e.: data-something1 attr2 attr3=attr3value',
+    desktopMinWidth='minimal width to use desktop image (px)',
+    variant='Image variant',
+    loading='The ability to loading images by one of the parameters: lazy, eager, auto. Вy default, loading is lazy'
+    }">
+
+  <sly
+      data-sly-use.attributesModel="${'com.tonomus.core.slingmodels.common.v1.AttributeCreatorModel' @ attrs=attrs}"
+       data-sly-set.variantValue="${' -{0}' @ format=[variant], context='styleString'}"
+       data-sly-set.variantClassName="${variant ? variantValue : ''}"></sly>
+
+  <div data-component="a01-image"
+       class="a-image${variantClassName}"
+       data-enable-transition="${!disableTransition ? 'true' : 'false'}"
+       data-sly-attribute="${attributesModel.attributes}">
+
+    <sly data-sly-test="${!disableTransition}">
+      <span class="a-image__background" data-image-background></span>
+    </sly>
+
+    <picture class="a-image__picture" data-image-wrapper>
+      <sly data-sly-test="${imageModel.src}"
+           data-sly-set.defaultMedia="(min-width:${desktopMinWidth || '768'}px)">
+        <source srcset="${imageModel.src}"
+                media="${imageModel.media? imageModel.media : defaultMedia}">
+      </sly>
+      <source data-sly-test="${mobileImageModel && mobileImageModel.media}"
+              srcset="${mobileImageModel.src}"
+              media="${mobileImageModel.media}">
+      <img class="a-image__img"
+           data-image-img
+           src="${mobileImageModel.src || imageModel.src}"
+           alt="${mobileImageModel.alt || imageModel.alt}"
+           loading="${loading ? loading : 'lazy'}"/>
+    </picture>
+  </div>
+</sly>

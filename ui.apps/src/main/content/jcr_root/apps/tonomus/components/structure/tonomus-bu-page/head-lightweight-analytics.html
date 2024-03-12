@@ -1,0 +1,29 @@
+<template data-sly-template.lightAnalytics="${@
+    lightGtmId='GTM ID related to the lightweight GA4 property'}">
+
+    <sly data-sly-test="${lightGtmId}">
+        <script>
+            window.lwdl = window.lwdl || [];
+
+            function lw_gtag() {
+                lwdl.push(arguments);
+            }
+
+            lw_gtag('consent', 'default', {
+                ad_storage: "denied",
+                analytics_storage: "denied",
+                functionality_storage: "denied",
+                personalization_storage: "denied",
+                security_storage: "denied"
+            });
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=${lightGtmId @ context='text'}"></script>
+        <script>
+            lw_gtag('js', new Date());
+            lw_gtag('config', '${lightGtmId @ context='text'}', {
+                'allow_google_signals': false,
+                'allow_ad_personalization_signals': false
+            });
+        </script>
+    </sly>
+</template>

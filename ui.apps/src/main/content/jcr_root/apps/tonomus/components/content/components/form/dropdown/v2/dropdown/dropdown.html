@@ -1,0 +1,23 @@
+<sly data-sly-use.options="com.adobe.cq.wcm.core.components.models.form.Options"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.isNotEmpty="${options.items.size}">
+    <fieldset class="cmp-form-options cmp-form-options--${options.type.value}">
+        <sly data-sly-test="${options.type.value == 'drop-down' || options.type.value == 'multi-drop-down'}">
+            <select class="cmp-form-options__field cmp-form-options__field--${options.type.value}"
+                    name="${options.name}" id="${options.id}"
+                    data-sly-list.optionItem="${options.items}"
+                    data-sly-attribute.multiple="${options.type.value == 'multi-drop-down'}">
+                <option value="${optionItem.value}" selected="${optionItem.selected}" disabled="${optionItem.disabled}"
+                        data-sly-attribute.aria-describedby="${options.helpMessage ? [options.id, 'helpMessage'] : '' @ join = '-'}">
+                    ${optionItem.text}
+                </option>
+            </select>
+            <span class="cmp-icon cmp-icon__chevron"></span>
+            <label class="cmp-form-options__label" for="${options.id}">${options.title}</label>
+            <p id="${options.id}-helpMessage" class="cmp-form-options__help-message" data-sly-test="${options.helpMessage}">
+                ${options.helpMessage}</p>
+            <p id="${options.id}-errorMessage" class="cmp-form-options__error-message" data-for="${options.id}" data-error-message></p>
+        </sly>
+    </fieldset>
+</sly>
+<sly data-sly-call="${template.placeholder @ isEmpty=!isNotEmpty, classAppend='cmp-form-options'}"></sly>

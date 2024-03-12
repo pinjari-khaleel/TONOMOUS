@@ -1,0 +1,80 @@
+.m-downloadItem {
+  --download-item-text-color: var(--color-black-75);
+
+  max-width: 530px;
+
+  &__image {
+    @include aspect-ratio(400, 225);
+
+    align-self: flex-start;
+    background: var(--color-black);
+    box-shadow: 4px 4px 4px var(--color-black-15a);
+    flex: 0 0 200px;
+    margin: 0 0 20px 0;
+    max-width: 200px;
+    position: relative;
+  }
+
+  .a-heading {
+    @include type("overline", "medium");
+
+    margin: 0 0 14px;
+  }
+
+  &__description {
+    @include type("exception", "small-description");
+
+    color: var(--download-item-text-color);
+    margin: 0 0 10px;
+  }
+
+  &__link {
+    --icon-size: 10px;
+    @include type("exception", "download-zip");
+
+    color: var(--content-link-color);
+    transition: color 0.2s ease-in-out;
+
+    @include hover() {
+      color: var(--content-link-color-hover);
+    }
+
+    .a-icon {
+      vertical-align: baseline;
+    }
+  }
+
+  @include respond-to("SMALL") {
+    display: flex;
+
+    &__image {
+      margin: 0;
+      margin-inline-end: 20px;
+    }
+  }
+
+  // This will wrap download items until a larger breakpoint when used in C45
+  @include contentScope() {
+    &.-column {
+      @include respond-to("SMALL") {
+        display: block;
+      }
+
+      @include respond-to("XLARGE") {
+        display: flex;
+      }
+    }
+  }
+
+  .t-dark & {
+    --download-item-text-color: var(--color-white-70a);
+    --content-link-color: var(--color-gold);
+    --content-link-color-hover: var(--color-gold-hover);
+  }
+
+  .t-darkMono & {
+    --download-item-text-color: var(--color-white-70a);
+    --content-link-color: var(--color-white-70a);
+    --content-link-color-hover: var(--color-white);
+  }
+}

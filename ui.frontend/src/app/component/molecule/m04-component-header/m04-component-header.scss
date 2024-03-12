@@ -1,0 +1,39 @@
+@use "sass:math";
+
+.m-componentHeader {
+  --eyebrow-text-color: var(--component-highlight-color);
+  --moustache-text-color: var(--component-text-color);
+
+  &.-center {
+    text-align: center;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+
+  &.-start {
+    text-align: start;
+  }
+
+  &.-end {
+    text-align: end;
+  }
+
+  .a-eyebrow {
+    // todo: compare with exceptions in components, then formalize defaults.
+    margin: 0 0 1em;
+  }
+
+  .a-heading {
+    // todo: compare with exceptions in components, then formalize defaults.
+    // margin: 0 0 0.5em; //not needed if no moustache
+  }
+
+  .a-moustache {
+    // todo: compare with exceptions in components, then formalize defaults.
+    margin: 1em 0 0;
+  }
+
+  @include respond-to("MEDIUM") {
+    max-width: math.div(960, 1440) * 100vw;
+  }
+}

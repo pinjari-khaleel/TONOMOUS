@@ -1,0 +1,61 @@
+scrollComponent: true
+id: 'c100-tabs'
+padding:
+  start: 'large'
+  end: 'large'
+header:
+  heading:
+    text: Tonomus and You
+    size: h3
+
+items:
+  - label: 'ventures'
+    active: true
+    name: 'Successful <strong>Ventures Stories</strong>'
+    image:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    image2:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    image3:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    text:
+      'To build the world’s first ecosystem of cognitive technologies and solutions, we’re
+      partnering with global industry leaders and pioneers. Find out how your business can tap into
+      our high-speed connectivity, consent-derived data, and digital-twin technology—all powered by
+      100% sustainable energy—and together we can create the reality we envision.'
+    button:
+      label: 'Partner with us'
+      href: '#'
+  - label: 'competitions'
+    name: 'Successful <strong>Ventures Stories</strong>'
+    image:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    text:
+      '<p>There are a myriad of ways to join or partner with Tonomus. Perhaps you’d like to invest
+      and add to the $1bn already committed to artificial intelligence-based products.
+      Alternatively, your own business can tap into our advanced and continually-evolving grip on
+      cognitive technology, high-speed satellite connectivity and consent-derived data, and 3D
+      digital-twin technology and mixed reality metaverse powered by clean energy.</p>'
+    button:
+      label: 'Find out more'
+      href: '#'
+  - label: 'events'
+    name: 'Successful <strong>Ventures Stories</strong>'
+    image:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    text:
+      '<p>There are a myriad of ways to join or partner with Tonomus. Perhaps you’d like to invest
+      and add to the $1bn already committed to artificial intelligence-based products.
+      Alternatively, your own business can tap into our advanced and continually-evolving grip on
+      cognitive technology, high-speed satellite connectivity and consent-derived data, and 3D
+      digital-twin technology and mixed reality metaverse powered by clean energy.</p> <p>If you
+      have a specific vision that might be brought a step closer to reality via collaboration or
+      partnership, we’d love to hear it.</p>'
+    button:
+      label: 'Find out more'
+      href: '#'

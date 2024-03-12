@@ -1,0 +1,16 @@
+<sly data-sly-template.heading="${@
+    headingModel='Sling Model for heading (class TextModel)',
+    size='Heading Size',
+    element='Element Size',
+    text='Text passed directly'}"
+     data-sly-set.sizeVal="${size || headingModel.size}"
+     data-sly-set.elementVal="${element || headingModel.element}"
+     data-sly-set.textVal="${text || headingModel.text}">
+
+  <h2 data-sly-element="${elementVal}"
+      class="a-heading
+      ${[sizeVal ? '-' : '', sizeVal] @ join = '', context='styleString'}"
+      data-component="a03-heading">
+    ${textVal @ context='html'}
+  </h2>
+</sly>

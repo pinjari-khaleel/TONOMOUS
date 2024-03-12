@@ -1,0 +1,14 @@
+<sly data-sly-template.figure="${@
+       figureModel='ContentGridImageItemContentItem with proeprties'}"
+     data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image-with-mobile.html">
+  <figure data-component="m16-figure" class="m-figure
+        ${figureModel.variant ? ' -{0}' : '' @ format=[figureModel.variant], context='styleString'}">
+    <div class="m-figure__image">
+      <sly data-sly-call="${imageTemplate.image @ imageModel=figureModel.image, mobileImageModel=figureModel.mobileImage,
+                            disableTransition=true, variant=figureModel.assetPropsVariant}"></sly>
+    </div>
+    <div class="m-figure__copy" data-sly-test="${figureModel.copy}">
+      ${figureModel.copy @ context='text'}
+    </div>
+  </figure>
+</sly>

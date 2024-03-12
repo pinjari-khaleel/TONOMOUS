@@ -1,0 +1,117 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+    "sling:resourceType": "neom/components/structure/page",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c59_multi_step_form": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "neom/components/content/components/c59-multi-step-form/v1/c59-multi-step-form",
+          "validate": {
+            "jcr:primaryType": "nt:unstructured"
+          },
+          "c59_step": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "tonomus/components/content/wrappers/c59-step",
+            "c59_step_group": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "neom/components/content/components/c59-multi-step-form/v1/c59-multi-step-form/c59-step-group",
+              "m30_text_field": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "neom/components/content/wrappers/c59-m30-text-field",
+                "validate": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "presence": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "message": "^Please enter your first name"
+                  },
+                  "format": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "pattern": "[^0-9!-/:-@\\[-`{-~]+",
+                    "message": "^Please only use letters"
+                  },
+                  "email": {
+                    "jcr:primaryType": "nt:unstructured"
+                  },
+                  "length": {
+                    "jcr:primaryType": "nt:unstructured"
+                  }
+                }
+              },
+              "phone_field": {
+                "jcr:primaryType": "nt:unstructured",
+                "validate": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "numericality": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "numericality": "true",
+                    "message": "^Please use only numbers"
+                  },
+                  "email": {
+                    "jcr:primaryType": "nt:unstructured"
+                  },
+                  "length": {
+                    "jcr:primaryType": "nt:unstructured"
+                  }
+                }
+              }
+            }
+          },
+          "c59_step_1006455254": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "tonomus/components/content/wrappers/c59-step",
+            "c59_step_group": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "neom/components/content/components/c59-multi-step-form/v1/c59-multi-step-form/c59-step-group",
+              "m30_text_field": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "neom/components/content/wrappers/c59-m30-text-field",
+                "validate": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "presence": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "message": "^Please enter your first name"
+                  },
+                  "format": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "pattern": "[^0-9!-/:-@\\[-`{-~]+",
+                    "message": "^Please only use letters"
+                  },
+                  "email": {
+                    "jcr:primaryType": "nt:unstructured"
+                  },
+                  "length": {
+                    "jcr:primaryType": "nt:unstructured"
+                  }
+                }
+              },
+              "phone_field": {
+                "jcr:primaryType": "nt:unstructured",
+                "validate": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "numericality": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "numericality": "true",
+                    "message": "^Please use only numbers"
+                  },
+                  "email": {
+                    "jcr:primaryType": "nt:unstructured"
+                  },
+                  "length": {
+                    "jcr:primaryType": "nt:unstructured"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

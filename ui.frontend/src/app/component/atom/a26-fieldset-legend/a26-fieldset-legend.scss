@@ -1,0 +1,19 @@
+.a-fieldsetLegend {
+  @include type("button", "small");
+
+  margin: -0.0225em 0 10px;
+  text-transform: uppercase;
+
+  &.-isRequired::after {
+    @include asterisk();
+  }
+
+  &.-isRequired.-heading::after {
+    font-size: 21px;
+  }
+
+  &.-heading {
+    font-size: 21px;
+    margin-bottom: 25px;
+  }
+}

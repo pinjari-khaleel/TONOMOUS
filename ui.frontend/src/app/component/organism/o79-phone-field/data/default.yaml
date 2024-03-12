@@ -1,0 +1,33 @@
+name: PHONE
+id: phone-number
+placeholder: 'Phone number'
+label: 'Phone number'
+titleInEnglish: 'Phone number'
+required: true
+countryDropdown:
+  flagsPath: 'image/flags/'
+  placeholder: 'Choose one...'
+  showRawValue: true
+  isWideDropdown: true
+  name: COUNTRY
+  id: country
+  titleInEnglish: 'Country'
+  items:
+    - value: '+31'
+      label: 'Netherlands'
+      countryCode: 'NL'
+    - value: '+54'
+      label: 'Argentina'
+      countryCode: 'AR'
+    - value: '+1'
+      label: 'United States of America'
+      countryCode: 'US'
+    - value: '+966'
+      label: 'Saudi Arabia'
+      countryCode: 'SA'
+    - value: '+41'
+      label: 'United Kingdom'
+      countryCode: 'GB'
+    - value: '+49'
+      label: 'Germany'
+      countryCode: 'DE'

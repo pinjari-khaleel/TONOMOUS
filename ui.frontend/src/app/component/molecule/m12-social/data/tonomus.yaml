@@ -1,0 +1,16 @@
+- icon: facebook-shaped
+  href: 'https://www.facebook.com/discoverneom/'
+  target: _blank
+  label: Facebook
+- icon: instagram-shaped
+  href: 'https://www.instagram.com/discoverneom/?hl=en'
+  target: _blank
+  label: Instagram
+- icon: twitter-shaped
+  href: 'https://twitter.com/NEOM'
+  target: _blank
+  label: Twitter
+- icon: linkedin-shaped
+  href: 'https://www.linkedin.com/company/discoverneom/'
+  target: _blank
+  label: Linkedin

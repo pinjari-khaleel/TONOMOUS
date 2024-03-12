@@ -1,0 +1,32 @@
+<sly
+    data-sly-use.formGroupModel="com.tonomus.core.slingmodels.components.v1.forms.FormGroupModel"
+    data-sly-set.attrsVal="${[formGroupModel.id ? 'data-form-fieldset-' : 'data-form-fieldset', formGroupModel.id] @ join = '', context='styleString'}"
+    data-sly-use.attributesModel="${'com.tonomus.core.slingmodels.common.v1.AttributeCreatorModel' @ attrs=attrsVal}"></sly>
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit && formGroupModel.empty}"></div>
+
+<fieldset class="o-form__fieldset ${[formGroupModel.type ? '-' : '', formGroupModel.type] @ join = '', context='styleString'}"
+          data-sly-attribute.id="${formGroupModel.id}"
+          data-sly-attribute.name="${formGroupModel.name}"
+          data-sly-attribute.data-validate="${formGroupModel.validate.json}"
+          data-sly-attribute="${attributesModel.attributes}">
+  <h3 data-sly-test="${formGroupModel.legend}"
+      class="o-form__legend ${[formGroupModel.type ? '-' : '', formGroupModel.type] @ join = '', context='styleString'}
+              ${formGroupModel.required ? '-isRequired' : ''}">${formGroupModel.legend}</h3>
+  <div class="o-form__fieldsetContainer" data-form-fieldset-container>
+    <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+         data-sly-list.child="${templatedContainer.structureResources}">
+      <sly data-sly-test="${child.resourceType !='nt:unstructured'}"
+           data-sly-resource="${child.path @ resourceType=child.resourceType,
+                   decorationTagName='', decoration=wcmmode.edit}"></sly>
+    </sly>
+    <sly data-sly-resource="${resource.path @
+                     resourceType='wcm/foundation/components/responsivegrid/new', appendPath='/*',
+                     decoration=wcmmode.edit, decorationTagName=''}"></sly>
+  </div>
+  <div data-sly-test="${formGroupModel.type == 'radioGroup' && formGroupModel.copy}"
+      class="o-form__copy s-content">
+    ${formGroupModel.copy @ context='html'}
+  </div>
+  <div class="o-form__error" data-for="${formGroupModel.id}" data-error-message></div>
+</fieldset>

@@ -1,0 +1,22 @@
+<sly data-sly-template.radio="${ @
+  checkBoxModel='instance of forms.FormCheckBoxModel with properties'}"
+     data-sly-set.attrsVal="${[checkBoxModel.id ? 'data-' : '', checkBoxModel.id] @ join = '', context='attributeName'}"
+     data-sly-use.attributesModel="${'com.tonomus.core.slingmodels.common.v1.AttributeCreatorModel' @ attrs=attrsVal}">
+
+  <div class="a-radio ${checkBoxModel.checked ? '-isChecked' : ''} ${checkBoxModel.disabled ? '-isDisabled' : ''}"
+       data-component="a12-radio">
+    <input class="a-radio__input"
+           data-sly-attribute.checked="${checkBoxModel.checked}"
+           data-sly-attribute.disabled="${checkBoxModel.disabled}"
+           data-sly-attribute.id="${checkBoxModel.id}"
+           data-sly-attribute.name="${checkBoxModel.name}"
+           data-sly-attribute.required="${checkBoxModel.required}"
+           type="radio"
+           data-sly-attribute.value="${checkBoxModel.value}"
+           data-sly-attribute.data-title-in-english="${checkBoxModel.titleInEnglish}"
+           data-sly-attribute="${attributesModel.attributes}"
+    />
+    <span class="a-radio__indicator"></span>
+  </div>
+
+</sly>

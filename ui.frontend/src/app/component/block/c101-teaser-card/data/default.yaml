@@ -1,0 +1,13 @@
+name: 'partners and investors'
+active: true
+image:
+  src: 'image/joseph_bradley.jpg'
+  alt: 'Photo of Joseph Bradley'
+text:
+  'To build the world’s first ecosystem of cognitive technologies and solutions, we’re partnering
+  with global industry leaders and pioneers. Find out how your business can tap into our high-speed
+  connectivity, consent-derived data, and digital-twin technology—all powered by 100% sustainable
+  energy—and together we can create the reality we envision.'
+button:
+  label: 'Partner with us'
+  href: '#'

@@ -1,0 +1,33 @@
+type: 'checkbox'
+legend: 'My checkbox list'
+name: 'checkbox-list'
+id: 'checkbox-list'
+required: true
+items:
+  - name: 'checkbox-list'
+    label: 'foo'
+    id: 'foo'
+    value: 'foo'
+  - name: 'checkbox-list'
+    label: 'bar'
+    id: 'bar'
+    value: 'bar'
+  - name: 'checkbox-list'
+    label: 'other'
+    id: 'other'
+    value: 'other'
+showTextareaForOtherChoice:
+  name: 'my-textarea'
+  label: 'My textarea'
+  id: 'my-textarea'
+  titleInEnglish: 'my-textarea'
+  placeholder: 'write something'
+  required: true
+  wide: true
+showDropdownForMultipleChoice:
+  name: 'my-dropdown'
+  label: 'My dropdown'
+  id: 'my-dropdown'
+  titleInEnglish: 'my-dropdown'
+  required: true
+  wide: true

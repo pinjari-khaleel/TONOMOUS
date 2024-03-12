@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="./m31-dropdown-field.scss">
+<script src="./M31DropdownField.ts"></script>
+
+
+<div class="m-dropdownField" data-component="m31-dropdown-field">
+  <label class="m-dropdownField__label">
+    <div class="m-dropdownField__textLabel{{#if required}} -isRequired{{/if}}">
+      {{> atom/a07-label text=label size="small" }}
+    </div>
+    {{#if blockValidation}}
+    {{> atom/a15-select dataAttribute="block-validation"}}
+    {{^}}
+    {{> atom/a15-select }}
+    {{/if}}
+    
+    {{> atom/a25-form-error }}
+  </label>
+</div>

@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="./o10-modal.scss">
+<script src="./O10Modal.ts"></script>
+
+<div
+  class="o-modal"
+  data-component="o10-modal" data-i18n="{{toJson @root.i18n.modals}}">
+  <div class="o-modal__container">
+    <div class="o-modal__mask" data-mask></div>
+    <div class="o-modal__panel" data-panel>
+      <div class="o-modal__controls">
+        {{#if tonomus}}
+        {{> molecule/m02-button level="primary" icon="close" theme="white" variant="close"}}
+        {{else}}
+        {{> molecule/m02-button level="secondary" icon="close" theme="white" variant="close"}}
+        {{/if}}
+      </div>
+      <div class="o-modal__content" data-modal-container>
+        {{!-- Modal content injected here --}}
+      </div>
+    </div>
+  </div>
+</div>

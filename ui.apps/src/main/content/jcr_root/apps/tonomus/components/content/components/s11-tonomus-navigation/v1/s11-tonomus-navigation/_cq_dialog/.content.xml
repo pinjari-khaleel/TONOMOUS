@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="S11 Tonomus Navigation"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <general
+          jcr:primaryType="nt:unstructured"
+          jcr:title="General"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <logo-href
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                      fieldDescription="Select Homepage path"
+                      fieldLabel="Homepage Path"
+                      name="./link/href"
+                      required="{Boolean}true"
+                      rootPath="/content"/>
+                  <logo-target
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select Logo Target Value."
+                      fieldLabel="Logo Target Value"
+                      name="./link/target">
+                    <items jcr:primaryType="nt:unstructured">
+                      <blank
+                          jcr:primaryType="nt:unstructured"
+                          selected="{Boolean}true"
+                          text="New frame"
+                          value="_blank"/>
+                      <self
+                          jcr:primaryType="nt:unstructured"
+                          text="Same frame"
+                          value="_self"/>
+                    </items>
+                  </logo-target>
+                  <logoImage
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                      allowUpload="{Boolean}false"
+                      autoStart="{Boolean}false"
+                      class="cq-droptarget"
+                      dropZone="{Boolean}true"
+                      fieldDescription="Drag and Drop Logo Image"
+                      fieldLabel="Logo Image"
+                      fileNameParameter="./logoImage/parameter"
+                      fileReferenceParameter="./logoImage/src"
+                      mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                      multiple="{Boolean}false"
+                      name="./logoImage/name"
+                      title="Upload Image Asset"
+                      useHTML5="{Boolean}true"
+                      required="{Boolean}true"/>
+                  <altImage
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter Logo Image Alt Text."
+                      fieldLabel="Logo Image Alt Text"
+                      name="./logoImage/alt"/>
+                  <back-link-accordion
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                    <items
+                        jcr:primaryType="nt:unstructured">
+                      <back-link-panel
+                          jcr:primaryType="nt:unstructured"
+                          jcr:title="Back Item"
+                          sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                          <label
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                              fieldDescription="Please select the back link label. Both properties Label and Reference are necessary for displaying the back navigation item."
+                              fieldLabel="Label"
+                              name="./backItem/label">
+                          </label>
+                          <reference
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                              fieldDescription="Please select the back link reference. Both properties Label and Reference are necessary for displaying the back navigation item."
+                              fieldLabel="Link"
+                              name="./backItem/href"
+                              rootPath="/content"/>
+                          <target
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              emptyOption="{Boolean}true"
+                              fieldDescription="Please select the link target"
+                              fieldLabel="Link Target"
+                              name="./backItem/target">
+                            <items jcr:primaryType="nt:unstructured">
+                              <blank
+                                  jcr:primaryType="nt:unstructured"
+                                  text="New frame"
+                                  value="_blank"/>
+                              <self
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Same frame"
+                                  value="_self"/>
+                            </items>
+                          </target>
+                        </items>
+                      </back-link-panel>
+                    </items>
+                  </back-link-accordion>
+                  <dropDownLabel
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Dropdown Label."
+                      fieldLabel="Dropdown Label"
+                      name="./dropDownLabel"
+                      required="{Boolean}true"/>
+                  <highlightedLinkHref
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                      fieldDescription="Please select the link reference."
+                      fieldLabel="Highlighted Link reference"
+                      name="./highlightedLink/href"
+                      rootPath="/content"/>
+                  <highlightedLinkLabel
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter Highlighted Label Text."
+                      fieldLabel="Label for highlighted link"
+                      name="./highlightedLink/label"/>
+                  <desktopOnly
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                      fieldDescription="Check to use desktop only."
+                      name="./desktopOnly"
+                      text="Desktop only"
+                      value="{Boolean}true"
+                      uncheckedValue="{Boolean}false"/>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </general>
+      <navlinks
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Navigation Links"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <navlinks
+                      jcr:primaryType="nt:unstructured"
+                      fieldLabel="Navigation Links"
+                      fieldDescription="Click 'Add' to add a new Navigation Link"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                      class="multifield-full-width"
+                      composite="{Boolean}true">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Nav Item"
+                        name="./navLinks"
+                        granite:class="accordion-multifield-item"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                      <items
+                          jcr:primaryType="nt:unstructured">
+                        <tab
+                            jcr:title="Link Item"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            jcr:primaryType="nt:unstructured">
+                          <items jcr:primaryType="nt:unstructured">
+                            <label
+                                granite:class="accordion-multifield-item-title"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please enter Navigation Label."
+                                fieldLabel="Navigation Label"
+                                name="./label"/>
+                            <href
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Please enter Homepage link."
+                                rootPath="/content"
+                                fieldLabel="Homepage Link"
+                                name="./href"
+                                required="{Boolean}true"/>
+                            <target
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Open new window (tab) if checked."
+                                name="./target"
+                                text="New window"
+                                value="_blank"
+                                uncheckedValue="_self"/>
+                          </items>
+                        </tab>
+                      </items>
+                    </field>
+                  </navlinks>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </navlinks>
+      <languages
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Languages"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <languageItems
+                      jcr:primaryType="nt:unstructured"
+                      fieldLabel="Language Items"
+                      fieldDescription="Click 'Add' to add a new Language"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                      class="multifield-full-width"
+                      composite="{Boolean}true">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Language Item"
+                        name="./languages"
+                        granite:class="accordion-multifield-item"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                      <items
+                          jcr:primaryType="nt:unstructured">
+                        <tab
+                            jcr:title="Link Item"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            jcr:primaryType="nt:unstructured">
+                          <items jcr:primaryType="nt:unstructured">
+                            <languageCode
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please enter Language Code."
+                                fieldLabel="Language Code"
+                                name="./languageCode"
+                                required="{Boolean}true"/>
+                            <label
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please enter Language Label."
+                                fieldLabel="Language Label"
+                                name="./label"/>
+                            <shortLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please enter Short Language Label (if required)."
+                                fieldLabel="Short Language Label"
+                                name="./shortLabel"/>
+                            <href
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Please enter Homepage link."
+                                rootPath="/content"
+                                fieldLabel="Homepage Link"
+                                name="./href"
+                                required="{Boolean}true"/>
+                            <target
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Open new window (tab) if checked."
+                                name="./target"
+                                text="New window"
+                                value="_blank"
+                                uncheckedValue="_self"/>
+                            <priorityLanguage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Check to add this language to the list of priority languages."
+                                name="./priorityLanguage"
+                                text="Priority Language"
+                                value="{Boolean}true"
+                                uncheckedValue="false"/>
+                          </items>
+                        </tab>
+                      </items>
+                    </field>
+                  </languageItems>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </languages>
+      <advanced
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/advanced/content"/>
+    </items>
+  </content>
+</jcr:root>

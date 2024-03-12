@@ -1,0 +1,82 @@
+.o-timelineCard {
+  --content-marker-color: var(--color-white-30a);
+  --component-text-color: var(--color-white);
+  --component-heading-color: var(--component-text-color);
+
+  height: 375px;
+  width: fit-content;
+
+  &__container {
+    --component-background-color: var(--color-white-5a);
+
+    background: var(--component-background-color);
+    color: var(--component-text-color);
+    height: 320px;
+    width: 250px;
+    padding: 40px;
+    position: relative;
+    transition: all 0.25s linear;
+    cursor: pointer;
+
+    @supports (backdrop-filter: blur(20px)) {
+      --component-background-color: var(--color-white-5a);
+
+      backdrop-filter: blur(20px);
+    }
+
+    &:hover {
+      --component-background-color: var(--color-white-15a);
+
+      @supports (backdrop-filter: blur(20px)) {
+        --component-background-color: var(--color-white-15a);
+      }
+    }
+  }
+
+  .a-heading {
+    @include type("overline", "large");
+
+    margin: 0 0 30px;
+  }
+
+  .m-button {
+    display: none;
+  }
+
+  &.-isActive {
+    --content-marker-color: var(--color-dark-gold);
+    --component-text-color: var(--color-black);
+
+    .o-timelineCard__container {
+      --component-background-color: var(--color-cream-50);
+
+      cursor: unset;
+      height: 375px;
+
+      .m-button {
+        display: block;
+        position: absolute;
+        bottom: 40px;
+      }
+    }
+  }
+
+  .s-content {
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    &__container {
+      width: 310px;
+      height: 310px;
+    }
+
+    &.-isActive {
+      .o-timelineCard__container {
+        height: 375px;
+      }
+    }
+  }
+}

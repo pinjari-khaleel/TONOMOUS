@@ -1,0 +1,12 @@
+<sly data-sly-use.aemEnv="com.tonomus.core.services.AemEnvService"
+     data-sly-set.configPageVal="${pageProperties.configPage ? pageProperties.configPage : 'conf/admin'}">
+    <sly data-sly-test="${!aemEnv.author}">
+        <sly
+                data-sly-set.oneTrust="${'tonomus/components/content/components/s06-onetrust/v1/s06-onetrust'}"
+                data-sly-use.configModel="${'com.tonomus.core.slingmodels.common.v1.ConfigResourceModel'
+              @ resourceType=oneTrust, configPage=configPageVal, isRelativePath=true}"></sly>
+        <sly data-sly-test="${configModel.resourcePath @ context='uri'}"
+             data-sly-resource="${ configModel.resourcePath || 's06-onetrust' @
+              resourceType=oneTrust, wcmmode='disabled'}"></sly>
+    </sly>
+</sly>

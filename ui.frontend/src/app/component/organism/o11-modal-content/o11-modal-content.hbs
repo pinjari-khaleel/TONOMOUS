@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="./o11-modal-content.scss">
+<script src="./O11ModalContent.ts"></script>
+
+
+<div class="o-modalContent" data-component="o11-modal-content">
+    {{#with backButtonLabel}}
+        <div class="o-modalContent__previousModalButton" data-back-button>
+          {{> molecule/m02-button label=this variant="leftIcon" icon="arrow-left" theme="dark-gold" level="tertiary" size="small"}}
+        </div>
+    {{/with}}
+    <div class="o-modalContent__content{{#unless list}} -center{{/unless}}">
+    <div class="o-modalContent__header">
+      {{#if icon}}{{> atom/a02-icon name=icon }}{{/if}}
+      {{> atom/a03-heading heading element="h3" }}
+      {{#if subTitle}}
+        <p class="o-modalContent__subTitle">{{{ subTitle }}}</p>
+      {{/if}}
+    </div>
+    {{#with image}}
+      <div class="o-modalContent__image">
+        {{> atom/a01-image disableTransition=true }}
+      </div>
+    {{/with}}
+    <div class="s-content">
+      {{{ copy }}}
+    </div>
+
+    {{#with list}}
+      <div class="o-modalContent__listWrapper">
+        {{#if heading}}
+          {{> atom/a03-heading heading element="h3" }}
+        {{/if}}
+        <ol class="o-modalContent__list{{#if (condition buttons.length '<' 4)}} -oneColumn{{/if}}">
+          {{#each buttons}}
+            <li class="o-modalContent__listItem" {{#if nestedModalId}}data-nested-modal-id="{{nestedModalId}}"{{/if}}>
+              {{> molecule/m02-button size='small' level='tertiary'}}
+            </li>
+          {{/each}}
+        </ol>
+      </div>
+    {{/with}}
+  </div>
+    {{#if (condition buttons '||' social) }}
+    <div class="o-modalContent__bottom">
+      {{#with buttons}}
+        {{#if heading}}
+          {{>atom/a04-eyebrow heading }}
+        {{/if}}
+        {{#each items}}
+          {{> molecule/m02-button this}}
+        {{/each}}
+      {{/with}}
+      {{#if social}}
+        {{> molecule/m12-social social }}
+      {{/if}}
+    </div>
+  {{/if}}
+</div>

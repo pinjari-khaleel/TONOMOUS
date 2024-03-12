@@ -1,0 +1,103 @@
+.o-submitStep {
+  .m-button {
+    margin-inline-start: auto;
+  }
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  .m-paragraph {
+    --eyebrow-text-color: var(--color-white);
+    --component-heading-color: var(--color-white);
+    --component-text-color: var(--color-white);
+
+    color: var(--color-white);
+  }
+
+  &__content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: var(--containerMargin);
+    display: flex;
+    flex-direction: column;
+
+    [dir="rtl"] & {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  &__messages {
+    margin: 0 0 20px;
+  }
+
+  &__message {
+    margin: 0 0 15px;
+  }
+
+  &__buttons {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .o-submitStep__button:first-child {
+      margin: 0 15px 0 0;
+
+      [dir="rtl"] & {
+        margin: 0 0 0 15px;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__socialCallToAction {
+    @include type("overline", "small");
+
+    margin: 0 0 15px;
+    color: var(--color-white);
+
+    [dir="rtl"] & {
+      margin: 0 0 0 15px;
+    }
+  }
+
+  .m-social {
+    .m-social__item {
+      color: var(--color-white);
+
+      @include hover() {
+        color: var(--component-highlight-hover-color, var(--color-gold));
+      }
+    }
+  }
+
+  @include respond-to(LARGE) {
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &__messages {
+      width: 50%;
+      margin: 0;
+    }
+
+    &__social {
+      flex-direction: row;
+    }
+
+    &__socialCallToAction {
+      @include type("overline", "medium");
+      margin: 0 20px 0 0;
+    }
+  }
+}

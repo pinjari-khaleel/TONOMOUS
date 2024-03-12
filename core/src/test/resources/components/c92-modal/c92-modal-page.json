@@ -1,0 +1,216 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Sun Sep 25 2022 14:09:31 GMT+0600",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "jcr:title": "c92",
+    "cq:template": "/conf/tonomus/settings/wcm/templates/t04-home",
+    "brandSite": "tonomus",
+    "jcr:created": "Sun Sep 25 2022 14:09:31 GMT+0600",
+    "cq:lastModified": "Mon Sep 26 2022 10:16:33 GMT+0600",
+    "isRightToLeftLanguage": "ltr",
+    "cq:cloudserviceconfigs": [
+      "/etc/cloudservices/form-collector/configuration",
+      "/etc/cloudservices/google-recaptcha/configuration"
+    ],
+    "sling:resourceType": "tonomus/components/structure/tonomus-home-page",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c92_modal": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "anchorId": "the_line_form",
+          "titleInEnglish": "Stay informed",
+          "jcr:created": "Sun Sep 25 2022 18:31:48 GMT+0600",
+          "id": "the_line_form",
+          "text": "Stay informed",
+          "jcr:lastModified": "Sun Sep 25 2022 19:10:42 GMT+0600",
+          "scrollComponent": "false",
+          "sling:resourceType": "tonomus/components/content/components/c92-modal/v1/c92-modal",
+          "c48_forms_group": {
+            "jcr:primaryType": "nt:unstructured",
+            "required": "false",
+            "type": "double",
+            "sling:resourceType": "tonomus/components/content/wrappers/c48-forms-group",
+            "m30_text_field_firstname": {
+              "jcr:primaryType": "nt:unstructured",
+              "charactersLabel": "characters",
+              "titleInEnglish": "First name",
+              "readonly": "false",
+              "required": "true",
+              "id": "firstname",
+              "name": "FNAME",
+              "type": "text",
+              "label": "First name",
+              "maxlength": "100",
+              "disabled": "false",
+              "placeholder": "Please type here",
+              "sling:resourceType": "tonomus/components/content/wrappers/m30-text-field",
+              "validate": {
+                "jcr:primaryType": "nt:unstructured",
+                "presence": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "message": "^Please enter your first name"
+                },
+                "length": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "tooLong": "^The first name is too long"
+                },
+                "format": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "pattern": "[^0-9!-\\/:-@\\\\[-`{-~]+",
+                  "message": "^Please only use letters"
+                }
+              }
+            },
+            "m30_text_field_lastname": {
+              "jcr:primaryType": "nt:unstructured",
+              "charactersLabel": "characters",
+              "titleInEnglish": "Last name",
+              "readonly": "false",
+              "required": "true",
+              "id": "lastname",
+              "name": "LNAME",
+              "type": "text",
+              "label": "Last name",
+              "maxlength": "100",
+              "disabled": "false",
+              "placeholder": "Please type here",
+              "sling:resourceType": "tonomus/components/content/wrappers/m30-text-field",
+              "validate": {
+                "jcr:primaryType": "nt:unstructured",
+                "presence": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "message": "^Please enter your last name"
+                },
+                "length": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "tooLong": "^The last name is too long"
+                },
+                "format": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "pattern": "[^0-9!-\\/:-@\\\\[-`{-~]+",
+                  "message": "^Please only use letters"
+                }
+              }
+            },
+            "m30_text_field_email": {
+              "jcr:primaryType": "nt:unstructured",
+              "titleInEnglish": "Business mail address",
+              "readonly": "false",
+              "required": "true",
+              "id": "email",
+              "name": "email",
+              "type": "email",
+              "label": "Business mail address",
+              "disabled": "false",
+              "placeholder": "Email address",
+              "sling:resourceType": "tonomus/components/content/wrappers/m30-text-field",
+              "validate": {
+                "jcr:primaryType": "nt:unstructured",
+                "presence": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "message": "^Please enter your email address"
+                },
+                "email": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "message": "^Please enter valid email address"
+                }
+              }
+            },
+            "m27_checkbox_option": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:createdBy": "admin",
+              "jcr:lastModifiedBy": "admin",
+              "titleInEnglish": "testcheckbox",
+              "jcr:created": "Mon Sep 26 2022 10:15:38 GMT+0600",
+              "id": "testcheckbox",
+              "name": "testcheckbox",
+              "label": "testcheckbox",
+              "disabled": "false",
+              "checked": "false",
+              "jcr:lastModified": "Mon Sep 26 2022 10:15:55 GMT+0600",
+              "sling:resourceType": "tonomus/components/content/wrappers/m27-checkbox-option"
+            },
+            "m28_radio_option": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:createdBy": "admin",
+              "jcr:lastModifiedBy": "admin",
+              "titleInEnglish": "testradio",
+              "required": "false",
+              "jcr:created": "Mon Sep 26 2022 10:16:03 GMT+0600",
+              "id": "testradio",
+              "name": "testradio",
+              "label": "testradio",
+              "value": "testradio",
+              "checked": "false",
+              "jcr:lastModified": "Mon Sep 26 2022 10:16:15 GMT+0600",
+              "sling:resourceType": "tonomus/components/content/wrappers/m28-radio-option"
+            },
+            "m31_dropdown_field": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:createdBy": "admin",
+              "jcr:lastModifiedBy": "admin",
+              "titleInEnglish": "testdropdown",
+              "autocomplete": "false",
+              "required": "false",
+              "jcr:created": "Mon Sep 26 2022 10:16:20 GMT+0600",
+              "id": "testdropdown",
+              "name": "testdropdown",
+              "label": "testdropdown",
+              "disabled": "false",
+              "placeholder": "testdropdown",
+              "jcr:lastModified": "Mon Sep 26 2022 10:16:33 GMT+0600",
+              "sling:resourceType": "tonomus/components/content/wrappers/m31-dropdown-field",
+              "validate": {
+                "jcr:primaryType": "nt:unstructured",
+                "presence": {
+                  "jcr:primaryType": "nt:unstructured"
+                }
+              }
+            }
+          },
+          "messages": {
+            "jcr:primaryType": "nt:unstructured",
+            "success": {
+              "jcr:primaryType": "nt:unstructured",
+              "icon": "checkmark",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "text": "Your request sent successfully"
+              }
+            },
+            "error": {
+              "jcr:primaryType": "nt:unstructured",
+              "icon": "cross",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "text": "An error occurred during the preparation of the despatch."
+              }
+            }
+          },
+          "buttons": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+              "jcr:primaryType": "nt:unstructured",
+              "target": "_self",
+              "size": "small",
+              "type": "submit",
+              "label": "Submit Now",
+              "level": "primary",
+              "theme": "gold"
+            }
+          }
+        }
+      }
+    }
+  }
+}

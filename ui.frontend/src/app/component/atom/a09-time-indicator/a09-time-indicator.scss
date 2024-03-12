@@ -1,0 +1,17 @@
+.a-timeIndicator {
+  @include type("body", "small");
+
+  pointer-events: none;
+
+  &.-tooltip {
+    // todo: remove positioning from atom. Let the UI molecules and organisms deal with that.
+    background: var(--color-white);
+    bottom: calc(100% + #{em-size(24, 16)});
+    color: var(--color-black);
+    opacity: 0;
+    padding: em-size(4, 16) em-size(8, 16);
+    position: absolute;
+    transform: translateX(-50%);
+    transition: opacity 0.8s $easeOutExpo;
+  }
+}

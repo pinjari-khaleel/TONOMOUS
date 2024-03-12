@@ -1,0 +1,410 @@
+{
+  "jcr:primaryType": "dam:Asset",
+  "jcr:mixinTypes": [
+    "mix:referenceable"
+  ],
+  "jcr:createdBy": "admin",
+  "jcr:created": "Thu Oct 13 2022 15:37:56 GMT+0600",
+  "jcr:uuid": "491f2ce9-03f3-47c5-b9c7-0fda95824f95",
+  "jcr:content": {
+    "jcr:primaryType": "dam:AssetContent",
+    "jcr:mixinTypes": [
+      "cq:ReplicationStatus"
+    ],
+    "cq:lastReplicationAction_scene7": "Activate",
+    "cq:lastReplicationAction": "Activate",
+    "dam:processingRenditions": [
+      "cq5dam.zoom.2048.2048.jpeg",
+      "cqdam.machine.metadata.tags.json",
+      "cqdam.machine.metadata.features.json",
+      "cq5dam.web.1280.1280.jpeg",
+      "cq5dam.thumbnail.140.100.png",
+      "cqdam.machine.metadata.crops.json",
+      "cq5dam.thumbnail.319.319.png",
+      "cqdam.machine.metadata.colors.json",
+      "cqdam.text.txt",
+      "cqdam.metadata.xml",
+      "cq5dam.thumbnail.48.48.png"
+    ],
+    "status": "Finished",
+    "cq:lastReplicationAction_publish": "Activate",
+    "dam:processingId": "b1ea9a6a-2a30-41b5-acb4-f82b2cdd9b4f",
+    "cq:lastReplicated": "Wed Sep 21 2022 11:39:26 GMT+0000",
+    "dam:imageServerAsset": true,
+    "cq:lastReplicated_scene7": "Wed Sep 21 2022 11:39:26 GMT+0000",
+    "dam:s7damType": "VideoAVS",
+    "dam:runPostProcess": true,
+    "dam:assetState": "processed",
+    "dam:processingRequestedDate": "Fri Oct 14 2022 05:04:32 GMT+0000",
+    "dam:jobId": "55fd5c85-b80f-4599-84ca-c21c1ad0745b",
+    "jcr:lastModified": "Fri Oct 14 2022 05:07:56 GMT+0000",
+    "dam:scene7RequestID": "b1ea9a6a-2a30-41b5-acb4-f82b2cdd9b4f",
+    "dam:asyncJobId": "2022/10/14/5/4/a02f29a3-03a0-4ca4-9e72-e0e235d6935c_3",
+    "dam:scene7BatchId": "4DHh1IMBAAC6S5lsUzpf7D4Rhj2gq2UI",
+    "cq:lastReplicated_publish": "Wed Sep 21 2022 11:39:26 GMT+0000",
+    "renditions": {
+      "jcr:primaryType": "nt:folder",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+      "cqdam.machine.metadata.features.json": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:mixinTypes": [
+            "dam:Metadata"
+          ],
+          "jcr:encoding": "UTF-8",
+          "jcr:lastModifiedBy": "dam-writer-service",
+          "jcr:mimeType": "application/octet-stream",
+          "jcr:lastModified": "Fri Oct 14 2022 11:09:12 GMT+0600",
+          ":jcr:data": 2,
+          "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "dc:format": "application/octet-stream",
+            "dam:processingId": "b1ea9a6a-2a30-41b5-acb4-f82b2cdd9b4f",
+            "dam:sha1": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
+            "dam:size": 2
+          }
+        }
+      },
+      "cq5dam.thumbnail.48.48.png": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:mixinTypes": [
+            "dam:Metadata"
+          ],
+          "jcr:lastModifiedBy": "dam-writer-service",
+          "jcr:mimeType": "image/png",
+          "jcr:lastModified": "Fri Oct 14 2022 11:09:12 GMT+0600",
+          ":jcr:data": 3130,
+          "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "tiff:ImageLength": 27,
+            "dc:format": "image/png",
+            "dam:processingId": "b1ea9a6a-2a30-41b5-acb4-f82b2cdd9b4f",
+            "tiff:ImageWidth": 48,
+            "dam:sha1": "1c7c86ee2d276c9c113fddf1f2c645bef456393f",
+            "dam:size": 3130
+          }
+        }
+      },
+      "cq5dam.thumbnail.140.100.png": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:mixinTypes": [
+            "dam:Metadata"
+          ],
+          "jcr:lastModifiedBy": "dam-writer-service",
+          "jcr:mimeType": "image/png",
+          "jcr:lastModified": "Fri Oct 14 2022 11:09:12 GMT+0600",
+          ":jcr:data": 20519,
+          "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "tiff:ImageLength": 79,
+            "dc:format": "image/png",
+            "dam:processingId": "b1ea9a6a-2a30-41b5-acb4-f82b2cdd9b4f",
+            "tiff:ImageWidth": 140,
+            "dam:sha1": "a3fcd956c93c2ab61bfa04e70d2c3a0b6833c667",
+            "dam:size": 20519
+          }
+        }
+      },
+      "cqdam.machine.metadata.colors.json": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:mixinTypes": [
+            "dam:Metadata"
+          ],
+          "jcr:encoding": "UTF-8",
+          "jcr:lastModifiedBy": "dam-writer-service",
+          "jcr:mimeType": "application/octet-stream",
+          "jcr:lastModified": "Fri Oct 14 2022 11:09:12 GMT+0600",
+          ":jcr:data": 2,
+          "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "dc:format": "application/octet-stream",
+            "dam:processingId": "b1ea9a6a-2a30-41b5-acb4-f82b2cdd9b4f",
+            "dam:sha1": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
+            "dam:size": 2
+          }
+        }
+      },
+      "cq5dam.web.1280.1280.jpeg": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:mixinTypes": [
+            "dam:Metadata"
+          ],
+          "jcr:lastModifiedBy": "dam-writer-service",
+          "jcr:mimeType": "image/jpeg",
+          "jcr:lastModified": "Fri Oct 14 2022 11:09:12 GMT+0600",
+          ":jcr:data": 56528,
+          "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "tiff:ImageLength": 720,
+            "dc:format": "image/jpeg",
+            "dam:processingId": "b17525b0-0c02-4b82-96d9-92acde8e6df2",
+            "tiff:ImageWidth": 1280,
+            "dam:sha1": "4c0b6ce254ed7c3bf02eca50c8608b4903455170",
+            "dam:size": 56528
+          }
+        }
+      },
+      "cqdam.machine.metadata.crops.json": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:mixinTypes": [
+            "dam:Metadata"
+          ],
+          "jcr:encoding": "UTF-8",
+          "jcr:lastModifiedBy": "dam-writer-service",
+          "jcr:mimeType": "application/octet-stream",
+          "jcr:lastModified": "Fri Oct 14 2022 11:09:12 GMT+0600",
+          ":jcr:data": 2,
+          "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "dc:format": "application/octet-stream",
+            "dam:processingId": "b1ea9a6a-2a30-41b5-acb4-f82b2cdd9b4f",
+            "dam:sha1": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
+            "dam:size": 2
+          }
+        }
+      },
+      "cq5dam.zoom.2048.2048.jpeg": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:mixinTypes": [
+            "dam:Metadata"
+          ],
+          "jcr:lastModifiedBy": "dam-writer-service",
+          "jcr:mimeType": "image/jpeg",
+          "jcr:lastModified": "Fri Oct 14 2022 11:09:12 GMT+0600",
+          ":jcr:data": 99279,
+          "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "tiff:ImageLength": 1080,
+            "dc:format": "image/jpeg",
+            "dam:processingId": "b1ea9a6a-2a30-41b5-acb4-f82b2cdd9b4f",
+            "tiff:ImageWidth": 1920,
+            "dam:sha1": "acef1f0464cf7650cee232bcc16f4f8e2031a70f",
+            "dam:size": 99279
+          }
+        }
+      },
+      "cqdam.machine.metadata.tags.json": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:mixinTypes": [
+            "dam:Metadata"
+          ],
+          "jcr:encoding": "UTF-8",
+          "jcr:lastModifiedBy": "dam-writer-service",
+          "jcr:mimeType": "application/octet-stream",
+          "jcr:lastModified": "Fri Oct 14 2022 11:09:12 GMT+0600",
+          ":jcr:data": 417,
+          "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "dc:format": "application/octet-stream",
+            "dam:processingId": "b1ea9a6a-2a30-41b5-acb4-f82b2cdd9b4f",
+            "dam:sha1": "6c311428dcbd1da8543d20da3866be98c976c37c",
+            "dam:size": 417
+          }
+        }
+      },
+      "original": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:mimeType": "video/mp4",
+          "jcr:lastModified": "Fri Oct 14 2022 11:09:12 GMT+0600",
+          ":jcr:data": 4236310
+        }
+      },
+      "cq5dam.thumbnail.319.319.png": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:mixinTypes": [
+            "dam:Metadata"
+          ],
+          "jcr:lastModifiedBy": "dam-writer-service",
+          "jcr:mimeType": "image/png",
+          "jcr:lastModified": "Fri Oct 14 2022 11:09:12 GMT+0600",
+          ":jcr:data": 81661,
+          "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "tiff:ImageLength": 179,
+            "dc:format": "image/png",
+            "dam:processingId": "b1ea9a6a-2a30-41b5-acb4-f82b2cdd9b4f",
+            "tiff:ImageWidth": 319,
+            "dam:sha1": "139228904ecbec34172f9d2393129614ac882f6c",
+            "dam:size": 81661
+          }
+        }
+      },
+      "cqdam.metadata.xml": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 14 2022 11:09:12 GMT+0600",
+        "jcr:content": {
+          "jcr:primaryType": "oak:Resource",
+          "jcr:mixinTypes": [
+            "dam:Metadata"
+          ],
+          "jcr:encoding": "us-ascii",
+          "jcr:lastModifiedBy": "dam-writer-service",
+          "jcr:mimeType": "text/xml",
+          "jcr:lastModified": "Fri Oct 14 2022 11:09:12 GMT+0600",
+          ":jcr:data": 812,
+          "metadata": {
+            "jcr:primaryType": "nt:unstructured",
+            "dc:format": "text/xml",
+            "dam:processingId": "b1ea9a6a-2a30-41b5-acb4-f82b2cdd9b4f",
+            "repo:encoding": "us-ascii",
+            "dam:sha1": "f23cfd974d754fb5b7b34d3b733f944aca3188cd",
+            "dam:size": 812
+          }
+        }
+      }
+    },
+    "related": {
+      "jcr:primaryType": "nt:unstructured"
+    },
+    "dam:failedRenditions": {
+      "jcr:primaryType": "nt:unstructured",
+      "cqdam.text.txt": {
+        "jcr:primaryType": "nt:unstructured",
+        "reason": "RenditionFormatUnsupported",
+        "message": "Text extraction (fmt=txt) is not supported for mp4 files"
+      },
+      "cq5dam.web.1280.1280.jpeg": {
+        "jcr:primaryType": "nt:unstructured",
+        "reason": "GenericError",
+        "message": "Error: Command failed: /nui/ffmpeg/bin/ffmpeg -y -loglevel error -reconnect 1 -reconnect_delay_max 4294 -timeout 590763 -i \"https://sa032353010900205b24bba6.blob.core.windows.net/aem-blob-ns-team-aem-cm-prd-n25360-cm-p32353-e109002/5a1e-03a5-ad28-4e57-93e7-ccdd8d2089b3-1663488252021?sig=CCr81EsZagzoxeSG6x5hhDXPpfIK0lP8Fwyt%2FJJHaTs%3D&se=2022-10-14T17%3A01%3A55Z&sv=2019-02-02&rscc=private%2C%20max-age%3D43200%2C%20immutable&rsct=video%2Fmp4&sp=r&sr=b\" -ss 0 -filter:v \"scale='min(1280,iw)':'min(1280,ih)':flags=bicubic:force_original_aspect_ratio=decrease\" -frames 1 -pix_fmt rgb24 \"/nodejsAction/wDJlPtFE/work/8191ce0bd01748a091ce0bd01718a0c2/out/rendition3.jpg\"\n[tcp @ 0x49ee1a0] Connection to tcp://sa032353010900205b24bba6.blob.core.windows.net:443 failed: Connection timed out\nhttps://sa032353010900205b24bba6.blob.core.windows.net/aem-blob-ns-team-aem-cm-prd-n25360-cm-p32353-e109002/5a1e-03a5-ad28-4e57-93e7-ccdd8d2089b3-1663488252021?sig=CCr81EsZagzoxeSG6x5hhDXPpfIK0lP8Fwyt%2FJJHaTs%3D&se=2022-10-14T17%3A01%3A55Z&sv=2019-02-02&rscc=private%2C%20max-age%3D43200%2C%20immutable&rsct=video%2Fmp4&sp=r&sr=b: Connection timed out\n"
+      }
+    },
+    "metadata": {
+      "jcr:primaryType": "nt:unstructured",
+      "jcr:mixinTypes": [
+        "cq:Taggable"
+      ],
+      "duration": "13.0",
+      "dam:scene7Width": "1920",
+      "dam:scene7CompanyID": "c|29289",
+      "dam:extracted": "Fri Oct 14 2022 05:04:41 GMT+0000",
+      "dc:format": "video/mp4",
+      "dam:scene7ID": "a|764653094",
+      "dam:scene7CloudConfigPath": "/conf/global/settings/cloudconfigs/dmscene7",
+      "tiff:Orientation": 1,
+      "dam:scene7FileStatus": "PublishComplete",
+      "dam:scene7File": "neomstage/SND 15 A V2_Graded_220914- MC - 16x9",
+      "dam:scene7Name": "SND 15 A V2_Graded_220914- MC - 16x9",
+      "dam:scene7Type": "Video",
+      "dam:scene7UploadTimeStamp": "Fri Oct 14 2022 05:07:47 GMT+0000",
+      "dam:scene7FileAvs": "neomstage/SND 15 A V2_Graded_220914- MC - 16x9-AVS",
+      "dam:scene7PublishTimeStamp": "Fri Oct 14 2022 05:07:48 GMT+0000",
+      "xmp:ModifyDate": "Sun Sep 18 2022 07:58:27 GMT+0000",
+      "xmp:CreateDate": "Sun Sep 18 2022 07:58:27 GMT+0000",
+      "dam:scene7Domain": "https://neom.scene7.com/",
+      "dam:scene7Folder": "neomstage/neom/snd-2022/",
+      "dam:scene7Height": "1080",
+      "dam:sha1": "3b78574dc3675507e37ccdbdeb91da1cc3f8aae4",
+      "dam:size": 4236310,
+      "dam:scene7PublishPending": false,
+      "dam:scene7APIServer": "https://s7sps3apissl.scene7.com",
+      "dam:scene7LastModified": "Fri Oct 14 2022 05:07:47 GMT+0000",
+      "xmpDM:duration": {
+        "jcr:primaryType": "nt:unstructured",
+        "xmpDM:scale": "1/1000",
+        "xmpDM:value": 13000,
+        "xmpNodeType": "xmpStruct"
+      },
+      "predictedTags": {
+        "jcr:primaryType": "nt:unstructured",
+        "golf": {
+          "jcr:primaryType": "nt:unstructured",
+          "isCustom": false,
+          "name": "golf",
+          "confidence": 0.888928255821879,
+          "jcr:lastModified": "Fri Oct 14 2022 05:04:47 GMT+0000"
+        },
+        "walking": {
+          "jcr:primaryType": "nt:unstructured",
+          "isCustom": false,
+          "name": "walking",
+          "confidence": 0.8089960760210038,
+          "jcr:lastModified": "Fri Oct 14 2022 05:04:47 GMT+0000"
+        },
+        "golfer": {
+          "jcr:primaryType": "nt:unstructured",
+          "isCustom": false,
+          "name": "golfer",
+          "confidence": 0.7706696987259669,
+          "jcr:lastModified": "Fri Oct 14 2022 05:04:47 GMT+0000"
+        },
+        "people": {
+          "jcr:primaryType": "nt:unstructured",
+          "isCustom": false,
+          "name": "people",
+          "confidence": 0.7228502570219817,
+          "jcr:lastModified": "Fri Oct 14 2022 05:04:47 GMT+0000"
+        },
+        "group": {
+          "jcr:primaryType": "nt:unstructured",
+          "isCustom": false,
+          "name": "group",
+          "confidence": 0.7185789835831395,
+          "jcr:lastModified": "Fri Oct 14 2022 05:04:47 GMT+0000"
+        },
+        "green": {
+          "jcr:primaryType": "nt:unstructured",
+          "isCustom": false,
+          "name": "green",
+          "confidence": 0.7172241472558997,
+          "jcr:lastModified": "Fri Oct 14 2022 05:04:47 GMT+0000"
+        },
+        "course": {
+          "jcr:primaryType": "nt:unstructured",
+          "isCustom": false,
+          "name": "course",
+          "confidence": 0.7015017765824324,
+          "jcr:lastModified": "Fri Oct 14 2022 05:04:47 GMT+0000"
+        },
+        "sport": {
+          "jcr:primaryType": "nt:unstructured",
+          "isCustom": false,
+          "name": "sport",
+          "confidence": 0.7009855609718554,
+          "jcr:lastModified": "Fri Oct 14 2022 05:04:47 GMT+0000"
+        }
+      }
+    }
+  }
+}

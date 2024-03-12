@@ -1,0 +1,29 @@
+heading:
+  text: 'Share Article'
+eventTracking:
+  event: null
+items:
+  - id: twitter
+    href: 'https://example.com/twitter/'
+    icon: twitter-shaped
+    label: Twitter
+  - id: facebook
+    href: 'https://example.com/facebook/'
+    icon: facebook-shaped
+    label: Facebook
+  - id: linkedin
+    href: 'https://example.com/linkedin/'
+    icon: linkedin-shaped
+    label: Linkedin
+  - id: whatsapp
+    href: 'https://example.com/whatsapp/'
+    icon: whatsapp-shaped
+    label: Whatsapp
+  - id: clipboard
+    href: 'https://example.com/clipboard-link/'
+    icon: copy-link-shaped
+    label: Copy Link
+  - network: email
+    href: 'https://example.com/linkedin/'
+    icon: email-shaped
+    label: Email

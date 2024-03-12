@@ -1,0 +1,312 @@
+.o-modalCarouselContent {
+  display: flex;
+  flex: 1 0 auto;
+  max-height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 20px 0;
+  height: 100%;
+
+  &__container {
+    @include size(100%, auto);
+
+    max-height: 100%;
+    overflow: visible;
+  }
+
+  &__heading {
+    @include type("overline", "large");
+
+    color: var(--color-dark-gold);
+    display: flex;
+    justify-content: center;
+
+    .a-icon {
+      margin-inline-end: 10px;
+    }
+  }
+
+  .m-pageIndicators {
+    @include size(100%, auto);
+
+    background: linear-gradient(rgba(#f5f3ea, 0) 0%, var(--color-cream-50) 30%);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: zindex($zLayout, default);
+    padding: 20px 0;
+  }
+
+  .m-button__container {
+    box-shadow: 0 4px 6px var(--button-shadow-color);
+  }
+
+  &__previousModalButton {
+    display: inline-block;
+    margin-bottom: 20px;
+    .m-button__container {
+      box-shadow: none;
+    }
+  }
+
+  &__item {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .a-eyebrow {
+    color: var(--modal-heading-color);
+    padding: 0 0 30px;
+    text-align: center;
+
+    .-itineraries & {
+      padding: 0;
+      text-align: start;
+    }
+  }
+
+  &__media {
+    @include aspect-ratio(660, 380);
+
+    margin: 50px auto;
+    max-width: 420px;
+
+    .a-image__img {
+      object-fit: contain;
+    }
+
+    .m-button.-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__contact {
+    @include type("body", "medium");
+
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin: 20px 0;
+    transition: 0.2s ease-out;
+    text-decoration: transparent underline;
+
+    .a-icon {
+      --icon-size: 18px;
+
+      color: var(--color-dark-gold);
+      margin-inline-end: 18px;
+    }
+
+    @include hover {
+      color: var(--color-dark-gold);
+      text-decoration-color: currentColor;
+    }
+  }
+
+  .s-content {
+    @include type("body", "small");
+    padding: 0 0 30px;
+    text-align: center;
+
+    big {
+      @include type("body", "medium");
+    }
+  }
+
+  &__buttons {
+    @include list-reset();
+
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 92px;
+  }
+
+  &__button {
+    margin: auto;
+
+    [dir="rtl"] & {
+      .m-button__container {
+        padding: 0 var(--button-padding) 0 calc(var(--button-padding) / 2);
+      }
+    }
+  }
+
+  &__controls {
+    @include size(100%, width);
+    @include offset(0, 190px);
+
+    display: none;
+    position: absolute;
+  }
+
+  &__control {
+    position: absolute;
+    z-index: 1;
+
+    &.-prev {
+      left: 0;
+    }
+    &.-next {
+      right: 0;
+    }
+
+    [dir="rtl"] & {
+      .a-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    &.-isDisabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
+
+  &__content {
+    padding: 0 20px 90px 20px;
+  }
+
+  &.-fullBleedCarousel {
+    padding: 0;
+
+    .o-modalCarouselContent__media {
+      max-width: 100%;
+      min-height: 373px;
+      margin: 0 0 60px;
+    }
+
+    .a-image__img {
+      object-fit: cover;
+    }
+
+    .o-modalCarouselContent__controls {
+      @include offset(0, 156.5px);
+    }
+  }
+
+  @include respond-to("SMALL") {
+    padding: 0 60px;
+
+    .a-eyebrow {
+      padding: 0 0 40px;
+      text-align: start;
+    }
+
+    &__heading {
+      justify-content: flex-start;
+    }
+
+    .s-content {
+      padding: 0 0 40px;
+      text-align: start;
+    }
+
+    &__media {
+      margin: 80px auto 60px;
+    }
+
+    &__button {
+      margin: 0;
+    }
+  }
+
+  @include respond-to("MEDIUM") {
+    padding: 20px 110px;
+
+    .o-modalCarouselContent__control {
+      &.-prev {
+        left: 80px;
+      }
+      &.-next {
+        right: 80px;
+      }
+    }
+
+    &__content {
+      padding: 0 70px 70px 70px;
+    }
+
+    &.-fullBleedCarousel {
+      padding: 0;
+
+      .o-modalCarouselContent__control {
+        &.-prev {
+          left: 20px;
+        }
+        &.-next {
+          right: 20px;
+        }
+      }
+    }
+
+    .s-content {
+      padding: 0 0 40px;
+    }
+  }
+
+  @include respond-to("LARGE") {
+    &__controls {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .m-pageIndicators {
+      display: none;
+    }
+  }
+
+  @include theme("tonomus") {
+    &.-fullBleedCarousel .o-modalCarouselContent__controls {
+      inset-block-start: 280px;
+      display: flex;
+
+      .m-button {
+        --button-size: 60px;
+        --icon-size: 24px;
+        --button-text-color: var(--color-tonomus-purple-300);
+      }
+    }
+
+    &__content {
+      color: var(--color-tonomus-purple-300);
+
+      .a-eyebrow.-large {
+        @include type("heading", "h4");
+
+        color: var(--color-tonomus-purple-300);
+        text-align: start;
+      }
+
+      .s-content {
+        --component-text-color: var(--color-tonomus-black-medium-emphasis);
+
+        text-align: start;
+      }
+    }
+
+    &__buttons,
+    & .m-pageIndicators {
+      display: none;
+    }
+
+    .s-content {
+      color: var(--color-tonomus-purple);
+    }
+
+    @include respond-to("MEDIUM") {
+      &.-fullBleedCarousel &__controls {
+        inset-block-start: 320px;
+      }
+
+      &__content {
+        padding: 0 145px 70px;
+      }
+    }
+  }
+}

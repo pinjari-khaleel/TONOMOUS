@@ -1,0 +1,133 @@
+@screen-mobile-max: 768px;
+@screen-tablet-max: 1439px;
+@screen-desktop-min: 1440px;
+@margin-default: 6.25rem;
+@margin-tablet: 3rem;
+@margin-mobile: 1.25rem;
+
+:root {
+  --body-width: calc(100%);
+  --body-width-px: 100%; // will be updated in JS
+  // Base font for EN and AR
+  --base-font: 'MR Eaves Mod OT', Arial, sans-serif;
+  --base-font-light: 'MR Eaves Mod OT Light', Arial, sans-serif;
+  --base-font-bold: 'MR Eaves Mod OT Bold', Arial, sans-serif;
+  --base-font-book: 'MR Eaves Mod OT Book', Arial, sans-serif;
+  --base-font-ar: '29LT Bukra', '29LT Zarid Text', Arial, sans-serif;
+
+  // Font weight
+  --font-weight-light: 300;
+  --font-weight-book: 350;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  // Device break-point / Page Gutter
+  --margin-default: @margin-default;
+
+  // Column gutter
+  --component-padding-inline: 2rem; // 32px each side
+  --component-padding-block-default: 4rem; // 64px
+  --component-padding-block-large: 5rem; // 80px
+
+  // Container Padding
+  --padding-block: 7.5rem;
+  // page gutter minus component padding
+  --padding-inline: 4.25rem;
+
+  @media (max-width: @screen-tablet-max) {
+    --padding-block: 5rem;
+    --margin-default: @margin-tablet;
+    --component-padding-inline: 1rem; // 16px each side
+    --padding-inline: 2rem;
+  }
+
+  @media (max-width: @screen-mobile-max) {
+    --padding-block: 3rem;
+    --margin-default: @margin-mobile;
+    --component-padding-inline: 0; // 0px each side
+    --component-padding-block-large: 6rem;
+    --padding-inline: 1.25rem;
+  }
+
+  // Primary
+  --color-white: #fffffe;
+  --color-dark-purple: #521260;
+
+  // Secondary
+  --color-vivid-purple: #7f40e2;
+  --color-pure-black: #000000;
+  --color-black: #010101;
+  --color-dusty-purple: #b7a5b7;
+
+  //Tertiary
+  --color-vivid-green: #60ffb1;
+  --color-pale-purple: #767ed3;
+  --color-disable-green: #bfffe0;
+
+  --color-gray: #bababa;
+  --color-gray-2: #b0b0b0;
+  --color-gray-3: #f8f8f8;
+  --color-gray-4: #6d6d6d;
+
+  --page-background-color: #f8f8f8;
+
+  //Gradient
+  --gradient-color-green-and-violet: linear-gradient(
+    225deg,
+    #7f40e2 -80%,
+    #60ffb1 100%
+  );
+
+  --hover-gradient-color-green-and-violet: linear-gradient(
+    201deg,
+    #7f40e2 20%,
+    #60ffb1 99%
+  );
+
+  --gradient-underline: linear-gradient(
+    to right,
+    var(--color-vivid-green),
+    var(--color-vivid-purple)
+  );
+
+  --gradient-nav-color-green-and-violet: linear-gradient(
+    270deg,
+    rgba(127, 64, 226, 1) 0%,
+    rgba(96, 255, 177, 1) 108.52%
+  );
+
+  --gradient-black: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.2) 73.91%,
+      rgba(0, 0, 0, 0.2) 73.91%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+
+  --scrollable-column-1: (1 / 12);
+  --scrollable-column-2: (2 / 12);
+  --scrollable-column-3: (3 / 12);
+  --scrollable-column-4: (4 / 12);
+  --scrollable-column-5: (5 / 12);
+  --scrollable-column-6: (6 / 12);
+  --scrollable-column-7: (7 / 12);
+  --scrollable-column-8: (8 / 12);
+  --scrollable-column-9: (9 / 12);
+  --scrollable-column-10: (10 / 12);
+  --scrollable-column-11: (11 / 12);
+  --scrollable-column-12: (12 / 12);
+
+  --color-ui-error: red;
+
+  --input-background-color: var(--color-white);
+  --input-border-color-focus: var(--color-vivid-purple);
+  --input-border-color: var(--color-gray);
+  --input-border-radius: 8px;
+  --input-border-width: 1px;
+  --input-box-shadow-focus: var(--color-black);
+  --input-height: 56px;
+  --input-placeholder-color: var(--color-black);
+  --input-text-color: var(--color-black);
+
+  --form-error-color: var(--color-ui-error);
+}

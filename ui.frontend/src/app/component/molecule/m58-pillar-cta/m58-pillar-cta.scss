@@ -1,0 +1,91 @@
+.m-pillarCta {
+  --icon-size: 40px;
+  --border-radius: 4px;
+  --background-color: var(--color-white);
+  --component-padding: 23px;
+  --component-highlight-color: var(--color-accent);
+  --component-title-color: var(--color-dark-accent);
+
+  padding: var(--component-padding);
+  background-color: var(--background-color);
+  text-align: start;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  position: relative;
+  transition: background-color 250ms ease;
+
+  &__title,
+  &__icon,
+  &__labelWrapper {
+    position: relative;
+  }
+
+  &__background {
+    @include position(0);
+
+    position: absolute;
+    opacity: var(--background-opacity, 0);
+    transition: opacity 250ms ease-in;
+  }
+
+  &__title {
+    @include type("overline", "large");
+
+    color: var(--component-title-color);
+    margin: 0 20px;
+  }
+
+  &__icon,
+  &__labelWrapper {
+    color: var(--component-highlight-color);
+    transition: color 250ms ease;
+  }
+
+  &__labelWrapper {
+    @include type("overline", "small");
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-inline-start: auto;
+
+    .a-icon {
+      --icon-size: 20px;
+
+      [dir="rtl"] & {
+        transform: rotate(180deg);
+      }
+    }
+
+    .m-pillarCta__label {
+      display: none;
+    }
+  }
+
+  @include hover {
+    --background-color: var(--color-accent);
+    --background-opacity: 0.25;
+    --component-highlight-color: var(--color-white);
+    --component-title-color: var(--color-white);
+  }
+
+  @include respond-to("XLARGE") {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__title {
+      margin: 20px 0 35px;
+      margin-inline-end: 50px;
+    }
+
+    &__labelWrapper {
+      margin-top: auto;
+      margin-inline-start: 0;
+
+      .m-pillarCta__label {
+        display: block;
+      }
+    }
+  }
+}

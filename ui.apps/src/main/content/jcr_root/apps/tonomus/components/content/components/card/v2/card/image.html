@@ -1,0 +1,3 @@
+<sly data-sly-template.image="${@ card, hasHTMLContent, hasURLContent}" >
+    <div class="cmp-card__image" data-sly-test="${card.teaser.imageResource && !(hasHTMLContent || hasURLContent)}" data-sly-resource="${card.teaser.imageResource @ wcmmode=disabled}"></div>
+</sly>

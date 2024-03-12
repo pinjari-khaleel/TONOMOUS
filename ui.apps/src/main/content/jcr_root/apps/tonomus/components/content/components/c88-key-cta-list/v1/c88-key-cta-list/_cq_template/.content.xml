@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          scrollComponent="{Boolean}false"
+          text="&lt;p&gt;To create a cognitive world, it’s everybody in. As we set a new standard for what’s possible,
+  we recognize that potential is everywhere: It’s in our partners, it’s in our customers, it’s in
+  our team, it’s in you.&lt;/p&gt;&lt;p&gt;Leverage our innovative technologies as a business partner, transform
+  your career on our inclusive team, or make your vision a reality as an entrepreneur—however you
+  contribute, we welcome your collaboration on a future created by us and for us.&lt;/p&gt;">
+  <heading
+      jcr:primaryType="nt:unstructured"
+      text="Join the &lt;strong&gt;movement&lt;/strong&gt;"
+      size="h2">
+  </heading>
+  <list jcr:primaryType="nt:unstructured">
+    <item0
+        jcr:primaryType="nt:unstructured"
+        href="/content/tonomus/en-us#tonomus_getintouch_form_id"
+        icon="arrow-right"
+        target="_self"
+        text="GET IN TOUCH"
+        description="SEND US YOUR REQUEST"/>
+    <item1
+        jcr:primaryType="nt:unstructured"
+        href="/content/tonomus/en-us#tonomus_stayinformed_form_id"
+        icon="arrow-right"
+        target="_self"
+        text="STAY INFORMED"
+        description="WE’LL UPDATE YOU WITH THE LAST NEWS"/>
+    <item2
+        jcr:primaryType="nt:unstructured"
+        href="/content/tonomus/en-us"
+        icon="arrow-right"
+        target="_blank"
+        text="BECOME PART OF THE TEAM"
+        description="TELL US ABOUT YOURSELF AND INCLUDE YOUR CV"/>
+  </list>
+
+</jcr:root>

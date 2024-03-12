@@ -1,0 +1,4 @@
+{
+    "formID":"tonomus_contactmedia_form",
+    "mandatoryFields":"$[env:TONOMUS_CONTACTMEDIA_FORM;default=name,email,organization,interest,contact-permission,LANGUAGE]"
+}

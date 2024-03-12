@@ -1,0 +1,54 @@
+
+
+<section class="b-dynamicQuote"
+  data-component="c80-dynamic-quote"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with padding}}
+    style="--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};"
+  {{/with}}
+  data-lazy-component
+>
+  {{> atom/a27-tonomus-line }}
+
+  <ul class="b-dynamicQuote__items" data-quote-items>
+    {{#each items}}
+      <li class="b-dynamicQuote__item {{#if active}} -isActive{{/if}}" data-quote-item>
+        <div class="b-dynamicQuote__imageContainer">
+          <div class="b-dynamicQuote__imageMask" data-image-mask>
+            {{> atom/a01-image image variant="block" disableTransition=true }}
+          </div>
+        </div>
+        <div class="b-dynamicQuote__textContainer">
+          {{> atom/a02-icon name="quote" }}
+          {{#with quote}}
+            {{> atom/a03-heading heading size="h3"}}
+          {{/with}}
+          <div class="b-dynamicQuote__buttons" data-buttons>
+            {{#if (condition ../items.length ">" 1)}}
+              <div class="b-dynamicQuote__button" data-next-quote>
+                {{> molecule/m02-button level="secondary" theme="green" label=../nextQuoteCTALabel}}
+              </div>
+            {{/if}}
+            {{#if shareQuoteButton}}
+              {{> molecule/m02-button
+                data=(object
+                  share-button=null
+                  share=(toJson shareQuoteButton)
+                  success-message=@root.i18n.copied
+                )
+                level="primary"
+                theme="green"
+                label=@root.i18n.shareQuote
+              }}
+            {{/if}}
+          </div>
+          {{#with content}}
+            <div class="s-content" data-content>{{{this}}}</div>
+          {{/with}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</section>

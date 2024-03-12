@@ -1,0 +1,54 @@
+<div
+  class="cq-placeholder"
+  data-emptytext="${component.title @ i18n, context='text'}"
+  data-sly-test="${wcmmode.edit}"
+></div>
+<sly
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.tabbedCtaModel="com.tonomus.core.slingmodels.components.v1.TabbedCtaListModel"
+    data-sly-use.headerModel="com.tonomus.core.slingmodels.common.v1.HeaderModel"
+    data-sly-use.headerTemplate="/apps/tonomus/components/content/molecules/m04-component-header.html"
+    data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html"
+    data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+    data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"></sly>
+
+<section class="b-tabbedCta" data-component="c84-tabbed-cta"
+         data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+         data-sly-attribute.id="${commonComponentModel.anchorId}"
+         style="${commonComponentModel.padding.styleInline @ context='styleString'}">
+  <sly data-sly-call="${headerTemplate.header @ headerModel=headerModel}"></sly>
+  <ul class="b-tabbedCta__tabs" data-sly-list.item="${tabbedCtaModel.items}">
+    <li class="b-tabbedCta__tab ${itemList.index == 0 ? '-isActive' : '' @ context='styleString'}" data-tab>
+      <sly data-sly-call="${labelTemplate.label @ size=item.sizeVal, text=item.labelVal}"></sly>
+    </li>
+  </ul>
+  <span
+    class="b-tabbedCta__indicator"
+    data-tab-indicator
+  ></span>
+  <ul
+    class="b-tabbedCta__content"
+    data-sly-list.item="${tabbedCtaModel.items}"
+  >
+    <li
+      class="b-tabbedCta__contentItem ${itemList.index == 0 ? '-isActive' : '' @ context='styleString'}"
+      data-content-item
+    >
+      <div class="b-tabbedCta__imageContainer">
+        <div class="b-tabbedCta__imageMask" data-image-mask>
+          <sly data-sly-call="${imageTemplate.image @ imageModel=item.image, variant='block',
+          disableTransition=true}"></sly>
+        </div>
+        <div class="b-tabbedCta__textContainer">
+          <div class="s-content">
+            ${item.description @ context='html'}
+          </div>
+          <sly data-sly-test="${item.button.href}">
+            <sly data-sly-call="${buttonTemplate.button @ buttonModel=item.button, size='small',
+             level='primary', theme='green'}"></sly>
+          </sly>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>

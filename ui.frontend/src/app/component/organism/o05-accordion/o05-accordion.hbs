@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="./o05-accordion.scss">
+<script src="./O05Accordion.ts"></script>
+
+<div class="o-accordion" data-component="o05-accordion" data-scroll-component>
+  <ul class="o-accordion__items">
+    {{#each items}}
+      <li class="o-accordion__item">
+        {{> organism/o06-collapsible-item }}
+      </li>
+    {{/each}}
+  </ul>
+</div>

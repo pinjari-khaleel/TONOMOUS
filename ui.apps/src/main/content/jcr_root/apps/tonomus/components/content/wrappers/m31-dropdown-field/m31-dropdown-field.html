@@ -1,0 +1,8 @@
+<sly
+    data-sly-use.formSelectModel="com.tonomus.core.slingmodels.components.v1.forms.FormSelectModel"
+    data-sly-use.dropdownFieldTemplate="/apps/tonomus/components/content/molecules/m31-dropdown-field.html"></sly>
+
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly data-sly-call="${dropdownFieldTemplate.dropdownField @ formSelectModel=formSelectModel}"></sly>

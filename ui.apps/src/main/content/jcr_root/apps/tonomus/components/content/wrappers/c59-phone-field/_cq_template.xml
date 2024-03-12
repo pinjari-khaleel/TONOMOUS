@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          type="phone"
+          id="phone-number"
+          label="Phone number"
+          name="PHONE"
+          placeholder="Type here"
+          required="false"
+          titleInEnglish="Phone number"
+          wide="false">
+  <countrySelector
+      jcr:primaryType="nt:unstructured"
+      name="country"
+      id="country"
+      placeholder="Select"
+      titleInEnglish="Country"
+      flagsPath="/content/dam/neom/components/flags"
+      showRawValue="{Boolean}true"
+      isWideDropdown="{Boolean}true"/>
+  <validate jcr:primaryType="nt:unstructured">
+    <numericality
+        jcr:primaryType="nt:unstructured"
+        message="^Please use only numbers"
+        numericality="true"/>
+    <presence
+        jcr:primaryType="nt:unstructured"
+        message="^Please enter your phone number"/>
+    <format
+        jcr:primaryType="nt:unstructured"
+        pattern="\[0-9]+"
+        message="^Please use digits only"/>
+  </validate>
+</jcr:root>

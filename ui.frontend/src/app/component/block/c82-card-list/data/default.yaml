@@ -1,0 +1,54 @@
+scrollComponent: true
+id: 'c82-card-list'
+padding:
+  start: 'large'
+  end: 'large'
+header:
+  heading:
+    text: Our <strong>goals</strong>
+    size: h1
+  alignment: start
+
+items:
+  - content:
+      heading:
+        text: 'Seamless Societies'
+      description: 'Future-proof societies that are built on cognitive ecosystems.'
+      copy:
+        'When integrated into society, cognitive technology takes what were previously manual tasks
+        and turns them into opportunities for progress—unburdening humankind, making daily life
+        seamless.'
+      buttons:
+        - label: 'Learn more'
+          href: '#'
+      image:
+        src: 'image/c31-thumbnail-example.jpg'
+        alt: 'Photo of Joseph Bradley'
+  - content:
+      heading:
+        text: 'A community'
+      description: 'Future-proof societies that are built on cognitive ecosystems.'
+      copy:
+        'When integrated into society, cognitive technology takes what were previously manual tasks
+        and turns them into opportunities for progress—unburdening humankind, making daily life
+        seamless.'
+      buttons:
+        - label: 'Learn more'
+          href: '#'
+      image:
+        src: 'image/c31-thumbnail-example.jpg'
+        alt: 'Photo of Joseph Bradley'
+  - content:
+      heading:
+        text: 'Seamless Societies'
+      description: 'Future-proof societies that are built on cognitive ecosystems.'
+      copy:
+        'When integrated into society, cognitive technology takes what were previously manual tasks
+        and turns them into opportunities for progress—unburdening humankind, making daily life
+        seamless.'
+      buttons:
+        - label: 'Learn more'
+          href: '#'
+      image:
+        src: 'image/c31-thumbnail-example.jpg'
+        alt: 'Photo of Joseph Bradley'

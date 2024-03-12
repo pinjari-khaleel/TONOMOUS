@@ -1,0 +1,49 @@
+.m-link {
+  --icon-size: 15px;
+  --icon-fill: var(--link-icon-color);
+
+  align-items: center;
+  color: var(--link-text-color);
+  display: inline-flex;
+  transition: color 0.2s ease-in-out;
+
+  .a-label {
+    flex: 0 0 auto;
+    transform: translateY(-0.25ex);
+  }
+
+  .a-icon {
+    flex: 0 0 auto;
+    margin-inline-start: 1ex;
+    transition: color 0.2s ease-in-out;
+
+    [dir="rtl"] & {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.-footerLink {
+    .a-label {
+      transform: none;
+    }
+  }
+
+  &.-marginaliaLink {
+    @include hover() {
+      text-decoration: underline;
+    }
+  }
+
+  @include hover() {
+    --link-text-color: var(--color-accent);
+    --link-icon-color: var(--color-accent);
+  }
+
+  &.-small {
+    .a-label {
+      transform: translateY(-0.225ex);
+    }
+
+    --icon-size: 16px;
+  }
+}

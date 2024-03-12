@@ -1,0 +1,95 @@
+.cmp-form-container {
+  max-width: 782px;
+  padding-inline: 2.25rem 0;
+
+  &__pretitle {
+    .label1();
+    text-transform: uppercase;
+    color: var(--color-pure-black);
+    padding-block-end: 3rem;
+  }
+
+  &__title {
+    p {
+      .header3();
+      color: var(--color-pure-black);
+    }
+    padding-block-end: 1.5rem;
+  }
+
+  &__description {
+    p + p {
+      padding-block-start: 1.5rem;
+    }
+    p {
+      .paragraph2();
+      color: var(--color-pure-black);
+    }
+    span.paragraph-4 {
+      .paragraph4();
+    }
+    padding-block-end: 2.5rem;
+  }
+
+  .cmp-icon {
+    position: absolute;
+    right: 16px;
+    padding-block: 3px;
+    transform-origin: center;
+    pointer-events: none;
+    &__chevron {
+      top: 16px;
+      width: 16px;
+      height: 16px;
+      background-color: var(--color-gray-4);
+      mask: url('/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/image/arrow-down-black.svg')
+        no-repeat center / contain;
+      -webkit-mask: url('/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/image/arrow-down-black.svg')
+        no-repeat center / contain;
+    }
+    &__error-icon {
+      top: 13px;
+      width: 24px;
+      height: 24px;
+      background: url('/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/image/error-icon.svg')
+        no-repeat center / contain;
+    }
+  }
+
+  .cmp-form {
+    max-width: 679px;
+    .cmp + .cmp,
+    .cmp-form-options + .cmp-form-options {
+      margin-block-start: 1.5rem;
+    }
+
+    .cmp,
+    .button {
+      padding-inline: 0;
+    }
+
+    .cmp-form-button {
+      .button-primary();
+      height: 64px;
+      padding: 24px 40px;
+      margin-block-start: 2.5rem;
+      cursor: pointer;
+    }
+
+    &__error-message {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+      align-items: center;
+      .paragraph3();
+      color: var(--color-ui-error);
+      padding-block: 1.5rem;
+      .cmp-icon {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding-inline-end: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="./c82-card-list.scss">
+<script src="./C82CardList.ts"></script>
+
+
+<section
+  class="b-cardList"
+  data-component="c82-card-list"
+  data-items="{{toJson items}}"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with padding}}
+    style="--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};"
+  {{/with}}
+>
+  {{> atom/a27-tonomus-line variant="green" }}
+
+  <div class="b-cardList__container">
+    {{#with header}}
+      {{> molecule/m04-component-header }}
+    {{/with}}
+
+    <ul class="b-cardList__items" data-items>
+      {{#each items}}
+        <li class="b-cardList__item {{#if active}}-isActive{{/if}}" data-item>
+          <div class="b-cardList__card">
+            {{> atom/a01-image content.image variant="block" disableTransition=true }}
+            {{> atom/a03-heading text=content.heading.text size="h5" element="h3" }}
+
+            <div class="s-content">
+              {{{ content.description }}}
+            </div>
+
+            {{#each content.buttons}}
+              <div class="b-cardList__buttonContainer">
+                {{> molecule/m02-button
+                    size="large"
+                    level="tertiary"
+                    icon="arrow-right"
+                    theme="pink"
+                    label=label
+                  }}
+              </div>
+            {{/each}}
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

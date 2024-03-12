@@ -1,0 +1,6 @@
+<template data-sly-template.group="${@ items='The navigation items for the current level',
+	group='Group name of a navigation appended to the class attribute'}" data-sly-use.itemTemplate="item.html">
+    <ul class="cmp-header__${group}-group" data-sly-list="${items}" data-dropdown-content>
+        <sly data-sly-call="${itemTemplate.item @ item=item, group=group}"></sly>
+    </ul>
+</template>

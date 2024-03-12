@@ -1,0 +1,11 @@
+.m-pageIndicators {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: var(--page-indicators-padding, 40px 0);
+
+  .a-pageIndicator {
+    margin: 5px calc(var(--grid-gap) / 2);
+  }
+}

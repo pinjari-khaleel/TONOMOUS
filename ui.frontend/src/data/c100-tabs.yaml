@@ -1,0 +1,13 @@
+# dir: ltr
+# language: en
+# navigation: 'import!../app/component/block/s01-navigation/data/navigation-en.yaml'
+
+meta:
+  id: 'c100'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 'c100-tabs'
+    data: 'import!../app/component/block/c100-tabs/data/default.yaml'

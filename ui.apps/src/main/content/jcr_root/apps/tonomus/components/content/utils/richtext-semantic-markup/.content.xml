@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext">
+  <htmlRules jcr:primaryType="nt:unstructured">
+    <docType
+        jcr:primaryType="nt:unstructured"
+        baseType="html"
+        version="4.0">
+      <typeConfig
+          jcr:primaryType="nt:unstructured"
+          useSemanticMarkup="{Boolean}true"
+          isXhtmlStrict="{Boolean}true">
+        <semanticMarkupMap
+            jcr:primaryType="nt:unstructured"
+            b="strong"/>
+      </typeConfig>
+    </docType>
+  </htmlRules>
+</jcr:root>

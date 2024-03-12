@@ -1,0 +1,54 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c22_hero_component_with_sha": {
+          "jcr:primaryType": "nt:unstructured",
+          "sha1Path": "197c70472bed4bf24c9a45a202b710ee0ddc3835",
+          "sling:resourceType": "neom/components/content/components/c22-hero-component/v1/c22-hero-component",
+          "buttons": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+              "jcr:primaryType": "nt:unstructured",
+              "eventTrackingId": "button-1",
+              "enableTracking": "true"
+            },
+            "item1": {
+              "jcr:primaryType": "nt:unstructured",
+              "eventTrackingId": "button-2",
+              "enableTracking": "false"
+            },
+            "item2": {
+              "jcr:primaryType": "nt:unstructured",
+              "enableTracking": "true"
+            },
+            "item3": {
+              "jcr:primaryType": "nt:unstructured",
+              "enableTracking": "true",
+              "eventTrackingId": "button-3",
+              "eventAction": "Button Click"
+            }
+          }
+        },
+        "c22_hero_component_wo_sha": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "neom/components/content/components/c22-hero-component/v1/c22-hero-component",
+          "buttons": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+              "jcr:primaryType": "nt:unstructured",
+              "eventTrackingId": "button-1",
+              "enableTracking": "true"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+<sly
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.cardListModel="com.tonomus.core.slingmodels.components.v1.cardlist.CardListModel"
+    data-sly-use.headerModel="com.tonomus.core.slingmodels.common.v1.HeaderModel"
+    data-sly-use.headerTemplate="/apps/tonomus/components/content/molecules/m04-component-header.html"
+    data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+    data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html"
+    data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"
+    data-sly-use.tonomusLineTemplate="/apps/tonomus/components/content/atoms/a27-tonomus-line.html"></sly>
+
+<section class="b-cardList" data-component="c82-card-list"
+         data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+         data-sly-attribute.id="${commonComponentModel.anchorId}"
+         data-sly-set.id="${commonComponentModel.anchorId}"
+         data-sly-attribute.data-items="${cardListModel.itemsJson}"
+         style="${commonComponentModel.padding.styleInline @ context='styleString'}">
+  <sly data-sly-set.lineId="${id ? '{0}-c82-line' : '' @ format=[id]}"
+       data-sly-call="${tonomusLineTemplate.tonomusLine @ scrollComponent=commonComponentModel.scrollComponent,
+       id=lineId, variant='green'}"></sly>
+  <div class="b-cardList__container">
+    <sly data-sly-call="${headerTemplate.header @ headerModel=headerModel}"></sly>
+    <ul class="b-cardList__items" data-sly-list.item="${cardListModel.items}" data-items>
+      <li class="b-cardList__item ${itemList.index == 0 ? '-isActive' : '' @ context='styleString'}" data-item>
+        <div class="b-cardList__card">
+          <sly data-sly-call="${imageTemplate.image @ imageModel=item.content.image,
+               variant='block', disableTransition=true}"></sly>
+          <sly data-sly-call="${headingTemplate.heading @ text=item.content.heading.text, size='h5',
+          element='h3'}" data-sly-test="${item.content.heading.text}"></sly>
+          <div class="s-content">
+            ${item.content.description @ context='html'}
+          </div>
+          <sly data-sly-list.button="${item.content.buttons}">
+            <div class="b-cardList__buttonContainer" data-sly-test="${button.href}">
+              <sly data-sly-call="${buttonTemplate.button @ buttonModel=button, size='large',
+               level='tertiary', icon='arrow-right', theme='pink'}"></sly>
+            </div>
+          </sly>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

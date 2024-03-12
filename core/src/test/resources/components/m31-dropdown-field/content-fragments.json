@@ -1,0 +1,154 @@
+{
+  "jcr:primaryType": "sling:OrderedFolder",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Thu Oct 20 2022 14:27:05 GMT+0600",
+  "jcr:content": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:title": "countries",
+    "sourcing": "false"
+  },
+  "Saudi Arabia": {
+    "jcr:primaryType": "dam:Asset",
+    "jcr:mixinTypes": [
+      "mix:referenceable"
+    ],
+    "jcr:createdBy": "admin",
+    "jcr:created": "Thu Oct 20 2022 14:28:53 GMT+0600",
+    "jcr:uuid": "381a4a73-1a79-4c61-bf6d-cb40077b26d7",
+    "jcr:content": {
+      "jcr:primaryType": "dam:AssetContent",
+      "jcr:title": "Saudi Arabia",
+      "contentFragment": true,
+      "renditions": {
+        "jcr:primaryType": "nt:folder",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Oct 20 2022 14:28:53 GMT+0600"
+      },
+      "related": {
+        "jcr:primaryType": "nt:unstructured"
+      },
+      "metadata": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:Taggable"
+        ]
+      },
+      "data": {
+        "jcr:primaryType": "nt:unstructured",
+        "cq:model": "/conf/neom-content-fragment-models/settings/dam/cfm/models/country",
+        "master": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:mixinTypes": [
+            "dam:cfVariationNode",
+            "cq:Taggable"
+          ],
+          "name@LastModified": "Thu Oct 20 2022 14:28:53 GMT+0600",
+          "value@LastModified": "Thu Oct 20 2022 14:28:53 GMT+0600",
+          "code@ContentType": "text/plain",
+          "code": "SA",
+          "name": "Saudi Arabia",
+          "value": "Saudi Arabia",
+          "value@ContentType": "text/plain",
+          "code@LastModified": "Thu Oct 20 2022 14:28:53 GMT+0600",
+          "name@ContentType": "text/plain"
+        }
+      }
+    }
+  },
+  "Afghanistan": {
+    "jcr:primaryType": "dam:Asset",
+    "jcr:mixinTypes": [
+      "mix:referenceable"
+    ],
+    "jcr:createdBy": "admin",
+    "jcr:created": "Thu Oct 20 2022 14:29:05 GMT+0600",
+    "jcr:uuid": "92bd1b69-5eb9-42d0-98ca-af7c18f044c1",
+    "jcr:content": {
+      "jcr:primaryType": "dam:AssetContent",
+      "jcr:title": "Afghanistan",
+      "contentFragment": true,
+      "renditions": {
+        "jcr:primaryType": "nt:folder",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Oct 20 2022 14:29:05 GMT+0600"
+      },
+      "related": {
+        "jcr:primaryType": "nt:unstructured"
+      },
+      "metadata": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:Taggable"
+        ]
+      },
+      "data": {
+        "jcr:primaryType": "nt:unstructured",
+        "cq:model": "/conf/neom-content-fragment-models/settings/dam/cfm/models/country",
+        "master": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:mixinTypes": [
+            "dam:cfVariationNode",
+            "cq:Taggable"
+          ],
+          "name@LastModified": "Thu Oct 20 2022 14:29:05 GMT+0600",
+          "value@LastModified": "Thu Oct 20 2022 14:29:05 GMT+0600",
+          "code@ContentType": "text/plain",
+          "code": "AF",
+          "name": "Afghanistan",
+          "value": "Afghanistan",
+          "value@ContentType": "text/plain",
+          "code@LastModified": "Thu Oct 20 2022 14:29:05 GMT+0600",
+          "name@ContentType": "text/plain"
+        }
+      }
+    }
+  },
+  "Albania": {
+    "jcr:primaryType": "dam:Asset",
+    "jcr:mixinTypes": [
+      "mix:referenceable"
+    ],
+    "jcr:createdBy": "admin",
+    "jcr:created": "Thu Oct 20 2022 14:29:05 GMT+0600",
+    "jcr:uuid": "581a2d5b-0f7d-4e62-bb15-ab8864d2e25a",
+    "jcr:content": {
+      "jcr:primaryType": "dam:AssetContent",
+      "jcr:title": "Albania",
+      "contentFragment": true,
+      "renditions": {
+        "jcr:primaryType": "nt:folder",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Thu Oct 20 2022 14:29:05 GMT+0600"
+      },
+      "related": {
+        "jcr:primaryType": "nt:unstructured"
+      },
+      "metadata": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:Taggable"
+        ]
+      },
+      "data": {
+        "jcr:primaryType": "nt:unstructured",
+        "cq:model": "/conf/neom-content-fragment-models/settings/dam/cfm/models/country",
+        "master": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:mixinTypes": [
+            "dam:cfVariationNode",
+            "cq:Taggable"
+          ],
+          "name@LastModified": "Thu Oct 20 2022 14:29:05 GMT+0600",
+          "value@LastModified": "Thu Oct 20 2022 14:29:05 GMT+0600",
+          "code@ContentType": "text/plain",
+          "code": "AL",
+          "name": "Albania",
+          "value": "Albania",
+          "value@ContentType": "text/plain",
+          "code@LastModified": "Thu Oct 20 2022 14:29:05 GMT+0600",
+          "name@ContentType": "text/plain"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<sly data-sly-use.buttonModel="com.tonomus.core.slingmodels.components.v2.form.ButtonModel"
+        data-sly-use.recaptchaTemplate="recaptcha.html" data-sly-set.button=${buttonModel.button}>
+        <sly data-sly-test="${buttonModel.recaptchaEnabled}" data-sly-call="${recaptchaTemplate.recaptcha @ id=button.id, sitekey=buttonModel.recaptchaSiteKey,
+		 isRecaptchaConfigured=buttonModel.isRecaptchaConfigured}"></sly>
+
+</sly>
+
+<button type="${button.type}" id="${button.id}" class="cmp-form-button" name="${button.name}"
+        value="${button.value}">${button.title}</button>

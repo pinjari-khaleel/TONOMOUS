@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="./o75-checkbox-list.scss">
+<script src="./O75CheckboxList.ts"></script>
+
+
+<div class="o-checkboxList" data-component="o75-checkbox-list" {{#if scrollComponent}}data-scroll-component{{/if}} {{#if
+  id}} id="{{id}}" {{/if}}>
+  <fieldset class="o-checkboxList__fieldset" {{#if validate}} data-validate="{{toJson validate}}" {{/if}} {{#with
+    id}}id="{{this}}" {{/with}}>
+    <div class="o-checkboxList__container">
+      {{#if legend}}
+      {{> atom/a26-fieldset-legend legend=legend.text variant=legend.variant required=required}}
+      {{/if}}
+
+      {{#each items}}
+      {{> molecule/m27-checkbox-option }}
+      {{/each}}
+      {{#with showDropdownForMultipleChoice}}
+      {{#unless multiselect}}
+      <li class="o-checkboxList__optionalSelect{{#if wide}} -wide{{/if}}">
+        {{>molecule/m31-dropdown-field blockValidation=true}}</li>
+      {{/unless}}
+      {{/with}}
+      {{#with showTextareaForOtherChoice}}<div class="o-checkboxList__optionalTextarea{{#if wide}} -wide{{/if}}">
+        {{>molecule/m30-text-field type='textarea' blockValidation=true disabled=true }}</div>
+      {{/with}}
+      {{> atom/a25-form-error }}
+
+    </div>
+  </fieldset>
+  {{#with showDropdownForMultipleChoice}}
+  {{#if multiselect}}
+  <div class="o-checkboxList__optionalMultiSelect{{#if wide}} -wide{{/if}}">
+    {{> organism/o80-multiselect-dropdown blockValidation=true }}</div>
+  {{/if}}
+  {{/with}}
+</div>

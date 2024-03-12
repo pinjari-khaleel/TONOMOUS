@@ -1,0 +1,15 @@
+<template
+        data-sly-template.nav="${@ items='The navigation items for the current level'}"
+        data-sly-use.itemTemplate="navigationitem.html"
+        data-sly-use.subitemTemplate="navigationsubitem.html">
+    <div class="cmp-footer__navigation" data-sly-list="${items}">
+        <div data-sly-set.hasChildren="${item.children.size > 0}"
+             class="cmp-footer__navigation-item
+             ${item.active ? ' cmp-footer__navigation-item--active' : ''}">
+
+            <sly data-sly-call="${itemTemplate.item @ item=item, hasChildren=hasChildren, mobile=false}"></sly>
+            <sly data-sly-call="${itemTemplate.item @ item=item, hasChildren=hasChildren, mobile=true}"></sly>
+            <sly data-sly-test="${hasChildren}" data-sly-call="${subitemTemplate.subitems @ subitems=item.children}"></sly>
+        </div>
+    </div>
+</template>

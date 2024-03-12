@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="C92 Modal Form"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[tonomus.author]">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <general
+          jcr:primaryType="nt:unstructured"
+          jcr:title="General"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <form-id
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter the form id."
+                      fieldLabel="Form ID"
+                      required="{Boolean}true"
+                      name="./id"/>
+                  <title-in-english
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter the Form title in English for Analytics."
+                      fieldLabel="Form title in English"
+                      name="./titleInEnglish"
+                      required="{Boolean}true"/>
+                  <heading-text
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter the heading text."
+                      fieldLabel="Heading text"
+                      name="./text"/>
+                  <template-slug
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter the template slug."
+                      fieldLabel="Template slug"
+                      name="./templateSlug"/>
+                  <description
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                      fieldDescription="Please enter the Description Text."
+                      fieldLabel="Description"
+                      name="./description"
+                      useFixedInlineToolbar="{Boolean}true"/>
+                  <footer-copy
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter the Footer copy."
+                      fieldLabel="Footer copy"
+                      name="./footerCopy"/>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </general>
+      <buttons
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Buttons"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <buttons-set
+                      jcr:primaryType="nt:unstructured"
+                      jcr:title="Buttons"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                    <items jcr:primaryType="nt:unstructured">
+                      <buttons
+                          jcr:primaryType="nt:unstructured"
+                          fieldLabel="Buttons"
+                          fieldDescription="Click 'Add' to add a new button"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                          class="multifield-full-width"
+                          composite="{Boolean}true">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Buttons"
+                            name="./buttons"
+                            granite:class="accordion-multifield-item"
+                            sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                          <items
+                              jcr:primaryType="nt:unstructured">
+                            <tab
+                                jcr:title="Button"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                jcr:primaryType="nt:unstructured">
+                              <items jcr:primaryType="nt:unstructured">
+                                <button-type
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldDescription="Please select button type."
+                                    fieldLabel="Type"
+                                    name="./type">
+                                  <items jcr:primaryType="nt:unstructured">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value=""/>
+                                    <submit
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Submit"
+                                        value="submit"/>
+                                  </items>
+                                </button-type>
+                                <button-label
+                                    granite:class="accordion-multifield-item-title"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldDescription="Please enter the label."
+                                    fieldLabel="Label"
+                                    name="./label"
+                                    required="{Boolean}false"/>
+                                <button-ref
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldDescription="Please select the button reference."
+                                    fieldLabel="Reference"
+                                    name="./href"
+                                    rootPath="/content"/>
+                                <button-ref-target
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldDescription="Please select button reference target."
+                                    fieldLabel="Reference target"
+                                    name="./target">
+                                  <items jcr:primaryType="nt:unstructured">
+                                    <blank
+                                        jcr:primaryType="nt:unstructured"
+                                        text="New frame"
+                                        value="_blank"/>
+                                    <self
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Same frame"
+                                        value="_self"/>
+                                  </items>
+                                </button-ref-target>
+                                <button-theme
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    emptyOption="{Boolean}true"
+                                    fieldDescription="Please select button theme."
+                                    fieldLabel="Theme"
+                                    name="./theme">
+                                  <items jcr:primaryType="nt:unstructured">
+                                    <green
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Green"
+                                        value="green"/>
+                                    <gold
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Gold"
+                                        value="gold"/>
+                                    <dark-gold
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Dark Gold"
+                                        value="dark-gold"/>
+                                    <white
+                                        jcr:primaryType="nt:unstructured"
+                                        text="White"
+                                        value="white"/>
+                                  </items>
+                                </button-theme>
+                                <button-level
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldDescription="Please select the button level."
+                                    fieldLabel="Level"
+                                    name="./level">
+                                  <items jcr:primaryType="nt:unstructured">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value=""/>
+                                    <primary
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Primary"
+                                        value="primary"/>
+                                    <secondary
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Secondary"
+                                        value="secondary"/>
+                                    <tertiary
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Tertiary"
+                                        value="tertiary"/>
+                                  </items>
+                                </button-level>
+                                <button-size
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    emptyOption="{Boolean}true"
+                                    fieldDescription="Please select button size."
+                                    fieldLabel="Size"
+                                    name="./size">
+                                  <items jcr:primaryType="nt:unstructured">
+                                    <large
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Large"
+                                        value="large"/>
+                                    <small
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Small"
+                                        value="small"/>
+                                  </items>
+                                </button-size>
+                              </items>
+                            </tab>
+                          </items>
+                        </field>
+                      </buttons>
+                    </items>
+                  </buttons-set>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </buttons>
+      <messages
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Messages"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <icon
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select Icon for success message."
+                      fieldLabel="Success icon"
+                      name="./messages/success/icon">
+                    <items jcr:primaryType="nt:unstructured">
+                      <none
+                          jcr:primaryType="nt:unstructured"
+                          text="None"
+                          value=""/>
+                      <checkmark
+                          jcr:primaryType="nt:unstructured"
+                          text="Checkmark"
+                          value="checkmark"/>
+                      <cross
+                          jcr:primaryType="nt:unstructured"
+                          text="Cross"
+                          value="cross"/>
+                    </items>
+                  </icon>
+                  <heading-text
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Heading Text for success message."
+                      fieldLabel="Heading Text for success message"
+                      name="./messages/success/heading/text"
+                      required="{Boolean}true"/>
+                  <description
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                      fieldDescription="Please enter the description for success message."
+                      fieldLabel="Description for success message"
+                      name="./messages/success/description"
+                      required="{Boolean}false"/>
+                  <icon-error
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select Icon for error message."
+                      fieldLabel="Error icon"
+                      name="./messages/error/icon">
+                    <items jcr:primaryType="nt:unstructured">
+                      <none
+                          jcr:primaryType="nt:unstructured"
+                          text="None"
+                          value=""/>
+                      <checkmark
+                          jcr:primaryType="nt:unstructured"
+                          text="Checkmark"
+                          value="checkmark"/>
+                      <cross
+                          jcr:primaryType="nt:unstructured"
+                          text="Cross"
+                          value="cross"/>
+                    </items>
+                  </icon-error>
+                  <heading-text-error
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Heading Text for error message."
+                      fieldLabel="Heading Text for error message"
+                      name="./messages/error/heading/text"
+                      required="{Boolean}true"/>
+                  <description-error
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                      fieldDescription="Please enter the description for error message."
+                      fieldLabel="Description for error message"
+                      name="./messages/error/description"
+                      required="{Boolean}false"/>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </messages>
+      <reCaptcha
+          jcr:primaryType="nt:unstructured"
+          jcr:title="reCAPTCHA"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <branding
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                      fieldDescription="Please enter Google reCAPTCHA branding text."
+                      fieldLabel="reCAPTCHA branding"
+                      name="./branding"
+                      required="{Boolean}false"/>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </reCaptcha>
+      <advanced
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/advanced/content"/>
+    </items>
+  </content>
+</jcr:root>

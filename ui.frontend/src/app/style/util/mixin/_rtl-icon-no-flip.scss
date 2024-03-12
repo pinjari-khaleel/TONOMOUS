@@ -1,0 +1,7 @@
+@mixin iconNoFlip() {
+  [dir="rtl"] & {
+    svg:not([class$="noFlip"]) {
+      transform: scaleX(1);
+    }
+  }
+}

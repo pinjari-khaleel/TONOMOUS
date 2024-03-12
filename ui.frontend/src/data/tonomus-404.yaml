@@ -1,0 +1,19 @@
+dir: ltr
+language: en
+head: 'import!../app/data/yaml/head-en.yaml'
+webglContainer:
+  webglTest: false
+tonomus: true
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-404.yaml'
+
+meta:
+  id: '0.3.3'
+  status: 'done'
+  notes: ''
+  category: 'Other Pages'
+
+blocks:
+  - name: 'c94-page-not-found'
+    data: 'import!../app/component/block/c94-page-not-found/data/default.yaml'
+  - name: 's10-tonomus-footer'
+    data: 'import!../app/component/block/s10-tonomus-footer/data/en.yaml'

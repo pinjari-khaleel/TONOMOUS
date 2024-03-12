@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="./c98-bu-section-container.scss">
+<script src="./C98BUSectionContainer.ts"></script>
+
+<section class="b-sectionContainer" data-component="c98-bu-section-container"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#if (condition backgroundColor '||' padding)}}
+    style="{{#with padding}}--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};{{/with}}
+    {{#with backgroundColor}}--component-background-color: {{#unless (condition this '===' transparent)}}var(--color-{{this}}){{^}}transparent{{/unless}};{{/with}}"
+  {{/if}}>
+    <div></div>
+</section>

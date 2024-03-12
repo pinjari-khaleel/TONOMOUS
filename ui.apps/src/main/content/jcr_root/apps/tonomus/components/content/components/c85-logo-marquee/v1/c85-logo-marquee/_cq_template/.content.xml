@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          scrollComponent="{Boolean}true">
+  <heading jcr:primaryType="nt:unstructured"
+  text="Our &lt;strong&gt;partners&lt;/strong&gt;">
+  </heading>
+  <items jcr:primaryType="nt:unstructured">
+    <item0 jcr:primaryType="nt:unstructured">
+      <image jcr:primaryType="nt:unstructured"
+             src="/content/dam/tonomus/components/c85-logo-marquee/c85-logo-marquee-neom.png"
+             alt="Neom"/>
+      <link jcr:primaryType="nt:unstructured"
+            href="https://neom.com/en-us"/>
+    </item0>
+    <item1 jcr:primaryType="nt:unstructured">
+      <image jcr:primaryType="nt:unstructured"
+             src="/content/dam/tonomus/components/c85-logo-marquee/c85-logo-marquee-oracle.png"
+             alt="Oracle"/>
+      <link jcr:primaryType="nt:unstructured"
+            href="https://oracle.com"/>
+    </item1>
+    <item2 jcr:primaryType="nt:unstructured">
+      <image jcr:primaryType="nt:unstructured"
+             src="/content/dam/tonomus/components/c85-logo-marquee/c85-logo-marquee-oneweb.png"
+             alt="OneWeb"/>
+      <link jcr:primaryType="nt:unstructured"
+            href="https://oneweb.net/"/>
+    </item2>
+    <item3 jcr:primaryType="nt:unstructured">
+      <image jcr:primaryType="nt:unstructured"
+             src="/content/dam/tonomus/components/c85-logo-marquee/c85-logo-marquee-fasenergy.png"
+             alt="FAS Energy"/>
+      <link jcr:primaryType="nt:unstructured"
+            href="http://www.fas-energy.com/"/>
+    </item3>
+  </items>
+</jcr:root>

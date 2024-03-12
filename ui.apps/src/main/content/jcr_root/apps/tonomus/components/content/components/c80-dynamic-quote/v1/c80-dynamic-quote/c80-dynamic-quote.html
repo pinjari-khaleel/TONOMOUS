@@ -1,0 +1,58 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+<sly
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.dynamicQuoteModel="com.tonomus.core.slingmodels.components.v1.dynamic_quote.DynamicQuoteModel"
+    data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+    data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+    data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html"
+    data-sly-use.tonomusLineTemplate="/apps/tonomus/components/content/atoms/a27-tonomus-line.html"
+    data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"></sly>
+
+<section class="b-dynamicQuote"
+         data-component="c80-dynamic-quote"
+         data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+         data-sly-attribute.id="${commonComponentModel.anchorId}"
+         data-sly-set.id="${commonComponentModel.anchorId}"
+         style="${commonComponentModel.padding.styleInline @ context='styleString'}"
+         data-lazy-component>
+  <sly data-sly-set.lineId="${id ? '{0}-c80-line' : '' @ format=[id]}"
+       data-sly-call="${tonomusLineTemplate.tonomusLine @ scrollComponent=commonComponentModel.scrollComponent,
+       id=lineId}"></sly>
+  <ul class="b-dynamicQuote__items" data-sly-list.item="${dynamicQuoteModel.items}"
+      data-quote-items>
+    <li class="b-dynamicQuote__item ${itemList.index == 0 ? '-isActive' : '' @ context='styleString'}" data-quote-item>
+      <div class="b-dynamicQuote__imageContainer">
+        <div class="b-dynamicQuote__imageMask" data-image-mask>
+          <sly data-sly-call="${imageTemplate.image @ imageModel=item.quote.image,
+             variant='block', disableTransition=true}" data-sly-test="${item.quote.image}"></sly>
+        </div>
+      </div>
+      <div class="b-dynamicQuote__textContainer">
+        <sly data-sly-call="${iconTemplate.icon @ name='quote'}"></sly>
+        <sly data-sly-call="${headingTemplate.heading @ headingModel=item.quote.heading, size='h3'}"
+             data-sly-test="${item.quote.heading.text}"></sly>
+        <div class="b-dynamicQuote__buttons" data-buttons>
+          <div class="b-dynamicQuote__button"
+               data-sly-test="${dynamicQuoteModel.items.size > 1}"
+               data-sly-set.nextQuote="${dynamicQuoteModel.nextQuoteCTALabel || 'nextQuote' @ i18n, context='text'}"
+               data-next-quote>
+            <sly data-sly-call="${buttonTemplate.button @ level='secondary', theme='green',
+                label=nextQuote}"></sly>
+          </div>
+          <sly data-sly-test="${dynamicQuoteModel.shareOptions.items}"
+               data-sly-set.shareJson="${dynamicQuoteModel.getShareOptionsJson}"
+               data-sly-set.shareQuote="${dynamicQuoteModel.shareOptions.heading.text ||
+               'shareQuote' @ i18n, context='text'}"
+               data-sly-set.successMessage="data-success-message=${'Copied!' @ i18n, context='text'}"
+               data-sly-set.dataAttributes="${['data-share-button', successMessage] @ join = '||', context='text'}"
+               data-sly-call="${buttonTemplate.button @ level='primary', theme='green',
+               label=shareQuote, attrs=dataAttributes, share=shareJson}"></sly>
+        </div>
+        <div class="s-content" data-content data-sly-test="${item.quote.content}">
+          ${item.quote.content @ context='html'}
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>

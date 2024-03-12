@@ -1,0 +1,8 @@
+size: 'h2'
+element: 'h2'
+prefix: 'A flip heading'
+labels:
+  - 'alternates'
+  - 'between'
+  - 'a list of'
+  - 'terms or text'

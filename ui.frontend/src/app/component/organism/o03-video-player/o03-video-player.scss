@@ -1,0 +1,16 @@
+.o-videoPlayer {
+  @include vh(88, min-height);
+
+  &__assetContainer {
+    @include position(0);
+    position: absolute;
+    z-index: 2;
+  }
+
+  .o-video {
+    @include offset;
+    @include size(100%);
+    position: absolute;
+    background: var(--color-real-black);
+  }
+}

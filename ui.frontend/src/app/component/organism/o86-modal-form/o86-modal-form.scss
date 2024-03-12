@@ -1,0 +1,8 @@
+.o-modalForm {
+  margin: 32px;
+
+  @include respond-to(LARGE) {
+    margin-block: 80px;
+    margin-inline: 167px;
+  }
+}

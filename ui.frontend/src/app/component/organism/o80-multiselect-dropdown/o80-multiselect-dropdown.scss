@@ -1,0 +1,30 @@
+.o-multiselectDropdown {
+  @include fieldsetStyling();
+  @include customSelect();
+
+  overflow: visible;
+
+  &__placeholder {
+    font-weight: 100;
+    color: var(--input-placeholder-color);
+  }
+
+  &__innerContainer {
+    position: relative;
+  }
+
+  &__options {
+    padding: 20px;
+  }
+
+  &__value {
+    display: none;
+    text-align: start;
+  }
+
+  &__option:last-of-type {
+    .m-checkboxOption {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Wed Jul 14 2021 15:44:04 GMT+0600",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "changefreq": "weekly",
+    "jcr:createdBy": "admin",
+    "jcr:title": "mebrand",
+    "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+    "jcr:created": "Wed Jul 14 2021 15:44:04 GMT+0600",
+    "cq:lastModified": "Thu Jul 15 2021 16:16:38 GMT+0600",
+    "siteSection": "home",
+    "sling:resourceType": "neom/components/structure/page",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c01_splash_hero": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Thu Jul 15 2021 14:56:35 GMT+0600",
+          "jcr:lastModified": "Thu Jul 15 2021 14:56:35 GMT+0600",
+          "sling:resourceType": "neom/components/content/components/c01-splash-hero/v1/c01-splash-hero",
+          "header": {
+            "jcr:primaryType": "nt:unstructured",
+            "alignment": "center",
+            "heading": {
+              "jcr:primaryType": "nt:unstructured",
+              "text": "The Line"
+            },
+            "moustache": {
+              "jcr:primaryType": "nt:unstructured",
+              "text": "A revolution in urban living"
+            }
+          },
+          "image": {
+            "jcr:primaryType": "nt:unstructured",
+            "alt": "Neom launches the Line",
+            "src": "/content/dam/neom/components/c01-splash-hero/teaser-still.jpg"
+          },
+          "teaserVideo": {
+            "jcr:primaryType": "nt:unstructured",
+            "props": {
+              "jcr:primaryType": "nt:unstructured",
+              "loop": "true",
+              "cover": "true",
+              "muted": "true",
+              "originalHeight": "9",
+              "autoplay": "true",
+              "originalWidth": "16",
+              "sources": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "src": "/content/dam/neom/components/c01-splash-hero/neom_sport.mp4"
+                }
+              }
+            }
+          },
+          "video": {
+            "jcr:primaryType": "nt:unstructured",
+            "props": {
+              "jcr:primaryType": "nt:unstructured",
+              "loop": "false",
+              "muted": "false",
+              "disablePreload": "true",
+              "originalHeight": "9",
+              "autoplay": "false",
+              "originalWidth": "16",
+              "sources": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "src": "/content/dam/neom/components/c01-splash-hero/neom.mp4"
+                }
+              },
+              "controls": {
+                "jcr:primaryType": "nt:unstructured",
+                "playPause": "true",
+                "seek": "true",
+                "fullscreen": "true"
+              },
+              "eventTracking": {
+                "jcr:primaryType": "nt:unstructured",
+                "event": "video_start",
+                "video": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "titleInEnglish": "A Vision of a New Future: Explainer video"
+                }
+              }
+            }
+          }
+        },
+        "c45_content_columns": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Thu Jul 15 2021 15:35:20 GMT+0600",
+          "jcr:lastModified": "Thu Jul 15 2021 15:35:20 GMT+0600",
+          "sling:resourceType": "neom/components/content/components/c45-content-columns/v1/c45-content-columns",
+          "c45_content_column": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Thu Jul 15 2021 13:52:14 GMT+0600",
+            "jcr:lastModified": "Thu Jul 15 2021 13:52:14 GMT+0600",
+            "sling:resourceType": "tonomus/components/content/wrappers/c45-content-column",
+            "c30_downloads": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:createdBy": "admin",
+              "jcr:lastModifiedBy": "admin",
+              "jcr:created": "Thu Jul 15 2021 13:52:28 GMT+0600",
+              "jcr:lastModified": "Thu Jul 15 2021 13:52:28 GMT+0600",
+              "sling:resourceType": "neom/components/content/components/c30-downloads/v1/c30-downloads",
+              "cq:styleIds": [
+                "1344563161"
+              ],
+              "downloads": {
+                "jcr:primaryType": "nt:unstructured",
+                "title": "Downloads",
+                "items": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "description": "NEOM Fact Sheet,\r\nNEOM Brochure\r\n",
+                    "enabledEventTracking": "true",
+                    "heading": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "element": "h3",
+                      "text": "NEOM Information pack"
+                    },
+                    "link": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "href": "/content/dam/neom/components/c01-splash-hero/neom_sport.mp4"
+                    },
+                    "image": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "src": "/content/dam/neom/components/c30-downloads/promo-pack.jpg"
+                    }
+                  },
+                  "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "description": "New Supplier Registration Guide,\r\nSupplier Code of Conduct,\r\nNon Disclosure Agreement (NDA)\r\n",
+                    "enabledEventTracking": "true",
+                    "heading": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "element": "h3",
+                      "text": "Register as a Vendor"
+                    },
+                    "link": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "href": "/content/dam/neom/components/c01-splash-hero/teaser-still.jpg"
+                    },
+                    "image": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "src": "/content/dam/neom/components/c30-downloads/investor-pack.jpg"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "c45_content_column_1686408311": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Thu Jul 15 2021 13:52:19 GMT+0600",
+            "jcr:lastModified": "Thu Jul 15 2021 13:52:19 GMT+0600",
+            "sling:resourceType": "neom/components/content/wrappers/c45-content-column",
+            "c30_downloads": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:createdBy": "admin",
+              "jcr:lastModifiedBy": "admin",
+              "jcr:created": "Thu Jul 15 2021 13:52:42 GMT+0600",
+              "jcr:lastModified": "Thu Jul 15 2021 13:52:42 GMT+0600",
+              "sling:resourceType": "neom/components/content/components/c30-downloads/v1/c30-downloads",
+              "cq:styleIds": [
+                "1344563161"
+              ],
+              "downloads": {
+                "jcr:primaryType": "nt:unstructured",
+                "title": "Downloads",
+                "items": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "description": "NEOM Fact Sheet,\r\nNEOM Brochure\r\n",
+                    "enabledEventTracking": "true",
+                    "heading": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "element": "h3",
+                      "text": "NEOM Information pack"
+                    },
+                    "link": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "href": "/content/dam/neom/components/c01-splash-hero/neom_sport.mp4"
+                    },
+                    "image": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "src": "/content/dam/neom/components/c30-downloads/promo-pack.jpg"
+                    }
+                  },
+                  "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "description": "New Supplier Registration Guide,\r\nSupplier Code of Conduct,\r\nNon Disclosure Agreement (NDA)\r\n",
+                    "enabledEventTracking": "true",
+                    "heading": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "element": "h3",
+                      "text": "Register as a Vendor"
+                    },
+                    "link": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "href": "/content/dam/neom/components/c01-splash-hero/teaser-still.jpg"
+                    },
+                    "image": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "src": "/content/dam/neom/components/c30-downloads/investor-pack.jpg"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "c30_downloads": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Thu Jul 15 2021 16:16:07 GMT+0600",
+          "jcr:lastModified": "Thu Jul 15 2021 16:16:07 GMT+0600",
+          "sling:resourceType": "neom/components/content/components/c30-downloads/v1/c30-downloads",
+          "cq:styleIds": [
+            "1344563161"
+          ],
+          "downloads": {
+            "jcr:primaryType": "nt:unstructured",
+            "title": "Downloads",
+            "items": {
+              "jcr:primaryType": "nt:unstructured",
+              "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "description": "NEOM Fact Sheet,\r\nNEOM Brochure\r\n",
+                "enabledEventTracking": "true",
+                "heading": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "element": "h3",
+                  "text": "NEOM Information pack"
+                },
+                "link": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "href": "/content/dam/neom/components/c01-splash-hero/neom_sport.mp4"
+                },
+                "image": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "src": "/content/dam/neom/components/c30-downloads/promo-pack.jpg"
+                }
+              },
+              "item1": {
+                "jcr:primaryType": "nt:unstructured",
+                "description": "New Supplier Registration Guide,\r\nSupplier Code of Conduct,\r\nNon Disclosure Agreement (NDA)\r\n",
+                "enabledEventTracking": "true",
+                "heading": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "element": "h3",
+                  "text": "Register as a Vendor"
+                },
+                "link": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "href": "/content/dam/neom/components/c01-splash-hero/teaser-still.jpg"
+                },
+                "image": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "src": "/content/dam/neom/components/c30-downloads/investor-pack.jpg"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

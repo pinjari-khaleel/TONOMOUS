@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="./m54-business-card.scss">
+<script src="./M54BusinessCard.ts"></script>
+
+
+<div class="m-businessCard"
+  data-component="m54-business-card"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+
+>
+  <div class="m-businessCard__image" data-image>
+    {{> atom/a01-image image disableTransition=true }}
+  </div>
+
+  <div class="m-businessCard__content" data-card-content>
+    {{> atom/a03-heading text=name element="h3" size="h3" }}
+
+    <div class="m-businessCard__wrappedInformation">
+      {{#with linkedin}}
+        <a href="{{this}}" class="m-businessCard__socialLink">
+          {{> atom/a02-icon name='linkedin' }}
+        </a>
+      {{/with}}
+      <div class="m-businessCard__jobWrapper">
+        <p class="m-businessCard__jobTitle">{{job.title}}</p>
+        <p class="m-businessCard__jobDepartment">{{job.department}}</p>
+      </div>
+    </div>
+    {{#if biography}}
+      <div class="m-businessCard__biography">{{{biography}}}</div>
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<sly data-sly-template.actions="${@ profile}">
+    <div class="cmp-profile__action-container" data-sly-test="${profile.teaser.actionsEnabled}" data-sly-list="${profile.teaser.actions}" data-sly-use.actionTemplate="action.html">
+        <sly data-sly-call="${actionTemplate.action @ action=item, index=itemList.index, icons=profile.icons}"></sly>
+    </div>
+</sly>

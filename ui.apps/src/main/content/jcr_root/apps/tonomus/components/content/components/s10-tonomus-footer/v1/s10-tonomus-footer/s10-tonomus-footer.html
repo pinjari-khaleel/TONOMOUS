@@ -1,0 +1,53 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly
+    data-sly-use.footerModel="com.tonomus.core.slingmodels.components.v1.tonomusfooter.TonomusFooterModel"
+    data-sly-use.linkTemplate="/apps/tonomus/components/content/molecules/m06-link.html"
+    data-sly-use.socialItemsTemplate="/apps/tonomus/components/content/molecules/m12-social.html"
+    data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html"
+    data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+></sly>
+
+<footer class="b-tonomusFooter" data-component="s10-tonomus-footer" data-scroll-component>
+  <div class="b-tonomusFooter__container" data-sly-test="${footerModel.sitemapItems}">
+    <ul class="b-tonomusFooter__sitemap">
+      <li class="b-tonomusFooter__sitemapItem" data-sitemap-item
+          data-sly-repeat.item="${footerModel.sitemapItems}">
+        <h3 class="b-tonomusFooter__title">${item.label @context='text'}</h3>
+
+        <ul class="b-tonomusFooter__links" data-footer-links
+            data-sly-list.childItem="${item.childItems}">
+          <li class="b-tonomusFooter__link"
+              data-sly-call="${linkTemplate.link @ linkModel=childItem, variant='footerLink'}">
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="b-tonomusFooter__generalLinks">
+      <li class="b-tonomusFooter__social" data-sly-test="${footerModel.socialItems}">
+        <sly data-sly-call="${labelTemplate.label @ text=footerModel.socialItemsTitle}"></sly>
+        <sly data-sly-call="${socialItemsTemplate.socialIcons @ items=footerModel.socialItems}"></sly>
+      </li>
+      <li class="b-tonomusFooter__logo" data-footer-logo data-sly-test="${footerModel.logo.href}">
+        <sly
+            data-sly-call="${imageTemplate.image @ imageModel=footerModel.logo.image,
+            disableTransition=true, variant='block'}"></sly>
+      </li>
+    </ul>
+  </div>
+
+  <div class="b-tonomusFooter__marginalia" data-marginalia>
+    <ul class="b-tonomusFooter__marginaliaItems">
+      <li class="b-tonomusFooter__marginaliaItem"
+          data-sly-test="${footerModel.links}" data-sly-repeat.link="${footerModel.links}">
+        <sly data-sly-call="${linkTemplate.link @ linkModel=link, variant='marginaliaLink'}"></sly>
+      </li>
+      <li class="b-tonomusFooter__marginaliaItem -copyrightNotice"
+          data-sly-test="${footerModel.copyrightText}">
+        ${footerModel.copyrightText @ context='text'}
+      </li>
+    </ul>
+    <p class="b-footer__recaptcha" data-sly-test="${footerModel.recaptcha}">${footerModel.recaptcha @ context='html'}</p>
+  </div>
+</footer>

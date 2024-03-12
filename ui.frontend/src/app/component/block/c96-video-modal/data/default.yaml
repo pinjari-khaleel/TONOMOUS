@@ -1,0 +1,43 @@
+scrollComponent: true
+id: 'c96-video-modal'
+title: 'c96-video-modal'
+padding:
+  start: 'large'
+  end: 'large'
+heading:
+  text: 'Who <strong>We Are</strong>'
+image:
+  alt: 'image-1'
+  src: 'image/c96-video-modal-thumb.jpeg'
+  sources:
+    - src: 'image/c96-video-modal-thumb.jpeg'
+      media: '(min-width: 768px)'
+video:
+  label: Watch video
+  props:
+    sources:
+      - src: 'video/video-preview.mp4'
+        type: 'video/mp4'
+    originalWidth: 16
+    originalHeight: 9
+    autoplay: true
+    muted: false
+    loop: false
+    controls:
+      playPause: true
+      fullscreen: true
+      seek: true
+    eventTracking:
+      event: 'video_start'
+      video:
+        titleInEnglish: 'Join the movement'
+        title: 'Join the movement'
+        src: video/video-preview.mp4
+content:
+  text: 'About Us'
+  description:
+    'The TONOMUS Venture Studio is the growth engine of TONOMUS tasked with building ventures
+    focusing on the cognitive ecosystem, including connectivity, computing capability, and Al, as
+    well as the fundamental infrastructure that will support it all. Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit. Vestibulum vitae neque quis erat tincidunt molestie. Vestibulum
+    egestas, nulla vitae porttitor laoreet. '

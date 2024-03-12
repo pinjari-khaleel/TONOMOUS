@@ -1,0 +1,16 @@
+<sly data-sly-template.radioOption="${ @
+  checkBoxModel='instance of forms.FormCheckBoxModel with properties'}"
+     data-sly-use.radioTemplate="/apps/tonomus/components/content/atoms/a12-radio.html"
+     data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html">
+
+  <div data-component="m28-radio-option"
+       class="m-radioOption ${checkBoxModel.disabled ? '-isDisabled' : ''}"
+  >
+    <label class="m-radioOption__label">
+      <sly data-sly-call="${radioTemplate.radio @ checkBoxModel=checkBoxModel}"></sly>
+      <span class="m-radioOption__textLabel">
+      <sly data-sly-call="${labelTemplate.label @ text=checkBoxModel.label, size='small'}"></sly>
+    </span>
+    </label>
+  </div>
+</sly>

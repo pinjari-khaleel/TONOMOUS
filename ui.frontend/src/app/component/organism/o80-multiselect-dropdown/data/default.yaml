@@ -1,0 +1,27 @@
+legend: "I'm interested in"
+id: interestedIn
+placeholder: 'Please select what you are most interested in'
+titleInEnglish: foo
+required: true
+validate:
+  presence:
+    message: '^Please select at least one option'
+items:
+  - checked: false
+    id: foo
+    name: interestedIn
+    value: foo
+    required: false
+    label: Foo
+  - checked: false
+    id: bar
+    name: interestedIn
+    value: bar
+    required: false
+    label: Bar
+  - checked: false
+    id: baz
+    name: interestedIn
+    value: baz
+    required: false
+    label: Baz

@@ -1,0 +1,25 @@
+.a-video {
+  overflow: hidden;
+
+  &,
+  &__video {
+    @include offset;
+    @include size(100%);
+
+    position: absolute;
+  }
+
+  &__video {
+    object-fit: cover;
+  }
+
+  &.-block {
+    position: static;
+
+    .a-video__video {
+      @include size(100%, auto);
+
+      position: relative;
+    }
+  }
+}

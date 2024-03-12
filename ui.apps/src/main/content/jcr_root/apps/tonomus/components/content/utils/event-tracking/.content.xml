@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+  <content
+      granite:class="dialog-container"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+      <enableTracking
+          granite:class="js-dialog-showhide"
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+          fieldDescription="Enable Analytics Tracking"
+          name="./enableTracking"
+          text="Enable Analytics Tracking"
+          value="{Boolean}true"
+          uncheckedValue="{Boolean}false">
+        <granite:data
+            jcr:primaryType="nt:unstructured"
+            showhide-target=".js-enable-tracking"/>
+      </enableTracking>
+      <eventTrackingId
+          granite:class="js-enable-tracking"
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+          fieldDescription="Please enter the unique ID for Analytics tracking"
+          fieldLabel="Analytics ID"
+          maxlength="{Long}30"
+          validation="required-when-visible"
+          name="./eventTrackingId">
+        <granite:data
+            jcr:primaryType="nt:unstructured"
+            showhide-target-value="true"/>
+      </eventTrackingId>
+      <eventAction
+          granite:class="js-enable-tracking"
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+          fieldDescription="Please enter the eventAction text"
+          fieldLabel="eventAction text"
+          maxlength="{Long}30"
+          name="./eventAction">
+        <granite:data
+            jcr:primaryType="nt:unstructured"
+            showhide-target-value="true"/>
+      </eventAction>
+    </items>
+  </content>
+</jcr:root>

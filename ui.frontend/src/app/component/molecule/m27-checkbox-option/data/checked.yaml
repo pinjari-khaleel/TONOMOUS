@@ -1,0 +1,5 @@
+id: checkbox-option-example-1
+label: Checked checkbox option example
+name: checkbox-option-example-1
+checked: true
+value: foo

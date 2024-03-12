@@ -1,0 +1,87 @@
+scrollComponent: true
+
+sitemap:
+  - label: 'Découvrir NEOM'
+    items:
+      - label: 'A propos de NEOM'
+        href: '#'
+      - label: 'Nos collaborateurs '
+        href: '#'
+
+  - label: 'Régions'
+    items:
+      - label: 'Trojena'
+        href: '#'
+      - label: 'Oxagon'
+        href: '#'
+      - label: 'The Line'
+        href: '#'
+
+  - label: 'Sectors'
+    items:
+      - label: 'Design & Construction'
+        href: '#'
+      - label: 'Education'
+        href: '#'
+      - label: 'Energie'
+        href: '#'
+      - label: 'Divertissement & Culture'
+        href: '#'
+      - label: 'Services Financiers'
+        href: '#'
+      - label: 'Alimentation'
+        href: '#'
+      - label: 'Santé, Bien-être & Biotechechnologie'
+        href: '#'
+      - label: 'Industrie'
+        href: '#'
+      - label: 'Médias'
+        href: '#'
+      - label: 'Mobilité'
+        href: '#'
+      - label: 'Sport'
+        href: '#'
+      - label: 'Technologie & Digital'
+        href: '#'
+      - label: 'Tourisme'
+        href: '#'
+      - label: 'Eau'
+        href: '#'
+
+  - label: 'Rejoindre NEOM'
+    items:
+      - label: 'Invest'
+        href: '#'
+      - label: 'Start a Business'
+        href: '#'
+      - label: 'Become a Supplier'
+        href: '#'
+      - label: 'Partner'
+        href: '#'
+      - label: 'Work'
+        href: '#'
+
+  - label: 'Nouveautés et réseaux sociaux'
+    items:
+      - label: 'Nouveautés'
+        href: '#'
+      - label: 'Communiqués de Presse'
+        href: '#'
+      - label: 'Galerie des médias'
+        href: '#'
+social:
+  items: 'import!../../../molecule/m12-social/data/tonomus.yaml'
+
+marginalia:
+  items:
+    - label: 'Politique de confidentialité'
+      href: 'privacy-policy.html'
+      target: '_blank'
+    - label: "Conditions d'utilisation"
+      href: 'terms-of-use.html'
+      target: '_blank'
+    - label: 'Politique des cookies'
+      href: 'cookie-policy.html'
+      target: '_blank'
+
+copyrightNotice: '© 2022 NEOM'

@@ -1,0 +1,109 @@
+.b-keyCtaList {
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+  padding-inline: 32px;
+  color: var(--color-tonomus-purple);
+
+  &__content {
+    display: grid;
+    align-content: start;
+    gap: 32px;
+    margin-block-end: 42px;
+
+    .a-heading {
+      white-space: pre-line;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: grid;
+    gap: 16px;
+  }
+
+  &__cta {
+    @include type("heading", "h5");
+    @include iconFlip();
+
+    display: grid;
+    grid-auto-flow: row;
+    gap: 4px;
+    position: relative;
+    padding: 24px 16px;
+    inline-size: 100%;
+    border: none;
+    background: none;
+    color: var(--color-tonomus-purple);
+    text-align: start;
+    cursor: pointer;
+
+    &::before {
+      @include pseudo;
+      inset: 0;
+      background: var(--color-white);
+      transition: opacity 0.8s $easeOutExpo;
+    }
+
+    &:focus::before {
+      opacity: 0.83;
+    }
+
+    @media (pointer: fine) {
+      &:hover::before {
+        opacity: 0.83;
+      }
+    }
+
+    > * {
+      position: relative;
+    }
+
+    &Label {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &Description {
+      @include type("body", "small");
+
+      text-transform: uppercase;
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    max-inline-size: 1440px;
+    display: grid;
+    margin-inline: auto;
+    padding-inline: 80px;
+    grid-gap: var(--grid-gap);
+    grid-template-columns: repeat(12, 1fr);
+
+    &__content {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+
+    &__list {
+      grid-column-start: 7;
+      grid-column-end: -1;
+      gap: 32px;
+    }
+
+    &__cta {
+      padding: 80px 48px;
+
+      &Label {
+        gap: 32px;
+      }
+    }
+  }
+
+  @include theme("tonomus") {
+    --component-highlight-color: var(--color-tonomus-purple);
+    --component-heading-color: var(--color-tonomus-purple);
+    --component-text-color: var(--color-tonomus-purple);
+  }
+}

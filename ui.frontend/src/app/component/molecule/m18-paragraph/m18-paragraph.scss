@@ -1,0 +1,62 @@
+.m-paragraph {
+  --eyebrow-text-color: var(--component-highlight-color);
+  --icon-fill: var(--color-gold);
+  --icon-size: 80px;
+
+  &__asset {
+    align-items: flex-end;
+    display: flex;
+    height: var(--icon-size);
+    justify-content: center;
+    margin: 0 auto 30px;
+    position: relative;
+    width: 100%;
+
+    &.-image {
+      .a-image {
+        height: auto;
+
+        &__img {
+          @include size(auto, 100%);
+
+          margin: auto;
+          max-height: var(--icon-size);
+        }
+      }
+    }
+
+    &.-start {
+      justify-content: start;
+
+      .a-image__img {
+        margin-inline-start: 0;
+      }
+    }
+
+    &.-end {
+      justify-content: end;
+
+      .a-image__img {
+        margin-inline-end: 0;
+      }
+    }
+  }
+
+  * ~ .m-paragraph__content {
+    margin: 30px 0 0;
+  }
+
+  .a-eyebrow {
+    margin: 0 0 30px;
+  }
+
+  .a-moustache {
+    margin: 20px 0 0;
+  }
+
+  .a-heading {
+    > span {
+      color: var(--component-highlight-color, inherit);
+    }
+  }
+}

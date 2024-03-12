@@ -1,0 +1,12 @@
+eyebrow:
+  text: 'Filming at neom'
+  size: 'large'
+heading:
+  size: 'h4'
+  text: 'NEW, FRESH AND&nbsp;DIVERSE LOCATIONS'
+copy:
+  size: 'small'
+  content:
+    <p>Unique and breathtaking locations that can double for a wide range of regional and global
+    locations. Coastline, mountains, sand dunes, desertscapes, towering rock formations and lush
+    wadis – all in easy reach of each other.</p>

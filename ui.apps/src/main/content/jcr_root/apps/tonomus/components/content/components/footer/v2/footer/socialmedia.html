@@ -1,0 +1,13 @@
+<template data-sly-template.social="${@ items='The social media items'}"
+          data-sly-use.iconTemplate="/apps/tonomus/components/common/icon-svg.html"
+          data-sly-use.internalLinkTemplate="/apps/tonomus/components/common/link-internal.html"
+          data-sly-use.externalLinkTemplate="/apps/tonomus/components/common/link-external.html">
+    <div class="cmp-footer__social-media" data-sly-list="${items}">
+        <a href="${item.target}"
+           class="cmp-footer__social-media--link">
+            <sly data-sly-test="${item.icon}"
+                 data-sly-call="${iconTemplate.icon @ src=item.icon,className='cmp-footer__social-media--link-icon'}">
+            </sly>
+        </a>
+    </div>
+</template>

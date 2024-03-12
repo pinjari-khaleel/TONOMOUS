@@ -1,0 +1,87 @@
+@media (max-width: @screen-mobile-max) {
+  .cmp-herobanner {
+    --large-banner: 677px;
+    --generic-banner: 550px;
+
+    &__generic-background {
+      .cmp-herobanner {
+        &__content {
+          padding-block: 3rem;
+          padding-inline-start: 1.3125rem;
+          padding-inline-end: 1.1875rem;
+          flex-direction: column;
+        }
+
+        &__description {
+          h2 {
+            .light();
+          }
+        }
+
+        &__action-container {
+          padding-block-start: 3rem;
+          width: 100%;
+          a {
+            .button-primary();
+          }
+        }
+      }
+    }
+
+    &__moving-gradient.cmp-herobanner__generic-height {
+      .cmp-herobanner {
+        .moving-background(var(--generic-banner));
+        &__content {
+          padding-block: 3rem;
+          padding-inline-start: 1.3125rem;
+          padding-inline-end: 1.1875rem;
+          height: min-content;
+        }
+
+        &__description {
+          h2 {
+            .light();
+          }
+        }
+      }
+    }
+
+    &__moving-gradient.cmp-herobanner__large {
+      .cmp-herobanner {
+        .moving-background(var(--large-banner));
+
+        &__content {
+          padding-block: 3rem;
+          padding-inline-start: 1.25rem;
+          padding-inline-end: 1.1875rem;
+          width: 100%;
+          box-sizing: border-box;
+          height: min-content;
+        }
+
+        &__description {
+          h1 + p {
+            margin-block: 1.5rem;
+            width: 100%;
+          }
+        }
+
+        &__container {
+          .cmp-herobanner__description {
+            display: grid;
+            grid-row-gap: 0.644rem; /* Will be used instead by browsers that do not support `row-gap` */
+            row-gap: 0.644rem;
+            width: 100%;
+          }
+        }
+
+        &__action-container {
+          margin-block-start: 3.03rem;
+          a {
+            .button-primary();
+          }
+        }
+      }
+    }
+  }
+}

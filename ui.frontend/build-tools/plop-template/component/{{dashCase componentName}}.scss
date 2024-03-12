@@ -1,0 +1,4 @@
+.{{aBEMPrefix}}-{{camelCase name}} {
+{{#if (equals type 'block')}}  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;{{/if}}
+}

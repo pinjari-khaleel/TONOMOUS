@@ -1,0 +1,60 @@
+.m-social {
+  --icon-size: 24px;
+  --social-item-gap: var(--icon-size);
+
+  &__items {
+    @include list-reset();
+
+    display: flex;
+    justify-content: flex-start;
+    max-width: inherit;
+  }
+
+  &__item {
+    @include size(var(--icon-size));
+
+    color: var(--component-highlight-color, var(--color-dark-accent));
+    transition: color 0.2s ease-in-out;
+
+    @include hover() {
+      color: var(--component-highlight-hover-color, var(--color-accent));
+    }
+
+    &:not(:first-child) {
+      margin-inline-start: var(--social-item-gap);
+    }
+  }
+
+  @include respond-to("LARGE") {
+    --social-item-gap: calc(var(--icon-size) * 1.25);
+  }
+
+  @include theme("tonomus") {
+    &__item {
+      @include size(50px);
+
+      &:not(:first-child) {
+        margin-inline-start: 22px;
+      }
+    }
+
+    &__link {
+      @include size(100%);
+      background-color: var(--color-tonomus-white-disabled-emphasis);
+      color: var(--color-white);
+      transition: color 0.2s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+
+      span {
+        @include size(27px);
+      }
+
+      @include hover() {
+        background-color: var(--color-tonomus-white-low-emphasis);
+      }
+    }
+  }
+}

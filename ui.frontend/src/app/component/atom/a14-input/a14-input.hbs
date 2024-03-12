@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="./a14-input.scss">
+<script src="./A14Input.ts"></script>
+
+<div class="a-input{{#with type}} -{{this}}{{/with}}"
+         data-component="a14-input"
+         {{#if scrollComponent}}data-scroll-component{{/if}}
+>
+  <input class="a-input__input"
+    {{#if disabled}}disabled{{/if}}
+    {{#with id}}id="{{this}}" data-{{this}}{{/with}}
+    {{#with maxlength}}maxlength="{{this}}"{{/with}}
+    {{#if (condition type "===" "number") }}min="0"{{/if}}
+    {{#with name}}name="{{this}}"{{/with}}
+    {{#with placeholder}} placeholder="{{this}}"{{/with}}
+    {{#if (condition type '===' 'email') }}pattern="[^@\s]+@[^@\s]+\.[^@\s]+"{{/if}}
+    {{#if readonly}}readonly{{/if}}
+    {{#if required}}required{{/if}}
+    {{#with titleInEnglish}}data-title-in-english="{{this}}"{{/with}}
+    {{#if type}}type={{type}}{{^}}text{{/if}}
+    {{#if (condition value '!==' undefined)}}value="{{value}}"{{/if}}
+    {{#if validate}}data-validate="{{toJson validate}}"{{/if}}
+  />
+</div>

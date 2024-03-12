@@ -1,0 +1,8 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly
+    data-sly-use.finalStepModel="com.tonomus.core.slingmodels.components.v1.forms.multistep.MultiStepFormFinalStepModel"
+    data-sly-use.submitStepTemplate="/apps/tonomus/components/content/organisms/o73-submit-step.html"
+    data-sly-call="${submitStepTemplate.submitStep @ finalStepModel=finalStepModel}">
+</sly>

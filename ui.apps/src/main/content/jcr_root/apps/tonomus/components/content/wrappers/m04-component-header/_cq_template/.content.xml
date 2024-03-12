@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          alignment="left">
+  <heading jcr:primaryType="nt:unstructured"
+           size="h3"
+           text="The project"/>
+  <moustache jcr:primaryType="nt:unstructured"
+             variant="large"
+             size="large"
+             text="TROJENA will offer year-round outdoor skiing and adventure sports to be completed in 2026,an unrivalled experience and a global landmark for the Kingdom of Saudi Arabia. Highlights include a stunning man-made freshwater lake and ‘The Vault’. It is a folded village fusing technology, entertainment and hospitality – as the main gateway into TROJENA."/>
+</jcr:root>

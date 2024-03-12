@@ -1,0 +1,43 @@
+.a-heading {
+  color: var(--component-heading-color);
+  text-transform: uppercase;
+  font-weight: 400;
+
+  &.-h1 {
+    @include type("heading", "h1");
+  }
+
+  &.-h2 {
+    @include type("heading", "h2");
+  }
+
+  &.-h3 {
+    @include type("heading", "h3");
+  }
+
+  &.-h4 {
+    @include type("heading", "h4");
+  }
+
+  &.-h5 {
+    @include type("heading", "h5");
+  }
+
+  &.-h6 {
+    @include type("heading", "h6");
+  }
+
+  strong {
+    color: var(--component-highlight-color);
+  }
+
+  span {
+    font-weight: 100;
+  }
+
+  @include theme("tonomus") {
+    strong {
+      font-weight: 700;
+    }
+  }
+}

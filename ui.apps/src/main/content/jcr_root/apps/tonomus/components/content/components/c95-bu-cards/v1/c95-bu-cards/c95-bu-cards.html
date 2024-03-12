@@ -1,0 +1,67 @@
+<sly
+  data-sly-use.commonCmpModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+  data-sly-use.buCardsModel="com.tonomus.core.slingmodels.components.v1.bu_cards.BUCardsModel"
+  data-sly-use.headerModel="com.tonomus.core.slingmodels.common.v1.HeaderModel"
+  data-sly-use.hTpl="/apps/tonomus/components/content/atoms/a03-heading.html"
+  data-sly-use.imgTpl="/apps/tonomus/components/content/atoms/a01-image.html"
+  data-sly-use.tpl="core/wcm/components/commons/v1/templates.html"
+  data-sly-use.dsl1="shapes/line-1.html"
+  data-sly-use.dsl2="shapes/line-2.html"
+  data-sly-use.dsl3="shapes/line-3.html"
+  data-sly-use.shadyShape="shapes/shady-shape.html"
+  data-sly-call="${tpl.placeholder @ isEmpty=true}"
+></sly>
+
+<section
+  class="b-buCards"
+  data-component="c95-bu-cards"
+  style="${commonCmpModel.padding.styleInline @ context='styleString'}"
+  data-sly-attribute.data-scroll-component="${commonCmpModel.scrollComponent}"
+  data-sly-attribute.id="${commonCmpModel.anchorId}"
+  data-sly-attribute.data-items="${buCardsModel.itemsJson}"
+  data-sly-set.id="${commonCmpModel.anchorId}"
+>
+  <div class="b-buCards__container">
+    <sly data-sly-call="${dsl1.dsl1 @ className='b-buCards__lineShape1'}"></sly>
+    <sly data-sly-call="${dsl2.dsl2 @ className='b-buCards__lineShape2'}"></sly>
+    <div
+      class="b-buCards__header"
+      data-sly-test="${buCardsModel.header.heading.text}"
+    >
+      <sly
+        data-sly-call="${hTpl.heading @ headingModel=buCardsModel.header.heading}"
+      ></sly>
+    </div>
+    <div class="b-buCards__items" data-sly-list.card="${buCardsModel.buCards}">
+      <a
+        class="b-buCards__link ${!href ? '-isDisabled' : ''}"
+        data-sly-test="${card.image.src}"
+        data-sly-set.href="${card.link.href}"
+        data-sly-attribute.href="${href @ context='uri'}"
+        data-sly-attribute.target="${href && card.link.target}"
+      >
+        <div class="b-buCards__item" tabindex="1">
+          <div class="b-buCards__backgroundImage">
+            <sly
+              data-sly-call="${imgTpl.image @ imageModel=card.image, disableTransition=true}"
+            ></sly>
+          </div>
+          <div class="b-buCards__content">
+            <sly
+              data-sly-call="${shadyShape.shadyShape @ className='b-buCards__shadyShape'}"
+            ></sly>
+            <p class="b-buCards__title">${card.title.text @ context='html'}</p>
+            <sly
+              data-sly-call="${imgTpl.image @ imageModel=card.logo,
+                variant='block', disableTransition=true}"
+            ></sly>
+            <div class="s-content" data-sly-test="${card.description.text}">
+              ${card.description.text @ context='html'}
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <sly data-sly-call="${dsl3.dsl3 @ className='b-buCards__lineShape3'}"></sly>
+  </div>
+</section>

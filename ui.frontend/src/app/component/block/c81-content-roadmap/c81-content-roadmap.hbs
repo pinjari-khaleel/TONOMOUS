@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="./c81-content-roadmap.scss">
+<script src="./C81ContentRoadmap.ts"></script>
+
+
+<section class="b-contentRoadmap"
+  data-component="c81-content-roadmap"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with padding}}
+    style="--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};"
+  {{/with}}
+>
+  <div class="b-contentRoadmap__container" data-container>
+    {{> atom/a03-heading text=title size="h2" }}
+
+    <ol class="b-contentRoadmap__list">
+      <li class="b-contentRoadmap__step1">
+        {{> ./shapes/desktop-step-1-1 className="b-contentRoadmap__step1DesktopShape1" }}
+
+        <div class="b-contentRoadmap__step1ImageWrapper">
+          {{> ./shapes/mobile-step-1-1 className="b-contentRoadmap__step1MobileShape1" }}
+          {{> ./img/image1 step1.image className="b-contentRoadmap__step1Image" }}
+        </div>
+
+        <div data-step-content>
+          {{> atom/a03-heading step1.heading }}
+          <p class="b-contentRoadmap__stepText">{{step1.text}}</p>
+        </div>
+      </li>
+
+      <li class="b-contentRoadmap__step2">
+        {{> ./shapes/desktop-step-2-1 className="b-contentRoadmap__step2DesktopShape1" }}
+        {{> ./shapes/mobile-step-2-1 className="b-contentRoadmap__step2MobileShape1"  }}
+
+        <div data-step-content>
+          {{> atom/a03-heading step2.heading }}
+          <p class="b-contentRoadmap__stepText">{{step2.text}}</p>
+        </div>
+
+        {{> ./shapes/mobile-step-2-2 className="b-contentRoadmap__step2MobileShape2" }}
+        {{> ./img/image2 step2.image className="b-contentRoadmap__step2Image" }}
+        {{> ./shapes/mobile-step-2-3 className="b-contentRoadmap__step2MobileShape3" }}
+      </li>
+
+      <li class="b-contentRoadmap__step3">
+        {{> ./shapes/desktop-step-3-1 className="b-contentRoadmap__step3DesktopShape1" }}
+
+        <div data-step-content>
+          {{> atom/a03-heading step3.heading }}
+          <p class="b-contentRoadmap__stepText">{{step3.text}}</p>
+        </div>
+
+        {{> ./shapes/mobile-step-3-1 className="b-contentRoadmap__step3MobileShape1" }}
+
+        <div class="b-contentRoadmap__step3ImageWrapper">
+          {{> ./img/image3 step3.image className="b-contentRoadmap__step3Image" }}
+          {{> molecule/m02-button step3.button theme="green" icon="play-outline" iconAlignment="left" className="b-contentRoadmap__step3Button" }}
+        </div>
+
+        {{> ./shapes/mobile-step-3-2 className="b-contentRoadmap__step3MobileShape2" }}
+      </li>
+    </ol>
+  </div>
+</section>
+

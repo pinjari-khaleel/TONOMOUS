@@ -1,0 +1,17 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'CardCarousel'
+tonomus: true
+webglContainer: true
+
+meta:
+  id: 'c87'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 'c87-card-carousel'
+    data: 'import!../app/component/block/c87-card-carousel/data/default.yaml'

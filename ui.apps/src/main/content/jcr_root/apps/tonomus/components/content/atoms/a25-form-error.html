@@ -1,0 +1,10 @@
+<sly data-sly-template.formError="${ @
+    id='id',
+    scrollComponent='scrollComponent boolean value'}">
+
+  <div class="a-formError" data-component="a25-form-error"
+       data-sly-attribute.id="${id}"
+       data-sly-attribute.data-scroll-component="${scrollComponent}">
+       <div class="a-formError__message" data-error-message data-for="${id @ context='attribute'}"></div>
+  </div>
+</sly>

@@ -1,0 +1,277 @@
+$typeTonomus: (
+  heading: (
+    h1: (
+      fontWeight: 300,
+      desktop: (
+        fontSize: 96px,
+        letterSpacing: 0,
+        lineHeight: 92%,
+      ),
+      mobile: (
+        fontSize: 48px,
+        letterSpacing: 0,
+        lineHeight: 100%,
+      ),
+    ),
+    h2: (
+      fontWeight: 300,
+      desktop: (
+        fontSize: 58px,
+        letterSpacing: 0,
+        lineHeight: 100%,
+      ),
+      mobile: (
+        fontSize: 40px,
+        letterSpacing: 0,
+        lineHeight: 100%,
+      ),
+    ),
+    h3: (
+      fontWeight: 300,
+      desktop: (
+        fontSize: 48px,
+        letterSpacing: 0.12em,
+        lineHeight: 119%,
+      ),
+      mobile: (
+        fontSize: 32px,
+        letterSpacing: 0,
+        lineHeight: 110%,
+      ),
+    ),
+    h4: (
+      fontWeight: 700,
+      desktop: (
+        fontSize: 40px,
+        letterSpacing: 0,
+        lineHeight: 100%,
+      ),
+      mobile: (
+        fontSize: 28px,
+        letterSpacing: 0,
+        lineHeight: 100%,
+      ),
+    ),
+    h5: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 32px,
+        letterSpacing: 0,
+        lineHeight: 110%,
+      ),
+      mobile: (
+        fontSize: 28px,
+        letterSpacing: 0,
+        lineHeight: 110%,
+      ),
+    ),
+  ),
+  overline: (
+    large: (
+      fontWeight: 700,
+      lineHeight: 120%,
+      desktop: (
+        fontSize: 20px,
+        letterSpacing: 0.12em,
+      ),
+      mobile: (
+        fontSize: 14px,
+        letterSpacing: 0.12em,
+      ),
+    ),
+    medium: (
+      fontWeight: 400,
+      fontSize: 16px,
+      letterSpacing: 0.12em,
+      desktop: (
+        fontSize: 8px,
+        lineHeight: 140%,
+      ),
+      mobile: (
+        fontSize: 12px,
+        lineHeight: 140%,
+      ),
+    ),
+  ),
+  button: (
+    xLarge: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 14px,
+        letterSpacing: 0.8,
+        lineHeight: 16px,
+      ),
+      mobile: (
+        fontSize: 16px,
+        letterSpacing: 0.8,
+        lineHeight: 16px,
+      ),
+      ar: (
+        fontSize: 20px,
+        lineHeight: 100%,
+      ),
+    ),
+    large: (
+      fontWeight: 700,
+      desktop: (
+        fontSize: 14px,
+        letterSpacing: 0,
+        lineHeight: 16px,
+      ),
+      mobile: (
+        fontSize: 14px,
+        letterSpacing: 0,
+        lineHeight: 16px,
+      ),
+      ar: (
+        fontSize: 20px,
+        lineHeight: 120%,
+      ),
+    ),
+    small: (
+      fontWeight: 700,
+      desktop: (
+        fontSize: 14px,
+        letterSpacing: 0,
+        lineHeight: 120%,
+      ),
+      mobile: (
+        fontSize: 14px,
+        letterSpacing: 0,
+        lineHeight: 120%,
+      ),
+      ar: (
+        fontSize: 14px,
+        lineHeight: 140%,
+      ),
+    ),
+  ),
+  subTitle: (
+    large: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 24px,
+        letterSpacing: 0,
+        lineHeight: 142%,
+      ),
+      mobile: (
+        fontSize: 16px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+    ),
+    small: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 144%,
+      ),
+      mobile: (
+        fontSize: 16px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+    ),
+  ),
+  body: (
+    xxlarge: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 50px,
+        letterSpacing: 0,
+        lineHeight: 132%,
+      ),
+      mobile: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+      ar: (
+        fontSize: 66px,
+        lineHeight: 92%,
+      ),
+    ),
+    xlarge: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 37px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+      mobile: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+      ar: (
+        fontSize: 48px,
+        lineHeight: 126%,
+      ),
+    ),
+    large: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 28px,
+        letterSpacing: 0,
+        lineHeight: 143%,
+      ),
+      mobile: (
+        fontSize: 21px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+      ar: (
+        fontSize: 38px,
+        lineHeight: 106%,
+      ),
+    ),
+    medium: (
+      fontWeight: 400,
+      desktop: (
+        fontSize: 18px,
+        letterSpacing: 0,
+        lineHeight: 148%,
+      ),
+      mobile: (
+        fontSize: 16px,
+        letterSpacing: 0,
+        lineHeight: 135%,
+      ),
+      ar: (
+        fontSize: 26px,
+        lineHeight: 120%,
+      ),
+    ),
+    small: (
+      fontWeight: 400,
+      letterSpacing: 0,
+      lineHeight: 150%,
+      desktop: (
+        fontSize: 16px,
+      ),
+      mobile: (
+        fontSize: 16px,
+        letterSpacing: 0,
+        lineHeight: 150%,
+      ),
+      ar: (
+        fontSize: 20px,
+        lineHeight: 120%,
+      ),
+    ),
+    xsmall: (
+      fontWeight: 100,
+      fontSize: 12px,
+      letterSpacing: 0.02em,
+      lineHeight: 150%,
+      ar: (
+        fontSize: 14px,
+        lineHeight: 140%,
+      ),
+    ),
+  ),
+);
+
+$type-kind: body !default;
+$type-variant: medium !default;

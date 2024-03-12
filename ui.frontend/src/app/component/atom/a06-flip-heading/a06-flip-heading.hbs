@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="./a06-flip-heading.scss">
+<script src="./A06FlipHeading.ts"></script>
+
+<{{#if element}}{{element}}{{^}}h2{{/if}} class="a-flipHeading{{#if size }} -{{size}}{{/if}}{{#unless prefix }} -noPrefix{{/unless}}" data-component="a06-flip-heading">
+  {{#if prefix }} 
+    <span class="a-flipHeading__prefix">{{{ prefix }}}</span><br/> 
+  {{/if}}
+  <span class="a-flipHeading__labelContainer" data-flip-labels data-labels="{{#each labels}}{{ @this }}/{{/each}}">
+    <span class="a-flipHeading__flex">
+      {{#each labels}}
+        <span class="a-flipHeading__label" data-flip-label>{{ this }}</span>
+      {{/each}}
+    </span>
+  </span>
+</{{#if element}}{{element}}{{^}}h2{{/if}}>

@@ -1,0 +1,29 @@
+.aem-AuthorLayer-Edit .tonomus-base-page-v2 {
+    /* Generic page template has only root layout container hence .root > .aem-Grid > .cmp-container.
+     * Homepage template has root layout container and another 3 layout container for header, body and footer hence
+     * .root > .aem-Grid > .layoutcontainer > .aem-Grid > .cmp-container
+     */
+    .root > .aem-Grid > .cmp-container,
+    .root > .aem-Grid > .layoutcontainer > .aem-Grid > .cmp-container {
+        padding-block: var(--padding-block);
+        margin-inline: var(--padding-inline);
+        padding-inline: 0;
+        width: ~'calc(100% - (var(--padding-inline) * 2))';
+
+        .cmp-container,
+        .tabs {
+            margin-inline: 0;
+            padding-inline: 0;
+        }
+
+        &--no-gutter {
+            width: 100%;
+            padding-inline: 0;
+            margin-inline: 0;
+
+            .cmp-container__heading {
+                margin-inline: var(--padding-inline);
+            }
+        }
+    }
+}

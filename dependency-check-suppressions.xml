@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+  <suppress>
+    <notes><![CDATA[
+        This suppresses commons-logging library vulnerability.
+        ]]></notes>
+    <filePath regex="true">.*\commons-logging\.jar</filePath>
+    <cve>CVE-2021-37533</cve>
+  </suppress>
+</suppressions>

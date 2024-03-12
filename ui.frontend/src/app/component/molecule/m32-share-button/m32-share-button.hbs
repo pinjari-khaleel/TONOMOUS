@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="./m32-share-button.scss">
+<script src="./M32ShareButton.ts"></script>
+
+<a class="m-shareButton"
+   data-component="m32-share-button"
+   {{#with eventTracking}}data-event-tracking="{{toJson this}}"{{/with}}
+   data-share-type="{{id}}"
+   href="{{href}}"
+   target="_blank"
+   rel="noopener"
+>
+  {{> atom/a02-icon name=icon }}
+  <span class="m-shareButton__label">{{label}}</span>
+
+  {{#if (condition id '===' 'clipboard')}}
+    <span class="m-shareButton__success" data-success-message>
+      {{> atom/a02-icon name='checkmark-gold' }}
+      <span class="m-shareButton__label">{{successMessage}}</span>
+    </span>
+  {{/if}}
+</a>

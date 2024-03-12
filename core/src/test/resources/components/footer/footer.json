@@ -1,0 +1,60 @@
+{
+  "hasNoContent": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "tonomus/components/content/components/footer/v2/footer"
+  },
+  "hasContent": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "tonomus/components/content/components/footer/v2/footer",
+    "addressDetail": "Sample address detail",
+    "navigationRoot": "/content/tonomus",
+    "addressTitle": "Sample address title",
+    "textIsRich": "true",
+    "collectAllPages": "true",
+    "structureStart": "1",
+    "socialMediaLinks": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "target": "www.facebook.com",
+        "icon": "/content/dam/tonomus/components/business-units/compute.svg"
+      }
+    },
+    "otherLinks": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "target": "_blank",
+        "href": "www.google.com",
+        "label": "Google"
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "target": "_self",
+        "href": "www.adobe.com",
+        "label": "Adobe"
+      }
+    }
+  },
+  "invalidPageRoot": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "tonomus/components/content/components/footer/v2/footer",
+    "navigationRoot": "/content/nonExistingPage",
+    "collectAllPages": "true",
+    "structureStart": "1"
+  },
+  "tonomus": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "sling:resourceType": "tonomus/components/structure/tonomus-base-page-v2"
+    },
+    "subPage": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "sling:resourceType": "tonomus/components/structure/tonomus-base-page-v2"
+      }
+    }
+  }
+}

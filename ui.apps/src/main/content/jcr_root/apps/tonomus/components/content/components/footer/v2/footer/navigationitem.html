@@ -1,0 +1,22 @@
+<template data-sly-template.item="${@ item='The navigation items for the current level',
+            mobile='Indicator if this template should return mobile HTML',
+            hasChildren='Inidicator if this item has child navigation or not'}"
+              data-sly-use.internalLinkTemplate="/apps/tonomus/components/common/link-internal.html"
+              data-sly-use.externalLinkTemplate="/apps/tonomus/components/common/link-external.html">
+    <a data-sly-attribute="${item.link.htmlAttributes}"
+       aria-current="${item.current && 'page'}"
+       data-sly-unwrap="${!item.link.valid}"
+       class="cmp-footer__navigation-item-link
+            ${mobile ? 'cmp-footer__navigation-item-link--mobile' : 'cmp-footer__navigation-item-link--default'}
+            ${hasChildren ? ' cmp-footer__navigation-item-link--parent' : ''}">
+       <span>
+            <span>${item.title}</span>
+            <sly data-sly-test="${!hasChildren}">
+                <sly data-sly-call="${internalLinkTemplate.internalLink @ src=''}"></sly>
+                <sly data-sly-call="${externalLinkTemplate.externalLink @ src=''}"></sly>
+            </sly>
+       </span>
+        <img data-sly-test="${hasChildren}"
+             src="/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/image/arrow-down.svg" />
+    </a>
+</template>

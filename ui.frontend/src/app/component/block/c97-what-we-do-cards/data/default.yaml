@@ -1,0 +1,28 @@
+scrollComponent: true
+padding:
+  start: 'large'
+  end: 'large'
+id: 'c97-what-we-do'
+title: 'c97-what-we-do'
+items:
+  - title: 'Workshops & Classes'
+    icon:
+      src: 'image/c97-what-we-do/workshops-classes.svg'
+  - title: 'Venture Competitions'
+    icon:
+      src: 'image/c97-what-we-do/venture-competitions.svg'
+  - title: 'Venture Building Expertise'
+    icon:
+      src: 'image/c97-what-we-do/venture-building-expertise.svg'
+  - title: 'Ecosystem Mapping'
+    icon:
+      src: 'image/c97-what-we-do/ecosystem-mapping.svg'
+  # - title: 'Ecosystem Mapping'
+  #   icon:
+  #     src: 'image/c97-what-we-do/ecosystem-mapping.svg'
+  # - title: 'Ecosystem Mapping'
+  #   icon:
+  #     src: 'image/c97-what-we-do/ecosystem-mapping.svg'
+  # - title: 'Ecosystem Mapping'
+  #   icon:
+  #     src: 'image/c97-what-we-do/ecosystem-mapping.svg'

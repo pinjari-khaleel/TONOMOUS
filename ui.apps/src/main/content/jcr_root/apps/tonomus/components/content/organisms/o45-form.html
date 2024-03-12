@@ -1,0 +1,51 @@
+<sly data-sly-template.form="${ @
+  formModel='instance of forms.FormModel with properties',
+  themeCssClasses='String value of the list of theme css classes.'}"
+     data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"
+     data-sly-use.recaptchaTemplate="/apps/tonomus/components/content/atoms/a18-recaptcha.html">
+
+  <section class="o-form ${themeCssClasses @ context='styleString'}"
+       data-component="o45-form"
+       data-messages="${formModel.messagesJson}">
+    <header class="o-form__header" data-form-header data-sly-test="${formModel.text || formModel.description}">
+      <h2 class="o-form__title">${formModel.text}</h2>
+      <div class="o-form__description s-content -small">${formModel.description}</div>
+    </header>
+
+    <form
+        class="o-form__form ${[formModel.variant ? '-' : '', formModel.variant] @ join = '', context='styleString'}"
+        data-form action="${formModel.action}" method="POST"
+        data-title-in-english="${formModel.titleInEnglish}">
+      <input type="hidden" name="form_id" value="${formModel.id}"/>
+      <input type="hidden" name="mc_template" value="${formModel.templateSlug}"/>
+      <input type="hidden" name="lang_code" value="${formModel.languageCode}"/>
+      <input data-sly-repeat.hiddenField="${formModel.hiddenFields}"
+             type="hidden" name="${hiddenField.name}" value="${hiddenField.value}"/>
+
+      <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+           data-sly-list.child="${templatedContainer.structureResources}">
+        <sly data-sly-test="${child.resourceType !='nt:unstructured'}"
+             data-sly-resource="${child.path @ resourceType=child.resourceType,
+                   decorationTagName='', decoration=wcmmode.edit}"></sly>
+      </sly>
+      <sly data-sly-resource="${resource.path @
+                     resourceType='wcm/foundation/components/responsivegrid/new', appendPath='/*',
+                     decoration=wcmmode.edit, decorationTagName=''}"></sly>
+
+      <sly data-sly-call="${recaptchaTemplate.recaptcha @ sitekey=formModel.reCaptchaSiteKey,
+                          language=formModel.languageCode, branding=formModel.branding}"></sly>
+
+      <div class="o-form__buttons" data-form-buttons>
+        <sly data-sly-repeat.button="${formModel.buttons}"
+             data-sly-call="${buttonTemplate.button @ buttonModel=button, attrs=(button.type == 'submit' ? 'data-submit-button' : '')}"></sly>
+      </div>
+      <div class="o-form__responseWrapper" data-form-response-wrapper>
+      </div>
+      <footer class="o-form__footer" data-form-footer>
+        <div data-sly-test="${formModel.footerCopy}" class="o-form__copy s-content -small">${formModel
+          .footerCopy}</div>
+      </footer>
+    </form>
+  </section>
+
+</sly>

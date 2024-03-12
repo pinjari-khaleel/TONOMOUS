@@ -1,0 +1,4 @@
+scrollComponent: true
+title: 'c93-webgl-scroll-spacer'
+gradientColors: '["#960351", "#441a54", "#57052e"]'
+asset: './image1.webp'

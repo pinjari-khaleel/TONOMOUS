@@ -1,0 +1,8 @@
+<sly
+    data-sly-use.radioOptionModel="com.tonomus.core.slingmodels.components.v1.forms.FormCheckBoxModel"
+    data-sly-use.radioOptionTemplate="/apps/tonomus/components/content/molecules/m28-radio-option.html"></sly>
+
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly data-sly-call="${radioOptionTemplate.radioOption @ checkBoxModel=radioOptionModel}"></sly>

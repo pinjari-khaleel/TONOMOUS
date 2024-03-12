@@ -1,0 +1,15 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'WebglScrollSpacer'
+
+meta:
+  id: 'c93'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 'c93-webgl-scroll-spacer'
+    data: 'import!../app/component/block/c93-webgl-scroll-spacer/data/default.yaml'

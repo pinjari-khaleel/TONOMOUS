@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="./o76-radio-group.scss">
+<script src="./O76RadioGroup.ts"></script>
+
+
+<div class="o-radioGroup" data-component="o76-radio-group" {{#if scrollComponent}}data-scroll-component{{/if}} {{#if
+  id}} id="{{id}}" {{/if}}>
+  <fieldset class="o-radioGroup__fieldset" {{#if validate}} data-validate="{{toJson validate}}" {{/if}}
+    {{#with id}}id="{{this}}" {{/with}}>
+    <div class="o-radioGroup__container">
+    {{#if legend}}
+    {{> atom/a26-fieldset-legend legend=legend.text variant=legend.variant required=required}}
+    {{/if}}
+
+    {{#each items}}
+    {{> molecule/m28-radio-option }}
+    {{/each}}
+
+    <div class="o-radioGroup__radioGroupCopy">{{{ copy }}}</div>
+
+    {{#with showTextareaForOtherChoice}}<div class="o-radioGroup__optionalTextarea{{#if wide}} -wide{{/if}}">
+      {{>molecule/m30-text-field type='textarea' blockValidation=true disabled=true}}</div>
+    {{/with}}
+    {{> atom/a25-form-error }}
+</div>
+  </fieldset>
+</div>

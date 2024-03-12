@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="./m55-image-pagination.scss">
+<script src="./M55ImagePagination.ts"></script>
+
+<div
+  class="m-imagePagination"
+  data-component="m55-image-pagination"
+  {{#if id}} id="{{id}}-pagination"{{/if}}
+>
+  <ul class="m-imagePagination__paginationList">
+    {{#each items}}
+      <li class="m-imagePagination__paginationItem" data-pagination>
+        {{#with thumbnail}}
+          {{> atom/a01-image this disableTransition=true}}
+        {{/with}}
+      </li>
+    {{/each}}
+  </ul>
+</div>

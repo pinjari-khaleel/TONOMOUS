@@ -1,0 +1,87 @@
+scrollComponent: true
+
+sitemap:
+  - label: 'Scopri NEOM'
+    items:
+      - label: 'Informazioni su NEOM'
+        href: '#'
+      - label: 'La nostra gente'
+        href: '#'
+
+  - label: 'Regioni'
+    items:
+      - label: 'Trojena'
+        href: '#'
+      - label: 'Oxagon'
+        href: '#'
+      - label: 'The Line'
+        href: '#'
+
+  - label: 'Sectors'
+    items:
+      - label: 'Design & Construction'
+        href: '#'
+      - label: 'Education'
+        href: '#'
+      - label: 'Energy'
+        href: '#'
+      - label: 'Entertainment & Culture'
+        href: '#'
+      - label: 'Financial Services'
+        href: '#'
+      - label: 'Food'
+        href: '#'
+      - label: 'Health, Well-Being & biotech'
+        href: '#'
+      - label: 'Manufacturing'
+        href: '#'
+      - label: 'Media'
+        href: '#'
+      - label: 'Mobility'
+        href: '#'
+      - label: 'Sport'
+        href: '#'
+      - label: 'Technology & Digital'
+        href: '#'
+      - label: 'Tourism'
+        href: '#'
+      - label: 'Water'
+        href: '#'
+
+  - label: 'Entra a far parte di NEOM'
+    items:
+      - label: 'Investire'
+        href: '#'
+      - label: 'Iniziare un attività'
+        href: '#'
+      - label: 'Diventa un fornitore'
+        href: '#'
+      - label: 'Compagno'
+        href: '#'
+      - label: 'Opera'
+        href: '#'
+
+  - label: 'Notizie e social'
+    items:
+      - label: 'Notizie'
+        href: '#'
+      - label: 'Comunicati stampa'
+        href: '#'
+      - label: 'Galleria multimediale'
+        href: '#'
+social:
+  items: 'import!../../../molecule/m12-social/data/tonomus.yaml'
+
+marginalia:
+  items:
+    - label: 'Politica sulla riservatezza'
+      href: 'privacy-policy.html'
+      target: '_blank'
+    - label: "Condizioni d'uso"
+      href: 'terms-of-use.html'
+      target: '_blank'
+    - label: 'Gestione dei Cookie'
+      href: 'cookie-policy.html'
+      target: '_blank'
+
+copyrightNotice: '© 2022 NEOM'

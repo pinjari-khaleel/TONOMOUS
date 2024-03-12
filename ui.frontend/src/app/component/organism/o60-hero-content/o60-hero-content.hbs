@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="./o60-hero-content.scss">
+<script src="./O60HeroContent.ts"></script>
+
+<div class="o-heroContent t-darkMono{{#if (condition content.buttonType '!==' 'pillar')}} -fullHeight{{/if}}"
+  data-component="o60-hero-content"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+>
+  {{#with background}}
+    {{> molecule/m34-component-background scrollComponent=false }}
+  {{/with}}
+
+  <div class="o-heroContent__container{{#with align}} -{{horizontal}} -{{vertical}}{{/with}}">
+      {{#with content}}
+        <div class="o-heroContent__content">
+          {{#with link}}
+            {{> molecule/m06-link }}
+          {{/with}}
+
+          {{> molecule/m04-component-header header alignment="none"}}
+          {{#with buttons}}
+            <div class="o-heroContent__buttons{{#if ../buttonType}} -{{../buttonType}}{{/if}}" data-button-wrapper data-button-type="{{#if ../buttonType}}{{../buttonType}}{{^}}regular{{/if}}">
+              {{#with ../buttonEyebrow}}
+                {{> atom/a04-eyebrow text=this size='small' }}
+              {{/with}}
+              {{#each this}}
+                {{#if (condition ../../buttonType '===' 'tile')}}
+                  {{> molecule/m53-tile-cta this }}
+                {{else if (condition ../../buttonType '===' 'pillar')}}
+                  {{> molecule/m58-pillar-cta this }}
+                {{^}}
+                  {{> molecule/m02-button this }}
+                {{/if}}
+              {{/each}}
+            </div>
+          {{/with}}
+        </div>
+      {{/with}}
+      {{#if scrollButton}}
+        {{> molecule/m10-scroll-button }}
+      {{/if}}
+    </div>
+</div>

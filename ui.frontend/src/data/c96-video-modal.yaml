@@ -1,0 +1,13 @@
+# dir: ltr
+# language: en
+# navigation: 'import!../app/component/block/s01-navigation/data/navigation-en.yaml'
+
+meta:
+  id: 'c96'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 'c96-video-modal'
+    data: 'import!../app/component/block/c96-video-modal/data/default.yaml'

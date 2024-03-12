@@ -1,0 +1,36 @@
+<sly data-sly-template.header="${@
+       headerModel='Sling Model for header (class HeaderModel)',
+       headingModel='Sling Model for heading(class TextModel)',
+       eyebrowModel='Sling Model for eyebrow(class TextModel)',
+       alignment='In most cases alignment is stored inside HeaderModel, but there are exceptions',
+       variant='headers variant (for example, highlights)',
+       disableTransition='Boolean flag for disabling transition'
+     }"
+     data-sly-use.eyebrowTemplate="/apps/tonomus/components/content/atoms/a04-eyebrow.html"
+     data-sly-use.flipHeadingTemplate="/apps/tonomus/components/content/atoms/a06-flip-heading.html"
+     data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html"
+     data-sly-use.moustacheTemplate="/apps/tonomus/components/content/atoms/a05-moustache.html"
+     data-sly-set.headingVal="${headingModel || headerModel.heading}"
+     data-sly-set.eyebrowVal="${eyebrowModel || headerModel.eyebrow}"
+     data-sly-set.disableTransitionVal="${disableTransition || headerModel.disableTransition}"
+     data-sly-set.alignmentVal="${alignment || headerModel.alignment}"
+     data-sly-set.alignmentClassName="${' -{0}' @ format=[alignmentVal], context='styleString'}"
+>
+  <div data-component="m04-component-header" class="m-componentHeader
+       ${alignmentVal ? alignmentClassName : ' -center'}
+       ${variant ? ' -{0}' : '' @ format=[variant], context='styleString'}"
+       data-alignment="${alignmentVal ? alignmentVal : 'center'}"
+       data-disable-transition="${disableTransitionVal ? 'true' : ''}">
+    <div class="m-componentHeader__container">
+      <sly data-sly-test="${eyebrowVal.text}"
+           data-sly-call="${eyebrowTemplate.eyebrow @ eyebrowModel=eyebrowVal}"></sly>
+      <sly
+          data-sly-test.flipHeadingModel="${headerModel.flipHeading.prefix || headerModel.flipHeading.labels}"
+           data-sly-call="${flipHeadingTemplate.flipHeading @ flipHeadingModel=headerModel.flipHeading}"></sly>
+      <sly data-sly-test="${!flipHeadingModel}"
+           data-sly-call="${headingTemplate.heading @ headingModel=headingVal}"></sly>
+      <sly data-sly-test="${headerModel.moustache.text}"
+           data-sly-call="${moustacheTemplate.moustache @ moustacheModel=headerModel.moustache}"></sly>
+    </div>
+  </div>
+</sly>

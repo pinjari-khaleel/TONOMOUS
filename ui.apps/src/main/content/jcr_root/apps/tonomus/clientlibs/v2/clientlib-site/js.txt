@@ -1,0 +1,10 @@
+#base=js
+components/footer/footer.js
+components/header/header.js
+components/horizontal-tab/horizontal-tab.js
+components/modal/modal.js
+components/video/video.js
+components/structure/tonomus-base-page-v2/tonomus-base-page-v2.js
+components/hero-banner/hero-banner.js
+components/recaptcha/recaptcha.js
+components/form/form.js

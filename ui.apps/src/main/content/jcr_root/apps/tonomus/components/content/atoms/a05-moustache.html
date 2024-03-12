@@ -1,0 +1,18 @@
+<sly data-sly-template.moustache="${@
+    moustacheModel='Sling Model for moustache (class TextModel)',
+    variant='Element style class usually decorative i.e. no-background',
+    text='Text passed directly',
+    size='Size passed directly'
+    }"
+     data-sly-set.sizeVal="${size || moustacheModel.size}"
+     data-sly-set.sizeClass="${[sizeVal ? '-' : '', sizeVal] @ join = '', context='styleString'}"
+     data-sly-set.textVal="${text || moustacheModel.text}"
+     data-sly-set.variantClass="${[variant ? '-' : '', variant] @ join = '', context='styleString'}">
+
+  <p class="a-moustache
+     ${sizeVal ? sizeClass : ' -large' @ context='styleString'}
+     ${variant ? variantClass : '' @ context='styleString'}"
+     data-component="a05-moustache">
+    ${textVal @ context='html'}
+  </p>
+</sly>

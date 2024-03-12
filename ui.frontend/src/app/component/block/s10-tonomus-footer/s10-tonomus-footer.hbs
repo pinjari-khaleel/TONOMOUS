@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="./s10-tonomus-footer.scss">
+<script src="./S10TonomusFooter.ts"></script>
+
+<footer class="b-tonomusFooter" data-component="s10-tonomus-footer" {{#if scrollComponent}}data-scroll-component{{/if}}>
+  {{#if sitemap}}
+    <div class="b-tonomusFooter__container">
+      <ul class="b-tonomusFooter__sitemap">
+      {{#each sitemap}}
+        <li class="b-tonomusFooter__sitemapItem" data-sitemap-item>
+          <h3 class="b-tonomusFooter__title">{{ label }}</h3>
+
+          <ul class="b-tonomusFooter__links" data-footer-links>
+            {{#each items}}
+              <li class="b-tonomusFooter__link">
+                {{> molecule/m06-link variant="footerLink" }}
+              </li>
+            {{/each}}
+          </ul>
+        </li>
+      {{/each}}
+      </ul>
+      <ul class="b-tonomusFooter__generalLinks">
+        {{#with social}}
+          <li class="b-tonomusFooter__social">
+            {{> atom/a07-label text=title }}
+            {{> molecule/m12-social this }}
+          </li>
+        {{/with}}
+        {{#with logo}}
+          <li class="b-tonomusFooter__logo" data-footer-logo>
+            {{> atom/a01-image this disableTransition=true variant="block" }}
+          </li>
+        {{/with}}
+      </ul>
+    </div>
+  {{/if}}
+  {{#with marginalia}}
+    <div class="b-tonomusFooter__marginalia" data-marginalia>
+      <ul class="b-tonomusFooter__marginaliaItems">
+      {{#each items }}
+        <li class="b-tonomusFooter__marginaliaItem">
+          {{> molecule/m06-link variant="marginaliaLink" }}
+        </li>
+      {{/each}}
+        <li class="b-tonomusFooter__marginaliaItem -copyrightNotice">
+          {{../copyrightNotice}}
+        </li>
+      </ul>
+    </div>
+  {{/with}}
+</footer>

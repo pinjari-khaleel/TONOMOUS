@@ -1,0 +1,8 @@
+@mixin hover($extraSelector: null) {
+  @media (hover: hover) {
+    // stylelint-disable-next-line
+    &:hover#{", "$extraSelector} {
+      @content;
+    }
+  }
+}

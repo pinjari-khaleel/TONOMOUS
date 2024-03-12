@@ -1,0 +1,161 @@
+.cmp-horizontaltabs {
+  padding-block: var(--padding-block);
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    & > h2 {
+      .regular();
+    }
+  }
+
+  &__heading,
+  &__description {
+    padding-inline: 6.25rem;
+    padding-block-end: 5rem;
+  }
+
+  &__description {
+    max-width: 75%;
+    p {
+      .paragraph1();
+    }
+  }
+
+  &__action-container {
+    display: inline-flex;
+    align-items: center;
+    a + * {
+      margin-inline-start: 2rem;
+    }
+
+    button + button {
+      margin-inline-start: 1rem;
+    }
+
+    &--scroll-enabled {
+      button {
+        display: inline-flex;
+      }
+    }
+
+    &--mobile {
+        display: none;
+    }
+  }
+
+  &__action-link,
+  &__previous-button,
+  &__next-button {
+    .button-primary();
+    min-width: inherit;
+  }
+
+  &__previous-button,
+  &__next-button {
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    padding: 0;
+    .cmp-icon {
+      padding: 1.25rem;
+    }
+  }
+
+  &__action-link {
+    padding: 2rem 2.5rem;
+  }
+
+  &__arrow-backward-icon {
+    transform: rotate(180deg);
+  }
+
+  .cmp-tabs {
+    padding: 0;
+    overflow: visible;
+
+    &__tablist {
+        padding-inline: var(--margin-default);
+        &&--hidden {
+            display: none;
+        }
+    }
+    .cmp-container__content {
+        margin-inline: var(--padding-inline);
+        .aem-Grid::before, .aem-Grid::after {
+            display: none;
+        }
+
+        > div {
+          display: flex;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          &::-webkit-scrollbar {
+            width: 0; /* Remove scrollbar space */
+            background: transparent; /* Optional: just make scrollbar invisible */
+          }
+
+          > * {
+            flex-shrink: 0;
+            flex-grow: 0;
+          }
+        }
+        &--scroll-enabled {
+            margin-inline: 0;
+            > div {
+                margin-inline-start: var(--padding-inline);
+
+            }
+            .cmp.aem-GridColumn--default--1 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-1))';
+            }
+            .cmp.aem-GridColumn--default--2 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-2))';
+            }
+            .cmp.aem-GridColumn--default--3 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-3))';
+            }
+            .cmp.aem-GridColumn--default--4 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-4))';
+            }
+            .cmp.aem-GridColumn--default--5 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-5))';
+            }
+            .cmp.aem-GridColumn--default--6 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-6))';
+            }
+            .cmp.aem-GridColumn--default--7 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-7))';
+            }
+            .cmp.aem-GridColumn--default--8 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-8))';
+            }
+            .cmp.aem-GridColumn--default--9 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-9))';
+            }
+            .cmp.aem-GridColumn--default--10 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-10))';
+            }
+            .cmp.aem-GridColumn--default--11 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-11))';
+            }
+            .cmp.aem-GridColumn--default--12 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-12))';
+            }
+            .cmp:last-of-type {
+                margin-inline-end: var(--padding-inline);
+            }
+        }
+    }
+  }
+
+  &__backgroundcolor--white{
+      background-color: var(--color-white);
+  }
+}

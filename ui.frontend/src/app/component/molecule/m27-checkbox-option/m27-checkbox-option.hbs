@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="./m27-checkbox-option.scss">
+<script src="./M27CheckboxOption.ts"></script>
+
+
+<div class="m-checkboxOption{{#if disabled}} -isDisabled{{/if}}"
+         data-component="m27-checkbox-option"
+         {{#if scrollComponent}}data-scroll-component{{/if}}
+>
+  {{#if copy}}
+  <label class="m-checkboxOption__label">
+    {{> atom/a11-checkbox }}
+    <div class="m-checkboxOption__copy">
+      {{{ copy }}}
+    </div>
+  </label>
+  {{^}}
+  <label class="m-checkboxOption__label">
+    {{> atom/a11-checkbox }}
+    <span class="m-checkboxOption__textLabel{{#if required}} -isRequired{{/if}}">
+      {{> atom/a07-label text=label size="checkbox"}}
+    </span>
+  </label>
+  {{/if}}
+</div>

@@ -1,0 +1,87 @@
+scrollComponent: true
+
+sitemap:
+  - label: 'Исследуй NEOM'
+    items:
+      - label: 'О NEOM-е'
+        href: '#'
+      - label: 'Наши люди'
+        href: '#'
+
+  - label: 'Регионы'
+    items:
+      - label: 'Trojena'
+        href: '#'
+      - label: 'Oxagon'
+        href: '#'
+      - label: 'The Line'
+        href: '#'
+
+  - label: 'Секторы'
+    items:
+      - label: 'Проектирование и строительство'
+        href: '#'
+      - label: 'Образование'
+        href: '#'
+      - label: 'Энергия'
+        href: '#'
+      - label: 'Развлечения и культура'
+        href: '#'
+      - label: 'Финансовые сервисы'
+        href: '#'
+      - label: 'Еда'
+        href: '#'
+      - label: 'Здоровье, Благосостояние и БиоТех'
+        href: '#'
+      - label: 'Производство'
+        href: '#'
+      - label: 'Медиа'
+        href: '#'
+      - label: 'Мобильность'
+        href: '#'
+      - label: 'Спорт'
+        href: '#'
+      - label: 'Технологии и цифровизация'
+        href: '#'
+      - label: 'Туризм'
+        href: '#'
+      - label: 'Вода'
+        href: '#'
+
+  - label: 'Будь частью NEOM-а'
+    items:
+      - label: 'Инвестируй'
+        href: '#'
+      - label: 'Начни бизнес'
+        href: '#'
+      - label: 'Стань поставщиком'
+        href: '#'
+      - label: 'Партнеры'
+        href: '#'
+      - label: 'Работа'
+        href: '#'
+
+  - label: 'Новости и соцсети'
+    items:
+      - label: 'Новости'
+        href: '#'
+      - label: 'Пресс-релизы'
+        href: '#'
+      - label: 'Медиа Галерея'
+        href: '#'
+social:
+  items: 'import!../../../molecule/m12-social/data/tonomus.yaml'
+
+marginalia:
+  items:
+    - label: 'Политика приватности'
+      href: 'privacy-policy.html'
+      target: '_blank'
+    - label: 'Условия использования'
+      href: 'terms-of-use.html'
+      target: '_blank'
+    - label: 'Политика Cookie'
+      href: 'cookie-policy.html'
+      target: '_blank'
+
+copyrightNotice: '© 2022 NEOM'

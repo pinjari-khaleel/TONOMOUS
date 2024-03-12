@@ -1,0 +1,7 @@
+.b-modal {
+  &__editorPreview {
+    @include container;
+
+    background: var(--color-white);
+  }
+}

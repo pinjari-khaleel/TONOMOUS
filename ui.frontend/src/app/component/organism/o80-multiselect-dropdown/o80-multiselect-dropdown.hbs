@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="./o80-multiselect-dropdown.scss">
+<script src="./O80MultiselectDropdown.ts"></script>
+
+
+<div class="o-multiselectDropdown" data-component="o80-multiselect-dropdown" {{#if
+  scrollComponent}}data-scroll-component{{/if}} {{#if titleInEnglish}}data-title-in-english="{{titleInEnglish}}" {{/if}}
+  {{#with id}}id="{{this}}" {{/with}} data-options-selected-placeholder="{{@root.i18n.optionsSelected}}">
+
+  <fieldset class="o-multiselectDropdown__fieldset" {{#if validate}} data-validate="{{toJson validate}}" {{/if}} {{#if
+    blockValidation}} data-block-validation {{/if}} {{#with id}}id="{{this}}" {{/with}}>
+
+    <div class="o-multiselectDropdown__container">
+      <div class="o-multiselectDropdown__innerContainer">
+
+        <div class="o-multiselectDropdown__legend">
+          {{#if legend}}
+          {{> atom/a26-fieldset-legend legend=legend.text variant=legend.variant required=required}}
+          {{/if}}
+        </div>
+
+        <button class="o-multiselectDropdown__valueWrapper" type="button" data-pseudo-select>
+          <div class="o-multiselectDropdown__value" data-selected-options> </div>
+          <div class="o-multiselectDropdown__placeholder" data-placeholder>
+            {{#if placeholder}} {{placeholder}} {{/if}}
+          </div>
+          <div class="o-multiselectDropdown__chevron" data-chevron>{{> atom/a02-icon name="chevron-down" }}</div>
+        </button>
+
+        <ul class="o-multiselectDropdown__options" data-options>
+
+          {{#unless blockValidation}}
+          {{#each items}}
+          <li class="o-multiselectDropdown__option" data-option>
+            {{> molecule/m27-checkbox-option }}
+          </li>
+          {{/each}}
+          {{/unless}}
+
+
+        </ul>
+
+        <div class="o-multiselectDropdown__error">
+          {{> atom/a25-form-error }}
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+</div>

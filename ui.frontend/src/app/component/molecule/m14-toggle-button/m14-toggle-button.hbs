@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="./m14-toggle-button.scss">
+<script src="./M14ToggleButton.ts"></script>
+
+<button
+  class="m-toggleButton {{#if variant}} -{{variant}}{{/if}}"
+  data-component="m14-toggle-button">
+  <span class="m-toggleButton__label">{{> atom/a07-label text=label}}</span>
+  <span class="m-toggleButton__chevron">{{> atom/a02-icon name="chevron-down" }}</span>
+</button>

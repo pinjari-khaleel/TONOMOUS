@@ -1,0 +1,11 @@
+.o-radioGroup {
+  @include fieldsetStyling();
+
+  &__radioGroupCopy {
+    @include type("body", "small");
+
+    a {
+      color: var(--color-dark-gold);
+    }
+  }
+}

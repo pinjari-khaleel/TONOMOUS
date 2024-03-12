@@ -1,0 +1,129 @@
+items:
+  #  Layer 1
+  - heading:
+      text: Energy
+      size: h5
+    icon: energy
+    copy:
+      <p>NEOM will be the first at-scale region powered by 100 percent renewable energy. NEOM’s
+      geographical location provides unrivalled solar and wind potential that will be harnessed to
+      create the world’s most innovative energy system, including hydrogen as one of the most
+      important energy carriers of the future. Through the latest advances in technology NEOM will
+      architect a low-cost and carbon-positive energy ecosystem, and develop energy-intensive
+      industries with potential to front global trends.</p>
+    image:
+      alt: Energy
+      src: 'image/c17-sectors/energy.jpg'
+    eventTracking:
+      event: 'Sector Click'
+      sector:
+        titleInEnglish: Energy
+        title: Energy
+    list:
+      heading:
+        text: 'Including:'
+        size: h6
+      buttons:
+        - label: Aluminum busbars
+        - label: Brace for crossarm
+        - label: Cluminum busbars
+        - label: Dluminum busbars
+        - label: Eluminum busbars
+        - label: Fluminum busbars
+    buttons:
+      heading:
+        text: Ready to be a supplier?
+        size: large
+      items:
+        - label: Register
+          theme: gold
+          size: small
+        - label: contact us
+          theme: white
+          size: small
+
+  #  Layer 2/3
+  - backButtonLabel: Energy
+    heading:
+      text: Water
+      size: h5
+    copy:
+      '<p>A fully renewable and sustainable water system incorporating cutting-edge, carbon-neutral
+      “solar dome” technology will provide low-cost water to residents. All wastewater will be
+      recycled and byproducts redirected for agricultural and Industry applications. NEOM will offer
+      unprecedented efficiency in the production and cost of water not only on a regional scale, but
+      on a global scale, with the goal of providing zero-cost water solutions.</p>'
+    eventTracking:
+      event: 'Sector Click'
+      sector:
+        titleInEnglish: Water
+        title: Water
+    list:
+      buttons:
+        - label: Aluminum busbars
+          nestedModalId: nextModalId1
+        - label: Brace for crossarm
+          nestedModalId: nextModalId2
+        - label: Cluminum busbars
+          nestedModalId: nextModalId3
+        - label: Dluminum busbars
+        - label: Eluminum busbars
+        - label: Fluminum busbars
+    buttons:
+      heading:
+        text: Ready to be a supplier?
+        size: large
+      items:
+        - label: Register
+          theme: gold
+          size: small
+        - label: contact us
+          theme: white
+          size: small
+
+  #  Layer 4
+  - backButtonLabel: Energy
+    heading:
+      text: Mobility
+      size: h5
+    copy:
+      <p>Residents will be encouraged to walk and cycle, while also having access to state of the
+      art public transit and eVTOLs. Industry will rely on an innovative freight rail network,
+      autonomous shuttles and delivery drones and robots for goods distribution. NEOM Port will be
+      the world’s first fully automated port and the most technologically advanced. A dedicated
+      airport and airline will service business travel needs and the region’s emerging tourism
+      sector.</p>
+    eventTracking:
+      event: 'Sector Click'
+      sector:
+        titleInEnglish: Mobility
+        title: Mobility
+    buttons:
+      heading:
+        text: Ready to be a supplier?
+        size: large
+      items:
+        - label: Register
+          theme: gold
+          size: small
+        - label: contact us
+          theme: white
+          size: small
+
+  - heading:
+      text: Entertainment and culture
+      size: h5
+    icon: entertainment-culture
+    copy:
+      <p>NEOM will redefine cultural and entertainment experiences, harnessing advanced technologies
+      and our unique environments to deliver immersive, hyper-personalised attractions and
+      programming unlike anything before. Developed and debuted at NEOM, these experiences,
+      attractions and events will be exported and showcased globally.</p>
+    image:
+      alt: Entertainment & culture
+      src: 'image/c17-sectors/entertainment-culture.jpg'
+    eventTracking:
+      event: 'Sector Click'
+      sector:
+        titleInEnglish: Entertainment and culture
+        title: Entertainment and culture

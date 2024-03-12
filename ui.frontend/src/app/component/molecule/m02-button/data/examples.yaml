@@ -1,0 +1,32 @@
+- icon: arrow-left
+  eventTracking:
+    ctaId: 'CTA id'
+
+- icon: arrow-left
+  iconAlignment: left
+  label: Button
+
+- label: Button
+
+- icon: arrow-right
+  label: Button
+
+- icon: play-outline
+  label: Button
+
+- icon: arrow-down
+
+- icon: arrow-up
+
+- icon: arrow-right
+
+- icon: close
+  variant: close
+
+- icon: play-solid
+  variant: play
+
+- icon: arrow-right
+  disabled: true
+
+- icon: expand

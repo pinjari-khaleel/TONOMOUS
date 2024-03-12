@@ -1,0 +1,105 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:title": "Tonomus",
+    "sling:resourceType": "tonomus/components/structure/tonomus-base-page-v2",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "component": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:title": "Peter Watson",
+        "imageFromPageImage": "false",
+        "fileReference": "/content/dam/tonomus/components/c86-people-carousel/v2/PeterWatson.jpg",
+        "pretitle": "Chief Executive Officer",
+        "titleFromPage": "false",
+        "alt": "Peter Watson image",
+        "jcr:description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dolor id metus finibus ornare. Sed quis lacus ac ipsum pharetra rutrum fermentum sed arcu. Nunc vehicula, sapien vitae accumsan placerat, mi augue finibus felis, accumsan bibendum purus ipsum ac nulla.  </p>\r\n<p> </p>\r\n<p>Quisque et sapien urna. Ut vitae dapibus ante. Cras venenatis eget dolor eu sagittis. Integer lacinia mattis mauris at condimentum. Integer non elit id dui consectetur facilisis. Nullam arcu eros, blandit non purus sed, fermentum maximus metus. Morbi vehicula, arcu sit amet feugiat varius, lacus dui auctor sem, vitae suscipit ante urna a libero. Nam consequat malesuada accumsan. Cras turpis nisl, tristique ac interdum ut, venenatis at tellus. Sed fringilla at augue ut eleifend.</p>\r\n",
+        "descriptionFromPage": "false",
+        "sling:resourceType": "tonomus/components/content/components/profile/v2/profile",
+        "isDecorative": "false",
+        "textIsRich": "true",
+        "altValueFromDAM": "false",
+        "cq:responsive": {
+          "jcr:primaryType": "nt:unstructured",
+          "default": {
+            "jcr:primaryType": "nt:unstructured",
+            "offset": "0",
+            "width": "4"
+          }
+        },
+        "actions": {
+          "jcr:primaryType": "nt:unstructured",
+          "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "src": "/content/dam/tonomus/components/social-media-images/LinkedIn New 1.png",
+            "link": "/content/tonomus/en-us",
+            "text": "LinkedIn",
+            "linkTarget": "_self"
+          },
+          "item1": {
+            "jcr:primaryType": "nt:unstructured",
+            "src": "/content/dam/tonomus/components/tonomus-header-logo/tonomus-logo.svg",
+            "link": "/content/tonomus/en-us",
+            "text": "Tonomus",
+            "linkTarget": "_self"
+          }
+        }
+      },
+      "component-nodescription-noctas": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:title": "Yousef Khalili",
+        "imageFromPageImage": "false",
+        "fileReference": "/content/dam/tonomus/components/c86-people-carousel/v2/YousefKhalili_NEW.jpg",
+        "pretitle": "Chief Executive Officer",
+        "titleFromPage": "false",
+        "alt": "Yousef Khalili image",
+        "descriptionFromPage": "false",
+        "sling:resourceType": "tonomus/components/content/components/profile/v2/profile",
+        "isDecorative": "false",
+        "textIsRich": "true",
+        "altValueFromDAM": "false",
+        "cq:responsive": {
+          "jcr:primaryType": "nt:unstructured",
+          "default": {
+            "jcr:primaryType": "nt:unstructured",
+            "offset": "0",
+            "width": "4"
+          }
+        }
+      },
+      "component-ctawithouticon": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:title": "Joseph Bradley",
+        "imageFromPageImage": "false",
+        "fileReference": "/content/dam/tonomus/components/c86-people-carousel/v2/JosephBradley.jpg",
+        "pretitle": "Chief Executive Officer",
+        "titleFromPage": "false",
+        "jcr:description": "<p><span class=\"label-1\">Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit. Mauris sit amet dolor id metus finibus ornare. Sed quis lacus ac ipsum pharetra rutrum fermentum sed arcu. Nunc vehicula, sapien vitae accumsan placerat, mi augue finibus felis, accumsan bibendum purus ipsum ac nulla.  </p>\r\n<p>Quisque et sapien urna. Ut vitae dapibus ante. Cras venenatis eget dolor eu sagittis. Integer lacinia mattis mauris at condimentum. Integer non elit id dui consectetur facilisis. Nullam arcu eros, blandit non purus sed, fermentum maximus metus. Morbi vehicula, arcu sit amet feugiat varius, lacus dui auctor sem, vitae suscipit ante urna a libero. Nam consequat malesuada accumsan. Cras turpis nisl, tristique ac interdum ut, venenatis at tellus. Sed fringilla at augue ut eleifend.</p>\r\n",
+        "linkTarget": "_self",
+        "descriptionFromPage": "false",
+        "sling:resourceType": "tonomus/components/content/components/profile/v2/profile",
+        "isDecorative": "true",
+        "textIsRich": "true",
+        "cq:responsive": {
+          "jcr:primaryType": "nt:unstructured",
+          "default": {
+            "jcr:primaryType": "nt:unstructured",
+            "offset": "0",
+            "width": "4"
+          }
+        },
+        "actions": {
+          "jcr:primaryType": "nt:unstructured",
+          "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "link": "https://www.google.com",
+            "text": "LinkedIn",
+            "linkTarget": "_self"
+          }
+        }
+      }
+    }
+  }
+}

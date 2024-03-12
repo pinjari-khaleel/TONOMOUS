@@ -1,0 +1,48 @@
+<section data-sly-use.search="com.tonomus.core.slingmodels.components.v2.search.SearchModel" id="${search.id}"
+  class="cmp-search" role="search" data-cmp-is="search"
+  data-sly-use.internalLinkTemplate="/apps/tonomus/components/common/link-internal.html"
+  data-sly-use.externalLinkTemplate="/apps/tonomus/components/common/link-external.html">
+  <div class="cmp-search__info" aria-live="polite" role="status"></div>
+  <div class="cmp-search__content">
+    <form class="cmp-search__form" data-search-locale="${search.acceptLanguage}" method="get" action="${search.actionPath}" autocomplete="off">
+      <div class="cmp-search__field">
+        <span class="cmp-search__loading-indicator" data-cmp-hook-search="loadingIndicator"></span>
+        <textarea class="cmp-search__input" value="" data-cmp-hook-search="input" type="text" name="fulltext"
+          placeholder="${'Start typing to search' @ i18n}" role="combobox" aria-autocomplete="list" aria-haspopup="true"
+          aria-invalid="false" aria-expanded="false"></textarea>
+      </div>
+    </form>
+    <div data-sly-test="${search.suggestedKeywords}" class="cmp-search__keywords">
+      <div class="cmp-search__keywords--key">
+        <span class="cmp-search__keywords--key-title">suggested keywords:</span>
+      </div>
+      <div class="cmp-search__keywords--values" data-sly-list=${search.suggestedKeywords}>
+        <div class="cmp-search__keyword">
+          <span class="cmp-search__keyword--value" data-value="${item.keyword}">${item.keyword}</span>
+          <sly data-sly-call="${internalLinkTemplate.internalLink}"></sly>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cmp-search__search-results">
+    <div class="cmp-search__search-results--title" data-search-resultmessage="${search.resultMessage}" data-search-noresultmessage="{search.noNesultMessage}">
+      <span class="cmp-search__search-results--title-key"></span>
+    </div>
+    <div class="cmp-search__search-results--container">
+      <div class="cmp-search__search-results--content">
+        <div class="cmp-search__search-result">
+          <div class="cmp-search__search-result--title">
+            <a href="/" target="_self" class="cmp-search__search-result--title-link">Neom's Oxagon announces annual
+              kingdom-wide hackathon</a>
+            <sly data-sly-call="${internalLinkTemplate.internalLink}"></sly>
+            <sly data-sly-call="${externalLinkTemplate.externalLink}"></sly>
+          </div>
+          <span class="cmp-search__search-result--description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor.</span>
+          <hr class="cmp-search__search-result--divider">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

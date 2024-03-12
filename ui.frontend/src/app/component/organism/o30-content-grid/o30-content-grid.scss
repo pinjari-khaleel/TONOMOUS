@@ -1,0 +1,126 @@
+.o-contentGrid {
+  --component-grid-areas: none;
+  --component-grid-columns: repeat(12, minmax(0, 1fr));
+
+  background-color: var(--component-background-color);
+  color: var(--component-text-color);
+  overflow: hidden;
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+
+  .a-video,
+  .a-video__video {
+    position: relative;
+  }
+
+  &__container {
+    @include container();
+
+    -webkit-transform: translateZ(0);
+    grid-gap: var(--grid-gap);
+    grid-template-areas: var(--component-grid-areas);
+    grid-template-columns: var(--component-grid-columns);
+  }
+
+  &__item {
+    align-self: stretch;
+    margin: 0 0 var(--grid-gap);
+    position: relative;
+
+    &.-start {
+      text-align: start;
+    }
+
+    &.-center {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+      text-align: center;
+    }
+
+    &.-end {
+      justify-content: end;
+      text-align: end;
+
+      .m-figure {
+        margin-inline-start: auto;
+      }
+    }
+
+    &.-top {
+      align-self: start;
+    }
+
+    &.-middle {
+      align-self: center;
+    }
+
+    &.-bottom {
+      align-self: end;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 50px -10px -10px;
+
+    .m-button {
+      margin: 10px;
+    }
+
+    &.-pillar {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--grid-gap);
+    }
+
+    .m-button__container {
+      width: 235px;
+      height: 55px;
+    }
+
+    .o-contentGrid__item.-center & {
+      justify-content: center;
+    }
+
+    .o-contentGrid__item.-end & {
+      justify-content: flex-end;
+    }
+  }
+
+  &.-noPaddingBottom {
+    padding-bottom: 0;
+  }
+
+  &.-noPaddingTop {
+    padding-top: 0;
+  }
+
+  @import "./style/grid-layout.scss";
+
+  @include respond-to("MEDIUM") {
+    &__container {
+      display: grid;
+      min-height: 400px; // disable for noPadding scenarios?
+    }
+
+    &__buttons {
+      margin: 40px -10px -10px;
+
+      .m-button {
+        margin: 10px;
+      }
+
+      &.-pillar {
+        grid-template-columns: repeat(2, 310px);
+      }
+    }
+
+    &__item {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,308 @@
+.b-peopleCarousel {
+  --component-background-color: transparent;
+  --component-text-color: var(--color-tonomus-purple);
+  --card-size: 88vw;
+  --card-spacing: 4vw;
+
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+  color: var(--component-text-color);
+  overflow: hidden;
+  background-color: var(--component-background-color);
+
+  &__header {
+    padding-inline: 30px;
+    margin-block-end: 32px;
+    text-align: left;
+
+    [dir="rtl"] & {
+      text-align: right;
+    }
+  }
+
+  .m-imagePagination {
+    display: none;
+  }
+
+  &__content {
+    position: relative;
+    padding-bottom: 300px;
+  }
+
+  &__carousel {
+    position: relative;
+    white-space: nowrap;
+    padding-inline: 30px;
+    margin-inline: 11vw;
+    display: inline-flex;
+  }
+
+  &__carouselItem {
+    display: inline-block;
+    transform-origin: top center;
+    width: calc(var(--card-size) - 3px);
+    white-space: normal;
+
+    .m-businessCard {
+      padding-inline: var(--card-spacing);
+
+      &__content {
+        margin-block-start: 113px;
+        width: 100%;
+      }
+
+      &__image {
+        img {
+          filter: grayscale(1);
+        }
+      }
+
+      &__socialLink {
+        align-self: baseline;
+      }
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: calc(var(--card-size) + 180px);
+    left: 50vw;
+    right: auto;
+    transform: translateX(-50%);
+
+    &.-isHidden {
+      display: none;
+    }
+  }
+
+  //768px up
+  @include respond-to(MEDIUM) {
+    --card-size: 300px;
+    --card-spacing: 12px;
+    padding-inline: 31px;
+    max-width: 1440px;
+    overflow: visible;
+    display: grid;
+    margin-inline: auto;
+
+    &__header {
+      padding-inline: 0;
+      margin-block-end: 10px;
+    }
+
+    &__carousel {
+      margin-inline: 30px;
+    }
+
+    .m-imagePagination {
+      display: block;
+    }
+
+    &__carouselItem {
+      width: var(--card-size);
+
+      .m-businessCard {
+        &__content {
+          margin-block-start: 38.46px;
+          margin-inline-start: 0;
+          width: 100%;
+          max-width: 446px;
+        }
+      }
+    }
+
+    &__controls {
+      position: absolute;
+      top: calc(var(--card-size) + 130px);
+      right: 40px;
+      transform: translateX(110px);
+
+      [dir="rtl"] & {
+        right: auto;
+        left: 180px;
+      }
+    }
+  }
+
+  @include respond-to(LARGE) {
+    padding-inline: 80px;
+
+    &__header {
+      padding-inline: 0;
+    }
+
+    &__controls {
+      transform: translateX(-125px);
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    &__controls {
+      top: calc(var(--card-size) + 184px);
+    }
+  }
+
+  @include theme("tonomus") {
+    --component-heading-color: var(--color-tonomus-purple);
+    --component-highlight-color: var(--color-tonomus-purple);
+    --grid-gap: 10px;
+    --card-spacing: 24px;
+
+    &__carouselItem {
+      .m-businessCard {
+        padding-inline: calc(var(--card-spacing) / 2);
+        &__content {
+          .a-heading {
+            font-family: "Bukra";
+            font-size: 2.2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.192rem;
+            text-transform: uppercase;
+          }
+        }
+        &__wrappedInformation {
+          margin-block-start: 16px;
+          gap: 16px;
+        }
+        &__jobWrapper {
+          font-family: "Bukra";
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+          letter-spacing: 0.64px;
+        }
+        &__biography {
+          font-family: "Bukra Alt";
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%;
+          margin-block-start: 1.6rem;
+        }
+      }
+    }
+
+    .m-button.-primary {
+      --button-background-color-hover: var(--color-tonomus-purple);
+      --button-text-color-hover: var(--color-white);
+    }
+    .m-button .ripple {
+      background: var(--color-tonomus-purple);
+    }
+
+    &__controls {
+      .o-sliderControls {
+        grid-gap: 16px;
+        width: 128px;
+        .m-button.-primary {
+          --button-size: 56px;
+          --button-icon-size: 21px;
+          --button-border-radius: 50%;
+          --button-background-color: var(--color-tonomus-purple);
+          --button-border-color: var(--color-tonomus-purple);
+          --button-text-color: var(--color-white);
+
+          &:disabled {
+            --button-background-color: var(--color-tonomus-purple);
+            --button-background-color-disabled: var(--color-tonomus-purple);
+            --button-border-color-disabled: var(--color-tonomus-purple);
+            --button-text-color-disabled: var(--color-white);
+            .m-button__container {
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 368px) and (max-width: 767px) and (orientation: landscape) {
+  .cmp-c86-people-carousel,
+  html[data-theme="tonomus"] .cmp-c86-people-carousel {
+    .b-peopleCarousel__carousel {
+      margin-inline-start: 30px;
+      padding-inline-start: 20px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  .cmp-c86-people-carousel,
+  html[data-theme="tonomus"] .cmp-c86-people-carousel {
+    .b-peopleCarousel__carousel {
+      margin-inline-start: 0px;
+      padding-inline-start: 20px;
+    }
+  }
+}
+
+@media (min-width: 368px) and (max-width: 1023px) and (orientation: landscape) {
+  [dir="rtl"] .bu-container .b-sectionContainer .cmp-c86-people-carousel,
+  html[data-theme="tonomus"][dir="rtl"] .bu-container .b-sectionContainer .cmp-c86-people-carousel {
+    .b-peopleCarousel__controls {
+      top: calc(var(--card-size) + 100px);
+      right: auto;
+      left: 180px;
+    }
+  }
+
+  .cmp-c86-people-carousel,
+  html[data-theme="tonomus"] .cmp-c86-people-carousel {
+    .b-peopleCarousel {
+      --card-size: 180px;
+    }
+
+    .b-peopleCarousel__controls {
+      transform: translateX(160px);
+      top: calc(var(--card-size) + 115px);
+
+      [dir="rtl"] & {
+        right: auto;
+        left: 180px;
+      }
+
+      .o-sliderControls {
+        width: 80px;
+        .m-button.-primary {
+          --button-size: 40px;
+        }
+      }
+
+      .b-peopleCarousel__content
+        .b-peopleCarousel__carousel
+        .b-peopleCarousel__carouselItem
+        .m-businessCard__content {
+        margin-block-start: 24px;
+      }
+    }
+
+    .b-peopleCarousel__carouselItem .m-businessCard__content {
+      margin-block-end: 20px;
+      width: calc(80vw);
+      padding-block-end: 10px;
+      margin-block-start: 24px;
+    }
+
+    .b-peopleCarousel__carouselItem .m-businessCard__content .a-heading {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    .b-peopleCarousel__carouselItem .m-businessCard__socialLink {
+      --icon-size: 12px;
+      height: 24px;
+      width: 24px;
+    }
+
+    .b-peopleCarousel__carouselItem .m-businessCard__jobWrapper {
+      font-size: 1.2rem;
+    }
+
+    .b-peopleCarousel__carouselItem .m-businessCard__wrappedInformation {
+      margin-block-start: 5px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+variant: 'single'
+ordered: false
+
+header:
+  heading:
+    text: 'Criteria for Photography'
+    size: 'h5'
+  copy:
+    size: 'medium'
+    content:
+      '<p>When we choose photography, three simple criteria ensure a consistent style across many
+      topics of conversation. These criteria should be adhered to whether the content is abstract,
+      metaphorical, portraiture, corporate or lifestyle.<br><br>If your selection answers these
+      questions, you have found an image that’s right for NEOM:</p>'
+
+items:
+  - '<p>Does the photo feel aspirational?</p>'
+  - '<p>Does it feel remarkable?</p>'
+  - '<p>Does the image feel real, not artificial or fake?</p>'
+  - '<p> Does it communicate a simple, appealing and uncluttered message?</p>'

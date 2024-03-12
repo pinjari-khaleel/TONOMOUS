@@ -1,0 +1,49 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.headingTemplagte="/apps/tonomus/components/content/atoms/a03-heading.html"
+    data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+    data-sly-use.keyCtaList="com.tonomus.core.slingmodels.components.v1.KeyCtaListModel"
+></sly>
+
+
+<section class="b-keyCtaList"
+         data-component="c88-key-cta-list"
+         data-sly-attribute.id="${commonComponentModel.anchorId}"
+         data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+         style="${commonComponentModel.padding.styleInline @ context='styleString'}"
+         data-lazy-component
+>
+  <div class="b-keyCtaList__content">
+
+    <sly data-sly-test="${keyCtaList.heading.text}"
+         data-sly-call="${headingTemplagte.heading @ headingModel=keyCtaList.heading}">
+    </sly>
+
+    <div class="b-keyCtaList__text s-content" data-list-text
+         data-sly-test="${keyCtaList.text}">
+      ${keyCtaList.text @ context='html'}
+    </div>
+  </div>
+
+  <ul class="b-keyCtaList__list" data-sly-list.item="${keyCtaList.list}">
+    <li class="b-keyCtaList__listItem">
+      <button class="b-keyCtaList__cta" data-cta-item
+              data-sly-element="${item.href && 'a'}"
+              data-sly-attribute.href="${item.href}"
+              data-sly-attribute.target="${item.href && item.target}">
+        <div class="b-keyCtaList__ctaLabel">
+          <span>${item.text @ context='text'}</span>
+          <sly data-sly-test="${item.icon}"
+               data-sly-call="${iconTemplate.icon @ name=item.icon}">
+          </sly>
+        </div>
+        <div class="b-keyCtaList__ctaDescription" data-sly-test="${item.description}">
+          ${item.description @ context='text'}
+        </div>
+      </button>
+    </li>
+  </ul>
+</section>

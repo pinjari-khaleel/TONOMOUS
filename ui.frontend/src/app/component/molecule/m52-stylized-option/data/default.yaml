@@ -1,0 +1,8 @@
+type: radio
+name: category_interest
+value: 'food & drink'
+label: 'Food & drink'
+id: category_interest
+image:
+  alt: 'Alt'
+  src: 'image/c01-hero/teaser-still.jpg'

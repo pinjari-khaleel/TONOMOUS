@@ -1,0 +1,58 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Fri Jul 30 2021 11:35:57 GMT+0600",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:mixinTypes": [
+      "mix:versionable"
+    ],
+    "changefreq": "weekly",
+    "jcr:createdBy": "admin",
+    "jcr:title": "c19-test",
+    "cq:lastReplicationAction": "Deactivate",
+    "jcr:versionHistory": "156cac31-3828-4469-874f-68bcf98477d0",
+    "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+    "cq:lastReplicatedBy": "anas.afadar@mediamonks.com",
+    "jcr:predecessors": [
+      "7d54d583-aea1-4667-8dee-ef00e2e28ee4"
+    ],
+    "jcr:created": "Fri Jul 30 2021 11:35:57 GMT+0600",
+    "cq:lastReplicated": "Mon Jun 21 2021 08:08:39 GMT+0000",
+    "cq:lastModified": "Mon Aug 23 2021 15:15:11 GMT+0600",
+    "siteSection": "home",
+    "jcr:baseVersion": "7d54d583-aea1-4667-8dee-ef00e2e28ee4",
+    "jcr:isCheckedOut": true,
+    "jcr:uuid": "2e5fd1ff-e102-4d71-b81d-9a9bbf2dfd8d",
+    "sling:resourceType": "neom/components/structure/page",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c19_map": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Sun Aug 22 2021 16:06:39 GMT+0600",
+          "jcr:lastModified": "Mon Aug 23 2021 15:15:11 GMT+0600",
+          "sling:resourceType": "neom/components/content/components/c19-map/v1/c19-map",
+          "lottieDesktop": {
+            "jcr:primaryType": "nt:unstructured",
+            "loop": "true",
+            "assetsFolderPath": "/content/dam/neom/components/c19-map-assets/neom_statichtml_map_fhd_en",
+            "autoplay": "false"
+          },
+          "lottieMobile": {
+            "jcr:primaryType": "nt:unstructured",
+            "loop": "true",
+            "assetsFolderPath": "/content/dam/neom/components/c19-map-assets/neom_statichtml_map_mobile_en",
+            "autoplay": "false"
+          }
+        }
+      }
+    }
+  }
+}

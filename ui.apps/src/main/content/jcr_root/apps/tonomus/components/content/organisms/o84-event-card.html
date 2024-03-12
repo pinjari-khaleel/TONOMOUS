@@ -1,0 +1,30 @@
+<sly data-sly-template.eventCard="${ @ eventCardModel='Event card model. CardSliderBaseCardModel.java'}"
+     data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+     data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html">
+
+  <div class="o-eventCard"
+       data-component="o84-event-card"
+       data-sly-attribute.data-scroll-component="${eventCardModel.scrollComponent}"
+       data-sly-attribute.id="${eventCardModel.anchorId}"
+       data-sly-attribute.data-modal="${eventCardModel.modal.toJson}"
+  >
+    <sly data-sly-call="${imageTemplate.image @ imageModel=eventCardModel.image,
+  disableTransition=true}"></sly>
+
+    <div class="o-eventCard__content">
+      <time class="o-eventCard__datetimeWrapper">
+        <sly data-sly-call="${iconTemplate.icon @ name='calendar'}"></sly>
+        <div data-sly-test="${eventCardModel.datetime}"
+             class="o-eventCard__datetime">${eventCardModel.datetime @ context='text'}</div>
+      </time>
+
+      <div class="o-eventCard__title">
+        ${eventCardModel.title @context='html'}
+      </div>
+      <sly data-sly-test="${buttonTemplate.button}"
+           data-sly-call="${buttonTemplate.button @ buttonModel=eventCardModel
+    .button}"></sly>
+    </div>
+  </div>
+</sly>

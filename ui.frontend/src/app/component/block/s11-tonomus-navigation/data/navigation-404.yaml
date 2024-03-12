@@ -1,0 +1,27 @@
+scrollComponent: true
+logo:
+  src: './image/logo-tonomus.png'
+
+navigation:
+  main:
+    dropdownLabel: 'Dropdownlabel'
+    backItem:
+      label: 'Go Home'
+      href: './'
+  highlightedLink:
+    label: 'Get in touch'
+    href: '#'
+
+languages:
+  activeLanguageCode: en
+  options:
+    - languageCode: en
+      label: English
+      href: '/homepage.html'
+    - languageCode: nl
+      label: Nederlands
+      href: '/homepage.html'
+    - languageCode: ar
+      shortLabel: عربي
+      label: العربية
+      href: '/homepage-ar.html'

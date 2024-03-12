@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="C59 Step"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[tonomus.author]">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <general
+          jcr:primaryType="nt:unstructured"
+          jcr:title="General"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <headingText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter the Heading Text."
+                      fieldLabel="Heading Text"
+                      name="./header/heading/text"
+                      required="{Boolean}true"/>
+                  <headingWeight
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Size/Weight."
+                      fieldLabel="Heading Size"
+                      emptyOption="{Boolean}true"
+                      name="./header/heading/size">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingWeight>
+                  <headingElement
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Element Size/Weight."
+                      fieldLabel="Heading Element Size/Weight"
+                      emptyOption="{Boolean}true"
+                      name="./header/heading/element">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingElement>
+                  <eyebrowText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter the Eyebrow Text."
+                      fieldLabel="Eyebrow Text"
+                      name="./header/eyebrow/text"/>
+                  <alignment
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select header text alignment."
+                      emptyOption="{Boolean}true"
+                      fieldLabel="Alignment"
+                      name="./header/alignment">
+                    <items jcr:primaryType="nt:unstructured">
+                      <left
+                          jcr:primaryType="nt:unstructured"
+                          text="Left"
+                          value="left"/>
+                      <center
+                          jcr:primaryType="nt:unstructured"
+                          text="Center"
+                          value="center"/>
+                      <right
+                          jcr:primaryType="nt:unstructured"
+                          text="Right"
+                          value="right"/>
+                    </items>
+                  </alignment>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </general>
+    </items>
+  </content>
+</jcr:root>

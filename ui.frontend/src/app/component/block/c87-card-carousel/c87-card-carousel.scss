@@ -1,0 +1,242 @@
+.b-cardCarousel {
+  --component-text-color: var(--color-white);
+
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+  color: var(--component-text-color);
+  overflow-x: hidden;
+
+  .a-tonomusLine {
+    @include container();
+    display: none;
+  }
+
+  &__container {
+    @include container();
+
+    position: relative;
+  }
+
+  &__header {
+    margin-block-end: 35px;
+
+    .a-heading {
+      text-align: center;
+    }
+  }
+
+  .swiper-wrapper {
+    padding-block-end: 61px;
+  }
+
+  .swiper-slide {
+    --card-size: 268px;
+
+    @include aspect-ratio(268, 312);
+    width: var(--card-size);
+
+    &:nth-child(even) {
+      transform: translateY(-6px);
+    }
+  }
+
+  &__slideButton {
+    @include size(100%);
+    position: absolute;
+    inset: 0;
+    border: none;
+
+    .m-button {
+      --button-size: 80px;
+      position: absolute;
+      inset-inline-end: 13px;
+      inset-block-end: -18px;
+    }
+
+    .a-image {
+      overflow: hidden;
+
+      &__img {
+        transition: transform 0.6s $easeOutExpo;
+      }
+    }
+
+    &[href],
+    &[data-video] {
+      cursor: pointer;
+
+      @include hover() {
+        .a-image {
+          &__img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+
+  &__slideCopy {
+    @include type("body", "medium");
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    width: 100%;
+    font-size: 18px;
+    transform: translateY(100%);
+    text-align: center;
+    color: var(--component-text-color);
+    pointer-events: none;
+  }
+
+  &__controls {
+    @include size(100%, 60px);
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    z-index: zindex($zLayout, content);
+
+    [dir="rtl"] & {
+      inset-inline-start: var(--containerMargin);
+      inset-inline-end: inherit;
+    }
+
+    &.-isHidden {
+      display: none;
+    }
+  }
+
+  .o-sliderControls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .m-button.-primary.-iconOnly.-large {
+      --button-background-color: var(--color-tonomus-green);
+
+      &.-isDisabled {
+        --icon-fill: var(--color-tonomus-green);
+        --button-border-color: var(--color-tonomus-green);
+        --button-background-color: var(--color-tonomus-black-high-emphasis);
+      }
+    }
+  }
+
+  &__footer {
+    padding-block: 40px;
+  }
+
+  @include respond-to(SMALL) {
+    .swiper-wrapper {
+      padding-block-end: 70px;
+    }
+
+    .swiper-slide {
+      --card-size: 290px;
+
+      &:nth-child(even) {
+        transform: translateY(-12px);
+      }
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    .swiper-slide {
+      --card-size: 320px;
+    }
+
+    &__header {
+      margin-block-end: 60px;
+
+      .a-heading {
+        text-align: left;
+      }
+    }
+
+    &__slideButton {
+      .m-button {
+        --button-size: 60px;
+        position: absolute;
+        inset-inline-end: 40px;
+        inset-block-end: 0;
+        transform: translateY(50%);
+      }
+    }
+
+    &__slideCopy {
+      text-align: left;
+    }
+  }
+
+  @include respond-to(LARGE) {
+    &__container {
+      display: grid;
+      column-gap: var(--grid-gap);
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      margin-block-start: 80px;
+    }
+
+    &__header {
+      grid-column: 2 / span 6;
+      margin-block-end: 90px;
+    }
+
+    .swiper-wrapper {
+      padding-block-end: 140px;
+    }
+
+    .swiper-slide {
+      --card-size: 360px;
+
+      @include aspect-ratio(1, 1);
+
+      &:nth-child(even) {
+        transform: translateY(100px);
+      }
+    }
+
+    &__content {
+      grid-column: 2 / span 11;
+    }
+
+    &__footer {
+      grid-column: 2 / span 11;
+    }
+
+    &__controls {
+      justify-content: flex-end;
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    .a-tonomusLine {
+      display: block;
+      margin-inline-start: 40px;
+      margin-block-end: 40px;
+    }
+
+    &__header {
+      margin-block-end: 109px;
+    }
+
+    .swiper-wrapper {
+      padding-block-end: 167px;
+    }
+
+    .swiper-slide {
+      --card-size: 420px;
+
+      &:nth-child(even) {
+        transform: translateY(120px);
+      }
+    }
+  }
+
+  @include respond-to(XXXLARGE) {
+    .a-tonomusLine {
+      display: block;
+      margin-inline-start: 80px;
+      margin-block-end: 80px;
+    }
+  }
+}

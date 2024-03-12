@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="./m53-tile-cta.scss">
+<script src="./M53TileCta.ts"></script>
+
+
+<{{#if href}}a href="{{href}}" {{#if (condition target '===' '_blank' )}}rel="noopener" {{/if}} {{#if
+  target}}target="{{target}}" {{/if}}{{^}}button{{/if}}
+  {{#with aria}} aria-label="{{label}}" aria-controls="{{controls}}"{{/with}}
+               class="m-tileCta"
+               data-component="m53-tile-cta"
+  {{#each data}}data-{{@key}}="{{this}}" {{/each}}
+  {{#unless href}}{{#if disabled}}disabled{{/if}}{{/unless}}
+               title="{{#if title}}{{title}}{{^}}{{label}}{{/if}}"
+  {{#if video}}data-video="{{toJson video}}" {{/if}}
+  {{#if modal}}data-modal="{{toJson modal}}" {{/if}}
+  {{#unless href}}type="button"{{/unless}}>
+  {{#with icon}}{{> atom/a02-icon name=this }}{{/with}}
+  {{#if label}}<span class="m-tileCta__label">{{label}}</span>{{/if}}
+</{{#if href}}a{{^}}button{{/if}}>

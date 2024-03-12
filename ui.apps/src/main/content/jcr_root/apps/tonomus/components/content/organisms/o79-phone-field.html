@@ -1,0 +1,25 @@
+<sly data-sly-template.phoneField="${ @
+     phoneModel = 'the instance of class FormPhone Model with properties'}"
+     data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html"
+     data-sly-use.inputTemplate="/apps/tonomus/components/content/atoms/a14-input.html"
+     data-sly-use.countryDropDownTemplate="/apps/tonomus/components/content/molecules/m41-country-dropdown.html"
+     data-sly-use.formErrorTemplate="/apps/tonomus/components/content/atoms/a25-form-error.html">
+
+  <div class="o-phoneField" data-component="o79-phone-field"
+       data-sly-attribute.id="${phoneModel.id}">
+
+    <div class="o-phoneField__textLabel ${phoneModel.required ? '-isRequired' : ''}">
+      <sly data-sly-call="${labelTemplate.label @ size='small', text=phoneModel.label}"></sly>
+    </div>
+
+    <div class="o-phoneField__container">
+      <sly data-sly-test="${phoneModel.countrySelector.name}"
+           data-sly-call="${countryDropDownTemplate.countryDropDown @ countryDropDownModel=phoneModel.countrySelector}"></sly>
+      <div class="o-phoneField__phoneInput">
+        <sly data-sly-call="${inputTemplate.input @ textModel=phoneModel, type='text'}"></sly>
+        <sly data-sly-call="${formErrorTemplate.formError @ id=phoneModel.id}"></sly>
+      </div>
+    </div>
+  </div>
+
+</sly>

@@ -1,0 +1,34 @@
+type: 'checkboxStylized'
+legend: 'My stylized checkboxes'
+name: 'checkboxStylized'
+id: 'checkboxStylized'
+required: true
+items:
+  - id: 'stylized-option-example-1'
+    label: 'Label example 1 for stylized option'
+    name: 'checkboxStylized'
+    value: foo
+    image:
+      alt: '#'
+      src: 'image/c71-facts-list/2.jpg'
+  - id: 'stylized-option-example-2'
+    label: 'Label example 2 for stylized option'
+    name: 'checkboxStylized'
+    value: bar
+    image:
+      alt: '#'
+      src: 'image/c71-facts-list/1.jpg'
+  - id: 'stylized-option-example-3'
+    label: 'Label example 3 for stylized option'
+    name: 'checkboxStylized'
+    value: baz
+    image:
+      alt: '#'
+      src: 'image/c71-facts-list/4.jpg'
+showDropdownForMultipleChoice:
+  name: 'my-dropdown'
+  label: 'My dropdown'
+  id: 'my-dropdown'
+  titleInEnglish: 'my-dropdown'
+  required: true
+  wide: true

@@ -1,0 +1,21 @@
+image:
+  src: './image/o84-event-card/event-card-1.jpg'
+datetime: "FRIDAY MAY 21, 2023\n07:00 CET"
+title: 'SMART CITIES AND CLOUD TECHNOLOGIES ROUND TABLE HOSTED BY BEVERLY RIDER'
+button:
+  label: 'Learn more'
+  theme: green
+
+modal:
+  image:
+    src: './image/o84-event-card/event-card-1.jpg'
+  heading:
+    text: 'SMART CITIES AND CLOUD TECHNOLOGIES ROUND TABLE HOSTED BY BEVERLY RIDER'
+  copy:
+    'When integrated into society, cognitive technology takes what were previously manual tasks and
+    turns them into opportunities for progress—unburdening humankind, making daily life seamless.'
+  modalButton:
+    label: 'Sign up via meetup'
+    theme: green
+    href: '#'
+    target: '__blank'

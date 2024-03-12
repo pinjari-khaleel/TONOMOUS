@@ -1,0 +1,16 @@
+variant: 'single'
+ordered: false
+
+header:
+  heading:
+    text: 'IMAGE RATIOS'
+    size: 'h5'
+  copy:
+    size: 'medium'
+    content: '<p>These are the 4 different image formats to use on the digital platform:</p>'
+
+items:
+  - '<p>Panoramic 16:9</p>'
+  - '<p>Landscape 3:2</p>'
+  - '<p>Square 1:1</p>'
+  - '<p>Portrait 4:5</p>'

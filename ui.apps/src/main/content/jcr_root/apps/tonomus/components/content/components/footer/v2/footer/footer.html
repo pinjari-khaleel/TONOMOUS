@@ -1,0 +1,40 @@
+<sly data-sly-use.footerModel="com.tonomus.core.slingmodels.components.v2.footer.FooterModelImpl"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.navigationTemplate="navigation.html"
+     data-sly-use.addressTemplate="address.html"
+     data-sly-use.socialMediaTemplate="socialmedia.html"
+     data-sly-use.othersTemplate="others.html"
+     data-sly.set.hasSocialMediaLinks="${footerModel.socialMediaLinks.size > 0}"
+     data-sly.set.hasOtherLinks="${footerModel.otherLinks.size > 0}"
+     data-sly-set.hasContent="${footerModel.items.size > 0 || hasSocialMediaLinks || hasOtherLinks}">
+
+    <sly data-sly-test="${hasContent}">
+        <div class="cmp-footer__gradient-wrapper">
+            <div class="cmp-footer__gradient-wrapper--ellipse19"></div>
+            <div class="cmp-footer__gradient-wrapper--ellipse18"></div>
+            <div class="cmp-footer__gradient-wrapper--ellipse20"></div>
+            <div class="cmp-footer__gradient-wrapper--ellipse16"></div>
+            <div class="cmp-footer__gradient-wrapper--ellipse17"></div>
+            <div class="cmp-footer__gradient-wrapper--ellipse15"></div>
+        </div>
+        <div class="cmp-footer__content-wrapper">
+            <div class="cmp-footer__content">
+                <sly data-sly-test="${footerModel.items.size}"
+                     data-sly-call="${navigationTemplate.nav @ items=footerModel.items}"></sly>
+                <div class="cmp-footer__contact-information">
+                    <sly data-sly-test="${footerModel.addressTitle || footerModel.addressDetail}"
+                         data-sly-call="${addressTemplate.address @ addressTitle=footerModel.addressTitle, addressDetail=footerModel.addressDetail}"></sly>
+                    <sly data-sly-test="${footerModel.socialMediaLinks.size > 0 }"
+                         data-sly-call="${socialMediaTemplate.social @ items=footerModel.socialMediaLinks}"></sly>
+                    <sly data-sly-test="${footerModel.otherLinks.size > 0}"
+                         data-sly-call="${othersTemplate.others @ items=footerModel.otherLinks}"></sly>
+                </div>
+            </div>
+            <div class="cmp-footer__logo"
+                 data-sly-use.logoModel="${'com.tonomus.core.slingmodels.components.v2.IconModelImpl' @ path='/content/dam/tonomus/system-resources/tonomus-text.svg'}">
+                ${logoModel.originalAsSvg @ context='unsafe'}
+            </div>
+        </div>
+    </sly>
+    <sly data-sly-call="${template.placeholder @ isEmpty=!hasContent, classAppend='cmp-footer'}"></sly>
+</sly>

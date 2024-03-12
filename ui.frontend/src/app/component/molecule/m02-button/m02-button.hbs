@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="./m02-button.scss">
+<script src="./M02Button.ts"></script>
+
+
+<{{#if href}}a href="{{href}}" {{#if (condition target '===' '_blank' )}}rel="noopener" {{/if}} {{#if
+  target}}target="{{target}}" {{/if}}{{^}}button{{/if}}
+  {{#with aria}} aria-label="{{label}}" aria-controls="{{controls}}"{{/with}}
+  {{#if eventTracking}}data-event-tracking="{{ toJson eventTracking }}"{{/if}}
+  class="m-button
+    {{#if level}} -{{level}}{{^}} -primary{{/if}}
+    {{#if theme}} -{{theme}}{{^}} -black{{/if}}
+    {{#if size}} -{{size}}{{^}} -large{{/if}}
+    {{#if variant}} -{{variant}}{{/if}}
+    {{#unless label}} -iconOnly{{/unless}}
+    {{#unless icon}} -labelOnly{{/unless}}
+    {{#if iconAlignment}} -{{iconAlignment}}Icon{{/if}}"
+  {{#if (condition variant '===' 'close' )}}data-close-button{{/if}}
+  {{#if (condition variant '===' 'play' )}}data-play-button{{/if}}
+  {{#if (condition variant '===' 'navigation' )}}data-navigation-button{{/if}}
+  data-component="m02-button"
+  {{#each data}}data-{{@key}}="{{this}}" {{/each}}
+  {{#if disabled}}disabled{{/if}}
+  title="{{#if title}}{{title}}{{^}}{{label}}{{/if}}"
+  {{#if video}}data-video="{{toJson video}}" {{/if}}
+  {{#if modal}}data-modal="{{toJson modal}}" {{/if}}
+  {{#if type}}type="{{type}}"{{/if}}>
+  {{#if prefix}}<span class="m-button__prefix">{{ prefix }}</span>{{/if}}
+  <span class="m-button__container" data-button-container>
+    {{#if label}}{{> atom/a07-label size=size text=label}}{{/if}}
+    {{#if icon}}{{> atom/a02-icon name=icon }}{{/if}}
+    {{#if secondIcon}}{{> atom/a02-icon name=secondIcon }}{{/if}}
+  </span>
+  {{#if suffix}}<span class="m-button__suffix">{{ suffix }}</span>{{/if}}
+</{{#if href}}a{{^}}button{{/if}}>

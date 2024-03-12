@@ -1,0 +1,11 @@
+id: 'country-dropdown-1'
+label: 'Select'
+flagsPath: ''
+placeholder: 'Choose one'
+items:
+  - countryCode: 'kz'
+    label: 'Kazakhstan'
+    value: 'kz'
+  - countryCode: 'usa'
+    label: 'USA'
+    value: 'usa'

@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="./a25-form-error.scss">
+<script src="./A25FormError.ts"></script>
+
+
+<div class="a-formError"
+         data-component="a25-form-error"
+         {{#if scrollComponent}}data-scroll-component{{/if}}
+         {{#if id}} id="{{id}}"{{/if}}>
+    <div class="a-formError__message" data-error-message data-for="{{id}}"></div>
+</div>

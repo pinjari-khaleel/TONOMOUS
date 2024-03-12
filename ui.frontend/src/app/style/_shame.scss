@@ -1,0 +1,168 @@
+/*
+  https://csswizardry.com/2013/04/shame-css/
+ */
+
+// OneTrack button cosmetic patches
+:root {
+  #ot-sdk-btn-floating.ot-floating-button {
+    @include size(40px);
+
+    box-sizing: border-box;
+
+    &::before {
+      border-right-color: var(--color-white);
+      right: calc(0em - 6px);
+    }
+
+    &::after {
+      background-color: var(--color-white);
+      color: var(--color-deep-black-90a);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      line-height: 1.2;
+      padding: 5px 10px;
+      text-transform: uppercase;
+    }
+
+    button {
+      padding: 0;
+    }
+  }
+
+  #ot-sdk-btn-floating {
+    .ot-floating-button__front,
+    .ot-floating-button__back {
+      background-color: var(--color-black);
+      border-radius: 50%;
+      transition: background 0.2s ease-in-out;
+
+      svg {
+        transform: scale(0.5725);
+      }
+
+      @include hover() {
+        background-color: var(--color-gold);
+      }
+    }
+  }
+
+  // Positions the reCaptcha pop-up to the center of the screen in Oxagon form. NEOM-3009
+  iframe[src*="recaptcha"] {
+    transform: scale(0.77);
+    transform-origin: 0 0;
+  }
+}
+
+// Sets overflow rule for mailchimp forms. NEOM-2896
+.b-forms {
+  overflow: hidden;
+}
+
+.b-imageText#gold-text {
+  strong {
+    color: var(--color-dark-gold);
+  }
+}
+
+// Set styling for specific accordions on Beach Games page
+#c07-beach-games {
+  --accordion-background-color: var(--color-cream);
+  --accordion-item-background-active-color: var(--color-white);
+  --accordion-item-background-color: rgba(255, 255, 255, 0.7);
+  --accordion-item-border-color: var(--color-black-10);
+  --accordion-item-border-color-expanded: var(--color-black);
+  --accordion-item-chevron-color: var(--color-dark-gold);
+  --accordion-item-text-color: rgba(0, 0, 0, 0.75);
+  --accordion-text-color: var(--color-black);
+}
+
+#c24-hackathon {
+  .m-paragraph__content {
+    color: var(--color-black-75);
+  }
+
+  .m-list__items {
+    margin: 30px 0 0;
+  }
+
+  .m-list__item {
+    color: var(--color-black-75);
+    list-style-type: "//";
+    margin: 0;
+    padding-inline-start: 5px;
+
+    &::marker {
+      color: var(--color-black-75);
+      font-weight: 300;
+    }
+  }
+}
+
+#c24-accelerator {
+  .s-content strong {
+    color: var(--color-dark-gold);
+  }
+}
+
+#c24-gaming,
+#c24-filming {
+  .o-contentGrid.-hasBackgroundImage {
+    height: auto;
+    min-height: 0;
+  }
+
+  .a-eyebrow {
+    color: var(--color-dark-gold);
+  }
+
+  .a-heading,
+  .s-content {
+    color: var(--color-black);
+  }
+
+  .m-componentBackground::after {
+    content: normal !important;
+    opacity: 0 !important;
+  }
+}
+
+#c26-sector-food-accelerator {
+  .a-eyebrow {
+    color: var(--color-gold);
+  }
+}
+
+#c50-fitzhardinge {
+  @media only screen and (min-width: 1240px) and (max-width: 1499px) {
+    .o-expertCardsGrid__expertName {
+      font-size: clamp(28px, calc(18px + 22 * (100vw - 480px) / 960), 50px);
+    }
+  }
+}
+
+#c54-beach-game {
+  mask-position: bottom;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-image: image("../image/clippy.svg");
+
+  .b-countdownTimer__header {
+    margin: 80px 0 0 0;
+  }
+}
+
+#c26-beach-game {
+  mask-position: bottom;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-image: image("../image/clippy.svg");
+}
+
+.o-modal {
+  box-shadow: none;
+  @supports not (min-height: 1dvh) {
+    &.-isOpen {
+      box-shadow: 0px 13px 0px 200px var(--modal-background-color);
+    }
+  }
+}

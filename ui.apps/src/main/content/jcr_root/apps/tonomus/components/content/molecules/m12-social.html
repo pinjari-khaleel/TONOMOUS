@@ -1,0 +1,24 @@
+<sly data-sly-template.socialIcons="${@
+       items='List of social icons with icon, src, target and href use SocialModel class'
+     }"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+>
+  <div class="m-social" data-component="m12-social">
+    <ul class="m-social__items">
+      <sly data-sly-list.item="${items}">
+        <li class="m-social__item" data-social-item>
+          <a class="m-social__link"
+             data-social-link
+             href="${item.href}"
+             data-sly-attribute.aria-label="${item.label}"
+             data-sly-attribute.data-label="${item.label}"
+             data-sly-attribute.rel="${item.target=='_blank' ? 'noopener':'' @context='attributeName'}"
+             data-sly-attribute.target="${item.target}"
+             data-sly-attribute.title="${item.title}">
+            <sly data-sly-call="${iconTemplate.icon  @ name=item.icon}"></sly>
+          </a>
+        </li>
+      </sly>
+    </ul>
+  </div>
+</sly>

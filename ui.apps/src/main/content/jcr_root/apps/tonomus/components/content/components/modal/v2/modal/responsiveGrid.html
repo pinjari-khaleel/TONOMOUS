@@ -1,0 +1,17 @@
+<template data-sly-template.responsiveGrid="${ @ container}">
+    <div id="${container.id}"
+         class="cmp-modal__container"
+         aria-label="${container.accessibilityLabel}"
+         role="${container.roleAttribute}"
+         style="${container.backgroundStyle @ context='styleString'}">
+		<div class="cmp-modal__backdrop"></div>
+    	<div class="cmp-modal__content">
+			<button class="cmp-modal__close-button">
+				<sly data-sly-use.iconModel="${'com.tonomus.core.slingmodels.components.v2.IconModelImpl' @ path='/content/dam/tonomus/system-resources/close.svg'}">
+					<span>${iconModel.originalAsSvg ? iconModel.originalAsSvg : 'X' @ context='unsafe'}</span>
+            	</sly>
+			</button>
+			<sly data-sly-resource="${resource @ resourceType='wcm/foundation/components/responsivegrid'}"></sly>
+    	</div>         
+    </div>
+</template>

@@ -1,0 +1,11 @@
+image:
+  src: './image/o85-news-card/news-card-1.jpg'
+meta: "FORBES\nMAY 21, 2013"
+title:
+  'NEOM TECH & DIGITAL CO. UNVEILS XVRS A FIRST-OF-A-KIND COGNITIVE DIGITAL TWIN METAVERSE PLATFORM'
+link:
+  href: '#'
+  target: '_blank'
+button:
+  label: 'Learn more'
+  theme: green

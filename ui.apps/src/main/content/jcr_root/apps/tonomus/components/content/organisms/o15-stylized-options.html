@@ -1,0 +1,55 @@
+<template data-sly-template.stylizedOptions="${@
+     stepGroupModel = 'the instance of class StepGroup Model with properties'}"
+          data-sly-use.fieldsetLegendTemplate="/apps/tonomus/components/content/atoms/a26-fieldset-legend.html"
+          data-sly-use.textFieldTemplate="/apps/tonomus/components/content/molecules/m30-text-field.html"
+          data-sly-use.dropdownFieldTemplate="/apps/tonomus/components/content/molecules/m31-dropdown-field.html"
+          data-sly-use.multiSelectDropdownTemplate="/apps/tonomus/components/content/organisms/o80-multiselect-dropdown.html"
+          data-sly-use.formErrorTemplate="/apps/tonomus/components/content/atoms/a25-form-error.html"
+          data-sly-set.addDropdown="${stepGroupModel.type == 'checkboxStylized' && stepGroupModel.showDropdownForMultipleChoice.label}"
+>
+
+  <div class="o-stylizedOptions ${[stepGroupModel.type ? '-' : '', stepGroupModel.type] @ join = '', context='styleString'}"
+       data-component="o15-stylized-options">
+    <fieldset class="o-stylizedOptions__fieldset"
+              data-sly-attribute.data-validate="${stepGroupModel.validate.json}"
+              data-sly-attribute.id="${stepGroupModel.id}">
+      <div class="o-stylizedOptions__container">
+        <sly data-sly-test="${stepGroupModel.fieldsetLegend}"
+             data-sly-call="${fieldsetLegendTemplate.fieldsetLegend @
+             fieldsetLegend=stepGroupModel.fieldsetLegend}"></sly>
+        <ul class="o-stylizedOptions__items">
+          <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer" data-sly-list.child="${templatedContainer.structureResources}">
+            <li class="o-stylizedOptions__item" data-sly-test="${child.resourceType !='nt:unstructured'}">
+              <sly data-sly-resource="${child.path @ resourceType=child.resourceType,decorationTagName='', decoration=wcmmode.edit}"></sly>
+            </li>
+          </sly>
+          <sly data-sly-test="${wcmmode.edit}"
+               data-sly-resource="${resource.path @ resourceType='wcm/foundation/components/responsivegrid/new', appendPath='/*',
+                       decoration=wcmmode.edit, decorationTagName=''}"></sly>
+
+          <li
+              class="o-stylizedOptions__item -optionalSelect ${stepGroupModel.showDropdownForMultipleChoice.wide ? '-wide' : ''}"
+              data-sly-test="${addDropdown && !stepGroupModel.showDropdownForMultipleChoice.multiSelect}">
+            <sly data-sly-call="${dropdownFieldTemplate.dropdownField @ formSelectModel=stepGroupModel.showDropdownForMultipleChoice, blockValidation=true}"></sly>
+          </li>
+
+          <li class="o-stylizedOptions__item -optionalTextarea ${stepGroupModel.showTextareaForOtherChoice.wide ? '-wide' : ''}"
+              data-sly-test="${stepGroupModel.showTextareaForOtherChoice.label}">
+            <sly data-sly-call="${textFieldTemplate.textField @ formTextModel=stepGroupModel.showTextareaForOtherChoice,
+                          blockValidation=true, type='textarea'}"></sly>
+          </li>
+
+        </ul>
+        <sly data-sly-call="${formErrorTemplate.formError @ id=stepGroupModel.id}"></sly>
+      </div>
+    </fieldset>
+
+    <div class="o-stylizedOptions__item -optionalMultiselect
+                ${stepGroupModel.showDropdownForMultipleChoice.wide ? '-wide' : ''}"
+         data-sly-test="${addDropdown && stepGroupModel.showDropdownForMultipleChoice.multiSelect}">
+      <sly data-sly-call="${multiSelectDropdownTemplate.multiSelectDropdown @
+      dropdownModel=stepGroupModel.showDropdownForMultipleChoice, blockValidation=true}"></sly>
+    </div>
+
+  </div>
+</template>

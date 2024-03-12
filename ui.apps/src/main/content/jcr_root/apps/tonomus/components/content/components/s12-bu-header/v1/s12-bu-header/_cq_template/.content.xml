@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="nt:unstructured"
+    desktopOnly="true"
+    dropDownLabel="Main menu"
+    scrollComponent="{Boolean}true">
+    <logoImage
+        jcr:primaryType="nt:unstructured"
+        alt="logo image"
+        src="/content/dam/tonomus/components/tonomus-footer-logo/logo-en.png"/>
+    <highlightedLink
+        jcr:primaryType="nt:unstructured"
+        href="/content/tonomus/en-us#tonomus_getintouch_form_id"
+        label="Get in touch"/>
+    <navLinks jcr:primaryType="nt:unstructured">
+        <item0
+            jcr:primaryType="nt:unstructured"
+            href="https://neom.com"
+            label="Meet Tonomous"
+            target="_blank"/>
+        <item1
+            jcr:primaryType="nt:unstructured"
+            href="https://neom.com"
+            label="our goals"
+            target="_self"/>
+        <item2
+            jcr:primaryType="nt:unstructured"
+            href="https://neom.com"
+            label="your role"
+            target="_self"/>
+        <item3
+            jcr:primaryType="nt:unstructured"
+            href="https://neom.com"
+            label="news &amp; media"
+            target="_self"/>
+    </navLinks>
+    <languages jcr:primaryType="nt:unstructured">
+        <item0
+            jcr:primaryType="nt:unstructured"
+            href="/content/tonomus/en-us"
+            label="English"
+            languageCode="EN"
+            priorityLanguage="false"
+            shortLabel="en"
+            target="_self"/>
+        <item1
+            jcr:primaryType="nt:unstructured"
+            href="/content/tonomus/ar-sa"
+            label="العربية"
+            languageCode="AR"
+            priorityLanguage="false"
+            shortLabel="عربي"
+            target="_self"/>
+    </languages>
+    <buNav jcr:primaryType="nt:unstructured">
+        <item0
+            jcr:primaryType="nt:unstructured"
+            name="Cognitive Solution"
+            target="_self">
+            <link
+                jcr:primaryType="nt:unstructured"
+                href="/content/tonomus"/>
+            <logoImage
+                jcr:primaryType="nt:unstructured"
+                alt="cognitivesolution"
+                src="/content/dam/tonomus/components/tonomus-header-logo/tonomus-header-logo.png"/>
+        </item0>
+        <item1
+            jcr:primaryType="nt:unstructured"
+            name="Compute"
+            target="_self">
+            <link
+                jcr:primaryType="nt:unstructured"
+                href="/content/tonomus"/>
+            <logoImage
+                jcr:primaryType="nt:unstructured"
+                alt="compute"
+                src="/content/dam/tonomus/components/tonomus-header-logo/tonomus-header-logo.png"/>
+        </item1>
+        <item2
+            jcr:primaryType="nt:unstructured"
+            name="Connect"
+            target="_self">
+            <link
+                jcr:primaryType="nt:unstructured"
+                href="/content/tonomus"/>
+            <logoImage
+                jcr:primaryType="nt:unstructured"
+                alt="connect"
+                src="/content/dam/tonomus/components/tonomus-header-logo/tonomus-header-logo.png"/>
+        </item2>
+    </buNav>
+</jcr:root>

@@ -1,0 +1,37 @@
+
+
+
+
+<section class="b-pageNotFound"
+  data-component="c94-page-not-found"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with padding}}
+    style="--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};"
+  {{/with}}
+  {{#if asset}}data-asset="{{asset}}"{{/if}}
+  data-gradient-colors="{{gradientColors}}"
+  data-lazy-component
+>
+
+  <div class="b-pageNotFound__container">
+    {{> atom/a01-image image variant="block" disableTransition=true}}
+
+    <div class="b-pageNotFound__content" data-content>
+      {{#with heading}}
+        {{> atom/a03-heading size="h2" element="h1" }}
+      {{/with}}
+      {{#with description}}
+        <p>
+        {{this}}
+        </p>
+      {{/with}}
+      {{#with button}}
+        <div>
+          {{> molecule/m02-button this}}
+        </div>
+      {{/with}}
+    </div>
+  </div>
+</section>

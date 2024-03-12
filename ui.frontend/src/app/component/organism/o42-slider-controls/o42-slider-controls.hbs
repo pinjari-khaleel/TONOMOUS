@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="./o42-slider-controls.scss">
+<script src="./O42SliderControls.ts"></script>
+
+<div class="o-sliderControls{{#if theme}} t-{{theme}}{{/if}}" data-component="o42-slider-controls">
+  {{> molecule/m02-button theme="white" icon="icon-left" data=(object previous-button=null) }}
+  {{> molecule/m02-button theme="white" icon="icon-right" data=(object next-button=null) }}
+</div>

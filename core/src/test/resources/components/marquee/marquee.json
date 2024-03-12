@@ -1,0 +1,33 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:title": "Top Navigation",
+    "sling:resourceType": "tonomus/components/structure/tonomus-bu-xfpage",
+    "jcr:language": "en",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "component": {
+        "jcr:primaryType": "nt:unstructured",
+        "id": "marqueeid",
+        "enableCopy" : "false",
+        "accessibilityLabel": "partners",
+        "sling:resourceType": "tonomus/components/content/components/marqee/v2/marqee",
+        "images": {
+          "jcr:primaryType": "nt:unstructured",
+          "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "alt": "one",
+            "src": "/content/dam/tonomus/imageOne.jpg"
+          },
+          "item1": {
+            "jcr:primaryType": "nt:unstructured",
+            "alt": "two",
+            "src": "/content/dam/tonomus/imageTwo.jpg"
+          }
+        }
+      }
+    }
+  }
+}

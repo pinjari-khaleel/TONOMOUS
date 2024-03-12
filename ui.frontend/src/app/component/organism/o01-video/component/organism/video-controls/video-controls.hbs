@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="./video-controls.scss">
+<script src="./VideoControls.ts"></script>
+
+<div class="o-videoControls" data-component="video-controls"
+  data-event-tracking="{{toJson props.eventTracking}}"
+>
+  <div class="o-videoControls__bar video-controls-bar" data-video-controls-bar>
+    {{#if props.controls.playPause }}
+      <div class="o-videoControls__playToggle">
+          {{> molecule/m02-button
+          icon="play-solid"
+          size="small"
+          title=props.copy.play
+          variant="playbackControls"
+          level="tertiary"
+          theme="white"
+          data=(object video-play-button=null)
+        }}
+        {{> molecule/m02-button
+          icon="pause"
+          size="small"
+          title=props.copy.pause
+          variant="playbackControls"
+          level="tertiary"
+          theme="white"
+          data=(object video-pause-button=null)
+        }}
+      </div>
+    {{/if}}
+
+    {{#if props.controls.volumeToggle }}
+      <div class="o-videoControls__volumeToggle">
+        {{> molecule/m02-button
+          icon="volume-high"
+          size="small"
+          title=props.copy.mute
+          variant="playbackControls"
+          level="tertiary"
+          theme="white"
+          data=(object video-mute-button=null)
+        }}
+        {{> molecule/m02-button
+          icon="volume-off"
+          size="small"
+          title=props.copy.unmute
+          variant="playbackControls"
+          level="tertiary"
+          theme="white"
+          data=(object video-unmute-button=null)
+        }}
+      </div>
+    {{/if}}
+
+    {{#if props.controls.time }}
+      {{> ../../molecule/video-time }}
+    {{/if}}
+
+    {{> ../../molecule/progress-bar }}
+
+    {{#if props.controls.fullscreen }}
+      {{> molecule/m02-button
+        icon="enter-full-screen"
+        size="small"
+        title=props.copy.enterFullScreen
+        variant="playbackControls"
+        level="tertiary"
+        theme="white"
+        data=(object video-enter-fullscreen-button=null)
+      }}
+      {{> molecule/m02-button
+        icon="exit-full-screen"
+        size="small"
+        title=props.copy.exitFullScreen
+        variant="playbackControls"
+        level="tertiary"
+        theme="white"
+        data=(object video-exit-fullscreen-button=null)
+      }}
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="./o70-modal-bio-content.scss">
+<script src="./O70ModalBioContent.ts"></script>
+
+<div class="o-modalBioContent" data-component="o70-modal-bio-content" {{#if
+  scrollComponent}}data-scroll-component{{/if}} {{#if id}} id="{{id}}" {{/if}} data-lazy-component>
+  <div class="o-modalBioContent__image">
+    {{> atom/a01-image image disableTransition=true }}
+  </div>
+  {{#if backButtonLabel }}
+  <div class="o-modalBioContent__previousModalButton" data-back-button>
+    {{> molecule/m02-button label=backButtonLabel variant="leftIcon" icon="arrow-left" theme="dark-gold"
+    level="tertiary" size="small"}}
+  </div>
+  {{/if}}
+  <div class="o-modalBioContent__main">
+    <div class="o-modalBioContent__basicInfo">
+      <p class="o-modalBioContent__name">{{name}}</p>
+      <p class="o-modalBioContent__role">{{role}}</p>
+      <p class="o-modalBioContent__divisions" data-divisions>
+        {{#if sector}}
+        <span class="o-modalBioContent__division" data-sector>{{sector}}</span>
+        {{/if}}
+        {{#if region}}
+        <span class="o-modalBioContent__division" data-region>{{region}}</span>
+        {{/if}}
+      </p>
+    </div>
+    {{#with copy}}
+    <div class="o-modalBioContent__biography s-content {{#if size}} -{{size}}{{^}} -small{{/if}}">
+      {{{ this }}}
+    </div>
+    {{/with}}
+    {{#with social}}
+    <div class="o-modalBioContent__social">
+      {{> molecule/m12-social this }}
+    </div>
+    {{/with}}
+  </div>
+</div>

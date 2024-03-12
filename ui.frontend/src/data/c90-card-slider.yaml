@@ -1,0 +1,15 @@
+title: c90-card-slider
+
+meta:
+  id: 'c90'
+  status: 'done'
+  notes: ''
+  category: 'Block'
+
+tonomus: true
+
+blocks:
+  - name: 'c90-card-slider'
+    data: 'import!../app/component/block/c90-card-slider/data/default-o84.yaml'
+  - name: 'c90-card-slider'
+    data: 'import!../app/component/block/c90-card-slider/data/default-o85.yaml'

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          scrollComponent="{Boolean}true">
+  <downloads
+      jcr:primaryType="nt:unstructured"
+      title="Downloads">
+    <items jcr:primaryType="nt:unstructured">
+      <item0
+          jcr:primaryType="nt:unstructured"
+          description="NEOM Fact Sheet,&#xd;&#xa;NEOM Brochure&#xd;&#xa;"
+          enabledEventTracking="true">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="NEOM Information pack"
+            element="h3"/>
+        <link
+            jcr:primaryType="nt:unstructured"
+            href="/content/dam/neom/components/c01-splash-hero/neom_sport.mp4"/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            src="/content/dam/neom/components/c30-downloads/promo-pack.jpg"/>
+      </item0>
+      <item1
+          jcr:primaryType="nt:unstructured"
+          description="New Supplier Registration Guide,&#xd;&#xa;Supplier Code of Conduct,&#xd;&#xa;Non Disclosure Agreement (NDA)&#xd;&#xa;"
+          enabledEventTracking="true">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="Register as a Vendor"
+            element="h3"/>
+        <link
+            jcr:primaryType="nt:unstructured"
+            href="/content/dam/neom/components/c01-splash-hero/teaser-still.jpg"/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            src="/content/dam/neom/components/c30-downloads/investor-pack.jpg"/>
+      </item1>
+    </items>
+  </downloads>
+</jcr:root>

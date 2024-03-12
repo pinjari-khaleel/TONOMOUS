@@ -1,0 +1,72 @@
+@media (max-width: @screen-tablet-max) {
+  .cmp-horizontaltabs {
+    padding-block: var(--padding-block);
+    &__heading,
+    &__description {
+      padding-inline: 3rem;
+      padding-block-end: 2rem;
+    }
+
+    &__description {
+      max-width: 50%;
+    }
+
+    &__previous-button,
+    &__next-button {
+      padding: 0;
+      min-width: inherit;
+      .cmp-icon {
+        padding: 1rem;
+      }
+    }
+
+    &__action-link {
+      min-width: inherit;
+      padding: 1rem 2rem;
+    }
+
+    .cmp-tabs {
+      .cmp-container__content {
+        &--scroll-enabled {
+
+            .cmp.aem-GridColumn--tablet--1 {
+              width: ~'calc((var(--body-width-px) - var(--padding-inline)) * var(--scrollable-column-1))';
+            }
+            .cmp.aem-GridColumn--tablet--2 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-2))';
+            }
+            .cmp.aem-GridColumn--tablet--3 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-3))';
+            }
+            .cmp.aem-GridColumn--tablet--4 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-4))';
+            }
+            .cmp.aem-GridColumn--tablet--5 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-5))';
+            }
+            .cmp.aem-GridColumn--tablet--6 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-6))';
+            }
+            .cmp.aem-GridColumn--tablet--7 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-7))';
+            }
+            .cmp.aem-GridColumn--tablet--8 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-8))';
+            }
+            .cmp.aem-GridColumn--tablet--9 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-9))';
+            }
+            .cmp.aem-GridColumn--tablet--10 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-10))';
+            }
+            .cmp.aem-GridColumn--tablet--11 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-11))';
+            }
+            .cmp.aem-GridColumn--tablet--12 {
+              width: ~'calc(var(--body-width-px) * var(--scrollable-column-12))';
+            }
+        }
+      }
+    }
+  }
+}

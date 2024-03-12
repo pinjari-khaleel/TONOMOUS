@@ -1,0 +1,29 @@
+
+
+<section class="b-legalContent"
+         data-component="c37-legal-content"
+         {{#if scrollComponent}}data-scroll-component{{/if}}
+         data-lazy-component
+         {{#if asset}}data-asset="{{asset}}"{{/if}}
+         data-gradient-colors="{{gradientColors}}"
+>
+  <div class="b-legalContent__container" data-article-container>
+    <div class="b-legalContent__page">
+      <div class="b-legalContent__content" data-article-content>
+        <header class="b-legalContent__header" data-article-header>
+          {{> atom/a03-heading heading element="h1" size="h4" }}
+        </header>
+
+        {{#each items}}
+          <div class="s-content{{#if size}} -{{size}}{{/if}}">
+            {{{ content }}}
+          </div>
+        {{/each}}
+
+        {{#with accordion}}
+          {{> organism/o05-accordion }}
+        {{/with}}
+      </div>
+    </div>
+  </div>
+</section>

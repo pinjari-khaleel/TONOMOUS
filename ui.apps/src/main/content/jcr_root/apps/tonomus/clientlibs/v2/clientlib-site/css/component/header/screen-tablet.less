@@ -1,0 +1,49 @@
+@media (max-width: @screen-tablet-max) {
+  .cmp-header {
+    @navigation-height: 80px;
+
+    & + * {
+      margin-top: @navigation-height;
+    }
+
+    &__container {
+      height: @navigation-height;
+      padding-inline: 3.125rem;
+    }
+    &__logo {
+      width: 127px;
+    }
+    &__navigation-group,
+    &__languagenavigation-group {
+      gap: 2rem;
+    }
+    &__navigation-item-link,
+    &__languagenavigation-item-link {
+      font-size: 0.875rem;
+      letter-spacing: 0.07rem;
+      line-height: 0.875rem;
+
+      &::before {
+        content: '';
+        bottom: -6px;
+      }
+    }
+
+    &__navigation-item--level-0 > &__navigation-group {
+      padding-block: 2rem;
+    }
+
+    &__navigation-item--level-1 > &__navigation-group {
+      padding-block-start: 1.813rem;
+    }
+
+    &__navigation-item--level-2 > div > &__navigation-item-link {
+      font-size: 1.125rem;
+    }
+
+    &__search-icon {
+      padding-inline: 1.75rem;
+      height: 18px;
+    }
+  }
+}

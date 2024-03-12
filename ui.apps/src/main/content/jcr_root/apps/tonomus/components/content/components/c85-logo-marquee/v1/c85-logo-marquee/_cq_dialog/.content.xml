@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="C85 Logo Marquee"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[tonomus.author]">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <general
+          jcr:primaryType="nt:unstructured"
+          jcr:title="General"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <headingText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                      sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext"
+                      fieldDescription="Please enter Heading Text."
+                      fieldLabel="Heading Text"
+                      name="./heading/text"
+                      useFixedInlineToolbar="{Boolean}true">
+                    <htmlRules jcr:primaryType="nt:unstructured">
+                      <docType jcr:primaryType="nt:unstructured"
+                               baseType="html"
+                               version="4.0">
+                        <typeConfig jcr:primaryType="nt:unstructured"
+                                    useSemanticMarkup="{Boolean}true"
+                                    isXhtmlStrict="{Boolean}true">
+                          <semanticMarkupMap jcr:primaryType="nt:unstructured"
+                                             b="strong"
+                                             i="i"/>
+                        </typeConfig>
+                      </docType>
+                    </htmlRules>
+                  </headingText>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </general>
+      <logoItems
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Logo Items"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <logos
+                      jcr:primaryType="nt:unstructured"
+                      fieldLabel="Logo Items"
+                      fieldDescription="Click 'Add' to add a new Logo Item"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                      class="multifield-full-width"
+                      validation="multifield-max-12"
+                      composite="{Boolean}true">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Logo Item"
+                        name="./items"
+                        granite:class="accordion-multifield-item"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                      <items
+                          jcr:primaryType="nt:unstructured">
+                        <tab
+                            jcr:title="Logo"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            jcr:primaryType="nt:unstructured">
+                          <items jcr:primaryType="nt:unstructured">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                allowUpload="{Boolean}false"
+                                autoStart="{Boolean}false"
+                                class="cq-droptarget"
+                                dropZone="{Boolean}true"
+                                fieldDescription="Drag and Drop Image"
+                                fieldLabel="Image"
+                                fileNameParameter="./image/parameter"
+                                fileReferenceParameter="./image/src"
+                                mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                                multiple="{Boolean}false"
+                                name="name"
+                                title="Upload Image Asset"
+                                useHTML5="{Boolean}true"
+                                required="{Boolean}true"/>
+                            <altImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please enter Image Alt Text."
+                                fieldLabel="Image Alt Text"
+                                name="./image/alt"
+                                required="{Boolean}true"/>
+                            <link
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Please select the URL."
+                                fieldLabel="Link URL"
+                                name="./link/href"/>
+                            <linkTarget
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Please select Link Target Value."
+                                fieldLabel="Link Target Value"
+                                name="./link/target">
+                              <items jcr:primaryType="nt:unstructured">
+                                <blank
+                                    jcr:primaryType="nt:unstructured"
+                                    selected="{Boolean}true"
+                                    text="New frame"
+                                    value="_blank"/>
+                                <self
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Same frame"
+                                    value="_self"/>
+                              </items>
+                            </linkTarget>
+                          </items>
+                        </tab>
+                      </items>
+                    </field>
+                  </logos>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </logoItems>
+      <padding
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/padding/content"/>
+      <advanced
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/advanced/content"/>
+    </items>
+  </content>
+</jcr:root>

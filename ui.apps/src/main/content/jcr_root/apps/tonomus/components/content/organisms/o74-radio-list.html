@@ -1,0 +1,33 @@
+<sly data-sly-template.radioList="${ @
+     stepGroupModel = 'the instance of class StepGroup Model with properties'}"
+     data-sly-use.fieldsetLegendTemplate="/apps/tonomus/components/content/atoms/a26-fieldset-legend.html"
+     data-sly-use.textFieldTemplate="/apps/tonomus/components/content/molecules/m30-text-field.html"
+     data-sly-use.formErrorTemplate="/apps/tonomus/components/content/atoms/a25-form-error.html">
+  <div class="o-radioList" data-component="o74-radio-list"
+       data-sly-attribute.id="${stepGroupModel.id}"
+       data-sly-attribute.data-scroll-component="${stepGroupModel.scrollComponent}">
+    <fieldset class="o-radioList__fieldset"
+              data-sly-attribute.data-validate="${stepGroupModel.validate.json}"
+              data-sly-attribute.id="${stepGroupModel.id}">
+      <div class="o-radioList__container">
+
+        <sly data-sly-test="${stepGroupModel.fieldsetLegend}"
+             data-sly-call="${fieldsetLegendTemplate.fieldsetLegend @
+             fieldsetLegend=stepGroupModel.fieldsetLegend}"></sly>
+
+        <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer" data-sly-list.child="${templatedContainer.structureResources}">
+            <sly data-sly-test="${child.resourceType !='nt:unstructured'}" data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='', decoration=wcmmode.edit}"></sly>
+        </sly>
+        <sly data-sly-test="${wcmmode.edit}" data-sly-resource="${resource.path @ resourceType='wcm/foundation/components/responsivegrid/new', appendPath='/*', decoration=wcmmode.edit, decorationTagName=''}"></sly>
+
+        <div class="o-radioList__optionalTextarea ${stepGroupModel.showTextareaForOtherChoice.wide ? '-wide' : ''}"
+             data-sly-test="${stepGroupModel.showTextareaForOtherChoice.label}">
+          <sly data-sly-call="${textFieldTemplate.textField @ formTextModel=stepGroupModel.showTextareaForOtherChoice,
+                            blockValidation=true, type='textarea'}"></sly>
+        </div>
+
+        <sly data-sly-call="${formErrorTemplate.formError @ id=stepGroupModel.id}"></sly>
+      </div>
+    </fieldset>
+  </div>
+</sly>

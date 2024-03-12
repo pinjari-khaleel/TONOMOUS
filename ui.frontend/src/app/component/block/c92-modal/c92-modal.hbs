@@ -1,0 +1,20 @@
+
+
+
+
+<div class="b-modal"
+  id="{{id}}"
+  data-component="c92-modal"
+  data-name="{{name}}"
+  data-data="{{toJson data}}"
+  data-lazy-component
+>
+  {{!-- Remove editor preview in publish/preview mode --}}
+  <div class="b-modal__editorPreview">
+    {{#if (condition name "===" "o86-modal-form")}}
+      {{> organism/o86-modal-form data }}
+    {{/if}}
+
+    <a href="#{{id}}">Go to popup</a>
+  </div>
+</div>

@@ -1,0 +1,292 @@
+@mixin container {
+  @include respond-to(XLARGE) {
+    display: grid;
+    grid-gap: var(--grid-gap);
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.b-contentRoadmap {
+  --component-highlight-color: var(--color-tonomus-green);
+
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+
+  &__container {
+    @include container;
+    position: relative;
+
+    @include respond-to(XLARGE) {
+      padding-inline: 80px;
+      margin-inline: auto;
+      max-block-size: 1440px;
+    }
+
+    > .a-heading {
+      padding-inline: 32px;
+
+      @include respond-to(XLARGE) {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        padding-inline: 0;
+      }
+
+      strong {
+        display: block;
+      }
+    }
+  }
+
+  &__list {
+    @include container;
+    margin-block: 0;
+    list-style: none;
+
+    @include respond-to(XLARGE) {
+      grid-column-start: 1;
+      grid-column-end: 13;
+    }
+  }
+
+  &__step1,
+  &__step2,
+  &__step3 {
+    position: relative;
+  }
+
+  &__step1 {
+    @include respond-to(XLARGE) {
+      grid-column-start: 3;
+      grid-column-end: 6;
+      margin-top: 130px;
+    }
+  }
+
+  &__step2 {
+    @include respond-to(XLARGE) {
+      grid-column-start: 7;
+      grid-column-end: 10;
+      margin-top: 300px;
+    }
+  }
+
+  &__step3 {
+    margin-block-start: 8px;
+
+    @include respond-to(XLARGE) {
+      grid-column-start: 7;
+      grid-column-end: 10;
+      margin-block-start: auto;
+    }
+  }
+
+  &__step1 .a-heading,
+  &__step2 .a-heading,
+  &__step3 .a-heading,
+  &__stepText {
+    padding-inline: 80px;
+
+    @include respond-to(XLARGE) {
+      padding-inline: 0;
+    }
+  }
+
+  &__step1 .a-heading,
+  &__step2 .a-heading,
+  &__step3 .a-heading {
+    margin-block-end: 8px;
+
+    // stylelint-disable-next-line no-descending-specificity
+    strong {
+      display: block;
+    }
+  }
+
+  &__stepText {
+    @include type("body", "medium");
+  }
+
+  &__step1ImageWrapper {
+    position: relative;
+    inline-size: 73vw;
+    margin-inline: auto;
+    margin-block-start: 50px;
+
+    @include respond-to(XLARGE) {
+      position: absolute;
+      inline-size: 475px;
+      margin-block-start: 0;
+      inset-inline-start: 195%;
+      inset-block-start: -35%;
+    }
+  }
+
+  &__step1Image {
+    position: relative;
+  }
+
+  &__step2Image {
+    inline-size: 73vw;
+    margin-inline: auto;
+    display: block;
+
+    @include respond-to(XLARGE) {
+      position: absolute;
+      inline-size: 602px;
+      inset-inline-start: 105%;
+      inset-block-end: -175%;
+    }
+  }
+
+  &__step3ImageWrapper {
+    position: relative;
+    width: 96vw;
+    margin-inline: auto;
+
+    @include respond-to(XLARGE) {
+      position: absolute;
+      inline-size: 556px;
+      inset-inline-end: 150%;
+      inset-block-end: -15%;
+    }
+
+    .m-button {
+      position: absolute;
+      inset-block-end: 32px;
+      inset-inline-start: 50%;
+      transform: translateX(-50%);
+
+      [dir="rtl"] & {
+        transform: translateX(50%);
+      }
+
+      @include respond-to(XLARGE) {
+        inset-inline-start: auto;
+        inset-inline-end: -10px;
+        inset-block-end: 125px;
+        transform: none;
+
+        [dir="rtl"] & {
+          transform: none;
+        }
+      }
+    }
+  }
+
+  // ---------------------------
+  // Shape positions
+  // ---------------------------
+  &__step1MobileShape1,
+  &__step2MobileShape1,
+  &__step2MobileShape2,
+  &__step2MobileShape3,
+  &__step3MobileShape1,
+  &__step3MobileShape2,
+  &__step1DesktopShape1,
+  &__step2DesktopShape1,
+  &__step3DesktopShape1 {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &__step2MobileShape1,
+  &__step2MobileShape2,
+  &__step2MobileShape3,
+  &__step3MobileShape1,
+  &__step3MobileShape2 {
+    display: block;
+    margin-inline: auto;
+  }
+
+  &__step1MobileShape1,
+  &__step2MobileShape1,
+  &__step2MobileShape2,
+  &__step2MobileShape3,
+  &__step3MobileShape1,
+  &__step3MobileShape2 {
+    @include respond-to(XLARGE) {
+      display: none;
+    }
+  }
+
+  &__step1MobileShape1 {
+    position: absolute;
+    inset-inline-start: 5%;
+    inset-block-start: 50%;
+    transform: translate(-50%, -110%);
+    width: 17vw;
+
+    [dir="rtl"] & {
+      transform: translate(50%, -110%) scaleX(-1);
+    }
+  }
+
+  &__step2MobileShape1 {
+    inline-size: 1px;
+    margin-block-start: 24px;
+    margin-block-end: -32px;
+  }
+
+  &__step2MobileShape2 {
+    inline-size: 1px;
+    margin-block-start: -16px;
+  }
+
+  &__step2MobileShape3 {
+    inline-size: 1px;
+    margin-block-end: 8px;
+  }
+
+  &__step3MobileShape1 {
+    inline-size: 1px;
+  }
+
+  &__step3MobileShape2 {
+    inline-size: 21px;
+    margin-block-start: 8px;
+    margin-inline: auto;
+  }
+
+  &__step1DesktopShape1,
+  &__step2DesktopShape1,
+  &__step3DesktopShape1 {
+    display: none;
+
+    @include respond-to(XLARGE) {
+      display: block;
+    }
+  }
+
+  &__step1DesktopShape1,
+  &__step2DesktopShape1 {
+    @include respond-to(XLARGE) {
+      position: absolute;
+    }
+  }
+
+  &__step1DesktopShape1 {
+    inline-size: 79px;
+    inset-inline-end: 100%;
+    inset-block-start: -32px;
+
+    [dir="rtl"] & {
+      transform: scaleX(-1);
+    }
+  }
+
+  &__step2DesktopShape1 {
+    inline-size: 115px;
+    inset-inline-end: calc(100% - 1px);
+    inset-block-end: calc(100% + 24px);
+
+    [dir="rtl"] & {
+      transform: scaleX(-1);
+    }
+  }
+
+  &__step3DesktopShape1 {
+    inline-size: 2px;
+    margin-block-start: -15%;
+    margin-block-end: 24px;
+  }
+}

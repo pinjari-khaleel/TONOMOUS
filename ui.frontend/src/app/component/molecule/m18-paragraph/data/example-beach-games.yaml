@@ -1,0 +1,16 @@
+image:
+  src: 'image/logo-mark-neom.png'
+  alt: 'NEOM logo mark'
+heading:
+  size: h3
+  text: 'About GKA'
+copy:
+  size: 'medium'
+  content:
+    '<p>GKA is the premier kitesurfing community.Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam.</p>'
+buttons:
+  - level: primary
+    theme: black
+    label: 'Primary button'

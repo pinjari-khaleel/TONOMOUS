@@ -1,0 +1,7 @@
+<template data-sly-template.externalLink="${@ src='src path of icon'}">
+    <sly data-sly-use.iconModel="${'com.tonomus.core.slingmodels.components.v2.IconModelImpl' @ path='/content/dam/tonomus/system-resources/arrow-top-right.svg'}">
+        <span class="link-external">
+            ${iconModel.originalAsSvg @ context='unsafe'}
+        </span>
+    </sly>
+</template>

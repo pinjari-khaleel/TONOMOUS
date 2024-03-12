@@ -1,0 +1,30 @@
+<sly data-sly-template.multipleCopy="${ @
+    multipleCopyModel='MultipleCopyModel object'}"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+     data-sly-use.eyebrowTemplate="/apps/tonomus/components/content/atoms/a04-eyebrow.html"
+     data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html"
+     data-sly-use.moustacheTemplate="/apps/tonomus/components/content/atoms/a05-moustache.html">
+
+  <div class="m-multipleCopy" data-component="m49-multiple-copy"
+       data-sly-attribute.data-scroll-component="${multipleCopyModel.scrollComponent}"
+       data-sly-attribute.id="${multipleCopyModel.anchorId}">
+    <sly data-sly-test="${multipleCopyModel.icon}"
+         data-sly-call="${iconTemplate.icon @ name=multipleCopyModel.icon}"></sly>
+    <sly data-sly-test="${multipleCopyModel.eyebrow.text}"
+         data-sly-call="${eyebrowTemplate.eyebrow @ eyebrowModel=multipleCopyModel.eyebrow}"></sly>
+    <div data-sly-test="${multipleCopyModel.heading.text}" class="m-multipleCopy__heading"
+         data-multiple-copy-heading>
+      <sly data-sly-call="${headingTemplate.heading @ headingModel=multipleCopyModel.heading}"></sly>
+    </div>
+    <sly data-sly-test="${multipleCopyModel.moustache.text}"
+         data-sly-call="${moustacheTemplate.moustache @ moustacheModel=multipleCopyModel.moustache}"></sly>
+
+    <div data-sly-repeat.copy="${multipleCopyModel.copy}"
+        class="m-multipleCopy__content s-content
+                  ${['', copy.size || 'medium'] @ join = '-', context='styleString'}
+                  ${copy.highlight ? '-highlight' : ''} ${copy.uppercase ? '-uppercase' : ''}"
+        data-multiple-copy-content>
+      ${copy.content @ context='html'}
+    </div>
+  </div>
+</sly>

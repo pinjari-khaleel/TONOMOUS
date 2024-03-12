@@ -1,0 +1,52 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:title": "Tonomus",
+    "sling:resourceType": "tonomus/components/structure/tonomus-base-page-v2",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "component": {
+        "jcr:primaryType": "nt:unstructured",
+        "imageFromPageImage": "false",
+        "titleFromPage": "false",
+        "jcr:description": "Some description",
+        "linkTarget": "_self",
+        "descriptionFromPage": "false",
+        "sling:resourceType": "tonomus/components/content/components/herobanner/v2/herobanner",
+        "isDecorative": "true",
+        "textIsRich": [
+          "true",
+          "true",
+          "true",
+          "true"
+        ],
+        "actions": {
+          "jcr:primaryType": "nt:unstructured",
+          "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "link": "/content/tonomus/en-us/cookie-policy",
+            "text": "Learn More",
+            "linkTarget": "_self"
+          }
+        },
+        "descriptions": {
+          "jcr:primaryType": "nt:unstructured",
+          "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "description": "<p>1,216</p>\r\n<p>Learners Reached</p>\r\n"
+          },
+          "item1": {
+            "jcr:primaryType": "nt:unstructured",
+            "description": "<p>68+</p>\r\n<p>Events Scheduled</p>\r\n"
+          },
+          "item2": {
+            "jcr:primaryType": "nt:unstructured",
+            "description": "Another Description"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<template data-sly-template.icon="${@ src='src path of icon'}">
+    <sly data-sly-use.iconModel="${'com.tonomus.core.slingmodels.components.v2.IconModelImpl' @ path=src}">
+        ${iconModel.originalAsSvg @ context='unsafe'}
+    </sly>
+</template>

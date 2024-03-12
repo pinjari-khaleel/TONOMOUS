@@ -1,0 +1,27 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly
+    data-sly-use.downloadCmpModel="com.tonomus.core.slingmodels.components.v1.downloads.DownloadsComponentModel"
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.commonComponentStyleModel="com.tonomus.core.slingmodels.common.v1.CommonComponentStyleModel"
+    data-sly-use.downloadItemTemplate="/apps/tonomus/components/content/molecules/m05-download-item.html"></sly>
+
+<section class="b-downloads ${commonComponentStyleModel.mapAppliedCssClasses['Theme']}
+                -${downloadCmpModel.direction ? downloadCmpModel.direction : 'row' @ context='styleString'}"
+         data-component="c30-downloads" data-lazy-component
+         data-sly-attribute.id="${commonComponentModel.anchorId}"
+         data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+         style="${commonComponentModel.padding.styleInline @ context='styleString'}
+                ${commonComponentStyleModel.backgroundColorStyleInline @ context='styleString'}">
+  <div class="b-downloads__container">
+    <div class="b-downloads__listWrapper">
+      <h2 class="b-downloads__heading" data-downloads-heading>${downloadCmpModel.downloads.title}</h2>
+      <ul class="b-downloads__list" data-sly-list.item="${downloadCmpModel.downloads.items}">
+        <li class="b-downloads__listItem">
+          <sly data-sly-call="${downloadItemTemplate.download @ downloadModel=item, variant=downloadCmpModel.direction}"></sly>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

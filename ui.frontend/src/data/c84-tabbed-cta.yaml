@@ -1,0 +1,16 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'TabbedCta'
+tonomus: true
+
+meta:
+  id: 'c84'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 'c84-tabbed-cta'
+    data: 'import!../app/component/block/c84-tabbed-cta/data/default.yaml'

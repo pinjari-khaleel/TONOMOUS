@@ -1,0 +1,96 @@
+scrollComponent: true
+padding:
+  start: 'large'
+  end: 'large'
+id: 'c86-people-carousel'
+title: 'c86-people-carousel'
+heading:
+  text: 'Our Leadership'
+items:
+  - name: 'Joseph Bradley'
+    linkedin: '#'
+    job:
+      title: 'Chief Executive Officer'
+    biography:
+      'Joseph Bradley is the strategic mind behind the vision that drives TONOMUS, shaping the
+      creation of a full-scale ecosystem of cognitive technologies. By harnessing the power of
+      artificial intelligence, the internet of things, blockchain and robotics, he and his team are
+      bringing cognitive to life.'
+    thumbnail:
+      src: 'image/c86-people-carousel/thumbnail-1.jpg'
+    image:
+      src: 'image/c86-people-carousel/profile-image-1.jpg'
+  - name: 'Bradley Joseph'
+    linkedin: '#'
+    job:
+      title: 'Executive Officer Executive Officer Executive Officer'
+      department: 'NEOM Digital'
+    biography:
+      'Bradley Joseph is the strategic mind behind the vision that drives Tonomus, shaping the
+      creation of a full-scale ecosystem of cognitive technologies. By harnessing the power of
+      artificial intelligence, the internet of things, blockchain and robotics, he and his team are
+      bringing cognitive to life.'
+    thumbnail:
+      src: 'image/c86-people-carousel/thumbnail-2.jpg'
+    image:
+      src: 'image/c86-people-carousel/profile-image-2.jpg'
+  - name: 'Joseph Bradley'
+    linkedin: '#'
+    job:
+      title: 'Chief Executive Officer'
+      department: 'NEOM Tech and Digital'
+    biography:
+      'Joseph Bradley is the strategic mind behind the vision that drives Tonomus, shaping the
+      creation of a full-scale ecosystem of cognitive technologies. By harnessing the power of
+      artificial intelligence, the internet of things, blockchain and robotics, he and his team are
+      bringing cognitive to life. Joseph Bradley is the strategic mind behind the vision that drives
+      Tonomus, shaping the creation of a full-scale ecosystem of cognitive technologies. By
+      harnessing the power of artificial intelligence, the internet of things, blockchain and
+      robotics, he and his team are bringing cognitive to life. Joseph Bradley is the strategic mind
+      behind the vision that drives Tonomus, shaping the creation of a full-scale ecosystem of
+      cognitive technologies. By harnessing the power of artificial intelligence, the internet of
+      things, blockchain and robotics, he and his team are bringing cognitive to life.'
+    thumbnail:
+      src: 'image/c86-people-carousel/thumbnail-1.jpg'
+    image:
+      src: 'image/c86-people-carousel/profile-image-1.jpg'
+  - name: 'Joseph Bradley'
+    linkedin: '#'
+    job:
+      title: 'Chief Executive Officer'
+      department: 'NEOM Tech and Digital'
+    biography:
+      'Joseph Bradley is the strategic mind behind the vision that drives Tonomus, shaping the
+      creation of a full-scale ecosystem of cognitive technologies. By harnessing the power of
+      artificial intelligence, the internet of things, blockchain and robotics, he and his team are
+      bringing cognitive to life. Joseph Bradley is the strategic mind behind the vision that drives
+      Tonomus, shaping the creation of a full-scale ecosystem of cognitive technologies. By
+      harnessing the power of artificial intelligence, the internet of things, blockchain and
+      robotics, he and his team are bringing cognitive to life. Joseph Bradley is the strategic mind
+      behind the vision that drives Tonomus, shaping the creation of a full-scale ecosystem of
+      cognitive technologies. By harnessing the power of artificial intelligence, the internet of
+      things, blockchain and robotics, he and his team are bringing cognitive to life.'
+    thumbnail:
+      src: 'image/c86-people-carousel/thumbnail-1.jpg'
+    image:
+      src: 'image/c86-people-carousel/profile-image-1.jpg'
+  - name: 'Joseph Bradley'
+    linkedin: '#'
+    job:
+      title: 'Chief Executive Officer'
+      department: 'NEOM Tech and Digital'
+    biography:
+      'Joseph Bradley is the strategic mind behind the vision that drives Tonomus, shaping the
+      creation of a full-scale ecosystem of cognitive technologies. By harnessing the power of
+      artificial intelligence, the internet of things, blockchain and robotics, he and his team are
+      bringing cognitive to life. Joseph Bradley is the strategic mind behind the vision that drives
+      Tonomus, shaping the creation of a full-scale ecosystem of cognitive technologies. By
+      harnessing the power of artificial intelligence, the internet of things, blockchain and
+      robotics, he and his team are bringing cognitive to life. Joseph Bradley is the strategic mind
+      behind the vision that drives Tonomus, shaping the creation of a full-scale ecosystem of
+      cognitive technologies. By harnessing the power of artificial intelligence, the internet of
+      things, blockchain and robotics, he and his team are bringing cognitive to life.'
+    thumbnail:
+      src: 'image/c86-people-carousel/thumbnail-1.jpg'
+    image:
+      src: 'image/c86-people-carousel/profile-image-1.jpg'

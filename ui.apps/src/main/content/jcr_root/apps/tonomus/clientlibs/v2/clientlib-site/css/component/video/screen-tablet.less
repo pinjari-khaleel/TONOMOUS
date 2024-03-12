@@ -1,0 +1,18 @@
+@media (max-width: @screen-tablet-max) {
+  .cmp-video {
+    video,
+    iframe {
+      min-height: 576px;
+    }
+
+    &__thumbnail {
+      object-fit: cover;
+      min-height: 576px;
+    }
+    &__play-btn {
+      min-width: inherit;
+      padding: 1.25rem;
+      line-height: 1.125px;
+    }
+  }
+}

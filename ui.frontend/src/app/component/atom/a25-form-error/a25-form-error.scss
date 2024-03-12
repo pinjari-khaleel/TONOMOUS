@@ -1,0 +1,16 @@
+.a-formError {
+  @include type("body", "xsmall");
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--form-error-color);
+  letter-spacing: normal;
+  margin-top: 10px;
+
+  &:not(:empty) {
+    margin: 2px 0 10px 0;
+  }
+
+  @include respond-to(MEDIUM) {
+    margin: 5px 0;
+  }
+}

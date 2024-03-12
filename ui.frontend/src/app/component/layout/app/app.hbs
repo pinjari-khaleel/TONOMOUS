@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="./app.scss">
+
+<script src="./App.ts"></script>
+
+<div class="app__root{{#if theme}} t-{{theme}}{{/if}}"
+     data-component="app-root"
+     dir="{{dir}}"
+     lang="{{language}}"
+     data-theme="{{#if theme}}{{theme}}{{^}}tonomus{{/if}}"
+>
+  {{#if webglContainer }}
+    {{> organism/o92-webgl-container webglTest=webglContainer.webglTest  }}
+  {{/if}}
+  {{#with tonomusNavigation}}
+    {{> block/s11-tonomus-navigation this}}
+  {{/with}}
+  {{#with tonomusBuNavigation}}
+    {{> block/s12-bu-header this}}
+  {{/with}}
+
+  <main class="app__content" id="app-content">
+    {{#each blocks}}
+    {{> (lookup . 'name') data }}
+    {{/each}}
+  </main>
+
+  {{> block/s09-overlay }}
+
+  {{> molecule/m33-cursor }}
+  {{> organism/o48-loading-spinner }}
+</div>

@@ -1,0 +1,72 @@
+scrollComponent: true
+padding:
+  start: 'large'
+  end: 'large'
+id: 'c102-carousel'
+title: 'c102-carousel'
+heading:
+  text: 'Our Leadership'
+items:
+  - name: 'Successful <strong>Ventures Stories</strong>'
+    active: true
+    image:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    image2:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    image3:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    text:
+      'edną z mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych „kombinacji” zdań,
+      słów i akapitów, w przeciwieństwie do zwykłego: „tekst, tekst, tekst”, sprawiającego, że
+      wygląda to „zbyt czytelnie” po polsku.'
+    button:
+      label: 'Partner with us'
+      href: '#'
+  - name: 'Successful Ventures Stories'
+    image:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    image2:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    image3:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    text:
+      'Jedną z mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych „kombinacji” zdań,
+      słów i akapitów, w przeciwieństwie do zwykłego: „tekst, tekst, tekst”, sprawiającego, że
+      wygląda to „zbyt czytelnie” po polsku.'
+    button:
+      label: 'Find out more'
+      href: '#'
+  - name: 'Successful Ventures Stories'
+    image:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    image2:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    image3:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    text:
+      'Jedną z mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych „kombinacji” zdań,
+      słów i akapitów, w przeciwieństwie do zwykłego: „tekst, tekst, tekst”, sprawiającego, że
+      wygląda to „zbyt czytelnie” po polsku.'
+    button:
+      label: 'Find out more'
+      href: '#'
+  - name: 'Successful Ventures Stories'
+    image:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    text:
+      'Jedną z mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych „kombinacji” zdań,
+      słów i akapitów, w przeciwieństwie do zwykłego: „tekst, tekst, tekst”, sprawiającego, że
+      wygląda to „zbyt czytelnie” po polsku.'
+    button:
+      label: 'Find out more'
+      href: '#'

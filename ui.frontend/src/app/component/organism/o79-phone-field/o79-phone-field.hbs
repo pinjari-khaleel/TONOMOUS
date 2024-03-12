@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="./o79-phone-field.scss">
+<script src="./O79PhoneField.ts"></script>
+
+
+<div class="o-phoneField" data-component="o79-phone-field" {{#if id}} id="{{id}}" {{/if}}>
+
+  <div class="o-phoneField__textLabel{{#if required}} -isRequired{{/if}}">
+    {{> atom/a07-label text=label size="small" }}
+  </div>
+  <div class="o-phoneField__container">
+
+    {{> molecule/m41-country-dropdown countryDropdown }}
+
+    <div class="o-phoneField__phoneInput">
+      {{> atom/a14-input type="text" }}
+
+      {{> atom/a25-form-error }}
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          addShareOptions="true"
+          disableEventTracking="false"
+          scrollComponent="true"
+          nextQuoteCTALabel="Next quote">
+  <shareOptions
+      jcr:primaryType="nt:unstructured">
+    <heading
+        jcr:primaryType="nt:unstructured"
+        text="share quote"/>
+  </shareOptions>
+  <padding
+      jcr:primaryType="nt:unstructured"/>
+  <items
+      jcr:primaryType="nt:unstructured">
+    <item0
+        jcr:primaryType="nt:unstructured">
+      <quote
+          jcr:primaryType="nt:unstructured"
+          active="true"
+          content="&lt;p&gt;Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our workforce is diverse: talented people from 38 countries who have delivered breakthrough solutions to top organizations around the world. Together we’re harnessing the power of cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch every aspect of life. We have a built-in customer base within NEOM, our largest customer, providing us with a playground to test new ideas and build the world’s first truly cognitive city. We will share the human-centric technology we build here with the rest of the world, creating a sustainable, accessible future that revolves around us all.&lt;/p&gt; ">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="&lt;strong&gt;Smart&lt;/strong&gt; is digital. &lt;strong&gt;Cognitive&lt;/strong&gt; is digital humanism."/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c80-dynamic-quote/c80-dynamic-quote-image1.png"/>
+      </quote>
+    </item0>
+    <item1
+        jcr:primaryType="nt:unstructured">
+      <quote
+          jcr:primaryType="nt:unstructured"
+          active="true"
+          content="&lt;p&gt;Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our workforce is diverse: talented people from 38 countries who have delivered breakthrough solutions to top organizations around the world. Together we’re harnessing the power of cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch every aspect of life. We have a built-in customer base within NEOM, our largest customer, providing us with a playground to test new ideas and build the world’s first truly cognitive city. We will share the human-centric technology we build here with the rest of the world, creating a sustainable, accessible future that revolves around us all.&lt;/p&gt; ">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="&lt;strong&gt;Smart&lt;/strong&gt; is built on sensors.&lt;strong&gt;Cognitive&lt;/strong&gt; is built on trust."/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c80-dynamic-quote/c80-dynamic-quote-image1.png"/>
+      </quote>
+    </item1>
+    <item2
+        jcr:primaryType="nt:unstructured">
+      <quote
+          jcr:primaryType="nt:unstructured"
+          active="true"
+          content="&lt;p&gt;Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our workforce is diverse: talented people from 38 countries who have delivered breakthrough solutions to top organizations around the world. Together we’re harnessing the power of cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch every aspect of life. We have a built-in customer base within NEOM, our largest customer, providing us with a playground to test new ideas and build the world’s first truly cognitive city. We will share the human-centric technology we build here with the rest of the world, creating a sustainable, accessible future that revolves around us all.&lt;/p&gt; ">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="&lt;strong&gt;Smart&lt;/strong&gt; is backward-looking.&lt;strong&gt;Cognitive&lt;/strong&gt; moves us forward."/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c80-dynamic-quote/c80-dynamic-quote-image1.png"/>
+      </quote>
+    </item2>
+    <item3
+        jcr:primaryType="nt:unstructured">
+      <quote
+          jcr:primaryType="nt:unstructured"
+          active="true"
+          content="&lt;p&gt;Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our workforce is diverse: talented people from 38 countries who have delivered breakthrough solutions to top organizations around the world. Together we’re harnessing the power of cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch every aspect of life. We have a built-in customer base within NEOM, our largest customer, providing us with a playground to test new ideas and build the world’s first truly cognitive city. We will share the human-centric technology we build here with the rest of the world, creating a sustainable, accessible future that revolves around us all.&lt;/p&gt; ">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="&lt;strong&gt;Smart&lt;/strong&gt; gives answers. &lt;strong&gt;Cognitive&lt;/strong&gt; asks questions."/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c80-dynamic-quote/c80-dynamic-quote-image1.png"/>
+      </quote>
+    </item3>
+    <item4
+        jcr:primaryType="nt:unstructured">
+      <quote
+          jcr:primaryType="nt:unstructured"
+          active="true"
+          content="&lt;p&gt;Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our workforce is diverse: talented people from 38 countries who have delivered breakthrough solutions to top organizations around the world. Together we’re harnessing the power of cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch every aspect of life. We have a built-in customer base within NEOM, our largest customer, providing us with a playground to test new ideas and build the world’s first truly cognitive city. We will share the human-centric technology we build here with the rest of the world, creating a sustainable, accessible future that revolves around us all.&lt;/p&gt; ">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="&lt;strong&gt;Smart&lt;/strong&gt; is hyper-connected. &lt;strong&gt;Cognitive&lt;/strong&gt; is human connection."/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c80-dynamic-quote/c80-dynamic-quote-image1.png"/>
+      </quote>
+    </item4>
+    <item5
+        jcr:primaryType="nt:unstructured">
+      <quote
+          jcr:primaryType="nt:unstructured"
+          active="true"
+          content="&lt;p&gt;Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our workforce is diverse: talented people from 38 countries who have delivered breakthrough solutions to top organizations around the world. Together we’re harnessing the power of cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch every aspect of life. We have a built-in customer base within NEOM, our largest customer, providing us with a playground to test new ideas and build the world’s first truly cognitive city. We will share the human-centric technology we build here with the rest of the world, creating a sustainable, accessible future that revolves around us all.&lt;/p&gt; ">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="&lt;strong&gt;Smart&lt;/strong&gt; is processing power. &lt;strong&gt;Cognitive&lt;/strong&gt; is human empowerment."/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c80-dynamic-quote/c80-dynamic-quote-image1.png"/>
+      </quote>
+    </item5>
+    <item6
+        jcr:primaryType="nt:unstructured">
+      <quote
+          jcr:primaryType="nt:unstructured"
+          active="true"
+          content="&lt;p&gt;Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our workforce is diverse: talented people from 38 countries who have delivered breakthrough solutions to top organizations around the world. Together we’re harnessing the power of cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch every aspect of life. We have a built-in customer base within NEOM, our largest customer, providing us with a playground to test new ideas and build the world’s first truly cognitive city. We will share the human-centric technology we build here with the rest of the world, creating a sustainable, accessible future that revolves around us all.&lt;/p&gt; ">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="&lt;strong&gt;Smart&lt;/strong&gt; amplifies machines. &lt;strong&gt;Cognitive&lt;/strong&gt; amplifies us."/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c80-dynamic-quote/c80-dynamic-quote-image1.png"/>
+      </quote>
+    </item6>
+    <item7
+        jcr:primaryType="nt:unstructured">
+      <quote
+          jcr:primaryType="nt:unstructured"
+          active="true"
+          content="&lt;p&gt;Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our workforce is diverse: talented people from 38 countries who have delivered breakthrough solutions to top organizations around the world. Together we’re harnessing the power of cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch every aspect of life. We have a built-in customer base within NEOM, our largest customer, providing us with a playground to test new ideas and build the world’s first truly cognitive city. We will share the human-centric technology we build here with the rest of the world, creating a sustainable, accessible future that revolves around us all.&lt;/p&gt; ">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="&lt;strong&gt;Smart&lt;/strong&gt; is cyber security. &lt;strong&gt;Cognitive&lt;/strong&gt; is cyber integrity."/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c80-dynamic-quote/c80-dynamic-quote-image1.png"/>
+      </quote>
+    </item7>
+    <item8
+        jcr:primaryType="nt:unstructured">
+      <quote
+          jcr:primaryType="nt:unstructured"
+          active="true"
+          content="&lt;p&gt;Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our workforce is diverse: talented people from 38 countries who have delivered breakthrough solutions to top organizations around the world. Together we’re harnessing the power of cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch every aspect of life. We have a built-in customer base within NEOM, our largest customer, providing us with a playground to test new ideas and build the world’s first truly cognitive city. We will share the human-centric technology we build here with the rest of the world, creating a sustainable, accessible future that revolves around us all.&lt;/p&gt; ">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="&lt;strong&gt;Smart&lt;/strong&gt; thinks. &lt;strong&gt;Cognitive&lt;/strong&gt; outthinks."/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c80-dynamic-quote/c80-dynamic-quote-image1.png"/>
+      </quote>
+    </item8>
+    <item9
+        jcr:primaryType="nt:unstructured">
+      <quote
+          jcr:primaryType="nt:unstructured"
+          active="true"
+          content="&lt;p&gt;Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our workforce is diverse: talented people from 38 countries who have delivered breakthrough solutions to top organizations around the world. Together we’re harnessing the power of cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch every aspect of life. We have a built-in customer base within NEOM, our largest customer, providing us with a playground to test new ideas and build the world’s first truly cognitive city. We will share the human-centric technology we build here with the rest of the world, creating a sustainable, accessible future that revolves around us all.&lt;/p&gt; ">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="&lt;strong&gt;Smart&lt;/strong&gt; is programmed. &lt;strong&gt;Cognitive&lt;/strong&gt; is progress."/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c80-dynamic-quote/c80-dynamic-quote-image1.png"/>
+      </quote>
+    </item9>
+    <item10
+        jcr:primaryType="nt:unstructured">
+      <quote
+          jcr:primaryType="nt:unstructured"
+          active="true"
+          content="&lt;p&gt;Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our workforce is diverse: talented people from 38 countries who have delivered breakthrough solutions to top organizations around the world. Together we’re harnessing the power of cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch every aspect of life. We have a built-in customer base within NEOM, our largest customer, providing us with a playground to test new ideas and build the world’s first truly cognitive city. We will share the human-centric technology we build here with the rest of the world, creating a sustainable, accessible future that revolves around us all.&lt;/p&gt; ">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="&lt;strong&gt;Smart&lt;/strong&gt; is real-time. &lt;strong&gt;Cognitive&lt;/strong&gt; knows that&#39;s way too late."/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c80-dynamic-quote/c80-dynamic-quote-image1.png"/>
+      </quote>
+    </item10>
+  </items>
+</jcr:root>

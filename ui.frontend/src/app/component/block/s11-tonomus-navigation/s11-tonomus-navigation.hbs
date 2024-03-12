@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="./s11-tonomus-navigation.scss">
+<script src="./S11TonomusNavigation.ts"></script>
+
+<header class="b-tonomusNavigation{{#if secondaryNavigation}} -hasSecondaryNavigation{{/if}}"
+        data-component="s11-tonomus-navigation"
+        {{#if scrollComponent}}data-scroll-component{{/if}}
+>
+  <div class="b-tonomusNavigation__container" data-navigation-container>
+
+    {{#with logo}}
+      <div class="b-tonomusNavigation__logo">
+        {{> atom/a01-image this disableTransition=true variant="block" }}
+      </div>
+    {{/with}}
+    <div class="b-tonomusNavigation__linkWrapper {{#if navigation.main.backItem}}-backLinkOnly{{/if}}">
+      <input type="checkbox" id="tonomus_navigation_toggle" class="b-tonomusNavigation__dropdownToggle" data-toggle-checkbox />
+      <label class="b-tonomusNavigation__toggleLabel" for="tonomus_navigation_toggle" data-dropdown-toggle>
+        <span>{{navigation.main.dropdownLabel}}</span>
+        {{> atom/a02-icon name="dropdown-chevron" }}
+      </label>
+      <div class="b-tonomusNavigation__dropdownContent">
+        {{#with navigation.main}}
+          {{#with backItem}}
+              <a class="b-tonomusNavigation__backLink"
+                 data-link
+                 href="{{href}}" {{#if (condition target '===' '_blank')}}target="_blank" rel="noopener"{{/if}}>
+                {{> atom/a02-icon name="arrow-left-short" }}
+                <span>{{label}}</span>
+              </a>
+          {{/with}}
+
+          {{#if items}}
+            <ul class="b-tonomusNavigation__linkList" data-link-list>
+              {{#each items}}
+                <li class="b-tonomusNavigation__listItem">
+                  <a class="b-tonomusNavigation__link"
+                     data-link
+                     href="{{href}}" {{#if (condition target '===' '_blank')}}target="_blank" rel="noopener"{{/if}}>
+                    <span>{{label}}</span>
+                  </a>
+                </li>
+              {{/each}}
+            </ul>
+          {{/if}}
+        {{/with}}
+        {{> molecule/m02-button navigation.highlightedLink theme="green" }}
+
+        {{#if languages}}
+          {{> organism/o83-tonomus-language-selector }}
+        {{/if}}
+      </div>
+    </div>
+
+  </div>
+</header>

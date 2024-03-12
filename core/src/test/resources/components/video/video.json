@@ -1,0 +1,29 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:title": "Tonomus",
+    "sling:resourceType": "tonomus/components/structure/tonomus-base-page-v2",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "component": {
+        "jcr:primaryType": "nt:unstructured",
+        "poster": "/content/dam/tonomus/components/tonomus-events/tonomus-events-image01.png",
+        "src": "/content/dam/video.mp4",
+        "url": "https://www.youtube.com/watch?v=wDchsz8nmbo",
+        "html": "<iframe src=\"https://player.vimeo.com/video/524933864?h=1ac4fd9fb4&title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen></iframe>\r\n<p><a href=\"https://vimeo.com/524933864\">Vimeo | Video Power</a> from <a href=\"https://vimeo.com/staff\">Vimeo Staff</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p>",
+        "type": "internal",
+        "sling:resourceType": "tonomus/components/content/components/video/v2/video"
+      },
+      "component-html": {
+        "jcr:primaryType": "nt:unstructured",
+        "url": "https://www.youtube.com/watch?v=x3T71Ipou50",
+        "html": "<iframe src=\"https://player.vimeo.com/video/524933864?h=1ac4fd9fb4&title=0&byline=0&portrait=0\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen></iframe>\r\n<p><a href=\"https://vimeo.com/524933864\">Vimeo | Video Power</a> from <a href=\"https://vimeo.com/staff\">Vimeo Staff</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p>",
+        "type": "html",
+        "jcr:lastModified": "Mon Feb 05 2024 01:47:47 GMT+0800",
+        "sling:resourceType": "tonomus/components/content/components/video/v2/video"
+      }
+    }
+  }
+}

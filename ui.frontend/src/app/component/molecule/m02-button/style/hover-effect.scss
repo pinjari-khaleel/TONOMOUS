@@ -1,0 +1,19 @@
+&::before {
+  @include offset(50%, 50%);
+  @include size(100%);
+
+  background: var(--button-background-color-ripple);
+  border-radius: calc(var(--button-border-radius) / 2);
+  content: "";
+  opacity: 0;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: transform 0.6s $easeOutExpo, opacity 0.6s $easeOutExpo;
+}
+
+@include hover {
+  &::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

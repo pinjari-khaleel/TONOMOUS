@@ -1,0 +1,38 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+
+<sly
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html"
+    data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+    data-sly-use.logoMarquee="com.tonomus.core.slingmodels.components.v1.logos.LogoMarqueeModel"></sly>
+
+<section class="b-logoMarquee"
+         data-component="c85-logo-marquee"
+         data-sly-attribute.id="${commonComponentModel.anchorId}"
+         data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+         style="${commonComponentModel.padding.styleInline @ context='styleString'}"
+         data-lazy-component>
+  <div class="b-logoMarquee__container">
+
+    <div data-sly-test="${logoMarquee.heading}" class="b-logoMarquee__heading"
+         data-paragraph-heading>
+      <sly data-sly-call="${headingTemplate.heading @ headingModel = logoMarquee.heading,
+        size='h2', element='h2'}"></sly>
+    </div>
+
+    <div class="b-logoMarquee__content" data-content>
+      <div class="b-logoMarquee__logoCarousel" data-carousel
+           data-sly-test="${logoMarquee.items}"
+           data-sly-list="${logoMarquee.items}">
+
+        <a data-sly-test.href="${item.link.href}" class="b-logoMarquee__swiper-logoLink"
+           href="${href @ context='uri'}" data-sly-attribute.target=${item.link.target}>
+          <sly data-sly-call="${imageTemplate.image @ imageModel=item.image,
+          disableTransition=true, variant='block'}"></sly>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

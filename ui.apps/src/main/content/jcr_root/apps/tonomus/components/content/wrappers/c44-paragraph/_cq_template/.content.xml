@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          jcr:primaryType="nt:unstructured"
+          text="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet ac neque quis ultrices nibh. Aliquam mi in ut eu id nec nisi. Nisi lectus vitae vitae, eu urna risus quis pretium malesuada. Lectus semper aenean ornare ornare. Eget vel accumsan tellus venenatis sapien mattis arcu ut ut. Lobortis nunc diam amet, malesuada sed a. Dapibus pellentesque platea et et ut nulla sit est venenatis. Nibh viverra ut dui vitae condimentum sed gravida nibh. Congue mi eu aliquet nisl tincidunt porta elementum.&lt;/p>&#xd;&#xa;"
+          textIsRich="true">
+</jcr:root>

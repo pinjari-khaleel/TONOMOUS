@@ -1,0 +1,8 @@
+<!--/* One item for the C86 People Carousel (Business Card) */-->
+<sly data-sly-use.model="com.tonomus.core.slingmodels.components.v1.peoplecarousel.BusinessCardModel"
+     data-sly-use.bizCrdTpl="/apps/tonomus/components/content/molecules/m54-business-card.html"
+     data-sly-call="${bizCrdTpl.businessCard @ model=model}"></sly>
+
+<!--/* Placeholder */-->
+<sly data-sly-use.tpl="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${tpl.placeholder @ isEmpty=true}"></sly>

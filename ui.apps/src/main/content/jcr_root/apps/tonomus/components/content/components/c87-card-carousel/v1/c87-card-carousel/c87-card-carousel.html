@@ -1,0 +1,78 @@
+<sly
+    data-sly-use.commonCmpModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.model="com.tonomus.core.slingmodels.components.v1.cardcarousel.CardCarouselModel"
+    data-sly-use.styleModel="com.adobe.cq.wcm.style.ComponentStyleInfo"
+
+    data-sly-use.tpl="core/wcm/components/commons/v1/templates.html"
+    data-sly-use.hTpl="/apps/tonomus/components/content/atoms/a03-heading.html"
+    data-sly-use.imgTpl="/apps/tonomus/components/content/atoms/a01-image.html"
+    data-sly-use.btnTpl="/apps/tonomus/components/content/molecules/m02-button.html"
+    data-sly-use.ctrlTpl="/apps/tonomus/components/content/organisms/o42-slider-controls.html"
+    data-sly-use.lineTpl="/apps/tonomus/components/content/atoms/a27-tonomus-line.html"
+
+    data-sly-set.id="${commonCmpModel.anchorId}"
+    data-sly-set.isEdit="${wcmmode.edit}"
+    data-sly-set.isConfigured="${model.items.size && model.items.size > 3}"
+
+    data-sly-set.placeholderText="${!isConfigured && 'Please add more slides' || ''}"
+    data-sly-call="${tpl.placeholder @ isEmpty=true, emptyTextAppend=placeholderText}"
+></sly>
+
+<section class="b-cardCarousel"
+         data-component="c87-card-carousel"
+         data-lazy-component
+         style="${commonCmpModel.padding.styleInline @ context='styleString'}"
+         data-sly-attribute.data-scroll-component="${commonCmpModel.scrollComponent}"
+         data-sly-attribute.id="${id}"
+         data-sly-test="${isConfigured}">
+
+  <!--/* lineId is just a workaround to avoid FE HTML error of duplicated ids */-->
+  <sly data-sly-set.lineId="${id ? '{0}-line' : '' @ format=[id]}"
+       data-sly-call="${lineTpl.tonomusLine @ id=lineId,
+         scrollComponent=commonCmpModel.scrollComponent}"></sly>
+
+  <div class="b-cardCarousel__container">
+    <div class="b-cardCarousel__header"
+         data-sly-test="${model.header.heading.text}">
+      <sly data-sly-call="${hTpl.heading @ headingModel=model.header.heading}"></sly>
+    </div>
+
+    <div class="b-cardCarousel__content" data-carousel-container>
+      <div class="swiper__container" data-slider>
+        <div class="swiper-wrapper"
+             data-sly-list.item="${model.items}">
+          <div class="swiper-slide"
+               data-sly-set.isArticle="${item.variant == 'article'}"
+               data-sly-set.isVideo="${item.variant == 'video'}">
+            <div class="b-cardCarousel__slideButton" data-slide-button
+                 data-sly-set.href="${isArticle && item.link.href}"
+                 data-sly-attribute.href="${href @ context='uri'}"
+                 data-sly-element="${href ? 'a' : 'div'}"
+                 data-sly-attribute.aria-label="${item.link.label}"
+                 data-sly-attribute.target="${href && item.link.target}"
+                 data-sly-attribute.data-video="${isVideo && item.video.json}">
+              <div class="b-cardCarousel__media" data-update-card
+                   data-sly-test="${item.image.src}">
+                <sly data-sly-call="${imgTpl.image @ imageModel=item.image,
+                       disableTransition=true}"></sly>
+              </div>
+              <div class="b-cardCarousel__slideCopy"
+                   data-sly-test.headingText="${item.heading.text}">
+                ${headingText @ context='text'}
+              </div>
+              <sly data-sly-test="${isVideo}"
+                   data-sly-call="${btnTpl.button @ icon='play-solid', theme='green',
+                     variant='play'}"></sly>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="b-cardCarousel__footer">
+      <div class="b-cardCarousel__controls" data-controls>
+        <sly data-sly-call="${ctrlTpl.sliderControls @
+               dark=('t-dark' in styleModel.appliedCssClasses)}"></sly>
+      </div>
+    </footer>
+  </div>
+</section>

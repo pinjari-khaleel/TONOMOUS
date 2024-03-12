@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          type="checkbox"
+          name="checkbox-list"
+          id="checkbox-list"
+          required="{Boolean}true">
+  <validate jcr:primaryType="nt:unstructured">
+    <presence jcr:primaryType="nt:unstructured"
+              message="Please select at least one"/>
+  </validate>
+  <fieldsetLegend
+      jcr:primaryType="nt:unstructured"
+      text="My checkbox list"
+  />
+  <showDropdownForMultipleChoice
+      jcr:primaryType="nt:unstructured"
+      id="my-dropdown"
+      label="my-dropdown"
+      name="my-dropdown"
+      required="true"
+      wide="true">
+  </showDropdownForMultipleChoice>
+  <showTextareaForOtherChoice
+      jcr:primaryType="nt:unstructured"
+      id="my-textarea"
+      label="my-textarea"
+      name="my-textarea"
+      placeholder="Type here"
+      required="true"
+      titleInEnglish="my-textarea"
+      wide="true">
+  </showTextareaForOtherChoice>
+</jcr:root>

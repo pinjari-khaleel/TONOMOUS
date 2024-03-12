@@ -1,0 +1,11 @@
+heading:
+  text: 'Sophisticated'
+  size: 'h2'
+  element: 'h3'
+copy:
+  - highlight: true
+    content:
+      'NEOM is a sophisticated brand, intelligent and  clear in what it wants to communicate.'
+  - content:
+      '<p>So we keep it clean, high in quality and appealing.  Avoid cluttering the image with lots
+      of unnecessary elements.</p>'

@@ -1,0 +1,31 @@
+<sly
+  data-sly-template.sliderControls="${ @
+       themeCssClasses = 'String value - theme CSS classes',
+       level = 'Level',
+       accessibilityPrevious='aria-label for the Previous button',
+       accessibilityNext='aria-label for the Next button'
+     }"
+  data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"
+  data-sly-set._ariaPrev="${accessibilityPrevious || 'Previous' @ i18n}"
+  data-sly-set._ariaNext="${accessibilityNext || 'Next' @ i18n}"
+  data-sly-set.isAuthoring="${wcmmode.edit || wcmmode.preview}"
+  data-sly-set._prevCoreHook="${isAuthoring ? 'data-cmp-hook-carousel=previous' : ''}"
+  data-sly-set._nextCoreHook="${isAuthoring ? 'data-cmp-hook-carousel=next' : ''}"
+  data-sly-set._prevAttrs="data-previous-button ${_prevCoreHook}"
+  data-sly-set._nextAttrs="data-next-button ${_nextCoreHook}"
+>
+  <!--/* "isAuthoring" properties are for Core Components' carousel functionality */-->
+  <div
+    data-component="o42-slider-controls"
+    class="o-sliderControls ${themeCssClasses @ context='styleString'}"
+  >
+    <sly
+      data-sly-call="${buttonTemplate.button @ theme='white', icon='icon-left', level=level,
+           attrs=_prevAttrs, ariaLabel=_ariaPrev}"
+    ></sly>
+    <sly
+      data-sly-call="${buttonTemplate.button @ theme='white', icon='icon-right', level=level,
+           attrs=_nextAttrs, ariaLabel=_ariaNext}"
+    ></sly>
+  </div>
+</sly>

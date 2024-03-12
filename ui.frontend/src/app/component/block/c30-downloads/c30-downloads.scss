@@ -1,0 +1,61 @@
+.b-downloads {
+  background-color: var(--component-background-color);
+  color: var(--component-text-color);
+  overflow: hidden;
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+
+  &__container {
+    @include container();
+  }
+
+  &__heading {
+    @include type("body", "xlarge");
+
+    margin: 0 0 1em;
+    text-transform: none;
+  }
+
+  &__list {
+    @include list-reset();
+
+    display: grid;
+    grid-gap: calc(var(--grid-gap) * 3) var(--grid-gap);
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @include respond-to("LARGE") {
+    &.-row {
+      .b-downloads__list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    &__heading {
+      margin: 0 0 var(--block-padding);
+    }
+  }
+
+  @include respond-to("XLARGE") {
+    &.-row {
+      .b-downloads__container {
+        display: grid;
+        grid-gap: var(--grid-gap);
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+      }
+
+      .b-downloads__listWrapper {
+        grid-column: 2 / span 10;
+      }
+    }
+  }
+
+  // Removes any and all padding for stand-alone use when embedded in C45
+  @include contentScope() {
+    padding: 0;
+
+    &__container {
+      padding: 0;
+    }
+  }
+}

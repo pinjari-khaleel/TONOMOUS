@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Video"
+    extraClientlibs="[tonomus.v2.video.editor]">
+    <content
+        granite:class="cmp-video__editor"
+        jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column jcr:primaryType="nt:unstructured">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <type jcr:primaryType="nt:unstructured">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cmp-video-dialog-edit-hook="typeField"
+                                                    cmp-video-dialog-edit-showhidetarget="\[data-cmp-video-dialog-edit-type]"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <url
+                                                        jcr:primaryType="nt:unstructured"
+                                                        checked="{Boolean}false"/>
+                                                    <internal
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:orderBefore="url"
+                                                        checked="{Boolean}true"
+                                                        text="Internal"
+                                                        value="internal"/>
+                                                </items>
+                                            </type>
+                                            <url jcr:primaryType="nt:unstructured">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <field jcr:primaryType="nt:unstructured">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cmp-video-dialog-edit-hook="urlField"/>
+                                                    </field>
+                                                    <status jcr:primaryType="nt:unstructured">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cmp-video-dialog-edit-hook="urlStatus"/>
+                                                    </status>
+                                                </items>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cmp-video-dialog-edit-showhidetargetvalue="url"
+                                                    cmp-video-dialog-edit-type="true"/>
+                                            </url>
+                                            <embeddable jcr:primaryType="nt:unstructured">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <field jcr:primaryType="nt:unstructured">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            cmp-video-dialog-edit-hook="embeddableField"
+                                                            cmp-video-dialog-edit-showhidetarget="\[data-cmp-video-dialog-edit-embeddableoptions]"/>
+                                                    </field>
+                                                </items>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cmp-video-dialog-edit-showhidetargetvalue="embeddable"
+                                                    cmp-video-dialog-edit-type="true"/>
+                                            </embeddable>
+                                            <html jcr:primaryType="nt:unstructured">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cmp-video-dialog-edit-showhidetargetvalue="html"
+                                                    cmp-video-dialog-edit-type="true"/>
+                                            </html>
+                                            <internal
+                                                granite:class="foundation-toggleable"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:orderBefore="id"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <video
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                        allowUpload="{Boolean}false"
+                                                        class="cq-droptarget"
+                                                        fieldDescription="Uses &lt;video> element which supports video formats mp4, WebM and Ogg"
+                                                        fieldLabel="Video"
+                                                        fileNameParameter="./fileName"
+                                                        fileReferenceParameter="./src"
+                                                        mimeTypes="[video/mp4,video/webm,video/ogg]"
+                                                        multiple="{Boolean}false"
+                                                        name="./file"
+                                                        title="Upload Video Asset"
+                                                        uploadUrl="${suffix.path}"
+                                                        useHTML5="{Boolean}true"/>
+                                                    <autoplay
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        fieldDescription="Automatically starts the video as soon as the data has finished loading."
+                                                        name="./autoplay"
+                                                        text="Autoplay"
+                                                        value="true"/>
+                                                    <muted
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        fieldDescription="Mute the audio in a video"
+                                                        name="./muted"
+                                                        text="Muted"
+                                                        value="true"/>
+                                                    <loop
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        fieldDescription="Plays the video again once the playback has come to end"
+                                                        name="./loop"
+                                                        text="Loop"
+                                                        value="true"/>
+                                                </items>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cmp-video-dialog-edit-showhidetargetvalue="internal"
+                                                    cmp-video-dialog-edit-type="true"/>
+                                            </internal>
+                                            <poster
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:orderBefore="id"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                droppable="{Boolean}true"
+                                                fieldDescription="Image for video thumbnail"
+                                                fieldLabel="Poster"
+                                                name="./poster"
+                                                rootPath="/content/dam/tonomus"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

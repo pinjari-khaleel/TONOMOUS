@@ -1,0 +1,31 @@
+
+
+<section class="b-peopleCarousel"
+  data-component="c86-people-carousel"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with padding}}
+    style="--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};"
+  {{/with}}
+  data-lazy-component
+>
+  <div class="b-peopleCarousel__header" data-header>
+    {{> atom/a03-heading heading element="h2" size="h1" }}
+  </div>
+
+  <div>
+    <div class="b-peopleCarousel__content" data-carousel-container>
+      <div class="b-peopleCarousel__carousel" data-carousel>
+          {{#each items}}
+            <div class="b-peopleCarousel__carouselItem" data-carousel-item>
+              {{> molecule/m54-business-card }}
+            </div>
+          {{/each}}
+      </div>
+    </div>
+    <div class="b-peopleCarousel__controls" data-controls>
+        {{> organism/o42-slider-controls }}
+      </div>
+  </div>
+</section>

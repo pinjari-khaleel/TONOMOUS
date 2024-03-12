@@ -1,0 +1,11 @@
+<div class="o-form__response">
+  {{#with message.icon}}
+    <div class="o-form__responseIconWrapper{{#if ../error}} -error{{/if}}">
+      {{> atom/a02-icon name=this }}
+    </div>
+  {{/with}}
+  <div class="o-form__responseCopyWrapper{{#if error}} -error{{/if}}">
+    <h4 class="o-form__responseHeading">{{message.heading.text}}</h4>
+    <p class="o-form__responseDescription">{{message.description}}</p>
+  </div>
+</div>

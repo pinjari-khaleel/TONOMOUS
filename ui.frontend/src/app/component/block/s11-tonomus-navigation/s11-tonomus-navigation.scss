@@ -1,0 +1,242 @@
+.b-tonomusNavigation {
+  --navigation-background: transparent;
+  --navigation-min-height: 82px;
+  --navigation-min-height-scrolled: 62px;
+
+  @include position(0, 0, auto);
+  color: var(--color-white);
+  position: fixed;
+  z-index: zindex($zLayout, navigation);
+  background-color: var(--navigation-background);
+  transition: opacity 0.4s ease, background-color 0.4s ease;
+
+  &__container {
+    @include container();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: var(--navigation-filter);
+    position: relative;
+    min-height: var(--navigation-min-height);
+    max-width: 1440px;
+    padding-block-start: 40px;
+    transition: min-height 0.4s ease, padding-block-start 0.4s ease;
+  }
+
+  &.-isScrolled,
+  &.-isActive {
+    --navigation-background: var(--color-tonomus-purple-408a);
+
+    .b-tonomusNavigation__container {
+      padding-block-start: 0;
+      min-height: var(--navigation-min-height-scrolled);
+    }
+  }
+
+  input[type="checkbox"],
+  .m-button {
+    display: none;
+  }
+
+  &__logo {
+    width: 128px;
+  }
+
+  &__linkWrapper {
+    position: relative;
+  }
+
+  &__linkList {
+    @include list-reset();
+    margin-block-end: 10px;
+  }
+
+  &__listItem {
+    padding-inline: 9px;
+    padding-block: 7px;
+
+    &.-desktopOnly {
+      display: none;
+    }
+  }
+
+  &__link {
+    @include type("button", "xLarge");
+    width: 100%;
+    text-transform: uppercase;
+    color: var(--color-tonomus-green-300);
+  }
+
+  &__backLink {
+    --icon-size: 16px;
+
+    @include type("button", "xLarge");
+    @include iconFlip();
+    width: 100%;
+    text-transform: uppercase;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+
+    .a-icon {
+      margin-inline-end: 20px;
+    }
+  }
+
+  &__toggleLabel {
+    @include type("button", "xLarge");
+    height: 16px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    --icon-size: 10px;
+
+    .a-icon {
+      margin-inline-start: 7px;
+      transform: rotate(180deg);
+      transition: transform 0.25s ease-in-out;
+    }
+  }
+
+  &__dropdownContent {
+    display: none;
+    position: absolute;
+    inset-block-start: 39px;
+    inset-inline-end: calc(var(--containerMargin) * -1);
+    background-color: var(--color-tonomus-purple-409a);
+    padding-block: 19px 15px;
+    padding-inline: 20px;
+    white-space: nowrap;
+    min-width: 200px;
+  }
+
+  input[type="checkbox"]:checked ~ .b-tonomusNavigation__dropdownContent {
+    display: block;
+  }
+
+  input[type="checkbox"]:checked ~ .b-tonomusNavigation__toggleLabel {
+    .a-icon {
+      transform: rotate(0deg);
+    }
+  }
+
+  @include respond-to(LARGE) {
+    --navigation-min-height: 100px;
+    --navigation-min-height-scrolled: 80px;
+    padding-block-end: 10px;
+
+    &__container {
+      align-items: center;
+    }
+
+    &.-isScrolled,
+    &.-isActive {
+      --navigation-background: transparent;
+      background: linear-gradient(
+        180deg,
+        var(--color-tonomus-purple-350a69) 0%,
+        var(--color-tonomus-purple-350a00) 113%
+      );
+    }
+
+    &__logo {
+      width: 166px;
+    }
+
+    &__linkWrapper {
+      &.-backLinkOnly {
+        flex-grow: 1;
+      }
+    }
+
+    &__linkList {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-block-end: 0;
+      padding-inline-end: 24px;
+    }
+
+    &__listItem {
+      padding-inline: 0;
+
+      &.-desktopOnly {
+        display: list-item;
+      }
+    }
+
+    &__backLink {
+      margin-inline-start: 20px;
+    }
+
+    &__link {
+      position: relative;
+      font-size: 14px;
+      font-weight: normal;
+      color: var(--color-white);
+
+      span {
+        pointer-events: none;
+        display: inline-block;
+      }
+
+      &::after {
+        @include pseudo();
+        @include size(0%, 2px);
+        left: 50%;
+        bottom: 0;
+        opacity: 0;
+        background-color: var(--color-tonomus-green);
+        transform: translate(-50%, 10px);
+      }
+
+      @include hover() {
+        &::after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+
+      &.-isActive {
+        color: var(--color-tonomus-white-high-emphasis);
+        font-weight: 700;
+      }
+
+      &.-isUnderline {
+        &::after {
+          width: 100%;
+          opacity: 1;
+          transition: opacity 0.2s ease-in-out;
+        }
+      }
+    }
+
+    &__toggleLabel {
+      display: none;
+    }
+
+    &__dropdownContent {
+      position: relative;
+      inset-block-start: auto;
+      inset-inline-end: auto;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      padding-block: 10px;
+    }
+
+    .m-button {
+      display: inline-flex;
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    --navigation-min-height: 190px;
+    --navigation-min-height-scrolled: 112px;
+    padding-block-end: 0;
+
+    &__container {
+      padding-block-start: 0;
+    }
+  }
+}

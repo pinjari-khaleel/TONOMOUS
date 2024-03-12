@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="./m34-component-background.scss">
+<script src="./M34ComponentBackground.ts"></script>
+
+<div class="m-componentBackground{{#if (condition mask.solid '===' true)}} -solidMask{{/if}}"
+  data-component="m34-component-background"
+  {{#if disableTransition}}data-disable-transition{{/if}}
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{!-- explicitly rendering the default mask opacity if no mask exists, to match BE templating limitations --}}
+     {{#with mask}}style="--mask-opacity: {{opacity}}"{{else}}style="--mask-opacity: 0.5"{{/with}}
+  {{#with effect}}data-effect="{{this}}"{{/with}}
+  {{#with image}}data-image-src="{{src}}"{{/with}}
+  >
+  <div class="m-componentBackground__container">
+    <div class="m-componentBackground__background" data-background {{#if sticky}}data-sticky-background{{/if}}>
+      {{#with image}}
+        {{> atom/a01-image disableTransition=../disableTransition direction=../transitionDirection }}
+      {{/with}}
+      {{#with video}}
+        {{> atom/a19-video autoloop=true }}
+      {{else with lottie}}
+        {{> atom/a20-lottie-animation }}
+      {{/with}}
+    </div>
+  </div>
+</div>

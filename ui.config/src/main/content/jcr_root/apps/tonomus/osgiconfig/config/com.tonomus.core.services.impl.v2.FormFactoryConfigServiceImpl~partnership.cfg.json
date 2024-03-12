@@ -1,0 +1,4 @@
+{
+    "formID":"tonomus_partnership_form",
+    "mandatoryFields":"$[env:TONOMUS_PARTNERSHIP_FORM;default=name,email,organization,interest,contact-permission,LANGUAGE]"
+}

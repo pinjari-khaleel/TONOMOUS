@@ -1,0 +1,613 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Tue Nov 30 2021 16:55:23 GMT+0600",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "changefreq": "weekly",
+    "jcr:createdBy": "admin",
+    "jcr:title": "tesss",
+    "cq:lastReplicatedBy_publish": "ashwin.b@mediamonks.com",
+    "cq:lastReplicationAction": "Deactivate",
+    "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+    "cq:lastReplicatedBy": "ashwin.b@mediamonks.com",
+    "cq:lastReplicationAction_publish": "Deactivate",
+    "jcr:created": "Tue Nov 30 2021 16:55:23 GMT+0600",
+    "cq:lastReplicated": "Fri Nov 12 2021 13:39:29 GMT+0000",
+    "cq:lastModified": "Tue Feb 22 2022 12:24:19 GMT+0600",
+    "siteSection": "home",
+    "sling:resourceType": "neom/components/structure/page",
+    "cq:lastReplicated_publish": "Fri Nov 12 2021 13:39:29 GMT+0000",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c59_multi_step_form": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "titleInEnglish": "Trojena Form",
+          "jcr:created": "Tue Feb 22 2022 12:24:19 GMT+0600",
+          "branding": "This site is protected by reCAPTCHA and the Google <a href=\"https://policies.google.com/privacy\" target=\"_blank\">Privacy Policy</a> and <a href=\"https://policies.google.com/terms\" target=\"_blank\">Terms of Service</a> apply.",
+          "id": "trojena_form",
+          "jcr:lastModified": "Tue Feb 22 2022 12:24:19 GMT+0600",
+          "sling:resourceType": "neom/components/content/components/c59-multi-step-form/v1/c59-multi-step-form",
+          "isInModal": "false",
+          "c59_step": {
+            "jcr:primaryType": "nt:unstructured",
+            "previousButtonAvailable": "false",
+            "nextButtonAvailable": "true",
+            "doneButtonAvailable": "false",
+            "submitButtonAvailable": "false",
+            "sling:resourceType": "neom/components/content/wrappers/c59-step",
+            "tryAgainButtonAvailable": "false",
+            "heading": {
+              "jcr:primaryType": "nt:unstructured",
+              "text": "What option best describes your interest in Trojena?"
+            },
+            "c59_step_group": {
+              "jcr:primaryType": "nt:unstructured",
+              "required": "true",
+              "id": "interest",
+              "name": "interest",
+              "sling:resourceType": "neom/components/content/components/c59-multi-step-form/v1/c59-multi-step-form/c59-step-group",
+              "validate": {
+                "jcr:primaryType": "nt:unstructured",
+                "presence": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "message": "^Please select at least one"
+                }
+              },
+              "m28_radio_option": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Visit TROJENA",
+                "required": "true",
+                "id": "interest",
+                "name": "interest",
+                "label": "Visit TROJENA",
+                "title": "For tourists:",
+                "value": "Travel to and experience TROJENA",
+                "checked": "false",
+                "sling:resourceType": "neom/components/content/wrappers/m28-radio-option"
+              },
+              "m28_radio_option_215666899": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Live/Have a property in TROJENA",
+                "required": "true",
+                "id": "interest",
+                "name": "interest",
+                "label": "Live/Have a property in TROJENA",
+                "title": "For residents:",
+                "value": "To buy property in TROJENA",
+                "checked": "false",
+                "sling:resourceType": "neom/components/content/wrappers/m28-radio-option"
+              },
+              "m28_radio_option_366888920": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Setup a business in TROJENA",
+                "required": "true",
+                "id": "interest",
+                "name": "interest",
+                "label": "Setup a business in TROJENA",
+                "title": "For businesses:",
+                "value": "Set up a business in TROJENA",
+                "checked": "false",
+                "sling:resourceType": "neom/components/content/wrappers/m28-radio-option"
+              }
+            }
+          },
+          "c59_step_1006455254": {
+            "jcr:primaryType": "nt:unstructured",
+            "previousButtonAvailable": "true",
+            "nextButtonAvailable": "true",
+            "doneButtonAvailable": "false",
+            "submitButtonAvailable": "false",
+            "sling:resourceType": "neom/components/content/wrappers/c59-step",
+            "tryAgainButtonAvailable": "false",
+            "heading": {
+              "jcr:primaryType": "nt:unstructured",
+              "text": "Thank you for your interest in TROJENA.<br /> Let’s continue with your contact details:"
+            },
+            "c59_step_group": {
+              "jcr:primaryType": "nt:unstructured",
+              "required": "false",
+              "type": "grid",
+              "sling:resourceType": "neom/components/content/components/c59-multi-step-form/v1/c59-multi-step-form/c59-step-group",
+              "validate": {
+                "jcr:primaryType": "nt:unstructured",
+                "presence": {
+                  "jcr:primaryType": "nt:unstructured"
+                }
+              },
+              "m30_text_field": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "First Name",
+                "readonly": "false",
+                "required": "true",
+                "id": "first-name",
+                "name": "FNAME",
+                "type": "text",
+                "wide": "false",
+                "label": "First Name",
+                "disabled": "false",
+                "placeholder": "Type here",
+                "sling:resourceType": "neom/components/content/wrappers/c59-m30-text-field",
+                "validate": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "presence": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "message": ""
+                  },
+                  "format": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "pattern": "",
+                    "message": ""
+                  },
+                  "email": {
+                    "jcr:primaryType": "nt:unstructured"
+                  },
+                  "length": {
+                    "jcr:primaryType": "nt:unstructured"
+                  }
+                }
+              },
+              "m30_text_field_1863085810": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Last Name",
+                "readonly": "false",
+                "required": "true",
+                "id": "last-name",
+                "name": "LNAME",
+                "type": "text",
+                "wide": "false",
+                "label": "Last Name",
+                "disabled": "false",
+                "placeholder": "Type here",
+                "sling:resourceType": "neom/components/content/wrappers/c59-m30-text-field",
+                "validate": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "presence": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "message": "^Please enter your last name"
+                  },
+                  "format": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "pattern": "[^0-9!-/:-@\\[-`{-~]+",
+                    "message": "^Please only use letters"
+                  },
+                  "email": {
+                    "jcr:primaryType": "nt:unstructured"
+                  },
+                  "length": {
+                    "jcr:primaryType": "nt:unstructured"
+                  }
+                }
+              },
+              "m30_text_field_17172591": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Email address",
+                "readonly": "false",
+                "required": "true",
+                "id": "email",
+                "name": "email",
+                "type": "email",
+                "wide": "false",
+                "label": "Email address",
+                "disabled": "false",
+                "placeholder": "name@mail.com",
+                "sling:resourceType": "neom/components/content/wrappers/c59-m30-text-field",
+                "validate": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "presence": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "message": "^Please enter your email address"
+                  },
+                  "email": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "message": "^Please enter a correct email address"
+                  },
+                  "length": {
+                    "jcr:primaryType": "nt:unstructured"
+                  }
+                }
+              },
+              "phone_field": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Phone number",
+                "required": "false",
+                "id": "phone-number",
+                "name": "PHONE",
+                "wide": "false",
+                "label": "Phone number",
+                "placeholder": "Type here",
+                "sling:resourceType": "neom/components/content/wrappers/c59-phone-field",
+                "countrySelector": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "titleInEnglish": "Country",
+                  "required": "false",
+                  "id": "country",
+                  "name": "country",
+                  "label": "Country",
+                  "placeholder": "Select",
+                  "items": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "saudi-arabia": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "label": "SA (+966)",
+                      "value": "966",
+                      "selected": "false"
+                    },
+                    "andorra": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "label": "AD (+376)",
+                      "value": "376",
+                      "selected": "false"
+                    },
+                    "united-arab-emirates": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "label": "AE (+971)",
+                      "value": "971",
+                      "selected": "false"
+                    },
+                    "zimbabwe": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "label": "ZW (+263)",
+                      "value": "263",
+                      "selected": "false"
+                    }
+                  }
+                }
+              },
+              "m31_dropdown_field": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Your location",
+                "autocomplete": "false",
+                "required": "true",
+                "id": "location",
+                "name": "LOCATION",
+                "wide": "false",
+                "label": "Your location",
+                "disabled": "false",
+                "placeholder": "Select",
+                "sling:resourceType": "neom/components/content/wrappers/c59-m31-dropdown-field",
+                "items": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "saudi-arabia": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "label": "Saudi Arabia",
+                    "value": "Saudi Arabia",
+                    "selected": "false"
+                  },
+                  "zimbabwe": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "label": "Zimbabwe",
+                    "value": "Zimbabwe",
+                    "selected": "false"
+                  }
+                },
+                "validate": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "presence": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "message": "^Please choose a location"
+                  }
+                }
+              },
+              "m31_dropdown_field_1473282891": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Preferred language",
+                "autocomplete": "false",
+                "id": "language",
+                "name": "LANGUAGE",
+                "wide": "false",
+                "label": "Preferred language",
+                "disabled": "false",
+                "placeholder": "Select",
+                "sling:resourceType": "neom/components/content/wrappers/c59-m31-dropdown-field",
+                "items": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "label": "English",
+                    "value": "English",
+                    "selected": "false"
+                  },
+                  "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "label": "Arabic",
+                    "value": "Arabic",
+                    "selected": "false"
+                  },
+                  "item2": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "label": "Chinese",
+                    "value": "Chinese",
+                    "selected": "false"
+                  },
+                  "item3": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "label": "French",
+                    "value": "French",
+                    "selected": "false"
+                  },
+                  "item4": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "label": "German",
+                    "value": "German",
+                    "selected": "false"
+                  },
+                  "item5": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "label": "Japanese",
+                    "value": "Japanese",
+                    "selected": "false"
+                  },
+                  "item6": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "label": "Russian",
+                    "value": "Russian",
+                    "selected": "false"
+                  }
+                },
+                "validate": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "presence": {
+                    "jcr:primaryType": "nt:unstructured"
+                  }
+                }
+              }
+            },
+            "c59_step_group_2016160548": {
+              "jcr:primaryType": "nt:unstructured",
+              "legend": "Contact Permissions",
+              "required": "true",
+              "id": "contact-permissions",
+              "copy": "<p>We would like to stay in touch to tell you about news and opportunities at NEOM. We will treat your information carefully. See our <a href=\"#\">Terms of Use</a> and <a href=\"#\">Privacy Policy</a>.</p>",
+              "name": "contact-permissions",
+              "type": "radioGroup",
+              "sling:resourceType": "neom/components/content/components/c59-multi-step-form/v1/c59-multi-step-form/c59-step-group",
+              "validate": {
+                "jcr:primaryType": "nt:unstructured",
+                "presence": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "message": "^Please select at least one"
+                }
+              },
+              "m28_radio_option": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Yes",
+                "required": "true",
+                "id": "contact-permissions",
+                "name": "contact-permissions",
+                "label": "Yes",
+                "value": "yes",
+                "checked": "false",
+                "sling:resourceType": "neom/components/content/wrappers/m28-radio-option"
+              },
+              "m28_radio_option_963607006": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "No",
+                "required": "true",
+                "id": "contact-permissions",
+                "name": "contact-permissions",
+                "label": "No",
+                "value": "no",
+                "checked": "false",
+                "sling:resourceType": "neom/components/content/wrappers/m28-radio-option"
+              }
+            }
+          },
+          "c59_step_1805521342": {
+            "jcr:primaryType": "nt:unstructured",
+            "previousButtonAvailable": "true",
+            "nextButtonAvailable": "false",
+            "doneButtonAvailable": "false",
+            "submitButtonAvailable": "true",
+            "sling:resourceType": "neom/components/content/wrappers/c59-step",
+            "tryAgainButtonAvailable": "false",
+            "heading": {
+              "jcr:primaryType": "nt:unstructured",
+              "text": "Thank you ${FNAME}, just one more step.<br />What best describes the trip you are              planning?"
+            },
+            "c59_step_group": {
+              "jcr:primaryType": "nt:unstructured",
+              "legend": "Please select",
+              "required": "true",
+              "id": "category_interest",
+              "name": "category_interest",
+              "type": "radio",
+              "sling:resourceType": "neom/components/content/components/c59-multi-step-form/v1/c59-multi-step-form/c59-step-group",
+              "validate": {
+                "jcr:primaryType": "nt:unstructured",
+                "presence": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "message": "^Please select at least one"
+                }
+              },
+              "m28_radio_option": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Luxury holiday",
+                "required": "true",
+                "id": "category_interest",
+                "name": "category_interest",
+                "label": "Luxury holiday",
+                "value": "Luxury holiday",
+                "checked": "false",
+                "sling:resourceType": "neom/components/content/wrappers/m28-radio-option"
+              },
+              "m28_radio_option_2054707252": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Family holiday",
+                "required": "true",
+                "id": "category_interest",
+                "name": "category_interest",
+                "label": "Family holiday",
+                "value": "Family holiday",
+                "checked": "false",
+                "sling:resourceType": "neom/components/content/wrappers/m28-radio-option"
+              },
+              "m28_radio_option_1403090552": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Short haul holiday",
+                "required": "true",
+                "id": "category_interest",
+                "name": "category_interest",
+                "label": "Short haul holiday",
+                "value": "Short-haul holiday",
+                "checked": "false",
+                "sling:resourceType": "neom/components/content/wrappers/m28-radio-option"
+              },
+              "m28_radio_option_385881329": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Adventure experience",
+                "required": "true",
+                "id": "category_interest",
+                "name": "category_interest",
+                "label": "Adventure experience",
+                "value": "Adventure experience",
+                "checked": "false",
+                "sling:resourceType": "neom/components/content/wrappers/m28-radio-option"
+              },
+              "m28_radio_option_2128970585": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Wellness retreat",
+                "required": "true",
+                "id": "category_interest",
+                "name": "category_interest",
+                "label": "Wellness retreat",
+                "value": "Wellness retreat",
+                "checked": "false",
+                "sling:resourceType": "neom/components/content/wrappers/m28-radio-option"
+              },
+              "m28_radio_option_1118815548": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Discovery & culture holiday",
+                "required": "true",
+                "id": "category_interest",
+                "name": "category_interest",
+                "label": "Discovery & culture holiday",
+                "value": "Cultural experience",
+                "checked": "false",
+                "sling:resourceType": "neom/components/content/wrappers/m28-radio-option"
+              }
+            },
+            "c59_step_group_717403701": {
+              "jcr:primaryType": "nt:unstructured",
+              "required": "false",
+              "id": "category_interest_description",
+              "type": "textarea",
+              "sling:resourceType": "neom/components/content/components/c59-multi-step-form/v1/c59-multi-step-form/c59-step-group",
+              "validate": {
+                "jcr:primaryType": "nt:unstructured",
+                "presence": {
+                  "jcr:primaryType": "nt:unstructured"
+                }
+              },
+              "m30_text_field": {
+                "jcr:primaryType": "nt:unstructured",
+                "titleInEnglish": "Tell us more",
+                "readonly": "false",
+                "required": "false",
+                "id": "category_interest_description",
+                "name": "category_interest_description",
+                "type": "textarea",
+                "wide": "false",
+                "label": "Tell us more",
+                "maxlength": "254",
+                "disabled": "false",
+                "placeholder": "Type here",
+                "sling:resourceType": "neom/components/content/wrappers/c59-m30-text-field",
+                "validate": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "presence": {
+                    "jcr:primaryType": "nt:unstructured"
+                  },
+                  "email": {
+                    "jcr:primaryType": "nt:unstructured"
+                  },
+                  "length": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "tooLong": "^Description is too long"
+                  }
+                }
+              }
+            }
+          },
+          "c59_final_step": {
+            "jcr:primaryType": "nt:unstructured",
+            "previousButtonAvailable": "false",
+            "nextButtonAvailable": "false",
+            "doneButtonAvailable": "true",
+            "submitButtonAvailable": "false",
+            "sling:resourceType": "neom/components/content/wrappers/c59-final-step",
+            "tryAgainButtonAvailable": "true",
+            "heading": {
+              "jcr:primaryType": "nt:unstructured",
+              "text": "Thank you for registering your interest in TROJENA.",
+              "error": "Something went wrong !"
+            },
+            "copy": {
+              "jcr:primaryType": "nt:unstructured",
+              "success": "We will be in touch soon.",
+              "error": "There was an error trying to send your Form. Try resending it in a few minutes."
+            },
+            "download": {
+              "jcr:primaryType": "nt:unstructured",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "text": "Frequently asked questions"
+              },
+              "link": {
+                "jcr:primaryType": "nt:unstructured",
+                "href": "/content/dam/neom/oxagon/OXAGON FAQs.pdf"
+              },
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "src": "/content/dam/neom/components/c30-downloads/promo-pack.jpg"
+              }
+            },
+            "social": {
+              "jcr:primaryType": "nt:unstructured",
+              "items": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.youtube.com/c/NEOMChannel",
+                  "icon": "youtube-gold"
+                },
+                "item1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://twitter.com/NEOM",
+                  "icon": "twitter-gold"
+                },
+                "item2": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.instagram.com/discoverneom/?hl=en",
+                  "icon": "instagram-gold"
+                },
+                "item3": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.facebook.com/NEOM",
+                  "icon": "facebook-gold"
+                },
+                "item4": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.linkedin.com/company/discoverneom/",
+                  "icon": "linkedin-gold"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

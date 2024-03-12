@@ -1,0 +1,35 @@
+.a-label {
+  @include type("button", "large");
+
+  margin-top: -0.0225em;
+  text-transform: uppercase;
+
+  &.-small {
+    @include type("button", "small");
+  }
+
+  &.-checkbox {
+    @include type("body", "small");
+    text-transform: initial;
+  }
+
+  &.-footerLink {
+    @include type("exception", "footerLink");
+  }
+
+  &.-marginaliaLink {
+    @include type("body", "xsmall");
+
+    margin-top: 0;
+    text-transform: none;
+    font-weight: 400;
+  }
+
+  @include theme("tonomus") {
+    &.-small {
+      @include type("body", "medium");
+
+      font-weight: bold;
+    }
+  }
+}

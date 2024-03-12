@@ -1,0 +1,16 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'LogoMarquee'
+tonomus: true
+
+meta:
+  id: 'c85'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 'c85-logo-marquee'
+    data: 'import!../app/component/block/c85-logo-marquee/data/default.yaml'

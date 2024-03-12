@@ -1,0 +1,122 @@
+.b-article {
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+
+  &__container {
+    @include container;
+
+    display: grid;
+    align-items: start;
+    column-gap: var(--grid-gap);
+    row-gap: 32px;
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: 80px;
+  }
+
+  &__content,
+  &__meta {
+    background: var(--color-white);
+    color: var(--color-tonomus-purple);
+  }
+
+  &__content {
+    display: grid;
+    column-gap: var(--grid-gap);
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  &__meta {
+    position: relative;
+    padding: 100px 40px 40px calc(40px + 10%);
+    display: grid;
+    row-gap: 8px;
+    justify-items: start;
+    align-content: start;
+
+    time {
+      @include type("subTitle", "large");
+
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      column-gap: 16px;
+
+      &:first-of-type {
+        font-weight: bolder;
+      }
+    }
+
+    .m-button {
+      margin-block-start: 32px;
+    }
+  }
+
+  &__metaLine {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    inset-block-start: 40px;
+    inset-inline-start: 40px;
+    inline-size: 182px;
+  }
+
+  &__meta,
+  &__image {
+    min-block-size: 320px;
+  }
+
+  &__image {
+    grid-column: 1 / -1;
+    position: relative;
+  }
+
+  &__textContent {
+    grid-column: 1 / -1;
+    padding-inline: 24px;
+    padding-block: 32px;
+
+    .a-heading {
+      margin-block-end: 32px;
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    &__content {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    &__textContent {
+      grid-column: 2 / -2;
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    &__textContent {
+      padding-block: 80px;
+
+      .a-heading {
+        margin-block-end: 24px;
+      }
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    &__container {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    &__content {
+      grid-column: 1 / 9;
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+
+    &__meta {
+      grid-column: 9 / -1;
+    }
+
+    &__textContent {
+      grid-column: 2 / -2;
+      padding-inline: 0;
+    }
+  }
+}

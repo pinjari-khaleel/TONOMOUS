@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2024-01-19T01:04:18.246+08:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/tonomus/settings/wcm/templates/homepage-template"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="tonomus/components/structure/tonomus-base-page-v2">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <layoutcontainer
+                jcr:created="{Date}2024-01-19T00:15:24.448+08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-01-19T00:16:26.250+08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="tonomus/components/content/components/layoutcontainer/v2/layoutcontainer">
+                <experiencefragment
+                    jcr:created="{Date}2024-01-19T00:54:01.233+08:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2024-01-19T00:57:21.407+08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="tonomus/components/content/components/experiencefragment/v2/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/tonomus/v2/en_us/top-navigation/master"/>
+            </layoutcontainer>
+            <herobanner
+                cq:styleIds="[1706193896363,1706193968768]"
+                jcr:created="{Date}2024-01-19T00:17:45.092+08:00"
+                jcr:createdBy="admin"
+                jcr:description="&lt;h1>We are visionary catalysts who believe in the power of &lt;span class=&quot;cmp-herobanner__description-gradient&quot;>cognitive technology&lt;/span>&lt;/h1>&#xd;&#xa;&lt;p>&lt;span class=&quot;paragraph-1&quot;>Cognitive technology moves data and decision-making closer to the user, promoting inclusivity, and helping to close the digital divide.&lt;/span>&lt;/p>&#xd;&#xa;"
+                jcr:lastModified="{Date}2024-01-19T00:30:27.510+08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="tonomus/components/content/components/herobanner/v2/herobanner"
+                descriptionFromPage="false"
+                imageFromPageImage="false"
+                textIsRich="[true,true,true,true]"
+                titleFromPage="false">
+                <descriptions jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        description="&lt;h3>1,216&lt;/h3>&#xd;&#xa;&lt;p>&lt;span class=&quot;paragraph-2&quot;>Learners Reached&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        description="&lt;h3>68&amp;#43;&lt;/h3>&#xd;&#xa;&lt;p>&lt;span class=&quot;paragraph-2&quot;>Events Scheduled&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        description="&lt;h3>50+&lt;/h3>&#xd;&#xa;&lt;p>&lt;span class=&quot;paragraph-2&quot;>Entrepreneurial Experts&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                </descriptions>
+            </herobanner>
+            <layoutcontainer_1079579145
+                jcr:created="{Date}2024-01-19T00:18:03.979+08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-01-19T00:19:54.857+08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="tonomus/components/content/components/layoutcontainer/v2/layoutcontainer"/>
+            <layoutcontainer_1281826495
+                jcr:created="{Date}2024-01-19T00:21:17.962+08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2024-01-19T00:22:14.806+08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="tonomus/components/content/components/layoutcontainer/v2/layoutcontainer">
+                <experiencefragment
+                    jcr:created="{Date}2024-01-19T00:31:38.274+08:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2024-01-19T01:04:18.236+08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="tonomus/components/content/components/experiencefragment/v2/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/tonomus/v2/en_us/top-navigation/master"/>
+            </layoutcontainer_1281826495>
+        </root>
+    </jcr:content>
+</jcr:root>

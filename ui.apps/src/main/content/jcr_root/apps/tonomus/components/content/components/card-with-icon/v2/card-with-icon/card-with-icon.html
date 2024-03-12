@@ -1,0 +1,54 @@
+<sly
+  data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+  data-sly-use.card="com.tonomus.core.slingmodels.components.v2.cardwithicon.CardWithIconModel"
+  data-sly-set.teaser="${card.teaser}"
+  data-sly-test.hasContent="${teaser.title || teaser.description || card.icon || card.href}">
+</sly>
+
+<sly
+  data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+  data-sly-call="${clientlib.css @ categories='tonomus.v2.site'}"
+></sly>
+
+<div
+  data-sly-test="${hasContent}"
+  data-sly-use.imageTemplate="image.html"
+  data-sly-use.descriptionTemplate="description.html"
+  data-sly-use.pretitleTemplate="pretitle.html"
+  data-sly-use.internalLinkTemplate="/apps/tonomus/components/common/link-internal.html"
+  data-sly-use.externalLinkTemplate="/apps/tonomus/components/common/link-external.html"
+  id="${teaser.id}"
+  class="cmp-card-with-icon${!wcmmode.disabled && teaser.icon ? ' cq-dd-image' : ''}"
+  data-cmp-data-layer="${teaser.data.json}"
+>
+  <a
+    class="cmp-card-with-icon__link"
+    data-sly-attribute="${teaser.link.htmlAttributes}"
+    data-sly-unwrap="${!teaser.link.valid || !teaser.actions.empty}"
+    data-cmp-clickable="${teaser.data ? true : false}"
+  >
+    <div class="cmp-card-with-icon__content">
+      <div class="cmp-card-with-icon__top-container">
+        <div class="cmp-card-with-icon__icon">
+          <sly data-sly-call="${imageTemplate.icon @ teaser=card}"></sly>
+        </div>
+        <div class="cmp-card-with-icon__title">
+          <sly data-sly-call="${pretitleTemplate.pretitle @ teaser=teaser}"></sly>
+          <a class="cmp-card-with-icon__title-link" href="${card.href.href}" target="${card.href.target}">
+            ${teaser.title}
+          </a>
+          <sly data-sly-test="${card.href.href}" data-sly-call="${internalLinkTemplate.internalLink}"></sly>
+          <sly data-sly-test="${card.href.href}" data-sly-call="${externalLinkTemplate.externalLink}"></sly>
+        </div>
+      </div>
+      <div class="cmp-card-with-icon__description">
+        <sly
+          data-sly-call="${descriptionTemplate.description @ teaser=teaser}"
+        ></sly>
+      </div>
+    </div>
+  </a>
+</div>
+<sly
+  data-sly-call="${template.placeholder @ isEmpty=!hasContent, classAppend='cmp-card-with-icon'}"
+></sly>

@@ -1,0 +1,84 @@
+{
+  "jcr:primaryType": "sling:Folder",
+  "jcr:content": {
+    "jcr:primaryType": "nt:unstructured",
+    "processingProfile": "System Default",
+    "jcr:title": "Content Fragments",
+    "cq:conf": "/conf/Neom-Content-Fragment-Models",
+    "sourcing": "false",
+    "metadataSchema": "System Default",
+    "policies": {
+      "jcr:primaryType": "nt:unstructured",
+      "cfm": {
+        "jcr:primaryType": "nt:unstructured",
+        "policy-cfm-allowedModelsByPaths": [
+          "/conf/Neom-Content-Fragment-Models",
+          "/conf/Neom-Content-Fragment-Models/settings/dam/cfm/models/c52-icons",
+          "/conf/Neom-Content-Fragment-Models/settings/dam/cfm/models/icons"
+        ]
+      }
+    }
+  },
+  "clean-energy": {
+    "jcr:primaryType": "dam:Asset",
+    "jcr:isCheckedOut": true,
+    "jcr:content": {
+      "jcr:primaryType": "dam:AssetContent",
+      "jcr:title": "Clean Energy",
+      "jcr:lastModifiedBy": "admin",
+      "contentFragment": true,
+      "cq:name": "clean-energy",
+      "cq:parentPath": "/content/dam/content-fragments",
+      "metadata": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:Taggable"
+        ]
+      },
+      "data": {
+        "jcr:primaryType": "nt:unstructured",
+        "cq:model": "/conf/Neom-Content-Fragment-Models/settings/dam/cfm/models/icons",
+        "master": {
+          "jcr:primaryType": "nt:unstructured",
+          "name": "Clean Energy",
+          "value": "clean-energy"
+        }
+      }
+    }
+  },
+  "commute": {
+    "jcr:primaryType": "dam:Asset",
+    "jcr:mixinTypes": [
+      "mix:referenceable",
+      "mix:versionable"
+    ],
+    "jcr:isCheckedOut": true,
+    "jcr:content": {
+      "jcr:primaryType": "dam:AssetContent",
+      "jcr:title": "Commute",
+      "jcr:lastModifiedBy": "admin",
+      "contentFragment": true,
+      "cq:name": "commute",
+      "cq:parentPath": "/content/dam/content-fragments",
+      "metadata": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:Taggable"
+        ]
+      },
+      "data": {
+        "jcr:primaryType": "nt:unstructured",
+        "cq:model": "/conf/Neom-Content-Fragment-Models/settings/dam/cfm/models/icons",
+        "master": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:mixinTypes": [
+            "dam:cfVariationNode",
+            "cq:Taggable"
+          ],
+          "name": "Commute",
+          "value": "commute"
+        }
+      }
+    }
+  }
+}

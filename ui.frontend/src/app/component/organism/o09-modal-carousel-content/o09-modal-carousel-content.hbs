@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="./o09-modal-carousel-content.scss">
+<script src="./O09ModalCarouselContent.ts"></script>
+
+<div class="o-modalCarouselContent {{#if variant}}-{{variant}}{{/if}}" data-props="{{toJson this}}"
+  data-component="o09-modal-carousel-content" data-lazy-component>
+
+    <div class="o-modalCarouselContent__container swiper-container" data-slider>
+      <div class="o-modalCarouselContent__items swiper-wrapper">
+        {{#each items}}
+          <div class="o-modalCarouselContent__item swiper-slide" data-slider-item {{#with hotspotIndex}}data-hotspot-index="{{this}}"{{/with}}>
+            <div class="o-modalCarouselContent__media">
+              {{#if content.preview}}
+                {{> atom/a19-video props=content.preview.props autoloop=true}}
+              {{^}}
+                {{#if (condition ../variant '===' 'fullBleedCarousel')}}
+                  {{> atom/a01-image content.image disableTransition=true }}
+                {{^}}
+                  {{> atom/a01-image images.on disableTransition=true }}
+                {{/if}}
+              {{/if}}
+              {{#if content.video}}
+                {{> molecule/m02-button video=content.video icon="play-solid" theme="white" variant="play" title=null }}
+              {{/if}}
+            </div>
+
+            {{#with content}}
+
+              <div class="o-modalCarouselContent__content">
+                {{#if ../../backButtonLabel }}
+                  <div class="o-modalCarouselContent__previousModalButton" data-back-button>
+                  {{> molecule/m02-button video=null label=../../backButtonLabel variant="leftIcon" icon="arrow-left" theme="dark-gold" level="tertiary" size="small"}}
+                  </div>
+                {{/if}}
+                <div class="o-modalCarouselContent__heading">
+                  {{#if icon}}{{> atom/a02-icon name=icon }}{{/if}}
+                  <span>{{> atom/a04-eyebrow heading }}</span>
+                </div>
+                 {{#if items}}
+                  {{>organism/o69-abstract-list items=items ordered=true}}
+                {{/if}}
+                {{#with copy}}
+                  <div class="s-content">
+                    {{{ this }}}
+                  </div>
+                {{/with}}
+                {{#with phoneNumber}}
+                  <a class="o-modalCarouselContent__contact -phone" href="tel:{{this}}">{{> atom/a02-icon name='phone'}} {{this}}</a>
+                {{/with}}
+                {{#with email}}
+                  <a class="o-modalCarouselContent__contact -mail" href="mailto:{{this}}">{{> atom/a02-icon name='mail'}} {{this}}</a>
+                {{/with}}
+                {{#with modalButton}}
+                  {{> molecule/m02-button }}
+                {{/with}}
+                {{#with buttons}}
+                  <ul class="o-modalCarouselContent__buttons">
+                    {{#each this}}
+                      <li class="o-modalCarouselContent__button">
+                        {{> molecule/m02-button level="primary" theme="dark-gold" size="small" icon="arrow-right"}}
+                      </li>
+                    {{/each}}
+                  </ul>
+                {{/with}}
+
+              </div>
+
+            {{/with}}
+
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    <div class="o-modalCarouselContent__controls" data-controls>
+      <div class="o-modalCarouselContent__control -prev">
+        <div class="swiper-button-prev" data-previous-button>
+          {{> molecule/m02-button theme="white" level="primary" icon="arrow-left" }}
+        </div>
+      </div>
+      <div class="o-modalCarouselContent__control -next">
+        <div class="swiper-button-next" data-next-button>
+          {{> molecule/m02-button theme="white" level="primary" icon="arrow-right" }}
+        </div>
+      </div>
+    </div>
+
+
+  <div class="m-pageIndicators" data-component="m08-page-indicators" data-slider-pagination></div>
+</div>

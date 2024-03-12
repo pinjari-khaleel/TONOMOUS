@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="./m16-figure.scss">
+<script src="./M16Figure.ts"></script>
+
+<figure class="m-figure{{#if variant}} -{{variant}}{{/if}}" data-component="m16-figure">
+  <div class="m-figure__image">
+    {{> atom/a01-image image disableTransition=true }}
+  </div>
+  {{#if copy}}
+    <div class="m-figure__copy">
+      {{{ copy }}}
+    </div>
+  {{/if}}
+</figure>

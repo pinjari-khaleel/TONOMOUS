@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./video-time.scss">
+<script src="./VideoTime.ts"></script>
+
+<div data-component="video-time" class="m-videoTime">
+
+  <div data-current-time>
+    {{> atom/a09-time-indicator }}
+  </div>
+
+  <span class="m-videoTime__timeDivider" aria-hidden="true">/</span>
+
+  <div data-duration>
+    {{> atom/a09-time-indicator }}
+  </div>
+
+</div>

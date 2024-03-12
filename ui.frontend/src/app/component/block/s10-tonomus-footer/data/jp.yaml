@@ -1,0 +1,87 @@
+scrollComponent: true
+
+sitemap:
+  - label: 'NEOMを発見する'
+    items:
+      - label: 'About NEOM'
+        href: '#'
+      - label: 'Our People'
+        href: '#'
+
+  - label: '地域'
+    items:
+      - label: 'Trojena'
+        href: '#'
+      - label: 'Oxagon'
+        href: '#'
+      - label: 'The Line'
+        href: '#'
+
+  - label: 'セクター'
+    items:
+      - label: '設計と建設'
+        href: '#'
+      - label: '教育'
+        href: '#'
+      - label: 'エネルギー'
+        href: '#'
+      - label: 'エンターテインメントと文化'
+        href: '#'
+      - label: '金融業務'
+        href: '#'
+      - label: '食べ物'
+        href: '#'
+      - label: '健康、福祉、バイオテクノロジー'
+        href: '#'
+      - label: '製造'
+        href: '#'
+      - label: 'メディア'
+        href: '#'
+      - label: '可動性'
+        href: '#'
+      - label: 'スポーツ'
+        href: '#'
+      - label: 'テクノロジー＆デジタル'
+        href: '#'
+      - label: '観光'
+        href: '#'
+      - label: '水域'
+        href: '#'
+
+  - label: 'NEOMの一部になる'
+    items:
+      - label: '投資'
+        href: '#'
+      - label: 'ビジネスを始める'
+        href: '#'
+      - label: 'サプライヤーになる'
+        href: '#'
+      - label: '相手'
+        href: '#'
+      - label: '仕事'
+        href: '#'
+
+  - label: 'ニュース＆ソーシャル'
+    items:
+      - label: 'ニュース'
+        href: '#'
+      - label: 'プレスリリース'
+        href: '#'
+      - label: 'メディアギャラリー'
+        href: '#'
+social:
+  items: 'import!../../../molecule/m12-social/data/tonomus.yaml'
+
+marginalia:
+  items:
+    - label: 'プライバシーポリシー'
+      href: 'privacy-policy.html'
+      target: '_blank'
+    - label: 'ご利用規約'
+      href: 'terms-of-use.html'
+      target: '_blank'
+    - label: 'クッキーポリシー'
+      href: 'cookie-policy.html'
+      target: '_blank'
+
+copyrightNotice: '© 2022 NEOM'

@@ -1,0 +1,27 @@
+.o-accordion {
+  --accordion-item-margin: 1em;
+
+  position: relative;
+
+  &__items {
+    @include list-reset();
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: var(--accordion-item-margin) 0 0;
+  }
+
+  &__item {
+    margin: 0 0 var(--accordion-item-margin);
+    width: 100%;
+  }
+
+  @include respond-to(MEDIUM) {
+    --accordion-item-margin: 20px;
+
+    &__item {
+      width: calc(50% - 10px);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<sly
+  data-sly-template.sideBar="${@
+       sideBarItems='Information about available section (sideBarItems)'
+     }"
+>
+  <div class="o-tonomusSidebar" data-component="o94-tonomus-sidebar">
+    <div class="o-tonomusSidebar__list">
+      <div class="o-tonomusSidebar_wrapper">
+        <ul
+          class="o-tonomusSidebar__items"
+          data-sly-list="${sideBarItems}"
+          data-link-list
+        >
+          <li class="o-tonomusSidebar__item">
+            <a
+              href="#${item.anchorId}"
+              class="o-tonomusSidebar__link"
+              data-link
+            >
+              <span> ${item.anchorLabel @ context='text'} </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</sly>

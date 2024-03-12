@@ -1,0 +1,87 @@
+<!--suppress CheckEmptyScriptTag -->
+<template
+    data-sly-template.tonomusLine="${@
+      id='Hyper reference anchor id',
+      scrollComponent='Boolean true to add data-scroll-component attribute',
+      variant='Display variant'
+    }"
+    data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+>
+  <div
+      class="a-tonomusLine"
+      data-component="a27-tonomus-line"
+      data-sly-attribute.data-scroll-component="${scrollComponent && true}"
+      data-sly-attribute.id="${id}"
+  >
+    <svg
+        class="a-tonomusLine__mobileSvg"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 247 735"
+    >
+      <path
+          stroke="url(#mobile-tonomus-line-gradient)"
+          stroke-width="1.35"
+          d="M246.95 1H41.55A40.54 40.54 0 0 0 1 41.54v693.24"
+      />
+      <defs>
+        <sly data-sly-call="${tonomusLineLinearGradientDef @ id='mobile-tonomus-line-gradient',
+               x1=311.81, x2=184.08, y1=1, y2=715.75, variant=variant}"></sly>
+      </defs>
+    </svg>
+
+    <svg
+        class="a-tonomusLine__desktopSvg"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 183 801"
+    >
+      <path
+          stroke="url(#desktop-tonomus-line-gradient)"
+          stroke-width="1.48"
+          d="M183 1H31A30 30 0 0 0 1 31v770"
+      />
+      <defs>
+        <sly data-sly-call="${tonomusLineLinearGradientDef @ id='desktop-tonomus-line-gradient',
+               x1=231, x2=33, y1=1, y2=753, variant=variant}"></sly>
+      </defs>
+    </svg>
+    <div class="a-tonomusLine__mouseIcon">
+      <sly data-sly-call="${iconTemplate.icon @ name='mouse'}"></sly>
+      <sly data-sly-call="${iconTemplate.icon @ name='chevron-down-tonomus'}"></sly>
+    </div>
+  </div>
+</template>
+
+<template
+    data-sly-template.tonomusLineLinearGradientDef="${ @
+      id, x1, x2, y1, y2, gradientUnits, variant
+    }"
+    data-sly-set.stopColor="${variant == 'green' ? '#61FFB1' : '#fff'}">
+  <linearGradient
+      id="${id}"
+      x1="${x1}"
+      x2="${x2}"
+      y1="${y1}"
+      y2="${y2}"
+      data-sly-attribute.gradientUnits="${gradientUnits || 'userSpaceOnUse'}"
+  >
+    <stop
+        stop-color="${stopColor}"
+        stop-opacity="0"
+    />
+    <stop
+        offset=".11"
+        stop-color="${stopColor}"
+    />
+    <stop
+        offset=".82"
+        stop-color="${stopColor}"
+    />
+    <stop
+        offset="1"
+        stop-color="${stopColor}"
+        stop-opacity="0"
+    />
+  </linearGradient>
+</template>

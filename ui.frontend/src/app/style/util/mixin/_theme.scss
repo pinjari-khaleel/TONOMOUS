@@ -1,0 +1,11 @@
+@mixin theme($name, $top: false) {
+  @if $top {
+    html[data-theme="#{$name}"] {
+      @content;
+    }
+  } @else {
+    html[data-theme="#{$name}"] & {
+      @content;
+    }
+  }
+}

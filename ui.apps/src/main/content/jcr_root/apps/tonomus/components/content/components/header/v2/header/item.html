@@ -1,0 +1,20 @@
+<template data-sly-template.item="${@ item='The navigation item',
+	group='Group name of a navigation appended to the class attribute'}" data-sly-use.groupTemplate="group.html"
+    data-sly-use.itemContentTemplate="itemContent.html">
+
+    <li data-sly-test="${group == 'navigation'}"
+        class="cmp-header__navigation-item cmp-header__navigation-item--level-${item.level}${item.active ? ' cmp-header__navigation-item--active' : ''}"
+        data-cmp-data-layer="${item.data.json}">
+        <div data-dropdown-toggle="${item.data ? true : false}">
+            <sly data-sly-call="${itemContentTemplate.itemContent @ item = item, group=group, hasChildren=item.children.size > 0}"></sly>
+        </div>
+        <sly data-sly-test="${item.children.size > 0}"
+            data-sly-call="${groupTemplate.group @ items = item.children, group=group}"></sly>
+        
+    </li>
+
+    <li data-sly-test="${group == 'languagenavigation'}"
+        class="cmp-header__languagenavigation-item${item.languageCode ? ' cmp-header__languagenavigation-item--languagecode-' : ''}${item.languageCode}${item.isActive ? ' cmp-header__languagenavigation-item--active' : ''}">
+        <sly data-sly-call="${itemContentTemplate.itemContent @ item = item, group=group}"></sly>
+    </li>
+</template>

@@ -1,0 +1,17 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'InteractiveOverview'
+webglContainer:
+  webglTest: false
+tonomus: true
+meta:
+  id: 'c83'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 'c83-interactive-overview'
+    data: 'import!../app/component/block/c83-interactive-overview/data/default.yaml'

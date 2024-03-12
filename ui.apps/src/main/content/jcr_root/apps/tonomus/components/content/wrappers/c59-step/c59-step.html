@@ -1,0 +1,29 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly
+    data-sly-use.stepModel="com.tonomus.core.slingmodels.components.v1.forms.multistep.MultiStepFormStepModel"
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel">
+</sly>
+
+<div class="b-multiStepForm__item swiper-slide" data-slider-item>
+
+  <div class="o-formStep__container -step${stepModel.step}" data-component="form-step"
+       data-sly-attribute.data-step="${stepModel.step}"
+       data-sly-attribute.id="${commonComponentModel.anchorId}"
+       data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}">
+
+    <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+         data-sly-list.child="${templatedContainer.structureResources}">
+      <sly data-sly-test="${child.resourceType !='nt:unstructured'}"
+           data-sly-resource="${child.path @ resourceType=child.resourceType,
+                     decorationTagName='', decoration=wcmmode.edit}"></sly>
+    </sly>
+    <p class="o-formStep__recaptcha">${stepModel.recaptchaBranding @ context='html'}</p>
+    <sly data-sly-test="${wcmmode.edit}"
+         data-sly-resource="${resource.path @
+                         resourceType='wcm/foundation/components/responsivegrid/new', appendPath='/*',
+                         decoration=wcmmode.edit, decorationTagName=''}"></sly>
+
+  </div>
+</div>

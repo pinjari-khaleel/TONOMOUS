@@ -1,0 +1,33 @@
+/*
+ * This is a globally available SCSS project file.
+ * It contains project specific utilities (variables, mixins, functions) that don't! output CSS by default.
+ * We use it to be imported in a webpack loader to avoid having to import these in each separate file.
+ *
+ * This file is used next to "seng-scss" which is imported globally as well and contain the default mixins/vars/functions
+ */
+
+@import "~@mediamonks/scss-utils";
+@import "util/variables";
+@import "util/function/fluid-clamp-ideal";
+@import "util/mixin/asterisk";
+@import "util/mixin/block-padding";
+@import "util/mixin/full-min-height";
+@import "util/mixin/container";
+@import "util/mixin/content-scope";
+@import "util/mixin/fieldset-styling";
+@import "util/mixin/font-face";
+@import "util/mixin/gradient-darken";
+@import "util/mixin/hover";
+@import "util/mixin/image-ratio";
+@import "util/mixin/list-reset";
+@import "util/mixin/paddingUtil";
+@import "util/mixin/rtl-icon-flip";
+@import "util/mixin/rtl-icon-no-flip";
+@import "util/mixin/rtl-position-flip";
+@import "util/mixin/text-stroke";
+@import "util/mixin/type";
+@import "util/mixin/type-fixed";
+@import "util/mixin/vh";
+@import "util/mixin/custom-select";
+@import "util/mixin/theme";
+@import "util/mixin/tonomus-overlay-controls";

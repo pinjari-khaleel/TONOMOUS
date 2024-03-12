@@ -1,0 +1,43 @@
+.o-phoneField {
+  margin: 0 0 40px;
+
+  &__textLabel {
+    margin: 0 0 10px;
+    &.-isRequired::after {
+      @include asterisk();
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 145px 1fr;
+    grid-gap: 20px;
+    width: 100%;
+
+    .a-select {
+      flex: 0 0 130px;
+    }
+
+    .a-input {
+      flex: 1 0 auto;
+    }
+  }
+
+  & .m-countryDropdown,
+  .m-textField {
+    margin: 0;
+  }
+
+  &__error {
+    @include type("body", "xsmall");
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--form-error-color);
+    letter-spacing: normal;
+    margin-top: 10px;
+
+    &:not(:empty) {
+      margin: 2px 0 10px 0;
+    }
+  }
+}

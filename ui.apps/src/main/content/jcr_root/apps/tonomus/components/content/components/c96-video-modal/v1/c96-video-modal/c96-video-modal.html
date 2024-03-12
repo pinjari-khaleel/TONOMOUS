@@ -1,0 +1,43 @@
+<sly
+  data-sly-use.commonCmpModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+  data-sly-use.videoModalModel="com.tonomus.core.slingmodels.components.v1.video_modal.VideoModalModel"
+  data-sly-use.headerModel="com.tonomus.core.slingmodels.common.v1.HeaderModel"
+  data-sly-use.hTpl="/apps/tonomus/components/content/atoms/a03-heading.html"
+  data-sly-use.imgTpl="/apps/tonomus/components/content/atoms/a01-image.html"
+  data-sly-use.btnTpl="/apps/tonomus/components/content/molecules/m02-button.html"
+  data-sly-use.tpl="core/wcm/components/commons/v1/templates.html"
+  data-sly-use.shadyShape="shapes/shady-shape.html"
+  data-sly-call="${tpl.placeholder @ isEmpty=true}"
+></sly>
+
+<section
+  class="b-videoModal"
+  data-component="c96-video-modal"
+  style="${commonCmpModel.padding.styleInline @ context='styleString'}"
+  data-sly-attribute.data-scroll-component="${commonCmpModel.scrollComponent}"
+  data-sly-attribute.id="${commonCmpModel.anchorId}"
+  data-sly-attribute.data-items="${videoModalModel.itemsJson}"
+  data-sly-set.id="${commonCmpModel.anchorId}"
+>
+  <div class="b-videoModal__container">
+    <div class="b-videoModal__mediaContainer">
+        <sly data-sly-call="${shadyShape.shadyShape @ className='b-videoModal__shadyShape1'}"></sly>
+      <div class="b-videoModal__wrapper">
+        <div
+          class="b-videoModal__mediaButton"
+          data-media-button
+          data-sly-attribute.data-video="${videoModalModel.video.json}">
+        <div class="b-videoModal__media">
+            <sly
+              data-sly-call="${imgTpl.image @ imageModel=videoModalModel.image,
+              disableTransition=true}"
+            ></sly>
+          </div>
+        <div class="b-videoModal__header" data-sly-test="${videoModalModel.header.heading.text}">
+            <sly data-sly-call="${hTpl.heading @ headingModel=videoModalModel.header.heading}"></sly>
+        </div>
+            <sly data-sly-test="${videoModalModel.video.props.eventTracking.video.src}" data-sly-call="${btnTpl.button @icon='play-solid', theme='green', variant='play'}"></sly>
+      </div>
+    </div>
+  </div>
+</section>

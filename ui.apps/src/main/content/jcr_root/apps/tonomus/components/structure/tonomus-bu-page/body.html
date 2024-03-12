@@ -1,0 +1,47 @@
+<!--/* TONOMUS BU PAGE */-->
+<sly data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"
+     data-sly-set.configPageVal="${pageProperties.configPage ? pageProperties.configPage : 'conf/admin'}"></sly>
+
+<div class="app" id="app">
+  <div
+    data-component="app-root"
+    data-sly-attribute.data-enable-page-transitions="${inheritedPageProperties.enablePageTransitions ? 'true' : false}"
+    data-sly-attribute.class="app__root ${inheritedPageProperties.theme ? 't-{0}' : '' @ format=[inheritedPageProperties.theme]}"
+    data-sly-attribute.data-theme="${inheritedPageProperties.theme || 'tonomus'}"
+    class="bu-container ${wcmmode.edit ? 'author-mode' : ''}"
+  >
+  <main class="app__content" id="app-content">
+      <!--/* Include Layout container */-->
+      <sly
+        data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+        data-sly-repeat.child="${templatedContainer.structureResources}"
+        data-sly-resource="${child @ resourceType=child.resourceType, decorationTagName='div'}">
+      </sly>
+  </main>
+
+    <!--/* Include S09 Overlay component */-->
+    <sly
+      data-sly-set.overlayComponent="${'tonomus/components/content/components/s09-overlay/v1/s09-overlay'}"
+    ></sly>
+    <sly
+      data-sly-use.configModel="${'com.tonomus.core.slingmodels.common.v1.ConfigResourceModel'
+           @ resourceType=overlayComponent, configPage='conf/admin', isRelativePath=true}"
+    ></sly>
+    <div
+      data-sly-resource="${ configModel.resourcePath || 's09-overlay' @ wcmmode='disabled', resourceType=overlayComponent}"
+      data-sly-unwrap
+    ></div>
+
+    <!--/* Include Cursor Organism on all pages */-->
+    <sly
+      data-sly-use.cursorTemplate="/apps/tonomus/components/content/molecules/m33-cursor.html"
+      data-sly-call="${cursorTemplate.cursor}"
+    ></sly>
+
+    <!--/* Include Loading Spinner on all pages */-->
+    <sly
+      data-sly-use.loadingSpinnerTemplate="/apps/tonomus/components/content/organisms/o48-loading-spinner.html"
+      data-sly-call="${loadingSpinnerTemplate.loadingSpinner}"
+    ></sly>
+  </div>
+</div>

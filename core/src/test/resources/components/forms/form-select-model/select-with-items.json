@@ -1,0 +1,28 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "flagsPath" : "/content/dam/neom/content-fragments/flags",
+  "items": {
+    "jcr:primaryType": "nt:unstructured",
+    "saudi-arabia": {
+      "jcr:primaryType": "nt:unstructured",
+      "countryCode": "SA",
+      "label": "Saudi Arabia",
+      "value": "966",
+      "selected": "false"
+    },
+    "andorra": {
+      "jcr:primaryType": "nt:unstructured",
+      "countryCode": "AD",
+      "label": "Andorra",
+      "value": "376",
+      "selected": "false"
+    },
+    "united-arab-emirates": {
+      "jcr:primaryType": "nt:unstructured",
+      "countryCode": "AE",
+      "label": "United Arab Emirates",
+      "value": "971",
+      "selected": "false"
+    }
+  }
+}

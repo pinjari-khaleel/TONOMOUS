@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="./o93-tonomus-bu-dropdown.scss">
+<script src="./O93TonomusBuDropdown.ts"></script>
+
+
+<div class="o-tonomusBuDropdown" data-component="o93-tonomus-bu-dropdown" {{#if id}} id="{{id}}"{{/if}}>
+  {{!-- toggler --}}
+  <input type="checkbox" id="bu_toggle" data-bu-toggle />
+  {{#each businessUnits.options }}
+    {{#if (condition businessUnit '===' ../businessUnits.activeBusinessUnit)}}
+      <label class="o-tonomusBuDropdown__toggle {{#if shortLabel}}-{{languageCode}}{{/if}}" for="bu_toggle" data-toggle >
+        <div class="o-tonomusBuDropdown__logo">
+          {{> atom/a01-image this disableTransition=true variant="block" }}
+        </div>
+        <div class="o-tonomusBuDropdown__chevron">
+          {{> atom/a02-icon name="icon-chevron-down" }}
+        </div>
+      </label>
+    {{/if}}
+  {{/each}}
+
+  {{!-- dropdown --}}
+  <div class="o-tonomusBuDropdown__list">
+    <div class="o-tonomusBuDropdown__wrapper">
+      <ul class="o-tonomusBuDropdown__items" data-bu-list>
+        {{#each businessUnits.options }}
+          <li class="o-tonomusBuDropdown__item">
+            <a
+              href="{{ href }}"
+              class="o-tonomusBuDropdown__link{{#if businessUnit}} -{{businessUnit}}{{/if}}"
+            >
+              <div class="o-tonomusBuDropdown__logo">
+                {{> atom/a01-image this disableTransition=true variant="block" }}
+              </div>
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<sly data-sly-template.eyebrow="${@
+    eyebrowModel='Sling Model for eyebrow (class TextModel)',
+    variant='HTML tags. Example : h1,h2, etc.',
+    size='Explicit size passed',
+    eyebrow='Eyebrow value not from TextModel'
+    }"
+     data-sly-set.sizeVal="${size || eyebrowModel.size}"
+     data-sly-set.eyebrowVal="${eyebrow || eyebrowModel.text}">
+
+  <p class="a-eyebrow
+      ${['', sizeVal || 'large'] @ join = '-', context='styleString'}
+      ${[variant ? '-' : '', variant] @ join = '', context='styleString'}"
+      data-component="a04-eyebrow">
+    ${eyebrowVal @ context='html'}
+  </p>
+</sly>

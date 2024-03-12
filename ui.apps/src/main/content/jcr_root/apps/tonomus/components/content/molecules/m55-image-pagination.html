@@ -1,0 +1,32 @@
+<template
+    data-sly-template.imagePagination="${@
+      id='Hyper reference anchor id',
+      items='List of objects containing image property named `thumbnail`'
+    }"
+
+    data-sly-use.imgTpl="/apps/tonomus/components/content/atoms/a01-image.html"
+    data-sly-set.isAuthoring="${wcmmode.edit || wcmmode.preview}"
+>
+  <!--/* "isAuthoring" properties are for Core Components' carousel functionality */-->
+  <div class="m-imagePagination"
+       data-component="m55-image-pagination"
+       data-sly-attribute.id="${id}">
+    <ul class="m-imagePagination__paginationList ${isAuthoring ? 'cmp-carousel__indicators' : ''}"
+        role="tablist"
+        data-sly-attribute.data-cmp-hook-carousel="${isAuthoring && 'indicators'}">
+      <li class="m-imagePagination__paginationItem" data-pagination
+          data-sly-repeat.item="${items}"
+          id="${isAuthoring ? '{0}-tab' : '' @ format=[item.id]}" role="tab"
+          aria-controls="${isAuthoring ? '{0}-tabpanel' : '' @ format=[item.id]}"
+          data-cmp-hook-carousel="${isAuthoring && 'indicator'}">
+        <sly data-sly-test.thumbSrc="${item.thumbnail.src || item.image.src}"
+             data-sly-set.thumbAlt="${item.thumbnail.alt || item.image.alt || item.title}"
+             data-sly-use.externalSIModel="${'com.tonomus.core.models.dmedia.DynamicMediaModel' @
+               assetPath=thumbSrc, predefinedCrops=[':crop-1x1?wid=96&hei=96&resMode=sharp']}"
+             data-sly-call="${imgTpl.image @ externalSIModel=externalSIModel, imagePath=thumbSrc,
+               disableTransition=true, alt=thumbAlt}">
+        </sly>
+      </li>
+    </ul>
+  </div>
+</template>

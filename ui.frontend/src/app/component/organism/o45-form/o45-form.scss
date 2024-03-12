@@ -1,0 +1,165 @@
+.o-form {
+  &__error {
+    @include type("body", "xsmall");
+
+    color: var(--form-error-color);
+    display: none;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin: 10px 0 40px;
+    text-transform: uppercase;
+
+    @include respond-to(MEDIUM) {
+      margin: 10px 0 0;
+    }
+  }
+
+  &__fieldsetContainer {
+    background-color: var(--fieldset-background-color);
+    padding: var(--fieldset-padding);
+  }
+
+  &__fieldset {
+    border: 0;
+    margin: 0 0 40px;
+    padding: 0;
+
+    &.-checkboxGroup {
+      --fieldset-background-color: var(--checkbox-group-background-color);
+      --fieldset-padding: var(--grid-gap);
+
+      border-radius: var(--checkbox-border-radius);
+    }
+  }
+
+  &__title {
+    @include type("body", "xlarge");
+
+    margin: 0 0 36px;
+    text-transform: none;
+  }
+
+  &__description {
+    margin-bottom: 24px;
+  }
+
+  &__legend {
+    @include type("button", "small");
+
+    margin: 0 0 10px;
+    text-transform: uppercase;
+
+    &.-isRequired::after {
+      @include asterisk();
+    }
+  }
+
+  &__footer {
+    margin-block-start: 20px;
+  }
+
+  .m-checkboxOption,
+  .m-dropdownField,
+  .m-inputField,
+  .m-textField {
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__responseWrapper {
+    height: 0;
+  }
+
+  &__response {
+    display: flex;
+    align-items: center;
+    padding-block-start: 20px;
+
+    &IconWrapper {
+      &.-error {
+        --icon-fill: var(--color-red);
+      }
+    }
+
+    &CopyWrapper {
+      margin-inline-start: 10px;
+    }
+
+    &Heading {
+      @include type("subTitle", "small");
+    }
+
+    &Description {
+      @include type("body", "small");
+    }
+  }
+
+  &__fieldset.-radioGroup {
+    grid-gap: 0 60px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .o-form__legend {
+      grid-column: 1 / span 2;
+    }
+
+    .o-form__fieldsetContainer {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-gap: 0 20px;
+    }
+  }
+
+  .m-radioOption {
+    background-color: var(--o45-radio-option-background, var(--checkbox-group-background-color));
+    margin: 0 0 30px;
+
+    &__label {
+      height: 100%;
+      padding: 20px;
+    }
+  }
+
+  .s-content {
+    @include type("exception", "small-description");
+
+    --text-color: var(--color-black-75);
+  }
+
+  @include respond-to(MEDIUM) {
+    &__fieldset.-double {
+      .o-form__fieldsetContainer {
+        display: grid;
+        grid-gap: 0 40px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .m-checkboxOption,
+      .m-dropdownField,
+      .m-inputField,
+      .m-textField {
+        &:nth-last-child(-n + 2) {
+          margin: 0;
+        }
+      }
+    }
+
+    &__fieldset.-radioGroup {
+      display: grid;
+    }
+  }
+
+  @include theme("tonomus") {
+    --o45-radio-option-background: var(--color-tonomus-purple-400a05);
+    --component-text-color: var(--color-tonomus-purple);
+    --component-highlight-color: var(--color-tonomus-purple);
+
+    &__title {
+      @include type("heading", "h4");
+    }
+
+    .s-content {
+      @include type("body", "medium");
+    }
+  }
+}

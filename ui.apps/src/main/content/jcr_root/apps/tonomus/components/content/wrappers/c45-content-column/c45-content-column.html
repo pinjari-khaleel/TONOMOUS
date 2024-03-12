@@ -1,0 +1,20 @@
+<sly data-sly-use.styleModel="com.adobe.cq.wcm.style.ComponentStyleInfo"
+     data-sly-use.childResourceCounterModel="com.tonomus.core.slingmodels.common.v1.ChildResourceCounterModel"></sly>
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit && childResourceCounterModel.columnCount == 0}"></div>
+
+<div class="b-contentColumns__column
+          ${styleModel.appliedCssClasses @ context='styleString'}">
+  <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+       data-sly-list.child="${templatedContainer.structureResources}">
+    <sly data-sly-test="${child.resourceType !='nt:unstructured'}"
+         data-sly-resource="${child.path @ resourceType=child.resourceType,
+              decoration=wcmmode.edit, cssClassName=''}"></sly>
+  </sly>
+
+  <sly data-sly-test="${childResourceCounterModel.columnCount < 1}"
+       data-sly-resource="${resource.path @
+           resourceType='wcm/foundation/components/responsivegrid/new', appendPath='/*',
+           decoration=wcmmode.edit,
+           decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"></sly>
+</div>

@@ -1,0 +1,24 @@
+scrollComponent: true
+id: 'c85-logo-marquee'
+title: 'c85-logo-marquee'
+header:
+  heading:
+    text: 'Our <strong>partners</strong>'
+
+items:
+  - href: '#'
+    image:
+      src: 'image/c85-logo-marquee/neom-logo.png'
+      alt: 'Logo 1'
+  - href: '#'
+    image:
+      src: 'image/c85-logo-marquee/oracle-logo.png'
+      alt: 'Logo 2'
+  - href: '#'
+    image:
+      src: 'image/c85-logo-marquee/one-web-logo.png'
+      alt: 'Logo 3'
+  - href: '#'
+    image:
+      src: 'image/c85-logo-marquee/fas-energy-logo.png'
+      alt: 'Logo 4'

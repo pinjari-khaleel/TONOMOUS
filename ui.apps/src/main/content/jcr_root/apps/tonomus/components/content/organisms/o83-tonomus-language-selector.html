@@ -1,0 +1,42 @@
+<sly data-sly-template.languageSelector="${@
+       languages='Information about available languages (List of LanguageModel)'
+     }"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html">
+
+  <div class="o-tonomusLanguageSelector" data-component="o83-tonomus-language-selector">
+    <input type="checkbox" id="language_toggle" data-language-toggle />
+
+    <sly data-sly-list="${languages}">
+      <label class="o-tonomusLanguageSelector__toggle
+                    ${item.shortLabel ? ' -{0}' : '' @ format=[item.languageCode], context='styleString'}"
+             for="language_toggle"
+             data-toggle
+             data-language="${item.languageCode}"
+             data-sly-test="${item.isActive}">
+        <sly data-sly-call="${iconTemplate.icon @ name='globe-bold'}"></sly>
+        <span class="o-tonomusLanguageSelector__code">
+          ${item.shortLabel ? item.shortLabel : item.languageCode}
+        </span>
+        <sly data-sly-call="${iconTemplate.icon @ name='dropdown-chevron'}"></sly>
+      </label>
+    </sly>
+
+    <div class="o-tonomusLanguageSelector__list">
+      <div class="o-tonomusLanguageSelector__wrapper">
+        <ul class="o-tonomusLanguageSelector__items" data-sly-list="${languages}" data-language-list>
+          <li class="o-tonomusLanguageSelector__item
+              ${item.isActive ? ' -isActive' : '' @ context='styleString'}"
+              data-language="${item.languageCode}">
+            <a href="${item.href}" class="o-tonomusLanguageSelector__link${item.languageCode ?' -{0}' : '' @ format=[item.languageCode], context='styleString'}">
+              ${item.label @ context='text'}
+              <sly data-sly-test="${item.isActive}"
+                   data-sly-call="${iconTemplate.icon @ className='checkmark',
+                   name='hard-checkmark'}">
+              </sly>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</sly>

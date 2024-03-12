@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="./o77-input-list.scss">
+<script src="./O77InputList.ts"></script>
+
+
+<div class="o-inputList" data-component="o77-input-list" {{#if scrollComponent}}data-scroll-component{{/if}} {{#if id}}
+  id="{{id}}" {{/if}}>
+  <fieldset class="o-inputList__fieldset" {{#if validate}} data-validate="{{toJson validate}}" {{/if}} {{#with
+    id}}id="{{this}}" {{/with}}>
+    <div class="o-inputList__container">
+      {{#if legend}}
+      {{> atom/a26-fieldset-legend legend=legend.text required=required variant=legend.variant}}
+      {{/if}}
+
+      {{!-- Input fields start --}}
+      {{#each items}}
+
+      {{#if (condition type '===' 'email')}}<div class="o-inputList__item{{#if wide}} -wide{{/if}}">{{>
+        molecule/m30-text-field }}</div>{{/if}}
+      {{#if (condition type '===' 'text') }}<div class="o-inputList__item{{#if wide}} -wide{{/if}}">{{>
+        molecule/m30-text-field }}</div>{{/if}}
+      {{#if (condition type '===' 'phone')}}<div class="o-inputList__item{{#if wide}} -wide{{/if}}">{{>
+        organism/o79-phone-field }}</div>{{/if}}
+      {{#if (condition type '===' 'select')}}<div class="o-inputList__item{{#if wide}} -wide{{/if}}">{{>
+        molecule/m31-dropdown-field }}</div>{{/if}}
+      {{#if (condition type '===' 'multiselect')}}<div class="o-inputList__item{{#if wide}} -wide{{/if}}">{{>
+        organism/o80-multiselect-dropdown }}</div>{{/if}}
+      {{#if (condition type '===' 'radio')}}
+      {{> molecule/m28-radio-option }}
+      {{/if}}
+      {{#if (condition type '===' 'checkbox')}}{{> molecule/m27-checkbox-option }}{{/if}}
+      {{#if (condition type '===' 'textarea')}}<div class="o-inputList__item{{#if wide}} -wide{{/if}}">
+        {{>molecule/m30-text-field }}</div>
+      {{/if}}
+
+      {{/each}}
+      {{!-- Input fields end --}}
+    </div>
+  </fieldset>
+</div>

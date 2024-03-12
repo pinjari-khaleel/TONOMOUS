@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="C96 Video Modal"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[tonomus.author]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        maximized="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+            <general
+                jcr:primaryType="nt:unstructured"
+                jcr:title="General"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <heading-text
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext-semantic-markup"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldDescription="Please enter the component Heading Text."
+                                        fieldLabel="Heading Text"
+                                        name="./header/heading/text"
+                                        removeSingleParagraphContainer="{Boolean}true"
+                                        useFixedInlineToolbar="{Boolean}true"/>
+                                    <heading-size
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Please select the component Heading Size/Weight."
+                                        fieldLabel="Heading Size"
+                                        name="./header/heading/size">
+                                        <datasource
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="tonomus/generic/datasource"
+                                            path="tonomus/components/content/utils/headingweight"/>
+                                    </heading-size>
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        allowUpload="{Boolean}false"
+                                        autoStart="{Boolean}false"
+                                        fieldDescription="Select an image"
+                                        fieldLabel="Image"
+                                        fileNameParameter="./uploadingIsDisabled/fileName"
+                                        fileReferenceParameter="./image/src"
+                                        mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                                        multiple="{Boolean}false"
+                                        name="./uploadingIsDisabled"
+                                        required="{Boolean}false"
+                                        title="Upload Image Asset"
+                                        useHTML5="{Boolean}true"/>
+                                    <image-alt
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter Content Image Alt Text."
+                                        fieldLabel="Image Alt Text"
+                                        name="./image/alt"
+                                        required="{Boolean}false"/>
+                                    <video-item
+                                        granite:class="js-card-variant-showhide-target"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            showhide-target-value="video"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <video-label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Label (caption) for the video, displayed in the video player"
+                                                fieldLabel="Video Label"
+                                                name="./video/label"
+                                                required="false"/>
+                                            <video
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                allowUpload="{Boolean}false"
+                                                autoStart="{Boolean}false"
+                                                fieldDescription="Select the video to be used"
+                                                fieldLabel="Video Asset"
+                                                fileNameParameter="./uploadingIsDisabled/fileName"
+                                                fileReferenceParameter="./video/props/sources/item0/src"
+                                                mimeTypes="[video]"
+                                                multiple="{Boolean}false"
+                                                name="./uploadingIsDisabled"
+                                                title="Video Asset"
+                                                useHTML5="{Boolean}true"/>
+                                            <video-event-tracking-name
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/eventTracking/event"
+                                                value="video_start"/>
+                                            <video-event-tracking-text-in-english
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please enter the component Title in English. Required for Analytics when play video."
+                                                fieldLabel="Title in English"
+                                                name="./video/props/eventTracking/video/titleInEnglish"/>
+                                            <video-play-button-tracking
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./video/playButton/enableTracking"
+                                                text="Track Analytics for Play button"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true"/>
+                                            <originalWidth
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/originalWidth"
+                                                value="16"/>
+                                            <originalHeight
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/originalHeight"
+                                                value="9"/>
+                                            <autoplay
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/autoplay"
+                                                value="true"/>
+                                            <muted
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/muted"
+                                                value="false"/>
+                                            <loop
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/loop"
+                                                value="false"/>
+                                            <disablePreload
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/disablePreload"
+                                                value="true"/>
+                                            <playPause
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/controls/playPause"
+                                                value="true"/>
+                                            <fullscreen
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/controls/fullscreen"
+                                                value="true"/>
+                                            <video-controls-play-pause
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/controls/playPause"
+                                                value="true"/>
+                                            <video-controls-fullscreen
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/controls/fullscreen"
+                                                value="true"/>
+                                            <video-controls-seek
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                name="./video/props/controls/seek"
+                                                value="true"/>
+                                        </items>
+                                    </video-item>
+                                </items>
+                            </column>
+                        </items>
+                    </columns>
+                </items>
+            </general>
+            <padding
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="tonomus/components/content/utils/padding/content"/>
+            <advanced
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="tonomus/components/content/utils/advanced/content"/>
+        </items>
+    </content>
+</jcr:root>

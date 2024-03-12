@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModifiedBy="admin"
+        cq:policy="tonomus/components/structure/tonomus-base-page-v2/policy_28283978230139"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <root
+            cq:policy="wcm/foundation/components/responsivegrid/policy_28720518194209"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping">
+            <layoutcontainer
+                cq:policy="tonomus/components/content/components/layoutcontainer/v2/layoutcontainer/policy_1705594531040"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+            <herobanner
+                cq:policy="tonomus/components/content/components/herobanner/v2/herobanner/policy_1704963248982"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+            <layoutcontainer_1079579145
+                cq:policy="tonomus/components/content/components/layoutcontainer/v2/layoutcontainer/policy_28990408871624"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <tonomus jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <content jcr:primaryType="nt:unstructured">
+                            <components jcr:primaryType="nt:unstructured">
+                                <herobanner jcr:primaryType="nt:unstructured">
+                                    <v2 jcr:primaryType="nt:unstructured">
+                                        <herobanner
+                                            cq:policy="tonomus/components/content/components/herobanner/v2/herobanner/policy_1704963248982"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v2>
+                                </herobanner>
+                                <container jcr:primaryType="nt:unstructured">
+                                    <v2 jcr:primaryType="nt:unstructured">
+                                        <container
+                                            cq:policy="tonomus/components/content/components/container/v2/container/policy_1704972313646"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v2>
+                                </container>
+                                <card jcr:primaryType="nt:unstructured">
+                                    <v2 jcr:primaryType="nt:unstructured">
+                                        <card
+                                            cq:policy="tonomus/components/content/components/card/v2/card/policy_1705245182054"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v2>
+                                </card>
+                                <banner jcr:primaryType="nt:unstructured">
+                                    <v2 jcr:primaryType="nt:unstructured">
+                                        <banner
+                                            cq:policy="tonomus/components/content/components/banner/v2/banner/policy_1705855653576"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v2>
+                                </banner>
+                                <card-with-icon jcr:primaryType="nt:unstructured">
+                                    <v2 jcr:primaryType="nt:unstructured">
+                                        <card-with-icon
+                                            cq:policy="tonomus/components/content/components/card-with-icon/v2/card-with-icon/policy_1706462296186"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v2>
+                                </card-with-icon>
+                                <horizontaltabs jcr:primaryType="nt:unstructured">
+                                    <v2 jcr:primaryType="nt:unstructured">
+                                        <horizontaltabs
+                                            cq:policy="tonomus/components/content/components/horizontaltabs/v2/horizontaltabs/policy_1706457414636"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v2>
+                                </horizontaltabs>
+                                <tabs jcr:primaryType="nt:unstructured">
+                                    <v2 jcr:primaryType="nt:unstructured">
+                                        <tabs
+                                            cq:policy="tonomus/components/content/components/tabs/v2/tabs/policy_1706457317584"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v2>
+                                </tabs>
+                                <modal jcr:primaryType="nt:unstructured">
+                                    <v2 jcr:primaryType="nt:unstructured">
+                                        <modal
+                                            cq:policy="tonomus/components/content/components/modal/v2/modal/policy_1706691151657"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v2>
+                                </modal>
+                                <video jcr:primaryType="nt:unstructured">
+                                    <v2 jcr:primaryType="nt:unstructured">
+                                        <video
+                                            cq:policy="tonomus/components/content/components/video/v2/video/policy_1706946907748"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v2>
+                                </video>
+                                <form jcr:primaryType="nt:unstructured">
+                                    <container jcr:primaryType="nt:unstructured">
+                                        <v2 jcr:primaryType="nt:unstructured">
+                                            <container
+                                                cq:policy="tonomus/components/content/components/form/container/v2/container/policy_1707380099443"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                                        </v2>
+                                    </container>
+                                </form>
+                            </components>
+                        </content>
+                    </components>
+                </tonomus>
+            </layoutcontainer_1079579145>
+            <layoutcontainer_1281826495
+                cq:policy="tonomus/components/content/components/layoutcontainer/v2/layoutcontainer/policy_29162413080360"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+        </root>
+    </jcr:content>
+</jcr:root>

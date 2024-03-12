@@ -1,0 +1,9 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly data-sly-use.formPhoneModel="com.tonomus.core.slingmodels.components.v1.forms.multistep.MultiStepFormPhoneModel"
+     data-sly-use.phoneFieldTemplate="/apps/tonomus/components/content/organisms/o79-phone-field.html"></sly>
+
+<div class="o-inputList__item ${formPhoneModel.wide ? '-wide' : ''}">
+  <sly data-sly-call="${phoneFieldTemplate.phoneField @ phoneModel=formPhoneModel}"></sly>
+</div>

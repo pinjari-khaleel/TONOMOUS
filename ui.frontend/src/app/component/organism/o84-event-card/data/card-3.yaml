@@ -1,0 +1,21 @@
+image:
+  src: './image/o84-event-card/event-card-3.jpg'
+datetime: "FRIDAY MAY 21, 2023\n07:00 CET"
+title: 'THE UNIQUE BENEFITS OF A HYPER-SCALE DATA CENTER BY FABIO FONTANA'
+button:
+  label: 'Learn more'
+  theme: green
+
+modal:
+  image:
+    src: './image/o84-event-card/event-card-2.jpg'
+  heading:
+    text: 'THE UNIQUE BENEFITS OF A HYPER-SCALE DATA CENTER BY FABIO FONTANA'
+  copy:
+    'When integrated into society, cognitive technology takes what were previously manual tasks and
+    turns them into opportunities for progress—unburdening humankind, making daily life seamless.'
+  modalButton:
+    label: 'Sign up via meetup'
+    theme: green
+    href: '#'
+    target: '__blank'

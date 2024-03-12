@@ -1,0 +1,26 @@
+scrollComponent: true
+
+downloads:
+  title: Downloads
+  items:
+    - heading:
+        text: NEOM Information pack
+        element: h3
+      description: NEOM Fact Sheet,<br/> NEOM Brochure
+      image:
+        src: 'image/c30-downloads/promo-pack.jpg'
+      link:
+        label: ZIP file 33.2MB
+        href: 'downloads/download-placeholder.zip'
+
+    - heading:
+        text: Register as a Vendor
+        element: h3
+      description:
+        New Supplier Registration Guide,<br/> Supplier Code of Conduct,<br/> Non Disclosure
+        Agreement (NDA)
+      image:
+        src: 'image/c30-downloads/investor-pack.jpg'
+      link:
+        label: ZIP file 2.2MB
+        href: 'downloads/download-placeholder.zip'

@@ -1,0 +1,8 @@
+icon: dna
+title: Research & innovation
+label: Transform your business
+href: '#'
+backgroundImage:
+  disableTransition: true
+  src: './image/c26-hero-banner/formula-e-modal.jpg'
+  alt: ''

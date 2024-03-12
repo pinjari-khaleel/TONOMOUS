@@ -1,0 +1,58 @@
+.a-select {
+  position: relative;
+
+  &__select {
+    appearance: none;
+    background: var(--input-background-color);
+    border-radius: var(--input-border-radius);
+    border: var(--input-border-width) solid var(--input-border-color);
+    box-sizing: border-box;
+    color: var(--input-text-color);
+    display: block;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 40px;
+    margin: 0;
+    padding: calc(10px - var(--input-border-width));
+    width: 100%;
+
+    &:focus {
+      border-color: var(--input-border-color-focus);
+      box-shadow: 0 0 0 4px var(--input-box-shadow-focus);
+    }
+
+    &:invalid {
+      // required and disabled
+      font-weight: 100;
+      color: var(--input-placeholder-color);
+    }
+
+    &.-hasError {
+      border-color: var(--form-error-color);
+    }
+  }
+
+  &__chevron {
+    --icon-fill: var(--component-highlight-color, var(--color-dark-gold));
+    --icon-size: 12px;
+
+    @include size(var(--icon-size));
+
+    position: absolute;
+    right: var(--grid-gap);
+    top: 24px;
+    transform-origin: center;
+    transform: rotate(0deg);
+    transition: transform 0.25s linear;
+    pointer-events: none;
+
+    [dir="rtl"] & {
+      left: var(--grid-gap);
+      right: auto;
+    }
+  }
+
+  &__select:active ~ .a-select__chevron {
+    transform: rotate(180deg);
+  }
+}

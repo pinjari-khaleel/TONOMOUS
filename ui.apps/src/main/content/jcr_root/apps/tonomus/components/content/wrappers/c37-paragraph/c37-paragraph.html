@@ -1,0 +1,8 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder"
+     data-emptytext="${component.title @ i18n}"></div>
+
+<sly data-sly-use.styleModel="com.adobe.cq.wcm.style.ComponentStyleInfo"></sly>
+
+<div class="s-content ${styleModel.appliedCssClasses? styleModel.appliedCssClasses : '' @ context='styleString'}">
+  ${properties.text @ context='html'}
+</div>

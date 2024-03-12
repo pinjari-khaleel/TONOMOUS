@@ -1,0 +1,1885 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Fri Apr 09 2021 19:07:07 GMT+0300",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "jcr:title": "Neom",
+    "redirectTarget": "/content/neom/us/en",
+    "sling:configRef": "/conf/neom",
+    "sling:redirect": true,
+    "jcr:created": "Fri Apr 09 2021 19:07:07 GMT+0300",
+    "sling:redirectStatus": 302,
+    "cq:conf": "/conf/neom",
+    "sling:resourceType": "foundation/components/redirect",
+    "cq:allowedTemplates": [
+      "/conf/neom/settings/wcm/templates/(?!xf-).*"
+    ],
+    "image": {
+      "jcr:primaryType": "nt:unstructured",
+      "file": {
+        "jcr:primaryType": "nt:file",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Apr 09 2021 19:07:07 GMT+0300",
+        "jcr:content": {
+          "jcr:primaryType": "nt:resource",
+          "jcr:mixinTypes": [
+            "dam:Thumbnails"
+          ],
+          "jcr:lastModifiedBy": "admin",
+          "jcr:mimeType": "image/png",
+          "jcr:lastModified": "Fri Apr 09 2021 19:07:07 GMT+0300",
+          ":jcr:data": 2991,
+          "jcr:uuid": "65e7ba71-9ba6-43ce-82ac-4a5d64d16782",
+          "dam:thumbnails": {
+            "jcr:primaryType": "nt:folder",
+            "jcr:createdBy": "admin",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "dam:thumbnail_48.png": {
+              "jcr:primaryType": "nt:file",
+              "jcr:createdBy": "admin",
+              "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+              "jcr:content": {
+                "jcr:primaryType": "nt:resource",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:mimeType": "image/png",
+                "jcr:lastModified": "Fri Apr 09 2021 19:08:21 GMT+0300",
+                ":jcr:data": 238,
+                "jcr:uuid": "ac85e6bf-502b-4d8e-848b-d2aa1e4a1d3c"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "language-masters": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Apr 09 2021 19:07:07 GMT+0300",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Language Masters",
+      "cq:template": "/conf/neom/settings/wcm/templates/page-content",
+      "cq:redirectTarget": "/content/neom/us/en",
+      "jcr:created": "Fri Apr 09 2021 19:07:08 GMT+0300",
+      "hideInNav": true,
+      "sling:resourceType": "foundation/components/redirect"
+    }
+  },
+  "en-us": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "changefreq": "weekly",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Homepage",
+      "cq:template": "/conf/neom/settings/wcm/templates/t01-home",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "cq:lastModified": "Fri Apr 09 2021 19:25:14 GMT+0300",
+      "isRightToLeftLanguage": "ltr",
+      "sling:resourceType": "neom/components/structure/home-page",
+      "cq:lastModifiedBy": "admin",
+      "navCtaHref": "/content/neom/en-us/invest-in-neom",
+      "navCtaLabel": "Invest",
+      "navCtaTarget": "_blank",
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "responsivegrid": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid"
+        }
+      }
+    },
+    "conf": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "changefreq": "weekly",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Configurations",
+        "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "cq:lastModified": "Fri Apr 09 2021 08:57:32 GMT+0300",
+        "sling:resourceType": "neom/components/structure/reference-page",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "responsivegrid": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid"
+          }
+        }
+      },
+      "admin": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "changefreq": "weekly",
+          "jcr:createdBy": "admin",
+          "jcr:title": "Admin",
+          "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "cq:lastModified": "Fri Apr 09 2021 16:49:05 GMT+0300",
+          "sling:resourceType": "neom/components/structure/reference-page",
+          "cq:lastModifiedBy": "admin",
+          "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid",
+            "responsivegrid": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "s01_navigation": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "background": "black",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Fri Apr 09 2021 14:01:44 GMT+0300",
+                "mainMenu": "/content/neom/en-us/conf/nav-root",
+                "pagesAllLanguages": [
+                  "/whatistheline"
+                ],
+                "home": "/content/neom/en-us",
+                "jcr:lastModified": "Fri Apr 09 2021 16:49:05 GMT+0300",
+                "sling:resourceType": "neom/components/content/components/s01-navigation/v1/s01-navigation",
+                "logoDetail": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "variant": "dark"
+                },
+                "search": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "placeholder": "Search for",
+                  "redirectUrl": "/content/neom/en-us/search-results-page"
+                },
+                "languages": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "en",
+                    "target": "_self",
+                    "href": "/content/neom/en-us",
+                    "label": "English",
+                    "priorityLanguage": true
+                  },
+                  "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "ar",
+                    "target": "_self",
+                    "href": "/content/neom/ar-sa",
+                    "label": "العربية",
+                    "shortLabel": "عربي",
+                    "priorityLanguage": true
+                  },
+                  "item2": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "zh-cn",
+                    "target": "_self",
+                    "href": "/content/neom/zh-cn",
+                    "label": "简体中文",
+                    "priorityLanguage": false
+                  },
+                  "item3": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "zh-hk",
+                    "target": "_self",
+                    "href": "/content/neom/zh-hk",
+                    "label": "繁体中文",
+                    "priorityLanguage": false
+                  },
+                  "item4": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "jp",
+                    "target": "_self",
+                    "href": "/content/neom/ja-jp",
+                    "label": "日本語",
+                    "priorityLanguage": false
+                  },
+                  "item5": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "it",
+                    "target": "_self",
+                    "href": "/content/neom/it-it",
+                    "label": "ITALIANO",
+                    "priorityLanguage": false
+                  },
+                  "item6": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "es",
+                    "target": "_self",
+                    "href": "/content/neom/es-es",
+                    "label": "ESPAÑOL",
+                    "priorityLanguage": false
+                  },
+                  "item7": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "de",
+                    "target": "_self",
+                    "href": "/content/neom/de-de",
+                    "label": "DEUTSCH",
+                    "priorityLanguage": false
+                  },
+                  "item8": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "fr",
+                    "target": "_self",
+                    "href": "/content/neom/fr-fr",
+                    "label": "FRANÇAIS",
+                    "priorityLanguage": false
+                  },
+                  "item9": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "ru",
+                    "target": "_self",
+                    "href": "/content/neom/ru-ru",
+                    "label": "РУССКИЙ",
+                    "priorityLanguage": false
+                  }
+                }
+              },
+              "s02_footer": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "copyrightText": "© 2021 NEOM",
+                "jcr:created": "Fri Apr 09 2021 08:58:25 GMT+0300",
+                "title": "WELCOME TO OUR LIVING LABORATORY — <strong>A PLACE WHERE ENTREPRENEURSHIP WILL CHART THE COURSE   FOR THE NEW FUTURE.</strong>",
+                "jcr:lastModified": "Fri Apr 09 2021 08:58:25 GMT+0300",
+                "sling:resourceType": "neom/components/content/components/s02-footer/v1/s02-footer",
+                "links": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "href": "#",
+                    "label": "Privacy policy"
+                  },
+                  "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "href": "#",
+                    "label": "Terms of Use"
+                  },
+                  "item2": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "href": "#",
+                    "label": "Cookie Policy"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "nav-root": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "changefreq": "weekly",
+          "jcr:createdBy": "admin",
+          "jcr:title": "Nav Root",
+          "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "cq:lastModified": "Fri Apr 09 2021 08:59:25 GMT+0300",
+          "sling:resourceType": "neom/components/structure/reference-page",
+          "cq:lastModifiedBy": "admin",
+          "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid",
+            "responsivegrid": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid"
+            }
+          }
+        },
+        "homepage": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Homepage",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:redirectTarget": "/content/neom/en-us",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "cq:lastModified": "Fri Apr 09 2021 09:01:49 GMT+0300",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "cq:lastModifiedBy": "admin",
+            "navChildListType": "projects",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            }
+          },
+          "childpage": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:createdBy": "admin",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "jcr:content": {
+              "jcr:primaryType": "cq:PageContent",
+              "changefreq": "weekly",
+              "jcr:createdBy": "admin",
+              "jcr:title": "Child Page",
+              "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+              "cq:redirectTarget": "/content/neom/en-us",
+              "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+              "cq:lastModified": "Fri Apr 09 2021 09:01:49 GMT+0300",
+              "sling:resourceType": "neom/components/structure/reference-page",
+              "navImage": "/content/dam/neom/demo.jpg",
+              "navIcon": "icon",
+              "cq:lastModifiedBy": "admin",
+              "root": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid",
+                "responsivegrid": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "sling:resourceType": "wcm/foundation/components/responsivegrid"
+                }
+              }
+            }
+          }
+        },
+        "link-to-child-page-1": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Link to Child Page 1",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:redirectTarget": "/content/neom/en-us/child-page-1#hash-param",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "cq:lastModified": "Fri Apr 09 2021 09:02:10 GMT+0300",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            }
+          }
+        },
+        "link-to-child-page-2": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Link to Child Page 2",
+            "pwaOrientation": "any",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:redirectTarget": "https://newsroom.neom.com/",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "pwaDisplay": "standalone",
+            "cq:lastModified": "Sun Apr 11 2021 19:31:11 GMT+0300",
+            "pwaCachestrategy": "staleWhileRevalidate",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            }
+          }
+        },
+        "link-to-sectors": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Mon May 24 2021 10:30:12 GMT+0600",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:mixinTypes": [],
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Link to Sectors",
+            "cq:lastReplicationAction": "Activate",
+            "jcr:versionHistory": "41922053-970b-49f7-a438-2b1ca7eec6d2",
+            "pwaOrientation": "any",
+            "externalLink": "false",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:lastReplicatedBy": "mikhail.komarov@mediamonks.com",
+            "jcr:predecessors": [],
+            "cq:redirectTarget": "/content/neom/en-us/sectors",
+            "jcr:created": "Mon May 24 2021 10:30:12 GMT+0600",
+            "pwaDisplay": "standalone",
+            "cq:lastReplicated": "Wed May 12 2021 06:24:17 GMT+0000",
+            "cq:lastModified": "Mon May 10 2021 09:14:44 GMT+0000",
+            "navChildListType": "sectorMenu",
+            "siteSection": "home",
+            "pwaCachestrategy": "staleWhileRevalidate",
+            "jcr:baseVersion": "fa42d4e7-ff5c-4ce3-a8fe-ccfba89d32a7",
+            "jcr:isCheckedOut": true,
+            "jcr:uuid": "d9336abd-29af-4ffb-af81-f4b5dc25c872",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "cq:lastModifiedBy": "shamyak.moorthy@mediamonks.com",
+            "root": {}
+          },
+          "link-to-mobility": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:createdBy": "admin",
+            "jcr:created": "Mon May 24 2021 10:30:12 GMT+0600",
+            "jcr:content": {
+              "jcr:primaryType": "cq:PageContent",
+              "jcr:mixinTypes": [
+                "mix:versionable"
+              ],
+              "changefreq": "weekly",
+              "jcr:createdBy": "admin",
+              "jcr:title": "Link to Mobility",
+              "cq:lastReplicationAction": "Activate",
+              "jcr:versionHistory": "d305dd04-e772-4c1d-831d-b5065913b6fc",
+              "pwaOrientation": "any",
+              "externalLink": "false",
+              "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+              "cq:lastReplicatedBy": "mikhail.komarov@mediamonks.com",
+              "underConstruction": "false",
+              "jcr:predecessors": [
+                "4908d698-0fa0-45d5-98a3-4ae05d2a130d"
+              ],
+              "cq:redirectTarget": "/content/neom/en-us",
+              "jcr:created": "Mon May 24 2021 10:30:12 GMT+0600",
+              "pwaDisplay": "standalone",
+              "cq:lastReplicated": "Wed May 12 2021 06:24:17 GMT+0000",
+              "cq:lastModified": "Wed May 26 2021 12:25:20 GMT+0600",
+              "navChildListType": "sectorMenu",
+              "siteSection": "home",
+              "pwaCachestrategy": "staleWhileRevalidate",
+              "jcr:baseVersion": "4908d698-0fa0-45d5-98a3-4ae05d2a130d",
+              "jcr:isCheckedOut": true,
+              "jcr:uuid": "023c1749-73d0-44e9-a6b3-cc2f7c573d2a",
+              "sling:resourceType": "neom/components/structure/reference-page",
+              "navIcon": "mobility",
+              "cq:lastModifiedBy": "admin",
+              "navImage": "/content/dam/neom/sector-navigation-imagery/Mobility.png",
+              "root": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid",
+                "responsivegrid": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "sling:resourceType": "wcm/foundation/components/responsivegrid"
+                }
+              },
+              "secondaryNavigation": {
+                "jcr:primaryType": "nt:unstructured",
+                "items": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "externalLink": "true",
+                    "href": "test Modal Button URL",
+                    "label": "test label"
+                  },
+                  "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "externalLink": "true",
+                    "href": "test Modal Button URL 2",
+                    "label": "test label 2"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "link-to-newsroom": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Tue Jun 29 2021 15:53:10 GMT+0200",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:mixinTypes": [
+              "mix:versionable"
+            ],
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Newsroom",
+            "cq:lastReplicationAction": "Activate",
+            "jcr:versionHistory": "92242ade-a363-49e4-8f1e-a75ed24e0c13",
+            "pwaOrientation": "any",
+            "externalLink": "false",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:lastReplicatedBy": "anas.afadar@mediamonks.com",
+            "underConstruction": "false",
+            "jcr:predecessors": [
+              "aac9c62c-e2b6-4bae-ae29-663cf9687cac"
+            ],
+            "cq:redirectTarget": "/content/neom/en-us/newsroom",
+            "jcr:created": "Tue Jun 29 2021 15:53:10 GMT+0200",
+            "pwaDisplay": "standalone",
+            "cq:lastReplicated": "Tue Jun 29 2021 13:46:33 GMT+0000",
+            "cq:lastModified": "Wed Jun 30 2021 11:59:22 GMT+0200",
+            "navChildListType": "link",
+            "theme": "sector-01",
+            "siteSection": "home",
+            "pwaCachestrategy": "staleWhileRevalidate",
+            "jcr:baseVersion": "aac9c62c-e2b6-4bae-ae29-663cf9687cac",
+            "jcr:isCheckedOut": true,
+            "jcr:uuid": "3cbf9ee7-3706-46e0-850f-94885c249a29",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "enableActivePath": "true",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            },
+            "secondaryNavigation": {
+              "jcr:primaryType": "nt:unstructured",
+              "items": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "externalLink": "true",
+                  "href": "/content/neom/en-us/newsroom/neom-kaust-coral-garden-mou",
+                  "label": "Media Gallery"
+                }
+              }
+            }
+          }
+        }
+      },
+      "nav-root-empty": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Sun Apr 11 2021 19:23:54 GMT+0300",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "changefreq": "weekly",
+          "jcr:createdBy": "admin",
+          "jcr:title": "Nav Root Empty",
+          "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+          "jcr:created": "Sun Apr 11 2021 19:23:54 GMT+0300",
+          "cq:lastModified": "Sun Apr 11 2021 19:23:54 GMT+0300",
+          "sling:resourceType": "neom/components/structure/reference-page",
+          "cq:lastModifiedBy": "admin",
+          "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid",
+            "responsivegrid": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid"
+            }
+          }
+        }
+      }
+    },
+    "child-page-1": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "changefreq": "weekly",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Child Page 1",
+        "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "cq:lastModified": "Fri Apr 09 2021 08:59:46 GMT+0300",
+        "sling:resourceType": "neom/components/structure/page",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "responsivegrid": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid"
+          }
+        }
+      }
+    },
+    "child-page-2": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "changefreq": "weekly",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Child Page 2",
+        "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "cq:lastModified": "Fri Apr 09 2021 09:00:04 GMT+0300",
+        "sling:resourceType": "neom/components/structure/page",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "responsivegrid": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid"
+          }
+        }
+      }
+    },
+    "whatistheline": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Mon Apr 19 2021 16:32:43 GMT+0300",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "mix:versionable"
+        ],
+        "changefreq": "weekly",
+        "jcr:createdBy": "admin",
+        "jcr:title": "THE LINE",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "6f9d5501-85b6-45ec-a80a-04a908ddbb41",
+        "pwaOrientation": "any",
+        "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+        "cq:lastReplicatedBy": "kimberley.webber@mediamonks.com",
+        "jcr:predecessors": [
+          "bb59bed2-dd5c-4d5f-b6b5-5b299d29bc4d"
+        ],
+        "jcr:created": "Mon Apr 19 2021 16:32:43 GMT+0300",
+        "englishTitle": "A Vision of a New Future: Explainer video",
+        "pwaDisplay": "standalone",
+        "cq:lastReplicated": "Thu May 13 2021 05:44:21 GMT+0000",
+        "cq:lastModified": "Tue May 11 2021 11:00:11 GMT+0000",
+        "siteSection": "home",
+        "pwaCachestrategy": "staleWhileRevalidate",
+        "jcr:baseVersion": "bb59bed2-dd5c-4d5f-b6b5-5b299d29bc4d",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "d9e6bb10-03f8-4174-8255-6f0ef6d1f445",
+        "sling:resourceType": "neom/components/structure/page",
+        "cq:lastModifiedBy": "yerbol.balkenov@mediamonks.com",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "responsivegrid": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid"
+          }
+        }
+      }
+    },
+    "newsroom": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Tue Jun 29 2021 15:53:15 GMT+0200",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "mix:versionable"
+        ],
+        "changefreq": "weekly",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Newsroom",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "ed4c686c-ffd8-4520-abd8-5a2868c4a6d7",
+        "pwaOrientation": "any",
+        "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+        "cq:lastReplicatedBy": "anas.afadar@mediamonks.com",
+        "jcr:predecessors": [
+          "cffdab34-8d83-4b44-9ccd-7afd070a2a93"
+        ],
+        "jcr:created": "Tue Jun 29 2021 15:53:15 GMT+0200",
+        "pwaDisplay": "standalone",
+        "cq:lastReplicated": "Tue Jun 29 2021 09:59:57 GMT+0000",
+        "cq:lastModified": "Mon Jun 28 2021 14:28:48 GMT+0000",
+        "theme": "sector-01",
+        "siteSection": "home",
+        "pwaCachestrategy": "staleWhileRevalidate",
+        "jcr:baseVersion": "cffdab34-8d83-4b44-9ccd-7afd070a2a93",
+        "jcr:isCheckedOut": true,
+        "configPage": "/content/neom/en-us/conf/admin/newsroom-admin",
+        "jcr:uuid": "5d480594-b07a-483c-89c8-1bff189c3438",
+        "sling:resourceType": "neom/components/structure/page",
+        "cq:lastModifiedBy": "anas.afadar@mediamonks.com",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "responsivegrid": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid",
+            "c22_hero_component": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:createdBy": "anas.afadar@mediamonks.com",
+              "jcr:lastModifiedBy": "anas.afadar@mediamonks.com",
+              "jcr:created": "Thu Jun 24 2021 06:56:57 GMT+0000",
+              "headingAlignment": "bottom",
+              "jcr:lastModified": "Thu Jun 24 2021 06:59:59 GMT+0000",
+              "sling:resourceType": "neom/components/content/components/c22-hero-component/v1/c22-hero-component",
+              "textIsRich": "true",
+              "alignment": "left",
+              "cq:styleIds": [
+                "1618402754088",
+                "1618402716484"
+              ],
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "h3",
+                "text": "Newsroom"
+              },
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:lastModifiedBy": "anas.afadar@mediamonks.com",
+                "alt": "Formula E teaser",
+                "src": "/content/dam/neom/newsroom/neom-kaust-coral-garden-mou/5. NEOM Shusha Island.jpg",
+                "jcr:lastModified": "Thu Jun 24 2021 06:59:59 GMT+0000"
+              },
+              "video": {
+                "jcr:primaryType": "nt:unstructured"
+              },
+              "teaserVideo": {
+                "jcr:primaryType": "nt:unstructured"
+              },
+              "eyebrow": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "medium"
+              },
+              "flipHeading": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "h1"
+              },
+              "modal": {
+                "jcr:primaryType": "nt:unstructured"
+              },
+              "buttons": {
+                "jcr:primaryType": "nt:unstructured"
+              }
+            },
+            "c41_newsroom_list": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:createdBy": "anas.afadar@mediamonks.com",
+              "buttonLabel": "Learn More",
+              "hasHighlight": "true",
+              "tagsMatch": "any",
+              "jcr:lastModifiedBy": "anas.afadar@mediamonks.com",
+              "columnCount": "3",
+              "jcr:created": "Wed Jun 23 2021 15:22:35 GMT+0000",
+              "jcr:lastModified": "Thu Jun 24 2021 06:56:49 GMT+0000",
+              "sling:resourceType": "neom/components/content/components/c41-newsroom-list/v1/c41-newsroom-list",
+              "childDepth": "1",
+              "listFrom": "children",
+              "textIsRich": "true",
+              "button": {
+                "jcr:primaryType": "nt:unstructured",
+                "label": "Load More"
+              },
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "element": "h1",
+                "size": "h3"
+              }
+            }
+          }
+        }
+      },
+      "neom-kaust-coral-garden-mou": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Tue Jun 29 2021 15:53:16 GMT+0200",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "jcr:mixinTypes": [
+            "mix:versionable"
+          ],
+          "changefreq": "weekly",
+          "jcr:createdBy": "admin",
+          "jcr:title": "NEOM partners with KAUST to create the world's largest coral garden",
+          "cq:lastReplicationAction": "Activate",
+          "newsArticleDate": "Mon Jun 21 2021 00:00:00 GMT+0300",
+          "jcr:versionHistory": "9794cf3f-0009-479f-b3c4-2279fb0bbb8c",
+          "pwaOrientation": "any",
+          "cq:template": "/conf/neom/settings/wcm/templates/t03-news",
+          "cq:lastReplicatedBy": "anas.afadar@mediamonks.com",
+          "jcr:predecessors": [
+            "f2f10384-9db4-44e7-a48b-7dc24ae6b6a7"
+          ],
+          "jcr:created": "Tue Jun 29 2021 15:53:16 GMT+0200",
+          "pwaDisplay": "standalone",
+          "cq:lastReplicated": "Tue Jun 29 2021 13:32:14 GMT+0000",
+          "cq:lastModified": "Wed Jun 30 2021 13:04:43 GMT+0200",
+          "theme": "sector-01",
+          "siteSection": "home",
+          "jcr:description": "NEOM Company and King Abdullah University of Science and Technology (KAUST) today announced a joint project to establish the world's largest coral garden at Shushah Island in the Red Sea area of NEOM, in northwest Saudi Arabia.",
+          "pwaCachestrategy": "staleWhileRevalidate",
+          "jcr:baseVersion": "f2f10384-9db4-44e7-a48b-7dc24ae6b6a7",
+          "jcr:isCheckedOut": true,
+          "configPage": "/content/neom/en-us/conf/admin/newsroom-admin",
+          "pageTitle": "NEOM partners with KAUST to create the world's largest coral garden",
+          "jcr:uuid": "396756b0-d7fe-4884-a14b-a635f02843f8",
+          "sling:resourceType": "neom/components/structure/news-page",
+          "cq:lastModifiedBy": "admin",
+          "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid",
+            "responsivegrid": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "c44_article_content": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "anas.afadar@mediamonks.com",
+                "jcr:lastModifiedBy": "anas.afadar@mediamonks.com",
+                "jcr:created": "Wed Jun 23 2021 15:00:57 GMT+0000",
+                "text": "NEOM partners with KAUST to create the world's largest coral garden",
+                "jcr:lastModified": "Wed Jun 23 2021 15:05:32 GMT+0000",
+                "sling:resourceType": "neom/components/content/components/c44-article-content/v1/c44-article-content"
+              },
+              "c22_hero_component": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Wed Jun 30 2021 13:04:43 GMT+0200",
+                "headingAlignment": "bottom",
+                "jcr:lastModified": "Wed Jun 30 2021 13:04:43 GMT+0200",
+                "sling:resourceType": "neom/components/content/components/c22-hero-component/v1/c22-hero-component",
+                "alignment": "left"
+              }
+            }
+          },
+          "featureImage": {
+            "jcr:primaryType": "nt:unstructured",
+            "src": "/content/dam/neom/newsroom/neom-kaust-coral-garden-mou/Article_5_Hero_Image.jpg"
+          },
+          "navImage": {
+            "jcr:primaryType": "nt:unstructured",
+            "src": "/content/dam/neom/newsroom/neom-kaust-coral-garden-mou/Article_5_Hero_Image.jpg"
+          }
+        },
+        "conf": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Configurations",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "cq:lastModified": "Fri Apr 09 2021 08:57:32 GMT+0300",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            }
+          },
+          "admin": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:createdBy": "admin",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "jcr:content": {
+              "jcr:primaryType": "cq:PageContent",
+              "changefreq": "weekly",
+              "jcr:createdBy": "admin",
+              "jcr:title": "Admin",
+              "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+              "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+              "cq:lastModified": "Fri Apr 09 2021 16:49:05 GMT+0300",
+              "sling:resourceType": "neom/components/structure/reference-page",
+              "cq:lastModifiedBy": "admin",
+              "root": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid",
+                "responsivegrid": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "sling:resourceType": "wcm/foundation/components/responsivegrid",
+                  "s01_navigation": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "background": "black",
+                    "jcr:lastModifiedBy": "admin",
+                    "jcr:created": "Fri Apr 09 2021 14:01:44 GMT+0300",
+                    "mainMenu": "/content/neom/en-us/conf/nav-root",
+                    "pagesAllLanguages": [
+                      "/whatistheline"
+                    ],
+                    "home": "/content/neom/en-us",
+                    "jcr:lastModified": "Fri Apr 09 2021 16:49:05 GMT+0300",
+                    "sling:resourceType": "neom/components/content/components/s01-navigation/v1/s01-navigation",
+                    "languages": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "languageCode": "en",
+                        "target": "_self",
+                        "href": "/content/neom/en-us",
+                        "label": "English",
+                        "priorityLanguage": true
+                      },
+                      "item1": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "languageCode": "ar",
+                        "target": "_self",
+                        "href": "/content/neom/ar-sa",
+                        "label": "العربية",
+                        "shortLabel": "عربي",
+                        "priorityLanguage": true
+                      },
+                      "item2": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "languageCode": "zh-cn",
+                        "target": "_self",
+                        "href": "/content/neom/zh-cn",
+                        "label": "简体中文",
+                        "priorityLanguage": false
+                      },
+                      "item3": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "languageCode": "zh-hk",
+                        "target": "_self",
+                        "href": "/content/neom/zh-hk",
+                        "label": "繁体中文",
+                        "priorityLanguage": false
+                      },
+                      "item4": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "languageCode": "jp",
+                        "target": "_self",
+                        "href": "/content/neom/ja-jp",
+                        "label": "日本語",
+                        "priorityLanguage": false
+                      },
+                      "item5": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "languageCode": "it",
+                        "target": "_self",
+                        "href": "/content/neom/it-it",
+                        "label": "ITALIANO",
+                        "priorityLanguage": false
+                      },
+                      "item6": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "languageCode": "es",
+                        "target": "_self",
+                        "href": "/content/neom/es-es",
+                        "label": "ESPAÑOL",
+                        "priorityLanguage": false
+                      },
+                      "item7": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "languageCode": "de",
+                        "target": "_self",
+                        "href": "/content/neom/de-de",
+                        "label": "DEUTSCH",
+                        "priorityLanguage": false
+                      },
+                      "item8": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "languageCode": "fr",
+                        "target": "_self",
+                        "href": "/content/neom/fr-fr",
+                        "label": "FRANÇAIS",
+                        "priorityLanguage": false
+                      },
+                      "item9": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "languageCode": "ru",
+                        "target": "_self",
+                        "href": "/content/neom/ru-ru",
+                        "label": "РУССКИЙ",
+                        "priorityLanguage": false
+                      }
+                    }
+                  },
+                  "s02_footer": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "jcr:createdBy": "admin",
+                    "jcr:lastModifiedBy": "admin",
+                    "copyrightText": "© 2021 NEOM",
+                    "jcr:created": "Fri Apr 09 2021 08:58:25 GMT+0300",
+                    "title": "WELCOME TO OUR LIVING LABORATORY — <strong>A PLACE WHERE ENTREPRENEURSHIP WILL CHART THE COURSE   FOR THE NEW FUTURE.</strong>",
+                    "jcr:lastModified": "Fri Apr 09 2021 08:58:25 GMT+0300",
+                    "sling:resourceType": "neom/components/content/components/s02-footer/v1/s02-footer",
+                    "links": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "target": "_blank",
+                        "href": "#",
+                        "label": "Privacy policy"
+                      },
+                      "item1": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "target": "_blank",
+                        "href": "#",
+                        "label": "Terms of Use"
+                      },
+                      "item2": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "target": "_blank",
+                        "href": "#",
+                        "label": "Cookie Policy"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "nav-root": {
+            "jcr:primaryType": "cq:Page",
+            "jcr:createdBy": "admin",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "jcr:content": {
+              "jcr:primaryType": "cq:PageContent",
+              "changefreq": "weekly",
+              "jcr:createdBy": "admin",
+              "jcr:title": "Nav Root",
+              "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+              "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+              "cq:lastModified": "Fri Apr 09 2021 08:59:25 GMT+0300",
+              "sling:resourceType": "neom/components/structure/reference-page",
+              "cq:lastModifiedBy": "admin",
+              "root": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid",
+                "responsivegrid": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "sling:resourceType": "wcm/foundation/components/responsivegrid"
+                }
+              }
+            },
+            "link-to-newsroom": {
+              "jcr:primaryType": "cq:Page",
+              "jcr:createdBy": "admin",
+              "jcr:created": "Tue Jun 29 2021 15:53:10 GMT+0200",
+              "jcr:content": {
+                "jcr:primaryType": "cq:PageContent",
+                "jcr:mixinTypes": [
+                  "mix:versionable"
+                ],
+                "changefreq": "weekly",
+                "jcr:createdBy": "admin",
+                "jcr:title": "Newsroom",
+                "cq:lastReplicationAction": "Activate",
+                "jcr:versionHistory": "92242ade-a363-49e4-8f1e-a75ed24e0c13",
+                "pwaOrientation": "any",
+                "externalLink": "false",
+                "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+                "cq:lastReplicatedBy": "anas.afadar@mediamonks.com",
+                "underConstruction": "false",
+                "jcr:predecessors": [
+                  "aac9c62c-e2b6-4bae-ae29-663cf9687cac"
+                ],
+                "cq:redirectTarget": "/content/neom/en-us/newsroom",
+                "jcr:created": "Tue Jun 29 2021 15:53:10 GMT+0200",
+                "pwaDisplay": "standalone",
+                "cq:lastReplicated": "Tue Jun 29 2021 13:46:33 GMT+0000",
+                "cq:lastModified": "Wed Jun 30 2021 11:59:22 GMT+0200",
+                "navChildListType": "link",
+                "theme": "sector-01",
+                "siteSection": "home",
+                "pwaCachestrategy": "staleWhileRevalidate",
+                "jcr:baseVersion": "aac9c62c-e2b6-4bae-ae29-663cf9687cac",
+                "jcr:isCheckedOut": true,
+                "jcr:uuid": "3cbf9ee7-3706-46e0-850f-94885c249a29",
+                "sling:resourceType": "neom/components/structure/reference-page",
+                "enableActivePath": "true",
+                "cq:lastModifiedBy": "admin",
+                "root": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "sling:resourceType": "wcm/foundation/components/responsivegrid",
+                  "responsivegrid": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "wcm/foundation/components/responsivegrid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "ar-sa": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "changefreq": "weekly",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Homepage",
+      "cq:template": "/conf/neom/settings/wcm/templates/t01-home",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "cq:lastModified": "Fri Apr 09 2021 10:32:27 GMT+0300",
+      "isRightToLeftLanguage": "rtl",
+      "sling:resourceType": "neom/components/structure/home-page",
+      "cq:lastModifiedBy": "admin",
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "responsivegrid": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid"
+        }
+      }
+    },
+    "conf": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "changefreq": "weekly",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Configurations",
+        "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "cq:lastModified": "Fri Apr 09 2021 09:47:07 GMT+0300",
+        "sling:resourceType": "neom/components/structure/reference-page",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "responsivegrid": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid"
+          }
+        }
+      },
+      "admin": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "changefreq": "weekly",
+          "jcr:createdBy": "admin",
+          "jcr:title": "Admin",
+          "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "cq:lastModified": "Fri Apr 09 2021 16:59:58 GMT+0300",
+          "sling:resourceType": "neom/components/structure/reference-page",
+          "cq:lastModifiedBy": "admin",
+          "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid",
+            "responsivegrid": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "s01_navigation": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "background": "black",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Fri Apr 09 2021 14:17:00 GMT+0300",
+                "mainMenu": "/content/neom/ar-sa/conf/nav-root",
+                "pagesAllLanguages": [
+                  "/"
+                ],
+                "home": "/content/neom/ar-sa",
+                "jcr:lastModified": "Fri Apr 09 2021 16:59:58 GMT+0300",
+                "sling:resourceType": "neom/components/content/components/s01-navigation/v1/s01-navigation",
+                "languages": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "en",
+                    "target": "_self",
+                    "href": "/content/neom/en-us",
+                    "label": "English",
+                    "priorityLanguage": true
+                  },
+                  "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "ar",
+                    "target": "_self",
+                    "href": "/content/neom/ar-sa",
+                    "label": "العربية",
+                    "shortLabel": "عربي",
+                    "priorityLanguage": true
+                  },
+                  "item2": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "zh-cn",
+                    "target": "_self",
+                    "href": "/content/neom/zh-cn",
+                    "label": "简体中文",
+                    "priorityLanguage": false
+                  },
+                  "item3": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "zh-hk",
+                    "target": "_self",
+                    "href": "/content/neom/zh-hk",
+                    "label": "繁体中文",
+                    "priorityLanguage": false
+                  },
+                  "item4": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "jp",
+                    "target": "_self",
+                    "href": "/content/neom/ja-jp",
+                    "label": "日本語",
+                    "priorityLanguage": false
+                  },
+                  "item5": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "it",
+                    "target": "_self",
+                    "href": "/content/neom/it-it",
+                    "label": "ITALIANO",
+                    "priorityLanguage": false
+                  },
+                  "item6": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "es",
+                    "target": "_self",
+                    "href": "/content/neom/es-es",
+                    "label": "ESPAÑOL",
+                    "priorityLanguage": false
+                  },
+                  "item7": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "de",
+                    "target": "_self",
+                    "href": "/content/neom/de-de",
+                    "label": "DEUTSCH",
+                    "priorityLanguage": false
+                  },
+                  "item8": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "fr",
+                    "target": "_self",
+                    "href": "/content/neom/fr-fr",
+                    "label": "FRANÇAIS",
+                    "priorityLanguage": false
+                  },
+                  "item9": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "ru",
+                    "target": "_self",
+                    "href": "/content/neom/ru-ru",
+                    "label": "РУССКИЙ",
+                    "priorityLanguage": false
+                  }
+                }
+              },
+              "s02_footer": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "copyrightText": "© 2021 NEOM",
+                "jcr:created": "Fri Apr 09 2021 09:52:03 GMT+0300",
+                "title": "WELCOME TO OUR LIVING LABORATORY — <strong>A PLACE WHERE ENTREPRENEURSHIP WILL CHART THE COURSE   FOR THE NEW FUTURE.</strong>",
+                "jcr:lastModified": "Fri Apr 09 2021 09:52:03 GMT+0300",
+                "sling:resourceType": "neom/components/content/components/s02-footer/v1/s02-footer",
+                "links": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "href": "#",
+                    "label": "Privacy policy"
+                  },
+                  "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "href": "#",
+                    "label": "Terms of Use"
+                  },
+                  "item2": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "href": "#",
+                    "label": "Cookie Policy"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "nav-root": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "changefreq": "weekly",
+          "jcr:createdBy": "admin",
+          "jcr:title": "Nav Root",
+          "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "cq:lastModified": "Fri Apr 09 2021 09:47:52 GMT+0300",
+          "sling:resourceType": "neom/components/structure/reference-page",
+          "cq:lastModifiedBy": "admin",
+          "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid",
+            "responsivegrid": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid"
+            }
+          }
+        },
+        "homepage": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Homepage",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:redirectTarget": "/content/neom/ar-sa",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "cq:lastModified": "Fri Apr 09 2021 09:49:38 GMT+0300",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            }
+          }
+        },
+        "link-to-child-page-1": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Link to Child Page 1",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:redirectTarget": "/content/neom/ar-sa/child-page-1",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "cq:lastModified": "Fri Apr 09 2021 09:50:31 GMT+0300",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            }
+          }
+        },
+        "link-to-child-page-2": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Link to Child Page 2",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:redirectTarget": "/content/neom/ar-sa/child-page-2",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "cq:lastModified": "Fri Apr 09 2021 09:51:34 GMT+0300",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            }
+          }
+        },
+        "link-to-mobility": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Mon May 24 2021 10:30:12 GMT+0600",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:mixinTypes": [
+              "mix:versionable"
+            ],
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Link to Mobility",
+            "cq:lastReplicationAction": "Activate",
+            "jcr:versionHistory": "d305dd04-e772-4c1d-831d-b5065913b6fc",
+            "pwaOrientation": "any",
+            "externalLink": "false",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:lastReplicatedBy": "mikhail.komarov@mediamonks.com",
+            "underConstruction": "false",
+            "jcr:predecessors": [
+              "4908d698-0fa0-45d5-98a3-4ae05d2a130d"
+            ],
+            "cq:redirectTarget": "/content/neom/en-us/sectors/mobility",
+            "jcr:created": "Mon May 24 2021 10:30:12 GMT+0600",
+            "pwaDisplay": "standalone",
+            "cq:lastReplicated": "Wed May 12 2021 06:24:17 GMT+0000",
+            "cq:lastModified": "Wed May 26 2021 12:25:20 GMT+0600",
+            "navChildListType": "sectorMenu",
+            "siteSection": "home",
+            "pwaCachestrategy": "staleWhileRevalidate",
+            "jcr:baseVersion": "4908d698-0fa0-45d5-98a3-4ae05d2a130d",
+            "jcr:isCheckedOut": true,
+            "jcr:uuid": "023c1749-73d0-44e9-a6b3-cc2f7c573d2a",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "navIcon": "mobility",
+            "cq:lastModifiedBy": "admin",
+            "navImage": "/content/dam/neom/sector-navigation-imagery/Mobility.png",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            },
+            "secondaryNavigation": {
+              "jcr:primaryType": "nt:unstructured",
+              "items": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "externalLink": "true",
+                  "href": "test Modal Button URL",
+                  "label": "test label"
+                },
+                "item1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "externalLink": "true",
+                  "href": "test Modal Button URL 2",
+                  "label": "test label 2"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "child-page-1": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "changefreq": "weekly",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Child Page 1",
+        "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "cq:lastModified": "Fri Apr 09 2021 09:48:12 GMT+0300",
+        "sling:resourceType": "neom/components/structure/page",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "responsivegrid": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid"
+          }
+        }
+      }
+    },
+    "child-page-2": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "changefreq": "weekly",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Child Page 2",
+        "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "cq:lastModified": "Fri Apr 09 2021 09:48:30 GMT+0300",
+        "sling:resourceType": "neom/components/structure/page",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "responsivegrid": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid"
+          }
+        }
+      }
+    }
+  },
+  "zh-cn": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "changefreq": "weekly",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Homepage",
+      "cq:template": "/conf/neom/settings/wcm/templates/t01-home",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "cq:lastModified": "Fri Apr 09 2021 09:39:01 GMT+0300",
+      "isRightToLeftLanguage": "ltr",
+      "sling:resourceType": "neom/components/structure/home-page",
+      "cq:lastModifiedBy": "admin",
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "responsivegrid": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid"
+        }
+      }
+    },
+    "conf": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "changefreq": "weekly",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Configurations",
+        "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "cq:lastModified": "Fri Apr 09 2021 14:18:08 GMT+0300",
+        "sling:resourceType": "neom/components/structure/reference-page",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "responsivegrid": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid"
+          }
+        }
+      },
+      "admin": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "changefreq": "weekly",
+          "jcr:createdBy": "admin",
+          "jcr:title": "Admin",
+          "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "cq:lastModified": "Fri Apr 09 2021 17:00:23 GMT+0300",
+          "sling:resourceType": "neom/components/structure/reference-page",
+          "cq:lastModifiedBy": "admin",
+          "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid",
+            "responsivegrid": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "s01_navigation": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "background": "black",
+                "jcr:lastModifiedBy": "admin",
+                "jcr:created": "Fri Apr 09 2021 14:18:30 GMT+0300",
+                "mainMenu": "/content/neom/zh-cn/conf/nav-root",
+                "pagesAllLanguages": [
+                  "/whatistheline"
+                ],
+                "home": "/content/neom/zh-cn",
+                "jcr:lastModified": "Fri Apr 09 2021 17:00:23 GMT+0300",
+                "sling:resourceType": "neom/components/content/components/s01-navigation/v1/s01-navigation",
+                "languages": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "en",
+                    "target": "_self",
+                    "href": "/content/neom/en-us",
+                    "label": "English",
+                    "priorityLanguage": true
+                  },
+                  "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "ar",
+                    "target": "_self",
+                    "href": "/content/neom/ar-sa",
+                    "label": "العربية",
+                    "shortLabel": "عربي",
+                    "priorityLanguage": true
+                  },
+                  "item2": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "zh-cn",
+                    "target": "_self",
+                    "href": "/content/neom/zh-cn",
+                    "label": "简体中文",
+                    "priorityLanguage": false
+                  },
+                  "item3": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "zh-hk",
+                    "target": "_self",
+                    "href": "/content/neom/zh-hk",
+                    "label": "繁体中文",
+                    "priorityLanguage": false
+                  },
+                  "item4": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "jp",
+                    "target": "_self",
+                    "href": "/content/neom/ja-jp",
+                    "label": "日本語",
+                    "priorityLanguage": false
+                  },
+                  "item5": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "it",
+                    "target": "_self",
+                    "href": "/content/neom/it-it",
+                    "label": "ITALIANO",
+                    "priorityLanguage": false
+                  },
+                  "item6": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "es",
+                    "target": "_self",
+                    "href": "/content/neom/es-es",
+                    "label": "ESPAÑOL",
+                    "priorityLanguage": false
+                  },
+                  "item7": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "de",
+                    "target": "_self",
+                    "href": "/content/neom/de-de",
+                    "label": "DEUTSCH",
+                    "priorityLanguage": false
+                  },
+                  "item8": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "fr",
+                    "target": "_self",
+                    "href": "/content/neom/fr-fr",
+                    "label": "FRANÇAIS",
+                    "priorityLanguage": false
+                  },
+                  "item9": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "languageCode": "ru",
+                    "target": "_self",
+                    "href": "/content/neom/ru-ru",
+                    "label": "РУССКИЙ",
+                    "priorityLanguage": false
+                  }
+                }
+              },
+              "s02_footer": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "copyrightText": "© 2021 NEOM",
+                "jcr:created": "Fri Apr 09 2021 14:18:42 GMT+0300",
+                "title": "WELCOME TO OUR LIVING LABORATORY — <strong>A PLACE WHERE ENTREPRENEURSHIP WILL CHART THE COURSE   FOR THE NEW FUTURE.</strong>",
+                "jcr:lastModified": "Fri Apr 09 2021 14:18:42 GMT+0300",
+                "sling:resourceType": "neom/components/content/components/s02-footer/v1/s02-footer",
+                "links": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "href": "#",
+                    "label": "Privacy policy"
+                  },
+                  "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "href": "#",
+                    "label": "Terms of Use"
+                  },
+                  "item2": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "href": "#",
+                    "label": "Cookie Policy"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "nav-root": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "jcr:content": {
+          "jcr:primaryType": "cq:PageContent",
+          "changefreq": "weekly",
+          "jcr:createdBy": "admin",
+          "jcr:title": "Nav Root",
+          "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "cq:lastModified": "Fri Apr 09 2021 14:19:14 GMT+0300",
+          "sling:resourceType": "neom/components/structure/reference-page",
+          "cq:lastModifiedBy": "admin",
+          "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid",
+            "responsivegrid": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid"
+            }
+          }
+        },
+        "homepage": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Homepage",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:redirectTarget": "/content/neom/zh-cn",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "cq:lastModified": "Fri Apr 09 2021 14:20:58 GMT+0300",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            }
+          }
+        },
+        "link-to-child-page-1": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Link to Child Page 1",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:redirectTarget": "/content/neom/zh-cn/child-page-1",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "cq:lastModified": "Fri Apr 09 2021 14:21:25 GMT+0300",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            }
+          }
+        },
+        "link-to-child-page-2": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "changefreq": "weekly",
+            "jcr:createdBy": "admin",
+            "jcr:title": "Link to Child Page 2",
+            "cq:template": "/conf/neom/settings/wcm/templates/reference-page",
+            "cq:redirectTarget": "/content/neom/zh-cn/child-page-2",
+            "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+            "cq:lastModified": "Fri Apr 09 2021 18:35:05 GMT+0300",
+            "sling:resourceType": "neom/components/structure/reference-page",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "responsivegrid": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "wcm/foundation/components/responsivegrid"
+              }
+            }
+          }
+        }
+      }
+    },
+    "child-page-1": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "changefreq": "weekly",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Child Page 1",
+        "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "cq:lastModified": "Fri Apr 09 2021 14:20:05 GMT+0300",
+        "sling:resourceType": "neom/components/structure/page",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "responsivegrid": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid"
+          }
+        }
+      }
+    },
+    "child-page-2": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "changefreq": "weekly",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Child Page 2",
+        "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+        "jcr:created": "Fri Apr 09 2021 19:08:21 GMT+0300",
+        "cq:lastModified": "Fri Apr 09 2021 14:20:18 GMT+0300",
+        "sling:resourceType": "neom/components/structure/page",
+        "cq:lastModifiedBy": "admin",
+        "root": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "responsivegrid": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid"
+          }
+        }
+      }
+    }
+  }
+}

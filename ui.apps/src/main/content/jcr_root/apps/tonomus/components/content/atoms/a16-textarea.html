@@ -1,0 +1,25 @@
+<sly data-sly-template.textarea="${ @
+  textModel='instance of forms.FormTextModel with properties',
+  attribute='attribute'}"
+
+     data-sly-set.dataID="${textModel.id ? 'data-{0}' : '' @ format=[textModel.id], context='attributeName'}"
+     data-sly-set.dataAttribute="${attribute ? 'data-{0}' : '' @ format=[attribute], context='attributeName'}"
+     data-sly-set.dataAttributeCommon="${[dataID, dataAttribute] @ join = '||', context='text'}"
+     data-sly-use.attributesModel="${'com.tonomus.core.slingmodels.common.v1.AttributeCreatorModel' @ attrs=dataAttributeCommon}">
+
+  <div class="a-textarea" data-component="a16-textarea">
+    <textarea class="a-textarea__textarea"
+              data-sly-attribute.placeholder="${textModel.placeholder}"
+              data-sly-attribute.disabled="${textModel.disabled}"
+              data-sly-attribute.id="${textModel.id}"
+              data-sly-attribute.maxlength="${textModel.maxlength}"
+              data-sly-attribute.name="${textModel.name}"
+              data-sly-attribute.readonly="${textModel.readonly}"
+              data-sly-attribute.required="${textModel.required}"
+              data-sly-attribute.data-title-in-english="${textModel.titleInEnglish}"
+              data-sly-attribute.value="${textModel.value}"
+              data-sly-attribute="${attributesModel.attributes}"
+              data-sly-attribute.data-validate="${textModel.validate.json}"></textarea>
+  </div>
+
+</sly>

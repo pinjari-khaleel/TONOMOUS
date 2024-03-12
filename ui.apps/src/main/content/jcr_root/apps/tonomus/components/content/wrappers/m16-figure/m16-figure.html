@@ -1,0 +1,13 @@
+<sly
+    data-sly-use.contentGridImageItemModel="com.tonomus.core.slingmodels.components.v1.contentgrid.ContentGridImageItemModel"
+    data-sly-use.contentGridItemTemplate="/apps/tonomus/components/content/organisms/o30-content-grid-item.html"
+    data-sly-call="${contentGridItemTemplate.contentGridItem @ partialBlock=content, partialModel=contentGridImageItemModel}"></sly>
+
+<div data-sly-test="${wcmmode.edit && !contentGridImageItemModel.content.image.src}"
+     class="cq-placeholder" data-emptytext="${component.title @ i18n}"></div>
+
+<template data-sly-template.content="${@ partialModel}">
+  <sly data-sly-test="${partialModel.type == 'asset'}"
+       data-sly-use.figureTemplate="/apps/tonomus/components/content/molecules/m16-figure.html"
+       data-sly-call="${figureTemplate.figure @ figureModel=partialModel.content}"></sly>
+</template>

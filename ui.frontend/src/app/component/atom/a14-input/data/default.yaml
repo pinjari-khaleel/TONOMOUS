@@ -1,0 +1,5 @@
+id: 'example-input-1'
+name: 'example-input-id-1'
+placeholder: 'example placeholder'
+type: 'text'
+value: 'prefilled value example'

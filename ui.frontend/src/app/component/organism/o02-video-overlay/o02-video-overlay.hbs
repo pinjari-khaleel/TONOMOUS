@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./o02-video-overlay.scss">
+<script src="./O02VideoOverlay.ts"></script>
+
+<div class="o-videoOverlay" data-component="o02-video-overlay">
+  <div class="o-videoOverlay__mask" data-mask></div>
+  <div class="o-videoOverlay__wrapper">
+    <div class="o-videoOverlay__container" data-video-container>
+      {{!-- Video player injected here --}}
+    </div>
+  </div>
+  {{#if tonomus}}
+  {{> molecule/m02-button level="primary" icon="close" theme="white" variant="close" size="small"}}
+  {{else}}
+  {{> molecule/m02-button icon="close" theme="black" level="primary" size="small" variant="close" }}
+  {{/if}}
+</div>

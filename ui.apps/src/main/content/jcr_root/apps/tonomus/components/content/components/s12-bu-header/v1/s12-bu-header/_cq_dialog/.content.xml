@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="S12 Business Unit (BU) Header Navigation"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        maximized="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+            <general
+                jcr:primaryType="nt:unstructured"
+                jcr:title="General"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true"/>
+            <navlinks
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Navigation Links"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true"
+                sling:hideResource="{Boolean}true"/>
+            <bunavlinks
+                jcr:primaryType="nt:unstructured"
+                jcr:title="BU Dropdown"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <navlinks
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        class="multifield-full-width"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Click 'Add' to add a new Navigation Link"
+                                        fieldLabel="BU Dropdown Links (First entry is the default selected item)">
+                                        <field
+                                            granite:class="accordion-multifield-item"
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Business Unit"
+                                            sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                            name="./buNav">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <tab
+                                                    jcr:primaryType="nt:unstructured"
+                                                    jcr:title="Link Item"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <label
+                                                            granite:class="accordion-multifield-item-title"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Please enter BU Label."
+                                                            fieldLabel="Business Unit Name"
+                                                            name="./name"/>
+                                                        <logo-href
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Select BU Homepage path"
+                                                            fieldLabel="BU Homepage Path"
+                                                            name="./link/href"
+                                                            required="{Boolean}true"
+                                                            rootPath="/content"/>
+                                                        <altImage
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Please enter Logo Image Alt Text."
+                                                            fieldLabel="Logo Image Alt Text"
+                                                            name="./logoImage/alt"/>
+                                                        <logoImage
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                            allowUpload="{Boolean}false"
+                                                            autoStart="{Boolean}false"
+                                                            class="cq-droptarget"
+                                                            dropZone="{Boolean}true"
+                                                            fieldDescription="Drag and Drop Logo Image"
+                                                            fieldLabel="Logo Image"
+                                                            fileNameParameter="./logoImage/parameter"
+                                                            fileReferenceParameter="./logoImage/src"
+                                                            mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                                                            multiple="{Boolean}false"
+                                                            name="./logoImage/name"
+                                                            required="{Boolean}true"
+                                                            title="Upload Image Asset"
+                                                            useHTML5="{Boolean}true"/>
+                                                        <target
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                            fieldDescription="Open new window (tab) if checked."
+                                                            name="./target"
+                                                            text="New window"
+                                                            uncheckedValue="_self"
+                                                            value="_blank"/>
+                                                        <isSelected
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                            fieldDescription="Set as selected"
+                                                            name="./selected"
+                                                            text="Selected"
+                                                            value="{Boolean}true"/>
+                                                    </items>
+                                                </tab>
+                                            </items>
+                                        </field>
+                                    </navlinks>
+                                </items>
+                            </column>
+                        </items>
+                    </columns>
+                </items>
+            </bunavlinks>
+            <languages
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Languages"
+                sling:resourceType="granite/ui/components/coral/foundation/container"
+                margin="{Boolean}true"/>
+            <advanced
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/include"
+                path="tonomus/components/content/utils/advanced/content"/>
+        </items>
+    </content>
+</jcr:root>

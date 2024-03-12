@@ -1,0 +1,37 @@
+{
+    "jcr:primaryType": "cq:Page",
+    "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:title": "Test1",
+        "cq:template": "/conf/tonomus/settings/wcm/templates/generic-template",
+        "isRightToLeftLanguage": "ltr",
+        "sling:resourceType": "tonomus/components/structure/tonomus-base-page-v2",
+        "root": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "wcm/foundation/components/responsivegrid",
+            "component": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:title": "Venture Studio",
+                "imageFromPageImage": "false",
+                "titleFromPage": "false",
+                "icon": "/content/dam/tonomus/components/v2/venture-studio.svg",
+                "jcr:description": "<p>“AT TONOMUS WE’RE WORKING ON DIGITAL TWINS IN THE METAVERSE TO BUILD NEOM, REDUCING RISK, COST AND TIME WHILE INCREASING EFFICIENCY.”</p>\r\n",
+                "descriptionFromPage": "false",
+                "sling:resourceType": "tonomus/components/content/components/card-with-icon/v2/card-with-icon",
+                "textIsRich": "true",
+                "href": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "href": "https://workforce.accenture.com"
+                },
+                "cq:responsive": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "default": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "offset": "0",
+                        "width": "4"
+                    }
+                }
+            }
+        }
+    }
+}

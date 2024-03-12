@@ -1,0 +1,30 @@
+.o-video {
+  background: var(--color-real-black);
+  position: relative;
+  font-size: 16px;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: calc((9 / 16) * 100%);
+    padding-top: calc((var(--originalHeight, 9) / var(--originalWidth, 16)) * 100%);
+    width: 100%;
+  }
+
+  [data-component="vimeo-video"],
+  [data-component="youtube-video"],
+  [data-component="native-video"] {
+    @include size(100%);
+    @include offset(0);
+
+    position: absolute;
+  }
+
+  &.-cover {
+    [data-component="vimeo-video"],
+    [data-component="youtube-video"],
+    [data-component="native-video"] {
+      object-fit: cover;
+    }
+  }
+}

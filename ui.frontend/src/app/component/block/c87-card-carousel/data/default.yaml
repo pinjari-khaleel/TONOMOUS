@@ -1,0 +1,118 @@
+scrollComponent: true
+id: 'c87-card-carousel'
+title: 'c87-card-carousel'
+padding:
+  start: 'large'
+  end: 'large'
+header:
+  heading:
+    text: 'our <strong>culture</strong>'
+    size: h1
+
+items:
+  - heading:
+      text: Join the movement
+    image:
+      alt: 'image-1'
+      src: 'image/c87-card-carousel/image-1.jpg'
+      sources:
+        - src: 'image/c87-card-carousel/image-1.jpg'
+          media: '(min-width: 768px)'
+    video:
+      label: Watch video
+      props:
+        sources:
+          - src: 'video/video-preview.mp4'
+            type: 'video/mp4'
+        originalWidth: 16
+        originalHeight: 9
+        autoplay: true
+        muted: false
+        loop: false
+        controls:
+          playPause: true
+          fullscreen: true
+          seek: true
+        eventTracking:
+          event: 'video_start'
+          video:
+            titleInEnglish: 'Join the movement'
+            title: 'Join the movement'
+            src: video/video-preview.mp4
+  - heading:
+      text: Have a hand in the future
+    image:
+      alt: 'image-2'
+      src: 'image/c87-card-carousel/image-2.jpg'
+      sources:
+        - src: 'image/c87-card-carousel/image-2.jpg'
+          media: '(min-width: 768px)'
+    link:
+      href: http://newsroom.neom.com/neom-moves-headquarters-to-northwest-of-the-kingdom
+      target: '_blank'
+  - heading:
+      text: An environment driven by safety
+    image:
+      alt: 'image-3'
+      src: 'image/c87-card-carousel/image-3.jpg'
+      sources:
+        - src: 'image/c87-card-carousel/image-3.jpg'
+          media: '(min-width: 768px)'
+    video:
+      label: Watch video
+      props:
+        sources:
+          - src: 'video/video-preview.mp4'
+            type: 'video/mp4'
+        originalWidth: 16
+        originalHeight: 9
+        autoplay: true
+        muted: false
+        loop: false
+        controls:
+          playPause: true
+          fullscreen: true
+          seek: true
+        eventTracking:
+          event: 'video_start'
+          video:
+            titleInEnglish: 'An environment driven by safety'
+            title: 'An environment driven by safety'
+            src: video/video-preview.mp4
+  - heading:
+      text: Join the movement
+    image:
+      alt: 'image-4'
+      src: 'image/c87-card-carousel/image-1.jpg'
+      sources:
+        - src: 'image/c87-card-carousel/image-1.jpg'
+          media: '(min-width: 768px)'
+    video:
+      label: Watch video
+      props:
+        sources:
+          - src: 'video/video-preview.mp4'
+            type: 'video/mp4'
+        originalWidth: 16
+        originalHeight: 9
+        autoplay: true
+        muted: false
+        loop: false
+        controls:
+          playPause: true
+          fullscreen: true
+          seek: true
+        eventTracking:
+          event: 'video_start'
+          video:
+            titleInEnglish: 'Join the movement'
+            title: 'Join the movement'
+            src: video/video-preview.mp4
+  - heading:
+      text: Join the movement
+    image:
+      alt: 'image-4'
+      src: 'image/c87-card-carousel/image-1.jpg'
+      sources:
+        - src: 'image/c87-card-carousel/image-1.jpg'
+          media: '(min-width: 768px)'

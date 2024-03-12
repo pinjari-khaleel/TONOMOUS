@@ -1,0 +1,47 @@
+<sly
+  data-sly-use.commonCmpModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+  data-sly-use.teaserCardModel="com.tonomus.core.slingmodels.components.v1.teasercard.TeaserCardModel"
+  data-sly-use.headerModel="com.tonomus.core.slingmodels.common.v1.HeaderModel"
+  data-sly-use.hTpl="/apps/tonomus/components/content/atoms/a03-heading.html"
+  data-sly-use.imgTpl="/apps/tonomus/components/content/atoms/a01-image.html"
+  data-sly-use.btnTpl="/apps/tonomus/components/content/molecules/m02-button.html"
+  data-sly-use.tpl="core/wcm/components/commons/v1/templates.html"
+  data-sly-call="${tpl.placeholder @ isEmpty=true}"
+  data-sly-set.isWideLayout="${teaserCardModel.cardLayout=='wide'}"
+>
+</sly>
+
+<section
+  class="b-teaserCard"
+  data-component="c101-teaser-card"
+  style="${commonCmpModel.padding.styleInline @ context='styleString'}"
+  data-sly-attribute.id="${commonCmpModel.anchorId}"
+  data-sly-set.id="${commonCmpModel.anchorId}"
+>
+  <div class="b-teaserCard__container">
+    <sly
+      data-sly-call="${hTpl.heading @ headingModel=teaserCardModel.header.heading}"
+    ></sly>
+    <div
+      class="b-teaserCard__items"
+      data-image
+      data-sly-list.image="${teaserCardModel.images}"
+    >
+      <sly
+        data-sly-call="${imgTpl.image @ imageModel=image, variant='block', disableTransition=true}"
+      ></sly>
+    </div>
+    <div class="b-teaserCard__content" data-card-content>
+      <div class="s-content">
+        <sly
+          data-sly-call="${hTpl.heading @ headingModel=teaserCardModel.header.heading}"
+        ></sly>
+        ${teaserCardModel.description.text @ context='html'}
+      </div>
+      <sly
+          data-sly-test="${teaserCardModel.button && teaserCardModel.button.href}"
+          data-sly-call="${btnTpl.button @ theme='green', buttonModel=teaserCardModel.button}"
+      ></sly>
+    </div>
+  </div>
+</section>

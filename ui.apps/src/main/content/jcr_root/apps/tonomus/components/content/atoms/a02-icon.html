@@ -1,0 +1,13 @@
+<sly data-sly-template.icon="${@
+    variant='Icon variant',
+    className='Additional class name for the picture tag',
+    name='Icon name'
+    }">
+
+  <span class="a-icon
+        ${variant ? ' -{0}' : '' @ format=[variant], context='styleString'}
+        ${className ? ' {0}' : '' @ format=[className], context='styleString'}"
+        data-component="a02-icon"
+        data-icon="${name}">
+  </span>
+</sly>

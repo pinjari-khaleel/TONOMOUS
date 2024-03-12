@@ -1,0 +1,37 @@
+.o-videoControls {
+  --playback-ui-gutter: em-size(16, 16);
+
+  @include size(100%);
+  @include offset();
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 10%);
+  color: var(--color-white);
+  display: flex;
+  padding: 0 var(--playback-ui-gutter) em-size(24, 16);
+  position: absolute;
+
+  &__bar {
+    align-items: center;
+    direction: ltr;
+    display: flex;
+    margin-top: auto;
+    padding: var(--playback-ui-gutter);
+    pointer-events: all;
+    width: 100%;
+
+    > *:not(:last-child) {
+      margin: 0 var(--playback-ui-gutter) 0 0;
+    }
+  }
+
+  @include respond-to("XSMALL") {
+    .mute-cta,
+    .unmute-cta {
+      display: none !important;
+    }
+  }
+
+  @include respond-to("MEDIUM") {
+    padding: 0 var(--playback-ui-gutter) var(--playback-ui-gutter);
+  }
+}

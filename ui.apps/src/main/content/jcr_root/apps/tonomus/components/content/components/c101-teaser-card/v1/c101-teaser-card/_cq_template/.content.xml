@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="nt:unstructured"
+    scrollComponent="true"
+    textIsRich="true">
+    <padding jcr:primaryType="nt:unstructured"/>
+    <header jcr:primaryType="nt:unstructured">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            size="h5"
+            text="Successful &lt;strong>Ventures Stories&lt;/strong>"/>
+    </header>
+    <description
+        jcr:primaryType="nt:unstructured"
+        text="Jedną z mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych „kombinacji” zdań, słów i ak"/>
+    <button
+        jcr:primaryType="nt:unstructured"
+        href="/content/tonomus/en-us/cookie-policy"
+        label="See the upcoming"
+        target="_self"/>
+</jcr:root>

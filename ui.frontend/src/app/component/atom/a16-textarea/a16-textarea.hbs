@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="./a16-textarea.scss">
+<script src="./A16Textarea.ts"></script>
+
+<div class="a-textarea" data-component="a16-textarea">
+<textarea class="a-textarea__textarea"
+          {{#with placeholder}}placeholder="{{this}}"{{/with}}
+          {{#if disabled}}disabled{{/if}}
+          {{#with id}}id="{{this}}" data-{{this}}{{/with}}
+          {{#with maxlength}}maxlength="{{this}}"{{/with}}
+          {{#with name}}name="{{this}}"{{/with}}
+          {{#with placeholder}} placeholder="{{this}}"{{/with}}
+          {{#if readonly}}readonly{{/if}}
+          {{#if required}}required{{/if}}
+          {{#with titleInEnglish}}data-title-in-english="{{this}}"{{/with}}
+          {{#if (condition value '!==' undefined)}}value="{{value}}"{{/if}}
+          {{#if validate}}data-validate="{{toJson validate}}"{{/if}}
+          {{#with dataAttribute}} data-{{this}}{{/with}}
+></textarea>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          cq:icon="railBottom"
+          jcr:primaryType="cq:Component"
+          jcr:title="C83 Interactive Overview"
+          componentGroup="Tonomus.Content">
+  <cq:htmlTag
+      jcr:primaryType="nt:unstructured"
+      class="cmp cmp-c83-interactive-overview"/>
+</jcr:root>

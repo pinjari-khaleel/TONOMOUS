@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="./o78-timeline-card.scss">
+<script src="./O78TimelineCard.ts"></script>
+
+
+<div class="o-timelineCard{{#if active}} -isActive{{/if}}"
+         data-component="o78-timeline-card"
+         {{#if scrollComponent}}data-scroll-component{{/if}}
+         {{#if id}}id="{{id}}"{{/if}}>
+  <div class="o-timelineCard__container">
+    {{#with heading}}
+      <div class="o-timelineCard__heading" data-paragraph-heading>
+        {{> atom/a03-heading this }}
+      </div>
+    {{/with}}
+    {{#with copy}}
+      <div class="o-timelineCard__content s-content{{#if size}} -{{size}}{{^}} -medium{{/if}}" data-paragraph-content>
+        {{{ content }}}
+      </div>
+    {{/with}}
+      {{#with button}}
+        {{> molecule/m02-button}}
+      {{/with}}
+  </div>
+</div>
+
+

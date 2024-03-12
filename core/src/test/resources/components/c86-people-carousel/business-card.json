@@ -1,0 +1,19 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "cq:panelTitle": "Joseph Bradley",
+  "jcr:title": "Joseph Bradley",
+  "biography": "Joseph Bradley is the strategic mind behind the vision that drives Tonomus, shaping the creation of a full-scale ecosystem of cognitive technologies. By harnessing the power of artificial intelligence, the internet of things, blockchain and robotics, he and his team are bringing cognition to life.",
+  "scrollComponent": "false",
+  "linkedin": "#",
+  "sling:resourceType": "neom/components/content/components/c86-people-carousel/v1/business-card",
+  "textIsRich": "true",
+  "job": {
+    "jcr:primaryType": "nt:unstructured",
+    "title": "Chief Executive Officer",
+    "department": "NEOM Tech and Digital"
+  },
+  "image": {
+    "jcr:primaryType": "nt:unstructured",
+    "src": "/content/dam/neom/demo-assets/image/image.png"
+  }
+}

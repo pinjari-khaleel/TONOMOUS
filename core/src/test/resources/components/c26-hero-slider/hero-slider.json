@@ -1,0 +1,119 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+    "sling:resourceType": "neom/components/structure/page",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c26_hero_banner": {
+          "jcr:primaryType": "nt:unstructured",
+          "alignHorizontal": "start",
+          "alignVertical": "bottom",
+          "scrollComponent": "true",
+          "showGoBackLink":"showLink",
+          "sling:resourceType": "neom/components/content/components/c26-hero-banner/v1/c26-hero-banner",
+          "content": {
+            "jcr:primaryType": "nt:unstructured",
+            "buttonType": "regular",
+            "videoType": "dam",
+            "header": {
+              "jcr:primaryType": "nt:unstructured",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "h6",
+                "text": "Want to be first to know the latest news about TROJENA? "
+              },
+              "eyebrow": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "medium"
+              },
+              "moustache": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "small",
+                "text": "Tell us more about your interest as a future:"
+              },
+              "flipHeading": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "h1"
+              }
+            },
+            "buttonEyebrow": {
+              "jcr:primaryType": "nt:unstructured",
+              "size": "small"
+            },
+            "buttons": {
+              "jcr:primaryType": "nt:unstructured",
+              "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "target": "_self",
+                "form": "false",
+                "href": "#",
+                "label": "Tourist",
+                "level": "secondary",
+                "theme": "white",
+                "enableTracking": "false"
+              },
+              "item1": {
+                "jcr:primaryType": "nt:unstructured",
+                "target": "_self",
+                "form": "false",
+                "href": "/content/neom/en-us/trojena-form/resident",
+                "label": "Resident",
+                "level": "secondary",
+                "theme": "white",
+                "enableTracking": "false"
+              },
+              "item2": {
+                "jcr:primaryType": "nt:unstructured",
+                "target": "_self",
+                "form": "false",
+                "href": "/content/neom/en-us/trojena-form/business",
+                "label": "Business",
+                "level": "secondary",
+                "theme": "white",
+                "enableTracking": "false"
+              }
+            }
+          },
+          "background": {
+            "jcr:primaryType": "nt:unstructured",
+            "image": {
+              "jcr:primaryType": "nt:unstructured",
+              "alt": " ",
+              "src": "/content/dam/neom/newsroom/gallery/neom-mountains/Gary-Cummins_DJI_0300-Al-Qhan-Area_lowres_TOURISM.jpg"
+            },
+            "video": {
+              "jcr:primaryType": "nt:unstructured",
+              "props": {
+                "jcr:primaryType": "nt:unstructured",
+                "loop": "true",
+                "cover": "true",
+                "muted": "true",
+                "originalHeight": "9",
+                "autoplay": "true",
+                "originalWidth": "16",
+                "eventTracking": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "video": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "titleInEnglish": "Video title in English"
+                  }
+                }
+              }
+            }
+          },
+          "link": {
+            "jcr:primaryType":"nt:unstructured",
+            "href":"/content/neom/en-us",
+            "label":"Go back to Home"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+- eyebrow:
+    size: small
+    text: Small-sized Eyebrow example
+  heading:
+    size: h6
+    text: H6-sized Heading example
+  moustache:
+    size: small
+    text: Small-sized moustache example.
+  disableTransition: true
+
+- eyebrow:
+    size: medium
+    text: Medium-sized Eyebrow example
+  moustache:
+    size: large
+    text: Large-sized moustache example without a heading preceding it.
+  disableTransition: true
+
+- eyebrow:
+    size: large
+    text: Large Eyebrow example
+  heading:
+    size: h4
+    text: H4-sized Heading example
+  disableTransition: true

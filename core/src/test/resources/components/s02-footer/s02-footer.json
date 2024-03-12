@@ -1,0 +1,104 @@
+{
+  "jcr:primaryType":"cq:Page",
+  "jcr:content":{
+    "jcr:primaryType":"cq:PageContent",
+    "s02-footer":{
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"neom/components/content/components/s02-footer/v1/s02-footer",
+      "copyrightSiteName": "NEOM",
+      "socialPaths": [
+        "/content/dam/neom/content-fragments/footer-social-items/facebook",
+        "/content/dam/neom/content-fragments/footer-social-items/linkedin"
+      ],
+      "sitemapItems": {
+        "jcr:primaryType": "nt:unstructured",
+        "item0": {
+          "jcr:primaryType": "nt:unstructured",
+          "path": "/content/neom/en-us/be-part-of-neom",
+          "target": "_self"
+        },
+        "item1": {
+          "jcr:primaryType": "nt:unstructured",
+          "path": "/content/neom/en-us/become-a-vendor",
+          "target": "_blank"
+        }
+      }
+    }
+  },
+  "be-part-of-neom":{
+    "jcr:primaryType":"cq:Page",
+    "jcr:content":{
+      "jcr:primaryType":"cq:PageContent",
+      "cq:template":"/conf/neom/settings/wcm/templates/t02-generic",
+      "configPage":"/content/neom/en-us/conf/admin/career-admin",
+      "pageTitle":"Be part of NEOM",
+      "sling:resourceType":"neom/components/structure/page",
+      "navTitle":"Careers",
+      "root":{
+        "jcr:primaryType":"nt:unstructured",
+        "sling:resourceType":"wcm/foundation/components/responsivegrid",
+        "responsivegrid":{
+          "jcr:primaryType":"nt:unstructured",
+          "sling:resourceType":"wcm/foundation/components/responsivegrid"
+        }
+      },
+      "image":{
+        "jcr:primaryType":"nt:unstructured",
+        "src":"/content/dam/neom/career/Careers-preview.jpg"
+      }
+    },
+    "be-part-of-neom-child":{
+      "jcr:primaryType":"cq:Page",
+      "jcr:content":{
+        "jcr:primaryType":"cq:PageContent",
+        "changefreq":"weekly",
+        "jcr:title":"be-part-of-neomCHILD",
+        "cq:template":"/conf/neom/settings/wcm/templates/t02-generic",
+        "sling:resourceType":"neom/components/structure/page",
+        "navTitle":"Be part of Neom child page",
+        "root":{
+          "jcr:primaryType":"nt:unstructured",
+          "sling:resourceType":"wcm/foundation/components/responsivegrid"
+        }
+      }
+    }
+  },
+  "become-a-vendor":{
+    "jcr:primaryType":"cq:Page",
+    "jcr:content":{
+      "jcr:primaryType":"cq:PageContent",
+      "jcr:title":"Supplier registration",
+      "jcr:versionHistory":"da592aa0-86b9-444f-a785-512aad9f4caf",
+      "cq:template":"/conf/neom/settings/wcm/templates/t02-generic",
+      "cq:redirectTarget":"/content/neom/en-us/become-a-supplier",
+      "pwaCachestrategy":"staleWhileRevalidate",
+      "sling:resourceType":"neom/components/structure/page",
+      "navTitle":"Suppliers",
+      "root":{
+        "jcr:primaryType":"nt:unstructured",
+        "sling:resourceType":"wcm/foundation/components/responsivegrid",
+        "responsivegrid":{
+          "jcr:primaryType":"nt:unstructured",
+          "sling:resourceType":"wcm/foundation/components/responsivegrid"
+        }
+      },
+      "image":{
+        "jcr:primaryType":"nt:unstructured"
+      }
+    },
+    "become-a-vendor-child":{
+      "jcr:primaryType":"cq:Page",
+      "jcr:content":{
+        "jcr:primaryType":"cq:PageContent",
+        "jcr:title":"Social test",
+        "cq:template":"/conf/neom/settings/wcm/templates/t02-generic",
+        "sling:resourceType":"neom/components/structure/page",
+        "navTitle":"Become a vendor child page",
+        "root":{
+          "jcr:primaryType":"nt:unstructured",
+          "sling:resourceType":"wcm/foundation/components/responsivegrid"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// gradientDarken()
+// Adds a pseudo-element that darkens the contents of a component.
+// Typically used to create contrast between a background asset and text.
+
+@mixin gradientDarken() {
+  &::after {
+    @include offset();
+    @include size(100%);
+
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+    content: "";
+    pointer-events: none;
+    position: absolute;
+  }
+}

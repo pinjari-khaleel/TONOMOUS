@@ -1,0 +1,8 @@
+<sly data-sly-template.title="${@ teaser}">
+    <h2 class="cmp-herobanner__title" data-sly-test.title="${teaser.title}" data-sly-element="${teaser.titleType}">
+        <a class="cmp-herobanner__title-link"
+           data-sly-attribute="${teaser.link.htmlAttributes}"
+           data-sly-unwrap="${!teaser.link.valid || teaser.actions.empty}"
+           data-cmp-clickable="${teaser.data ? true : false}">${title}</a>
+    </h2>
+</sly>

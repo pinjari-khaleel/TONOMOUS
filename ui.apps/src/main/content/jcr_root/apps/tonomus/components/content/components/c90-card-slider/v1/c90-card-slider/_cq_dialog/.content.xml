@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="C90 Card Slider"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[tonomus.author]">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <general
+          jcr:primaryType="nt:unstructured"
+          jcr:title="General"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <headingText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Heading Text."
+                      fieldLabel="Heading Text"
+                      name="./heading/text"/>
+                  <headingWeight
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Size/Weight."
+                      fieldLabel="Heading Size"
+                      name="./heading/size">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingWeight>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </general>
+      <cards
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Cards"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <cards
+                      jcr:primaryType="nt:unstructured"
+                      fieldLabel="Card"
+                      fieldDescription="Click 'Add' to add a new Card"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                      class="multifield-full-width"
+                      composite="{Boolean}true">
+                    <granite:data
+                        jcr:primaryType="nt:unstructured"
+                        min="5"
+                        max="8"/>
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Card"
+                        name="./items"
+                        granite:class="accordion-multifield-item"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                      <items
+                          jcr:primaryType="nt:unstructured">
+                        <tab
+                            jcr:title="Card"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            jcr:primaryType="nt:unstructured">
+                          <items jcr:primaryType="nt:unstructured">
+                            <title
+                                granite:class="accordion-multifield-item-title"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please enter the Title."
+                                fieldLabel="Title"
+                                name="./title"
+                                required="{Boolean}true"/>
+                            <cardType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Please select Video Type."
+                                granite:class="js-dialog-showhide accordion-multifield-item-title"
+                                fieldLabel="Card Type"
+                                required="{Boolean}true"
+                                name="./cardType">
+                              <granite:data
+                                  jcr:primaryType="nt:unstructured"
+                                  showhide-target=".js-card-type-showhide-target"/>
+                              <items jcr:primaryType="nt:unstructured">
+                                <eventCard
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Event Card"
+                                    value="event-card"/>
+                                <newsCard
+                                    jcr:primaryType="nt:unstructured"
+                                    text="News Card"
+                                    value="news-card"/>
+                              </items>
+                            </cardType>
+                            <event-card-button
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                granite:class="js-card-type-showhide-target">
+                              <granite:data
+                                  jcr:primaryType="nt:unstructured"
+                                  showhide-target-value="event-card"/>
+                              <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Event Card Button Settings"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                  <items jcr:primaryType="nt:unstructured">
+                                    <label
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Button Label."
+                                        fieldLabel="Button Label."
+                                        name="./button/label"
+                                        validation="required-when-visible"/>
+                                    <theme
+                                        jcr:title="Button theme"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldDescription="Please select the button theme."
+                                        fieldLabel="Button theme"
+                                        name="./button/theme"
+                                        validation="required-when-visible">
+                                      <items jcr:primaryType="nt:unstructured">
+                                        <green
+                                            jcr:primaryType="nt:unstructured"
+                                            text="Green"
+                                            value="green"/>
+                                      </items>
+                                    </theme>
+                                  </items>
+                                </column>
+                              </items>
+                            </event-card-button>
+                            <image
+                                jcr:title="Image settings"
+                                sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                jcr:primaryType="nt:unstructured">
+                              <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Image"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                  <items jcr:primaryType="nt:unstructured">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        allowUpload="{Boolean}false"
+                                        autoStart="{Boolean}false"
+                                        class="cq-droptarget"
+                                        dropZone="{Boolean}true"
+                                        fieldDescription="Drag and Drop Card Image"
+                                        fieldLabel="Card image"
+                                        fileNameParameter="./image/parameter"
+                                        fileReferenceParameter="./image/src"
+                                        mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                                        multiple="{Boolean}false"
+                                        name="name"
+                                        title="Upload Image Asset"
+                                        useHTML5="{Boolean}true"
+                                        required="{Boolean}true"/>
+                                    <altImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter Image Alt Text."
+                                        fieldLabel="Image Alt Text"
+                                        name="./image/alt"
+                                        required="{Boolean}true"/>
+                                  </items>
+                                </column>
+                              </items>
+                            </image>
+                            <datetime
+                                jcr:primaryType="nt:unstructured"
+                                granite:class="js-card-type-showhide-target"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldDescription="Please enter the Event's date/time."
+                                fieldLabel="Date / Time"
+                                name="./datetime"
+                                rows="3">
+                              <granite:data
+                                  jcr:primaryType="nt:unstructured"
+                                  showhide-target-value="event-card"/>
+                            </datetime>
+
+                            <meta
+                                granite:class="js-card-type-showhide-target"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldDescription="Meta information."
+                                fieldLabel="Meta Information"
+                                name="./meta"
+                                rows="3">
+                              <granite:data
+                                  jcr:primaryType="nt:unstructured"
+                                  showhide-target-value="news-card"/>
+                            </meta>
+                            <news-page-ref
+                                granite:class="js-card-type-showhide-target"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Please select the corresponding news page"
+                                fieldLabel="News Page Reference"
+                                name="./link/href"
+                                rootPath="/content"
+                                validation="required-when-visible">
+                              <granite:data
+                                  jcr:primaryType="nt:unstructured"
+                                  showhide-target-value="news-card"/>
+                            </news-page-ref>
+                            <news-page-ref-target
+                                granite:class="js-card-type-showhide-target"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Please select the card on-click behavior"
+                                fieldLabel="Link Reference Target"
+                                name="./link/target"
+                                validation="required-when-visible">
+                              <granite:data
+                                  jcr:primaryType="nt:unstructured"
+                                  showhide-target-value="news-card"/>
+                              <items jcr:primaryType="nt:unstructured">
+                                <blank
+                                    jcr:primaryType="nt:unstructured"
+                                    text="New frame"
+                                    value="_blank"/>
+                                <self
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Same frame"
+                                    value="_self"/>
+                              </items>
+                            </news-page-ref-target>
+
+                            <modal
+                                jcr:title="Modal Settings"
+                                sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                                jcr:primaryType="nt:unstructured"
+                                granite:class="js-card-type-showhide-target">
+                              <granite:data
+                                  jcr:primaryType="nt:unstructured"
+                                  showhide-target-value="event-card"/>
+                              <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Modal"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                  <items jcr:primaryType="nt:unstructured">
+                                    <headingText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Heading Text."
+                                        fieldLabel="Heading Text"
+                                        validation="required-when-visible"
+                                        name="./modal/heading/text"/>
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        allowUpload="{Boolean}false"
+                                        autoStart="{Boolean}false"
+                                        class="cq-droptarget"
+                                        dropZone="{Boolean}true"
+                                        fieldDescription="Drag and Drop Card Image"
+                                        fieldLabel="Modal Image"
+                                        fileNameParameter="./modal/image/parameter"
+                                        fileReferenceParameter="./modal/image/src"
+                                        mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                                        multiple="{Boolean}false"
+                                        name="name"
+                                        title="Upload Image Asset"
+                                        validation="required-when-visible"
+                                        useHTML5="{Boolean}true"/>
+                                    <altImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Please enter Image Alt Text."
+                                        fieldLabel="Image Alt Text"
+                                        validation="required-when-visible"
+                                        name="./modal/image/alt"/>
+                                    <copy-text
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext"
+                                        fieldDescription="Please enter the modal Copy."
+                                        fieldLabel="Modal Copy"
+                                        name="./modal/copy"
+                                        useFixedInlineToolbar="{Boolean}true"/>
+
+                                    <modal-button
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                                      <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Modal Button Settings"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                          <items jcr:primaryType="nt:unstructured">
+                                            <label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Button Label."
+                                                fieldLabel="Button Label"
+                                                name="./modal/modalButton/label"
+                                                validation="required-when-visible"/>
+                                            <theme
+                                                jcr:title="Button theme"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please select the button theme."
+                                                fieldLabel="Button Theme"
+                                                name="./modal/modalButton/theme"
+                                                validation="required-when-visible">
+                                              <items jcr:primaryType="nt:unstructured">
+                                                <green
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Green"
+                                                    value="green"/>
+                                              </items>
+                                            </theme>
+                                            <buton-ref
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldDescription="Please select the cta reference."
+                                                fieldLabel="CTA Reference"
+                                                name="./modal/modalButton/href"
+                                                rootPath="/content"
+                                                validation="required-when-visible"/>
+                                            <buton-ref-target
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please select cta reference target."
+                                                fieldLabel="CTA Reference Target"
+                                                name="./modal/modalButton/target">
+                                              <items jcr:primaryType="nt:unstructured">
+                                                <blank
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="New frame"
+                                                    value="_blank"/>
+                                                <self
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Same frame"
+                                                    value="_self"/>
+                                              </items>
+                                            </buton-ref-target>
+                                          </items>
+                                        </column>
+                                      </items>
+                                    </modal-button>
+                                  </items>
+                                </column>
+                              </items>
+                            </modal>
+                          </items>
+                        </tab>
+                      </items>
+                    </field>
+                  </cards>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </cards>
+      <padding
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/padding/content"/>
+      <advanced
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/advanced/content"/>
+    </items>
+  </content>
+</jcr:root>

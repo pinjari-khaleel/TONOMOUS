@@ -1,0 +1,40 @@
+.cmp-profile {
+  width: 100%;
+  .cmp-image {
+    max-width: 385px;
+    height: 385px;
+    img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      position: relative;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  &__pretitle {
+    .label1();
+    color: var(--color-black);
+    text-transform: uppercase;
+    padding-block-start: 2.5rem;
+  }
+
+  &__title {
+    .header4();
+    color: var(--color-black);
+    padding-block-start: 1.5rem;
+  }
+
+  &__description {
+    .paragraph3();
+    color: var(--color-pure-black);
+    padding-block-start: 2.813rem;
+  }
+
+  &__action-link {
+    img {
+      transform: translateX(-14px);
+    }
+  }
+}

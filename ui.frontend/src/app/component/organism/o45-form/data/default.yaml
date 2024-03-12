@@ -1,0 +1,63 @@
+heading:
+  text: 'Form example'
+description: '<p>Lorem Ipsum Dolor Sit Amet</p>'
+id: 'example-form-1'
+titleInEnglish: 'Form title in english'
+form_id: 'example-form_id-1'
+groups:
+  - items:
+      - type: text
+        name: example-input-1
+        id: example-input-1
+        placeholder: 'John Doe'
+        label: 'Full Name'
+        required: true
+        titleInEnglish: 'Full Name'
+      - type: email
+        name: example-input-2
+        id: example-input-2
+        placeholder: 'john@example.com'
+        label: 'Email address'
+        required: true
+        titleInEnglish: 'email'
+      - type: select
+        name: example-select-2
+        id: example-select-2
+        placeholder: 'Choose one...'
+        label: 'Dropdown example'
+        required: true
+        items:
+          - label: 'Foo'
+            value: 'foo-1'
+            titleInEnglish: 'dropdown example'
+          - label: 'Bar'
+            value: 'bar-1'
+            titleInEnglish: 'dropdown example'
+          - label: 'Baz'
+            value: 'baz-1'
+            titleInEnglish: 'dropdown example'
+  - type: checkboxGroup
+    legend: 'Choose your options'
+    items:
+      - type: checkbox
+        name: example-checkbox-1
+        value: foo
+        label: 'Foo'
+        id: example-checkbox-1
+        titleInEnglish: 'example-checkbox-1'
+      - type: checkbox
+        name: example-checkbox-2
+        value: foo
+        label: 'Bar'
+        id: example-checkbox-2
+        titleInEnglish: 'example-checkbox-1'
+
+buttons:
+  - type: submit
+    theme: gold
+    level: primary
+    label: Submit
+    size: small
+
+footer:
+  copy: '<p>Some additional preliminary stuff.</p>'

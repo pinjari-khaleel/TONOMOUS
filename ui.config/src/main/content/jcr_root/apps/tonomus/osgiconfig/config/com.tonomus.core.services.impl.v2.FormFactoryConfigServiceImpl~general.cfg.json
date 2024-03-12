@@ -1,0 +1,5 @@
+{
+    "formID": "tonomus_general_form",
+    "mandatoryFields": "$[env:TONOMUS_GENERAL_FORM;default=name,email,organization,interest,contact-permission,lang_code,form_id]",
+    "audienceIds": "$[env:TONOMUS_GENERAL_FORM_AUDIENCE_IDS;default=English|*|fe5df5f3bb,Arabic|*|eef2fa128c,Chinese|*|ef6292d23a,Japanese|*|1a722c954a,Russian|*|e963c894b0,German|*|289f664754,French|*|0d8ea9207e]"
+}

@@ -1,0 +1,23 @@
+<template data-sly-template.itemContent="${@ item='The navigation item',
+		  group='Group name of a navigation appended to the class attribute',
+		  hasChildren='Indicator is item has sub items'}">
+   <a data-sly-test="${group == 'navigation'}" data-sly-attribute="${item.link.htmlAttributes}"
+      aria-current="${item.current && 'page'}" data-sly-unwrap="${!item.link.valid}"
+      data-cmp-clickable="${item.data ? true : false}" data-cmp-navigate-disabled="${hasChildren}"
+      role="${item.data ? 'button' : false}"
+      class="cmp-header__navigation-item-link">
+      ${item.title}
+   </a>
+   <span class="cmp-icon cmp-header__arrow-right-icon" data-sly-test="${group == 'navigation' && item.level > 1}">
+      <img src="/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/icons/arrow-nav-right.svg"/>
+   </span>
+   <span class="cmp-icon cmp-header__arrow-top-right-icon" data-sly-test="${group == 'navigation' && item.level > 0 && !hasChildren}">
+      <img src="/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/icons/arrow-top-right.svg"/>
+   </span>
+   <span class="cmp-icon cmp-header__navigation-icon" data-sly-test="${group == 'navigation' && hasChildren}">
+      <img src="/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/image/arrow-down-black.svg"/>
+   </span>
+
+   <a data-sly-test="${group == 'languagenavigation'}" data-cmp-clickable="${item.href ? true : false}"
+      href="${item.href}" class="cmp-header__languagenavigation-item-link">${item.label @ context='text'}</a>
+</template>

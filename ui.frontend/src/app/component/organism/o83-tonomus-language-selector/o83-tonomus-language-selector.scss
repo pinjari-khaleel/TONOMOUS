@@ -1,0 +1,168 @@
+.o-tonomusLanguageSelector {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  text-transform: uppercase;
+
+  input[type="checkbox"],
+  &__list {
+    display: none;
+  }
+
+  &__toggle {
+    @include type("button", "large");
+    height: 40px;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    border-block-start: 1px solid var(--color-tonomus-green-300);
+    padding-inline: 9px;
+    text-transform: uppercase;
+    gap: 8px;
+
+    &.-ar {
+      font-size: 17px;
+      letter-spacing: 0;
+
+      .o-languageSelector__code {
+        transform: translateY(-4px);
+      }
+    }
+
+    .a-icon {
+      &[data-icon="globe-bold"] {
+        --icon-size: 20px;
+      }
+
+      &[data-icon="dropdown-chevron"] {
+        --icon-size: 10px;
+        position: absolute;
+        right: 5px;
+        transform: rotate(180deg);
+        transition: transform 0.25s ease-in-out;
+      }
+
+      &[data-icon="icon-chevron-down"] {
+        margin-left: -5px;
+        transform: rotate(0deg);
+        transition: transform 0.25s ease-in-out;
+      }
+    }
+  }
+
+  &__wrapper {
+    align-items: flex-start;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__items {
+    @include list-reset();
+
+    max-width: 280px;
+    text-align: right;
+    width: 100%;
+  }
+
+  &__item {
+    --icon-size: 17px;
+
+    opacity: 0.38;
+    position: relative;
+    width: 100%;
+    border-block-start: 1px solid var(--color-tonomus-green-300);
+
+    &.-isActive,
+    &:hover {
+      opacity: 1;
+    }
+
+    &.-isActive {
+      pointer-events: none;
+    }
+
+    // stylelint-disable no-descending-specificity
+    .a-icon {
+      color: var(--color-tonomus-green-300);
+      position: absolute;
+      right: 0;
+
+      [dir="rtl"] & {
+        left: -6px;
+        right: initial;
+      }
+    }
+    // stylelint-enable no-descending-specificity
+  }
+
+  &__link {
+    height: 40px;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 1.25;
+    padding-inline: 9px;
+
+    &.-ar {
+      letter-spacing: 0;
+    }
+  }
+
+  &.-isActive {
+    .a-icon {
+      &[data-icon="icon-chevron-down"] {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked ~ .o-tonomusLanguageSelector__list {
+    display: block;
+  }
+
+  input[type="checkbox"]:checked ~ .o-tonomusLanguageSelector__toggle {
+    .a-icon[data-icon="dropdown-chevron"] {
+      transform: rotate(0deg);
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    &__toggle,
+    &__link {
+      height: 50px;
+      padding-inline: 14px;
+    }
+  }
+
+  @include respond-to(LARGE) {
+    position: relative;
+
+    &__toggle {
+      padding-inline: 21px;
+      border-block-start: none;
+    }
+
+    &__list {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(100%);
+    }
+
+    &__link {
+      padding-inline: 14px 50px;
+    }
+
+    &__item {
+      margin-inline-start: 7px;
+      width: calc(100% - 7px);
+    }
+  }
+}

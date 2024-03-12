@@ -1,0 +1,17 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'WebglEffectHero'
+tonomus: true
+webglContainer: true
+
+meta:
+  id: 'c79'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 'c79-webgl-effect-hero'
+    data: 'import!../app/component/block/c79-webgl-effect-hero/data/default.yaml'

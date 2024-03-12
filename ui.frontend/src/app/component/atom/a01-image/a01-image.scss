@@ -1,0 +1,47 @@
+.a-image {
+  overflow: hidden;
+
+  &,
+  &__background,
+  &__picture {
+    @include offset(0);
+    @include size(100%);
+
+    position: absolute;
+  }
+
+  &__background {
+    background-color: var(--color-black);
+  }
+
+  &__picture {
+    @include position(0);
+  }
+
+  &__img {
+    @include size(100%);
+
+    object-fit: cover;
+    position: relative;
+  }
+
+  &.-contain {
+    .a-image__img {
+      object-fit: contain;
+    }
+  }
+
+  &.-block {
+    position: static;
+
+    .a-image__picture {
+      position: relative;
+    }
+
+    .a-image__img {
+      @include size(100%, auto);
+
+      position: relative;
+    }
+  }
+}

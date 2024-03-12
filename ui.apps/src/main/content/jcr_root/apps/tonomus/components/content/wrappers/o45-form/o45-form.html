@@ -1,0 +1,10 @@
+<sly
+    data-sly-use.formModel="com.tonomus.core.slingmodels.components.v1.forms.FormModel"
+    data-sly-use.commonComponentStyleModel="com.tonomus.core.slingmodels.common.v1.CommonComponentStyleModel"
+    data-sly-use.formTemplate="/apps/tonomus/components/content/organisms/o45-form.html"
+    data-sly-set.theme="${commonComponentStyleModel.mapAppliedCssClasses['Theme']}"></sly>
+
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit && formModel.empty}"></div>
+
+<sly data-sly-call="${formTemplate.form @ formModel=formModel, themeCssClasses=theme}"></sly>

@@ -1,0 +1,17 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'ContentRoadmap'
+
+meta:
+  id: 'c81'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+tonomus: true
+
+blocks:
+  - name: 'c81-content-roadmap'
+    data: 'import!../app/component/block/c81-content-roadmap/data/default.yaml'

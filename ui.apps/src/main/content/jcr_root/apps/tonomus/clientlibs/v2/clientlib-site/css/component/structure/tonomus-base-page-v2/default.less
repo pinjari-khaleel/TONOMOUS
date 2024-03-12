@@ -1,0 +1,35 @@
+.tonomus-base-page-v2 {
+    margin: 0;
+    background: var(--page-background-color);
+
+    /* Generic page template has only root layout container hence .root > .aem-Grid > .cmp-container.
+     * Homepage template has root layout container and another 3 layout container for header, body and footer hence
+     * .root > .aem-Grid > .layoutcontainer > .aem-Grid > .cmp-container
+     */
+    .root > .aem-Grid > .cmp-container,
+    .root > .aem-Grid > .layoutcontainer > .aem-Grid > .cmp-container {
+        padding-block-start: var(--padding-block);
+        padding-block-end: ~'calc(var(--padding-block) - var(--component-padding-block-default))';
+        padding-inline: var(--padding-inline);
+        width: 100%;
+
+        .cmp-container,
+        .tabs {
+            margin-inline: 0;
+            padding-inline: 0;
+        }
+
+        &--large-block {
+            padding-block-end: ~'calc(var(--padding-block) - var(--component-padding-block-large))';
+        }
+
+        &--no-gutter {
+            width: 100%;
+            padding-inline: 0;
+
+            .cmp-container__heading {
+                padding-inline: ~'calc(var(--padding-inline) + var(--component-padding-inline))';
+            }
+        }
+    }
+}

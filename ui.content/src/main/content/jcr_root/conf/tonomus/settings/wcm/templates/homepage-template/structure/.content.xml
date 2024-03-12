@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[mobile/groups/responsive]"
+        cq:template="/conf/tonomus/settings/wcm/templates/homepage-template"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="tonomus/components/structure/tonomus-base-page-v2">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <layoutcontainer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="tonomus/components/content/components/layoutcontainer/v2/layoutcontainer"
+                editable="{Boolean}true"/>
+            <herobanner
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="tonomus/components/content/components/herobanner/v2/herobanner"
+                editable="{Boolean}true"/>
+            <layoutcontainer_1079579145
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="tonomus/components/content/components/layoutcontainer/v2/layoutcontainer"
+                editable="{Boolean}true"/>
+            <layoutcontainer_1281826495
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="tonomus/components/content/components/layoutcontainer/v2/layoutcontainer"
+                editable="{Boolean}true"/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Mobile"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1439"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

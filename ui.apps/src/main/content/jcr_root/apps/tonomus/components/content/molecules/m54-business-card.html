@@ -1,0 +1,51 @@
+<template
+    data-sly-template.businessCard="${@
+      model='Sling model for the Business Card (BusinessCardModel)',
+      scrollComponent='Boolean condition, true to add the data-scroll-component attribute',
+      id='Hyper reference anchor id',
+      videoJson='JSON with video data',
+      ariaLabel='Button aria label',
+      ariaControls='Button aria controls'
+    }"
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.imgTpl="/apps/tonomus/components/content/atoms/a01-image.html"
+    data-sly-use.hTpl="/apps/tonomus/components/content/atoms/a03-heading.html"
+    data-sly-use.icoTpl="/apps/tonomus/components/content/atoms/a02-icon.html"
+>
+  <div class="m-businessCard"
+       data-component="m54-business-card"
+       data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+       data-sly-attribute.id="${commonComponentModel.anchorId}">
+    <div class="m-businessCard__image" data-image>
+      <sly data-sly-call="${imgTpl.image @ imageModel=model.image, disableTransition=true}"></sly>
+    </div>
+
+    <div class="m-businessCard__content" data-card-content>
+      <sly data-sly-test.name="${model.title}"
+           data-sly-call="${hTpl.heading @ text=name, element='h3', size='h3' }"></sly>
+
+      <div class="m-businessCard__wrappedInformation">
+        <a href="#" class="m-businessCard__socialLink"
+           data-sly-test.linkedin="${model.linkedin}"
+           data-sly-attribute.href="${linkedin}">
+          <sly data-sly-call="${icoTpl.icon @ name='linkedin'}"></sly>
+        </a>
+
+        <div class="m-businessCard__jobWrapper">
+          <p class="m-businessCard__jobTitle"
+             data-sly-test.jobTitle="${model.job.title}">
+            ${jobTitle @ context='text'}
+          </p>
+          <p class="m-businessCard__jobDepartment"
+             data-sly-test.jobDepartment="${model.job.department}">
+            ${jobDepartment @ context='text'}
+          </p>
+        </div>
+      </div>
+
+      <div class="m-businessCard__biography">
+        ${model.biography @ context='html'}
+      </div>
+    </div>
+  </div>
+</template>

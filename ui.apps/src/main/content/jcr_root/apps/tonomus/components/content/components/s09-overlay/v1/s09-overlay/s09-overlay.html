@@ -1,0 +1,20 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+<sly data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+     data-sly-use.popupMessageTemplate="/apps/tonomus/components/content/organisms/o24-popup-message.html"
+     data-sly-use.modalTemplate="/apps/tonomus/components/content/organisms/o10-modal.html"
+     data-sly-use.lightboxTemplate="/apps/tonomus/components/content/organisms/o38-lightbox.html"
+     data-sly-use.videoOverlayTemplate="/apps/tonomus/components/content/organisms/o02-video-overlay.html"></sly>
+
+<section class="b-overlay" data-component="s09-overlay"
+         data-sly-attribute.id="${commonComponentModel.anchorId}">
+
+  <sly data-sly-call="${modalTemplate.modal}"></sly>
+
+  <sly data-sly-call="${lightboxTemplate.lightbox}"></sly>
+
+  <sly data-sly-call="${videoOverlayTemplate.videoOverlay}"></sly>
+
+  <sly data-sly-call="${popupMessageTemplate.popup}"></sly>
+
+</section>

@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="./o06-collapsible-item.scss">
+<script src="./O06CollapsibleItem.ts"></script>
+
+<div class="o-collapsibleItem" data-component="o06-collapsible-item"
+     {{#if eventTracking}}data-event-tracking="{{ toJson eventTracking }}"{{/if}}>
+  {{> molecule/m14-toggle-button variant="accordion"}}
+  <div class="o-collapsibleItem__container" data-collapsible-item-content>
+    <div class="o-collapsibleItem__content">
+      <div class="o-collapsibleItem__body s-content -collapsible">
+        {{{content}}}
+      </div>
+    </div>
+  </div>
+</div>

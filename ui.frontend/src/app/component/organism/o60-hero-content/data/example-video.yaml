@@ -1,0 +1,52 @@
+scrollComponent: true
+
+align:
+  horizontal: start
+  vertical: bottom
+
+background:
+  image:
+    src: 'image/c26-hero-banner/teaser-homepage.jpg'
+    alt: 'Homepage teaser image'
+  video:
+    props:
+      sources:
+        - src: './video/background-video-preview.mp4'
+          type: 'video/mp4'
+
+content:
+  header:
+    heading:
+      element: h1
+      size: h3
+      text: Hello world
+    eyebrow:
+      text: Test
+
+  buttons:
+    - level: primary
+      icon: play-solid
+      theme: white
+      variant: play
+      video:
+        sources:
+          - src: 'video/video-preview.mp4'
+            type: video/mp4
+        originalWidth: 16
+        originalHeight: 9
+        autoplay: false
+        muted: false
+        loop: false
+        disablePreload: true
+        controls:
+          fullscreen: true
+          playPause: true
+          seek: true
+        eventTracking:
+          event: 'video_start'
+          video:
+            src: 'video/video-preview.mp4'
+            title: 'A Vision of a New Future: Explainer video'
+            titleInEnglish: 'A Vision of a New Future: Explainer video'
+
+scrollButton: true

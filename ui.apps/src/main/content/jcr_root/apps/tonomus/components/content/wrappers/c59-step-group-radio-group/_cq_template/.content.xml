@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p>We would like to stay in touch to tell you about news and opportunities at NEOM. We&#xd;&#xa;          will treat your information carefully. See our &lt;a href=&quot;#&quot;>Terms of Use&lt;/a> and &lt;a&#xd;&#xa;          href=&quot;#&quot;>Privacy Policy&lt;/a>.&lt;/p>"
+          type="radioGroup"
+          id="contact-permissions"
+          name="contact-permissions"
+          required="true">
+  <showTextareaForOtherChoice
+      jcr:primaryType="nt:unstructured"
+      id="category_interest_clarification"
+      label="Please explain your choice"
+      name="category_interest_clarification"
+      placeholder="Type here"
+      required="true"
+      titleInEnglish="Please explain your choice"
+      wide="false">
+    <validate jcr:primaryType="nt:unstructured">
+      <presence
+          jcr:primaryType="nt:unstructured"
+          message="^Please enter an explanation for your choice"/>
+    </validate>
+  </showTextareaForOtherChoice>
+  <fieldsetLegend
+      jcr:primaryType="nt:unstructured"
+      text="Can we stay in touch"
+  />
+  <validate jcr:primaryType="nt:unstructured">
+    <presence
+        jcr:primaryType="nt:unstructured"
+        message="^Please select at least one"/>
+  </validate>
+  <m28_radio_option
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/wrappers/m28-radio-option"
+      checked="false"
+      id="contact-permissions"
+      label="Yes"
+      name="contact-permissions"
+      required="false"
+      titleInEnglish="Yes"
+      value="yes"/>
+</jcr:root>

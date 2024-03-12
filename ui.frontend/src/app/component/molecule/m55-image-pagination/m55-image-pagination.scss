@@ -1,0 +1,26 @@
+.m-imagePagination {
+  --pagination-item-size: 48px;
+  --border-color: var(--color-tonomus-purple);
+  --border-active-color: var(--color-tonomus-pink);
+
+  &__paginationList {
+    @include list-reset();
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__paginationItem {
+    @include size(var(--pagination-item-size));
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    transition: transform 0.5s $easeOutExpo, border-color 0.4s $easeOutExpo;
+    overflow: hidden;
+
+    &.-isActive {
+      transform: scale(1.33);
+      border-color: var(--border-active-color);
+    }
+  }
+}

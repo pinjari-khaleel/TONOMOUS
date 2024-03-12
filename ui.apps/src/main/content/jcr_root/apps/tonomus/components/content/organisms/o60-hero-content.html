@@ -1,0 +1,49 @@
+<sly data-sly-template.heroContent="${ @
+     heroSliderItem='HeroSliderItem object',
+     imageLoadingMode='Image load model eager/lazy'}"
+     data-sly-use.componentBackgroundTemplate="/apps/tonomus/components/content/molecules/m34-component-background.html"
+     data-sly-use.headerTemplate="/apps/tonomus/components/content/molecules/m04-component-header.html"
+     data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"
+     data-sly-use.scrollButtonTemplate="/apps/tonomus/components/content/molecules/m10-scroll-button.html"
+     data-sly-use.tileCtaTemplate="/apps/tonomus/components/content/molecules/m53-tile-cta.html"
+     data-sly-use.pillarCtaTemplate="/apps/tonomus/components/content/molecules/m58-pillar-cta.html"
+     data-sly-use.eyebrowTemplate="/apps/tonomus/components/content/atoms/a04-eyebrow.html"
+     data-sly-use.linkTemplate="/apps/tonomus/components/content/molecules/m06-link.html"
+     data-sly-set.buttonType="${heroSliderItem.content.buttonType}"
+     data-sly-set.isNotPillar="${buttonType != 'pillar'}"
+>
+
+  <div class="o-heroContent t-darkMono ${isNotPillar ? '-fullHeight' : ''}"
+       data-component="o60-hero-content" data-scroll-component>
+
+    <sly data-sly-call="${componentBackgroundTemplate.background @ backgroundModel=heroSliderItem.background,
+                          scrollComponent=false, imageLoadingMode=imageLoadingMode}"
+         data-sly-test="${heroSliderItem.background.hasBackground}"></sly>
+    <div class="o-heroContent__container
+        ${heroSliderItem.alignHorizontal ? ' -{0}' : '' @ format=[heroSliderItem.alignHorizontal], context='styleString'}
+        ${heroSliderItem.alignVertical ? ' -{0}' : '' @ format=[heroSliderItem.alignVertical], context='styleString'}">
+      <div class="o-heroContent__content">
+        <sly data-sly-call="${linkTemplate.link @ linkModel=heroSliderItem.link, icon='arrow-left'}"
+             data-sly-test="${heroSliderItem.link && heroSliderItem.showGoBackLink}"></sly>
+        <sly data-sly-call="${headerTemplate.header @ headerModel=heroSliderItem.content.header, alignment='none'}"></sly>
+        <div class="o-heroContent__buttons ${buttonType ? ' -{0}' : '' @ format=[buttonType], context='styleString'}"
+             data-button-wrapper data-button-type="${buttonType}"
+             data-sly-test="${!heroSliderItem.content.buttons.empty}">
+          <sly data-sly-test="${heroSliderItem.content.buttonEyebrow.text}"
+               data-sly-call="${eyebrowTemplate.eyebrow @ eyebrowModel=heroSliderItem.content.buttonEyebrow}"></sly>
+
+          <sly data-sly-test="${heroSliderItem.content.buttonType == 'regular'}"
+               data-sly-repeat="${heroSliderItem.content.buttons}"
+               data-sly-call="${buttonTemplate.button @ buttonModel=item}"></sly>
+          <sly data-sly-test="${heroSliderItem.content.buttonType == 'tile'}"
+               data-sly-repeat="${heroSliderItem.content.buttons}"
+               data-sly-call="${tileCtaTemplate.tileCta @ buttonModel=item}"></sly>
+          <sly data-sly-test="${heroSliderItem.content.buttonType == 'pillar'}"
+               data-sly-repeat="${heroSliderItem.content.buttons}"
+               data-sly-call="${pillarCtaTemplate.pillarCta @ buttonModel=item}"></sly>
+        </div>
+      </div>
+      <sly data-sly-test=${heroSliderItem.scrollButton} data-sly-call="${scrollButtonTemplate.scrollButton}"></sly>
+    </div>
+  </div>
+</sly>

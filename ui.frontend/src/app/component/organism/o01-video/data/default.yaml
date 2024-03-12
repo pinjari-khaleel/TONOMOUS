@@ -1,0 +1,24 @@
+video:
+  props:
+    youtube: tbNlMtqrYS0
+    cover: true
+    vimeo: 209537164
+    originalWidth: 3
+    originalHeight: 1
+    autoplay: false
+    controls:
+      playPause: true
+      volumeToggle: true
+      time: true
+      seek: true
+      fullscreen: true
+  playCta:
+    title: Play video
+  pauseCta:
+    title: Pause video
+  mutaCta:
+    title: Mute
+  unmuteCta:
+    title: Unmute
+  fullscreenCta:
+    title: Toggle fullscreen

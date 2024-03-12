@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="C79 WebGL Effect Hero"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[tonomus.author]">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <general
+          jcr:primaryType="nt:unstructured"
+          jcr:title="General"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <check-go-back-link
+                      granite:class="js-dialog-showhide"
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                      fieldDescription="Enable Go Back link"
+                      name="./heroSliderItem/showGoBackLink"
+                      text="Enable Go Back link"
+                      value="{Boolean}true"
+                      uncheckedValue="{Boolean}false">
+                    <granite:data
+                        jcr:primaryType="nt:unstructured"
+                        showhide-target=".js-enable-go-back-link"/>
+                  </check-go-back-link>
+                  <go-back-link-container
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                      granite:class="js-enable-go-back-link">
+                    <granite:data
+                        jcr:primaryType="nt:unstructured"
+                        showhide-target-value="true"/>
+                    <items jcr:primaryType="nt:unstructured">
+                      <column
+                          jcr:primaryType="nt:unstructured"
+                          jcr:title="Go Back Link Settings"
+                          sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                          <go-back-link-label
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                              fieldDescription="Please enter the go back Link label."
+                              fieldLabel="Label"
+                              validation="text"
+                              emptyText="Return to"
+                              name="./heroSliderItem/link/label"/>
+                          <go-back-link
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                              fieldDescription="Please select go back link (Make this empty for not to display)."
+                              fieldLabel="Go Back Link"
+                              rootPath="/content"
+                              name="./heroSliderItem/link/href"/>
+                        </items>
+                      </column>
+                    </items>
+                  </go-back-link-container>
+                  <alignHorizontal
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select Horizontal Alignment."
+                      fieldLabel="Horizontal Alignment"
+                      name="./heroSliderItem/alignHorizontal">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/align-horizontal"/>
+                  </alignHorizontal>
+                  <alignVertical
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select Vertical Alignment."
+                      emptyOption="{Boolean}true"
+                      fieldLabel="Vertical Alignment"
+                      name="./heroSliderItem/alignVertical">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/align-vertical"/>
+                  </alignVertical>
+                  <headingText
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                      sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext"
+                      fieldDescription="Please enter Heading Text."
+                      fieldLabel="Heading Text"
+                      name="./heroSliderItem/content/header/heading/text"
+                      useFixedInlineToolbar="{Boolean}true">
+                    <htmlRules jcr:primaryType="nt:unstructured">
+                      <docType jcr:primaryType="nt:unstructured"
+                               baseType="html"
+                               version="4.0">
+                        <typeConfig jcr:primaryType="nt:unstructured"
+                                    useSemanticMarkup="{Boolean}true"
+                                    isXhtmlStrict="{Boolean}true">
+                          <semanticMarkupMap jcr:primaryType="nt:unstructured"
+                                             b="strong"
+                                             i="i"/>
+                        </typeConfig>
+                      </docType>
+                    </htmlRules>
+                  </headingText>
+                  <headingWeight
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                      fieldDescription="Please select the component Heading Size/Weight."
+                      fieldLabel="Heading Size"
+                      name="./heroSliderItem/content/header/heading/size">
+                    <datasource
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="tonomus/generic/datasource"
+                        path="tonomus/components/content/utils/headingweight"/>
+                  </headingWeight>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </general>
+      <heroButtons
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Buttons"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <field
+                      jcr:primaryType="nt:unstructured"
+                      jcr:title="Button Item"
+                      sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                    <items
+                        jcr:primaryType="nt:unstructured">
+                      <openVideoButton
+                          jcr:title="Open Video Button"
+                          sling:resourceType="granite/ui/components/coral/foundation/container"
+                          jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                          <label
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                              fieldDescription="Please enter the Label."
+                              fieldLabel="Label"
+                              name="./openVideoButton/label"/>
+                          <suffix
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                              fieldDescription="Please enter the Suffix."
+                              fieldLabel="Suffix"
+                              name="./openVideoButton/suffix"/>
+                          <icon
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select Icon."
+                              fieldLabel="Icon"
+                              emptyOption="{Boolean}true"
+                              name="./openVideoButton/icon">
+                            <datasource
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="tonomus/generic/datasource/contentfragment"
+                                path="/content/dam/neom/content-fragments/icons/icons-tile-cta"/>
+                          </icon>
+                          <level
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select the button level."
+                              fieldLabel="Level"
+                              name="./openVideoButton/level">
+                            <items jcr:primaryType="nt:unstructured">
+                              <none
+                                  jcr:primaryType="nt:unstructured"
+                                  text="None"
+                                  value=""/>
+                              <primary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Primary"
+                                  value="primary"/>
+                              <secondary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Secondary"
+                                  value="secondary"/>
+                              <tertiary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Tertiary"
+                                  value="tertiary"/>
+                            </items>
+                          </level>
+                          <variant
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select Variant."
+                              fieldLabel="Variant"
+                              name="./openVideoButton/variant">
+                            <items jcr:primaryType="nt:unstructured">
+                              <none
+                                  jcr:primaryType="nt:unstructured"
+                                  selected="{Boolean}true"
+                                  text="None"
+                                  value=""/>
+                              <play
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Play"
+                                  value="play"/>
+                            </items>
+                          </variant>
+                          <buttonUrl
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                              fieldDescription="Please select the URL for Button."
+                              fieldLabel="Button URL"
+                              name="./openVideoButton/href"/>
+                          <buttonTarget
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select Button Target Value."
+                              fieldLabel="Button Target Value"
+                              name="./openVideoButton/target">
+                            <items jcr:primaryType="nt:unstructured">
+                              <blank
+                                  jcr:primaryType="nt:unstructured"
+                                  selected="{Boolean}true"
+                                  text="New frame"
+                                  value="_blank"/>
+                              <self
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Same frame"
+                                  value="_self"/>
+                            </items>
+                          </buttonTarget>
+                          <event-tracking
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/include"
+                              path="tonomus/components/content/utils/event-tracking/content"/>
+                        </items>
+                      </openVideoButton>
+                      <playButton
+                          jcr:title="Play Button"
+                          sling:resourceType="granite/ui/components/coral/foundation/container"
+                          jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                          <label
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                              fieldDescription="Please enter the Label."
+                              fieldLabel="Label"
+                              name="./playButton/label"/>
+                          <suffix
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                              fieldDescription="Please enter the Suffix."
+                              fieldLabel="Suffix"
+                              name="./playButton/suffix"/>
+                          <level
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select the button level."
+                              fieldLabel="Level"
+                              name="./playButton/level">
+                            <items jcr:primaryType="nt:unstructured">
+                              <none
+                                  jcr:primaryType="nt:unstructured"
+                                  text="None"
+                                  value=""/>
+                              <primary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Primary"
+                                  value="primary"/>
+                              <secondary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Secondary"
+                                  value="secondary"/>
+                              <tertiary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Tertiary"
+                                  value="tertiary"/>
+                            </items>
+                          </level>
+                          <variant
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select Variant."
+                              fieldLabel="Variant"
+                              name="./playButton/variant">
+                            <items jcr:primaryType="nt:unstructured">
+                              <none
+                                  jcr:primaryType="nt:unstructured"
+                                  selected="{Boolean}true"
+                                  text="None"
+                                  value=""/>
+                              <play
+                                  jcr:primaryType="nt:unstructured"
+                                  text="openVideoButtonPlay"
+                                  value="play"/>
+                            </items>
+                          </variant>
+                          <buttonUrl
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                              fieldDescription="Please select the URL for Button."
+                              fieldLabel="Button URL"
+                              name="./playButton/href"/>
+                          <buttonTarget
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select Button Target Value."
+                              fieldLabel="Button Target Value"
+                              name="./playButton/target">
+                            <items jcr:primaryType="nt:unstructured">
+                              <blank
+                                  jcr:primaryType="nt:unstructured"
+                                  selected="{Boolean}true"
+                                  text="New frame"
+                                  value="_blank"/>
+                              <self
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Same frame"
+                                  value="_self"/>
+                            </items>
+                          </buttonTarget>
+                          <event-tracking
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/include"
+                              path="tonomus/components/content/utils/event-tracking/content"/>
+                        </items>
+                      </playButton>
+                      <muteButton
+                          jcr:title="Mute Button"
+                          sling:resourceType="granite/ui/components/coral/foundation/container"
+                          jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                          <level
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select the button level."
+                              fieldLabel="Level"
+                              name="./muteButton/level">
+                            <items jcr:primaryType="nt:unstructured">
+                              <none
+                                  jcr:primaryType="nt:unstructured"
+                                  text="None"
+                                  value=""/>
+                              <primary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Primary"
+                                  value="primary"/>
+                              <secondary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Secondary"
+                                  value="secondary"/>
+                              <tertiary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Tertiary"
+                                  value="tertiary"/>
+                            </items>
+                          </level>
+                          <theme
+                              jcr:title="Button theme"
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select the button theme."
+                              fieldLabel="Button theme"
+                              name="./muteButton/theme">
+                            <items jcr:primaryType="nt:unstructured">
+                              <dark-gold
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Dark Gold"
+                                  value="dark-gold"/>
+                              <black
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Black"
+                                  value="black"/>
+                              <gold
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Gold"
+                                  value="gold"/>
+                              <white
+                                  jcr:primaryType="nt:unstructured"
+                                  text="White"
+                                  value="white"/>
+                              <cream
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Cream"
+                                  value="cream"/>
+                            </items>
+                          </theme>
+                          <event-tracking
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/include"
+                              path="tonomus/components/content/utils/event-tracking/content"/>
+                        </items>
+                      </muteButton>
+                      <getInTouchButton
+                          jcr:title="Get In Touch Button"
+                          sling:resourceType="granite/ui/components/coral/foundation/container"
+                          jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                          <level
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select the button level."
+                              fieldLabel="Level"
+                              name="./getInTouch/level">
+                            <items jcr:primaryType="nt:unstructured">
+                              <none
+                                  jcr:primaryType="nt:unstructured"
+                                  text="None"
+                                  value=""/>
+                              <primary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Primary"
+                                  value="primary"/>
+                              <secondary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Secondary"
+                                  value="secondary"/>
+                              <tertiary
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Tertiary"
+                                  value="tertiary"/>
+                            </items>
+                          </level>
+                          <buttonUrl
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                              fieldDescription="Please select the URL for Button."
+                              fieldLabel="Button URL"
+                              name="./getInTouch/href"/>
+                          <button-theme
+                              jcr:title="Button theme"
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select the button theme."
+                              fieldLabel="Button theme"
+                              name="./getInTouch/theme">
+                            <items jcr:primaryType="nt:unstructured">
+                              <cream
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Cream"
+                                  value="cream"/>
+                              <gold
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Gold"
+                                  value="gold"/>
+                              <dark-gold
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Dark Gold"
+                                  value="dark-gold"/>
+                              <white
+                                  jcr:primaryType="nt:unstructured"
+                                  text="White"
+                                  value="white"/>
+                              <black
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Black"
+                                  value="black"/>
+                              <green
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Green"
+                                  value="green"/>
+                              <pink
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Pink"
+                                  value="pink"/>
+                            </items>
+                          </button-theme>
+                          <icon
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                              fieldDescription="Please select Button icon."
+                              fieldLabel="Button icon"
+                              name="./getInTouch/icon">
+                            <items jcr:primaryType="nt:unstructured">
+                              <icon-chat
+                                  jcr:primaryType="nt:unstructured"
+                                  text="Chat"
+                                  value="chat"/>
+                            </items>
+                          </icon>
+                          <event-tracking
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/include"
+                              path="tonomus/components/content/utils/event-tracking/content"/>
+                        </items>
+                      </getInTouchButton>
+                    </items>
+                  </field>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </heroButtons>
+
+      <videoTab
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Video Tab"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <loopingVideo
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                      fieldDescription="Select the video to be used."
+                      autoStart="{Boolean}false"
+                      class="cq-droptarget"
+                      fieldLabel="Looping Video Asset"
+                      fileNameParameter="./loopingVideo/props/video/videoFileName"
+                      fileReferenceParameter="./loopingVideo/props/video/src"
+                      mimeTypes="[video]"
+                      multiple="{Boolean}false"
+                      name="./background/video/props/video/videoFile"
+                      title="Video Asset"
+                      uploadUrl="${suffix.path}"
+                      allowUpload="{Boolean}false"
+                      useHTML5="{Boolean}true"/>
+                  <crossOrigin
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                      name="./video/props/crossOrigin"
+                      value="anonymous"/>
+                  <!--/*
+                    This flag disables the Adobe Dynamic Media for the looping video to fix the
+                    WebGL issue.
+                  */-->
+                  <ignore-dynamic-media
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                      name="./loopingVideo/props/video/ignoreDynamicMedia"
+                      value="{Boolean}true"/>
+                  <fullScreenVideo
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+                      <videos
+                          jcr:primaryType="nt:unstructured"
+                          fieldLabel="Full Screen Video Sources"
+                          fieldDescription="Click 'Add' to add a new video"
+                          sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                          class="multifield-full-width"
+                          validation="multifield-max-1"
+                          composite="{Boolean}true">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Video Item"
+                            name="./playButton/video/props/sources"
+                            granite:class="accordion-multifield-item"
+                            sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                          <items
+                              jcr:primaryType="nt:unstructured">
+                            <tab
+                                jcr:title="Video"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                jcr:primaryType="nt:unstructured">
+                              <items jcr:primaryType="nt:unstructured">
+                                <video
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                    fieldDescription="Select the video to be used. If there is a video the image will be overwritten"
+                                    autoStart="{Boolean}false"
+                                    class="cq-droptarget"
+                                    fieldLabel="Video Asset"
+                                    fileNameParameter="./videoFileName"
+                                    fileReferenceParameter="./src"
+                                    mimeTypes="[video]"
+                                    multiple="{Boolean}false"
+                                    name="videoFile"
+                                    title="Video Asset"
+                                    uploadUrl="${suffix.path}"
+                                    allowUpload="{Boolean}false"
+                                    useHTML5="{Boolean}true"/>
+                              </items>
+                            </tab>
+                          </items>
+                        </field>
+                      </videos>
+                    </items>
+                  </fullScreenVideo>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </videoTab>
+      <advanced
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/advanced/content"/>
+    </items>
+  </content>
+</jcr:root>

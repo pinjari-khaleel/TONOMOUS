@@ -1,0 +1,170 @@
+.cmp-herobanner {
+  --description-width: 1125px;
+  --large-banner: 1080px;
+  --generic-banner: 592px;
+
+  &__generic-background {
+    .cmp-herobanner {
+      background-color: var(--color-gray-3);
+
+      &__overlay {
+        display: none;
+      }
+
+      &__bg-container {
+        display: none;
+      }
+
+      &__content {
+        padding-block: 7.5rem;
+        padding-inline-start: 6.3125rem;
+        padding-inline-end: 6.1875rem;
+        color: var(--color-black);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__description {
+        max-width: var(--description-width);
+
+        h2 {
+          .header2();
+          .light();
+        }
+
+        &-gradient {
+          .header2();
+          .gradient-text();
+          .regular();
+        }
+      }
+
+      &__container {
+        display: none;
+      }
+
+      &__action-container {
+        a {
+          .button-primary();
+        }
+      }
+    }
+  }
+
+  &__moving-gradient.cmp-herobanner__generic-height {
+    .cmp-herobanner {
+      display: grid;
+      background-color: var(--color-black);
+      overflow: hidden;
+
+      .moving-background(var(--generic-banner));
+
+      &__content {
+        padding-block: 7.5rem;
+        padding-inline-start: 6.3125rem;
+        padding-inline-end: 6.1875rem;
+        grid-row: 1;
+        grid-column: 1;
+        z-index: 1;
+        color: var(--color-white);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__description {
+        max-width: var(--description-width);
+
+        h2 {
+          .header2();
+          .light();
+        }
+
+        &-gradient {
+          .header2();
+          .gradient-text();
+          .regular();
+        }
+      }
+
+      &__container {
+        display: none;
+      }
+
+      &__action-container {
+        a {
+          .button-primary();
+        }
+      }
+    }
+  }
+
+  &__moving-gradient.cmp-herobanner__large {
+    .cmp-herobanner {
+      display: grid;
+      background-color: var(--color-black);
+      overflow: hidden;
+
+      .moving-background(var(--large-banner));
+
+      &__content {
+        max-width: var(--description-width);
+        padding-block: 7.5rem;
+        padding-inline-start: 6.3125rem;
+        padding-inline-end: 6.1875rem;
+        color: var(--color-white);
+        grid-row: 1;
+        grid-column: 1;
+        z-index: 1;
+      }
+
+      &__description {
+        max-width: var(--description-width);
+
+        h1 {
+          .header1();
+          .light();
+        }
+
+        &-gradient {
+          .header1();
+          .gradient-text();
+          .regular();
+        }
+
+        h1 + p {
+          .paragraph1();
+          margin-block: 2.5rem;
+          margin-inline: 0;
+          word-wrap: break-word;
+          width: 985px;
+        }
+      }
+
+      &__container {
+        display: flex;
+        column-gap: 5rem;
+
+        .cmp-herobanner__description {
+          h3 {
+            .header3();
+            .regular();
+            margin-block-end: 0.625rem;
+          }
+
+          .paragraph-2 {
+            .paragraph2();
+          }
+        }
+      }
+
+      &__action-container {
+        margin-block-start: 5.5rem;
+        a {
+          .button-primary();
+        }
+      }
+    }
+  }
+}

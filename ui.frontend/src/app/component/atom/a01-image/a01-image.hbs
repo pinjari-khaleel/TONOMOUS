@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="./a01-image.scss">
+<script src="./A01Image.ts"></script>
+
+<div class="a-image{{#if variant}} -{{variant}}{{/if}}"
+     data-component="a01-image"
+     {{#if direction}}data-direction="{{ direction }}"{{/if}}
+     data-enable-transition="{{#if disableTransition}}false{{^}}true{{/if}}"
+     {{#if (condition scrollComponent '&&' (condition disableTransition '!==' true))}}data-scroll-component{{/if}}
+     {{#if (condition poster '===' 'true')}}data-video-poster{{/if}}
+     {{#each data}}data-{{@key}}="{{this}}"{{/each}}
+>
+  {{#unless disableTransition}}
+    <span class="a-image__background" data-image-background></span>
+  {{/unless}}
+  {{!--
+    We could add an (optional) "direction" prop for this component and have the mask come from every direction.
+    Some components might have a video background, we could use the same component also for looping muted video (for the effect).
+  --}}
+  <picture class="a-image__picture" data-image-wrapper>
+    {{#each sources }}
+      <source srcset="{{ src }}"{{# if media }}
+              media="{{ media }}"{{/if}}{{# if type }}
+              type="{{ type }}"{{/if}}{{#if sizes}}
+              sizes="{{sizes}}"{{/if}}
+      />
+    {{/each}}
+    <img class="a-image__img" data-image-img src="{{ src }}" alt="{{ alt }}" loading="{{#if loading}}{{loading}}{{^}}lazy{{/if}}" />
+  </picture>
+</div>

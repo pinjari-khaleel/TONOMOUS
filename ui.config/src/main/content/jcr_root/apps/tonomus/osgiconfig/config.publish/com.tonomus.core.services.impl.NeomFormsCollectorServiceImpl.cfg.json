@@ -1,0 +1,8 @@
+{
+  "mandatoryFields":[
+    "form_id",
+    "email",
+    "mc_list_id",
+    "mc_list_status"
+  ]
+}

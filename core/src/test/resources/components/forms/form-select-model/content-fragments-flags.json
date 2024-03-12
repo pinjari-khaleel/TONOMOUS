@@ -1,0 +1,247 @@
+{
+  "jcr:primaryType": "sling:Folder",
+  "jcr:mixinTypes": [
+    "rep:AccessControllable"
+  ],
+  "jcr:createdBy": "admin",
+  "jcr:created": "Wed Jun 15 2022 17:35:49 GMT+0600",
+  "jcr:content": {
+    "jcr:primaryType": "nt:unstructured",
+    "processingProfile": "System Default",
+    "jcr:title": "flags",
+    "jcr:lastModifiedBy": "admin",
+    "cq:conf": "",
+    "jcr:lastModified": "Wed Jun 15 2022 17:39:00 GMT+0600",
+    "sourcing": "false",
+    "metadataSchema": "System Default",
+    "policies": {
+      "jcr:primaryType": "nt:unstructured",
+      "cfm": {
+        "jcr:primaryType": "nt:unstructured",
+        "policy-cfm-allowedModelsByPaths": [
+          "/conf/neom-content-fragment-models/settings/dam/cfm/models/flags"
+        ]
+      }
+    }
+  },
+  "rep:policy": {
+    "jcr:primaryType": "rep:ACL",
+    "allow": {
+      "jcr:primaryType": "rep:GrantACE",
+      "rep:principalName": "mac-default-flags-owner",
+      "rep:privileges": [
+        "jcr:versionManagement",
+        "jcr:read",
+        "jcr:modifyAccessControl",
+        "jcr:readAccessControl",
+        "rep:write",
+        "crx:replicate",
+        "jcr:lockManagement"
+      ]
+    },
+    "allow1": {
+      "jcr:primaryType": "rep:GrantACE",
+      "rep:principalName": "mac-default-flags-editor",
+      "rep:privileges": [
+        "jcr:nodeTypeManagement",
+        "jcr:versionManagement",
+        "jcr:read",
+        "jcr:readAccessControl",
+        "jcr:addChildNodes",
+        "crx:replicate",
+        "jcr:modifyProperties",
+        "jcr:lockManagement",
+        "jcr:removeChildNodes"
+      ]
+    },
+    "allow2": {
+      "jcr:primaryType": "rep:GrantACE",
+      "rep:principalName": "mac-default-flags-editor",
+      "rep:privileges": [
+        "jcr:removeNode"
+      ],
+      "rep:restrictions": {
+        "jcr:primaryType": "rep:Restrictions",
+        "rep:glob": "/*"
+      }
+    },
+    "allow3": {
+      "jcr:primaryType": "rep:GrantACE",
+      "rep:principalName": "mac-default-flags",
+      "rep:privileges": [
+        "jcr:read"
+      ]
+    }
+  },
+  "france": {
+    "jcr:primaryType": "dam:Asset",
+    "jcr:mixinTypes": [
+      "mix:referenceable",
+      "mix:versionable"
+    ],
+    "jcr:createdBy": "admin",
+    "jcr:versionHistory": "0a2e2125-fb90-4b1e-ba00-689a9d632933",
+    "jcr:predecessors": [
+      "fdc44142-4aed-47ba-948e-68361f20c8c5"
+    ],
+    "jcr:created": "Mon Jun 20 2022 17:25:30 GMT+0600",
+    "jcr:baseVersion": "fdc44142-4aed-47ba-948e-68361f20c8c5",
+    "jcr:isCheckedOut": true,
+    "jcr:uuid": "9a62663b-9c1d-4114-866c-df5906af8f0d",
+    "jcr:content": {
+      "jcr:primaryType": "dam:AssetContent",
+      "jcr:title": "France",
+      "jcr:lastModifiedBy": "admin",
+      "contentFragment": true,
+      "cq:name": "france",
+      "jcr:lastModified": "Mon Jun 20 2022 17:25:39 GMT+0600",
+      "lastFragmentSave": "Mon Jun 20 2022 17:25:39 GMT+0600",
+      "cq:parentPath": "/content/dam/neom/content-fragments/flags",
+      "renditions": {
+        "jcr:primaryType": "nt:folder",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Mon Jun 20 2022 17:25:30 GMT+0600"
+      },
+      "related": {
+        "jcr:primaryType": "nt:unstructured"
+      },
+      "metadata": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:Taggable"
+        ]
+      },
+      "data": {
+        "jcr:primaryType": "nt:unstructured",
+        "cq:model": "/conf/neom-content-fragment-models/settings/dam/cfm/models/flags",
+        "master": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:mixinTypes": [
+            "dam:cfVariationNode",
+            "cq:Taggable"
+          ],
+          "selected@LastModified": "Mon Jun 20 2022 17:25:39 GMT+0600",
+          "phoneCode@LastModified": "Mon Jun 20 2022 17:25:39 GMT+0600",
+          "countryCode": "FR",
+          "phoneCode": "89",
+          "countryCode@LastModified": "Mon Jun 20 2022 17:25:39 GMT+0600",
+          "selected": false
+        }
+      }
+    }
+  },
+  "kazakhstan": {
+    "jcr:primaryType": "dam:Asset",
+    "jcr:mixinTypes": [
+      "mix:referenceable",
+      "mix:versionable"
+    ],
+    "jcr:createdBy": "admin",
+    "jcr:versionHistory": "6675d7f5-d8f3-4d7a-a7d0-0be914e4e0d9",
+    "jcr:predecessors": [
+      "5382b92d-6456-42e5-9ac7-5d480da93e78"
+    ],
+    "jcr:created": "Mon Jun 20 2022 17:25:07 GMT+0600",
+    "jcr:baseVersion": "5382b92d-6456-42e5-9ac7-5d480da93e78",
+    "jcr:isCheckedOut": true,
+    "jcr:uuid": "8f29c5a8-28eb-4217-8f34-f6bf6b3b4c55",
+    "jcr:content": {
+      "jcr:primaryType": "dam:AssetContent",
+      "jcr:title": "Kazakhstan",
+      "jcr:lastModifiedBy": "admin",
+      "contentFragment": true,
+      "cq:name": "kazakhstan",
+      "jcr:lastModified": "Mon Jun 20 2022 17:25:17 GMT+0600",
+      "lastFragmentSave": "Mon Jun 20 2022 17:25:17 GMT+0600",
+      "cq:parentPath": "/content/dam/neom/content-fragments/flags",
+      "renditions": {
+        "jcr:primaryType": "nt:folder",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Mon Jun 20 2022 17:25:07 GMT+0600"
+      },
+      "related": {
+        "jcr:primaryType": "nt:unstructured"
+      },
+      "metadata": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:Taggable"
+        ]
+      },
+      "data": {
+        "jcr:primaryType": "nt:unstructured",
+        "cq:model": "/conf/neom-content-fragment-models/settings/dam/cfm/models/flags",
+        "master": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:mixinTypes": [
+            "dam:cfVariationNode",
+            "cq:Taggable"
+          ],
+          "selected@LastModified": "Mon Jun 20 2022 17:25:17 GMT+0600",
+          "phoneCode@LastModified": "Mon Jun 20 2022 17:25:17 GMT+0600",
+          "countryCode": "KZ",
+          "phoneCode": "7",
+          "countryCode@LastModified": "Mon Jun 20 2022 17:25:17 GMT+0600",
+          "selected": true
+        }
+      }
+    }
+  },
+  "turkie": {
+    "jcr:primaryType": "dam:Asset",
+    "jcr:mixinTypes": [
+      "mix:referenceable",
+      "mix:versionable"
+    ],
+    "jcr:createdBy": "admin",
+    "jcr:versionHistory": "fd8a5d6b-9fd5-4c55-9679-0d6102706a76",
+    "jcr:predecessors": [
+      "47ba16ce-dc06-4227-9c73-f37459bcdf53"
+    ],
+    "jcr:created": "Mon Jun 20 2022 17:25:56 GMT+0600",
+    "jcr:baseVersion": "47ba16ce-dc06-4227-9c73-f37459bcdf53",
+    "jcr:isCheckedOut": true,
+    "jcr:uuid": "89d6ce4e-2d43-4a99-b30f-904c209f2ed2",
+    "jcr:content": {
+      "jcr:primaryType": "dam:AssetContent",
+      "jcr:title": "Turkie",
+      "jcr:lastModifiedBy": "admin",
+      "contentFragment": true,
+      "cq:name": "turkie",
+      "jcr:lastModified": "Mon Jun 20 2022 17:26:05 GMT+0600",
+      "lastFragmentSave": "Mon Jun 20 2022 17:26:05 GMT+0600",
+      "cq:parentPath": "/content/dam/neom/content-fragments/flags",
+      "renditions": {
+        "jcr:primaryType": "nt:folder",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Mon Jun 20 2022 17:25:56 GMT+0600"
+      },
+      "related": {
+        "jcr:primaryType": "nt:unstructured"
+      },
+      "metadata": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:Taggable"
+        ]
+      },
+      "data": {
+        "jcr:primaryType": "nt:unstructured",
+        "cq:model": "/conf/neom-content-fragment-models/settings/dam/cfm/models/flags",
+        "master": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:mixinTypes": [
+            "dam:cfVariationNode",
+            "cq:Taggable"
+          ],
+          "selected@LastModified": "Mon Jun 20 2022 17:26:05 GMT+0600",
+          "phoneCode@LastModified": "Mon Jun 20 2022 17:26:05 GMT+0600",
+          "countryCode": "TR",
+          "phoneCode": "90",
+          "countryCode@LastModified": "Mon Jun 20 2022 17:26:05 GMT+0600",
+          "selected": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<template data-sly-template.multiSelectDropdown="${@
+     dropdownModel = 'the instance of class StepGroup Model with properties',
+     blockValidation='blockValidation boolean value'}"
+          data-sly-use.fieldsetLegendTemplate="/apps/tonomus/components/content/atoms/a26-fieldset-legend.html"
+          data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+          data-sly-use.checkboxOptionTemplate="/apps/tonomus/components/content/molecules/m27-checkbox-option.html"
+          data-sly-use.formErrorTemplate="/apps/tonomus/components/content/atoms/a25-form-error.html"
+>
+  <div class="o-multiselectDropdown" data-component="o80-multiselect-dropdown"
+       data-sly-attribute.data-scroll-component="${dropdownModel.scrollComponent}"
+       data-sly-attribute.data-title-in-english="${dropdownModel.titleInEnglish}"
+       data-sly-attribute.id="${dropdownModel.id}"
+       data-options-selected-placeholder="${'Options selected' @ i18n}">
+
+    <fieldset class="o-multiselectDropdown__fieldset"
+              data-sly-attribute.data-validate="${dropdownModel.validate.json}"
+              data-sly-set.attribute="${blockValidation ? 'block-validation' : ''}"
+              data-sly-attribute.id="${dropdownModel.id}">
+
+      <div class="o-multiselectDropdown__container">
+        <div class="o-multiselectDropdown__innerContainer">
+
+          <div class="o-multiselectDropdown__legend">
+            <sly data-sly-test="${dropdownModel.label}"
+                 data-sly-call="${fieldsetLegendTemplate.fieldsetLegend @ legend=dropdownModel.label, required=dropdownModel.required}"></sly>
+          </div>
+
+          <button class="o-multiselectDropdown__valueWrapper" type="button" data-pseudo-select>
+            <div class="o-multiselectDropdown__value" data-selected-options> </div>
+            <div class="o-multiselectDropdown__placeholder" data-placeholder>
+              ${dropdownModel.placeholder}
+            </div>
+            <div class="o-multiselectDropdown__chevron" data-chevron>
+              <sly data-sly-call="${iconTemplate.icon @ name='chevron-down'}"></sly>
+            </div>
+          </button>
+
+          <ul class="o-multiselectDropdown__options" data-options>
+            <li class="o-multiselectDropdown__option" data-option
+                data-sly-repeat.checkBoxModel="${dropdownModel.items}"
+                data-sly-test="${!blockValidation}">
+              <sly data-sly-call="${checkboxOptionTemplate.checkboxOption @ checkBoxModel=checkBoxModel}"></sly>
+            </li>
+          </ul>
+
+          <div class="o-multiselectDropdown__error">
+            <sly data-sly-call="${formErrorTemplate.formError @ id=dropdownModel.id}"></sly>
+          </div>
+
+        </div>
+      </div>
+
+    </fieldset>
+
+  </div>
+</template>

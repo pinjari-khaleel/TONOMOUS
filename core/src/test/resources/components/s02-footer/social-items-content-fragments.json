@@ -1,0 +1,23 @@
+{
+  "jcr:primaryType": "dam:Asset",
+  "jcr:baseVersion": "065a65ff-6699-404c-af9c-83ce30e72696",
+  "jcr:isCheckedOut": true,
+  "jcr:content": {
+    "jcr:primaryType": "dam:AssetContent",
+    "jcr:title": "facebook",
+    "contentFragment": true,
+    "cq:name": "facebook",
+    "cq:parentPath": "/content/dam/neom/content-fragments/footer-social-items",
+    "data": {
+      "jcr:primaryType": "nt:unstructured",
+      "cq:model": "/conf/neom-content-fragment-models/settings/dam/cfm/models/social-items-footer",
+      "master": {
+        "jcr:primaryType": "nt:unstructured",
+        "href": "facebook.com",
+        "target": "_blank",
+        "icon": "facebook-gold",
+        "label": "Facebook"
+      }
+    }
+  }
+}

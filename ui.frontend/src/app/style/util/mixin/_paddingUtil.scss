@@ -1,0 +1,22 @@
+@mixin paddingUtil() {
+  --padding-top: var(--block-component-padding);
+  --padding-bottom: var(--block-component-padding);
+
+  padding: var(--padding-top) 0 var(--padding-bottom);
+
+  &.-paddingTopNone {
+    --padding-top: 0;
+  }
+
+  &.-paddingBottomNone {
+    --padding-bottom: 0;
+  }
+
+  &.-paddingTopLarge {
+    --padding-top: var(--block-component-padding-large);
+  }
+
+  &.-paddingBottomLarge {
+    --padding-bottom: var(--block-component-padding-large);
+  }
+}

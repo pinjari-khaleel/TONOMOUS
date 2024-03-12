@@ -1,0 +1,65 @@
+.m-shareButton {
+  --icon-fill: var(--color-dark-gold);
+
+  align-items: center;
+  background: var(--color-cream);
+  border-radius: 5px;
+  color: var(--color-black);
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+  padding: var(--grid-gap);
+  position: relative;
+  transition: background-color 0.3s ease;
+
+  &__label {
+    @include type("body", "xsmall");
+
+    font-weight: 400;
+    margin-inline-start: var(--grid-gap);
+  }
+
+  &__success {
+    --icon-fill-color: var(--color-white);
+    @include offset();
+    @include size(100%);
+
+    align-items: center;
+    background-color: var(--color-green);
+    color: var(--color-white);
+    display: flex;
+    padding: var(--grid-gap);
+    position: absolute;
+  }
+
+  @include hover() {
+    --icon-fill: var(--color-white);
+    color: var(--color-white);
+    background: var(--color-gold);
+  }
+
+  @include theme("tonomus") {
+    --icon-fill: var(--color-tonomus-white-high-emphasis);
+
+    background: var(--color-tonomus-purple-300);
+    color: var(--color-tonomus-white-high-emphasis);
+    min-block-size: 104px;
+    padding: 35px 68px;
+
+    @include hover() {
+      background: var(--color-tonomus-purple-400);
+    }
+
+    &__label {
+      @include type("button", "small");
+
+      text-transform: uppercase;
+      margin-inline-start: 16px;
+    }
+
+    @include respond-to("MEDIUM") {
+      min-block-size: 104px;
+      padding: 40px 24px;
+    }
+  }
+}

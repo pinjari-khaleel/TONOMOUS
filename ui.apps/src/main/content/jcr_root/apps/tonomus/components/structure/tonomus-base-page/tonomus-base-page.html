@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<sly
+        data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"
+        data-sly-use.head="head.html">
+</sly>
+<html   lang="en"
+        data-sly-attribute.dir="${inheritedPageProperties.isRightToLeftLanguage ? inheritedPageProperties.isRightToLeftLanguage  : 'ltr'}"
+        data-sly-attribute.lang="${page.language}"
+        data-sly-use.footer="footer.html"
+        data-sly-attribute.data-theme="${inheritedPageProperties.theme || 'tonomus'}"
+        data-tonomus>
+<head data-sly-call="${head.head @ page = page}">
+  <!--/* This title is not rendered in HTML, it is here just to avoid SonarLint error */-->
+  <title>Tonomus</title>
+</head>
+<body data-sly-set.isEdit="${wcmmode.edit || wcmmode.design}" data-editor="${isEdit ? 'true' : 'false'}">
+<sly data-sly-include="body.html"></sly>
+<sly data-sly-call="${footer.footer @ page = page}"></sly>
+</body>
+
+
+</html>

@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="./m58-pillar-cta.scss">
+<script src="./M58PillarCta.ts"></script>
+
+
+<a class="m-pillarCta"
+  data-component="m58-pillar-cta"
+  href="{{href}}"
+  {{#if (condition target '===' '_blank' )}}rel="noopener" {{/if}} 
+  {{#if target}}target="{{target}}"{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with aria}} aria-label="{{label}}" aria-controls="{{controls}}"{{/with}}
+  {{#if eventTracking}}data-event-tracking="{{ toJson eventTracking }}"{{/if}}
+>
+  {{#with backgroundImage}}
+    <div class="m-pillarCta__background">
+      {{> atom/a01-image }}
+    </div>
+  {{/with}}
+  <div class="m-pillarCta__icon">
+    {{> atom/a02-icon name=icon }}
+  </div>
+  <div class="m-pillarCta__title">
+    {{ title }}
+  </div>
+  <div class="m-pillarCta__labelWrapper">
+    <span class="m-pillarCta__label">{{label}}</span>
+    {{> atom/a02-icon name="arrow-right" }}
+  </div>
+</a>

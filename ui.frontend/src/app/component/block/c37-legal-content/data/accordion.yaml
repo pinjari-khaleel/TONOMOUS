@@ -1,0 +1,62 @@
+heading:
+  text: Privacy Policy
+
+items:
+  - size: small
+    content:
+      '<p>Your privacy is important to us. This Privacy Notice explains what personal data we
+      process, how we process it, and for what reasons. This Privacy Notice should be read together
+      with our Terms of Use and any other documents referred to in it.</p> <p>Please note that we
+      will ask for your consent before using your personal data for a purpose other than those that
+      are set out in this Privacy Notice.</p>'
+
+accordion:
+  items:
+    - label: 'PERSONAL DATA WE COLLECT, USE AND DISCLOSE'
+      eventTracking:
+        componentId: 'policy id'
+      content:
+        '<ul> <li><strong>Investors and other business contacts:</strong> We collect certain limited
+        personal data about our investor contacts and other business contacts. Personal data
+        collected in this context is usually (but may not exclusively be) limited to name, employer
+        name, contact title, phone, email and other business contact details.</li> <li>
+        <strong>Suppliers:</strong>We collect certain limited personal data about individuals
+        associated with our suppliers and service providers (including professional advisors and
+        individuals associated with our service providers) Personal data collected in this context
+        is usually (but may not exclusively be) limited to name, employer name, contact title,
+        phone, email and other business contact details. </li> <li><strong>Our website:</strong>
+        When you visit our website or contact us via a link on our website, we may collect
+        information from you directly and/or automatically. The information that we collect may
+        include, without limitation, your name, email address and IP address.</li>
+        <li><strong>Careers and recruitment:</strong> If you apply for a position with us, we will
+        use the personal information contained in your CV and other application documentations in
+        order to evaluate your application and assess whether to offer you a position. This may
+        include information about your employment history and qualifications, as well as your name,
+        address and contact details. If you are hired, the information will be retained, used and
+        disclosed in accordance with our policies which apply to our employees. If you are not
+        offered or do not accept a position, we may retain this information for a reasonable period
+        in the event that an appropriate position becomes available or that you re-apply.</li> </ul>'
+    - label: 'Disclosure of your personal data'
+      eventTracking:
+        componentId: 'policy 2 id'
+      content:
+        '<ul> <li><strong>Investors and other business contacts:</strong> We collect certain limited
+        personal data about our investor contacts and other business contacts. Personal data
+        collected in this context is usually (but may not exclusively be) limited to name, employer
+        name, contact title, phone, email and other business contact details.</li> <li>
+        <strong>Suppliers:</strong>We collect certain limited personal data about individuals
+        associated with our suppliers and service providers (including professional advisors and
+        individuals associated with our service providers) Personal data collected in this context
+        is usually (but may not exclusively be) limited to name, employer name, contact title,
+        phone, email and other business contact details. </li> <li><strong>Our website:</strong>
+        When you visit our website or contact us via a link on our website, we may collect
+        information from you directly and/or automatically. The information that we collect may
+        include, without limitation, your name, email address and IP address.</li>
+        <li><strong>Careers and recruitment:</strong> If you apply for a position with us, we will
+        use the personal information contained in your CV and other application documentations in
+        order to evaluate your application and assess whether to offer you a position. This may
+        include information about your employment history and qualifications, as well as your name,
+        address and contact details. If you are hired, the information will be retained, used and
+        disclosed in accordance with our policies which apply to our employees. If you are not
+        offered or do not accept a position, we may retain this information for a reasonable period
+        in the event that an appropriate position becomes available or that you re-apply.</li> </ul>'

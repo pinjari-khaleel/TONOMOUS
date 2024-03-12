@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="./o40-lightbox-item.scss">
+<script src="./O40LightboxItem.ts"></script>
+
+<div class="o-lightboxItem" data-component="o40-lightbox-item" data-lightbox-slide >
+  <div class="o-lightboxItem__asset">
+    {{#if video}}
+      {{> organism/o01-video video tracking="false" }}
+    {{^}}
+      {{> atom/a01-image lightbox.image disableTransition=true }}
+    {{/if}}
+  </div>
+
+  {{#with lightbox.content}}
+    <div class="o-lightboxItem__content">
+      {{> atom/a04-eyebrow text=../heading }}
+      <p class="o-lightboxItem__copy">{{ copy }}</p>
+      <ul class="o-lightboxItem__informationList">
+        {{#each information}}
+          <li class="o-lightboxItem__informationItem">
+            <p class="o-lightboxItem__informationLabel">{{label}}:</p>
+            {{#if href}}
+              <a href="{{href}}" class="o-lightboxItem__informationValue -link" target="_blank" referrerpolicy="no-referrer">{{value}}</a>
+            {{^}}
+              <p class="o-lightboxItem__informationValue">{{value}}</p>
+            {{/if}}
+          </li>
+        {{/each}}
+      </ul>
+      {{#with ../link}}
+        <div class="o-lightboxItem__download">
+          {{> molecule/m02-button size="small" theme="gold" level="tertiary" icon="download" data=(object lightbox-download=null) }}
+        </div>
+      {{/with}}
+    </div>
+  {{/with}}
+</div>

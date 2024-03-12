@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="./o94-tonomus-sidebar.scss">
+<script src="./O94TonomusSidebar.ts"></script>
+
+
+<div class="o-tonomusSidebar"
+  data-component="o94-tonomus-sidebar"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+>
+  <div class="o-tonomusSidebar__list">
+      <div class="o-tonomusSidebar_wrapper">
+        {{#with navigation.main}}
+          {{#if items}}
+          <ul class="o-tonomusSidebar__items" data-link-list>
+            {{#each items}}
+              <li class="o-tonomusSidebar__item">
+                <a class="o-tonomusSidebar__link"
+                data-link
+                href="{{href}}" {{#if (condition target '===' '_blank')}}target="_blank" rel="noopener"{{/if}}>
+                  <span>{{label}}</span>
+                </a>
+              </li>
+            {{/each}}
+          </ul>
+          {{/if}}
+        {{/with}}
+      </div>
+    </div>
+</div>

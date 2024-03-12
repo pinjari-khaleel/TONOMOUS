@@ -1,0 +1,87 @@
+@media (max-width: @screen-tablet-max) {
+  .cmp-herobanner {
+    --description-width: 782px;
+    --generic-banner: 384px;
+    --large-banner: 688px;
+
+    &__generic-background {
+      .cmp-herobanner {
+        &__content {
+          padding-block: 5rem;
+          padding-inline-start: 3rem;
+          padding-inline-end: 3rem;
+        }
+
+        &__description {
+          max-width: var(--description-width);
+          margin-inline-end: 3rem;
+        }
+
+        &__action-container {
+          flex-shrink: 0;
+          a {
+            .button-primary();
+          }
+        }
+      }
+    }
+
+    &__moving-gradient.cmp-herobanner__generic-height {
+      .cmp-herobanner {
+        .moving-background(var(--generic-banner));
+
+        &__content {
+          padding-block: 5rem;
+          padding-inline-start: 3rem;
+          padding-inline-end: 3rem;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        &__description {
+          max-width: var(--description-width);
+        }
+      }
+    }
+
+    &__moving-gradient.cmp-herobanner__large {
+      .cmp-herobanner {
+        .moving-background(var(--large-banner));
+
+        &__content {
+          padding-block: 5rem;
+          padding-inline-start: 3rem;
+          padding-inline-end: 2.5rem;
+        }
+
+        &__description {
+          h1 + p {
+            width: 668px;
+            margin-block: 1.5rem;
+          }
+        }
+
+        &__container {
+          column-gap: 2.5rem;
+
+          .cmp-herobanner__description {
+            display: grid;
+            grid-row-gap: 1.125rem; /* Will be used instead by browsers that do not support `row-gap` */
+            row-gap: 1.125rem;
+
+            h3 {
+              margin-block-end: 0;
+            }
+          }
+        }
+
+        &__action-container {
+          margin-block-start: 4.5rem;
+          a {
+            .button-primary();
+          }
+        }
+      }
+    }
+  }
+}

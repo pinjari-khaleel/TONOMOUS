@@ -1,0 +1,44 @@
+.o-eventCard {
+  @include aspect-ratio(42, 50);
+
+  color: var(--color-white);
+
+  &__content {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    align-content: end;
+    gap: 16px;
+    padding: 24px;
+    background: linear-gradient(359.16deg, rgba(0, 0, 0, 0.62) 27.06%, rgba(0, 0, 0, 0) 61.75%);
+  }
+
+  &__datetimeWrapper,
+  &__title {
+    padding-inline-end: 56px;
+    position: relative;
+  }
+
+  &__datetimeWrapper {
+    color: var(--color-tonomus-green-300);
+
+    .a-icon {
+      margin-block-end: 8px;
+    }
+  }
+
+  &__datetime {
+    @include type("button", "small");
+
+    display: block;
+    white-space: pre-line;
+  }
+
+  &__title {
+    @include type("subTitle", "large");
+  }
+
+  .m-button {
+    margin-inline-end: auto;
+  }
+}

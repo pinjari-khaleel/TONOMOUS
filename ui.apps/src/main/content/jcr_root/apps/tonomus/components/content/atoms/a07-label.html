@@ -1,0 +1,17 @@
+<sly data-sly-template.label="${@
+    labelModel='Sling Model for label (class TextModel)',
+    text='Label text',
+    variant='Label variant',
+    size='Label Size'
+    }"
+     data-sly-set.textVal="${text || labelModel.text}"
+     data-sly-set.sizeVal="${size || labelModel.size}"
+>
+
+  <span class="a-label
+        ${sizeVal ? ' -{0}' : '' @ format=[sizeVal], context='styleString'}
+        ${variant ? ' -{0}' : '' @ format=[variant], context='styleString'}"
+        data-component="a07-label">
+    ${textVal @ context='html'}
+  </span>
+</sly>

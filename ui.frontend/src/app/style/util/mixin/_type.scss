@@ -1,0 +1,147 @@
+@function type-values($typeMap: $type, $kind: $type-kind, $variant: $type-variant) {
+  $value: null;
+
+  $type-kinds: map-get($typeMap, $kind);
+
+  @if $type-kinds {
+    $value: map-get($type-kinds, $variant);
+  }
+
+  @return $value;
+}
+
+@mixin typeVars($typeMap, $kind, $variant, $min-vw: 480px, $max-vw: 1440px) {
+  $values: type-values($typeMap, $kind, $variant);
+  $desktop: map_get($values, desktop);
+  $mobile: map_get($values, mobile);
+  $ar: map_get($values, ar);
+
+  $typeKey: type-#{$kind}-#{$variant};
+  $typeKeyAr: #{$typeKey}-ar;
+
+  @if map-get($values, fontSize) {
+    --#{$typeKey}-font-size: #{map-get($values, fontSize)};
+  } @else if map-get($mobile, fontSize) == map-get($desktop, fontSize) {
+    --#{$typeKey}-font-size: #{map-get($mobile, fontSize)};
+  } @else {
+    --#{$typeKey}-font-size: clamp(
+      #{map_get($mobile, fontSize)},
+      #{fluid-clamp-ideal(
+          map_get($mobile, fontSize),
+          map_get($desktop, fontSize),
+          $min-vw,
+          $max-vw
+        )},
+      #{map_get($desktop, fontSize)}
+    );
+  }
+
+  --#{$typeKey}-font-weight: #{map_get($values, fontWeight)};
+
+  @if map-get($values, letterSpacing) {
+    --#{$typeKey}-letter-spacing: #{map-get($values, letterSpacing)};
+  } @else if map-get($mobile, letterSpacing) == map-get($desktop, letterSpacing) {
+    --#{$typeKey}-letter-spacing: #{map-get($mobile, letterSpacing)};
+  } @else {
+    --#{$typeKey}-letter-spacing: clamp(
+      #{map-get($mobile, letterSpacing)},
+      #{fluid-clamp-ideal(
+          map_get($mobile, letterSpacing),
+          map_get($desktop, letterSpacing),
+          $min-vw,
+          $max-vw
+        )},
+      #{map-get($desktop, letterSpacing)}
+    );
+  }
+
+  @if map-get($values, lineHeight) {
+    --#{$typeKey}-line-height: #{map-get($values, lineHeight)};
+  } @else if map-get($mobile, lineHeight) == map-get($desktop, lineHeight) {
+    --#{$typeKey}-line-height: #{map-get($mobile, lineHeight)};
+  } @else {
+    --#{$typeKey}-line-height: clamp(
+      #{map-get($mobile, lineHeight)},
+      #{fluid-clamp-ideal(
+          map_get($mobile, lineHeight),
+          map_get($desktop, lineHeight),
+          $min-vw,
+          $max-vw
+        )},
+      #{map-get($desktop, lineHeight)}
+    );
+  }
+
+  @if map-get($values, textTransform) {
+    --#{$typeKey}-text-transform: #{map-get($values, textTransform)};
+
+    @if map-get($values, textTransform) == uppercase {
+      --#{$typeKey}-font-family: var(--font-heading);
+    } @else {
+      --#{$typeKey}-font-family: var(--font-base);
+    }
+  } @else if
+    $kind ==
+    heading or
+    $kind ==
+    capsCopy or
+    $kind ==
+    overline or
+    $kind ==
+    tag or
+    $kind ==
+    button
+  {
+    --#{$typeKey}-font-family: var(--font-heading);
+    --#{$typeKey}-text-transform: uppercase;
+  } @else {
+    --#{$typeKey}-font-family: var(--font-base);
+    --#{$typeKey}-text-transform: none;
+  }
+
+  @if $kind == body {
+    @if map_get($values, fontSize) {
+      --#{$typeKey}-ar-font-size: clamp(
+        #{map_get($values, fontSize)},
+        #{fluid-clamp-ideal(map_get($values, fontSize), map_get($ar, fontSize), $min-vw, $max-vw)},
+        #{map_get($ar, fontSize)}
+      );
+    } @else {
+      --#{$typeKey}-ar-font-size: clamp(
+        #{map_get($mobile, fontSize)},
+        #{fluid-clamp-ideal(map_get($mobile, fontSize), map_get($ar, fontSize), $min-vw, $max-vw)},
+        #{map_get($ar, fontSize)}
+      );
+    }
+    --#{$typeKey}-ar-line-height: #{map-get($ar, lineHeight)};
+    --#{$typeKey}-ar-letter-spacing: 0;
+  }
+}
+
+@mixin type($kind, $variant, $min-vw: 480px, $max-vw: 1440px) {
+  $typeKey: type-#{$kind}-#{$variant};
+  $typeKeyAr: #{$typeKey}-ar;
+
+  font-size: var(--#{$typeKey}-font-size);
+  font-weight: var(--#{$typeKey}-font-weight);
+  letter-spacing: var(--#{$typeKey}-letter-spacing);
+  line-height: var(--#{$typeKey}-line-height);
+  font-family: var(--#{$typeKey}-font-family);
+  text-transform: var(--#{$typeKey}-text-transform);
+
+  @if $kind == body {
+    [lang="ar"] & {
+      font-size: var(--#{$typeKeyAr}-font-size);
+      line-height: var(--#{$typeKeyAr}-line-height);
+      letter-spacing: var(--#{$typeKeyAr}-letter-spacing);
+    }
+  }
+}
+
+@mixin loopVars($typeMap) {
+  @each $kindKey in map-keys($typeMap) {
+    @each $variantKey in map-keys(map-get($typeMap, $kindKey)) {
+      @include typeVars($typeMap, $kindKey, $variantKey);
+    }
+  }
+}

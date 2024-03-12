@@ -1,0 +1,19 @@
+.a-countrySelect {
+  @include customSelect();
+
+  &__flag {
+    @include size(16px, 14px);
+
+    object-fit: contain;
+    margin-block-end: 2px;
+    margin-inline-end: 10px;
+  }
+
+  &__countryName {
+    flex-basis: 100%;
+  }
+
+  &__rawValue {
+    text-align: end;
+  }
+}

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          scrollComponent="{Boolean}true">
+  <mainHeading
+      jcr:primaryType="nt:unstructured"
+      text="Powering the &lt;strong&gt;future&lt;/strong&gt; through"/>
+  <header
+      jcr:primaryType="nt:unstructured">
+    <heading
+        jcr:primaryType="nt:unstructured"
+        text="&lt;p&gt;Powering the&lt;/p&gt; &lt;p&gt;&lt;strong&gt;future&lt;/strong&gt;&lt;/p&gt; "/>
+  </header>
+  <padding
+      jcr:primaryType="nt:unstructured"/>
+  <items
+      jcr:primaryType="nt:unstructured">
+    <item0
+        jcr:primaryType="nt:unstructured">
+      <content
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p&gt;Hyper-scale secure data centers at scale will allow us to process consent-collected information in pioneering ways. Our processing capabilities will be able to support any level of data need, while maintaining world-leading energy efficiency standards.&lt;/p&gt; ">
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c83-interactive-overview/Tonomus_3.png"/>
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="Energy-efficient, hyper-scale, secure data centers "/>
+      </content>
+    </item0>
+    <item1
+        jcr:primaryType="nt:unstructured">
+      <content
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p&gt;5G and high-speed fiber are essential for faster, low-latency, and secure connectivity within a cognitive ecosystem. By ensuring hyperconnectivity acoss NEOM and beyond, we will be able to move faster in our mission to accelerate the human experience with technology.&lt;/p&gt; ">
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c83-interactive-overview/Tonomus_2.png"/>
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="Secure 5G hyperconnectivity and high-speed fiber"/>
+      </content>
+    </item1>
+    <item2
+        jcr:primaryType="nt:unstructured">
+      <content
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p&gt;We&#39;re transcending the limits of traditional technology—building the world’s first, mixed-reality digital twin metaverse which will decrease financial risk, reduce time-to-market, and accelerate revenue streams.&lt;/p&gt; ">
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c83-interactive-overview/Tonomus_1.png"/>
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="Metaverse, artificial Intelligence, and advanced robotics"/>
+      </content>
+    </item2>
+    <item3
+        jcr:primaryType="nt:unstructured">
+      <content
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p&gt;To help enterprises quickly find and purchase high-quality data, we’re developing a powerful platform that enables discovery and sharing—and gives organizations a competitive edge.&lt;/p&gt; ">
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c83-interactive-overview/Tonomus_8.png"/>
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="Powerful data discovery and sharing platforms"/>
+      </content>
+    </item3>
+    <item4
+        jcr:primaryType="nt:unstructured">
+      <content
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p&gt;Our responsible protocols will give users more data transparency while providing companies with advanced insights and automated systems for complying with data usage laws.&lt;/p&gt; ">
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c83-interactive-overview/Tonomus_4.png"/>
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="Data privacy, consent, and seamless consumer experiences"/>
+      </content>
+    </item4>
+    <item5
+        jcr:primaryType="nt:unstructured">
+      <content
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p&gt;The acceleration of human progress should not leave anyone behind. Our cognitive ecosystem will be accessible to all, allowing entrepreneurs and organizations to make their ideas reality.&lt;/p&gt; ">
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c83-interactive-overview/Tonomus_5.png"/>
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="Inclusive innovation and start-up ecosystems"/>
+      </content>
+    </item5>
+    <item6
+        jcr:primaryType="nt:unstructured">
+      <content
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p&gt;To achieve our goals, we must be able to analyze our progress. Insightful analytics and flexible systems will help us capitalize on the limitless potential of cognitive technology.&lt;/p&gt; ">
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c83-interactive-overview/Tonomus_6.png"/>
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="Intelligent analytics and scalable systems"/>
+      </content>
+    </item6>
+    <item7
+        jcr:primaryType="nt:unstructured">
+      <content
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p&gt;We’re creating the world&#39;s first real-time situational analysis and prediction platform, backed by a marketplace of AI algorithms and data models.&lt;/p&gt; ">
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="alt text"
+            src="/content/dam/tonomus/components/c83-interactive-overview/Tonomus_7.png"/>
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="AI-powered, large-scale situational insights"/>
+      </content>
+    </item7>
+  </items>
+</jcr:root>

@@ -1,0 +1,17 @@
+active: true
+
+heading:
+  size: 'h6'
+  element: 'h2'
+  text: 'REGISTRATION'
+
+copy:
+  content: 'Submit your teams Hackathon application.'
+  size: 'small'
+
+button:
+  href: '/content/neom/en-us'
+  target: '_blank'
+  size: 'small'
+  theme: 'gold'
+  label: 'Sign up'

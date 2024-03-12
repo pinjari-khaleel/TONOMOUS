@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="./a11-checkbox.scss">
+<script src="./A11Checkbox.ts"></script>
+
+<div class="a-checkbox{{#if checked}} -isChecked{{/if}}{{#if disabled}} -isDisabled{{/if}}" data-component="a11-checkbox">
+  <input class="a-checkbox__input"
+         {{#if checked}}checked{{/if}}
+         {{#if disabled}}disabled{{/if}}
+         {{#with id}}id="{{this}}" data-{{this}}{{/with}}
+         {{#with name}}name="{{this}}"{{/with}}
+         type="checkbox"
+         {{#with titleInEnglish}}data-title-in-english="{{this}}"{{/with}}
+         {{#with value}}value="{{this}}"{{/with}}
+  />
+  <span class="a-checkbox__indicator"></span>
+</div>

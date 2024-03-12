@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./m41-country-dropdown.scss">
+<script src="./M41CountryDropdown.ts"></script>
+
+
+<div class="m-countryDropdown" data-component="m41-country-dropdown" {{#if id}} id="{{id}}" {{/if}}
+  data-items="{{toJson items}}">
+  {{#if label}}
+  <label class="m-countryDropdown__textLabel" for="country-dropdown-{{titleInEnglish}}">
+    {{> atom/a07-label text=label size="small" }}
+  </label>
+  {{/if}}
+  {{> atom/a23-country-select }}
+  {{> atom/a15-select }}
+
+  {{> atom/a25-form-error}}
+</div>

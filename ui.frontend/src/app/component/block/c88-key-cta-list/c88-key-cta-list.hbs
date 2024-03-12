@@ -1,0 +1,39 @@
+
+
+<section class="b-keyCtaList"
+  data-component="c88-key-cta-list"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with padding}}
+    style="--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};"
+  {{/with}}
+  data-lazy-component
+>
+  <div class="b-keyCtaList__content">
+    {{#with heading}}
+      {{> atom/a03-heading }}
+    {{/with}}
+
+    {{#with text}}
+      <div class="b-keyCtaList__text s-content" data-list-text>{{{this}}}</div>
+    {{/with}}
+  </div>
+
+  <ul class="b-keyCtaList__list">
+    {{#each list}}
+      <li class="b-keyCtaList__listItem">
+        <button class="b-keyCtaList__cta" data-cta-item>
+          <div class="b-keyCtaList__ctaLabel">
+            <span>{{text}}</span>
+
+            {{> atom/a02-icon name=icon }}
+          </div>
+          {{#with description}}
+            <div class="b-keyCtaList__ctaDescription">{{this}}</div>
+          {{/with}}
+        </button>
+      </li>
+    {{/each}}
+  </ul>
+</section>

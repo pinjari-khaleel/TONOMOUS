@@ -1,0 +1,52 @@
+scrollComponent: true
+id: 'c80-dynamic-quote'
+padding:
+  start: 'large'
+nextQuoteCTALabel: 'Next quote'
+items:
+  - quote:
+      heading:
+        text: 'Smart amplifies machines. Cognitive amplifies us. 1'
+    active: true
+    image:
+      src: 'image/gavin-van-tonder-main.jpg'
+      alt: 'Photo of Joseph Bradley'
+    content:
+      'Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our
+      workforce is diverse: talented people from 38 countries who have delivered breakthrough
+      solutions to top organizations around the world. Together we’re harnessing the power of
+      cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch
+      every aspect of life. We have a built-in customer base within NEOM, our largest customer,
+      providing us with a playground to test new ideas and build the world’s first truly cognitive
+      city. We will share the human-centric technology we build here with the rest of the world,
+      creating a sustainable, accessible future that revolves around us all.'
+    shareQuoteButton: 'import!./share.yaml'
+  - quote:
+      heading:
+        text: 'Smart amplifies machines. Cognitive amplifies us. 2'
+    image:
+      src: 'image/joseph_bradley.jpg'
+      alt: 'Photo of Joseph Bradley'
+    content:
+      'Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our
+      workforce is diverse: talented people from 38 countries who have delivered breakthrough
+      solutions to top organizations around the world. Together we’re harnessing the power of
+      cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch
+      every aspect of life.'
+    shareQuoteButton: 'import!./share.yaml'
+  - quote:
+      heading:
+        text: 'Smart amplifies machines. Cognitive amplifies us. 3'
+    image:
+      src: 'image/gavin-van-tonder-main.jpg'
+      alt: 'Photo of Joseph Bradley'
+    content:
+      'Tonomus is a community of visionary catalysts. Our leadership team is multinational, and our
+      workforce is diverse: talented people from 38 countries who have delivered breakthrough
+      solutions to top organizations around the world. Together we’re harnessing the power of
+      cognitive technology to build an ecosystem of disruptive, sustainable solutions that touch
+      every aspect of life. We have a built-in customer base within NEOM, our largest customer,
+      providing us with a playground to test new ideas and build the world’s first truly cognitive
+      city. We will share the human-centric technology we build here with the rest of the world,
+      creating a sustainable, accessible future that revolves around us all.'
+    shareQuoteButton: 'import!./share.yaml'

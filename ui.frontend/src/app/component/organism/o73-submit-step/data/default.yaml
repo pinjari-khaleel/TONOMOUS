@@ -1,0 +1,30 @@
+background:
+  disableTransition: true
+  image:
+    alt: '#'
+    src: 'image/c54-countdown-timer/oxagon.jpeg'
+    # disableTransition: true
+success:
+  eyebrow:
+    text: success eyebrow
+    size: medium
+  heading:
+    text: Success heading
+    size: h4
+    element: h4
+  copy:
+    size: medium
+    content:
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ex magni dolorem officia iste
+      obcaecati vel cum impedit ut mollitia?
+error:
+  eyebrow:
+    text: Error eyebrow
+  heading:
+    text: Error heading
+    size: h4
+    element: h4
+
+buttons:
+  done: true
+  retry: true

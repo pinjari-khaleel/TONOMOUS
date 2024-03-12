@@ -1,0 +1,28 @@
+scrollComponent: true
+direction: column
+
+heading:
+  text: Downloads
+
+downloads:
+  title: Downloads
+  items:
+    - heading:
+        text: 'Full media pack Arabic'
+        element: h3
+      description: 'Full brochure, Fact sheet, Infographics and more.'
+      image:
+        src: 'image/c30-downloads/promo-pack.jpg'
+      link:
+        label: ZIP file 3MB
+        href: 'downloads/download-placeholder.zip'
+
+    - heading:
+        text: 'Full media pack English'
+        element: h3
+      description: 'Full brochure, Fact sheet, Infographics and more.'
+      image:
+        src: 'image/c30-downloads/investor-pack.jpg'
+      link:
+        label: ZIP file 30MB
+        href: 'downloads/download-placeholder.zip'

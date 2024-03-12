@@ -1,0 +1,32 @@
+.m-multipleCopy {
+  --eyebrow-text-color: var(--component-highlight-color);
+  --moustache-text-color: var(--component-highlight-color);
+  --icon-fill: var(--component-highlight-color);
+  --icon-size: 80px;
+
+  .a-eyebrow {
+    margin: 0 0 30px;
+  }
+
+  .a-moustache {
+    margin-top: 30px;
+  }
+
+  * ~ .m-multipleCopy__content {
+    margin: 30px 0 0;
+
+    &.-highlight {
+      color: var(--component-highlight-color);
+    }
+
+    &.-uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  .s-content {
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

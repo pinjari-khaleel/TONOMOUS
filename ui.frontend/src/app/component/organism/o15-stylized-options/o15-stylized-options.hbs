@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="./o15-stylized-options.scss">
+<script src="./O15StylizedOptions.ts"></script>
+
+
+<div class="o-stylizedOptions{{#with type}} -{{this}}{{/with}}" data-component="o15-stylized-options">
+  <fieldset class="o-stylizedOptions__fieldset" {{#if validate}} data-validate="{{toJson validate}}" {{/if}} {{#with
+    id}} id="{{this}}" {{/with}}>
+    <div class="o-stylizedOptions__container">
+      {{#if legend}}
+      {{> atom/a26-fieldset-legend legend=legend.text required=required variant=legend.variant}}
+      {{/if}}
+      <ul class="o-stylizedOptions__items">
+        {{#each items}}
+        <li class="o-stylizedOptions__item">
+          {{#if (condition ../type '===' 'radioStylized')}}
+          {{>molecule/m52-stylized-option type="radio"}}
+          {{^}}
+          {{>molecule/m52-stylized-option type="checkbox"}}
+          {{/if}}
+        </li>
+        {{/each}}
+        {{#if (condition type '===' 'checkboxStylized')}}
+        {{#with showDropdownForMultipleChoice}}
+        {{#unless multiselect}}
+        <li class="o-stylizedOptions__item -optionalSelect{{#if wide}} -wide{{/if}}">
+          {{>molecule/m31-dropdown-field blockValidation=true}}</li>
+        {{/unless}}
+        {{/with}}
+        {{/if}}
+        {{#with showTextareaForOtherChoice}}
+        <li class="o-stylizedOptions__item -optionalTextarea{{#if wide}} -wide{{/if}}">
+          {{>molecule/m30-text-field type='textarea' blockValidation=true disabled=true}}</li>
+        {{/with}}
+      </ul>
+      {{> atom/a25-form-error name=name}}
+    </div>
+  </fieldset>
+  {{#if (condition type '===' 'checkboxStylized')}}
+  {{#with showDropdownForMultipleChoice}}
+  {{#if multiselect}}
+  <div class="o-stylizedOptions__item -optionalMultiselect{{#if wide}} -wide{{/if}}">
+    {{> organism/o80-multiselect-dropdown blockValidation=true }}</div>
+  {{/if}}
+  {{/with}}
+  {{/if}}
+</div>

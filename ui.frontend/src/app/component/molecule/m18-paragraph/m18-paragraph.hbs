@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="./m18-paragraph.scss">
+<script src="./M18Paragraph.ts"></script>
+
+<div class="m-paragraph" data-component="m18-paragraph">
+  {{#if (condition icon '||' image)}}
+    <div class="m-paragraph__asset{{#if image}} -image{{/if}}{{#if image.type}} -{{image.type}}{{/if}}{{#if alignAsset}} -{{alignAsset}}{{/if}}" data-slide-in>
+      {{#if image}}
+        {{> atom/a01-image image variant="block" disableTransition=true }}
+      {{else if icon}}
+        {{> atom/a02-icon name=icon }}{{/if}}
+    </div>
+  {{/if}}
+  {{#with eyebrow}}{{> atom/a04-eyebrow this }}{{/with}}
+  {{#with heading}}
+  <div class="m-paragraph__heading" data-paragraph-heading>
+    {{> atom/a03-heading this }}
+  </div>
+  {{/with}}
+  {{#with moustache}}{{> atom/a05-moustache this }}{{/with}}
+  {{#with copy}}
+  <div class="m-paragraph__content s-content{{#if size}} -{{size}}{{^}} -medium{{/if}}" data-paragraph-content>
+    {{{ content }}}
+  </div>
+  {{/with}}
+</div>

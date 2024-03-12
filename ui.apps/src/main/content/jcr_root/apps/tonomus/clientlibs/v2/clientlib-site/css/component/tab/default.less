@@ -1,0 +1,42 @@
+.cmp-tabs {
+  position: relative;
+
+  &__tablist {
+    display: flex;
+    gap: 2.5rem;
+    padding-inline: var(--component-padding-inline);
+    margin-block-end: 5rem;
+    overflow: scroll;
+    flex-wrap: nowrap;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    min-height: 66px;
+    align-items: center;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__tab {
+    .label1();
+    .regular();
+    cursor: pointer;
+    text-transform: uppercase;
+    color: var(--color-gray-4);
+    padding: 0;
+    padding-block-end: 0.5rem;
+    position: relative;
+    background-image: var(--gradient-underline);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 0% 3px;
+
+    &--active {
+      .bold();
+      border-bottom: 2.667px solid var(--color-tonomus-green-300);
+      color: var(--color-black);
+      background-size: 100% 3px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.m-stylizedOption {
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    padding-inline-start: 35px;
+    border: solid 2px var(--color-cream);
+    background: var(--color-white);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s ease-out;
+
+    &:hover {
+      border-color: var(--color-gold);
+    }
+
+    &.-isChecked {
+      border-color: var(--color-dark-gold);
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__textLabel {
+    @include type("body", "medium");
+  }
+
+  &__imageWrapper {
+    @include size(80px);
+
+    position: relative;
+    justify-self: end;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,19 @@
+.a-recaptcha {
+  margin: 20px 0;
+
+  &__statement {
+    @include type("body", "small");
+
+    a {
+      color: var(--component-highlight-color);
+
+      @include hover() {
+        color: var(--component-highlight-color-hover);
+      }
+    }
+  }
+
+  .grecaptcha-badge {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,48 @@
+<style>
+  html,
+  body {
+    overflow: initial !important;
+  }
+  html {
+    background: var(--color-storybook-background, var(--color-page-background)) !important;
+  }
+  body {
+    background: transparent !important;
+    height: initial !important;
+  }
+
+  .u-container {
+    margin-inline: auto;
+    max-width: 1440px;
+    padding-inline: var(--container-margin);
+    box-sizing: content-box;
+  }
+
+  .u-imageRatio {
+    max-width: 420px;
+    position: relative;
+  }
+  .u-imageRatio::before {
+    content: '';
+    display: block;
+    height: 0;
+    padding: 0 0 var(--ratio-height);
+  }
+  .u-imageRatio.-square {
+    --ratio-height: 100%;
+  }
+  .u-imageRatio.-widescreen {
+    --ratio-height: 56.25%;
+  }
+  .u-imageRatio.-portrait {
+    --ratio-height: 125%;
+  }
+  .u-imageRatio.-landscape {
+    --ratio-height: 66.66667%;
+  }
+  .u-imageRatio.-circle {
+    --ratio-height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+</style>

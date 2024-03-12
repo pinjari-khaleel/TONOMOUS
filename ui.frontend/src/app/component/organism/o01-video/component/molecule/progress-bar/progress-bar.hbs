@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="./progress-bar.scss">
+<script src="./ProgressBar.ts"></script>
+
+<div class="m-progressBar" data-component="progress-bar" aria-hidden="true">
+  <div class="m-progressBar__wrapper">
+    <div class="m-progressBar__initialProgress"></div>
+    <div class="m-progressBar__currentProgress" data-current-progress-bar></div>
+    <div class="m-progressBar__selectedProgress" data-selected-progress-bar></div>
+  </div>
+  {{> atom/a09-time-indicator variant="tooltip"}}
+
+</div>

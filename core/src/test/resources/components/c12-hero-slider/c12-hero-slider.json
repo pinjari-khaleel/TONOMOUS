@@ -1,0 +1,282 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Wed Oct 20 2021 11:45:13 GMT+0600",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:mixinTypes": [
+      "mix:versionable"
+    ],
+    "changefreq": "weekly",
+    "jcr:createdBy": "admin",
+    "jcr:title": "hero-dummy",
+    "cq:lastReplicationAction": "Deactivate",
+    "jcr:versionHistory": "fb1e9ca0-6d6a-4c5f-8b33-ff6fb1c7f408",
+    "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+    "cq:lastReplicatedBy": "anas.afadar@mediamonks.com",
+    "jcr:predecessors": [
+      "7745b230-e672-420d-be28-dc2395f7b645"
+    ],
+    "jcr:created": "Wed Oct 20 2021 11:45:13 GMT+0600",
+    "cq:lastReplicated": "Mon Jun 21 2021 08:08:39 GMT+0000",
+    "cq:lastModified": "Fri Oct 22 2021 17:22:21 GMT+0600",
+    "siteSection": "home",
+    "jcr:baseVersion": "7745b230-e672-420d-be28-dc2395f7b645",
+    "jcr:isCheckedOut": true,
+    "jcr:uuid": "841b07af-8dea-45b7-8e9b-0d679e0043c7",
+    "sling:resourceType": "neom/components/structure/page",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c12_hero_slider": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Fri Oct 22 2021 12:33:48 GMT+0600",
+          "jcr:lastModified": "Fri Oct 22 2021 17:22:21 GMT+0600",
+          "sling:resourceType": "neom/components/content/components/c12-hero-slider/v1/c12-hero-slider",
+          "items": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+              "jcr:primaryType": "nt:unstructured",
+              "scrollButton": "true",
+              "alignHorizontal": "start",
+              "alignVertical": "bottom",
+              "showGoBackLink":"showLink",
+              "link": {
+                "jcr:primaryType":"nt:unstructured",
+                "href":"/content/neom/en-us",
+                "label":"Go back to Home"
+              },
+              "background": {
+                "jcr:primaryType": "nt:unstructured",
+                "transitionDirection": "left",
+                "image": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "alt": "Background Image Alt Text",
+                  "src": "/content/dam/neom/components/c22-hero-component/neom_image.jpg"
+                },
+                "video": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "props": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sources": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "src": "/content/dam/neom/newsroom/Clip 2 - No Audio.mp4"
+                      }
+                    }
+                  }
+                }
+              },
+              "content": {
+                "jcr:primaryType": "nt:unstructured",
+                "header": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "heading": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "size": "h3",
+                    "text": "C12 Hero Slider Component Heading"
+                  },
+                  "eyebrow": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "size": "medium",
+                    "text": "C12 Hero Slider Component Eyebrow"
+                  }
+                },
+                "video": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "props": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sources": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "src": "/content/dam/neom/newsroom/Clip 2 - No Audio.mp4"
+                      }
+                    }
+                  }
+                },
+                "buttons": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "icon": "play",
+                    "level": "primary",
+                    "theme": "white",
+                    "variant": "play",
+                    "videoType": "dam",
+                    "video": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "props": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "youtube": "u9n7Cw-4_HQ",
+                        "loop": "false",
+                        "muted": "false",
+                        "disablePreload": "true",
+                        "originalHeight": "9",
+                        "autoplay": "false",
+                        "originalWidth": "16",
+                        "eventTracking": {
+                          "jcr:primaryType": "nt:unstructured",
+                          "event": "video_start",
+                          "video": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "titleInEnglish": "THE RACE TO A NEW FUTURE IS ON"
+                          }
+                        },
+                        "sources": {
+                          "jcr:primaryType": "nt:unstructured",
+                          "item0": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "src": "/content/dam/neom/home/video-homepage.mp4"
+                          }
+                        },
+                        "controls": {
+                          "jcr:primaryType": "nt:unstructured",
+                          "playPause": "true",
+                          "seek": "true",
+                          "fullscreen": "true"
+                        }
+                      }
+                    }
+                  },
+                  "item1": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "href": "/content/neom/en-us",
+                    "icon": "arrow-right",
+                    "label": "Find out more",
+                    "level": "secondary",
+                    "theme": "white",
+                    "videoType": "dam",
+                    "video": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "props": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "loop": "false",
+                        "muted": "false",
+                        "disablePreload": "true",
+                        "originalHeight": "9",
+                        "autoplay": "true",
+                        "originalWidth": "16",
+                        "eventTracking": {
+                          "jcr:primaryType": "nt:unstructured",
+                          "event": "video_start",
+                          "video": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "titleInEnglish": "Title in English "
+                          }
+                        },
+                        "controls": {
+                          "jcr:primaryType": "nt:unstructured",
+                          "playPause": "true",
+                          "seek": "true",
+                          "fullscreen": "true"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "item1": {
+              "jcr:primaryType": "nt:unstructured",
+              "scrollButton": "true",
+              "alignHorizontal": "start",
+              "alignVertical": "bottom",
+              "showGoBackLink":"showLink",
+              "link": {
+                "jcr:primaryType":"nt:unstructured",
+                "href":"/content/neom/en-us",
+                "label":"Go back to Home"
+              },
+              "background": {
+                "jcr:primaryType": "nt:unstructured",
+                "transitionDirection": "left",
+                "image": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "alt": "Background Image Alt Text",
+                  "src": "/content/dam/neom/newsroom/tabuk-fish-and-neom/moe.jpg"
+                },
+                "video": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "props": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sources": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "item0": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "src": "/content/dam/neom/home/NEOM Home Preview loop.mp4"
+                      }
+                    }
+                  }
+                }
+              },
+              "content": {
+                "jcr:primaryType": "nt:unstructured",
+                "header": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "heading": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "size": "h3",
+                    "text": "The race to a new future is on"
+                  },
+                  "eyebrow": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "size": "medium",
+                    "text": "The race to a new future is on"
+                  }
+                },
+                "buttons": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "item0": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "target": "_blank",
+                    "icon": "play",
+                    "level": "primary",
+                    "theme": "white",
+                    "variant": "play",
+                    "videoType": "dam",
+                    "video": {
+                      "jcr:primaryType": "nt:unstructured",
+                      "props": {
+                        "jcr:primaryType": "nt:unstructured",
+                        "loop": "false",
+                        "muted": "false",
+                        "disablePreload": "true",
+                        "originalHeight": "9",
+                        "autoplay": "false",
+                        "originalWidth": "16",
+                        "eventTracking": {
+                          "jcr:primaryType": "nt:unstructured",
+                          "event": "video_start",
+                          "video": {
+                            "jcr:primaryType": "nt:unstructured",
+                            "titleInEnglish": "Title in English"
+                          }
+                        },
+                        "controls": {
+                          "jcr:primaryType": "nt:unstructured",
+                          "playPause": "true",
+                          "seek": "true",
+                          "fullscreen": "true"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

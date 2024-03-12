@@ -1,0 +1,11 @@
+name: 'example-select-1'
+placeholder: 'Please select one...'
+required: true
+label: 'Choose your hello world'
+items:
+  - label: 'Hello world'
+    value: '1234'
+  - label: 'Hallo world'
+    value: '4567'
+  - label: 'Hullo world'
+    value: '6789'

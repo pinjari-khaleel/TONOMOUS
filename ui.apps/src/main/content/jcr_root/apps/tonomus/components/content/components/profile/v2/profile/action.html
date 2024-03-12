@@ -1,0 +1,11 @@
+<sly data-sly-template.action="${@ action, index, icons}">
+    <a class="cmp-profile__action-link"
+       data-sly-attribute="${action.link.htmlAttributes}"
+       data-sly-unwrap="${!action.link.valid}"
+       id="${action.id}"
+       data-cmp-data-layer="${action.data.json}"
+       data-cmp-clickable="${action.data ? true : false}">
+       <img data-sly-test.isIconCTA="${icons.size > 0}" src="${icons[index]}" alt="${action.title || ''}" loading='lazy' />
+       ${!isIconCTA ? action.title : ''}
+   </a>
+</sly>

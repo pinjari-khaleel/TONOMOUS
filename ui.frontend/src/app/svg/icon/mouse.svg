@@ -1,0 +1,4 @@
+<svg viewBox="0 0 18 26" xmlns="http://www.w3.org/2000/svg">
+    <path fill="none" clip-rule="evenodd" d="M9 25v0c-4.4 0-8-3.6-8-8V9c0-4.4 3.6-8 8-8v0c4.4 0 8 3.6 8 8v8c0 4.4-3.6 8-8 8z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="mouse-drop" d="M9 7.667v4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

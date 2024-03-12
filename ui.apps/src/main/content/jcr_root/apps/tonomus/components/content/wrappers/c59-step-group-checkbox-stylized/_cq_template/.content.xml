@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          type="checkboxStylized"
+          name="category_interest_2"
+          id="category_interest_2"
+          required="{Boolean}true">
+  <validate jcr:primaryType="nt:unstructured">
+    <presence
+        jcr:primaryType="nt:unstructured"
+        message="^Please select at least one"/>
+  </validate>
+  <fieldsetLegend
+      jcr:primaryType="nt:unstructured"
+      text="I work in (tick one)"
+  />
+  <showDropdownForMultipleChoice
+      jcr:primaryType="nt:unstructured"
+      id="extraChoice"
+      label="Extra choice"
+      name="extraChoice"
+      placeholder="Select"
+      required="true"
+      wide="false">
+    <validate jcr:primaryType="nt:unstructured">
+      <presence
+          jcr:primaryType="nt:unstructured"
+          message="I’m specialized in"/>
+    </validate>
+    <items jcr:primaryType="nt:unstructured">
+      <item0
+          jcr:primaryType="nt:unstructured"
+          label="Foo"
+          value="foo-1"/>
+      <item1
+          jcr:primaryType="nt:unstructured"
+          label="Bar-1"
+          value="bar-1"/>
+      <item2
+          jcr:primaryType="nt:unstructured"
+          label="Baz"
+          value="baz-1"/>
+    </items>
+  </showDropdownForMultipleChoice>
+  <m52_stylized_checkbo
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/wrappers/m52-stylized-checkbox"
+      checked="false"
+      id="category_interest_2"
+      label="Food &amp; drink"
+      name="category_interest_2"
+      required="false"
+      titleInEnglish="Food &amp; drink"
+      type="checkbox"
+      value="food &amp; drink">
+    <image
+        jcr:primaryType="nt:unstructured"
+        alt="аа"
+        src="/content/dam/neom/components/c67-scroll-stories/story-8.jpg"/>
+  </m52_stylized_checkbo>
+</jcr:root>

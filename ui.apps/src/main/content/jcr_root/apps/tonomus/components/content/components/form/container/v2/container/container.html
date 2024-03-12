@@ -1,0 +1,26 @@
+<sly data-sly-use.formcontainer="com.tonomus.core.slingmodels.components.v2.form.ContainerModel"
+	 data-sly-use.pretitleTemplate="pretitle.html"
+     data-sly-use.titleTemplate="title.html"
+     data-sly-use.descriptionTemplate="description.html"></sly>
+
+<sly data-sly-call="${pretitleTemplate.pretitle @ pretitle=formcontainer.pretitle}"></sly>
+<sly data-sly-call="${titleTemplate.title @ title=formcontainer.title}"></sly>
+<sly data-sly-call="${descriptionTemplate.description @ description=formcontainer.description}"></sly>
+<form data-sly-set.container="${formcontainer.container}"
+      data-sly-use.grid="com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid"
+      method="${container.method}" action="${formcontainer.actionPath}" id="${container.id}" name="${container.name}"
+      enctype="${container.enctype}"
+      data-redirect="${formcontainer.redirect @ extension='html'}"
+      class="cmp-form ${grid.cssClass}">
+    <div data-sly-test="${container.errorMessages}"
+         data-sly-list.item="${container.errorMessages}"
+         class="cmp-form-error">
+        <p class="cmp-form-error__item">${item}</p>
+    </div>
+	<input type="hidden" name="form_id" value="${container.id}"/>
+    <input type="hidden" name="lang_code" value="${formcontainer.languageCode}"/>
+    <sly data-sly-repeat.paragraph="${grid.paragraphs}"
+         data-sly-resource="${paragraph.path @ resourceType=paragraph.resourceType, decorationTagName='div', cssClassName=paragraph.cssClass}"></sly>
+    <sly data-sly-resource="${resource.path @ resourceType=container.resourceTypeForDropArea, appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"
+         data-sly-test="${wcmmode.edit || wcmmode.preview}"></sly>
+</form>

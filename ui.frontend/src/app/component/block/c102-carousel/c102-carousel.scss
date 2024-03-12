@@ -1,0 +1,158 @@
+.b-carousel {
+  --component-background-color: transparent;
+  --component-text-color: var(--color-tonomus-purple);
+  // --card-size: 1164px;
+  --card-spacing: 24px;
+
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+  color: var(--component-text-color);
+  overflow: hidden;
+  background-color: var(--component-background-color);
+  width: calc(100% + 31px);
+  display: grid;
+
+  &__content {
+    position: relative;
+    height: 690px;
+    overflow-x: hidden;
+  }
+
+  &__carousel {
+    position: relative;
+    white-space: nowrap;
+    display: inline-flex;
+  }
+
+  &__carouselItem {
+    display: inline-block;
+    transform-origin: top center;
+    // width: var(--card-size);
+    white-space: normal;
+  }
+
+  &__controls {
+    position: absolute;
+    right: auto;
+    padding-inline-end: 43px;
+
+
+  }
+  @include respond-to(XSMALL) {
+    &__controls {
+      visibility: hidden;
+    }
+  }
+  @include respond-to(MEDIUM) {
+
+    &__header {
+      padding-inline: 0;
+    }
+
+    .m-imagePagination {
+      display: block;
+    }
+
+    &__carouselItem {
+      // width: var(--card-size);
+      max-height: 688px;
+    }
+
+    &__controls {
+      position: absolute;
+      // top: calc(var(--card-size) + 130px);
+      right: 40px;
+
+      [dir="rtl"] & {
+        right: auto;
+        left: 180px;
+      }
+    }
+  }
+
+  @include respond-to(LARGE) {
+    padding-inline: 0;
+
+    &__header {
+      padding-inline: 0;
+    }
+
+    &__carouselItem {
+      max-height: 850px;
+    }
+  }
+
+  @media (min-width: 1720px) {
+    width: 1720px;
+    
+  }
+
+  @include theme("tonomus") {
+    --component-heading-color: var(--color-tonomus-purple);
+    --component-highlight-color: var(--color-tonomus-purple);
+    --grid-gap: 10px;
+    --card-spacing: 24px;
+
+    .m-button.-primary {
+      --button-background-color-hover: var(--color-tonomus-purple);
+      --button-text-color-hover: var(--color-white);
+    }
+    .m-button .ripple {
+      background: var(--color-tonomus-purple);
+    }
+
+    &__controls {
+      .o-sliderControls {
+        grid-gap: 16px;
+        width: 128px;
+        .m-button.-primary {
+          --button-size: 56px;
+          --button-icon-size: 21px;
+          --button-border-radius: 50%;
+          --button-background-color: var(--color-tonomus-purple);
+          --button-border-color: var(--color-tonomus-purple);
+          --button-text-color: var(--color-white);
+
+          &:disabled {
+            --button-background-color: var(--color-tonomus-purple);
+            --button-background-color-disabled: var(--color-tonomus-purple);
+            --button-border-color-disabled: var(--color-tonomus-purple);
+            --button-text-color-disabled: var(--color-white);
+            .m-button__container {
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.cmp-c102-carousel {
+  .b-carousel > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    .b-carousel__controls {
+      margin-top: 84px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      right: 0;
+      width: 100%;
+
+      &.-isHidden {
+        display: none;
+      }
+
+      .o-sliderControls {
+        align-self: flex-end;
+        padding-block-end: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          scrollComponent="{Boolean}true">
+  <heroSliderItem
+      jcr:primaryType="nt:unstructured"
+      alignHorizontal="start"
+      alignVertical="middle">
+    <content jcr:primaryType="nt:unstructured">
+      <header jcr:primaryType="nt:unstructured">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            size="h2"
+            text="The future is&lt;br /&gt; &lt;strong&gt;Cognitive.&lt;/strong&gt;&lt;br /&gt;The future is&lt;br
+        /&gt;&lt;strong&gt;Tonomus.&lt;/strong&gt;">
+        </heading>
+      </header>
+    </content>
+  </heroSliderItem>
+  <openVideoButton jcr:primaryType="nt:unstructured"
+                   level="primary"
+                   theme="white"
+                   label="Start">
+  </openVideoButton>
+  <playButton jcr:primaryType="nt:unstructured"
+              level="primary"
+              theme="white"
+              variant="play">
+  </playButton>
+</jcr:root>

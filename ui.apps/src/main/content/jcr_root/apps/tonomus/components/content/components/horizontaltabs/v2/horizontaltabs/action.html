@@ -1,0 +1,23 @@
+<sly data-sly-template.action="${@ action, mobile}">
+	<div class="cmp-horizontaltabs__action-container${mobile ? ' cmp-horizontaltabs__action-container--mobile' : ''}">
+        <a class="cmp-horizontaltabs__action-link"
+           data-cmp-clickable="${action.href ? true : false}"
+           data-sly-test="${action.href}"
+       	   href="${action.href}" data-sly-attribute.target="${action.target @ context='attributeName'}"
+           data-sly-attribute.rel="${action.target == '_blank' ? 'noopener' : '' @ context='attributeName'}">${action.label @ context='text'}</a>
+        <button class="cmp-horizontaltabs__previous-button" data-sly-test="${!mobile}">
+            <sly data-sly-use.iconModel="${'com.tonomus.core.slingmodels.components.v2.IconModelImpl' @ path='/content/dam/tonomus/system-resources/arrow-forward.svg'}">
+                <span class="cmp-icon cmp-horizontaltabs__arrow-backward-icon">
+                    ${iconModel.originalAsSvg @ context='unsafe'}
+                </span>
+            </sly>
+            </button>
+            <button class="cmp-horizontaltabs__next-button">
+            <sly data-sly-use.iconModel="${'com.tonomus.core.slingmodels.components.v2.IconModelImpl' @ path='/content/dam/tonomus/system-resources/arrow-forward.svg'}">
+                <span class="cmp-icon cmp-horizontaltabs__arrow-forward-icon">
+                    ${iconModel.originalAsSvg @ context='unsafe'}
+                </span>
+            </sly>
+        </button>
+    </div>    
+</sly>

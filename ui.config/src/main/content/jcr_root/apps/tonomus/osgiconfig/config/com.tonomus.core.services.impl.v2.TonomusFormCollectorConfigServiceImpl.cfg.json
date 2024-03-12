@@ -1,0 +1,10 @@
+{
+    "url":"$[env:TONOMUS_NEOM_FORM_COLLECTOR_URL;default=https://europe-west3-neom-form-collection.cloudfunctions.net/submission]",
+    "siteKey":"$[env:TONOMUS_NEOM_FORM_COLLECTOR_SITE_KEY]",
+    "mandatoryFields":[
+        "form_id",
+        "email",
+        "mc_list_id",
+        "mc_list_status"
+      ]
+}

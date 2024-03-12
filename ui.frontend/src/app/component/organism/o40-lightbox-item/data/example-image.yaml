@@ -1,0 +1,25 @@
+heading:
+  text: 'LONG media title goes in MULTIPLE lines'
+datePublished: May 22
+image:
+  src: 'image/c46-media-list/item1.jpg'
+link:
+  label: DOWNLOAD file 1MB
+  href: 'downloads/download-placeholder1.zip'
+lightbox:
+  image:
+    src: 'image/c46-media-list/item1.jpg'
+  copy:
+    Asian wearing virtual reality goggles with amazing cosmic futuristic space virtual imaging
+    background.
+  information:
+    - label: Credit
+      value: Gory Cummins
+    - label: Album
+      value: Album 4
+    - label: Format
+      value: 2048 x 3072 px
+    - label: Licence Type
+      value: Terms of Usage
+    - label: Uploaded on
+      value: April 26, 2021

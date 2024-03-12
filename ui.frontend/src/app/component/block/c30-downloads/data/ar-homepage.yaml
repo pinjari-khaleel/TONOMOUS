@@ -1,0 +1,21 @@
+scrollComponent: true
+
+downloads:
+  title: تحميل الملفات
+  items:
+    - heading:
+        text: حزمة معلومات نيوم
+        element: h3
+      description: حقائق حول نيوم، كُتيّب نيوم
+      image:
+        src: 'image/c30-downloads/promo-pack.jpg'
+      link:
+        label: ملف مضغوط - 33.2MB
+        href: 'downloads/download-placeholder.zip'
+    - heading: تسجيل المورّدين
+      description: دليل تسجيل المورّدين الجدد، قواعد السلوك الخاصة بالمورّدين، اتفاقية عدم الإفصاح
+      image:
+        src: 'image/c30-downloads/investor-pack.jpg'
+      link:
+        label: ملف مضغوط - 2.6MB
+        href: 'downloads/download-placeholder.zip'

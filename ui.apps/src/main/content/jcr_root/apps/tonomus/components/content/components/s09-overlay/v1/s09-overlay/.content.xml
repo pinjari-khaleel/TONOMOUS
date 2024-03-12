@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          cq:icon="textSizeAdd"
+          jcr:primaryType="cq:Component"
+          jcr:title="S09 Overlay"
+          componentGroup="Tonomus.Structure">
+  <cq:htmlTag
+      jcr:primaryType="nt:unstructured"
+      class="cmp cmp-s09-overlay"/>
+</jcr:root>

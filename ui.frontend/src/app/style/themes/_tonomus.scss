@@ -1,0 +1,47 @@
+@include theme("tonomus", true) {
+  --font-base: #{$tonomusBaseFont};
+  --font-heading: #{$tonomusHeadingFont};
+
+  --button-border-radius: var(--button-size);
+  --button-border-width: 1.5px;
+  --button-font-size: 16px;
+  --button-icon-size: 24px;
+  --button-padding: 40px;
+  --button-size: 60px;
+
+  --color-page-background: var(--color-tonomus-purple-300);
+  --color-page-color: var(--color-white);
+
+  --component-block-padding: 40px;
+  --container-margin: 32px;
+  --grid-gap: 8px;
+  --grid-template-columns: repeat(4, 1fr);
+
+  --modal-text-color: var(--color-tonomus-purple);
+
+  --input-background-color: var(--color-white);
+  --input-border-color-focus: var(--color-tonomus-purple);
+  --input-border-color: var(--color-tonomus-gray-secondary-gray);
+  --input-box-shadow-focus: var(--color-black-10);
+  --input-placeholder-color: var(--color-tonomus-purple-400a60);
+  --input-text-color: var(--color-tonomus-purple);
+
+  --checkbox-group-background-color: var(--color-tonomus-purple-400a05);
+
+  --checkbox-active-background-color: var(--color-tonomus-purple);
+  --checkbox-background-color: var(--color-white);
+  --checkbox-border-color: var(--color-black);
+  --checkbox-checkmark-color: var(--color-white);
+
+  --component-text-color: var(--color-white);
+  --component-highlight-color: var(--color-white);
+
+  @media (min-width: 1024px) {
+    --component-block-padding: 80px;
+    --container-margin: 80px;
+    --grid-gap: 24px;
+    --grid-template-columns: repeat(12, 1fr);
+  }
+
+  @include loopVars($typeTonomus);
+}

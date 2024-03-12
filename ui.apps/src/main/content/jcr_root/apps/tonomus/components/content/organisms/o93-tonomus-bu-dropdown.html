@@ -1,0 +1,60 @@
+<sly
+  data-sly-template.buDropdown="${@
+       navLinks='Information about available business units (sideBarItems)',
+       selectedBuNav='Selected navigation link'
+     }"
+  data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+  data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+>
+  <div class="o-tonomusBuDropdown" data-component="o93-tonomus-bu-dropdown">
+    <input type="checkbox" id="bu_toggle" data-bu-toggle />
+
+    <label
+      class="o-tonomusBuDropdown__toggle"
+      for="bu_toggle"
+      data-toggle
+      data-sly-test="${selectedBuNav}"
+    >
+      <div
+        class="o-tonomusBuDropdown__logo"
+        data-sly-test="${selectedBuNav.logoImage}"
+      >
+        <sly
+          data-sly-call="${imageTemplate.image @ imageModel=selectedBuNav.logoImage, variant='block', disableTransition=true}"
+        ></sly>
+      </div>
+      <div class="o-tonomusBuDropdown__chevron">
+        <sly
+          data-sly-call="${iconTemplate.icon @ name='icon-chevron-down'}"
+        ></sly>
+      </div>
+    </label>
+    <sly data-sly-list="${navLinks}">
+      <div class="o-tonomusBuDropdown__list">
+        <div class="o-tonomusBuDropdown__wrapper">
+          <ul
+            class="o-tonomusBuDropdown__items"
+            data-bu-list
+            data-sly-test="${navLinks}"
+            data-sly-list="${navLinks}"
+          >
+            <li class="o-tonomusBuDropdown__item">
+              <a
+                href="#"
+                class="o-tonomusBuDropdown__link"
+                data-sly-attribute.href="${item.link.href}"
+                data-sly-attribute.target="${item.target}"
+              >
+                <div class="o-tonomusBuDropdown__logo">
+                  <sly
+                    data-sly-call="${imageTemplate.image @ imageModel=item.logoImage, variant='block', disableTransition=true}"
+                  ></sly>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </sly>
+  </div>
+</sly>

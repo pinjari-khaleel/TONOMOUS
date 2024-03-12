@@ -1,0 +1,15 @@
+scrollComponent: true
+title: 'c94-page-not-found'
+gradientColors: '["#960351", "#441a54", "#57052e"]'
+asset: './image1.webp'
+image:
+  src: 'image/c94-page-not-found/404-text.png'
+heading:
+  text: '<strong>Sorry for the inconvenience.</strong>'
+description:
+  A cognitive world would anticipate your needs—but we’re still building it. For now, we can’t find
+  the page you’re looking for.
+button:
+  theme: green
+  label: explore tonomus
+  href: '#'

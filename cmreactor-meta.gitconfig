@@ -1,0 +1,7 @@
+[cmreactor "meta.tonomus"]
+	type = git
+	url = git@bitbucket.org-tonomus:mediamonks/neom-tonomus.git
+	origin = git@bitbucket.org-tonomus:mediamonks/neom-tonomus.git
+	branch = master
+	commit = fde5840346e9066edf905d7214b88c010d43af34
+	oneline = "fde58403 Merged in release/2023.07.05 (pull request #13)"

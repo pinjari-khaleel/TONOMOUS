@@ -1,0 +1,9 @@
+<sly data-sly-template.scrollButton>
+  <sly data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"></sly>
+
+  <button class="m-scrollButton"
+          data-component="m10-scroll-button"
+          data-scroll-button>
+    <sly data-sly-call="${iconTemplate.icon @ name='mouse'}"></sly>
+  </button>
+</sly>

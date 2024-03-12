@@ -1,0 +1,8 @@
+mask:
+  opacity: 0.25
+sticky: true
+video:
+  props:
+    sources:
+      - src: './video/background-video-preview.mp4'
+        media: 'video/mp4'

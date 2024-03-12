@@ -1,0 +1,34 @@
+scrollComponent: true
+logo:
+  src: './image/logo-tonomus.png'
+
+navigation:
+  main:
+    dropdownLabel: 'Meet Tonomous'
+    items:
+      - label: 'Meet Tonomous'
+        href: './'
+        desktopOnly: true
+      - label: 'Our Goals'
+        href: '#c82-card-list'
+      - label: 'Your Role'
+        href: '#c84-tabbed-cta'
+      - label: 'News and Media'
+        href: '#c88-key-cta-list'
+  highlightedLink:
+    label: 'Join us'
+    href: '#'
+
+languages:
+  activeLanguageCode: en
+  options:
+    - languageCode: en
+      label: English
+      href: '/homepage.html'
+    - languageCode: nl
+      label: Nederlands
+      href: '/homepage.html'
+    - languageCode: ar
+      shortLabel: عربي
+      label: العربية
+      href: '/homepage-ar.html'

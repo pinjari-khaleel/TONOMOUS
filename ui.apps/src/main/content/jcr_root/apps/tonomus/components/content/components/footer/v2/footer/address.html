@@ -1,0 +1,6 @@
+<template data-sly-template.address="${@ addressTitle='Address title', addressDetail='Address detail'}">
+    <div class="cmp-footer__address">
+        <div class="cmp-footer__address-title">${addressTitle}</div>
+        <div class="cmp-footer__address-detail">${addressDetail @ context="html"}</div>
+    </div>
+</template>

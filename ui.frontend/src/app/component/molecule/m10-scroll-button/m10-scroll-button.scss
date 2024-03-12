@@ -1,0 +1,46 @@
+.m-scrollButton {
+  @include size(58px);
+
+  align-items: center;
+  appearance: none;
+  background: transparent;
+  border-radius: 29px;
+  border: none;
+  bottom: var(--containerMargin);
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  left: 50%;
+  margin-bottom: -14px;
+  padding: 0;
+  position: absolute;
+  transform: translateX(-50%);
+
+  &::before {
+    @include pseudo;
+    @include offset(50%, 50%);
+    @include size(100%);
+
+    background: var(--scroll-button-background-color);
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: transform 0.6s $easeOutExpo, opacity 0.6s $easeOutExpo;
+  }
+
+  // animate svg element
+  .mouse_svg__mouse-drop {
+    animation: mouse-scroll 1.7s infinite;
+  }
+
+  @include hover {
+    &::before {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  @include respond-to("MEDIUM") {
+    display: flex;
+  }
+}

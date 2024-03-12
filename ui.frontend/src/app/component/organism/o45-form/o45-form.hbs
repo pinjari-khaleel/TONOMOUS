@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="./o45-form.scss">
+<script src="./O45Form.ts"></script>
+
+
+<section class="o-form{{#if theme}} t-{{theme}}{{/if}}"
+     data-component="o45-form"
+     data-messages="{{toJson messages}}"
+     {{#if scrollComponent}}data-scroll-component{{/if}}
+>
+  {{#if (condition heading '||' description)}}
+    <header class="o-form__header" data-form-header>
+      {{#with heading}}<h2 class="o-form__title">{{text}}</h2>{{/with}}
+      {{#with description}}<div class="o-form__description s-content -small">{{{this}}}</div>{{/with}}
+    </header>
+  {{/if}}
+
+  <form class="o-form__form{{#if variant}} -{{variant}}{{/if}}"
+        data-form {{#with titleInEnglish}}
+        data-title-in-english="{{this}}"{{/with}}
+        action="{{action}}"
+        id="{{id}}"
+        method="{{method}}"
+  >
+    {{!--
+      Note: when hidden input becomes dynamic and/or user configurable, update date with an array for hidden inputs.
+     --}}
+    <input type="hidden" name="form_id" value="{{form_id}}" />
+    {{#if languageCode}}
+      <input type="hidden" name="lang_code" value="{{languageCode}}" />
+    {{/if}}
+    {{#each groups}}
+      <fieldset
+        class="o-form__fieldset{{#if type}} -{{type}}{{/if}}"
+        {{#with id}}id="{{this}}" data-form-fieldset-{{this}}{{/with}}
+        {{#with name}}name="{{this}}" {{/with}}
+        {{#if validate}}data-validate="{{toJson validate}}"{{/if}}>
+        {{#if legend}}<h3 class="o-form__legend{{#if type}} -{{type}}{{/if}}{{#if required}} -isRequired{{/if}}">{{legend}}</h3>{{/if}}
+        <div class="o-form__fieldsetContainer" data-form-fieldset-container>
+          {{#each items}}
+            {{#if (condition type '===' 'checkbox')}}{{> molecule/m27-checkbox-option }}{{/if}}
+            {{#if (condition type '===' 'email')}}{{> molecule/m30-text-field }}{{/if}}
+            {{#if (condition type '===' 'password')}}{{> molecule/m30-text-field }}{{/if}}
+            {{#if (condition type '===' 'select')}}{{> molecule/m31-dropdown-field }}{{/if}}
+            {{#if (condition type '===' 'text')}}{{> molecule/m30-text-field }}{{/if}}
+            {{#if (condition type '===' 'textarea')}}{{> molecule/m30-text-field }}{{/if}}
+            {{#if (condition type '===' 'country-dropdown')}}{{> molecule/m41-country-dropdown }}{{/if}}
+            {{#if (condition type '===' 'radio')}}{{> molecule/m28-radio-option }}{{/if}}
+          {{/each}}
+        </div>
+        {{#if (condition type '===' 'radioGroup')}}
+          <div class="o-form__copy s-content">
+           {{{ copy }}}
+          </div>
+        {{/if}}
+        {{#if id}}
+        <div class="o-form__error" data-for="{{#with id}}{{this}}{{/with}}" data-error-message></div>
+        {{/if}}
+      </fieldset>
+    {{/each}}
+
+    {{#with buttons}}
+      <div class="o-form__buttons" data-form-buttons>
+        {{#each this}}
+          {{#if (condition type '===' 'submit')}}
+            {{> molecule/m02-button data=(object submit-button=null) }}
+          {{^}}
+            {{> molecule/m02-button }}
+          {{/if}}
+
+        {{/each}}
+      </div>
+    {{/with}}
+
+    <div class="o-form__responseWrapper" data-form-response-wrapper>
+    </div>
+
+    {{> atom/a18-recaptcha recaptcha }}
+
+    {{#with footer}}
+      <footer class="o-form__footer" data-form-footer>
+        {{#if copy}}
+          <div class="o-form__copy s-content -small">{{{copy}}}</div>
+        {{/if}}
+      </footer>
+    {{/with}}
+  </form>
+</section>

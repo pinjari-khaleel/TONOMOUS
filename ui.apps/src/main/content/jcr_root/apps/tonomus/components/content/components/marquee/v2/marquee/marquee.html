@@ -1,0 +1,15 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.marquee="com.tonomus.core.slingmodels.components.v2.marquee.MarqueeModel"
+     data-sly-test.hasContent="${marquee.images}">
+</sly>
+
+<ul data-sly-test="${hasContent}" class="cmp-marquee__content" id="${marquee.id}" aria-label="${marquee.accessibilityLabel}"
+	data-sly-list="${marquee.images}" data-sly-use.itemContentTemplate="itemContent.html">
+    <sly data-sly-call="${itemContentTemplate.item @ item=item}"></sly>
+</ul>
+<ul data-sly-test="${hasContent}" class="cmp-marquee__content" aria-hidden="true"
+	data-sly-list="${marquee.images}" data-sly-use.itemContentTemplate="itemContent.html">
+    <sly data-sly-call="${itemContentTemplate.item @ item=item}"></sly>
+</ul>
+
+<sly data-sly-call="${template.placeholder @ isEmpty=!hasContent, classAppend='cmp-marquee'}"></sly>

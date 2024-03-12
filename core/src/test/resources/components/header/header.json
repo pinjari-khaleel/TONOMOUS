@@ -1,0 +1,68 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:title": "Top Navigation",
+    "sling:resourceType": "tonomus/components/structure/tonomus-bu-xfpage",
+    "jcr:language": "en",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "component": {
+        "jcr:primaryType": "nt:unstructured",
+        "navigationRoot": "/content/tonomus/tw/en-us",
+        "sling:resourceType": "tonomus/components/content/components/s11-tonomus-navigation/v2/s11-tonomus-navigation",
+        "collectAllPages": "true",
+        "structureStart": "1",
+        "link": {
+          "jcr:primaryType": "nt:unstructured",
+          "target": "_self",
+          "href": "/content/tonomus/tw/en-us"
+        },
+        "logoImage": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:lastModifiedBy": "admin",
+          "src": "/content/dam/tonomus/components/tonomus-footer-logo/tonomus-footer-logo.png"
+        },
+        "languageNavigation": {
+          "jcr:primaryType": "nt:unstructured",
+          "item0": {
+            "jcr:primaryType": "nt:unstructured",
+            "languageCode": "en",
+            "priorityLanguage": "false",
+            "target": "_self",
+            "href": "/content/tonomus/tw/en-us",
+            "label": "ENG",
+            "shortLabel": "ENG"
+          },
+          "item1": {
+            "jcr:primaryType": "nt:unstructured",
+            "languageCode": "ar",
+            "priorityLanguage": "false",
+            "target": "_self",
+            "href": "/content/tonomus/tw/ar-sa",
+            "label": "عربي",
+            "shortLabel": "ar"
+          }
+        }
+      },
+      "component-without-langauges": {
+        "jcr:primaryType": "nt:unstructured",
+        "navigationRoot": "/content/tonomus/tw/en-us",
+        "sling:resourceType": "tonomus/components/content/components/s11-tonomus-navigation/v2/s11-tonomus-navigation",
+        "collectAllPages": "true",
+        "structureStart": "1",
+        "link": {
+          "jcr:primaryType": "nt:unstructured",
+          "target": "_self",
+          "href": "/content/tonomus/tw/en-us"
+        },
+        "logoImage": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:lastModifiedBy": "admin",
+          "src": "/content/dam/tonomus/components/tonomus-footer-logo/tonomus-footer-logo.png"
+        }
+      }
+    }
+  }
+}

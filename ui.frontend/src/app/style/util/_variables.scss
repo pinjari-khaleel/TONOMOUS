@@ -1,0 +1,67 @@
+@use "sass:math";
+// Correctly set `seng-scss` assetPath
+$pathAsset: "~app";
+
+// Fonts
+$headingFont: "Brown", "Bukra", Arial, sans-serif;
+$baseFont: "Brown", "Zarid", Arial, sans-serif;
+
+$tonomusHeadingFont: "Mr Eaves", "Bukra", Arial, sans-serif;
+$tonomusBaseFont: "Mr Eaves", "Zarid", Arial, sans-serif;
+$tonomusFormFont: "Bukra Alt", Arial, sans-serif;
+
+// Z-Index
+$zLayout: default, content, tooltip, dropdown, active-filter, navigation-indicator, scroll-to-top,
+  dropdown-navigation-mask, dropdown-navigation, logo, floating-button, navigation-mask,
+  download-drawer, navigation, hamburger, mobile-toggle-language, header, modal, video-overlay,
+  cursor, transition;
+
+// Colors
+$colorCream: #f3efe5;
+$colorCream-50: #f5f3ea; // rgba($colorCream, 0.5);
+$colorCream-25: #fcfbf8; // rgba($colorCream, 0.25);
+
+$colorWhite: #fff;
+$colorWhite-10a: rgba($colorWhite, 0.1);
+$colorWhite-20a: rgba($colorWhite, 0.2);
+$colorWhite-30a: rgba($colorWhite, 0.3);
+$colorWhite-50a: rgba($colorWhite, 0.5);
+$colorBlack: #1d1f22;
+$colorBlack-15a: rgba($colorBlack, 0.15);
+$colorBlack-20a: rgba($colorBlack, 0.2);
+$colorBlack-30a: rgba($colorBlack, 0.3);
+$colorBlack-90a: rgba($colorBlack, 0.9);
+$colorBlack-90: #343538; //rgba($colorBlack, 0.9);
+$colorBlack-75: #565759; //rgba($colorBlack, 0.75);
+$colorBlack-50: #8e8f90; // rgba($colorBlack, 0.5);
+$colorBlack-20: #d2d2d3; // rgba($colorBlack, 0.2);
+$colorBlack-10: #e2e0da; // rgba($colorBlack, 0.1);
+$colorRealBlack: #000000;
+$colorDeepBlack: #161719;
+$colorDeepBlack-30a: rgba($colorDeepBlack, 0.3);
+$colorDeepBlack-90a: rgba($colorDeepBlack, 0.9);
+$colorBlack-button-label: #1a202c;
+
+$colorBorderGrey: #e8e9e9;
+$colorLightGrey: #f8f8f8;
+
+$colorGold: #ebc03f;
+$colorGold-50: #f5df9f; // rgba($colorGold, 0.5);
+$colorGold-25: #faefcf; // rgba($colorGold, 0.25);
+$colorDarkGold: #b89535;
+
+$colorHotspots: #ffd02a;
+$colorBrightYellow: #ffd02a;
+
+$colorPageBackground: #f9f7f2;
+
+$colorPurple: #7c3d84;
+
+// Units
+$mobilecontainerMargin: (math.div(20, 360) * 100vw);
+$containerMargin: (math.div(70, 1440) * 100vw);
+$largeContainerMargin: (math.div(180, 1440) * 100vw);
+
+@import "variables-typography";
+@import "variables-typography-tonomus";
+@import "../../data/shared-variable/media-queries.json";

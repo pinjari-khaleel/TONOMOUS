@@ -1,0 +1,16 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'PageNotFound'
+webglContainer:
+  webglTest: false
+meta:
+  id: 'c94'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 'c94-page-not-found'
+    data: 'import!../app/component/block/c94-page-not-found/data/default.yaml'

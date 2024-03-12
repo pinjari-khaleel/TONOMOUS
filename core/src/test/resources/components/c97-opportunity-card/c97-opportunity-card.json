@@ -1,0 +1,21 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "root": {
+      "responsivegrid": {
+        "opportunity_cards": {
+          "jcr:primaryType": "nt:unstructured",
+          "cq:panelTitle": "Workshop & Classes",
+          "title": "Workshop & Classes",
+          "scrollComponent": "false",
+          "sling:resourceType": "tonomus/components/content/components/c97-what-we-do-cards/v1/opportunity-cards",
+          "image": {
+            "jcr:primaryType": "nt:unstructured",
+            "src": "/content/dam/tonomus/components/page-bu-images/opportunity-cards/workshops-classes.svg"
+          }
+        }
+      }
+    }
+  }
+}

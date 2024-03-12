@@ -1,0 +1,27 @@
+<sly data-sly-template.stylizedOption="${ @
+     checkBoxModel='FormCheckBoxModel object'}"
+     data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+     data-sly-set.attrsVal="${[checkBoxModel.id ? 'data-' : '', checkBoxModel.id] @ join = '', context='attributeName'}"
+     data-sly-use.attributesModel="${'com.tonomus.core.slingmodels.common.v1.AttributeCreatorModel' @ attrs=attrsVal}">
+
+  <div class="m-stylizedOption"
+       data-component="m52-stylized-option">
+    <label class="m-stylizedOption__label" data-label>
+      <input
+          data-sly-attribute.type="${checkBoxModel.type}"
+          data-sly-attribute.id="${checkBoxModel.id}"
+          data-sly-attribute.name="${checkBoxModel.name}"
+          data-sly-attribute.data-title-in-english="${checkBoxModel.titleInEnglish}"
+          data-sly-attribute.value="${checkBoxModel.value}"
+          data-sly-attribute="${attributesModel.attributes}"
+          class="m-stylizedOption__input"
+          data-input
+      >
+      <span class="m-stylizedOption__textLabel">${checkBoxModel.label}</span>
+      <div class="m-stylizedOption__imageWrapper" data-sly-test="${checkBoxModel.image.src}">
+        <sly data-sly-call="${imageTemplate.image @ imageModel=checkBoxModel.image, disableTransition=true}"></sly>
+      </div>
+    </label>
+  </div>
+
+</sly>

@@ -1,0 +1,31 @@
+
+
+<section class="b-interactiveOverview"
+  data-component="c83-interactive-overview"
+  data-items="{{toJson items}}"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with padding}}
+    style="--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};"
+  {{/with}}
+  data-lazy-component
+>
+  <div class="b-interactiveOverview__container">
+    {{#with header}}
+     {{> atom/a03-heading text=heading.text size="h1" element="h1" }}
+    {{/with}}
+
+    <ul class="b-interactiveOverview__items" data-items>
+      {{#each items}}
+        <li class="b-interactiveOverview__item {{#if active}}-isActive{{/if}}">
+          <button class="b-interactiveOverview__card" data-card-button>
+            {{> atom/a01-image src='image/c83-interactive-overview/pixelated-background.png' disableTransition=true }}
+
+            <span>{{content.heading.text}}</span>
+          </button>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

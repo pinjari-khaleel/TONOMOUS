@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          scrollComponent="{Boolean}true">
+  <heading
+      jcr:primaryType="nt:unstructured"
+      size="h4"
+      text="Events"/>
+  <items
+      jcr:primaryType="nt:unstructured">
+    <item0 jcr:primaryType="nt:unstructured"
+           cardType="event-card"
+           title="SMART CITIES AND CLOUD TECHNOLOGIES ROUND TABLE HOSTED BY BEVERLY RIDER"
+           datetime="FRIDAY MAY 21, 2023 07:00 CET">
+      <image jcr:primaryType="nt:unstructured"
+             alt="Card image"
+             src="/content/dam/tonomus/components/c90-card-slider/c90-card-slider-01.png">
+      </image>
+      <button jcr:primaryType="nt:unstructured"
+              label="Learn more"
+              theme="green">
+      </button>
+      <modal jcr:primaryType="nt:unstructured"
+             copy="When integrated into society, cognitive technology takes what were previously manual tasks and
+    turns them into opportunities for progress—unburdening humankind, making daily life seamless.">
+        <image jcr:primaryType="nt:unstructured"
+               alt="Card image"
+               src="/content/dam/tonomus/components/c90-card-slider/c90-card-slider-01.png">
+        </image>
+        <heading jcr:primaryType="nt:unstructured"
+                 text="SMART CITIES AND CLOUD TECHNOLOGIES ROUND TABLE HOSTED BY BEVERLY RIDER">
+        </heading>
+      </modal>
+    </item0>
+
+    <item1 jcr:primaryType="nt:unstructured"
+           cardType="event-card"
+           title="PRESENTATION OF CASE XVRS METAVERSE BY JOSEPH BRADLEY"
+           datetime="FRIDAY MAY 21, 2023 07:00 CET">
+      <image jcr:primaryType="nt:unstructured"
+             alt="Card image"
+             src="/content/dam/tonomus/components/c90-card-slider/c90-card-slider-02.png">
+      </image>
+      <button jcr:primaryType="nt:unstructured"
+              label="Learn more"
+              theme="green">
+      </button>
+      <modal jcr:primaryType="nt:unstructured"
+             copy="When integrated into society, cognitive technology takes what were previously manual tasks and
+    turns them into opportunities for progress—unburdening humankind, making daily life seamless.">
+        <image jcr:primaryType="nt:unstructured"
+               alt="Card image"
+               src="/content/dam/tonomus/components/c90-card-slider/c90-card-slider-02.png">
+        </image>
+        <heading jcr:primaryType="nt:unstructured"
+                 text="PRESENTATION OF CASE XVRS METAVERSE BY JOSEPH BRADLEY">
+        </heading>
+      </modal>
+    </item1>
+    <item2 jcr:primaryType="nt:unstructured"
+           cardType="event-card"
+           title="THE UNIQUE BENEFITS OF A HYPER-SCALE DATA CENTER BY FABIO FONTANA"
+           datetime="FRIDAY MAY 21, 2023 07:00 CET">
+      <image jcr:primaryType="nt:unstructured"
+             alt="Card image"
+             src="/content/dam/tonomus/components/c90-card-slider/c90-card-slider-03.png">
+      </image>
+      <button jcr:primaryType="nt:unstructured"
+              label="Learn more"
+              theme="green">
+      </button>
+      <modal jcr:primaryType="nt:unstructured"
+             copy="When integrated into society, cognitive technology takes what were previously manual tasks and
+    turns them into opportunities for progress—unburdening humankind, making daily life seamless.">
+        <image jcr:primaryType="nt:unstructured"
+               alt="Card image"
+               src="/content/dam/tonomus/components/c90-card-slider/c90-card-slider-03.png">
+        </image>
+        <heading jcr:primaryType="nt:unstructured"
+                 text="THE UNIQUE BENEFITS OF A HYPER-SCALE DATA CENTER BY FABIO FONTANA">
+        </heading>
+      </modal>
+    </item2>
+  </items>
+</jcr:root>

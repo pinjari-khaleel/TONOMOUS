@@ -1,0 +1,22 @@
+<sly data-sly-template.checkbox="${ @
+  checkBoxModel='instance of forms.FormCheckBoxModel with properties'}"
+     data-sly-set.dataAttribute="${[checkBoxModel.id ? 'data-' : '', checkBoxModel.id] @ join = '', context='attributeName'}"
+     data-sly-use.attributesModel="${'com.tonomus.core.slingmodels.common.v1.AttributeCreatorModel' @ attrs=dataAttribute}">
+
+  <div
+      class="a-checkbox ${checkBoxModel.checked ? '-isChecked' : ''} ${checkBoxModel.disabled ? '-isDisabled' : ''}"
+      data-component="a11-checkbox">
+    <input class="a-checkbox__input"
+           data-sly-attribute.checked="${checkBoxModel.checked ? 'checked' : ''}"
+           data-sly-attribute.disabled="${checkBoxModel.disabled ? 'disabled' : ''}"
+           data-sly-attribute.id="${checkBoxModel.id}"
+           data-sly-attribute.name="${checkBoxModel.name}"
+           type="checkbox"
+           data-sly-attribute.data-title-in-english="${checkBoxModel.titleInEnglish}"
+           data-sly-attribute.value="${checkBoxModel.value}"
+           data-sly-attribute="${attributesModel.attributes}"
+    />
+    <span class="a-checkbox__indicator"></span>
+  </div>
+
+</sly>

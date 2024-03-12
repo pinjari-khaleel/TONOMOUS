@@ -1,0 +1,54 @@
+<sly data-sly-template.checkboxList="${ @
+     stepGroupModel = 'the instance of class StepGroup Model with properties'}"
+     data-sly-use.fieldsetLegendTemplate="/apps/tonomus/components/content/atoms/a26-fieldset-legend.html"
+     data-sly-use.textFieldTemplate="/apps/tonomus/components/content/molecules/m30-text-field.html"
+     data-sly-use.dropdownFieldTemplate="/apps/tonomus/components/content/molecules/m31-dropdown-field.html"
+     data-sly-use.multiSelectDropdownTemplate="/apps/tonomus/components/content/organisms/o80-multiselect-dropdown.html"
+     data-sly-use.formErrorTemplate="/apps/tonomus/components/content/atoms/a25-form-error.html">
+
+  <div class="o-checkboxList" data-component="o75-checkbox-list"
+       data-sly-attribute.id="${stepGroupModel.id}"
+       data-sly-attribute.data-scroll-component="${stepGroupModel.scrollComponent}">
+    <fieldset class="o-checkboxList__fieldset"
+              data-sly-attribute.data-validate="${stepGroupModel.validate.json}"
+              data-sly-attribute.id="${stepGroupModel.id}">
+      <div class="o-checkboxList__container">
+        <sly data-sly-test="${stepGroupModel.fieldsetLegend}"
+             data-sly-call="${fieldsetLegendTemplate.fieldsetLegend
+             @ fieldsetLegend=stepGroupModel.fieldsetLegend}"></sly>
+
+        <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer" data-sly-list.child="${templatedContainer.structureResources}">
+            <sly data-sly-test="${child.resourceType !='nt:unstructured'}" data-sly-resource="${child.path @ resourceType=child.resourceType,decorationTagName='', decoration=wcmmode.edit}"></sly>
+        </sly>
+        <sly data-sly-test="${wcmmode.edit}" data-sly-resource="${resource.path @ resourceType='wcm/foundation/components/responsivegrid/new', appendPath='/*',decoration=wcmmode.edit, decorationTagName=''}"></sly>
+
+        <div class="o-checkboxList__optionalSelect ${stepGroupModel.showDropdownForMultipleChoice.wide ? '-wide' : ''}"
+             data-sly-test="${stepGroupModel.showDropdownForMultipleChoice.label && !stepGroupModel.showDropdownForMultipleChoice.multiSelect}">
+          <sly
+              data-sly-call="${dropdownFieldTemplate.dropdownField @ formSelectModel=stepGroupModel.showDropdownForMultipleChoice, blockValidation=true}"></sly>
+        </div>
+
+        <div class="o-checkboxList__optionalTextarea ${stepGroupModel.showTextareaForOtherChoice.wide ? '-wide' : ''}"
+             data-sly-test="${stepGroupModel.showTextareaForOtherChoice.label}">
+          <sly data-sly-call="${textFieldTemplate.textField @ formTextModel=stepGroupModel.showTextareaForOtherChoice,
+                            blockValidation=true, type='textarea'}"></sly>
+        </div>
+
+        <sly data-sly-call="${formErrorTemplate.formError @ id=stepGroupModel.id}"></sly>
+      </div>
+    </fieldset>
+
+    <div class="o-checkboxList__optionalMultiSelect
+                ${stepGroupModel.showDropdownForMultipleChoice.wide ? '-wide' : ''}"
+         data-sly-test="${stepGroupModel.showDropdownForMultipleChoice.label
+         && stepGroupModel.showDropdownForMultipleChoice.multiSelect}">
+      <sly data-sly-call="${multiSelectDropdownTemplate.multiSelectDropdown @
+      dropdownModel=stepGroupModel.showDropdownForMultipleChoice, blockValidation=true}"></sly>
+    </div>
+  </div>
+
+</sly>
+
+
+
+

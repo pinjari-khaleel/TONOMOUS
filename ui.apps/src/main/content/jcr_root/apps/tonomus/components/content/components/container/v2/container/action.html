@@ -1,0 +1,8 @@
+<sly data-sly-template.action="${@ action, mobile}">
+	<div class="cmp-container__action-container${mobile ? ' cmp-container__action-container--mobile' : ''}" data-sly-test="${action.href}">
+        <a class="cmp-container__action-link"
+           data-cmp-clickable="${action.href ? true : false}"
+       	   href="${action.href}" data-sly-attribute.target="${action.target @ context='attributeName'}"
+           data-sly-attribute.rel="${action.target == '_blank' ? 'noopener' : '' @ context='attributeName'}">${action.label @ context='text'}</a>
+    </div>
+</sly>

@@ -1,0 +1,32 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+<sly
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.gradientAssetModel="com.tonomus.core.slingmodels.components.v1.AssetAndGradientColorsModel"
+    data-sly-use.errorPageModel="com.tonomus.core.slingmodels.components.v1.ErrorPageModel"
+    data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+    data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html"
+    data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"></sly>
+
+<section class="b-pageNotFound"
+         data-component="c94-page-not-found"
+         data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+         data-sly-attribute.id="${commonComponentModel.anchorId}"
+         style="${commonComponentModel.padding.styleInline @ context='styleString'}"
+         data-sly-attribute.data-asset="${gradientAssetModel.asset}"
+         data-sly-attribute.data-gradient-colors="${gradientAssetModel.gradientColorsString}"
+         data-lazy-component>
+  <div class="b-pageNotFound__container">
+    <sly data-sly-call="${imageTemplate.image @ imageModel=errorPageModel.image,
+               variant='block', disableTransition=true}" data-sly-test="${errorPageModel.image}"></sly>
+
+    <div class="b-pageNotFound__content" data-content>
+      <sly data-sly-call="${headingTemplate.heading @ headingModel=errorPageModel.heading}"
+           data-sly-test="${errorPageModel.heading.text}"></sly>
+      ${errorPageModel.description @ context='html'}
+      <div data-sly-test="${errorPageModel.button}">
+        <sly data-sly-call="${buttonTemplate.button @ buttonModel=errorPageModel.button}"></sly>
+      </div>
+    </div>
+  </div>
+</section>

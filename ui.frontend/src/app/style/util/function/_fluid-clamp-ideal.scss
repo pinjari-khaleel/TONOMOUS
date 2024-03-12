@@ -1,0 +1,6 @@
+@function fluid-clamp-ideal($min-size, $max-size, $min-vw, $max-vw) {
+  @return calc(
+    #{$min-size} + #{strip-unit($max-size - $min-size)} *
+      ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+  );
+}

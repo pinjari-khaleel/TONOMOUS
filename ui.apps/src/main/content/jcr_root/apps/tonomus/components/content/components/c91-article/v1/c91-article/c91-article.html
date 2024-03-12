@@ -1,0 +1,60 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+<sly
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.articleModel="com.tonomus.core.slingmodels.components.v1.article_meta.ArticleModel"
+    data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+    data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html"
+    data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+    data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"
+    data-sly-use.articleMetaLineTemplate="/apps/tonomus/components/content/components/c91-article/v1/c91-article/c91-article-meta-line.html"></sly>
+
+<section class="b-article"
+         data-component="c91-article"
+         data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+         data-sly-attribute.id="${commonComponentModel.anchorId}"
+         style="${commonComponentModel.padding.styleInline @ context='styleString'}"
+         data-lazy-component>
+  <main class="b-article__container">
+    <article class="b-article__content">
+      <div class="b-article__image" data-sly-test="${articleModel.image}">
+        <sly data-sly-call="${imageTemplate.image @ imageModel=articleModel.image,
+         disableTransition=true}"></sly>
+      </div>
+      <div class="b-article__textContent">
+        <sly data-sly-call="${headingTemplate.heading @ headingModel=articleModel.heading}"
+             data-sly-test="${articleModel.heading}"></sly>
+        <div class="s-content">
+          ${articleModel.content @ context='html'}
+        </div>
+      </div>
+    </article>
+    <aside class="b-article__meta" data-sly-test="${articleModel.meta}">
+      <!--/* call article meta line */-->
+      <sly data-sly-call="${articleMetaLineTemplate.articleMetaLine}"></sly>
+
+      <time datetime="${articleModel.meta.datetime.value @ context='text'}"
+            data-sly-test="${articleModel.meta.datetime}">
+        <!--/* call icon template */-->
+        <sly data-sly-call="${iconTemplate.icon @ name='calendar-round'}"></sly>
+        ${articleModel.meta.datetime.text @ context='text'}
+      </time>
+
+      <time datetime="${articleModel.meta.duration.value @ context='text'}"
+            data-sly-test="${articleModel.meta.duration}">
+        <!--/* call icon template */-->
+        <sly data-sly-call="${iconTemplate.icon @ name='clock-00_15'}"></sly>
+        ${articleModel.meta.duration.text @ context='text'}
+      </time>
+
+      <sly data-sly-set.shareJson="${articleModel.getShareOptionsJson}"
+           data-sly-set.shareArticle="${articleModel.shareOptions.heading.text ||
+               'shareArticle' @ i18n, context='text'}"
+           data-sly-set.successMessage="data-success-message=${'Copied!' @ i18n, context='text'}"
+           data-sly-set.dataAttributes="${['data-share-button', successMessage] @ join = '||', context='text'}"
+           data-sly-call="${buttonTemplate.button @ variant='pink', label=shareArticle,
+           attrs=dataAttributes, share=shareJson}"
+           data-sly-test="${articleModel.shareOptions.items}"></sly>
+    </aside>
+  </main>
+</section>

@@ -1,0 +1,22 @@
+<sly data-sly-template.toggleButton="${@
+       variant='Toggle-button variant',
+       label='Toggle-button label'
+     }"
+     data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+>
+
+  <sly data-sly-set.variantVal="${' -{0}' @format=[variant], context='styleString'}"></sly>
+  <sly data-sly-set.variantClassName="${variant ? variantVal : ''}"></sly>
+
+
+  <button class="m-toggleButton${variantClassName}"
+          data-component="m14-toggle-button">
+    <span class="m-toggleButton__label">
+      <sly data-sly-call="${labelTemplate.label @ text=label}"></sly>
+    </span>
+    <span class="m-toggleButton__chevron">
+      <sly data-sly-call="${iconTemplate.icon  @ name='chevron-down'}"></sly>
+    </span>
+  </button>
+</sly>

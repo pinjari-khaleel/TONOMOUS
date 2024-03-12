@@ -1,0 +1,17 @@
+<sly data-sly-template.videoOverlay
+     data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html">
+  <div class="o-videoOverlay" data-component="o02-video-overlay">
+    <div class="o-videoOverlay__mask" data-mask></div>
+    <div class="o-videoOverlay__wrapper">
+      <div class="o-videoOverlay__container" data-video-container>
+        <!-- Video player injected here -->
+      </div>
+    </div>
+    <sly data-sly-test="${inheritedPageProperties.brandSite == 'tonomus'}"
+         data-sly-call="${buttonTemplate.button @ level='primary', icon='close', theme='white',
+         variant='close', size='small'}"></sly>
+    <sly data-sly-test="${inheritedPageProperties.brandSite != 'tonomus'}"
+         data-sly-call="${buttonTemplate.button @ icon='close', theme='black',
+         level='primary', size='small', variant='close'}"></sly>
+  </div>
+</sly>

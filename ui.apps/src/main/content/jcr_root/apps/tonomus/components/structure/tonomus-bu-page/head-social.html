@@ -1,0 +1,36 @@
+<template data-sly-template.headSocial="${ @ dataLayer, siteName }">
+    <meta property="og:description"
+          data-sly-test.description="${properties['jcr:description']}"
+          data-sly-attribute.content="${description @ context='text'}"/>
+    <meta property="og:image"
+          data-sly-test.imageSource="${dataLayer.image.src}"
+          data-sly-attribute.content="${request.scheme}://${request.serverName}${imageSource @ context='text'}"/>
+    <meta property="og:image:alt"
+          data-sly-test.imageAlt="${dataLayer.image.alt}"
+          data-sly-attribute.content="${imageAlt @ context='text'}"/>
+    <meta property="og:locale"
+          data-sly-test.locale="${dataLayer.locale}"
+          data-sly-attribute.content="${locale @ context='text'}"/>
+    <meta property="og:title" content="${currentPage.pageTitle || currentPage.title @ context='text'}"/>
+    <meta property="og:type"
+          data-sly-test.type="${dataLayer.metaPageType}"
+          data-sly-attribute.content="${type}"/>
+    <meta property="og:url" content="${dataLayer.canonicalUrl @ context='text'}"/>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:description"
+          data-sly-test.description="${properties['jcr:description']}"
+          data-sly-attribute.content="${description @ context='text'}"/>
+    <meta name="twitter:image"
+          data-sly-test.imageSource="${dataLayer.image.src}"
+          data-sly-attribute.content="${request.scheme}://${request.serverName}${imageSource @ context='text'}">
+    <meta name="twitter:image:alt"
+          data-sly-test.imageAlt="${dataLayer.image.alt}"
+          data-sly-attribute.content="${imageAlt @ context='text'}"/>
+    <meta name="twitter:site" content=${siteName}/>
+    <meta name="twitter:title" content="${currentPage.pageTitle || currentPage.title @ context='text'}"/>
+
+    <meta name="facebook-domain-verification"
+          data-sly-test.facebookDomainVerification="${dataLayer.facebookDomainVerification}"
+          data-sly-attribute.content="${facebookDomainVerification @ context='text'}"/>
+</template>

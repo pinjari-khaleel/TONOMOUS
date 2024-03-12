@@ -1,0 +1,63 @@
+.a-tonomusLine {
+  position: relative;
+  pointer-events: none;
+  user-select: none;
+  color: var(--a27-color, var(--color-tonomus-green));
+
+  &__desktopSvg {
+    width: 182px;
+    display: none;
+
+    @include respond-to(XLARGE) {
+      display: block;
+    }
+  }
+
+  &__mobileSvg {
+    width: 245px;
+
+    @include respond-to(XLARGE) {
+      display: none;
+    }
+  }
+
+  &__mobileSvg,
+  &__desktopSvg {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+
+    [dir="rtl"] & {
+      transform: scaleX(-1);
+    }
+  }
+
+  &__mouseIcon {
+    position: absolute;
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 12px;
+    color: var(--color-white);
+    transform: translate(-50%, 710px);
+
+    @include respond-to(XLARGE) {
+      transform: translate(-50%, 760px);
+    }
+
+    .a-icon[data-icon="mouse"] {
+      --icon-size: 38px;
+
+      display: none;
+
+      @include respond-to(XLARGE) {
+        display: block;
+      }
+    }
+    .a-icon[data-icon="chevron-down-tonomus"] {
+      --icon-size: 12px;
+
+      margin-inline-start: auto;
+      margin-inline-end: auto;
+    }
+  }
+}

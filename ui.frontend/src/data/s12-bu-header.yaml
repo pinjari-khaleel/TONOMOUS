@@ -1,0 +1,13 @@
+# dir: ltr
+# language: en
+# navigation: 'import!../app/component/block/s01-navigation/data/navigation-en.yaml'
+
+meta:
+  id: 's12'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 's12-bu-header'
+    data: 'import!../app/component/block/s12-bu-header/data/navigation-bu.yaml'

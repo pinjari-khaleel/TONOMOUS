@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="./m04-component-header.scss">
+<script src="./M04ComponentHeader.ts"></script>
+
+
+<div class="m-componentHeader{{#if alignment}} -{{alignment}}{{^}} -center{{/if}}{{#if variant}} -{{variant}}{{/if}}"
+     data-alignment="{{#if alignment}}{{alignment}}{{^}}center{{/if}}"
+     data-component="m04-component-header"
+     {{#if disableTransition}}data-disable-transition="{{disableTransition}}" {{/if}}
+>
+  <div class="m-componentHeader__container">
+    {{#if eyebrow}}
+      {{> atom/a04-eyebrow eyebrow }}
+    {{/if}}
+    {{#if flipHeading}}
+      {{> atom/a06-flip-heading flipHeading}}
+    {{^}}
+      {{> atom/a03-heading heading}}
+    {{/if}}
+    {{#if moustache}}
+      {{> atom/a05-moustache moustache variant=moustache.variant }}
+    {{/if}}
+  </div>
+</div>

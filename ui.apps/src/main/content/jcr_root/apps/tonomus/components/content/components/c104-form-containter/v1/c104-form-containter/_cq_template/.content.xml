@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    id="tonomus_getintouch_bu_form"
+    scrollComponent="false"
+    titleInEnglish="Get in Touch">
+    <c48_forms_group
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="tonomus/components/content/wrappers/c48-forms-group"
+        required="false">
+        <validate jcr:primaryType="nt:unstructured">
+            <presence jcr:primaryType="nt:unstructured"/>
+        </validate>
+        <m31_dropdown_field_2
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="tonomus/components/content/wrappers/m31-dropdown-field"
+            autocomplete="false"
+            disabled="false"
+            id="interest"
+            label="How do you wish to collaborate with TONOMUS?"
+            name="interest"
+            optionsSource="manual"
+            placeholder="SELECT"
+            required="true"
+            titleInEnglish="How do you wish to collaborate with Tonomus?">
+            <validate jcr:primaryType="nt:unstructured">
+                <presence
+                    jcr:primaryType="nt:unstructured"
+                    message="This is a required field."/>
+            </validate>
+            <items jcr:primaryType="nt:unstructured">
+                <item0
+                    jcr:primaryType="nt:unstructured"
+                    label="Business customer"
+                    selected="false"
+                    value="Business Customer"/>
+                <item1
+                    jcr:primaryType="nt:unstructured"
+                    label="Business partner"
+                    selected="false"
+                    value="Business Customer"/>
+                <item2
+                    jcr:primaryType="nt:unstructured"
+                    label="Become a Supplier/Vendor"
+                    selected="false"
+                    value="Become a Supplier/Vendor"/>
+            </items>
+        </m31_dropdown_field_2>
+        <m30_text_field_first
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="tonomus/components/content/wrappers/m30-text-field"
+            charactersLabel="characters"
+            disabled="false"
+            id="FNAME"
+            label="First name"
+            maxlength="100"
+            name="FNAME"
+            readonly="false"
+            required="true"
+            titleInEnglish="First name"
+            type="text">
+            <validate jcr:primaryType="nt:unstructured">
+                <presence
+                    jcr:primaryType="nt:unstructured"
+                    message="^Please enter your first name"/>
+                <length
+                    jcr:primaryType="nt:unstructured"
+                    tooLong="^The first name is too long"/>
+                <format
+                    jcr:primaryType="nt:unstructured"
+                    flagCheck="false"
+                    message="^Please only use letters"
+                    pattern="\[^0-9!-\\/:-@\\\\[-`{-~]+"/>
+                <email jcr:primaryType="nt:unstructured"/>
+            </validate>
+        </m30_text_field_first>
+        <m30_text_field_lastn
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="tonomus/components/content/wrappers/m30-text-field"
+            charactersLabel="characters"
+            disabled="false"
+            id="LNAME"
+            label="Last name"
+            maxlength="100"
+            name="LNAME"
+            readonly="false"
+            required="true"
+            titleInEnglish="Last name"
+            type="text">
+            <validate jcr:primaryType="nt:unstructured">
+                <presence
+                    jcr:primaryType="nt:unstructured"
+                    message="^Please enter your last name"/>
+                <length
+                    jcr:primaryType="nt:unstructured"
+                    tooLong="^The last name is too long"/>
+                <format
+                    jcr:primaryType="nt:unstructured"
+                    flagCheck="false"
+                    message="^Please only use letters"
+                    pattern="\[^0-9!-\\/:-@\\\\[-`{-~]+"/>
+                <email jcr:primaryType="nt:unstructured"/>
+            </validate>
+        </m30_text_field_lastn>
+        <m30_text_field_email
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="tonomus/components/content/wrappers/m30-text-field"
+            disabled="false"
+            id="email"
+            label="Email address"
+            name="email"
+            readonly="false"
+            required="true"
+            titleInEnglish="Email address"
+            type="email">
+            <validate jcr:primaryType="nt:unstructured">
+                <presence
+                    jcr:primaryType="nt:unstructured"
+                    message="^Please enter your email address"/>
+                <email
+                    jcr:primaryType="nt:unstructured"
+                    message="^Please enter valid email address"/>
+                <length jcr:primaryType="nt:unstructured"/>
+                <format
+                    jcr:primaryType="nt:unstructured"
+                    flagCheck="false"/>
+            </validate>
+        </m30_text_field_email>
+        <m30_text_field_19182
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="tonomus/components/content/wrappers/m30-text-field"
+            disabled="false"
+            id="phone"
+            label="Phone"
+            name="COUNTRY-PHONE"
+            readonly="false"
+            required="false"
+            titleInEnglish="Phone"
+            type="text">
+            <validate jcr:primaryType="nt:unstructured">
+                <presence jcr:primaryType="nt:unstructured"/>
+                <email jcr:primaryType="nt:unstructured"/>
+                <length jcr:primaryType="nt:unstructured"/>
+                <format jcr:primaryType="nt:unstructured"/>
+            </validate>
+        </m30_text_field_19182>
+        <m30_text_field_lastn_571029945
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="tonomus/components/content/wrappers/m30-text-field"
+            charactersLabel="characters"
+            disabled="false"
+            id="organization"
+            label="Organization / Affiliation"
+            maxlength="100"
+            name="ORGANIZATION"
+            readonly="false"
+            required="true"
+            titleInEnglish="Organization / Affiliation"
+            type="text">
+            <validate jcr:primaryType="nt:unstructured">
+                <presence
+                    jcr:primaryType="nt:unstructured"
+                    message="^Please enter your organization"/>
+                <length
+                    jcr:primaryType="nt:unstructured"
+                    tooLong="^The field is too long"/>
+                <format
+                    jcr:primaryType="nt:unstructured"
+                    flagCheck="false"
+                    message="^Please only use letters"
+                    pattern="\[^0-9!-\\/:-@\\\\[-`{-~]+"/>
+                <email jcr:primaryType="nt:unstructured"/>
+            </validate>
+        </m30_text_field_lastn_571029945>
+        <m30_text_field_lastn_1884846476
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="tonomus/components/content/wrappers/m30-text-field"
+            charactersLabel="characters"
+            disabled="false"
+            id="role"
+            label="Role"
+            maxlength="100"
+            name="ROLE"
+            readonly="false"
+            required="true"
+            titleInEnglish="Role"
+            type="text">
+            <validate jcr:primaryType="nt:unstructured">
+                <presence
+                    jcr:primaryType="nt:unstructured"
+                    message="^Please enter your role"/>
+                <length
+                    jcr:primaryType="nt:unstructured"
+                    tooLong="^The field is too long"/>
+                <format
+                    jcr:primaryType="nt:unstructured"
+                    flagCheck="false"
+                    message="^Please only use letters"
+                    pattern="\[^0-9!-\\/:-@\\\\[-`{-~]+"/>
+                <email jcr:primaryType="nt:unstructured"/>
+            </validate>
+        </m30_text_field_lastn_1884846476>
+        <m31_dropdown_field_c
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="tonomus/components/content/wrappers/m31-dropdown-field"
+            autocomplete="false"
+            disabled="false"
+            id="region"
+            label="Region"
+            name="REGION"
+            optionsSource="manual"
+            placeholder="SELECT"
+            required="true"
+            titleInEnglish="Region"
+            wide="false">
+            <validate jcr:primaryType="nt:unstructured">
+                <presence
+                    jcr:primaryType="nt:unstructured"
+                    message="^Please choose a region"/>
+            </validate>
+            <items jcr:primaryType="nt:unstructured">
+                <item0
+                    jcr:primaryType="nt:unstructured"
+                    label="Saudi Arabia"
+                    selected="false"
+                    value="Saudi Arabia"/>
+                <item1
+                    jcr:primaryType="nt:unstructured"
+                    label="Afghanistan"
+                    selected="false"
+                    value="Afghanistan"/>
+                <item2
+                    jcr:primaryType="nt:unstructured"
+                    label="Albania"
+                    selected="false"
+                    value="Albania"/>
+                <item3
+                    jcr:primaryType="nt:unstructured"
+                    label="Algeria"
+                    selected="false"
+                    value="Algeria"/>
+                <item4
+                    jcr:primaryType="nt:unstructured"
+                    label="Andorra"
+                    selected="false"
+                    value="Andorra"/>
+                <item5
+                    jcr:primaryType="nt:unstructured"
+                    label="Angola"
+                    selected="false"
+                    value="Angola"/>
+                <item6
+                    jcr:primaryType="nt:unstructured"
+                    label="Antigua and Barbuda"
+                    selected="false"
+                    value="Antigua and Barbuda"/>
+                <item7
+                    jcr:primaryType="nt:unstructured"
+                    label="Argentina"
+                    selected="false"
+                    value="Argentina"/>
+                <item8
+                    jcr:primaryType="nt:unstructured"
+                    label="Armenia"
+                    selected="false"
+                    value="Armenia"/>
+                <item9
+                    jcr:primaryType="nt:unstructured"
+                    label="Australia"
+                    selected="false"
+                    value="Australia"/>
+                <item10
+                    jcr:primaryType="nt:unstructured"
+                    label="Austria"
+                    selected="false"
+                    value="Austria"/>
+                <item11
+                    jcr:primaryType="nt:unstructured"
+                    label="Azerbaijan"
+                    selected="false"
+                    value="Azerbaijan"/>
+                <item12
+                    jcr:primaryType="nt:unstructured"
+                    label="Bahamas"
+                    selected="false"
+                    value="Bahamas"/>
+                <item13
+                    jcr:primaryType="nt:unstructured"
+                    label="Bahrain"
+                    selected="false"
+                    value="Bahrain"/>
+                <item14
+                    jcr:primaryType="nt:unstructured"
+                    label="Bangladesh"
+                    selected="false"
+                    value="Bangladesh"/>
+                <item15
+                    jcr:primaryType="nt:unstructured"
+                    label="Barbados"
+                    selected="false"
+                    value="Barbados"/>
+                <item16
+                    jcr:primaryType="nt:unstructured"
+                    label="Belarus"
+                    selected="false"
+                    value="Belarus"/>
+                <item17
+                    jcr:primaryType="nt:unstructured"
+                    label="Belgium"
+                    selected="false"
+                    value="Belgium"/>
+                <item18
+                    jcr:primaryType="nt:unstructured"
+                    label="Belize"
+                    selected="false"
+                    value="Belize"/>
+                <item19
+                    jcr:primaryType="nt:unstructured"
+                    label="Benin"
+                    selected="false"
+                    value="Benin"/>
+                <item20
+                    jcr:primaryType="nt:unstructured"
+                    label="Bhutan"
+                    selected="false"
+                    value="Bhutan"/>
+                <item21
+                    jcr:primaryType="nt:unstructured"
+                    label="Bolivia"
+                    selected="false"
+                    value="Bolivia"/>
+                <item22
+                    jcr:primaryType="nt:unstructured"
+                    label="Bosnia and Herzegovina"
+                    selected="false"
+                    value="Bosnia and Herzegovina"/>
+                <item23
+                    jcr:primaryType="nt:unstructured"
+                    label="Botswana"
+                    selected="false"
+                    value="Botswana"/>
+                <item24
+                    jcr:primaryType="nt:unstructured"
+                    label="Brazil"
+                    selected="false"
+                    value="Brazil"/>
+                <item25
+                    jcr:primaryType="nt:unstructured"
+                    label="Brunei"
+                    selected="false"
+                    value="Brunei"/>
+                <item26
+                    jcr:primaryType="nt:unstructured"
+                    label="Bulgaria"
+                    selected="false"
+                    value="Bulgaria"/>
+                <item27
+                    jcr:primaryType="nt:unstructured"
+                    label="Burkina Faso"
+                    selected="false"
+                    value="Burkina Faso"/>
+                <item28
+                    jcr:primaryType="nt:unstructured"
+                    label="Burundi"
+                    selected="false"
+                    value="Burundi"/>
+                <item29
+                    jcr:primaryType="nt:unstructured"
+                    label="Cabo Verde"
+                    selected="false"
+                    value="Cabo Verde"/>
+                <item30
+                    jcr:primaryType="nt:unstructured"
+                    label=" Cambodia"
+                    selected="false"
+                    value=" Cambodia"/>
+                <item31
+                    jcr:primaryType="nt:unstructured"
+                    label="Cameroon"
+                    selected="false"
+                    value="Cameroon"/>
+                <item32
+                    jcr:primaryType="nt:unstructured"
+                    label="Canada"
+                    selected="false"
+                    value="Canada"/>
+                <item33
+                    jcr:primaryType="nt:unstructured"
+                    label="Central African Republic"
+                    selected="false"
+                    value="Central African Republic"/>
+                <item34
+                    jcr:primaryType="nt:unstructured"
+                    label="Chad"
+                    selected="false"
+                    value="Chad"/>
+                <item35
+                    jcr:primaryType="nt:unstructured"
+                    label="Chile"
+                    selected="false"
+                    value="Chile"/>
+                <item36
+                    jcr:primaryType="nt:unstructured"
+                    label="China"
+                    selected="false"
+                    value="China"/>
+                <item37
+                    jcr:primaryType="nt:unstructured"
+                    label="Colombia"
+                    selected="false"
+                    value="Colombia"/>
+                <item38
+                    jcr:primaryType="nt:unstructured"
+                    label="Comoros"
+                    selected="false"
+                    value="Comoros"/>
+                <item39
+                    jcr:primaryType="nt:unstructured"
+                    label="Congo (Congo-Brazzaville)"
+                    selected="false"
+                    value="Congo (Congo-Brazzaville)"/>
+                <item40
+                    jcr:primaryType="nt:unstructured"
+                    label="Costa Rica"
+                    selected="false"
+                    value="Costa Rica"/>
+                <item41
+                    jcr:primaryType="nt:unstructured"
+                    label="Côte d'Ivoire"
+                    selected="false"
+                    value="Cote d’Ivoire"/>
+                <item42
+                    jcr:primaryType="nt:unstructured"
+                    label="Croatia"
+                    selected="false"
+                    value="Croatia"/>
+                <item43
+                    jcr:primaryType="nt:unstructured"
+                    label="Cuba"
+                    selected="false"
+                    value="Cuba"/>
+                <item44
+                    jcr:primaryType="nt:unstructured"
+                    label="Cyprus"
+                    selected="false"
+                    value="Cyprus"/>
+                <item45
+                    jcr:primaryType="nt:unstructured"
+                    label="Czech Republic"
+                    selected="false"
+                    value="Czech Republic"/>
+                <item46
+                    jcr:primaryType="nt:unstructured"
+                    label="Democratic Republic of Congo"
+                    selected="false"
+                    value="Democratic Republic of Congo"/>
+                <item47
+                    jcr:primaryType="nt:unstructured"
+                    label="Denmark"
+                    selected="false"
+                    value="Denmark"/>
+                <item48
+                    jcr:primaryType="nt:unstructured"
+                    label="Djibouti"
+                    selected="false"
+                    value="Djibouti"/>
+                <item49
+                    jcr:primaryType="nt:unstructured"
+                    label="Dominica"
+                    selected="false"
+                    value="Dominica"/>
+                <item50
+                    jcr:primaryType="nt:unstructured"
+                    label="Dominican Republic"
+                    selected="false"
+                    value="Dominican Republic"/>
+                <item51
+                    jcr:primaryType="nt:unstructured"
+                    label="East Timor (Timor-Leste)"
+                    selected="false"
+                    value="East Timor"/>
+                <item52
+                    jcr:primaryType="nt:unstructured"
+                    label="Ecuador"
+                    selected="false"
+                    value="Ecuador"/>
+                <item53
+                    jcr:primaryType="nt:unstructured"
+                    label="Egypt"
+                    selected="false"
+                    value="Egypt"/>
+                <item54
+                    jcr:primaryType="nt:unstructured"
+                    label="El Salvador"
+                    selected="false"
+                    value="El Salvador"/>
+                <item55
+                    jcr:primaryType="nt:unstructured"
+                    label="Equatorial Guinea"
+                    selected="false"
+                    value="Equatorial Guinea"/>
+                <item56
+                    jcr:primaryType="nt:unstructured"
+                    label="Eritrea"
+                    selected="false"
+                    value="Eritrea"/>
+                <item57
+                    jcr:primaryType="nt:unstructured"
+                    label="Estonia"
+                    selected="false"
+                    value="Estonia"/>
+                <item58
+                    jcr:primaryType="nt:unstructured"
+                    label="Eswatini"
+                    selected="false"
+                    value="Eswatini"/>
+                <item59
+                    jcr:primaryType="nt:unstructured"
+                    label="Ethiopia"
+                    selected="false"
+                    value="Ethiopia"/>
+                <item60
+                    jcr:primaryType="nt:unstructured"
+                    label="Fiji"
+                    selected="false"
+                    value="Fiji"/>
+                <item61
+                    jcr:primaryType="nt:unstructured"
+                    label="Finland"
+                    selected="false"
+                    value="Finland"/>
+                <item62
+                    jcr:primaryType="nt:unstructured"
+                    label="France"
+                    selected="false"
+                    value="France"/>
+                <item63
+                    jcr:primaryType="nt:unstructured"
+                    label="Gabon"
+                    selected="false"
+                    value="Gabon"/>
+                <item64
+                    jcr:primaryType="nt:unstructured"
+                    label="Gambia"
+                    selected="false"
+                    value="Gambia"/>
+                <item65
+                    jcr:primaryType="nt:unstructured"
+                    label="Georgia"
+                    selected="false"
+                    value="Georgia"/>
+                <item66
+                    jcr:primaryType="nt:unstructured"
+                    label="Germany"
+                    selected="false"
+                    value="Germany"/>
+                <item67
+                    jcr:primaryType="nt:unstructured"
+                    label="Ghana"
+                    selected="false"
+                    value="Ghana"/>
+                <item68
+                    jcr:primaryType="nt:unstructured"
+                    label="Greece"
+                    selected="false"
+                    value="Greece"/>
+                <item69
+                    jcr:primaryType="nt:unstructured"
+                    label="Grenada"
+                    selected="false"
+                    value="Grenada"/>
+                <item70
+                    jcr:primaryType="nt:unstructured"
+                    label="Guatemala"
+                    selected="false"
+                    value="Guatemala"/>
+                <item71
+                    jcr:primaryType="nt:unstructured"
+                    label="Guinea"
+                    selected="false"
+                    value="Guinea"/>
+                <item72
+                    jcr:primaryType="nt:unstructured"
+                    label="Guinea-Bissau"
+                    selected="false"
+                    value="Guinea-Bissau"/>
+                <item73
+                    jcr:primaryType="nt:unstructured"
+                    label="Guyana"
+                    selected="false"
+                    value="Guyana"/>
+                <item74
+                    jcr:primaryType="nt:unstructured"
+                    label="Haiti"
+                    selected="false"
+                    value="Haiti"/>
+                <item75
+                    jcr:primaryType="nt:unstructured"
+                    label="Honduras"
+                    selected="false"
+                    value="Honduras"/>
+                <item76
+                    jcr:primaryType="nt:unstructured"
+                    label="Hungary"
+                    selected="false"
+                    value="Hungary"/>
+                <item77
+                    jcr:primaryType="nt:unstructured"
+                    label="Iceland"
+                    selected="false"
+                    value="Iceland"/>
+                <item78
+                    jcr:primaryType="nt:unstructured"
+                    label="India"
+                    selected="false"
+                    value="India"/>
+                <item79
+                    jcr:primaryType="nt:unstructured"
+                    label="Indonesia"
+                    selected="false"
+                    value="Indonesia"/>
+                <item80
+                    jcr:primaryType="nt:unstructured"
+                    label="Iraq"
+                    selected="false"
+                    value="Iraq"/>
+                <item81
+                    jcr:primaryType="nt:unstructured"
+                    label="Ireland"
+                    selected="false"
+                    value="Ireland"/>
+                <item82
+                    jcr:primaryType="nt:unstructured"
+                    label="Italy"
+                    selected="false"
+                    value="Italy"/>
+                <item83
+                    jcr:primaryType="nt:unstructured"
+                    label="Jamaica"
+                    selected="false"
+                    value="Jamaica"/>
+                <item84
+                    jcr:primaryType="nt:unstructured"
+                    label="Japan"
+                    selected="false"
+                    value="Japan"/>
+                <item85
+                    jcr:primaryType="nt:unstructured"
+                    label="Jordan"
+                    selected="false"
+                    value="Jordan"/>
+                <item86
+                    jcr:primaryType="nt:unstructured"
+                    label="Kazakhstan"
+                    selected="false"
+                    value="Kazakhstan"/>
+                <item87
+                    jcr:primaryType="nt:unstructured"
+                    label="Kenya"
+                    selected="false"
+                    value="Kenya"/>
+                <item88
+                    jcr:primaryType="nt:unstructured"
+                    label="Kiribati"
+                    selected="false"
+                    value="Kiribati"/>
+                <item89
+                    jcr:primaryType="nt:unstructured"
+                    label="Kosovo"
+                    selected="false"
+                    value="Kosovo"/>
+                <item90
+                    jcr:primaryType="nt:unstructured"
+                    label="Kuwait"
+                    selected="false"
+                    value="Kuwait"/>
+                <item91
+                    jcr:primaryType="nt:unstructured"
+                    label="Kyrgyzstan"
+                    selected="false"
+                    value="Kyrgyzstan"/>
+                <item92
+                    jcr:primaryType="nt:unstructured"
+                    label="Laos"
+                    selected="false"
+                    value="Laos"/>
+                <item93
+                    jcr:primaryType="nt:unstructured"
+                    label="Latvia"
+                    selected="false"
+                    value="Latvia"/>
+                <item94
+                    jcr:primaryType="nt:unstructured"
+                    label="Lebanon"
+                    selected="false"
+                    value="Lebanon"/>
+                <item95
+                    jcr:primaryType="nt:unstructured"
+                    label="Lesotho"
+                    selected="false"
+                    value="Lesotho"/>
+                <item96
+                    jcr:primaryType="nt:unstructured"
+                    label="Liberia"
+                    selected="false"
+                    value="Liberia"/>
+                <item97
+                    jcr:primaryType="nt:unstructured"
+                    label="Libya"
+                    selected="false"
+                    value="Libya"/>
+                <item98
+                    jcr:primaryType="nt:unstructured"
+                    label="Liechtenstein"
+                    selected="false"
+                    value="Liechtenstein"/>
+                <item99
+                    jcr:primaryType="nt:unstructured"
+                    label="Lithuania"
+                    selected="false"
+                    value="Lithuania"/>
+                <item100
+                    jcr:primaryType="nt:unstructured"
+                    label="Luxembourg"
+                    selected="false"
+                    value="Luxembourg"/>
+                <item101
+                    jcr:primaryType="nt:unstructured"
+                    label="Madagascar"
+                    selected="false"
+                    value="Madagascar"/>
+                <item102
+                    jcr:primaryType="nt:unstructured"
+                    label="Malawi"
+                    selected="false"
+                    value="Malawi"/>
+                <item103
+                    jcr:primaryType="nt:unstructured"
+                    label="Malaysia"
+                    selected="false"
+                    value="Malaysia"/>
+                <item104
+                    jcr:primaryType="nt:unstructured"
+                    label="Maldives"
+                    selected="false"
+                    value="Maldives"/>
+                <item105
+                    jcr:primaryType="nt:unstructured"
+                    label="Mali"
+                    selected="false"
+                    value="Mali"/>
+                <item106
+                    jcr:primaryType="nt:unstructured"
+                    label="Malta"
+                    selected="false"
+                    value="Malta"/>
+                <item107
+                    jcr:primaryType="nt:unstructured"
+                    label="Marshall Islands"
+                    selected="false"
+                    value="Marshall Islands"/>
+                <item108
+                    jcr:primaryType="nt:unstructured"
+                    label="Mauritania"
+                    selected="false"
+                    value="Mauritania"/>
+                <item109
+                    jcr:primaryType="nt:unstructured"
+                    label="Mauritius"
+                    selected="false"
+                    value="Mauritius"/>
+                <item110
+                    jcr:primaryType="nt:unstructured"
+                    label="Mexico"
+                    selected="false"
+                    value="Mexico"/>
+                <item111
+                    jcr:primaryType="nt:unstructured"
+                    label="Micronesia"
+                    selected="false"
+                    value="Micronesia"/>
+                <item112
+                    jcr:primaryType="nt:unstructured"
+                    label="Moldova"
+                    selected="false"
+                    value="Moldova"/>
+                <item113
+                    jcr:primaryType="nt:unstructured"
+                    label="Monaco"
+                    selected="false"
+                    value="Monaco"/>
+                <item114
+                    jcr:primaryType="nt:unstructured"
+                    label="Mongolia"
+                    selected="false"
+                    value="Mongolia"/>
+                <item115
+                    jcr:primaryType="nt:unstructured"
+                    label="Montenegro"
+                    selected="false"
+                    value="Montenegro"/>
+                <item116
+                    jcr:primaryType="nt:unstructured"
+                    label="Morocco"
+                    selected="false"
+                    value="Morocco"/>
+                <item117
+                    jcr:primaryType="nt:unstructured"
+                    label="Mozambique"
+                    selected="false"
+                    value="Mozambique"/>
+                <item118
+                    jcr:primaryType="nt:unstructured"
+                    label="Myanmar"
+                    selected="false"
+                    value="Myanmar"/>
+                <item119
+                    jcr:primaryType="nt:unstructured"
+                    label="Namibia"
+                    selected="false"
+                    value="Namibia"/>
+                <item120
+                    jcr:primaryType="nt:unstructured"
+                    label="Nauru"
+                    selected="false"
+                    value="Nauru"/>
+                <item121
+                    jcr:primaryType="nt:unstructured"
+                    label="Nepal"
+                    selected="false"
+                    value="Nepal"/>
+                <item122
+                    jcr:primaryType="nt:unstructured"
+                    label="Netherlands"
+                    selected="false"
+                    value="Netherlands"/>
+                <item123
+                    jcr:primaryType="nt:unstructured"
+                    label="New Zealand"
+                    selected="false"
+                    value="New Zealand"/>
+                <item124
+                    jcr:primaryType="nt:unstructured"
+                    label="Nicaragua"
+                    selected="false"
+                    value="Nicaragua"/>
+                <item125
+                    jcr:primaryType="nt:unstructured"
+                    label="Niger"
+                    selected="false"
+                    value="Niger"/>
+                <item126
+                    jcr:primaryType="nt:unstructured"
+                    label="Nigeria"
+                    selected="false"
+                    value="Nigeria"/>
+                <item127
+                    jcr:primaryType="nt:unstructured"
+                    label="North Korea"
+                    selected="false"
+                    value="North Korea"/>
+                <item128
+                    jcr:primaryType="nt:unstructured"
+                    label="North Macedonia"
+                    selected="false"
+                    value="North Macedonia"/>
+                <item129
+                    jcr:primaryType="nt:unstructured"
+                    label="Norway"
+                    selected="false"
+                    value="Norway"/>
+                <item130
+                    jcr:primaryType="nt:unstructured"
+                    label="Oman"
+                    selected="false"
+                    value="Oman"/>
+                <item131
+                    jcr:primaryType="nt:unstructured"
+                    label="Pakistan"
+                    selected="false"
+                    value="Pakistan"/>
+                <item132
+                    jcr:primaryType="nt:unstructured"
+                    label="Palau"
+                    selected="false"
+                    value="Palau"/>
+                <item133
+                    jcr:primaryType="nt:unstructured"
+                    label="Palestine"
+                    selected="false"
+                    value="Palestine"/>
+                <item134
+                    jcr:primaryType="nt:unstructured"
+                    label="Panama"
+                    selected="false"
+                    value="Panama"/>
+                <item135
+                    jcr:primaryType="nt:unstructured"
+                    label="Papua New Guinea"
+                    selected="false"
+                    value="Papua New Guinea"/>
+                <item136
+                    jcr:primaryType="nt:unstructured"
+                    label="Paraguay"
+                    selected="false"
+                    value="Paraguay"/>
+                <item137
+                    jcr:primaryType="nt:unstructured"
+                    label="Peru"
+                    selected="false"
+                    value="Peru"/>
+                <item138
+                    jcr:primaryType="nt:unstructured"
+                    label="Philippines"
+                    selected="false"
+                    value="Philippines"/>
+                <item139
+                    jcr:primaryType="nt:unstructured"
+                    label="Poland"
+                    selected="false"
+                    value="Poland"/>
+                <item140
+                    jcr:primaryType="nt:unstructured"
+                    label="Portugal"
+                    selected="false"
+                    value="Portugal"/>
+                <item141
+                    jcr:primaryType="nt:unstructured"
+                    label="Qatar"
+                    selected="false"
+                    value="Qatar"/>
+                <item142
+                    jcr:primaryType="nt:unstructured"
+                    label="Romania"
+                    selected="false"
+                    value="Romania"/>
+                <item143
+                    jcr:primaryType="nt:unstructured"
+                    label="Russia"
+                    selected="false"
+                    value="Russia"/>
+                <item144
+                    jcr:primaryType="nt:unstructured"
+                    label="Rwanda"
+                    selected="false"
+                    value="Rwanda"/>
+                <item145
+                    jcr:primaryType="nt:unstructured"
+                    label="Saint Kitts and Nevis"
+                    selected="false"
+                    value="Saint Kitts and Nevis"/>
+                <item146
+                    jcr:primaryType="nt:unstructured"
+                    label="Saint Lucia"
+                    selected="false"
+                    value="Saint Lucia"/>
+                <item147
+                    jcr:primaryType="nt:unstructured"
+                    label="Saint Vincent and the Grenadines"
+                    selected="false"
+                    value="Saint Vincent and the Grenadines"/>
+                <item148
+                    jcr:primaryType="nt:unstructured"
+                    label="Samoa"
+                    selected="false"
+                    value="Samoa"/>
+                <item149
+                    jcr:primaryType="nt:unstructured"
+                    label="San Marino"
+                    selected="false"
+                    value="San Marino"/>
+                <item150
+                    jcr:primaryType="nt:unstructured"
+                    label="Sao Tome and Principe"
+                    selected="false"
+                    value="Sao Tome and Principe"/>
+                <item151
+                    jcr:primaryType="nt:unstructured"
+                    label="Senegal"
+                    selected="false"
+                    value="Senegal"/>
+                <item152
+                    jcr:primaryType="nt:unstructured"
+                    label="Serbia"
+                    selected="false"
+                    value="Serbia"/>
+                <item153
+                    jcr:primaryType="nt:unstructured"
+                    label="Seychelles"
+                    selected="false"
+                    value="Seychelles"/>
+                <item154
+                    jcr:primaryType="nt:unstructured"
+                    label="Sierra Leone"
+                    selected="false"
+                    value="Sierra Leone"/>
+                <item155
+                    jcr:primaryType="nt:unstructured"
+                    label="Singapore"
+                    selected="false"
+                    value="Singapore"/>
+                <item156
+                    jcr:primaryType="nt:unstructured"
+                    label="Slovakia"
+                    selected="false"
+                    value="Slovakia"/>
+                <item157
+                    jcr:primaryType="nt:unstructured"
+                    label="Slovenia"
+                    selected="false"
+                    value="Slovenia"/>
+                <item158
+                    jcr:primaryType="nt:unstructured"
+                    label="Solomon Islands"
+                    selected="false"
+                    value="Solomon Islands"/>
+                <item159
+                    jcr:primaryType="nt:unstructured"
+                    label="Somalia"
+                    selected="false"
+                    value="Somalia"/>
+                <item160
+                    jcr:primaryType="nt:unstructured"
+                    label="South Africa"
+                    selected="false"
+                    value="South Africa"/>
+                <item161
+                    jcr:primaryType="nt:unstructured"
+                    label="South Korea"
+                    selected="false"
+                    value="South Korea"/>
+                <item162
+                    jcr:primaryType="nt:unstructured"
+                    label="South Sudan"
+                    selected="false"
+                    value="South Sudan"/>
+                <item163
+                    jcr:primaryType="nt:unstructured"
+                    label="Spain"
+                    selected="false"
+                    value="Spain"/>
+                <item164
+                    jcr:primaryType="nt:unstructured"
+                    label="Sri Lanka"
+                    selected="false"
+                    value="Sri Lanka"/>
+                <item165
+                    jcr:primaryType="nt:unstructured"
+                    label="Sudan"
+                    selected="false"
+                    value="Sudan"/>
+                <item166
+                    jcr:primaryType="nt:unstructured"
+                    label="Suriname"
+                    selected="false"
+                    value="Suriname"/>
+                <item167
+                    jcr:primaryType="nt:unstructured"
+                    label="Sweden"
+                    selected="false"
+                    value="Sweden"/>
+                <item168
+                    jcr:primaryType="nt:unstructured"
+                    label="Switzerland"
+                    selected="false"
+                    value="Switzerland"/>
+                <item169
+                    jcr:primaryType="nt:unstructured"
+                    label="Syria"
+                    selected="false"
+                    value="Syria"/>
+                <item170
+                    jcr:primaryType="nt:unstructured"
+                    label="Tajikistan"
+                    selected="false"
+                    value="Tajikistan"/>
+                <item171
+                    jcr:primaryType="nt:unstructured"
+                    label="Tanzania"
+                    selected="false"
+                    value="Tanzania"/>
+                <item172
+                    jcr:primaryType="nt:unstructured"
+                    label="Thailand"
+                    selected="false"
+                    value="Thailand"/>
+                <item173
+                    jcr:primaryType="nt:unstructured"
+                    label="Togo"
+                    selected="false"
+                    value="Togo"/>
+                <item174
+                    jcr:primaryType="nt:unstructured"
+                    label="Tonga"
+                    selected="false"
+                    value="Tonga"/>
+                <item175
+                    jcr:primaryType="nt:unstructured"
+                    label="Trinidad and Tobago"
+                    selected="false"
+                    value="Trinidad and Tobago"/>
+                <item176
+                    jcr:primaryType="nt:unstructured"
+                    label="Tunisia"
+                    selected="false"
+                    value="Tunisia"/>
+                <item177
+                    jcr:primaryType="nt:unstructured"
+                    label="Turkey"
+                    selected="false"
+                    value="Turkey"/>
+                <item178
+                    jcr:primaryType="nt:unstructured"
+                    label="Turkmenistan"
+                    selected="false"
+                    value="Turkmenistan"/>
+                <item179
+                    jcr:primaryType="nt:unstructured"
+                    label="Tuvalu"
+                    selected="false"
+                    value="Tuvalu"/>
+                <item180
+                    jcr:primaryType="nt:unstructured"
+                    label="Uganda"
+                    selected="false"
+                    value="Uganda"/>
+                <item181
+                    jcr:primaryType="nt:unstructured"
+                    label="Ukraine"
+                    selected="false"
+                    value="Ukraine"/>
+                <item182
+                    jcr:primaryType="nt:unstructured"
+                    label="United Arab Emirates"
+                    selected="false"
+                    value="United Arab Emirates"/>
+                <item183
+                    jcr:primaryType="nt:unstructured"
+                    label="United Kingdom"
+                    selected="false"
+                    value="United Kingdom"/>
+                <item184
+                    jcr:primaryType="nt:unstructured"
+                    label="United States"
+                    selected="false"
+                    value="United States"/>
+                <item185
+                    jcr:primaryType="nt:unstructured"
+                    label="Uruguay"
+                    selected="false"
+                    value="Uruguay"/>
+                <item186
+                    jcr:primaryType="nt:unstructured"
+                    label="Uzbekistan"
+                    selected="false"
+                    value="Uzbekistan"/>
+                <item187
+                    jcr:primaryType="nt:unstructured"
+                    label="Vanuatu"
+                    selected="false"
+                    value="Vanuatu"/>
+                <item188
+                    jcr:primaryType="nt:unstructured"
+                    label="Vatican City"
+                    selected="false"
+                    value="Vatican City"/>
+                <item189
+                    jcr:primaryType="nt:unstructured"
+                    label="Venezuela"
+                    selected="false"
+                    value="Venezuela"/>
+                <item190
+                    jcr:primaryType="nt:unstructured"
+                    label="Vietnam"
+                    selected="false"
+                    value="Vietnam"/>
+                <item191
+                    jcr:primaryType="nt:unstructured"
+                    label="Yemen"
+                    selected="false"
+                    value="Yemen"/>
+                <item192
+                    jcr:primaryType="nt:unstructured"
+                    label="Zambia"
+                    selected="false"
+                    value="Zambia"/>
+                <item193
+                    jcr:primaryType="nt:unstructured"
+                    label="Zimbabwe"
+                    selected="false"
+                    value="Zimbabwe"/>
+            </items>
+        </m31_dropdown_field_c>
+        <copy_of_m31_dropdown
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="tonomus/components/content/wrappers/m31-dropdown-field"
+            autocomplete="false"
+            disabled="false"
+            id="LANGUAGE"
+            label="Preferred language"
+            name="LANGUAGE"
+            optionsSource="manual"
+            placeholder="SELECT"
+            required="true"
+            titleInEnglish="Preferred language">
+            <validate jcr:primaryType="nt:unstructured">
+                <presence
+                    jcr:primaryType="nt:unstructured"
+                    message="^Please enter preferred language."/>
+            </validate>
+            <items jcr:primaryType="nt:unstructured">
+                <item0
+                    jcr:primaryType="nt:unstructured"
+                    label="English"
+                    selected="false"
+                    value="English"/>
+                <item1
+                    jcr:primaryType="nt:unstructured"
+                    label="Arabic"
+                    selected="false"
+                    value="Arabic"/>
+                <item2
+                    jcr:primaryType="nt:unstructured"
+                    label="Chinese"
+                    selected="false"
+                    value="Chinese"/>
+                <item3
+                    jcr:primaryType="nt:unstructured"
+                    label="Japanese"
+                    selected="false"
+                    value="Japanese"/>
+                <item4
+                    jcr:primaryType="nt:unstructured"
+                    label="Russian"
+                    selected="false"
+                    value="Russian"/>
+                <item5
+                    jcr:primaryType="nt:unstructured"
+                    label="German"
+                    selected="false"
+                    value="German"/>
+                <item6
+                    jcr:primaryType="nt:unstructured"
+                    label="French"
+                    selected="false"
+                    value="French"/>
+            </items>
+        </copy_of_m31_dropdown>
+    </c48_forms_group>
+    <messages jcr:primaryType="nt:unstructured">
+        <success
+            jcr:primaryType="nt:unstructured"
+            icon="checkmark">
+            <heading
+                jcr:primaryType="nt:unstructured"
+                text="Your request sent successfully"/>
+        </success>
+        <error
+            jcr:primaryType="nt:unstructured"
+            icon="cross">
+            <heading
+                jcr:primaryType="nt:unstructured"
+                text="An error occurred during the preparation of the despatch."/>
+        </error>
+    </messages>
+    <cq:responsive jcr:primaryType="nt:unstructured">
+        <default
+            jcr:primaryType="nt:unstructured"
+            offset="0"
+            width="6"/>
+    </cq:responsive>
+    <buttons jcr:primaryType="nt:unstructured">
+        <item0
+            jcr:primaryType="nt:unstructured"
+            label="Submit Now"
+            level="primary"
+            size="small"
+            target="_self"
+            theme="green"
+            type="submit"/>
+    </buttons>
+</jcr:root>

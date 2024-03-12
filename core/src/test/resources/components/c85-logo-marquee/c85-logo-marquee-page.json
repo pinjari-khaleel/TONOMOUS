@@ -1,0 +1,98 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Thu Sep 08 2022 14:51:48 GMT+0600",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "jcr:title": "Test",
+    "cq:template": "/conf/tonomus/settings/wcm/templates/t04-home",
+    "jcr:created": "Thu Sep 08 2022 14:51:48 GMT+0600",
+    "cq:lastModified": "Fri Sep 16 2022 09:27:59 GMT+0600",
+    "isRightToLeftLanguage": "ltr",
+    "sling:resourceType": "neom/components/structure/tonomus-home-page",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c85_logo_marquee": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Fri Sep 16 2022 09:26:53 GMT+0600",
+          "jcr:lastModified": "Fri Sep 16 2022 09:27:59 GMT+0600",
+          "scrollComponent": "true",
+          "sling:resourceType": "neom/components/content/components/c85-logo-marquee/v1/c85-logo-marquee",
+          "textIsRich": "true",
+          "heading": {
+            "jcr:primaryType": "nt:unstructured",
+            "text": "<p>Our <strong>partners</strong></p>\r\n"
+          },
+          "image": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:lastModified": "Fri Sep 16 2022 09:27:59 GMT+0600"
+          },
+          "items": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+              "jcr:primaryType": "nt:unstructured",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "alt": "Neom",
+                "src": "/content/dam/tonomus/components/c85-logo-marquee/c85-logo-marquee-neom.png"
+              },
+              "link": {
+                "jcr:primaryType": "nt:unstructured",
+                "target": "_blank",
+                "href": "https://neom.com/en-us"
+              }
+            },
+            "item1": {
+              "jcr:primaryType": "nt:unstructured",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "alt": "Oracle",
+                "src": "/content/dam/tonomus/components/c85-logo-marquee/c85-logo-marquee-oracle.png"
+              },
+              "link": {
+                "jcr:primaryType": "nt:unstructured",
+                "target": "_blank",
+                "href": "https://oracle.com"
+              }
+            },
+            "item2": {
+              "jcr:primaryType": "nt:unstructured",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "alt": "OneWeb",
+                "src": "/content/dam/tonomus/components/c85-logo-marquee/c85-logo-marquee-oneweb.png"
+              },
+              "link": {
+                "jcr:primaryType": "nt:unstructured",
+                "target": "_blank",
+                "href": "https://oneweb.net/"
+              }
+            },
+            "item3": {
+              "jcr:primaryType": "nt:unstructured",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "alt": "FAS Energy",
+                "src": "/content/dam/tonomus/components/c85-logo-marquee/c85-logo-marquee-fasenergy.png"
+              },
+              "link": {
+                "jcr:primaryType": "nt:unstructured",
+                "target": "_blank",
+                "href": "http://www.fas-energy.com/"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

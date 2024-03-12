@@ -1,0 +1,19 @@
+id: 'component-id'
+heading:
+  text: 'heading text'
+eyebrow:
+  text: 'eyebrow text'
+moustache:
+  text: 'moustache text'
+copy:
+  - size: 'small'
+    content: 'This is small copy'
+    uppercase: true
+  - size: 'medium'
+    content: 'This is medium copy'
+    uppercase: false
+    highlight: true
+  - size: 'large'
+    content: 'This is large copy'
+    uppercase: false
+    highlight: false

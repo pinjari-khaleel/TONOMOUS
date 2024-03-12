@@ -1,0 +1,61 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "anypath": {
+      "xpfragment": {
+        "s12_bu_header": {
+          "logoImage": {
+            "alt": "logo image",
+            "src": "/content/dam/tonomus/components/tonomus-footer-logo/logo-en.png"
+          },
+          "highlightedLink": {
+            "href": "/content/tonomus/en-us#tonomus_getintouch_form_id",
+            "label": "Get in touch"
+          },
+          "link": {
+            "target": "_blank",
+            "href": "/content/tonomus"
+          },
+          "navLinks": {
+            "item0": {
+              "target": "_blank",
+              "href": "https://neom.com",
+              "label": "Meet Tonomous"
+            },
+            "item1": {
+              "target": "_self",
+              "href": "https://neom.com",
+              "label": "our goals"
+            },
+            "item3": {
+              "target": "_self",
+              "href": "https://neom.com",
+              "label": "news & media"
+            }
+          },
+          "buNav": {
+            "item0": {
+              "target": "_self",
+              "name": "Cognitive Solution"
+            },
+            "item1": {
+              "target": "_self",
+              "name": "Compute"
+            }
+          },
+          "languages": {
+            "item0": {
+              "languageCode": "EN",
+              "priorityLanguage": "false",
+              "target": "_self",
+              "href": "/content/tonomus/en-us",
+              "label": "English",
+              "shortLabel": "en"
+            }
+          }
+        }
+      }
+    }
+  }
+}

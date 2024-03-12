@@ -1,0 +1,10 @@
+<sly
+    data-sly-use.formTextModel="com.tonomus.core.slingmodels.components.v1.forms.multistep.MultiStepFormTextModel"
+    data-sly-use.textFieldTemplate="/apps/tonomus/components/content/molecules/m30-text-field.html"></sly>
+
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<div class="o-inputList__item ${formTextModel.wide ? '-wide' : ''}">
+  <sly data-sly-call="${textFieldTemplate.textField @ formTextModel=formTextModel}"></sly>
+</div>

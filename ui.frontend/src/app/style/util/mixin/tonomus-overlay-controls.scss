@@ -1,0 +1,14 @@
+@mixin tonomus-overlay-controls {
+  & .m-button.-close.-white.-primary {
+    --button-size: 48px;
+    --button-text-color: var(--color-tonomus-green);
+    --button-background-color: transparent;
+    --button-shadow-color: rgba(0, 0, 0, 0);
+    --button-border-color: transparent;
+
+    @include respond-to(MEDIUM) {
+      --button-text-color: var(--color-tonomus-purple);
+      --button-background-color: var(--color-white);
+    }
+  }
+}

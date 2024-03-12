@@ -1,0 +1,148 @@
+diff --git a/node_modules/scroll-tracker-component-manager/index.js b/node_modules/scroll-tracker-component-manager/index.js
+index e4feb2c..848127b 100644
+--- a/node_modules/scroll-tracker-component-manager/index.js
++++ b/node_modules/scroll-tracker-component-manager/index.js
+@@ -3,7 +3,7 @@
+ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+ 
+ exports.__esModule = true;
+-exports.Direction = exports.HorizontalScrollPlugin = exports.LockScrollPlugin = exports.Axis = exports.IScrollTrackerComponentManagerOptions = exports.ScrollTrackerComponentManager = void 0;
++exports.Direction = exports.Axis = exports.IScrollTrackerComponentManagerOptions = exports.ScrollTrackerComponentManager = void 0;
+ 
+ var _ScrollTrackerComponentManager = _interopRequireDefault(require("./lib/ScrollTrackerComponentManager"));
+ 
+@@ -17,11 +17,6 @@ var _sengScrollTracker = require("seng-scroll-tracker");
+ 
+ exports.Axis = _sengScrollTracker.Axis;
+ 
+-var _plugin = require("./lib/util/plugin");
+-
+-exports.LockScrollPlugin = _plugin.LockScrollPlugin;
+-exports.HorizontalScrollPlugin = _plugin.HorizontalScrollPlugin;
+-
+ var _Direction = require("./lib/enum/Direction");
+ 
+ exports.Direction = _Direction.Direction;
+diff --git a/node_modules/scroll-tracker-component-manager/lib/ScrollTrackerComponentManager.js b/node_modules/scroll-tracker-component-manager/lib/ScrollTrackerComponentManager.js
+index 7c38121..42b6838 100644
+--- a/node_modules/scroll-tracker-component-manager/lib/ScrollTrackerComponentManager.js
++++ b/node_modules/scroll-tracker-component-manager/lib/ScrollTrackerComponentManager.js
+@@ -19,12 +19,8 @@ var _Axis = _interopRequireDefault(require("seng-scroll-tracker/lib/enum/Axis"))
+ 
+ var _ScrollTrackerEvent = _interopRequireDefault(require("seng-scroll-tracker/lib/event/ScrollTrackerEvent"));
+ 
+-var _smoothScrollbar = _interopRequireDefault(require("smooth-scrollbar"));
+-
+ var _CustomScrollTracker = _interopRequireDefault(require("./util/CustomScrollTracker"));
+ 
+-var _HorizontalScrollPlugin = require("./util/plugin/HorizontalScrollPlugin");
+-
+ var _ScrollUtils = _interopRequireDefault(require("./util/ScrollUtils"));
+ 
+ /**
+@@ -116,7 +112,6 @@ function () {
+     (0, _defineProperty2.default)(this, "debugLabelContainer", void 0);
+     (0, _defineProperty2.default)(this, "scrollTrackerPoints", {});
+     (0, _defineProperty2.default)(this, "resizeEventListener", void 0);
+-    (0, _defineProperty2.default)(this, "smoothScrollbar", void 0);
+     (0, _defineProperty2.default)(this, "scrollPosition", 0);
+     (0, _defineProperty2.default)(this, "windowHeight", window.innerHeight);
+     (0, _defineProperty2.default)(this, "windowWidth", window.innerWidth);
+@@ -139,18 +134,8 @@ function () {
+       scrollThrottle: 100,
+       resizeDebounce: 100,
+       axis: _Axis.default.Y,
+-      enableSmoothScroll: false,
+-      smoothScrollOptions: {
+-        damping: 0.1,
+-        thumbMinSize: 20,
+-        renderByPixels: true,
+-        alwaysShowTracks: false,
+-        continuousScrolling: true,
+-        wheelEventTarget: null,
+-        plugins: {}
+-      }
+     });
+-    this.options = Object.assign(this.options, options); // Default options when smoothScroll is disabled
++    this.options = Object.assign(this.options, options);
+ 
+     var customScrollTrackerOptions = {
+       axis: this.options.axis,
+@@ -164,25 +149,9 @@ function () {
+       },
+       scrollThrottle: this.options.scrollThrottle,
+       resizeDebounce: this.options.resizeDebounce
+-    }; // SmoothScroll Enabled
+-
+-    if (this.options.enableSmoothScroll) {
+-      this.options.smoothScrollOptions = Object.assign(this.options.smoothScrollOptions, options.smoothScrollOptions); // Initialize horizontal scroll plugin
+-
+-      if (this.options.axis === _Axis.default.X) {
+-        _smoothScrollbar.default.use(_HorizontalScrollPlugin.HorizontalScrollPlugin);
+-      }
+-
+-      this.smoothScrollbar = _smoothScrollbar.default.init(this.options.container === window ? document.body : this.options.container, this.options.smoothScrollOptions);
+-      customScrollTrackerOptions.container = this.smoothScrollbar.containerEl;
+-      customScrollTrackerOptions.scrollContainer = new SmoothScrollContainer(this.smoothScrollbar);
+-      customScrollTrackerOptions.attachScrollListener = false;
+-      customScrollTrackerOptions.onScroll = null;
+-      this.debugLabelContainer = this.smoothScrollbar.contentEl; // Native Scroll
+-    } else {
+-      this.debugLabelContainer = this.options.container === window ? document.body : this.options.container;
+-    } // Initialize the 'adapted' scroll-tracker
++    };
+ 
++    this.debugLabelContainer = this.options.container === window ? document.body : this.options.container;
+ 
+     this.scrollTracker = new _CustomScrollTracker.default(customScrollTrackerOptions.container, customScrollTrackerOptions.axis, {
+       scrollContainer: customScrollTrackerOptions.scrollContainer,
+@@ -192,16 +161,6 @@ function () {
+       onScroll: customScrollTrackerOptions.onScroll
+     }); // Add scroll listener for smooth-scroll
+ 
+-    if (this.smoothScrollbar) {
+-      this.smoothScrollbar.addListener(function (status) {
+-        _this.scrollPosition = _this.options.axis === _Axis.default.X ? status.offset.x : status.offset.y;
+-
+-        _this.updateComponentsOnScroll(_this.scrollPosition);
+-
+-        _this.scrollTracker.update();
+-      });
+-    }
+-
+     this.resizeEventListener = (0, _debounce.default)(this.handleResize.bind(this), this.options.resizeDebounce);
+     window.addEventListener('resize', this.resizeEventListener);
+   }
+@@ -419,10 +378,6 @@ function () {
+   ;
+ 
+   _proto.getScrollLeft = function getScrollLeft() {
+-    if (this.options.enableSmoothScroll) {
+-      return this.smoothScrollbar.scrollLeft;
+-    }
+-
+     if (this.options.container === window) {
+       return _ScrollUtils.default.scrollLeft;
+     }
+@@ -436,10 +391,6 @@ function () {
+   ;
+ 
+   _proto.getScrollTop = function getScrollTop() {
+-    if (this.options.enableSmoothScroll) {
+-      return this.smoothScrollbar.scrollTop;
+-    }
+-
+     if (this.options.container === window) {
+       return _ScrollUtils.default.scrollTop;
+     }
+@@ -609,10 +560,6 @@ function () {
+       this.scrollTracker.dispose();
+       this.scrollTracker = null;
+     }
+-
+-    if (this.smoothScrollbar) {
+-      this.smoothScrollbar.destroy();
+-    }
+   };
+ 
+   return ScrollTrackerComponentManager;

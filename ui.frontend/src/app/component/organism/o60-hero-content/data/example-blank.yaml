@@ -1,0 +1,17 @@
+scrollComponent: true
+
+align:
+  horizontal: start
+  vertical: bottom
+
+background:
+  image:
+    src: './image/homepage-mountain-background.jpg'
+    alt: 'Mountain background'
+  video:
+    props:
+      sources:
+        - src: './video/background-video-preview.mp4'
+          type: 'video/mp4'
+
+scrollButton: false

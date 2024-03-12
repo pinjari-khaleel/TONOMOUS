@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          scrollComponent="{Boolean}true">
+  <heading
+      jcr:primaryType="nt:unstructured"
+      text="Cookie Policy"/>
+  <c37_paragraph
+      cq:styleIds="[2728403038841]"
+      jcr:created="{Date}2021-07-12T22:00:31.664+06:00"
+      jcr:createdBy="admin"
+      jcr:lastModified="{Date}2021-07-12T18:00:38.962+03:00"
+      jcr:lastModifiedBy="admin"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/wrappers/c37-paragraph"
+      text="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet ac neque quis ultrices nibh. Aliquam mi in ut eu id nec nisi. Nisi lectus vitae vitae, eu urna risus quis pretium malesuada. Lectus semper aenean ornare ornare. Eget vel accumsan tellus venenatis sapien mattis arcu ut ut. Lobortis nunc diam amet, malesuada sed a. Dapibus pellentesque platea et et ut nulla sit est venenatis. Nibh viverra ut dui vitae condimentum sed gravida nibh. Congue mi eu aliquet nisl tincidunt porta elementum.&lt;/p>&#xd;&#xa;&lt;ol>&#xd;&#xa;&lt;li>klkj&lt;/li>&#xd;&#xa;&lt;li>klkj&lt;/li>&#xd;&#xa;&lt;li>lkjlkj&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;&lt;p>&lt;u>lkjlkjkl&lt;/u>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;"
+      textIsRich="true"/>
+</jcr:root>

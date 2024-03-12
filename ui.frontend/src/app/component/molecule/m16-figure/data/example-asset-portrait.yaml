@@ -1,0 +1,4 @@
+variant: 'portrait'
+image:
+  src: 'image/c20-test-image.jpg'
+  alt: 'Test image for this component'

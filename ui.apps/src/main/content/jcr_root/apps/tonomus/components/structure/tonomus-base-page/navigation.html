@@ -1,0 +1,10 @@
+<sly
+    data-sly-set.navComponent=
+        "${'tonomus/components/content/components/s11-tonomus-navigation/v1/s11-tonomus-navigation'}"
+    data-sly-set.configPage="${pageProperties.configPage ? pageProperties.configPage : 'conf/admin'}"
+    data-sly-use.configModel="${'com.tonomus.core.slingmodels.common.v1.ConfigResourceModel' @
+      resourceType=navComponent, configPage=configPage, isRelativePath=true}"></sly>
+
+<sly data-sly-test="${configModel.resourcePath}"
+     data-sly-resource="${ configModel.resourcePath || 's11-tonomus-navigation' @
+     resourceType=navComponent, wcmmode='disabled'}"></sly>

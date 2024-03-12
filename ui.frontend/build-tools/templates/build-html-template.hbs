@@ -1,0 +1,59 @@
+{{!
+  Production page template
+}}
+<!DOCTYPE html>
+<html lang="{{# if data.language }}{{ data.language }}{{else}}en{{/if}}"{{# if data.dir}} dir="{{ data.dir }}"{{/if}} {{#if data.tonomus}}data-tonomus=""{{/if}} data-theme="{{#if theme}}{{theme}}{{^}}tonomus{{/if}}">
+<head>
+  <meta charset="utf-8" />
+  <title>{{data.head.title}}</title>
+  <meta name="description" content="{{data.head.description}}" />
+  <meta name="template" content="home" />
+  <link rel="canonical" href="www.neom.com" /> {{!-- get correct canonical url --}}
+
+  {{#with data.share}}
+    <meta name="og:description" content="{{description}}" />
+    <meta name="og:image" content="{{image.src}}" />
+    <meta name="og:image:alt" content="{{image.alt}}" />
+    {{#if locale}}<meta name="og:locale" content="{{locale}}" />{{/if}}
+    <meta name="og:title" content="{{title}}" />
+    {{#if type}}<meta name="og:type" content="{{type}}" />{{/if}}
+    <meta name="og:url" content="{{url}}" />
+    {{#with twitter}}
+      <meta name="twitter:card" content="{{card}}" />
+      {{#if creator}}<meta name="twitter:creator" content="{{creator}}" />{{/if}}
+      <meta name="twitter:description" content="{{#if description}}{{description}}{{^}}{{../description}}{{/if}}" />
+      <meta name="twitter:image" content="{{#if image}}{{image.src}}{{^}}{{../image.src}}{{/if}}" />
+      <meta name="twitter:image:alt" content="{{#if image.alt}}{{image.alt}}{{^}}{{../image.alt}}{{/if}}" />
+      <meta name="twitter:site" content="{{site}}" />
+      <meta name="twitter:title" content="{{#if title}}{{title}}{{^}}{{../title}}{{/if}}" />
+    {{/with}}
+  {{/with}}
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="{{publicPath}}favicon.ico" type="image/x-icon" />
+  <script defer fetchpriority="high" src="{{publicPath}}asset/bundle.js"></script>
+  <link rel="stylesheet" href="{{publicPath}}asset/bundle.css" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{publicPath}}icon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{publicPath}}icon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{publicPath}}icon/favicon-16x16.png" />
+
+  <link rel="dns-prefetch" href="//dpm.demdex.net" />
+  <link rel="dns-prefetch" href="//neom.demdex.net" />
+  <link rel="dns-prefetch" href="//at.neom.com" />
+  <link rel="dns-prefetch" href="//aas.neom.com" />
+
+  <!-- establish Data Layer -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+
+</head>
+<body>
+  <div class="app" id="app">
+    {{{content}}}
+  </div>
+
+
+</body>
+</html>

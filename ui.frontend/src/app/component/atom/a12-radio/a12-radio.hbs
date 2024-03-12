@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="./a12-radio.scss">
+<script src="./A12Radio.ts"></script>
+
+<div class="a-radio{{#if checked}} -isChecked{{/if}}{{#if disabled}} -isDisabled{{/if}}" data-component="a12-radio">
+  <input class="a-radio__input"
+         {{#if checked}}checked{{/if}}
+         {{#if disabled}}disabled{{/if}}
+         {{#with id}}id="{{this}}" data-{{this}}{{/with}}
+         {{#with name}}name="{{this}}"{{/with}}
+         {{#if required}}required{{/if}}
+         type="radio"
+         {{#with titleInEnglish}}data-title-in-english="{{this}}"{{/with}}
+         {{#with value}}value="{{this}}"{{/with}}
+  />
+  <span class="a-radio__indicator"></span>
+</div>

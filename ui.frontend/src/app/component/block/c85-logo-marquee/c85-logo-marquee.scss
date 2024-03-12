@@ -1,0 +1,84 @@
+.b-logoMarquee {
+  --text-color: var(--color-white);
+  --logo-block-size: 50px;
+  --logo-inline-size: 110px;
+
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+  overflow-x: hidden;
+
+  &__container {
+    @include container();
+    color: var(--text-color);
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__content {
+    position: relative;
+    block-size: var(--logo-block-size);
+    margin-block-start: 40px;
+  }
+
+  &__logoCarousel {
+    position: absolute;
+    display: flex;
+    gap: 31px;
+    block-size: var(--logo-block-size);
+  }
+
+  &__swiper-logoLink {
+    block-size: var(--logo-block-size);
+
+    .a-image.-block {
+      .a-image__picture {
+        display: flex;
+        align-items: center;
+      }
+
+      .a-image__img {
+        max-inline-size: var(--logo-inline-size);
+        max-block-size: var(--logo-block-size);
+        width: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    &__content {
+      display: flex;
+      justify-content: center;
+      margin-block-start: 50px;
+    }
+
+    &__logoCarousel {
+      gap: 60px;
+    }
+  }
+
+  @include respond-to(LARGE) {
+    --logo-block-size: 75px;
+    --logo-inline-size: 180px;
+
+    .a-heading {
+      @include type("heading", "h3");
+      text-align: center;
+    }
+
+    &__content {
+      margin-block-start: 60px;
+    }
+
+    &__logoCarousel {
+      gap: 90px;
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    --logo-block-size: 100px;
+    --logo-inline-size: 240px;
+  }
+}

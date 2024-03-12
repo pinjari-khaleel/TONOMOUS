@@ -1,0 +1,18 @@
+<sly data-sly-template.popup
+     data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html">
+
+  <div class="o-popupMessage" data-component="o24-popup-message">
+    <div class="o-popupMessage__mask" data-mask></div>
+    <div class="o-popupMessage__controls">
+      <sly data-sly-test="${inheritedPageProperties.brandSite == 'tonomus'}"
+           data-sly-call="${buttonTemplate.button @ level='primary', icon='close', theme='white',
+            variant='close'}"></sly>
+      <sly data-sly-test="${inheritedPageProperties.brandSite != 'tonomus'}"
+           data-sly-call="${buttonTemplate.button @ level='secondary', icon='close',
+           theme='white', variant='close'}"></sly>
+    </div>
+    <div class="o-popupMessage__messageWrapper" data-popup-container>
+    </div>
+  </div>
+
+</sly>

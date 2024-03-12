@@ -1,0 +1,6 @@
+id: example-input-field-1
+label: Input field label
+placeholder: Placeholder text
+name: example-input-field-1
+required: true
+type: text

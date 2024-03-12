@@ -1,0 +1,16 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" 
+  data-sly-use.favicons="favicons.html"
+  data-sly-call="${ clientlib.css @ categories=['tonomus.site']}">
+  <sly data-sly-test="${wcmmode.preview || wcmmode.edit}">
+    <sly data-sly-call="${clientlib.css @ categories='tonomus.author'}"></sly>
+    <sly data-sly-call="${clientlib.css @ categories='tonomus.editor'}"></sly>
+  </sly>
+</sly>
+<!--/* Favicons */-->
+<sly data-sly-call="${favicons.favicons @ path=inheritedPageProperties.faviconPath}"></sly>
+<!--/* Links to preload commonly used fonts */-->
+<sly data-sly-include="head-fonts.html"></sly>
+<sly data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page" data-sly-list="${page.htmlPageItems}">
+  <script data-sly-test="${item.location.name == 'header'}" data-sly-element="${item.element.name @ context='unsafe'}"
+    data-sly-attribute="${item.attributes}"></script>
+</sly>

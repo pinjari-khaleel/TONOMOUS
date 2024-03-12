@@ -1,0 +1,17 @@
+@mixin rtlPositionFlip($value, $direction) {
+  @if ($direction == "right") {
+    right: $value;
+
+    [dir="rtl"] & {
+      right: initial;
+      left: $value;
+    }
+  } @else {
+    left: $value;
+
+    [dir="rtl"] & {
+      left: initial;
+      right: $value;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.b-card-slider {
+  --component-highlight-color: var(--color-tonomus-green);
+  --component-padding: 60px;
+
+  color: var(--color-tonomus-purple);
+  padding-block: var(--component-padding);
+
+  overflow-x: hidden;
+
+  .m-pageIndicators {
+    padding-block-end: 0;
+  }
+
+  &__container {
+    @include container();
+
+    position: relative;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: 35px;
+  }
+
+  .swiper-container {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    list-style: none;
+  }
+
+  .swiper-slide {
+    --card-size: 280px;
+
+    inline-size: var(--card-size);
+  }
+
+  &__controls {
+    display: none;
+  }
+
+  @include respond-to(MEDIUM) {
+    &__header {
+      margin-block-end: 60px;
+    }
+
+    .m-pageIndicators {
+      display: none;
+    }
+
+    .swiper-slide {
+      --card-size: 420px;
+
+      .a-image {
+        block-size: 100%;
+      }
+    }
+
+    &__controls {
+      @include size(160px, 60px);
+
+      align-self: flex-end;
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      inset-inline-end: var(--containerMargin);
+      z-index: zindex($zLayout, content);
+
+      &.-isHidden {
+        display: none;
+      }
+    }
+  }
+
+  @include respond-to(LARGE) {
+    &__container {
+      display: grid;
+      column-gap: var(--grid-gap);
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    &__header {
+      grid-column: 2 / span 6;
+      grid-row-start: 1;
+    }
+
+    &__content {
+      grid-column: 2 / span 11;
+      grid-row-start: 2;
+    }
+  }
+
+  @include respond-to(XXLARGE) {
+    .swiper-slide {
+      --card-size: 478px;
+    }
+  }
+}

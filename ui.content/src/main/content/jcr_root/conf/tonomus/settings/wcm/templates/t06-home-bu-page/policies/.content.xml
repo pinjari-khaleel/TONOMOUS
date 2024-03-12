@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:policy="tonomus/components/structure/tonomus-bu-page/policy_1702638374021"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <root
+            cq:policy="wcm/foundation/components/responsivegrid/policy_281257721693720"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping">
+            <responsivegrid
+                cq:policy="wcm/foundation/components/responsivegrid/policy_282044133782029"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <tonomus jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <content jcr:primaryType="nt:unstructured">
+                            <components jcr:primaryType="nt:unstructured">
+                                <c101-teaser-card jcr:primaryType="nt:unstructured">
+                                    <v1 jcr:primaryType="nt:unstructured">
+                                        <c101-teaser-card
+                                            cq:policy="tonomus/components/content/components/c101-teaser-card/v1/c101-teaser-card/policy_1702715217801"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v1>
+                                </c101-teaser-card>
+                                <c98-bu-section-container jcr:primaryType="nt:unstructured">
+                                    <v1 jcr:primaryType="nt:unstructured">
+                                        <c98-bu-section-container
+                                            cq:policy="tonomus/components/content/components/c98-bu-section-container/v1/c98-bu-section-container/policy_1702464824953"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping" />
+                                    </v1>
+                                </c98-bu-section-container>
+                                <c100-tabs jcr:primaryType="nt:unstructured">
+                                    <v1 jcr:primaryType="nt:unstructured">
+                                        <c100-tabs
+                                            cq:policy="tonomus/components/content/components/c100-tabs/v1/c100-tabs/policy_1702901071951"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v1>
+                                </c100-tabs>
+                                <c104-form-containter jcr:primaryType="nt:unstructured">
+                                    <v1 jcr:primaryType="nt:unstructured">
+                                        <c104-form-containter
+                                            cq:policy="tonomus/components/content/components/c104-form-containter/v1/c104-form-containter/policy_1703752217437"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                                    </v1>
+                                </c104-form-containter>
+                            </components>
+                        </content>
+                    </components>
+                </tonomus>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

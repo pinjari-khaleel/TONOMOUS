@@ -1,0 +1,14 @@
+title: C37LegalContent
+webglContainer:
+  webglTest: false
+tonomus: true
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+meta:
+  id: 'c37'
+  status: 'done'
+  notes: ''
+  category: 'Block'
+
+blocks:
+  - name: 'c37-legal-content'
+    data: 'import!../app/component/block/c37-legal-content/data/en-terms-of-use-tonomus.yaml'

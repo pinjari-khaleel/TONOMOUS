@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body * {
+  font-family: var(--base-font);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+h1 {
+  .header1();
+}
+h2 {
+  .header2();
+}
+h3 {
+  .header3();
+}
+h4,
+h5,
+h6 {
+  .header4();
+}
+p {
+  .paragraph3();
+}
+span,
+label {
+  .label1();
+}
+b,
+strong {
+  .bold();
+}
+
+[dir='rtl'] * {
+  letter-spacing: initial;
+}
+
+[dir='rtl'] *,
+[dir='rtl'] body * {
+  font-family: var(--base-font-ar);
+}
+
+.cmp-link__screen-reader-only,
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.cmp-icon {
+  display: inline-block;
+  cursor: pointer;
+  img {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}

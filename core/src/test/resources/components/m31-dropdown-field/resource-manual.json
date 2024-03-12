@@ -1,0 +1,44 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "contentFragmentsPath": "/path/to/content/fragments",
+  "optionsSource": "manual",
+  "jcr:lastModifiedBy": "admin",
+  "titleInEnglish": "Country",
+  "autocomplete": "false",
+  "required": "false",
+  "id": "Country",
+  "name": "Country",
+  "label": "Country",
+  "disabled": "false",
+  "placeholder": "fsdfs ",
+  "jcr:lastModified": "Thu Oct 20 2022 16:26:46 GMT+0600",
+  "sling:resourceType": "neom/components/content/wrappers/m31-dropdown-field",
+  "validate": {
+    "jcr:primaryType": "nt:unstructured",
+    "presence": {
+      "jcr:primaryType": "nt:unstructured",
+      "message": "^Please select at least one"
+    }
+  },
+  "items": {
+    "jcr:primaryType": "nt:unstructured",
+    "item0": {
+      "jcr:primaryType": "nt:unstructured",
+      "label": "Business",
+      "value": "Business",
+      "selected": "false"
+    },
+    "item1": {
+      "jcr:primaryType": "nt:unstructured",
+      "label": "Travel",
+      "value": "Travel",
+      "selected": "false"
+    },
+    "item2": {
+      "jcr:primaryType": "nt:unstructured",
+      "label": "Live",
+      "value": "Live",
+      "selected": "false"
+    }
+  }
+}

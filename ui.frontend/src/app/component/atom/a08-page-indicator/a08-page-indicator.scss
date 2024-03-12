@@ -1,0 +1,22 @@
+.a-pageIndicator {
+  --page-indicator-size: 6px;
+
+  @include size(var(--page-indicator-size));
+
+  display: block;
+  background-color: var(--page-indicator-color);
+  border-radius: var(--page-indicator-size);
+
+  .t-dark & {
+    --page-indicator-color: var(--color-white-20a);
+  }
+
+  &.-isActive {
+    background-color: var(--page-indicator-color-active);
+    cursor: default;
+
+    .t-dark & {
+      --page-indicator-color: var(--color-gold);
+    }
+  }
+}

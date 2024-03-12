@@ -1,0 +1,35 @@
+type: 'radioStylized'
+legend: 'My stylized radio buttons'
+name: 'radioStylized'
+id: 'radioStylized'
+required: true
+items:
+  - id: 'stylized-option-example-1'
+    label: 'Label example 1 for stylized option'
+    name: 'radioStylized'
+    value: foo
+    image:
+      alt: '#'
+      src: 'image/c71-facts-list/3.jpg'
+  - id: 'stylized-option-example-2'
+    label: 'Label example 2 for stylized option'
+    name: 'radioStylized'
+    value: foo
+    image:
+      alt: '#'
+      src: 'image/c71-facts-list/2.jpg'
+  - id: 'stylized-option-example-3'
+    label: 'Other'
+    name: 'radioStylized'
+    value: other
+    image:
+      alt: '#'
+      src: 'image/c71-facts-list/1.jpg'
+showTextareaForOtherChoice:
+  name: 'my-textarea'
+  label: 'My textarea'
+  id: 'my-textarea'
+  titleInEnglish: 'my-textarea'
+  placeholder: 'write something'
+  required: true
+  wide: true

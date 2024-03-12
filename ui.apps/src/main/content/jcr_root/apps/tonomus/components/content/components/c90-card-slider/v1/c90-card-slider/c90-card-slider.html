@@ -1,0 +1,46 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly
+    data-sly-use.cardSliderModel="com.tonomus.core.slingmodels.components.v1.cardslider.CardSliderModel"
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.headerTemplate="/apps/tonomus/components/content/molecules/m04-component-header.html"
+    data-sly-use.eventCardTemplate="/apps/tonomus/components/content/organisms/o84-event-card.html"
+    data-sly-use.newsCardTemplate="/apps/tonomus/components/content/organisms/o85-news-card.html"
+    data-sly-use.sliderControlsTemplate="/apps/tonomus/components/content/organisms/o42-slider-controls.html"></sly>
+<section
+    class="b-card-slider"
+    data-component="c90-card-slider"
+    data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+    data-sly-attribute.id="${commonComponentModel.anchorId}"
+    style="${commonComponentModel.padding.styleInline @ context='styleString'}"
+    data-lazy-component
+>
+  <div class="b-card-slider__container">
+    <div class="b-card-slider__header">
+      <sly data-sly-call="${headerTemplate.header @ headingModel=cardSliderModel.heading,
+      alignment='left'}">
+      </sly>
+
+      <div class="b-card-slider__controls" data-controls>
+        <sly data-sly-call="${sliderControlsTemplate.sliderControls}">
+        </sly>
+      </div>
+    </div>
+
+    <div class="b-card-slider__content" data-carousel-container>
+      <div class="swiper__container" data-slider>
+        <ul class="swiper-wrapper" data-sly-list="${cardSliderModel.items}">
+          <li class="swiper-slide">
+            <sly data-sly-test="${item.cardType == 'event-card'}"
+                 data-sly-call="${eventCardTemplate.eventCard @ eventCardModel=item}">
+            </sly>
+            <sly data-sly-test="${item.cardType == 'news-card'}"
+                 data-sly-call="${newsCardTemplate.newsCard @ newsCardModel=item}">
+            </sly>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

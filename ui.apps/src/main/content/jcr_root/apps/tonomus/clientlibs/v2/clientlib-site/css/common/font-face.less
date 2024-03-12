@@ -1,0 +1,12 @@
+.fontFace(@family, @folderName, @fileName, @weight: normal, @style: normal, @display: auto) {
+  @font-face {
+    font-family: @family;
+    src: url('/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/font/@{folderName}/@{fileName}.woff2')
+        format('woff2'),
+      url('/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/font/@{folderName}/@{fileName}.woff')
+        format('woff');
+    font-weight: @weight;
+    font-style: @style;
+    font-display: @display;
+  }
+}

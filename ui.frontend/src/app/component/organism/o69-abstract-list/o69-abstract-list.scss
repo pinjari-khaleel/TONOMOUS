@@ -1,0 +1,43 @@
+.o-abstractList {
+  padding: 30px 0;
+
+  &__items {
+    list-style-position: inside;
+    &:not(.-isOrdered) {
+      list-style-type: none;
+    }
+
+    &.-isOrdered {
+      ::marker {
+        color: var(--component-highlight-color);
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__item {
+    @include type("body", "small");
+  }
+
+  &__item:not(:last-child):not(:first-child) {
+    margin: 25px 0;
+  }
+
+  &__description {
+    margin-top: 2px;
+  }
+
+  &__headingContainer {
+    display: inline-block;
+  }
+
+  &__buttonHeading .m-button {
+    .a-label {
+      text-align: start;
+    }
+  }
+
+  .a-eyebrow {
+    padding-bottom: 12px;
+  }
+}

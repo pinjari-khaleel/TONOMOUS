@@ -1,0 +1,18 @@
+<sly data-sly-use.page="com.adobe.cq.wcm.core.components.models.Page"></sly>
+
+<div class="app" id="app">
+  <div data-component="app-root"
+       data-sly-attribute.data-enable-page-transitions="${inheritedPageProperties.disablePageTransition ? '' : 'true'}"
+       data-sly-attribute.class="app__root ${inheritedPageProperties.theme ? 't-{0}' : '' @ format=[inheritedPageProperties.theme]}"
+       data-sly-attribute.dir="${inheritedPageProperties.isRightToLeftLanguage ? inheritedPageProperties.isRightToLeftLanguage  : 'ltr'}"
+       data-sly-attribute.lang="${page.language}">
+    <main class="app__content" id="app-content">
+      <!--/* Include structure nodes from page template */-->
+      <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+           data-sly-list.child="${templatedContainer.structureResources}">
+        <sly data-sly-test="${child.resourceType !='nt:unstructured'}"
+             data-sly-resource="${child.path @ resourceType=child.resourceType, decoration=true}"></sly>
+      </sly>
+    </main>
+  </div>
+</div>

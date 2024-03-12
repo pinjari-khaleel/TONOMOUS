@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          cq:icon="userEdit"
+          jcr:description="General text field."
+          jcr:primaryType="cq:Component"
+          sling:resourceSuperType="tonomus/components/content/wrappers/m30-text-field"
+          jcr:title="C59: M30 Multi-step Form Text Field"
+          componentGroup="Tonomus.Wrappers"/>

@@ -1,0 +1,16 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'CardList'
+tonomus: true
+
+meta:
+  id: 'c82'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+blocks:
+  - name: 'c82-card-list'
+    data: 'import!../app/component/block/c82-card-list/data/default.yaml'

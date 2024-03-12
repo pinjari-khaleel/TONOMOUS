@@ -1,0 +1,5 @@
+id: checkbox-option-example-1
+label: Label example for checkbox item
+name: checkbox-option-example-1
+required: true
+value: foo

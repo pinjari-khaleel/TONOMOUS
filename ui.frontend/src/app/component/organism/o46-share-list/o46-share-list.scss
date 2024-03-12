@@ -1,0 +1,49 @@
+.o-shareList {
+  --component-padding: 30px;
+  --component-grid-gap: 10px;
+  --component-heading-margin: 25px;
+
+  background-color: var(--color-cream-25);
+  padding: var(--component-padding);
+  text-align: center;
+
+  .a-heading {
+    margin: 0 0 var(--component-heading-margin);
+  }
+
+  &__items {
+    @include list-reset();
+
+    display: grid;
+    grid-gap: var(--component-grid-gap);
+  }
+
+  @include respond-to("MEDIUM") {
+    --component-padding: 40px;
+    --component-grid-gap: var(--grid-gap);
+    --component-heading-margin: 35px;
+
+    &__items {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @include theme("tonomus") {
+    background-color: var(--color-tonomus-white-high-emphasis);
+
+    .a-heading {
+      @include type("heading", "h4");
+
+      text-align: start;
+      color: var(--color-tonomus-purple-300);
+    }
+
+    @include respond-to("MEDIUM") {
+      padding: 80px 166px;
+
+      &__items {
+        grid-template-columns: repeat(2, 176px);
+      }
+    }
+  }
+}

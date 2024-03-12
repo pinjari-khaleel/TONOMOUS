@@ -1,0 +1,61 @@
+<sly data-sly-template.image="${@
+    imageModel='Image model with properties: src, alt',
+    externalSIModel='Pre-created smart image model (if does not exist, creating from src)',
+    variant='Image variant',
+    className='Additional class name for the picture tag',
+    direction='Image direction',
+    disableTransition='Boolean flag to disable transition',
+    poster='Boolean condition for video poster',
+    darken='Boolean condition darken style',
+    scrollComponent='Boolean condition for scroll component',
+    attrs='List of space- or comma-separated attributes with/without values, f.e.: data-something1 attr2 attr3=attr3value',
+    imagePath='Image path which is not part of Image model',
+    loading='The ability to loading images by one of the parameters: lazy, eager, auto. Вy default, loading is lazy',
+    alt='Explicitly set alternative text for the image instead of the model alt property'
+    }">
+
+  <sly data-sly-set.imageValue="${imageModel.src || imagePath}"></sly>
+  <sly data-sly-set.variantValue="${' -{0}' @ format=[variant], context='styleString'}"></sly>
+  <sly data-sly-set.variantClassName="${variant ? variantValue : ''}"></sly>
+  <sly data-sly-set.darkenClassName="${darken ? ' -darken' : ''}"></sly>
+  <sly data-sly-set.fallbackImage="${(wcmmode.edit || wcmmode.preview) ?
+       '/content/dam/neom/demo-assets/preview-image/preview-image.png' : ''}"></sly>
+  <sly data-sly-use.attributesModel="${'com.tonomus.core.slingmodels.common.v1.AttributeCreatorModel' @ attrs=attrs}"></sly>
+
+  <!--/* Dynamic Media variables */-->
+  <sly data-sly-set.dmModel="${externalSIModel}"></sly>
+  <sly data-sly-test="${!externalSIModel}"
+       data-sly-use.dmModel="${'com.tonomus.core.models.dmedia.DynamicMediaModel' @
+         assetPath=imageValue}"></sly>
+
+  <div data-component="a01-image"
+       class="a-image${variantClassName}${darkenClassName}"
+       data-sly-attribute.data-direction="${direction}"
+       data-enable-transition="${!disableTransition ? 'true' : 'false'}"
+       data-sly-attribute.data-scroll-component="${scrollComponent && (!disableTransition)}"
+       data-sly-attribute.data-video-poster="${poster}"
+       data-sly-attribute="${attributesModel.attributes}">
+
+    <sly data-sly-test="${!disableTransition}">
+      <span class="a-image__background" data-image-background></span>
+    </sly>
+
+    <picture class="a-image__picture" data-image-wrapper>
+      <!--/* Dynamic media image is displayed only when breakpoints were defined for this image */-->
+      <sly data-sly-list.rendition="${dmModel.renditions}">
+        <source data-sly-test="${rendition.srcSet.size > 0}"
+            data-sly-test="${rendition.srcSet.size > 0}"
+            srcset="${rendition.srcSetUrl @ context='scriptComment'}"
+            data-sly-set.media="${'(max-width: {0}px)' @ format=[rendition.width]}"
+            data-sly-attribute.media="${rendition.width ? media : ''}"
+            data-sly-attribute.sizes="${'100vw'}">
+      </sly>
+      <img
+          class="a-image__img"
+          data-image-img
+          src="${dmModel.src || imageValue || fallbackImage @ context='scriptComment'}"
+          alt="${alt || imageModel.alt || ''}"
+          loading="${loading ? loading : 'lazy'}"/>
+    </picture>
+  </div>
+</sly>

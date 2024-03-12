@@ -1,0 +1,23 @@
+variant: 'definitions'
+
+header:
+  heading:
+    text: 'Become a supplier<br /> in two easy steps'
+    size: 'h5'
+  copy:
+    size: 'medium'
+    content:
+      '<p>NEOM is looking to work with leading multinational and local companies across multiple
+      industries. Follow the two-step process to register your interest.</p>'
+
+size: 'small'
+items:
+  - title: 'Registration'
+    copy:
+      '<p>Create your profile and attach a signed and stamped copy of the NDA and code of
+      conduct.</p>'
+  - title: 'Questionnaire'
+    copy:
+      '<p>You will receive an email with an invitation to complete the supplier questionnaire.
+      Please complete it using your Ariba credentials in order to be successfully registered as a
+      supplier.</p> <p>For any questions, please contact us at <a href="#">srm@neom.com</a>.</p>'

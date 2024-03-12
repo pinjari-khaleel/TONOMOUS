@@ -1,0 +1,148 @@
+.b-dynamicQuote {
+  --image-mask-size: 375px;
+  --image-size: calc(var(--image-mask-size) - 4px);
+
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+  min-block-size: 100vh;
+  color: var(--color-tonomus-white-high-emphasis);
+
+  .a-tonomusLine {
+    @include container();
+    display: none;
+  }
+
+  &__items {
+    @include list-reset();
+    @include size(100%, auto);
+
+    padding-inline: 32px;
+    min-block-size: 700px;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    visibility: hidden;
+    padding-block: 50px;
+    opacity: 0;
+    transition: opacity 1s linear;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    margin-inline: auto;
+    max-inline-size: 930px;
+
+    &.-isActive {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .a-icon {
+    @include size(50px);
+    --icon-fill: var(--color-tonomus-green-300);
+
+    margin-block-end: 12px;
+  }
+
+  &__imageMask {
+    @include size(var(--image-mask-size));
+
+    display: inline-block;
+    position: relative;
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0.46),
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.34),
+      rgba(255, 255, 255, 0.7)
+    );
+    box-sizing: border-box;
+    clip-path: polygon(13% 8%, 77% 12%, 100% 67%, 57% 93%, 0 75%);
+  }
+
+  .a-image {
+    @include size(var(--image-size));
+
+    clip-path: polygon(13% 8%, 77% 12%, 100% 67%, 57% 93%, 0 75%);
+    position: absolute;
+    inset-block-start: 2px;
+    inset-inline-start: 2px;
+
+    .a-image__img {
+      @include size(100%);
+    }
+
+    .a-image__picture {
+      &::after {
+        --gradient-angle: 120deg;
+
+        @include pseudo();
+        @include size(100%);
+        inset-inline-start: 0;
+        inset-block-start: 0;
+        background: linear-gradient(
+          var(--gradient-angle, 120deg),
+          rgba(0, 0, 0, 0) 50.47%,
+          rgba(0, 0, 0, 0.65) 81.31%
+        );
+
+        [dir="rtl"] & {
+          --gradient-angle: 250deg;
+        }
+      }
+    }
+  }
+
+  &__textContainer {
+    position: relative;
+    padding-inline: 32px;
+  }
+
+  &__buttons {
+    @include list-reset();
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding-block: 32px;
+  }
+
+  @include respond-to(SMALL) {
+    --image-mask-size: 500px;
+  }
+
+  @include respond-to(MEDIUM) {
+    &__item {
+      flex-direction: row;
+    }
+
+    &__imageContainer {
+      inline-size: 60%;
+    }
+
+    &__textContainer {
+      inline-size: 40%;
+      padding: 0;
+    }
+  }
+
+  @include respond-to(LARGE) {
+    --image-mask-size: 600px;
+
+    .a-tonomusLine {
+      display: block;
+      margin-inline-start: 40px;
+      margin-block-end: 40px;
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    --image-mask-size: 700px;
+
+    &__item {
+      max-inline-size: 1100px;
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Fri Jul 23 2021 16:55:01 GMT+0600",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:mixinTypes": [
+      "mix:versionable"
+    ],
+    "changefreq": "weekly",
+    "jcr:createdBy": "admin",
+    "jcr:title": "HOME",
+    "cq:lastReplicationAction": "Activate",
+    "jcr:versionHistory": "9fcfc891-211b-49e1-b5fa-c74fa11ffb30",
+    "pwaOrientation": "any",
+    "cq:template": "/conf/neom/settings/wcm/templates/t01-home",
+    "cq:lastReplicatedBy": "admin",
+    "jcr:language": "en",
+    "jcr:predecessors": [
+      "6e9c6af1-3a2d-4f38-a283-d0affb50ea9e"
+    ],
+    "jcr:created": "Fri Jul 23 2021 16:55:01 GMT+0600",
+    "englishTitle": "A Vision of a New Future: Explainer video",
+    "pwaDisplay": "standalone",
+    "cq:lastReplicated": "Tue Jun 08 2021 18:50:13 GMT+0600",
+    "cq:lastModified": "Tue Jun 08 2021 18:50:02 GMT+0600",
+    "faviconPath": "/content/dam/neom/favicons",
+    "siteSection": "home",
+    "jcr:description": "Discover NEOM: an opportunity of unprecedented scope for sustainable living, technological innovation and human progress.",
+    "pwaCachestrategy": "staleWhileRevalidate",
+    "jcr:baseVersion": "6e9c6af1-3a2d-4f38-a283-d0affb50ea9e",
+    "jcr:isCheckedOut": true,
+    "pageTitle": "NEOM: an accelerator of human progress ",
+    "jcr:uuid": "8851ae10-bd22-4bb8-9fa7-58e08e4dd241",
+    "isRightToLeftLanguage": "ltr",
+    "sling:resourceType": "neom/components/structure/home-page",
+    "errorPages": "/content/neom/en-us/conf/errors",
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid"
+    }
+  },
+  "mebrand": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Jul 23 2021 17:04:59 GMT+0600",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:mixinTypes": [
+        "mix:versionable"
+      ],
+      "changefreq": "weekly",
+      "jcr:createdBy": "admin",
+      "jcr:title": "mebrand",
+      "cq:lastReplicationAction": "Activate",
+      "jcr:versionHistory": "5e7d4ed1-2227-4350-9c41-333ddafb881c",
+      "pwaOrientation": "any",
+      "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+      "cq:lastReplicatedBy": "admin",
+      "dataLayerDisabled": "true",
+      "jcr:predecessors": [
+        "49a9ca9f-7923-4e26-9bad-a1a3423441fc"
+      ],
+      "jcr:created": "Fri Jul 23 2021 17:04:59 GMT+0600",
+      "pwaDisplay": "standalone",
+      "cq:lastReplicated": "Mon Jul 26 2021 21:25:21 GMT+0600",
+      "cq:lastModified": "Tue Aug 03 2021 20:17:29 GMT+0600",
+      "theme": "sector-01",
+      "siteSection": "home",
+      "pwaCachestrategy": "staleWhileRevalidate",
+      "jcr:baseVersion": "49a9ca9f-7923-4e26-9bad-a1a3423441fc",
+      "jcr:isCheckedOut": true,
+      "jcr:uuid": "903d21a8-9b5e-47ec-9495-36dd727bdc1e",
+      "sling:resourceType": "neom/components/structure/page",
+      "cq:lastModifiedBy": "admin",
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "responsivegrid": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "wcm/foundation/components/responsivegrid",
+          "c48_forms": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Thu Jul 15 2021 13:52:28 GMT+0600",
+            "id": "newsroom_contact_form",
+            "text": "Connect Media Team",
+            "jcr:lastModified": "Thu Jul 15 2021 13:52:28 GMT+0600",
+            "sling:resourceType": "neom/components/content/components/c48-forms/v1/c48-forms",
+            "c48_forms_group": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:createdBy": "admin",
+              "jcr:lastModifiedBy": "admin",
+              "jcr:created": "Thu Jul 22 2021 18:40:12 GMT+0600",
+              "jcr:lastModified": "Thu Jul 22 2021 18:40:12 GMT+0600",
+              "sling:resourceType": "neom/components/content/wrappers/c48-forms-group",
+              "m30_text_field": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "readonly": "false",
+                "required": "true",
+                "jcr:created": "Thu Jul 22 2021 18:43:50 GMT+0600",
+                "name": "name",
+                "type": "text",
+                "label": "Name",
+                "disabled": "false",
+                "placeholder": "Name",
+                "jcr:lastModified": "Thu Jul 22 2021 18:44:04 GMT+0600",
+                "sling:resourceType": "neom/components/content/wrappers/m30-text-field"
+              },
+              "m30_text_field_1559826717": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "readonly": "false",
+                "required": "true",
+                "jcr:created": "Thu Jul 22 2021 18:44:07 GMT+0600",
+                "name": "orgName",
+                "type": "text",
+                "label": "Organization name",
+                "disabled": "false",
+                "placeholder": "Organization name",
+                "jcr:lastModified": "Thu Jul 22 2021 18:44:24 GMT+0600",
+                "sling:resourceType": "neom/components/content/wrappers/m30-text-field"
+              },
+              "m30_text_field_943190341": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "readonly": "false",
+                "required": "true",
+                "jcr:created": "Thu Jul 22 2021 18:44:27 GMT+0600",
+                "name": "email",
+                "type": "email",
+                "label": "Email address",
+                "disabled": "false",
+                "placeholder": "Email address",
+                "jcr:lastModified": "Thu Jul 22 2021 18:44:41 GMT+0600",
+                "sling:resourceType": "neom/components/content/wrappers/m30-text-field"
+              },
+              "m30_text_field_538416840": {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:createdBy": "admin",
+                "jcr:lastModifiedBy": "admin",
+                "readonly": "false",
+                "required": "true",
+                "jcr:created": "Thu Jul 22 2021 18:44:46 GMT+0600",
+                "name": "inquiry",
+                "type": "textarea",
+                "label": "inquiry",
+                "disabled": "false",
+                "placeholder": "Message",
+                "jcr:lastModified": "Thu Jul 22 2021 18:45:01 GMT+0600",
+                "sling:resourceType": "neom/components/content/wrappers/m30-text-field"
+              }
+            },
+            "messages": {
+              "jcr:primaryType": "nt:unstructured",
+              "success": {
+                "jcr:primaryType": "nt:unstructured",
+                "icon": "checkmark",
+                "heading": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "text": "Your request sent successfully"
+                }
+              },
+              "error": {
+                "jcr:primaryType": "nt:unstructured",
+                "icon": "cross",
+                "heading": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "text": "An error occurred during the preparation of the despatch."
+                }
+              }
+            },
+            "buttons": {
+              "jcr:primaryType": "nt:unstructured",
+              "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "target": "_self",
+                "size": "small",
+                "type": "submit",
+                "label": "Submit Now",
+                "level": "primary",
+                "theme": "gold"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

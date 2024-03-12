@@ -1,0 +1,31 @@
+<sly
+    data-sly-use.contentSliderItemModel="com.tonomus.core.slingmodels.components.v1.contentslider.ContentSliderItemModel"
+    data-sly-use.commonComponentStyleModel="com.tonomus.core.slingmodels.common.v1.CommonComponentStyleModel"
+    data-sly-use.imageMobileTemplate="/apps/tonomus/components/content/atoms/a01-image-with-mobile.html"
+    data-sly-use.multipleCopyTemplate="/apps/tonomus/components/content/molecules/m49-multiple-copy.html"
+    data-sly-use.contentGridTemplate="/apps/tonomus/components/content/organisms/o30-content-grid.html">
+</sly>
+
+<div data-sly-test="${wcmmode.edit && !contentGridImageItemModel.content.image.src}"
+     class="cq-placeholder" data-emptytext="${component.title @ i18n}"></div>
+
+<li
+    class="b-contentSlider__slide swiper-slide ${commonComponentStyleModel.mapAppliedCssClasses['Theme'] @ context='styleString'}
+              ${contentSliderItemModel.cream ? '-cream' : ''}
+              ${contentSliderItemModel.uppercaseCopy ? '-uppercaseCopy' : ''}"
+              data-slide>
+
+  <div data-sly-test="${contentSliderItemModel.imageDesktop.src}" class="b-contentSlider__imageContainer">
+    <sly data-sly-call="${imageMobileTemplate.image @ imageModel=contentSliderItemModel.imageDesktop,
+                              mobileImageModel=contentSliderItemModel.imageMobile, disableTransition=true, desktopMinWidth='480'}"></sly>
+  </div>
+
+  <sly data-sly-test="${contentSliderItemModel.enableGridContent}"
+      data-sly-call="${contentGridTemplate.contentGrid @ contentGridModel=contentSliderItemModel.gridContent,
+                            commonComponentStyleModel=commonComponentStyleModel}"></sly>
+
+
+  <div data-sly-test="${contentSliderItemModel.multipleCopy}" class="b-contentSlider__multipleCopyContainer">
+    <sly data-sly-call="${multipleCopyTemplate.multipleCopy @ multipleCopyModel=contentSliderItemModel.multipleCopy}"></sly>
+  </div>
+</li>

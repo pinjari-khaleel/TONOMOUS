@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          alignment="start"
+          anchorId="ourgoals"
+          scrollComponent="{Boolean}true">
+  <heading
+      jcr:primaryType="nt:unstructured"
+      size="h1"
+      text="Our &lt;strong&gt;goals&lt;/strong&gt;"/>
+  <eyebrow
+      jcr:primaryType="nt:unstructured"/>
+  <moustache
+      jcr:primaryType="nt:unstructured"/>
+  <padding
+      jcr:primaryType="nt:unstructured"/>
+  <items
+      jcr:primaryType="nt:unstructured">
+    <item0
+        jcr:primaryType="nt:unstructured">
+      <content
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p&gt;Future-proof societies that are built on cognitive ecosystems. Future-proof societies that are built on cognitive ecosystems. Future-proof societies that are built on cognitive ecosystems. Future-proof societies that are built on cognitive ecosystems. Future-proof societies that are built on cognitive ecosystems.&lt;/p&gt; "
+          description="Future-proof societies that are built on cognitive ecosystems.">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="Seamless societies"/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="seamless societies"
+            src="/content/dam/tonomus/components/c82-card-list/c82-card-list-01-small.png"/>
+        <buttons
+            jcr:primaryType="nt:unstructured">
+          <item0
+              jcr:primaryType="nt:unstructured"
+              href="#"
+              label="learn more"/>
+        </buttons>
+      </content>
+    </item0>
+    <item1
+        jcr:primaryType="nt:unstructured">
+      <content
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p&gt;A network of progressive thinkers who develop solutions and devices to enhance the human experience. A network of progressive thinkers who develop solutions and devices to enhance the human experience. A network of progressive thinkers who develop solutions and devices to enhance the human experience. A network of progressive thinkers who develop solutions and devices to enhance the human experience.&lt;/p&gt; "
+          description="A network of progressive thinkers who develop solutions and devices to enhance the human experience.">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="a community"/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="a community"
+            src="/content/dam/tonomus/components/c82-card-list/c82-card-list-02-small.png"/>
+        <buttons
+            jcr:primaryType="nt:unstructured">
+          <item0
+              jcr:primaryType="nt:unstructured"
+              href="#"
+              label="learn more"/>
+        </buttons>
+      </content>
+    </item1>
+    <item2
+        jcr:primaryType="nt:unstructured">
+      <content
+          jcr:primaryType="nt:unstructured"
+          copy="&lt;p&gt;Trustworthy tools and solutions that enhance working, living, and sustainability. Trustworthy tools and solutions that enhance working, living, and sustainability. Trustworthy tools and solutions that enhance working, living, and sustainability. Trustworthy tools and solutions that enhance working, living, and sustainability.&lt;/p&gt; "
+          description="Trustworthy tools and solutions that enhance working, living, and sustainability.">
+        <heading
+            jcr:primaryType="nt:unstructured"
+            text="Revolutionary cognitive technology"/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            alt="revolutionary cognitive technology"
+            src="/content/dam/tonomus/components/c82-card-list/c82-card-list-03-small.png"/>
+        <buttons
+            jcr:primaryType="nt:unstructured">
+          <item0
+              jcr:primaryType="nt:unstructured"
+              href="#"
+              label="learn more"/>
+        </buttons>
+      </content>
+    </item2>
+  </items>
+</jcr:root>

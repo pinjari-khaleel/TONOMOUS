@@ -1,0 +1,87 @@
+scrollComponent: true
+
+sitemap:
+  - label: '发现 NEOM'
+    items:
+      - label: '关于NEOM'
+        href: '#'
+      - label: '我们的人'
+        href: '#'
+
+  - label: '地区'
+    items:
+      - label: 'Trojena'
+        href: '#'
+      - label: 'Oxagon'
+        href: '#'
+      - label: 'The Line'
+        href: '#'
+
+  - label: '部门'
+    items:
+      - label: '设计与施工'
+        href: '#'
+      - label: '教育'
+        href: '#'
+      - label: '活力'
+        href: '#'
+      - label: '娱乐与文化'
+        href: '#'
+      - label: '金融服务'
+        href: '#'
+      - label: '食物'
+        href: '#'
+      - label: '健康、福祉和生物技术'
+        href: '#'
+      - label: '生产'
+        href: '#'
+      - label: '媒体'
+        href: '#'
+      - label: '流动性'
+        href: '#'
+      - label: '运动'
+        href: '#'
+      - label: '技术和数字化'
+        href: '#'
+      - label: '旅游'
+        href: '#'
+      - label: '水'
+        href: '#'
+
+  - label: '成为 NEOM 的一员'
+    items:
+      - label: '投资'
+        href: '#'
+      - label: '创业'
+        href: '#'
+      - label: '成为供应商'
+        href: '#'
+      - label: '伙伴'
+        href: '#'
+      - label: '工作'
+        href: '#'
+
+  - label: '新闻与社交'
+    items:
+      - label: '消息'
+        href: '#'
+      - label: 'Press Releases'
+        href: '#'
+      - label: 'Media Gallery'
+        href: '#'
+social:
+  items: 'import!../../../molecule/m12-social/data/tonomus.yaml'
+
+marginalia:
+  items:
+    - label: '隐私政策'
+      href: 'privacy-policy.html'
+      target: '_blank'
+    - label: '使用条款'
+      href: 'terms-of-use.html'
+      target: '_blank'
+    - label: 'Cookie 政策'
+      href: 'cookie-policy.html'
+      target: '_blank'
+
+copyrightNotice: '© 2022 NEOM'

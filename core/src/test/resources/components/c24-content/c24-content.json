@@ -1,0 +1,702 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:title": "test",
+    "cq:template": "/conf/neom/settings/wcm/templates/t02-generic",
+    "siteSection": "home",
+    "sling:resourceType": "neom/components/structure/page",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c24_content_2": {
+          "jcr:primaryType": "nt:unstructured",
+          "variant": "double-1-2",
+          "sling:resourceType": "neom/components/content/components/c24-content/v1/c24-content",
+          "m16_figure": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/wrappers/m16-figure",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "top",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "variant": "circle",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "src": "/content/dam/neom/components/c29-stories/stories_episodewater.jpg"
+              }
+            }
+          },
+          "m18_paragraph": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/wrappers/m18-paragraph",
+            "textIsRich": "true",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "middle",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "copy": "<p>NEOM is not just a place – it is a mindset. Citizens will embody an international ethos and embrace a culture of exploration, risk-taking and diversity, all supported by a progressive legal system compatible with international norms &amp; conducive to economic growth.</p>\r\n",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "element": "h1",
+                "size": "h3",
+                "text": "Haddah beach"
+              },
+              "eyebrow": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "medium",
+                "text": "What to do at"
+              },
+              "buttons": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "icon": "arrow-right",
+                  "size": "large",
+                  "label": "Primary button",
+                  "level": "primary",
+                  "theme": "black"
+                },
+                "item1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "size": "large",
+                  "label": "Secondary button",
+                  "level": "secondary",
+                  "theme": "black"
+                }
+              }
+            }
+          }
+        },
+        "c24_content_1": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Thu Apr 29 2021 22:23:08 GMT+0600",
+          "variant": "single",
+          "jcr:lastModified": "Thu Apr 29 2021 22:23:08 GMT+0600",
+          "sling:resourceType": "neom/components/content/components/c24-content/v1/c24-content",
+          "m16_figure": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/wrappers/m16-figure",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "top",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "variant": "circle",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "src": "/content/dam/neom/components/c29-stories/stories_episodewater.jpg"
+              }
+            }
+          },
+          "m18_paragraph": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/wrappers/m18-paragraph",
+            "textIsRich": "true",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "middle",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "copy": "<p>NEOM is not just a place – it is a mindset. Citizens will embody an international ethos and embrace a culture of exploration, risk-taking and diversity, all supported by a progressive legal system compatible with international norms &amp; conducive to economic growth.</p>\r\n",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "element": "h1",
+                "size": "h3",
+                "text": "Haddah beach"
+              },
+              "eyebrow": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "medium",
+                "text": "What to do at"
+              },
+              "buttons": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "icon": "arrow-right",
+                  "size": "large",
+                  "label": "Primary button",
+                  "level": "primary",
+                  "theme": "black"
+                },
+                "item1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "size": "large",
+                  "label": "Secondary button",
+                  "level": "secondary",
+                  "theme": "black"
+                }
+              }
+            }
+          }
+        },
+        "c24_content_3": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Thu Apr 29 2021 22:23:08 GMT+0600",
+          "variant": "triple",
+          "jcr:lastModified": "Thu Apr 29 2021 22:23:08 GMT+0600",
+          "sling:resourceType": "neom/components/content/components/c24-content/v1/c24-content",
+          "backgroundImage": {
+            "jcr:primaryType": "nt:unstructured",
+            "src": "/content/dam/neom/components/c24-content/c24_desktop_background.jpg",
+            "alt": "Desktop Image"
+          },
+          "m16_figure": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/wrappers/m16-figure",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "top",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "variant": "circle",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "src": "/content/dam/neom/components/c29-stories/stories_episodewater.jpg"
+              }
+            }
+          },
+          "m18_paragraph": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/wrappers/m18-paragraph",
+            "textIsRich": "true",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "middle",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "copy": "<p>NEOM is not just a place – it is a mindset. Citizens will embody an international ethos and embrace a culture of exploration, risk-taking and diversity, all supported by a progressive legal system compatible with international norms &amp; conducive to economic growth.</p>\r\n",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "element": "h1",
+                "size": "h3",
+                "text": "Haddah beach"
+              },
+              "eyebrow": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "medium",
+                "text": "What to do at"
+              },
+              "buttons": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "icon": "arrow-right",
+                  "size": "large",
+                  "label": "Primary button",
+                  "level": "primary",
+                  "theme": "black"
+                },
+                "item1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "size": "large",
+                  "label": "Secondary button",
+                  "level": "secondary",
+                  "theme": "black"
+                }
+              }
+            }
+          }
+        },
+        "c24_content_4": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Thu Apr 29 2021 22:23:08 GMT+0600",
+          "variant": "quadruple",
+          "jcr:lastModified": "Thu Apr 29 2021 22:23:08 GMT+0600",
+          "sling:resourceType": "neom/components/content/components/c24-content/v1/c24-content",
+          "backgroundImage": {
+            "jcr:primaryType": "nt:unstructured",
+            "src": "/content/dam/neom/components/c24-content/c24_desktop_background.jpg",
+            "alt": "Desktop Image"
+          },
+          "backgroundImageMobile": {
+            "jcr:primaryType": "nt:unstructured",
+            "src": "/content/dam/neom/components/c24-content/c24_mobile_background.jpg",
+            "alt": "Mobile Image"
+          },
+          "m16_figure": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/wrappers/m16-figure",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "top",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "variant": "circle",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "src": "/content/dam/neom/components/c29-stories/stories_episodewater.jpg"
+              }
+            }
+          },
+          "m18_paragraph": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/wrappers/m18-paragraph",
+            "textIsRich": "true",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "middle",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "copy": "<p>NEOM is not just a place – it is a mindset. Citizens will embody an international ethos and embrace a culture of exploration, risk-taking and diversity, all supported by a progressive legal system compatible with international norms &amp; conducive to economic growth.</p>\r\n",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "element": "h1",
+                "size": "h3",
+                "text": "Haddah beach"
+              },
+              "eyebrow": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "medium",
+                "text": "What to do at"
+              },
+              "buttons": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "icon": "arrow-right",
+                  "size": "large",
+                  "label": "Primary button",
+                  "level": "primary",
+                  "theme": "black"
+                },
+                "item1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "size": "large",
+                  "label": "Secondary button",
+                  "level": "secondary",
+                  "theme": "black"
+                }
+              }
+            }
+          }
+        },
+        "c24_content_default_padding": {
+          "jcr:primaryType": "nt:unstructured",
+          "variant": "double-1-2",
+          "sling:resourceType": "neom/components/content/components/c24-content/v1/c24-content",
+          "backgroundImage": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:lastModifiedBy": "admin",
+            "alt": "Desktop Image",
+            "src": "/content/dam/neom/components/c24-content/c24_desktop_background.jpg",
+            "jcr:lastModified": "Wed Feb 09 2022 16:34:43 GMT+0600"
+          },
+          "backgroundImageMobile": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:lastModifiedBy": "admin",
+            "alt": "Mobile Image",
+            "src": "/content/dam/neom/components/c24-content/c24_mobile_background.jpg",
+            "jcr:lastModified": "Wed Feb 09 2022 16:34:43 GMT+0600"
+          },
+          "m16_figure": {
+            "jcr:primaryType": "nt:unstructured",
+            "type": "image",
+            "sling:resourceType": "neom/components/content/wrappers/m16-figure",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "top",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "variant": "circle",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "src": "/content/dam/neom/components/c29-stories/stories_episodewater.jpg"
+              }
+            }
+          },
+          "m18_paragraph": {
+            "jcr:primaryType": "nt:unstructured",
+            "type": "paragraph",
+            "sling:resourceType": "neom/components/content/wrappers/m18-paragraph",
+            "textIsRich": "true",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "middle",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "copy": "<p>NEOM is not just a place – it is a mindset. Citizens will embody an international ethos and embrace a culture of exploration, risk-taking and diversity, all supported by a progressive legal system compatible with international norms &amp; conducive to economic growth.</p>\r\n",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "element": "h1",
+                "size": "h3",
+                "text": "Haddah beach"
+              },
+              "eyebrow": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "medium",
+                "text": "What to do at"
+              },
+              "buttons": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "icon": "arrow-right",
+                  "size": "large",
+                  "label": "Primary button",
+                  "level": "primary",
+                  "theme": "black"
+                },
+                "item1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "size": "large",
+                  "label": "Secondary button",
+                  "level": "secondary",
+                  "theme": "black"
+                }
+              }
+            }
+          }
+        },
+        "c24_content_large_padding": {
+          "jcr:primaryType": "nt:unstructured",
+          "padding": {
+            "start": "large",
+            "end": "large"
+          },
+          "variant": "double-1-2",
+          "jcr:lastModified": "Wed Feb 09 2022 16:34:31 GMT+0600",
+          "sling:resourceType": "neom/components/content/components/c24-content/v1/c24-content",
+          "backgroundImage": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:lastModifiedBy": "admin",
+            "alt": "Desktop Image",
+            "src": "/content/dam/neom/components/c24-content/c24_desktop_background.jpg",
+            "jcr:lastModified": "Wed Feb 09 2022 16:34:31 GMT+0600"
+          },
+          "backgroundImageMobile": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:lastModifiedBy": "admin",
+            "alt": "Mobile Image",
+            "src": "/content/dam/neom/components/c24-content/c24_mobile_background.jpg",
+            "jcr:lastModified": "Wed Feb 09 2022 16:34:31 GMT+0600"
+          },
+          "m16_figure": {
+            "jcr:primaryType": "nt:unstructured",
+            "type": "image",
+            "sling:resourceType": "neom/components/content/wrappers/m16-figure",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "top",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "variant": "circle",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "src": "/content/dam/neom/components/c29-stories/stories_episodewater.jpg"
+              }
+            }
+          },
+          "m18_paragraph": {
+            "jcr:primaryType": "nt:unstructured",
+            "type": "paragraph",
+            "sling:resourceType": "neom/components/content/wrappers/m18-paragraph",
+            "textIsRich": "true",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "middle",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "copy": "<p>NEOM is not just a place – it is a mindset. Citizens will embody an international ethos and embrace a culture of exploration, risk-taking and diversity, all supported by a progressive legal system compatible with international norms &amp; conducive to economic growth.</p>\r\n",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "element": "h1",
+                "size": "h3",
+                "text": "Haddah beach"
+              },
+              "eyebrow": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "medium",
+                "text": "What to do at"
+              },
+              "buttons": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "icon": "arrow-right",
+                  "size": "large",
+                  "label": "Primary button",
+                  "level": "primary",
+                  "theme": "black"
+                },
+                "item1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "size": "large",
+                  "label": "Secondary button",
+                  "level": "secondary",
+                  "theme": "black"
+                }
+              }
+            }
+          }
+        },
+        "c24_content_none_padding": {
+          "jcr:primaryType": "nt:unstructured",
+          "padding": {
+            "start": "none",
+            "end": "none"
+          },
+          "variant": "double-1-2",
+          "sling:resourceType": "neom/components/content/components/c24-content/v1/c24-content",
+          "backgroundImage": {
+            "jcr:primaryType": "nt:unstructured",
+            "alt": "Desktop Image",
+            "src": "/content/dam/neom/components/c24-content/c24_desktop_background.jpg"
+          },
+          "backgroundImageMobile": {
+            "jcr:primaryType": "nt:unstructured",
+            "alt": "Mobile Image",
+            "src": "/content/dam/neom/components/c24-content/c24_mobile_background.jpg"
+          },
+          "m16_figure": {
+            "jcr:primaryType": "nt:unstructured",
+            "type": "image",
+            "sling:resourceType": "neom/components/content/wrappers/m16-figure",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "top",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "variant": "circle",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "src": "/content/dam/neom/components/c29-stories/stories_episodewater.jpg"
+              }
+            }
+          },
+          "m18_paragraph": {
+            "jcr:primaryType": "nt:unstructured",
+            "type": "paragraph",
+            "sling:resourceType": "neom/components/content/wrappers/m18-paragraph",
+            "textIsRich": "true",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "middle",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "copy": "<p>NEOM is not just a place – it is a mindset. Citizens will embody an international ethos and embrace a culture of exploration, risk-taking and diversity, all supported by a progressive legal system compatible with international norms &amp; conducive to economic growth.</p>\r\n",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "element": "h1",
+                "size": "h3",
+                "text": "Haddah beach"
+              },
+              "eyebrow": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "medium",
+                "text": "What to do at"
+              },
+              "buttons": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "icon": "arrow-right",
+                  "size": "large",
+                  "label": "Primary button",
+                  "level": "primary",
+                  "theme": "black"
+                },
+                "item1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "size": "large",
+                  "label": "Secondary button",
+                  "level": "secondary",
+                  "theme": "black"
+                }
+              }
+            }
+          }
+        },
+        "c20_image_text": {
+          "jcr:primaryType": "nt:unstructured",
+          "theme": "dark",
+          "variant": "tallAsset",
+          "sling:resourceType": "neom/components/content/components/c20-image-text/v1/c20-image-text",
+          "m16_figure": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/wrappers/m16-figure",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "top",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "variant": "circle",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "src": "/content/dam/neom/components/c29-stories/stories_episodewater.jpg"
+              }
+            }
+          },
+          "m18_paragraph": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/wrappers/m18-paragraph",
+            "textIsRich": "true",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "middle",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "copy": "<p>NEOM is not just a place – it is a mindset. Citizens will embody an international ethos and embrace a culture of exploration, risk-taking and diversity, all supported by a progressive legal system compatible with international norms &amp; conducive to economic growth.</p>\r\n",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "element": "h1",
+                "size": "h3",
+                "text": "Haddah beach"
+              },
+              "eyebrow": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "medium",
+                "text": "What to do at"
+              }
+            }
+          }
+        },
+        "c24_content_fullWidth": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Thu Apr 29 2021 22:23:08 GMT+0600",
+          "variant": "fullWidth",
+          "jcr:lastModified": "Thu Apr 29 2021 22:23:08 GMT+0600",
+          "sling:resourceType": "neom/components/content/components/c24-content/v1/c24-content",
+          "m16_figure": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/components/c24-content/v1/c24-content/m16-figure",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "top",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "variant": "circle",
+              "image": {
+                "jcr:primaryType": "nt:unstructured",
+                "src": "/content/dam/neom/components/c29-stories/stories_episodewater.jpg"
+              }
+            }
+          },
+          "m18_paragraph": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "neom/components/content/components/c24-content/v1/c24-content/m18-paragraph",
+            "textIsRich": "true",
+            "align": {
+              "jcr:primaryType": "nt:unstructured",
+              "vertical": "middle",
+              "horizontal": "start"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "copy": "<p>NEOM is not just a place – it is a mindset. Citizens will embody an international ethos and embrace a culture of exploration, risk-taking and diversity, all supported by a progressive legal system compatible with international norms &amp; conducive to economic growth.</p>\r\n",
+              "heading": {
+                "jcr:primaryType": "nt:unstructured",
+                "element": "h1",
+                "size": "h3",
+                "text": "Haddah beach"
+              },
+              "eyebrow": {
+                "jcr:primaryType": "nt:unstructured",
+                "size": "medium",
+                "text": "What to do at"
+              },
+              "buttons": {
+                "jcr:primaryType": "nt:unstructured",
+                "item0": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "icon": "arrow-right",
+                  "size": "large",
+                  "label": "Primary button",
+                  "level": "primary",
+                  "theme": "black"
+                },
+                "item1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "target": "_blank",
+                  "href": "https://www.visitsaudi.com/",
+                  "size": "large",
+                  "label": "Secondary button",
+                  "level": "secondary",
+                  "theme": "black"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

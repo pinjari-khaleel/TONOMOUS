@@ -1,0 +1,61 @@
+<template data-sly-template.head="${ @ page, pwa }"
+          data-sly-use.headLightAnalytics="head-lightweight-analytics.html"
+          data-sly-use.headlibRenderer="headlibs.html"
+          data-sly-use.headResources="head.resources.html"
+          data-sly-use.favicons="favicons.html"
+          data-sly-use.dataLayer="com.tonomus.core.slingmodels.components.v1.datalayer.DataLayerModel"
+          data-sly-use.launchTemplate="head-adobe-launch.html"
+          data-sly-use.headSocial="head-social.html"
+          data-sly-use.headAnalytics="head-analytics.html">
+    <meta charset="UTF-8">
+    <title>${page.title}${page.brandSlug ? ' | ' : ''}${page.brandSlug}</title>
+    <meta data-sly-test.keywords="${page.keywords}" name="keywords" content="${keywords}"/>
+    <meta data-sly-test.description="${page.description || properties['jcr:description']}" name="description" content="${description}"/>
+    <meta data-sly-test.templateName="${page.templateName}" name="template" content="${templateName}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta data-sly-test="${dataLayer.robotsTags}" name="robots" content="${dataLayer.robotsTags}">
+    <meta name="lytics:topics"
+          data-sly-test="${dataLayer.metaLyticsTopics}"
+          data-sly-attribute.content="${dataLayer.metaLyticsTopics}"/>
+
+    <!--/* Default implementation by Adobe. Need to move there in a future.
+    <sly data-sly-test=${inheritedPageProperties.faviconPath} data-sly-call="${headResources.favicons @
+    path=inheritedPageProperties.faviconPath}"></sly>
+    */-->
+    <!--/* Favicons */-->
+    <sly data-sly-call="${favicons.favicons @ path=inheritedPageProperties.faviconPath}"></sly>
+
+    <sly data-sly-include="head.links.html"></sly>
+
+    <!--/* Social network's meta tags */-->
+    <sly data-sly-call="${headSocial.headSocial @ dataLayer=dataLayer, siteName='@TONOMUS'}"></sly>
+
+    <!--/* Links to preload commonly used fonts */-->
+    <sly data-sly-include="head-fonts.html"></sly>
+
+    <!--/* LIGHTWEIGHT Google tag (gtag.js, cookieless) */-->
+    <sly data-sly-call="${headLightAnalytics.lightAnalytics @ lightGtmId=dataLayer.lightGtmId}">
+    </sly>
+
+    <!--/* Include OneTrust */-->
+    <sly data-sly-include="head-one-trust.html"></sly>
+
+    <!--/* Establish data layer for both Google and Adobe Analytics */-->
+    <sly data-sly-call="${headAnalytics.headAnalytics @ dataLayer=dataLayer, page=page}"></sly>
+
+    <!--/* Adobe Launch */-->
+    <sly
+            data-sly-call="${launchTemplate.adobeLaunch @ adobeLaunchConfiguration=dataLayer.adobeLaunchConfiguration,
+                                adobeLaunchAsyncScriptEnable=dataLayer.adobeLaunchAsyncScriptEnable,
+                                delay=dataLayer.delay}"></sly>
+
+    <!--/* Header clientlibs */-->
+    <sly data-sly-include="customheaderlibs.html"></sly>
+    <sly data-sly-call="${headlibRenderer.headlibs @
+                                designPath                = page.designPath,
+                                staticDesignPath          = page.staticDesignPath,
+                                clientLibCategories       = page.clientLibCategories,
+                                clientLibCategoriesJsHead = page.clientLibCategoriesJsHead,
+                                hasCloudconfigSupport     = page.hasCloudconfigSupport}"></sly>
+
+</template>

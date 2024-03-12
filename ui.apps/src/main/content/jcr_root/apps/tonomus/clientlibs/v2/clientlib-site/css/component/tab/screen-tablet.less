@@ -1,0 +1,49 @@
+@media (max-width: @screen-tablet-max) {
+  .cmp-tabs {
+    &__tablist {
+      gap: 0;
+      flex-direction: column;
+      margin-block-end: 2.5rem;
+      align-items: start;
+    }
+    &__tab {
+      display: block;
+      width: fit-content;
+
+      &::after {
+        content: url(/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/image/arrow-down-black.svg);
+        padding-inline: 10px;
+        vertical-align: text-bottom;
+        transform: translateY(2px);
+        display: none;
+      }
+
+      &--active {
+        background-size: ~'calc(100% - 35px) 3px';
+        &::after {
+          display: inline-block;
+          width: 14px;
+        }
+      }
+      &:not(.cmp-tabs__tab--active) {
+        display: none;
+      }
+    }
+
+    &__tablist--expanded &__tab {
+      display: block;
+
+      &--active {
+        background-size: 0;
+        &::after {
+          display: none;
+        }
+      }
+
+      &:first-child::after {
+        display: inline-block;
+        transform: rotate(180deg) translateY(2px);
+      }
+    }
+  }
+}

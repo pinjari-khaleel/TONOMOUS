@@ -1,0 +1,238 @@
+.b-interactiveOverview {
+  --card-size: 140px;
+  --text-color: var(--color-white);
+  --text-highlight-color: var(--color-tonomus-green);
+
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+
+  &__container {
+    @include container();
+    position: relative;
+  }
+
+  .a-heading {
+    position: absolute;
+    inset-block-start: calc(var(--card-size) * 1.5 + 20px);
+    left: 50%;
+    color: var(--text-color);
+    text-align: center;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 370px;
+    margin-inline: auto;
+
+    strong {
+      color: var(--text-highlight-color);
+    }
+  }
+
+  &__items {
+    @include list-reset();
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-block-end: 80px;
+  }
+
+  &__card {
+    @include size(100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 15px;
+    text-align: center;
+    border: none;
+    overflow: hidden;
+    color: var(--text-color);
+    transition: transform 0.6s $easeOutExpo;
+    cursor: pointer;
+
+    &::after {
+      @include pseudo();
+      @include size(100%);
+      background-color: var(--color-tonomus-purple);
+      opacity: 0.85;
+      transition: background-color 0.6s $easeOutExpo, opacity 0.6s $easeOutExpo;
+    }
+
+    // stylelint-disable-next-line no-descending-specificity
+    span {
+      @include type("button", "large");
+      text-transform: uppercase;
+      position: relative;
+      z-index: zindex($zLayout, default);
+    }
+
+    &:hover,
+    &.-isActive {
+      &::after {
+        opacity: 0.7;
+        background-color: var(--color-tonomus-pink);
+      }
+
+      .a-image {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__item {
+    @include size(var(--card-size));
+    position: relative;
+
+    &:nth-child(odd) {
+      .b-interactiveOverview__card {
+        transform-origin: top right;
+
+        &:hover,
+        &.-isActive {
+          transform: rotate(16deg);
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      // stylelint-disable-next-line no-descending-specificity
+      .b-interactiveOverview__card {
+        transform-origin: top left;
+
+        &:hover,
+        &.-isActive {
+          transform: rotate(-16deg);
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      margin-block-start: calc(var(--card-size) / 2);
+      margin-block-end: 270px;
+    }
+
+    &:nth-child(2n + 4) {
+      margin-block-end: calc(var(--card-size) / 3);
+    }
+
+    &:nth-child(2n + 3) {
+      margin-block-start: calc(var(--card-size) / 3 * -2);
+    }
+  }
+
+  @include respond-to(SMALL) {
+    --card-size: 135px;
+
+    .a-heading {
+      top: calc(var(--card-size) * 1.5 + 40px);
+      max-width: none;
+    }
+
+    &__item {
+      &:nth-child(1) {
+        margin-block-end: 260px;
+      }
+
+      &:nth-child(7) {
+        inset-block-start: calc(var(--card-size) / 3);
+      }
+
+      &:nth-child(8) {
+        inset-block-start: calc(var(--card-size) / 3);
+      }
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    --card-size: 160px;
+
+    .a-heading {
+      inset-block-start: calc(var(--card-size) * 1.5 + 50px);
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(4, var(--card-size));
+      gap: initial;
+      justify-content: space-between;
+    }
+
+    &__item {
+      &:nth-child(2n + 3) {
+        margin-block-start: 0;
+      }
+
+      &:nth-child(1) {
+        inset-block-start: calc((var(--card-size) / 4) * 3);
+        margin-block-start: 0;
+        margin-block-end: 280px;
+      }
+
+      &:nth-child(2) {
+        inset-block-start: calc(var(--card-size) / 4);
+      }
+
+      &:nth-child(4) {
+        inset-block-start: calc(var(--card-size) / 2);
+      }
+
+      &:nth-child(6) {
+        inset-block-start: calc(var(--card-size) / 2);
+      }
+
+      &:nth-child(8) {
+        inset-block-start: 0;
+      }
+    }
+  }
+
+  @include respond-to(LARGE) {
+    --card-size: 192px;
+
+    &__item {
+      &:nth-child(1) {
+        margin-block-end: 330px;
+      }
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    .a-heading {
+      inset-block-start: calc(var(--card-size) * 1.6);
+    }
+
+    &__items {
+      width: calc(100% - (var(--card-size) / 2));
+    }
+
+    &__item {
+      &:nth-child(1n + 5) {
+        inset-inline-start: calc(var(--card-size) / 2);
+      }
+
+      &:nth-child(8) {
+        inset-block-start: calc(var(--card-size) * -0.5);
+      }
+    }
+  }
+
+  @include respond-to(XXLARGE) {
+    &__item {
+      &:nth-child(1) {
+        margin-block-end: 310px;
+      }
+
+      &:nth-child(4) {
+        inset-block-start: calc(var(--card-size) / 2.5);
+      }
+
+      &:nth-child(7) {
+        inset-block-start: calc(var(--card-size) / 6);
+      }
+
+      &:nth-child(8) {
+        inset-block-start: calc(var(--card-size) * -0.8);
+      }
+    }
+  }
+}

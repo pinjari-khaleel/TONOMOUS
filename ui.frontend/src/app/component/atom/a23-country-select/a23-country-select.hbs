@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="./a23-country-select.scss">
+<script src="./A23CountrySelect.ts"></script>
+
+
+<div class="a-countrySelect"
+     data-component="a23-country-select"
+     data-show-raw-value="{{#if showRawValue}}true{{^}}false{{/if}}"
+     {{#if id}} id="{{id}}"{{/if}}
+     data-flags-path={{flagsPath}}>
+  <button class="a-countrySelect__valueWrapper" data-value-wrapper type="button">
+    <span class="a-countrySelect__value" data-value>{{placeholder}}</span>
+    <span class="a-countrySelect__chevron" data-chevron>{{> atom/a02-icon name="chevron-down" }}</span>
+  </button>
+  <ul class="a-countrySelect__options" data-options>
+    {{#each items}}
+      <li class="a-countrySelect__option" data-option data-code="{{countryCode}}" data-value="{{value}}" data-label="{{label}}">
+        <button class="a-countrySelect__button" type="button">
+          <img class="a-countrySelect__flag" loading="lazy" src="{{../flagsPath}}{{lowercase countryCode}}.png" alt="{{code}}" />
+          <span class="a-countrySelect__countryName" aria-label="{{label}}">{{#if ../isWideDropdown}}{{label}}{{^}}{{countryCode}}{{/if}}</span>
+          {{#if ../showRawValue}}<span class="a-countrySelect__rawValue">{{value}}</span>{{/if}}
+        </button>
+      </li>
+    {{/each}}
+  </ul>
+</div>

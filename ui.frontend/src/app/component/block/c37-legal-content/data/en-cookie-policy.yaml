@@ -1,0 +1,32 @@
+heading:
+  text: Cookie Policy
+
+items:
+  - size: small
+    content:
+      '<p>This website uses cookies. We use cookies to personalize content and ads, to provide
+      social media features and to analyze our traffic. We also share information about your use of
+      our site with our social media, advertising and analytics partners who may combine it with
+      other information that you’ve provided to them or that they’ve collected from your use of
+      their services.</p>'
+  - size: small
+    content:
+      '<h2>What Are Cookies</h2> <p>Cookies are tiny text files that are stored on the browser, hard
+      drive of your computer or mobile device when you visit a webpage or application, to improve
+      your experience. Unless you have adjusted the settings of your browser to refuse cookies, our
+      system will send a cookie to your device when you visit our website.</p> <p>Our website uses
+      the following:</p> <h3>Necessary cookies</h3> <p>Necessary cookies help make a website usable
+      by enabling basic functions like page navigation and access to secure areas of the website.
+      The website cannot function properly without these cookies.</p> <h3>Preference cookies</h3>
+      <p>Preference cookies enable a website to remember information that changes the way the
+      website behaves or looks, like your preferred language or the region that you are in.</p>
+      <h3>Statistic cookies</h3> <p>Statistic cookies help website owners to understand how visitors
+      interact with websites by collecting and reporting information anonymously.</p> <h3>Marketing
+      cookies</h3> <p>Marketing cookies are used to track visitors across websites. The intention is
+      to display ads that are relevant and engaging for the individual user and thereby more
+      valuable for publishers and third-party advertisers.</p> <h2>Disabling Cookies</h2> <p>You can
+      block cookies by activating the setting on your browser that allows you to refuse the setting
+      of all or some cookies. However, if you use your browser settings to block all cookies
+      (including essential cookies) you may not be able to access all or parts of our
+      website.</p><p>For more information, please contact us through <a
+      href="mailto:info@NEOM.com">info@NEOM.com</a></p>'

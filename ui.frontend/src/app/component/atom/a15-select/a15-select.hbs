@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="./a15-select.scss">
+<script src="./A15Select.ts"></script>
+
+
+<div class="a-select{{#if disabled}} -isDisabled{{/if}}" data-component="a15-select">
+  <select class="a-select__select"
+    {{#if autocomplete}}autocomplete{{/if}}
+    {{#if disabled}}disabled{{/if}}
+    {{#with id}}id="{{this}}" data-{{this}}{{/with}}
+    {{#with name}}name="{{this}}"{{/with}}
+    {{#if required}}required{{/if}}
+    {{#with titleInEnglish}}data-title-in-english="{{this}}"{{/with}}
+    {{#if validate}}data-validate="{{toJson validate}}"{{/if}}
+    {{#with dataAttribute}} data-{{this}}{{/with}}
+    data-select
+  >
+  <option value=""{{#if required}} disabled{{/if}} selected>{{#with placeholder}}{{this}}{{/with}}</option>
+  {{#each items}}
+    <option{{#with value}} value="{{this}}"{{/with}}{{#if selected}} selected{{/if}}>{{label}}</option>
+  {{/each}}
+  </select>
+  <div class="a-select__chevron">{{> atom/a02-icon name="chevron-down" }}</div>
+</div>

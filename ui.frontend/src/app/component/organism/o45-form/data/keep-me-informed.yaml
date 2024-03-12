@@ -1,0 +1,113 @@
+action: '#'
+form_id: 'keep-me-informed-form_id'
+id: 'keep-me-informed-id'
+method: 'post'
+titleInEnglish: 'Keep me informed title in english'
+
+recaptcha:
+  sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+  statement:
+    This site is protected by reCAPTCHA and the Google <a
+    href="https://policies.google.com/privacy">Privacy Policy</a> and <a
+    href="https://policies.google.com/terms">Terms of Service</a> apply.
+
+heading:
+  text: 'Keep me informed'
+description: '<p>Just a string of text.</p>'
+groups:
+  - items:
+      - type: text
+        label: 'First Name'
+        name: 'firstname'
+        required: true
+        titleInEnglish: 'first name'
+      - type: text
+        label: 'Last Name'
+        name: 'lastname'
+        required: true
+        titleInEnglish: 'last name'
+      - type: email
+        label: 'Business mail address'
+        name: 'email'
+        placeholder: 'example@example.com'
+        required: true
+        titleInEnglish: 'email'
+      - type: text
+        label: 'Linkedin Profile'
+        titleInEnglish: 'linkedin profile'
+      - type: country-dropdown
+        label: 'Country'
+        placeholder: 'Choose one...'
+        titleInEnglish: 'country'
+        showRawValue: true
+        items:
+          - value: '+31'
+            label: 'Netherlands'
+            countryCode: 'NL'
+          - value: '+54'
+            label: 'Argentina'
+            countryCode: 'AR'
+          - value: '+1'
+            label: 'United States of America'
+            countryCode: 'US'
+          - value: '+966'
+            label: 'Saudi Arabia'
+            countryCode: 'SA'
+          - value: '+41'
+            label: 'United Kingdom'
+            countryCode: 'GB'
+          - value: '+49'
+            label: 'Germany'
+            countryCode: 'DE'
+      - type: select
+        label: 'Area of Interest:'
+        placeholder: 'Choose one...'
+        name: 'keep-me-informed-select-1'
+        titleInEnglish: 'area of interest'
+        items:
+          - value: 'interest-1'
+            label: 'First interest'
+          - value: 'interest-2'
+            label: 'Second interest'
+      - type: select
+        label: 'I am a(n):'
+        placeholder: 'Choose one...'
+        name: 'keep-me-informed-select-1'
+        titleInEnglish: 'role'
+        items:
+          - value: 'role-1'
+            label: 'First role'
+          - value: 'role-2'
+            label: 'Second role'
+    type: 'double'
+  - items:
+      - type: checkbox
+        label: 'Design and Construction'
+        name: 'design-and-construction'
+        titleInEnglish: 'interest'
+        # value not required but can be set if need be?
+      - type: checkbox
+        label: 'Manufacturing'
+        name: 'Manufacturing'
+        titleInEnglish: 'interest'
+      - type: checkbox
+        label: 'Research & Innovation'
+        name: 'Research & Innovation'
+        titleInEnglish: 'interest'
+      - type: checkbox
+        label: 'Commercial & Services'
+        name: 'Commercial & Services'
+        titleInEnglish: 'interest'
+      - type: checkbox
+        label: 'Hospitality'
+        name: 'Hospitality'
+        titleInEnglish: 'interest'
+    legend: 'Sector of interest'
+    type: 'checkboxGroup'
+buttons:
+  - type: submit
+    label: 'Submit'
+    theme: gold
+    size: small
+footer:
+  copy: '<p>Can be used for marginalia and fine print.</p>'

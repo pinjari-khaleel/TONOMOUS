@@ -1,0 +1,14 @@
+# dir: ltr
+# language: en
+# navigation: 'import!../app/component/block/s01-navigation/data/navigation-en.yaml'
+
+meta:
+  id: '{{#if componentPrefix}}{{ componentPrefix }}{{/if}}'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: '{{#if (equals type 'block')}}Block{{/if}}'
+
+blocks:
+  {{#if (equals type 'block')}}- name: '{{dashCase componentName}}'
+    data: 'import!../app/component/block/{{dashCase componentName}}/data/default.yaml'
+{{/if}}

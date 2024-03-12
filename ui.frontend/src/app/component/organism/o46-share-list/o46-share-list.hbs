@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="./o46-share-list.scss">
+<script src="./O46ShareList.ts"></script>
+
+<div class="o-shareList" data-component="o46-share-list" {{#if scrollComponent}}data-scroll-component{{/if}}>
+  {{>atom/a03-heading heading disableTransition=true element="h3" size="h6"}}
+  {{#if items}}
+    <ul class="o-shareList__items" data-share-list-items>
+      {{#each items}}
+        <li class="o-shareList__item" data-share-list-item>
+          {{#if (condition id '===' 'clipboard')}}
+            {{>molecule/m32-share-button successMessage=../successMessage}}
+          {{^}}
+            {{>molecule/m32-share-button}}
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+</div>

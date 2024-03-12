@@ -1,0 +1,17 @@
+@media (max-width: @screen-tablet-max) {
+  .cmp-modal {
+    &__container {
+      &:after {
+        width: ~'calc(50% + 2.063rem)';
+      }
+    }
+    &__content {
+      padding: 0 3.125rem 3rem 2rem;
+
+      margin-right: 0;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

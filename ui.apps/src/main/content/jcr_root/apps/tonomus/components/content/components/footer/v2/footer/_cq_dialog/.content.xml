@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Navigation"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[core.wcm.components.navigation.v1.editor]">
+    <content
+        granite:class="cmp-navigation__editor"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <address
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Address"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        sling:orderBefore="accessibility"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <addressTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Text to be displayed before the address information."
+                                                fieldLabel="Address title"
+                                                name="./addressTitle"/>
+                                            <addressDetail
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Address information"
+                                                    useFixedInlineToolbar="{Boolean}true"
+                                                    name="./addressDetail"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </address>
+                    <socialMediaLinks
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Social media links"
+                            sling:orderBefore="accessibility"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <linkMultiField
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                class="multifield-full-width"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Click 'Add' to add a new link"
+                                                fieldLabel="">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./socialMediaLinks">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <target
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Please enter social media URL."
+                                                            fieldLabel="URL"
+                                                            name="./target"
+                                                            required="{Boolean}true"/>
+                                                        <icon
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please , either path to internal page or URL link."
+                                                            fieldLabel="Select path to social media icon"
+                                                            name="./icon"
+                                                            required="{Boolean}true"
+                                                            rootPath="/content/dam/tonomus"/>
+                                                    </items>
+                                                </field>
+                                            </linkMultiField>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </socialMediaLinks>
+                    <extraLinks
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Other links"
+                        sling:orderBefore="accessibility"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <otherLinkMultiField
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                class="multifield-full-width"
+                                                composite="{Boolean}true"
+                                                fieldDescription="Click 'Add' to add a new link"
+                                                fieldLabel="">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./otherLinks">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <label
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                            fieldDescription="Please enter text to display."
+                                                            fieldLabel="Display text"
+                                                            name="./label"
+                                                            required="{Boolean}true"/>
+                                                        <href
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldDescription="Please enter link, either path to internal page or URL link."
+                                                            fieldLabel="Select page or enter URL"
+                                                            name="./href"
+                                                            required="{Boolean}true"
+                                                            rootPath="/content/tonomus"/>
+                                                        <target
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                            fieldDescription="Open new window (tab) if checked."
+                                                            name="./target"
+                                                            text="New window"
+                                                            uncheckedValue="_self"
+                                                            value="_blank"/>
+                                                    </items>
+                                                </field>
+                                            </otherLinkMultiField>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </extraLinks>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,19 @@
+scrollComponent: true
+header:
+  heading:
+    text: Events
+    size: h4
+
+items:
+  - name: 'o85-news-card'
+    data: 'import!../../../organism/o85-news-card/data/card-1.yaml'
+  - name: 'o85-news-card'
+    data: 'import!../../../organism/o85-news-card/data/card-2.yaml'
+  - name: 'o85-news-card'
+    data: 'import!../../../organism/o85-news-card/data/card-3.yaml'
+  - name: 'o85-news-card'
+    data: 'import!../../../organism/o85-news-card/data/card-1.yaml'
+  - name: 'o85-news-card'
+    data: 'import!../../../organism/o85-news-card/data/card-2.yaml'
+  - name: 'o85-news-card'
+    data: 'import!../../../organism/o85-news-card/data/card-3.yaml'

@@ -1,0 +1,86 @@
+<div class="cq-placeholder" data-emptytext="${component.title @ i18n, context='text'}"
+     data-sly-test="${wcmmode.edit}"></div>
+
+<sly
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html"
+    data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"
+    data-sly-use.contentRoadmap="com.tonomus.core.slingmodels.components.v1.contentroadmap.ContentRoadmapModel"
+    data-sly-use.image1="img/image1.html"
+    data-sly-use.image2="img/image2.html"
+    data-sly-use.image3="img/image3.html"
+    data-sly-use.ds11="shapes/desktop-step-1-1.html"
+    data-sly-use.ds21="shapes/desktop-step-2-1.html"
+    data-sly-use.ds31="shapes/desktop-step-3-1.html"
+    data-sly-use.ms11="shapes/mobile-step-1-1.html"
+    data-sly-use.ms21="shapes/mobile-step-2-1.html"
+    data-sly-use.ms22="shapes/mobile-step-2-2.html"
+    data-sly-use.ms23="shapes/mobile-step-2-3.html"
+    data-sly-use.ms31="shapes/mobile-step-3-1.html"
+    data-sly-use.ms32="shapes/mobile-step-3-2.html"
+
+></sly>
+
+<section class="b-contentRoadmap"
+         data-component="c81-content-roadmap"
+         data-sly-attribute.id="${commonComponentModel.anchorId}"
+         data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}"
+         style="${commonComponentModel.padding.styleInline @ context='styleString'}">
+  <div class="b-contentRoadmap__container" data-container>
+    <sly data-sly-call="${headingTemplate.heading @ text=contentRoadmap.heading.text,
+           size='h2'}"></sly>
+    <ol class="b-contentRoadmap__list">
+      <li class="b-contentRoadmap__step1">
+        <sly data-sly-call="${ds11.ds11 @ className='b-contentRoadmap__step1DesktopShape1'}"></sly>
+        <div class="b-contentRoadmap__step1ImageWrapper">
+          <sly data-sly-call="${ms11.ms11 @ className='b-contentRoadmap__step1MobileShape1'}"></sly>
+          <sly data-sly-call="${image1.image1 @ className='b-contentRoadmap__step1Image',
+        src=contentRoadmap.step1.image.src}"></sly>
+        </div>
+        <div data-step-content>
+          <sly data-sly-call="${headingTemplate.heading @
+                 headingModel=contentRoadmap.step1.heading}"></sly>
+          <p class="b-contentRoadmap__stepText">${contentRoadmap.step1.text @ context='html'}</p>
+        </div>
+      </li>
+
+      <li class="b-contentRoadmap__step2">
+        <sly data-sly-call="${ds21.ds21 @ className='b-contentRoadmap__step2DesktopShape1'}"></sly>
+        <sly data-sly-call="${ms21.ms21 @ className='b-contentRoadmap__step2MobileShape1'}"></sly>
+
+        <div data-step-content>
+          <sly data-sly-call="${headingTemplate.heading @
+                 headingModel=contentRoadmap.step2.heading}"></sly>
+          <p class="b-contentRoadmap__stepText">${contentRoadmap.step2.text @ context='html'}</p>
+        </div>
+
+        <sly data-sly-call="${ms22.ms22 @ className='b-contentRoadmap__step2MobileShape2'}"></sly>
+        <sly data-sly-call="${image2.image2 @ className='b-contentRoadmap__step2Image',
+        src=contentRoadmap.step2.image.src}"></sly>
+        <sly data-sly-call="${ms23.ms23 @ className='b-contentRoadmap__step2MobileShape3'}"></sly>
+      </li>
+
+      <li class="b-contentRoadmap__step3">
+        <sly data-sly-call="${ds31.ds31 @ className='b-contentRoadmap__step3DesktopShape1'}"></sly>
+
+        <div data-step-content>
+          <sly data-sly-call="${headingTemplate.heading @
+                 headingModel=contentRoadmap.step3.heading}"></sly>
+          <p class="b-contentRoadmap__stepText">${contentRoadmap.step3.text @ context='html'}</p>
+        </div>
+
+        <sly data-sly-call="${ms31.ms31 @ className='b-contentRoadmap__step3MobileShape1'}"></sly>
+
+        <div class="b-contentRoadmap__step3ImageWrapper">
+          <sly data-sly-call="${image3.image3 @ className='b-contentRoadmap__step3Image',
+        src=contentRoadmap.step3.image.src}"></sly>
+          <sly data-sly-call="${buttonTemplate.button @ buttonModel=contentRoadmap.button,
+           theme='green', icon='play-outline', iconAlignment='left', variant='play',
+           iconClassName='b-contentRoadmap__step3Button'}"></sly>
+        </div>
+
+        <sly data-sly-call="${ms32.ms32 @ className='b-contentRoadmap__step3MobileShape2'}"></sly>
+      </li>
+    </ol>
+  </div>
+</section>

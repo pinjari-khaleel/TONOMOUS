@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          scrollComponent="{Boolean}true"
+          content="&lt;p&gt;A cognitive world would anticipate your needs—but we’re still building it. For now, we can’t find the page you’re looking for.&lt;/p&gt; "
+          description="&lt;p&gt;A cognitive world would anticipate your needs—but we’re still building it. For now, we can’t find the page you’re looking for.&lt;/p&gt; "
+          textIsRich="true"
+          gradientColors="[#960351,#441a54,#57052e]">
+  <heading
+      jcr:primaryType="nt:unstructured"
+      element="h1"
+      size="h1"
+      text="&lt;strong&gt;Sorry for the inconvenience.&lt;/strong&gt;"/>
+  <button
+      jcr:primaryType="nt:unstructured"
+      href="/content/tonomus/en-us"
+      label="explore tonomus"
+      theme="green"/>
+  <image
+      jcr:primaryType="nt:unstructured"
+      alt="alt text"
+      src="/content/dam/tonomus/components/page-404-images/page-404-images-01.png"/>
+</jcr:root>

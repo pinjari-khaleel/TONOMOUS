@@ -1,0 +1,80 @@
+type: 'grid'
+legend: 'My input list'
+name: 'input-list'
+id: 'input-list'
+items:
+  - type: text
+    name: FNAME
+    id: first-name
+    placeholder: Type here
+    label: 'First Name'
+    required: true
+    titleInEnglish: 'First Name'
+  - type: text
+    name: LNAME
+    id: last-name
+    placeholder: Type here
+    label: 'Last Name'
+    required: true
+    titleInEnglish: 'Last Name'
+  - type: email
+    name: Email
+    id: email
+    placeholder: 'name@mail.com'
+    label: 'Email address'
+    required: true
+  - type: phone
+    name: PHONE
+    id: phone-number
+    placeholder: 'Type here'
+    label: 'Phone number'
+    titleInEnglish: 'Phone number'
+    required: false
+    countrySelector:
+      label: 'Country'
+      name: 'country'
+      placeholder: 'Select'
+  - type: select
+    label: 'Your location'
+    name: 'LOCATION'
+    id: location
+    placeholder: 'Select'
+    required: false
+    items:
+      - label: 'Foo'
+        value: 'foo-1'
+      - label: 'Bar'
+        value: 'bar-1'
+      - label: 'Baz'
+        value: 'baz-1'
+  - type: select
+    label: 'Preferred language'
+    placeholder: 'Select'
+    name: 'LANGUAGE'
+    id: 'language'
+    items:
+      - type: select
+        value: english
+        label: 'English'
+        selected: true
+      - type: select
+        value: chinese (traditional)
+        label: 'Chinese (Traditional)'
+      - type: select
+        value: chinese (simplified)
+        label: 'Chinese (Simplified)'
+      - type: select
+        value: russian
+        label: 'Russian'
+      - type: select
+        value: arabic
+        label: 'Arabic'
+      - type: select
+        value: japanese
+        label: 'Japanese'
+      - type: select
+        value: french
+        label: 'French'
+      - type: select
+        value: german
+        label: 'German'

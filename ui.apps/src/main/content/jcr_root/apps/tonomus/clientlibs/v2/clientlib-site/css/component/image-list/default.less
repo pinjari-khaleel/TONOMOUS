@@ -1,0 +1,20 @@
+.cmp-imagelist {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    height: 325px;
+
+    &.aem-GridColumn {
+        padding-inline: 0;
+    }
+
+    &__image {
+        width: 376px;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}
+
+.aem-Grid.aem-Grid--default--12>.cmp-imagelist.aem-GridColumn.aem-GridColumn--default--6 {
+    width: auto;
+}

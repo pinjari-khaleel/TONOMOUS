@@ -1,0 +1,10 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "scrollComponent": "false",
+  "sling:resourceType": "neom/components/content/components/c86-people-carousel/v1/c86-people-carousel",
+  "textIsRich": "true",
+  "heading": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "Our <b>Leadership</b>"
+  }
+}

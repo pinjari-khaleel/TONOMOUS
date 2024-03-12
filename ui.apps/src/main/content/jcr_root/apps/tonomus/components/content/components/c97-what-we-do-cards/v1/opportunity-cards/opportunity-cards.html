@@ -1,0 +1,8 @@
+<!--/* One item for the C97 What We Do (Opportunity Card) */-->
+<sly data-sly-use.model="com.tonomus.core.slingmodels.components.v1.whatwedo.OpportunityCardModel"
+     data-sly-use.oppCrdTpl="/apps/tonomus/components/content/molecules/m59-opportunity-card.html"
+     data-sly-call="${oppCrdTpl.opportunityCard @ model=model}"></sly>
+
+<!--/* Placeholder */-->
+<sly data-sly-use.tpl="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${tpl.placeholder @ isEmpty=true}"></sly>

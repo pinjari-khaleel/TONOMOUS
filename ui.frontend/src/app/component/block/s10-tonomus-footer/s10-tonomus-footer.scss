@@ -1,0 +1,245 @@
+.b-tonomusFooter {
+  --footer-background-color: var(--color-tonomus-purple);
+  --footer-icon-color: var(--color-dark-gold);
+  --footer-text-color: var(--color-white);
+  --link-icon-color: var(--footer-icon-color);
+
+  background: var(--footer-background-color);
+  color: var(--footer-text-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+
+  &__container {
+    @include container();
+    margin: 60px 0 23px;
+  }
+
+  &__links {
+    @include list-reset();
+    margin-block-start: 12px;
+    overflow: hidden;
+  }
+
+  &__link {
+    padding: 12px 0;
+  }
+
+  &__marginalia {
+    align-items: center;
+    background: var(--color-tonomus-purple-400);
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 42px var(--containerMargin) 30px;
+    text-align: center;
+  }
+
+  &__marginaliaItems {
+    @include list-reset();
+  }
+
+  &__marginaliaItem {
+    @include type("body", "xsmall");
+    color: var(--color-black-20);
+    display: inline-block;
+    position: relative;
+    margin-inline: 6px;
+
+    &.-copyrightNotice {
+      font-size: 14px;
+      width: 100%;
+      margin-block-start: 32px;
+    }
+  }
+
+  &__sitemap,
+  &__generalLinks {
+    @include list-reset();
+  }
+
+  &__title {
+    @include type("subTitle", "large");
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__sitemapItem {
+    padding: 24px 0;
+
+    &:first-child {
+      padding: 0 0 24px;
+    }
+
+    &:last-child {
+      padding: 24px 0 0;
+    }
+  }
+
+  &__social {
+    padding-block: 37px 40px;
+  }
+
+  &__logo {
+    .a-image {
+      margin-inline: auto;
+      width: 100%;
+      max-width: 160px;
+    }
+  }
+
+  .m-social {
+    margin-block-start: 21px;
+  }
+
+  .m-social__items {
+    &:not(:first-child) {
+      margin-inline-start: 0;
+    }
+  }
+
+  .m-social__item {
+    &:first-child {
+      margin-inline-start: 0;
+    }
+  }
+
+  @include respond-to("MEDIUM") {
+    &__sitemap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+
+    &__sitemapItem {
+      &:first-child {
+        padding: 24px 0 60px;
+      }
+    }
+
+    &__generalLinks {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-block-start: 21px;
+      border-block-start: 1px solid var(--color-white-20a);
+    }
+
+    &__social {
+      order: 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 30px;
+      margin: 0;
+      padding-block: 0;
+    }
+
+    &__logo {
+      order: 1;
+
+      .a-image {
+        margin-inline: 0;
+      }
+    }
+
+    .m-social {
+      margin-block-start: 0;
+    }
+
+    .m-social__item {
+      .m-social__link {
+        border-radius: 50%;
+      }
+    }
+
+    &__marginalia {
+      padding-block: 29px;
+    }
+
+    &__marginaliaItems {
+      text-align: start;
+      margin-inline-end: 30px;
+    }
+
+    &__marginaliaItem {
+      margin-inline: 15px;
+
+      &:first-child {
+        margin-inline-start: 0;
+      }
+
+      &.-copyrightNotice {
+        width: auto;
+        margin-block-start: 0;
+      }
+    }
+  }
+
+  @include respond-to("LARGE") {
+    &__container {
+      margin: 70px 0;
+    }
+
+    &__title {
+      font-weight: 400;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-block-start: 16px;
+    }
+
+    &__sitemap {
+      gap: 87px;
+    }
+
+    &__sitemapItem {
+      padding: 0;
+      border-block-end: none;
+
+      &:last-child {
+        padding-block-end: 88px;
+      }
+    }
+
+    &__logo {
+      .a-image {
+        margin-inline: auto;
+        width: 100%;
+        max-width: 286px;
+      }
+    }
+
+    &__social {
+      .a-label {
+        @include type("subTitle", "large");
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+
+    &__marginalia {
+      padding-block-end: 27px;
+    }
+
+    &__marginaliaItem {
+      &.-copyrightNotice {
+        font-size: 18px;
+      }
+
+      .a-label {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @include respond-to("XLARGE") {
+    &__container {
+      max-width: 100%;
+    }
+  }
+}

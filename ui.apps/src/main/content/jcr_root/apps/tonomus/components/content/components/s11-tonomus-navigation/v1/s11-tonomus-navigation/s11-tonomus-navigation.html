@@ -1,0 +1,64 @@
+<sly
+    data-sly-use.headerNavModel="com.tonomus.core.slingmodels.components.v1.tonomus_navigation.TonomusNavigationModel"
+    data-sly-use.commonComponentModel="com.tonomus.core.slingmodels.common.v1.CommonComponentModel"
+    data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+    data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+    data-sly-use.buttonTemplate="/apps/tonomus/components/content/molecules/m02-button.html"
+    data-sly-use.languageSelectorTemplate="/apps/tonomus/components/content/organisms/o83-tonomus-language-selector.html"
+
+    data-sly-set.backItem="${headerNavModel.backItem}"
+    data-sly-set._hasBackItem="${backItem.label && backItem.href && true}"
+
+    data-sly-use.tpl="core/wcm/components/commons/v1/templates.html"
+    data-sly-call="${tpl.placeholder @ isEmpty=true}"
+></sly>
+
+<header class="b-tonomusNavigation"
+        data-component="s11-tonomus-navigation"
+        data-sly-attribute.data-scroll-component="${commonComponentModel.scrollComponent}">
+  <div class="b-tonomusNavigation__container" data-navigation-container>
+
+    <a href="${headerNavModel.link.href}" class="b-tonomusNavigation__logo"
+       data-sly-attribute.target="${headerNavModel.link.target @ context='attributeName'}"
+       data-sly-attribute.rel="${headerNavModel.link.target == '_blank' ? 'noopener' : '' @ context='attributeName'}"
+       data-sly-test="${headerNavModel.logoImage}">
+      <sly data-sly-call="${imageTemplate.image @ imageModel=headerNavModel.logoImage,
+      disableTransition=true, variant='block'}"></sly>
+    </a>
+    <div class="b-tonomusNavigation__linkWrapper ${_hasBackItem ? '-backLinkOnly' : ''}">
+      <input type="checkbox" id="tonomus_navigation_toggle" class="b-tonomusNavigation__dropdownToggle" data-toggle-checkbox />
+      <label class="b-tonomusNavigation__toggleLabel" for="tonomus_navigation_toggle" data-dropdown-toggle>
+        <span>${headerNavModel.dropDownLabel @context='text'}</span>
+        <sly data-sly-call="${iconTemplate.icon @ name='dropdown-chevron'}"></sly>
+      </label>
+      <div class="b-tonomusNavigation__dropdownContent">
+
+        <a class="b-tonomusNavigation__backLink"
+           data-link
+           href="#"
+           data-sly-test="${_hasBackItem}"
+           data-sly-attribute.href="${backItem.href}"
+           data-sly-attribute.target="${backItem.target}"
+           data-sly-attribute.rel="${backItem.target == '_blank' && 'noopener'}">
+          <sly data-sly-call="${iconTemplate.icon @ name='arrow-left-short'}"></sly>
+          <span>${backItem.label @ context='text'}</span>
+        </a>
+
+        <ul class="b-tonomusNavigation__linkList" data-link-list
+            data-sly-test.navLinks="${headerNavModel.navLinks}"
+            data-sly-list="${navLinks}">
+          <li class="b-tonomusNavigation__listItem">
+            <a class="b-tonomusNavigation__link" data-link href="#"
+               data-sly-attribute.href="${item.href}">
+              <span>${item.label @context='text'}</span>
+            </a>
+          </li>
+        </ul>
+        <sly
+            data-sly-call="${buttonTemplate.button @ theme='green', buttonModel=headerNavModel.highlightedLink}"></sly>
+        <sly data-sly-call="${languageSelectorTemplate.languageSelector @
+              languages=headerNavModel.languages}" data-sly-test="${headerNavModel.languages}"></sly>
+      </div>
+    </div>
+  </div>
+</header>

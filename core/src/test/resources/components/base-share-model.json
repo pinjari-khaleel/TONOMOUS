@@ -1,0 +1,60 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:mixinTypes": [
+      "mix:versionable"
+    ],
+    "jcr:title": "TONOMUS",
+    "pwaOrientation": "any",
+    "cq:template": "/conf/tonomus/settings/wcm/templates/t04-home",
+    "jcr:language": "en",
+    "cq:lastReplicationAction_publish": "Activate",
+    "brandSite": "tonomus",
+    "jcr:predecessors": [
+      "7ba3846a-a981-4a54-b2de-a22e2945a94f"
+    ],
+    "cq:contextHubSegmentsPath": "/etc/segmentation/contexthub",
+    "pwaDisplay": "standalone",
+    "pwaCachestrategy": "staleWhileRevalidate",
+    "pageTitle": "Tonomus",
+    "isRightToLeftLanguage": "rtl",
+    "sling:resourceType": "tonomus/components/structure/tonomus-home-page",
+    "cq:contextHubPath": "/etc/cloudsettings/default/contexthub",
+    "cq:isLanguageRoot": "true",
+    "sling:configRef" : "/conf/tonomus",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "c80_dynamic_quote_co": {
+          "jcr:primaryType": "nt:unstructured",
+          "nextQuoteCTALabel": "NEXT QUOTE",
+          "addShareOptions": "true",
+          "disableEventTracking": "false",
+          "scrollComponent": "true",
+          "sling:resourceType": "tonomus/components/content/components/c80-dynamic-quote/v1/c80-dynamic-quote",
+          "textIsRich": [
+            "true"
+          ],
+          "shareOptions": {
+            "jcr:primaryType": "nt:unstructured",
+            "heading": {
+              "jcr:primaryType": "nt:unstructured",
+              "text": "share quote"
+            }
+          }
+        },
+        "c80_dynamic": {
+          "jcr:primaryType": "nt:unstructured",
+          "nextQuoteCTALabel": "NEXT QUOTE",
+          "addShareOptions": "true",
+          "disableEventTracking": "false",
+          "sling:resourceType": "tonomus/components/content/components/c80-dynamic-quote/v1/c80-dynamic-quote"
+        }
+      }
+    }
+  }
+}

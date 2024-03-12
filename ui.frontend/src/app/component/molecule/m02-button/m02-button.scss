@@ -1,0 +1,259 @@
+.m-button {
+  --button-size: 48px;
+  --button-icon-size: 18px;
+
+  @include iconFlip();
+
+  align-items: center;
+  appearance: none;
+  background: none;
+  border: 0;
+  color: var(--button-text-color);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: var(--button-font-size);
+  height: var(--button-size);
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  @include hover {
+    color: var(--button-text-color-hover);
+  }
+
+  &:not(.-iconOnly) {
+    --button-padding: 32px;
+  }
+
+  &__container {
+    align-items: center;
+    appearance: none;
+    background: var(--button-background-color, transparent);
+    border-radius: var(--button-border-radius);
+    border: var(--button-border-width) solid var(--button-border-color, black);
+    box-sizing: border-box;
+    color: var(--button-text-color);
+    display: flex;
+    height: var(--button-size);
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    padding-inline-end: calc(var(--button-padding) / 2);
+    padding-inline-start: var(--button-padding);
+    position: relative;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    width: 100%;
+
+    // enable for a ripple hover
+    // @import "./style/hover-effect";
+
+    @include hover() {
+      --button-background-color: var(--button-background-color-hover, black);
+      --button-icon-color: var(--button-text-color);
+      --button-text-color: var(--button-text-color-hover, white);
+      --button-border-color: var(--button-border-color-hover, transparent);
+    }
+  }
+
+  &__prefix,
+  &__suffix {
+    @include type("body", "small");
+
+    color: var(--button-affix-color);
+    font-weight: 400;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    user-select: none;
+    width: 320px;
+    max-width: 60vw;
+  }
+
+  &__prefix {
+    right: 100%;
+    text-align: end;
+    margin-inline-end: var(--grid-gap);
+
+    [dir="rtl"] & {
+      right: initial;
+      left: 100%;
+    }
+  }
+
+  &__suffix {
+    left: 100%;
+    text-align: start;
+    margin-inline-start: var(--grid-gap);
+
+    [dir="rtl"] & {
+      left: initial;
+      right: 100%;
+    }
+  }
+
+  &::before,
+  &::after {
+    z-index: 1;
+  }
+
+  .a-icon,
+  .a-label {
+    position: relative;
+    z-index: 2;
+  }
+
+  .a-icon {
+    --icon-size: var(--button-icon-size);
+    flex-shrink: 0;
+  }
+
+  .a-label ~ .a-icon {
+    margin-inline-start: calc(var(--button-icon-size) / 1.5);
+  }
+
+  &.-small {
+    --button-font-size: 16px;
+    --button-icon-size: var(--button-font-size);
+    --button-padding: 28px;
+    --button-size: 40px;
+  }
+
+  &.-iconOnly {
+    --button-padding: 0;
+
+    @include size(var(--button-size));
+
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+  }
+
+  &.-labelOnly {
+    .m-button__container {
+      padding-inline-end: var(--button-padding);
+      padding-inline-start: var(--button-padding);
+    }
+  }
+
+  &.-leftIcon {
+    .m-button__container {
+      flex-direction: row-reverse;
+      padding-inline-end: var(--button-padding);
+      padding-inline-start: calc(var(--button-padding) / 2);
+    }
+
+    .a-label ~ .a-icon {
+      margin-inline-start: 0;
+      margin-inline-end: calc(var(--button-icon-size) / 1.5);
+    }
+  }
+
+  &.-secondary {
+    --button-background-color: transparent;
+    --button-border-color: var(--color-black-20a);
+    --button-border-width: 1.5px;
+    --button-text-color: var(--color-black);
+  }
+
+  &.-tertiary {
+    --button-background-color-hover: transparent;
+    --button-background-color: transparent;
+    --button-border-radius: 0;
+    --button-border-width: 0;
+    --button-icon-color: var(--button-text-color);
+    --button-padding: 0;
+
+    &::before {
+      content: normal;
+    }
+  }
+
+  @import "./style/themes";
+
+  &.-playbackControls {
+    --button-background-color: transparent;
+    --button-background-color-ripple: var(--color-white-20a);
+    --button-border-color: transparent;
+    --button-border-width: 0;
+    --button-background-color-hover: transparent;
+    --button-text-color-hover: var(--color-white);
+    --button-padding: 0;
+
+    &::before {
+      content: normal;
+    }
+  }
+
+  &.-navigation {
+    --button-size: 40px;
+    --icon-size: 20px;
+    --button-border-width: 0;
+    --button-padding: 0;
+    --button-border-color: transparent;
+    --button-background-color-hover: transparent;
+
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+
+    &::before {
+      content: normal;
+    }
+
+    .m-button__container {
+      background-color: transparent;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    .m-button__container {
+      background-color: var(--button-background-color-disabled, transparent);
+      border-color: var(--button-border-color-disabled, grey);
+      color: var(--button-text-color-disabled, grey);
+    }
+  }
+
+  &.-download {
+    --button-icon-size: 14px;
+
+    .a-label ~ .a-icon {
+      margin-inline-end: 10px;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &:not(&.-small) {
+    &.-play,
+    &.-close {
+      --button-size: 60px;
+      --button-icon-size: 20px;
+    }
+  }
+
+  @include respond-to("MEDIUM") {
+    &:not(&.-small) {
+      &.-play,
+      &.-close {
+        --button-icon-size: 24px;
+      }
+    }
+  }
+
+  &.-hover {
+    color: var(--button-text-color-hover);
+
+    .m-button__container {
+      --button-background-color: var(--button-background-color-hover, black);
+      --button-icon-color: var(--button-text-color);
+      --button-text-color: var(--button-text-color-hover, white);
+      --button-border-color: var(--button-border-color-hover, transparent);
+    }
+  }
+}

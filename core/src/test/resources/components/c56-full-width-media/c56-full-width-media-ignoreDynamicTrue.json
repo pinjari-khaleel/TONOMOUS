@@ -1,0 +1,77 @@
+{
+  "jcr:primaryType":"cq:Page",
+  "jcr:createdBy":"admin",
+  "jcr:created":"Tue Nov 30 2021 16:55:23 GMT+0600",
+  "jcr:content":{
+    "jcr:primaryType":"cq:PageContent",
+    "jcr:mixinTypes":[
+      "mix:versionable"
+    ],
+    "changefreq":"weekly",
+    "jcr:createdBy":"admin",
+    "jcr:title":"komarov-test2",
+    "cq:lastReplicatedBy_publish":"ashwin.b@mediamonks.com",
+    "cq:lastReplicationAction":"Activate",
+    "jcr:versionHistory":"2b5f6958-0917-4c2b-86da-e2fdba20f916",
+    "cq:template":"/conf/neom/settings/wcm/templates/t02-generic",
+    "cq:lastReplicatedBy":"ashwin.b@mediamonks.com",
+    "cq:lastReplicationAction_publish":"Activate",
+    "jcr:predecessors":[
+      "f258e2b4-0afd-4de2-bde7-5fde9d14e19d"
+    ],
+    "jcr:created":"Tue Nov 30 2021 16:55:23 GMT+0600",
+    "cq:lastReplicated":"Mon Nov 15 2021 16:11:35 GMT+0000",
+    "cq:lastModified":"Mon Dec 20 2021 16:55:16 GMT+0600",
+    "siteSection":"home",
+    "jcr:baseVersion":"f258e2b4-0afd-4de2-bde7-5fde9d14e19d",
+    "jcr:isCheckedOut":true,
+    "jcr:uuid":"64a92436-3ceb-4a0a-8cc0-19f40df3477f",
+    "sling:resourceType":"neom/components/structure/page",
+    "cq:lastReplicated_publish":"Mon Nov 15 2021 16:11:35 GMT+0000",
+    "cq:lastModifiedBy":"admin",
+    "root":{
+      "jcr:primaryType":"nt:unstructured",
+      "sling:resourceType":"wcm/foundation/components/responsivegrid",
+      "responsivegrid":{
+        "jcr:primaryType":"nt:unstructured",
+        "sling:resourceType":"wcm/foundation/components/responsivegrid",
+        "c56_full_width_media":{
+          "jcr:primaryType":"nt:unstructured",
+          "jcr:createdBy":"admin",
+          "jcr:lastModifiedBy":"admin",
+          "jcr:created":"Mon Dec 20 2021 16:54:57 GMT+0600",
+          "jcr:lastModified":"Mon Dec 20 2021 16:55:16 GMT+0600",
+          "sling:resourceType":"neom/components/content/components/c56-full-width-media/v1/c56-full-width-media",
+          "image":{
+            "jcr:primaryType":"nt:unstructured",
+            "alt":"Neom launches the Line",
+            "src":"/content/dam/neom/components/c01-splash-hero/teaser-still.jpg"
+          },
+          "video":{
+            "jcr:primaryType":"nt:unstructured",
+            "props":{
+              "jcr:primaryType":"nt:unstructured",
+              "loop":"true",
+              "cover":"true",
+              "muted":"true",
+              "originalHeight":"9",
+              "autoplay":"true",
+              "originalWidth":"16",
+              "sources":{
+                "jcr:primaryType":"nt:unstructured",
+                "item0":{
+                  "jcr:primaryType":"nt:unstructured",
+                  "ignoreDynamicMedia":"true",
+                  "src":"/content/dam/tonomus/prev/teaser-video.mp4"
+                }
+              },
+              "video": {
+                "src": "/content/dam/tonomus/joshua-1080p-flipped-compressed.mp4"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

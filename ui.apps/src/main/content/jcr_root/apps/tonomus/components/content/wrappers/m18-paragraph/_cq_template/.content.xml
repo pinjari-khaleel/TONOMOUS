@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          type="paragraph"
+          textIsRich="true">
+  <align
+      jcr:primaryType="nt:unstructured"
+      horizontal="start"
+      vertical="middle"/>
+  <content
+      jcr:primaryType="nt:unstructured"
+      copy="&lt;p>NEOM is not just a place – it is a mindset. Citizens will embody an international ethos and embrace a culture of exploration, risk-taking and diversity, all supported by a progressive legal system compatible with international norms &amp;amp; conducive to economic growth.&lt;/p>&#xd;&#xa;">
+    <heading
+        jcr:primaryType="nt:unstructured"
+        element="h1"
+        size="h3"
+        text="Haddah beach"/>
+    <eyebrow
+        jcr:primaryType="nt:unstructured"
+        size="medium"
+        text="What to do at"/>
+    <buttons jcr:primaryType="nt:unstructured">
+      <item0
+          jcr:primaryType="nt:unstructured"
+          href="https://www.visitsaudi.com/"
+          icon="arrow-right"
+          label="Primary button"
+          level="primary"
+          size="large"
+          target="_blank"
+          theme="black"/>
+      <item1
+          jcr:primaryType="nt:unstructured"
+          href="https://www.visitsaudi.com/"
+          label="Secondary button"
+          level="secondary"
+          size="large"
+          target="_blank"
+          theme="black"/>
+    </buttons>
+  </content>
+</jcr:root>

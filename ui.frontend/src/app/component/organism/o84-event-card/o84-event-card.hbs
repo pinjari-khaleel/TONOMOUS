@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="./o84-event-card.scss">
+<script src="./O84EventCard.ts"></script>
+
+
+<div class="o-eventCard"
+  data-component="o84-event-card"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  data-modal="{{toJson modal}}"
+>
+  {{> atom/a01-image image disableTransition=true }}
+
+  <div class="o-eventCard__content">
+    <time class="o-eventCard__datetimeWrapper">
+      {{> atom/a02-icon name="calendar" }}
+      <div class="o-eventCard__datetime">{{datetime}}</div>
+    </time>
+
+    <div class="o-eventCard__title">
+      {{title}}
+    </div>
+
+    {{> molecule/m02-button button }}
+  </div>
+</div>

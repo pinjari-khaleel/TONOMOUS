@@ -1,0 +1,53 @@
+@media (max-width: @screen-mobile-max) {
+  .cmp-container {
+    display: block;
+
+    &.aem-GridColumn.cmp-container__divider {
+      &--vertical {
+        .aem-GridColumn + .aem-GridColumn {
+          border-left: none;
+        }
+      }
+    }
+
+    .cmp {
+      margin-block-end: ~'calc(var(--component-padding-block-default) / 2)';
+      &::after {
+        margin-block-start: ~'calc(var(--component-padding-block-default) / 2)';
+      }
+    }
+
+    &--large-block {
+      .cmp {
+        margin-block-end: ~'calc(var(--component-padding-block-large) / 2)';
+        &::after {
+          margin-block-start: ~'calc(var(--component-padding-block-large) / 2)';
+        }
+      }
+    }
+
+
+    &__heading {
+      padding-block-end: 2rem;
+    }
+
+    &__action-container {
+      display: none;
+      &--mobile {
+        display: inline-block;
+        width: 100%;
+        margin-block-end: var(--padding-block);
+      }
+    }
+
+    &__center {
+      .cmp-container {
+        &__content {
+          .aem-Grid.aem-Grid--12.aem-Grid--default--12.aem-Grid--phone--12 {
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+}

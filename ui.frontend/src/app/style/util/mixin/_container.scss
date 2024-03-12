@@ -1,0 +1,17 @@
+@use "sass:math";
+
+@mixin container($type: "wide") {
+  box-sizing: border-box;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  max-width: var(--containerMaxWidth);
+
+  @if $type == "wide" {
+    padding-inline-start: var(--container-margin);
+    padding-inline-end: var(--container-margin);
+  }
+  @if $type == "compact" {
+    padding-inline-start: var(--container-margin-compact);
+    padding-inline-end: var(--container-margin-compact);
+  }
+}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Card"
+    extraClientlibs="[tonomus.v2.card.editor,core.wcm.components.image.v3.editor]">
+    <content
+        granite:class="cmp-card__editor cmp-image__editor"
+        jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <text jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column jcr:primaryType="nt:unstructured">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <titleGroup
+                                                granite:hide="${cqDesign.titleHidden}"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <title
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceSuperType="tonomus/components/content/utils/v2/richtext"
+                                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                        fieldDescription="A title to display as the headline for the teaser."
+                                                        fieldLabel="Title"
+                                                        name="./jcr:title"
+                                                        useFixedInlineToolbar="{Boolean}true"/>
+                                                </items>
+                                            </titleGroup>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </text>
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Image"/>
+                    <video
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Video"
+                        sling:orderBefore="styletab"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <type
+                                                granite:class="cq-dialog-dropdown-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Select type of source for video"
+                                                fieldLabel="Source"
+                                                name="./video/type">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <src
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="URL"
+                                                        value="internal"/>
+                                                    <html
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="HTML"
+                                                        value="html"/>
+                                                </items>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".cmp-card__video-layout-showhide"/>
+                                            </type>
+                                            <src
+                                                granite:class="hide cmp-card__video-layout-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <video
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                        fieldDescription="Uses &lt;video> element which supports video formats mp4, WebM and Ogg"
+                                                        fieldLabel="Video"
+                                                        name="./video/src"
+                                                        rootPath="/content/dam">
+                                                        <granite:data jcr:primaryType="nt:unstructured"/>
+                                                    </video>
+                                                    <autoplay
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        fieldDescription="Automatically starts the video as soon as the data has finished loading."
+                                                        name="./video/autoplay"
+                                                        text="Autoplay"
+                                                        value="true"/>
+                                                    <muted
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        fieldDescription="Mute the audio in a video"
+                                                        name="./video/muted"
+                                                        text="Muted"
+                                                        value="true"/>
+                                                    <loop
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        fieldDescription="Plays the video again once the playback has come to end"
+                                                        name="./video/loop"
+                                                        text="Loop"
+                                                        value="true"/>
+                                                </items>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="internal"/>
+                                            </src>
+                                            <html
+                                                granite:class="hide cmp-card__video-layout-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <html
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                        emptyText="Paste embed code"
+                                                        fieldDescription="The code of the content to embed. The embed code is filtered to remove unsafe tags, such as the script tag."
+                                                        fieldLabel="HTML"
+                                                        name="./html">
+                                                        <granite:data
+                                                            jcr:primaryType="nt:unstructured"
+                                                            showhidetargetvalue="html"/>
+                                                    </html>
+                                                </items>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="html"/>
+                                            </html>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </video>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

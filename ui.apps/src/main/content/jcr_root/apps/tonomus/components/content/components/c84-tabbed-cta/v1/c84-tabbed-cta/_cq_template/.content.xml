@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          alignment="center"
+          anchorId="yourrole"
+          scrollComponent="{Boolean}true">
+  <heading
+      jcr:primaryType="nt:unstructured"
+      size="h1"
+      text="Tonomus &lt;strong&gt;and you&lt;/strong&gt;"/>
+  <eyebrow
+      jcr:primaryType="nt:unstructured"/>
+  <moustache
+      jcr:primaryType="nt:unstructured"/>
+  <padding
+      jcr:primaryType="nt:unstructured"/>
+  <items
+      jcr:primaryType="nt:unstructured">
+    <item0
+        jcr:primaryType="nt:unstructured"
+        description="&lt;p&gt;To build the world’s first ecosystem of cognitive technologies and solutions, we’re partnering with global industry leaders and pioneers. Find out how your business can tap into our high-speed connectivity, consent-derived data, and digital-twin technology—all powered by 100% sustainable energy—and together we can create the reality we envision.&lt;/p&gt; "
+        labelVal="partners and customers"
+        sizeVal="24px">
+      <image
+          jcr:primaryType="nt:unstructured"
+          alt="Image Alt Text"
+          src="/content/dam/tonomus/components/c84-tabbed-cta/c84-tabbed-cta-01.jpg"/>
+      <button
+          jcr:primaryType="nt:unstructured"
+          href="#tonomus_getintouch_form_id"
+          label="Partner with us "
+          target="_self"/>
+    </item0>
+    <item1
+        jcr:primaryType="nt:unstructured"
+        description="&lt;p&gt;Looking for more information? We’re dedicated to creating groundbreaking solutions and sharing them with the world—so if you want details about how we&#39;re building the cognitive future, get in touch. &lt;/p&gt; "
+        labelVal="media"
+        sizeVal="24px">
+      <image
+          jcr:primaryType="nt:unstructured"
+          alt="Image Alt Text "
+          src="/content/dam/tonomus/components/c90-card-slider/c90-card-slider-02.png"/>
+      <button
+          jcr:primaryType="nt:unstructured"
+          href="#tonomus_stayinformed_form_id"
+          label="Contact us"
+          target="_self"/>
+    </item1>
+    <item2
+        jcr:primaryType="nt:unstructured"
+        description="&lt;p&gt;There are no limits to what cognitive technology can do for humanity, so we put no limits on the people creating it. At Tonomus, you&#39;ll collaborate with the world’s greatest minds. You’ll be part of an inclusive team that celebrates who you are and who you might become. And you’ll set a new standard for what’s possible when we come together with a common purpose: building a future that’s proactive, predictive, empowering – and revolves around us all.&lt;/p&gt; "
+        labelVal="talent"
+        sizeVal="24px">
+      <image
+          jcr:primaryType="nt:unstructured"
+          alt="Image Alt Text "
+          src="/content/dam/tonomus/components/c90-card-slider/c90-card-slider-03.png"/>
+      <button
+          jcr:primaryType="nt:unstructured"
+          href="#"
+          label="Join our team "
+          target="_self"/>
+    </item2>
+  </items>
+</jcr:root>

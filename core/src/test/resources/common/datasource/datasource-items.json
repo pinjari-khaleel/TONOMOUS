@@ -1,0 +1,23 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "children": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "Clean Energy",
+    "value": "clean-energy"
+  },
+  "static": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "Commute",
+    "value": "commute"
+  },
+  "search": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "Binoculars",
+    "value": "binoculars"
+  },
+  "tags": {
+    "jcr:primaryType": "nt:unstructured",
+    "text": "Wave",
+    "value": "wave"
+  }
+}

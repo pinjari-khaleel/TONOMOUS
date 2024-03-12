@@ -1,0 +1,34 @@
+<sly data-sly-template.list="${@
+       listModel='ContentGridListItemModel with properties'}"
+     data-sly-use.headingTemplate="/apps/tonomus/components/content/atoms/a03-heading.html">
+  <div class="m-list
+        ${listModel.variant ? ' -{0}' : '' @ format=[listModel.variant], context='styleString'}"
+       data-component="m17-list">
+
+    <sly data-sly-test="${listModel.header}">
+      <sly data-sly-test="${listModel.header.heading.text}"
+           data-sly-call="${headingTemplate.heading @ headingModel=listModel.header.heading}"></sly>
+      <div data-sly-test="${listModel.header.copy.content}"
+          class="m-list__description s-content
+            ${['', listModel.header.copy.size || 'medium'] @ join = '-', context='styleString'}">
+        ${listModel.header.copy.content @ context='html'}
+      </div>
+    </sly>
+
+    <ol class="m-list__items"
+          data-sly-attribute.data-list-ordered="${listModel.ordered}"
+          data-sly-element="${listModel.ordered ? 'ol' : 'ul'}">
+      <li class="m-list__item" data-list-item data-sly-repeat.item="${listModel.items}">
+        <sly data-sly-test.isDefinitions="${listModel.variant == 'definitions'}">
+          <p class="m-list__title" data-list-item-title>${item.title @ context='text'}</p>
+          <div class="m-list__copy s-content ${['', listModel.size || 'medium'] @ join = '-', context='styleString'}"
+               data-list-item-copy>${item.copy @ context='html'}</div>
+        </sly>
+        <div data-sly-test="${!isDefinitions}" class="s-content ${['', listModel.size || 'medium'] @ join = '-', context='styleString'}">${item.title @
+          context='text'}</div>
+      </li>
+    </ol>
+
+  </div>
+</sly>
+

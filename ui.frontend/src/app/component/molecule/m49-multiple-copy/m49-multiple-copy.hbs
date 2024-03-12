@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="./m49-multiple-copy.scss">
+<script src="./M49MultipleCopy.ts"></script>
+
+
+<div class="m-multipleCopy" data-component="m49-multiple-copy" {{#if scrollComponent}}data-scroll-component{{/if}} {{#if
+  id}} id="{{id}}" {{/if}}>
+  {{#with icon}}{{> atom/a02-icon name=this }}{{/with}}
+  {{#with eyebrow}}{{> atom/a04-eyebrow this }}{{/with}}
+  {{#with heading}}
+  <div class="m-multipleCopy__heading" data-multiple-copy-heading>
+    {{> atom/a03-heading this }}
+  </div>
+  {{/with}}
+  {{#with moustache}}{{> atom/a05-moustache this }}{{/with}}
+  {{#each copy}}
+  <div
+    class="m-multipleCopy__content s-content{{#if size}} -{{size}}{{^}} -medium{{/if}} {{#if highlight}} -highlight{{/if}} {{#if uppercase}} -uppercase{{/if}}"
+    data-multiple-copy-content>
+    {{{ content }}}
+  </div>
+  {{/each}}
+</div>

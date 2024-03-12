@@ -1,0 +1,17 @@
+<sly data-sly-template.accordion="${ @
+  accordionItems='List of accordion items',
+  eventTracking='Analytic event tracking data'
+  }"
+     data-sly-use.collapsibleItemTemplate="/apps/tonomus/components/content/organisms/o06-collapsible-item.html"
+>
+
+  <div class="o-accordion" data-component="o05-accordion" data-scroll-component>
+    <ul class="o-accordion__items">
+      <li data-sly-repeat.accordionItem="${accordionItems}" class="o-accordion__item">
+        <sly
+            data-sly-call="${collapsibleItemTemplate.collapsibleItem @
+            label=accordionItem.label, content=accordionItem.content, eventTracking=eventTracking}"></sly>
+      </li>
+    </ul>
+  </div>
+</sly>

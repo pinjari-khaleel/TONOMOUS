@@ -1,0 +1,21 @@
+# These options are re-used across the hero and countdown page
+- languageCode: en
+  label: English
+- languageCode: ar
+  label: العربية
+- languageCode: zh-cn
+  label: 简体中文
+- languageCode: zh-hk
+  label: 繁体中文
+- languageCode: jp
+  label: 日本語
+- languageCode: it
+  label: ITALIANO
+- languageCode: es
+  label: ESPAÑOL
+- languageCode: de
+  label: DEUTSCH
+- languageCode: fr
+  label: FRANÇAIS
+- languageCode: ru
+  label: РУССКИЙ

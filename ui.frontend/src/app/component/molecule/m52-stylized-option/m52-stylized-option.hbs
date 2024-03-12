@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="./m52-stylized-option.scss">
+<script src="./M52StylizedOption.ts"></script>
+
+
+<div class="m-stylizedOption"
+         data-component="m52-stylized-option">
+  <label class="m-stylizedOption__label" data-label>
+    <input
+      type="{{type}}"
+      {{#with id}}id="{{this}}" data-{{this}}{{/with}}
+      {{#with name}}name="{{this}}"{{/with}}
+      {{#with titleInEnglish}}data-title-in-english="{{this}}"{{/with}}
+      {{#with value}}value="{{this}}"{{/with}}
+      class="m-stylizedOption__input"
+      data-input
+    >
+    <span class="m-stylizedOption__textLabel">{{label}}</span>
+    <div class="m-stylizedOption__imageWrapper">
+      {{> atom/a01-image image disableTransition=true }}
+    </div>
+  </label>
+</div>

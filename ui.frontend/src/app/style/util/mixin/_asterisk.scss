@@ -1,0 +1,6 @@
+@mixin asterisk() {
+  color: var(--component-highlight-color, var(--color-dark-gold));
+  content: "*";
+  font-size: 12px;
+  margin-inline-start: 0.25em;
+}

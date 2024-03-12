@@ -1,0 +1,48 @@
+<sly data-sly-template.background="${@
+     backgroundModel='background model with properties',
+     imageModel='image model with properties to use instead of backgroundModel',
+     imageMobileModel='mobile image model with properties to use instead of backgroundModel',
+     sticky='boolean parameter which will be used for javascript operations and style',
+     disableTransition='Boolean flag to disable transition',
+     scrollComponent='Boolean value passed directly',
+     imageLoadingMode='The ability to loading images by one of the parameters: lazy, eager, auto. Вy default, loading is lazy'
+}"
+     data-sly-use.videoTemplate="/apps/tonomus/components/content/atoms/a19-video.html"
+     data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+     data-sly-use.imageMobileTemplate="/apps/tonomus/components/content/atoms/a01-image-with-mobile.html"
+     data-sly-use.lottieTemplate="/apps/tonomus/components/content/atoms/a20-lottie-animation.html"
+     data-sly-set.hasVideo="${backgroundModel.video && backgroundModel.video.props.sources}"
+     data-sly-set.imageModelVal="${imageModel || backgroundModel.image || backgroundModel.images.background}"
+     data-sly-set.imageMobileModelVal="${imageMobileModel || backgroundModel.imageMobile}"
+     data-sly-set.stickyVal="${sticky || backgroundModel.sticky}"
+     data-sly-set.hasDesktopImage="${imageModelVal && imageModelVal.src}"
+     data-sly-set.hasMobileImage="${imageMobileModelVal && imageMobileModelVal.src}"
+     data-sly-set.disableTransitionVal="${disableTransition || backgroundModel.disableTransition}"
+>
+
+    <div data-component="m34-component-background"
+         data-sly-attribute.data-disable-transition="${disableTransitionVal}"
+         data-sly-attribute.data-scroll-component="${scrollComponent}"
+         style="--mask-opacity: ${backgroundModel.mask.opacity || '0.5' @ context='text'}"
+         class="m-componentBackground ${backgroundModel.mask.solid ? ' -solidMask' : ''}"
+         data-sly-attribute.data-effect="${backgroundModel.effect}"
+         data-sly-attribute.data-image-src="${imageModelVal.src}">
+        <div class="m-componentBackground__container">
+            <div class="m-componentBackground__background"
+                 data-background
+                 data-sly-attribute.data-sticky-background="${stickyVal}">
+                <sly data-sly-test="${hasDesktopImage && !hasMobileImage}"
+                     data-sly-call="${imageTemplate.image @ imageModel=imageModelVal, disableTransition=disableTransitionVal,
+                        direction=backgroundModel.transitionDirection, loading=imageLoadingMode}"></sly>
+                <sly data-sly-test="${hasDesktopImage && hasMobileImage}"
+                     data-sly-call="${imageMobileTemplate.image @ imageModel=imageModelVal,
+                        mobileImageModel=imageMobileModelVal, disableTransition=disableTransitionVal, loading=imageLoadingMode}"></sly>
+                <sly data-sly-test="${hasVideo}"
+                     data-sly-call="${videoTemplate.preview @ config=backgroundModel.video.props, poster=imageModelVal.src,
+                        autoloop=true}"></sly>
+                <sly data-sly-test="${!hasVideo && backgroundModel.lottie}"
+                     data-sly-call="${lottieTemplate.lottie @ lottieAnimationModel=backgroundModel.lottie}"></sly>
+            </div>
+        </div>
+    </div>
+</sly>

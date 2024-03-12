@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="./o69-abstract-list.scss">
+<script src="./O69AbstractList.ts"></script>
+
+
+<div class="o-abstractList" data-component="o69-abstract-list" {{#if scrollComponent}}data-scroll-component{{/if}} {{#if id}}
+  id="{{id}}" {{/if}}>
+
+  {{#if ordered}}
+  <ol class="o-abstractList__items -isOrdered">
+    {{^}}
+    <ul class="o-abstractList__items">
+      {{/if}}
+
+      {{#each items}}
+
+      <li class="o-abstractList__item">
+        <div class="o-abstractList__headingContainer">
+          {{#with heading}}
+            {{#if button}}
+
+            <div class="o-abstractList__buttonHeading">
+              {{>molecule/m02-button label=button.label level="tertiary" icon="arrow-right" theme="dark-gold" size="small"}}
+            </div>
+            {{^}}
+            <div class="o-abstractList__eyebrowHeading">
+              {{>atom/a04-eyebrow text=eyebrow.text size="medium" }}
+            </div>
+
+            {{/if}}
+          {{/with}}
+        </div>
+        <p class="o-abstractList__description">
+          {{description}}
+        </p>
+      </li>
+      {{/each}}
+
+      {{#if ordered}}
+  </ol>
+  {{^}}
+  </ul>
+  {{/if}}
+</div>

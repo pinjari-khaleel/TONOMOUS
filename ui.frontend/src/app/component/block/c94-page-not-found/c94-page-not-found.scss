@@ -1,0 +1,58 @@
+.b-pageNotFound {
+  --component-text-color: var(--color-white);
+
+  padding-block: 100px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--component-text-color);
+
+  &__container {
+    @include container();
+
+    position: relative;
+  }
+
+  .a-image {
+    max-inline-size: 890px;
+    inline-size: 100%;
+    margin-inline: auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block-start: 50px;
+    margin-inline: auto;
+    text-align: center;
+    max-inline-size: 425px;
+
+    .a-heading {
+      font-size: 40px;
+    }
+
+    p {
+      @include type("body", "medium");
+      font-size: 18px;
+      padding-block-start: 8px;
+    }
+
+    a,
+    button {
+      padding-block-start: 32px;
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    &__content {
+      padding-block-start: 80px;
+    }
+  }
+
+  @include respond-to(LARGE) {
+    padding-block: 200px;
+  }
+}

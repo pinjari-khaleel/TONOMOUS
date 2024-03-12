@@ -1,0 +1,19 @@
+<script src="./NativeVideo.ts"></script>
+
+<video
+  data-component="native-video"
+  {{#if muted}}muted{{/if}}
+  {{#if loop}}loop{{/if}}
+  {{#if autoplay}}autoplay{{/if}}
+  {{#if disablePreload}}preload="none"{{/if}}
+  playsinline
+>
+  {{#each sources}}
+    <source
+      src="{{src}}"
+      type="{{type}}"
+    />
+  {{/each}}
+
+  Sorry, your browser doesn't support embedded videos.
+</video>

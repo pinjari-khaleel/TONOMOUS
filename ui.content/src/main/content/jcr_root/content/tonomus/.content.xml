@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="/conf/tonomus/settings/wcm/templates/(?!xf-).*"
+        cq:conf="/conf/tonomus"
+        cq:template="/apps/tonomus/templates/neom-site-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Tonomus"
+        sling:configRef="/conf/tonomus"
+        sling:resourceType="tonomus/components/structure/neom-site-page"
+        disablePageTransition="true"
+        domainName="tonomus.neom.com"
+        errorPages="/content/tonomus/en-us/conf/errors"
+        pwaCachestrategy="staleWhileRevalidate"
+        pwaDisplay="standalone"
+        pwaOrientation="any">
+        <defaultNewsFeatureImage
+            jcr:primaryType="nt:unstructured"
+            src="/content/dam/neom/components/c44-article-content/DEFAULT_NEWS_HERO.jpg"/>
+        <defaultNewsNavImage
+            jcr:primaryType="nt:unstructured"
+            src="/content/dam/neom/components/c44-article-content/DEFAULT_NEWS_HERO.jpg"/>
+    </jcr:content>
+</jcr:root>

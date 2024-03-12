@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="C80 Dynamic Quote"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[tonomus.author]">
+  <content
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/tabs"
+      maximized="{Boolean}true">
+    <items jcr:primaryType="nt:unstructured">
+      <Quotes
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Quotes"
+          sling:resourceType="granite/ui/components/coral/foundation/container"
+          margin="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <columns
+              jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+              margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <column
+                  jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <nextQuoteCTALabel
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                      fieldDescription="Please enter next quote cta label."
+                      fieldLabel="Please enter next quote cta label"
+                      name="./nextQuoteCTALabel"
+                      required="{Boolean}true"/>
+                  <items
+                      jcr:primaryType="nt:unstructured"
+                      fieldLabel="Item"
+                      fieldDescription="Click 'Add' to add a new Item"
+                      sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                      class="multifield-full-width"
+                      composite="{Boolean}true">
+                    <field
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Item"
+                        name="./items"
+                        granite:class="accordion-multifield-item"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion">
+                      <items
+                          jcr:primaryType="nt:unstructured">
+                        <tab
+                            jcr:title="Item"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            jcr:primaryType="nt:unstructured">
+                          <items jcr:primaryType="nt:unstructured">
+                            <headingText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Heading Text."
+                                fieldLabel="Heading Text"
+                                name="./quote/heading/text"/>
+                            <active
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="Check to have active field."
+                                name="./quote/active"
+                                text="Active"
+                                value="{Boolean}true"
+                                uncheckedValue="{Boolean}false"/>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                allowUpload="{Boolean}false"
+                                autoStart="{Boolean}false"
+                                class="cq-droptarget"
+                                dropZone="{Boolean}true"
+                                fieldDescription="Drag and Drop Item Image"
+                                fieldLabel="Background image"
+                                fileNameParameter="./quote/image/parameter"
+                                fileReferenceParameter="./quote/image/src"
+                                mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+                                multiple="{Boolean}false"
+                                name="name"
+                                title="Upload Image Asset"
+                                useHTML5="{Boolean}true"
+                                required="{Boolean}true"/>
+                            <altImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please enter Image Alt Text."
+                                fieldLabel="Image Alt Text"
+                                name="./quote/image/alt"
+                                required="{Boolean}true"/>
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                sling:resourceSuperType="/apps/tonomus/components/content/utils/richtext"
+                                fieldDescription="Please enter the content."
+                                fieldLabel="content"
+                                name="./quote/content"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                          </items>
+                        </tab>
+                      </items>
+                    </field>
+                  </items>
+                </items>
+              </column>
+            </items>
+          </columns>
+        </items>
+      </Quotes>
+      <shareOptions
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/shareoptions/content"/>
+      <padding
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/padding/content"/>
+      <advanced
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/foundation/include"
+          path="tonomus/components/content/utils/advanced/content"/>
+    </items>
+  </content>
+</jcr:root>

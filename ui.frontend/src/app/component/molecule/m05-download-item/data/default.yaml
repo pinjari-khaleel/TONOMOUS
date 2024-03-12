@@ -1,0 +1,11 @@
+heading:
+  text: Frequently asked questions
+  size: h6
+  type: h6
+description: Description text
+image:
+  src: 'image/c30-downloads/promo-pack.jpg'
+  alt: desert
+link:
+  label: 'ZIP file 24.8MB'
+  href: 'downloads/download-placeholder.zip'

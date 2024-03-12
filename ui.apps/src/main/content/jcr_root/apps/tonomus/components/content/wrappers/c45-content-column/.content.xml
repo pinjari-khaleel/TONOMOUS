@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          cq:icon="selectContainer"
+          jcr:primaryType="cq:Component"
+          jcr:title="C45 Column"
+          cq:isContainer="{Boolean}true"
+          componentGroup="Tonomus.Wrappers">
+  <cq:htmlTag
+      jcr:primaryType="nt:unstructured"
+      class="cmp cmp-c45-content-column"/>
+</jcr:root>

@@ -1,0 +1,35 @@
+
+
+
+
+<section class="b-logoMarquee"
+  data-component="c85-logo-marquee"
+  {{#if scrollComponent}}data-scroll-component{{/if}}
+  {{#if id}} id="{{id}}"{{/if}}
+  {{#with padding}}
+    style="--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};"
+  {{/with}}
+  data-lazy-component
+>
+  <div class="b-logoMarquee__container">
+
+    {{#with header.heading}}
+      <div class="b-logoMarquee__heading" data-paragraph-heading>
+        {{> atom/a03-heading this size='h2' element='h2' }}
+      </div>
+    {{/with}}
+
+    <div class="b-logoMarquee__content" data-content>
+      <div class="b-logoMarquee__logoCarousel" data-carousel>
+          {{#each items}}
+            <a class="b-logoMarquee__swiper-logoLink" href="{{href}}">
+              {{#with image}}
+                {{> atom/a01-image this disableTransition=true variant="block"}}
+              {{/with}}
+            </a>
+          {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

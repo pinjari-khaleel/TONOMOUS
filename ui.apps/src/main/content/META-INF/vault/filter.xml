@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/tonomus/clientlibs"/>
+    <filter root="/apps/tonomus/components"/>
+    <filter root="/apps/tonomus/i18n"/>
+    <filter root="/apps/tonomus/mobile"/>
+    <filter root="/apps/tonomus/config"/>
+    <filter root="/oak:index/tonomus"/>
+    <filter root="/oak:index/tonomus.cqPages-1-custom-1"/>
+    <filter root="/oak:index/tonomus.damAssets-1-custom-1"/>
+</workspaceFilter>

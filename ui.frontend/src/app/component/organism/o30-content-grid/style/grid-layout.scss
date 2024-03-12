@@ -1,0 +1,159 @@
+@use "sass:math";
+
+&.-single {
+  --component-padding: 120px;
+
+  .o-contentGrid__item {
+    grid-column: 4 / -4;
+
+    &.-start {
+      .m-paragraph__content {
+        margin-inline-end: auto;
+      }
+    }
+
+    &.-end {
+      .m-paragraph__content {
+        margin-inline-start: auto;
+      }
+    }
+
+    &.-center {
+      .m-paragraph__content {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+&.-fullWidth {
+  --component-padding: 120px;
+
+  .o-contentGrid__item {
+    grid-column: 2 / span 10;
+  }
+}
+
+&.-double {
+  .o-contentGrid__item {
+    &:nth-child(1) {
+      grid-column: 2 / span 5;
+    }
+
+    &:nth-child(2) {
+      grid-column: 7 / span 5;
+    }
+  }
+}
+
+&.-double-2-1 {
+  .o-contentGrid__item:nth-child(1) {
+    grid-column: 2 / span 6;
+  }
+
+  .o-contentGrid__item:nth-child(2) {
+    grid-column: 9 / span 4;
+  }
+}
+
+&.-double-1-2 {
+  .o-contentGrid__item:nth-child(1) {
+    grid-column: 1 / span 4;
+  }
+
+  .o-contentGrid__item:nth-child(2) {
+    grid-column: 6 / span 6;
+  }
+}
+
+&.-triple {
+  --component-grid-columns: repeat(3, minmax(0, 1fr));
+
+  .o-contentGrid__item.-asset {
+    .m-figure {
+      max-width: 60%;
+    }
+  }
+}
+
+@include respond-to("MEDIUM") {
+  &.-quadruple {
+    --component-grid-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &.-triple-1-1-2,
+  &.-triple-1-2-1,
+  &.-triple-2-1-1 {
+    .o-contentGrid__item {
+      &:nth-child(1) {
+        grid-area: first;
+      }
+      &:nth-child(2) {
+        grid-area: second;
+      }
+      &:nth-child(3) {
+        grid-area: third;
+      }
+    }
+  }
+
+  &.-triple-1-1-2 {
+    --component-grid-areas: "first second" "third third";
+    --component-grid-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &.-triple-1-2-1 {
+    --component-grid-areas: "second second" "first third";
+    --component-grid-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &.-triple-2-1-1 {
+    --component-grid-areas: "first first" "second third";
+    --component-grid-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &.-single {
+    &.-full {
+      .o-contentGrid__item {
+        grid-column: 2 / -2;
+      }
+    }
+
+    &.-medium {
+      .o-contentGrid__item {
+        grid-column: 3 / -3;
+      }
+    }
+
+    &.-small {
+      .o-contentGrid__item {
+        grid-column: 4 / -4;
+      }
+    }
+  }
+}
+
+@include respond-to("LARGE") {
+  &.-triple-1-1-2 {
+    --component-grid-columns: repeat(2, minmax(0, 1fr)) minmax(0, 2fr);
+    --component-grid-areas: "first second third";
+    --image-max-width: calc(100% / 1.5);
+  }
+
+  &.-triple-1-2-1 {
+    --component-grid-areas: "first second third";
+    --component-grid-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+    --image-max-width: calc(100% / 1.5);
+  }
+
+  &.-triple-2-1-1 {
+    --component-grid-areas: "first second third";
+    --component-grid-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
+    --image-max-width: calc(100% / 1.5);
+  }
+
+  &.-quadruple {
+    --component-grid-columns: repeat(4, minmax(0, 1fr));
+  }
+}

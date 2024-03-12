@@ -1,0 +1,63 @@
+.m-cursor {
+  @include offset();
+  @include vh(100, height);
+
+  max-width: 100vw;
+  pointer-events: none;
+  position: fixed;
+  user-select: none;
+  width: 100%;
+  z-index: zindex($zLayout, cursor);
+
+  &__pointer {
+    --icon-size: 40px;
+    --icon-fill: var(--color-white);
+    @include offset();
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .a-icon {
+    backface-visibility: hidden;
+    background: var(--color-black);
+    border-radius: 50%;
+    padding: 10px;
+
+    &.-outlinedCursorPurple {
+      --icon-fill: var(--color-tonomus-purple);
+      --icon-size: 60px;
+
+      padding: 20px;
+      background: transparent;
+      border: 1.5px solid var(--color-tonomus-purple);
+    }
+
+    &.-outlinedCursorGreen {
+      --icon-fill: var(--color-tonomus-green);
+      --icon-size: 60px;
+
+      padding: 20px;
+      background: transparent;
+      border: 1.5px solid var(--color-tonomus-green);
+    }
+
+    &.-tonomusGreen {
+      --icon-fill: var(--color-tonomus-black-high-emphasis);
+      --icon-size: 60px;
+
+      padding: 20px;
+      background-color: var(--color-tonomus-green);
+    }
+
+    &[data-icon="arrow-right"] svg {
+      [dir="rtl"] & {
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  [dir="rtl"] & {
+    direction: ltr;
+  }
+}

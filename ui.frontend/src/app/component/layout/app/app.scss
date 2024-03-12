@@ -1,0 +1,23 @@
+@import "../../../style/main";
+
+.app {
+  &,
+  &__root {
+    height: 100%;
+  }
+
+  &__root {
+    opacity: 0;
+
+    &.-isReady {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    background-color: var(--color-page-background);
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+  }
+}

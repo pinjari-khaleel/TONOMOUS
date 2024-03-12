@@ -1,0 +1,64 @@
+title: 'We are <strong>Tonomus</strong>'
+id: 'c81-content-roadmap'
+scrollComponent: true
+padding: false
+step1:
+  heading:
+    element: h3
+    size: 4
+    text: '<strong>01</strong>'
+  text:
+    'Tonomus is the first subsidiary of NEOM, a region in Saudi Arabia building a  future fueled by
+    the power of cognitive technology.'
+  image:
+    src: './image/c81-content-roadmap/image-1.jpg'
+    mask: './image/c81-content-roadmap/masks.svg#mask-1'
+    alt: ''
+step2:
+  heading:
+    element: h3
+    size: 4
+    text: '<strong>02</strong>'
+  text:
+    'A cognitive world is built on trust, using more than 90% of consented data rather than the 1%
+    used by today’s smart cities. Hyper-connected cognitive cities will use that data to seamlessly
+    interact with community members, interpreting and mapping future needs and adding unprecedented
+    value to humanity.'
+  image:
+    src: './image/c81-content-roadmap/image-2.jpg'
+    mask: './image/c81-content-roadmap/masks.svg#mask-2'
+    alt: ''
+step3:
+  heading:
+    element: h3
+    size: 4
+    text: '<strong>03</strong>'
+  text:
+    'Cognitive technology moves data and decision-making closer to the user, promoting inclusivity,
+    and helping to close the digital divide. In partnership with global industry leaders, we are
+    co-inventing the future of work, living, and sustainability.'
+  image:
+    src: './image/c81-content-roadmap/image-3.jpg'
+    mask: './image/c81-content-roadmap/masks.svg#mask-3'
+    alt: ''
+  button:
+    label: 'Discover Tonomus'
+    icon: 'play'
+    variant: play
+    eventTracking:
+      componentId: 'CTA id'
+    video:
+      props:
+        sources:
+          - src: 'video/video-preview.mp4'
+            type: video/mp4
+        originalWidth: 16
+        originalHeight: 9
+        autoplay: true
+        muted: false
+        loop: false
+        disablePreload: true
+        controls:
+          playPause: true
+          fullscreen: true
+          seek: true

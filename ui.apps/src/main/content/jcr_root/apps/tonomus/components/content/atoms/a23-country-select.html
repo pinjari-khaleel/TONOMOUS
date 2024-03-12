@@ -1,0 +1,35 @@
+<sly data-sly-template.countryDropDownModel="${ @
+  countryDropDownModel='CountrySelectModel dropdown model'
+  }"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html">
+
+    <div class="a-countrySelect"
+         data-component="a23-country-select"
+         data-sly-attribute.id="${countryDropDownModel.id}"
+         data-show-raw-value="${countryDropDownModel.showRawValue ? 'true' : 'false'}"
+         data-sly-attribute.data-flags-path="${countryDropDownModel.flagsPath}/">
+
+        <button class="a-countrySelect__valueWrapper" data-value-wrapper type="button">
+            <span class="a-countrySelect__value" data-value>${countryDropDownModel.placeholder}</span>
+            <span class="a-countrySelect__chevron" data-chevron>
+                <sly data-sly-call="${iconTemplate.icon @ name='chevron-down'}"></sly>
+            </span>
+        </button>
+        <ul class="a-countrySelect__options" data-options
+            data-sly-list.item="${countryDropDownModel.items}">
+            <li class="a-countrySelect__option" data-option data-code="${item.countryCode}" data-value="${item.value}"
+                data-label="${item.label}"
+                data-sly-set.countryName="${countryDropDownModel.isWideDropdown ? item.label : item.countryCode}">
+                <button class="a-countrySelect__button" type="button">
+                    <img class="a-countrySelect__flag" loading="lazy"
+                         data-sly-test="${countryDropDownModel.flagsPath}"
+                         src="${countryDropDownModel.flagsPath}/${item.lowerCaseCode}.png" alt="${item.countryCode}"/>
+                    <span class="a-countrySelect__countryName"  aria-label=${item.label} >${countryName}</span>
+                    <span class="a-countrySelect__rawValue"
+                          data-sly-test="${countryDropDownModel.showRawValue}">${item.value}</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+</sly>

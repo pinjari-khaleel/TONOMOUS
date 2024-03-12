@@ -1,0 +1,23 @@
+.m-countryDropdown {
+  position: relative;
+  margin: 0 0 40px;
+
+  &__textLabel {
+    display: block;
+    margin: 0 0 10px;
+  }
+
+  [data-component="a15-select"] {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 24.5px);
+    top: 24.5px;
+    opacity: 0;
+  }
+
+  @include respond-to(MEDIUM) {
+    [data-component="a15-select"] {
+      display: none;
+    }
+  }
+}

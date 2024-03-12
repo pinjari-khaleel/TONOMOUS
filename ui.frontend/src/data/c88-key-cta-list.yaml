@@ -1,0 +1,17 @@
+# dir: ltr
+# language: en
+tonomusNavigation: 'import!../app/component/block/s11-tonomus-navigation/data/navigation-en.yaml'
+
+title: 'KeyCtaList'
+
+meta:
+  id: 'c88'
+  status: '' # dev, qa, feedback, done
+  notes: '' # add some information about the page
+  category: 'Block'
+
+tonomus: true
+
+blocks:
+  - name: 'c88-key-cta-list'
+    data: 'import!../app/component/block/c88-key-cta-list/data/default.yaml'

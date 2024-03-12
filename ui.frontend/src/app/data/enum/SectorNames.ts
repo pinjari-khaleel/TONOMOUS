@@ -1,0 +1,16 @@
+export enum SectorNames {
+  SECTOR01 = 'Water',
+  SECTOR02 = 'Tourism',
+  SECTOR03 = 'Food',
+  SECTOR04 = 'Media',
+  SECTOR05 = 'Energy',
+  SECTOR06 = 'Design and Construction',
+  SECTOR07 = 'Education',
+  SECTOR08 = 'Entertainment and Culture',
+  SECTOR09 = 'Health, Well-Being & Biotech',
+  SECTOR10 = 'Manufacturing',
+  SECTOR11 = 'Mobility',
+  SECTOR12 = 'Financial & Professional Services',
+  SECTOR13 = 'Sport',
+  SECTOR14 = 'Technology and Digital',
+}

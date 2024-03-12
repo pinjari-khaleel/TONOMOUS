@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="./o03-video-player.scss">
+<script src="./O03VideoPlayer.ts"></script>
+<div class="o-videoPlayer" data-component="o03-video-player" {{#if tracking}}data-tracking="{{tracking}}" {{/if}} data-title="{{video.title}}">
+  {{> organism/o01-video video }}
+
+  <div class="o-videoPlayer__assetContainer" data-video-content>
+    {{#if image}}
+      {{> atom/a01-image image poster="true"}}
+    {{/if}}
+    {{#if teaserVideo}}
+      {{> organism/o01-video teaserVideo tracking="false" }}
+    {{/if}}
+    
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.m-textField {
+  margin: 0 0 40px;
+  position: relative;
+
+  &__textLabel {
+    margin: 0 0 10px;
+    display: flex;
+
+    &.-isRequired::after {
+      @include asterisk();
+    }
+  }
+
+  &.-hidden {
+    display: none;
+  }
+
+  .a-label {
+    margin-inline-end: 0;
+    margin-top: 0;
+  }
+
+  &__limit {
+    @include type("body", "xsmall");
+
+    margin-inline-start: auto;
+    font-weight: 100;
+    line-height: 1;
+    color: var(--input-placeholder-color);
+    position: absolute;
+    inset-inline-end: 0;
+  }
+}

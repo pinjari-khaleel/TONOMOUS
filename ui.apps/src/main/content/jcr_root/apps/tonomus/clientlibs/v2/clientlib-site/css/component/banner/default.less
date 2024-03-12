@@ -1,0 +1,42 @@
+.cmp-banner {
+  &__container {
+    display: grid;
+  }
+
+  &__image {
+    display: grid;
+    grid-row: 1;
+    grid-column: 1;
+
+    & img {
+      max-height: 640px;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    grid-row: 1;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-block: 11.25rem;
+    padding-inline: 5.625rem;
+  }
+
+  &__description {
+    & p {
+      color: var(--color-white);
+      .header2();
+    }
+  }
+
+  &__action-container {
+    margin-block-start: 2.5rem;
+    margin-block-end: 1.5rem;
+    margin-inline: 0;
+    a {
+      .button-primary();
+    }
+  }
+}

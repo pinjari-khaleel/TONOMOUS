@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="./c84-tabbed-cta.scss">
+<script src="./C84TabbedCta.ts"></script>
+
+<section class="b-tabbedCta" data-component="c84-tabbed-cta"
+  {{#if scrollComponent}}data-scroll-component{{/if}} {{#if
+  id}} id="{{id}}" {{/if}} {{#with padding}}
+  style="--component-block-padding: var(--{{#with start}}block-padding-{{this}}{{else}}container-margin{{/with}})
+    {{#unless (condition start '===' end)}}var(--{{#with end}}block-padding-{{this}}{{else}}container-margin{{/with}}){{/unless}};" {{/with}}>
+  {{#if header}}
+    {{> molecule/m04-component-header header alignment=alignment }}
+  {{/if}}
+  <ul class="b-tabbedCta__tabs">
+    {{#each items}}
+      <li class="b-tabbedCta__tab {{#if active}} -isActive{{/if}}" data-tab>
+        {{> atom/a07-label size=size text=label}}
+      </li>
+    {{/each}}
+  </ul>
+  <span class="b-tabbedCta__indicator" data-tab-indicator></span>
+  <ul class="b-tabbedCta__content">
+    {{#each items}}
+      <li class="b-tabbedCta__contentItem {{#if active}} -isActive{{/if}}" data-content-item>
+        <div class="b-tabbedCta__imageContainer">
+          <div class="b-tabbedCta__imageMask" data-image-mask>
+          {{> atom/a01-image image variant="block" disableTransition=true }}
+          </div>
+        <div class="b-tabbedCta__textContainer">
+          <div class="s-content">
+            {{{ text }}}
+          </div>
+          {{#with button}}
+            {{> molecule/m02-button
+              size="small"
+              level="primary"
+              theme="green"
+              label=label
+            }}
+          {{/with}}
+        </div>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</section>

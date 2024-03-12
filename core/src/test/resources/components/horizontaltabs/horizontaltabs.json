@@ -1,0 +1,238 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:title": "Tonomus",
+    "sling:resourceType": "tonomus/components/structure/tonomus-base-page-v2",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "component": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:createdBy": "admin",
+        "jcr:lastModifiedBy": "admin",
+        "jcr:created": "Mon Jan 29 2024 00:08:10 GMT+0800",
+        "id": "tabs 1",
+        "title": "<h2>Our leadership</h2>",
+        "jcr:lastModified": "Mon Jan 29 2024 12:55:31 GMT+0800",
+        "sling:resourceType": "tonomus/components/content/components/horizontaltabs/v2/horizontaltabs",
+        "textIsRich": "true",
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "jcr:createdBy": "admin",
+          "cq:panelTitle": "ALL TEAMS",
+          "jcr:lastModifiedBy": "admin",
+          "jcr:created": "Mon Jan 29 2024 00:11:44 GMT+0800",
+          "jcr:lastModified": "Mon Jan 29 2024 00:11:44 GMT+0800",
+          "sling:resourceType": "tonomus/components/content/components/container/v2/container",
+          "card_copy_132937432": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:title": "<h4>TONOMUS launches NEOM’s first digital communications facility</h4>\r\n",
+            "imageFromPageImage": "false",
+            "fileReference": "/content/dam/AdobeStock_74338848 3.png",
+            "pretitle": "18 July 2023",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Sun Jan 28 2024 23:45:38 GMT+0800",
+            "titleFromPage": "false",
+            "linkURL": "/content/tonomus/qa/tw/en-us/what-s-new/tonomus-launches-neom-s-first-digital-communications-facility",
+            "linkTarget": "_self",
+            "jcr:lastModified": "Sun Jan 28 2024 23:52:13 GMT+0800",
+            "descriptionFromPage": "false",
+            "sling:resourceType": "tonomus/components/content/components/card/v2/card",
+            "isDecorative": "true",
+            "textIsRich": [
+              "true",
+              "true"
+            ],
+            "video": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:lastModifiedBy": "admin",
+              "jcr:lastModified": "Sun Jan 28 2024 23:52:13 GMT+0800"
+            },
+            "cq:responsive": {
+              "jcr:primaryType": "nt:unstructured",
+              "default": {
+                "jcr:primaryType": "nt:unstructured",
+                "offset": "0",
+                "width": "4"
+              }
+            }
+          },
+          "card_copy_1180271584": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:title": "<h4>TONOMUS launches NEOM’s first digital communications facility</h4>\r\n",
+            "imageFromPageImage": "false",
+            "fileReference": "/content/dam/AdobeStock_74338848 3.png",
+            "pretitle": "18 July 2023",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Sun Jan 28 2024 23:45:38 GMT+0800",
+            "titleFromPage": "false",
+            "linkURL": "/content/tonomus/qa/tw/en-us/what-s-new/tonomus-launches-neom-s-first-digital-communications-facility",
+            "linkTarget": "_self",
+            "jcr:lastModified": "Sun Jan 28 2024 23:52:13 GMT+0800",
+            "descriptionFromPage": "false",
+            "sling:resourceType": "tonomus/components/content/components/card/v2/card",
+            "isDecorative": "true",
+            "textIsRich": [
+              "true",
+              "true"
+            ],
+            "video": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:lastModifiedBy": "admin",
+              "jcr:lastModified": "Sun Jan 28 2024 23:52:13 GMT+0800"
+            },
+            "cq:responsive": {
+              "jcr:primaryType": "nt:unstructured",
+              "default": {
+                "jcr:primaryType": "nt:unstructured",
+                "offset": "0",
+                "width": "4"
+              }
+            }
+          },
+          "card_copy": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:title": "<h4>TONOMUS launches NEOM’s first digital communications facility</h4>\r\n",
+            "imageFromPageImage": "false",
+            "fileReference": "/content/dam/AdobeStock_74338848 3.png",
+            "pretitle": "18 July 2023",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Sun Jan 28 2024 23:45:38 GMT+0800",
+            "titleFromPage": "false",
+            "linkURL": "/content/tonomus/qa/tw/en-us/what-s-new/tonomus-launches-neom-s-first-digital-communications-facility",
+            "linkTarget": "_self",
+            "jcr:lastModified": "Sun Jan 28 2024 23:52:13 GMT+0800",
+            "descriptionFromPage": "false",
+            "sling:resourceType": "tonomus/components/content/components/card/v2/card",
+            "isDecorative": "true",
+            "textIsRich": [
+              "true",
+              "true"
+            ],
+            "video": {
+              "jcr:primaryType": "nt:unstructured"
+            },
+            "cq:responsive": {
+              "jcr:primaryType": "nt:unstructured",
+              "default": {
+                "jcr:primaryType": "nt:unstructured",
+                "offset": "0",
+                "width": "4"
+              }
+            }
+          }
+        },
+        "item_1706458335869": {
+          "jcr:primaryType": "nt:unstructured",
+          "cq:panelTitle": "VENTURE STUDIO",
+          "sling:resourceType": "tonomus/components/content/components/container/v2/container",
+          "card_copy_copy": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:title": "<h4>TONOMUS launches NEOM’s first digital communications facility</h4>\r\n",
+            "imageFromPageImage": "false",
+            "pretitle": "18 July 2023",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Sun Jan 28 2024 23:45:38 GMT+0800",
+            "titleFromPage": "false",
+            "linkURL": "/content/tonomus/qa/tw/en-us/what-s-new/tonomus-launches-neom-s-first-digital-communications-facility",
+            "linkTarget": "_self",
+            "jcr:lastModified": "Sun Jan 28 2024 23:52:48 GMT+0800",
+            "descriptionFromPage": "false",
+            "sling:resourceType": "tonomus/components/content/components/card/v2/card",
+            "isDecorative": "true",
+            "textIsRich": [
+              "true",
+              "true"
+            ],
+            "video": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:lastModifiedBy": "admin",
+              "jcr:lastModified": "Sun Jan 28 2024 23:52:48 GMT+0800"
+            },
+            "cq:responsive": {
+              "jcr:primaryType": "nt:unstructured",
+              "default": {
+                "jcr:primaryType": "nt:unstructured",
+                "offset": "0",
+                "width": "4"
+              }
+            }
+          },
+          "card_copy_copy_1675243898": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:title": "<h4>TONOMUS launches NEOM’s first digital communications facility</h4>\r\n",
+            "imageFromPageImage": "false",
+            "pretitle": "18 July 2023",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Sun Jan 28 2024 23:45:38 GMT+0800",
+            "titleFromPage": "false",
+            "linkURL": "/content/tonomus/qa/tw/en-us/what-s-new/tonomus-launches-neom-s-first-digital-communications-facility",
+            "linkTarget": "_self",
+            "descriptionFromPage": "false",
+            "sling:resourceType": "tonomus/components/content/components/card/v2/card",
+            "isDecorative": "true",
+            "textIsRich": [
+              "true",
+              "true"
+            ],
+            "video": {
+              "jcr:primaryType": "nt:unstructured"
+            },
+            "cq:responsive": {
+              "jcr:primaryType": "nt:unstructured",
+              "default": {
+                "jcr:primaryType": "nt:unstructured",
+                "offset": "0",
+                "width": "4"
+              }
+            }
+          },
+          "card_copy_copy_1056667523": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:title": "<h4>TONOMUS launches NEOM’s first digital communications facility</h4>\r\n",
+            "imageFromPageImage": "false",
+            "pretitle": "18 July 2023",
+            "titleFromPage": "false",
+            "linkURL": "/content/tonomus/qa/tw/en-us/what-s-new/tonomus-launches-neom-s-first-digital-communications-facility",
+            "linkTarget": "_self",
+            "descriptionFromPage": "false",
+            "sling:resourceType": "tonomus/components/content/components/card/v2/card",
+            "isDecorative": "true",
+            "textIsRich": [
+              "true",
+              "true"
+            ],
+            "video": {
+              "jcr:primaryType": "nt:unstructured"
+            },
+            "cq:responsive": {
+              "jcr:primaryType": "nt:unstructured",
+              "default": {
+                "jcr:primaryType": "nt:unstructured",
+                "offset": "0",
+                "width": "4"
+              }
+            }
+          }
+        },
+        "item_1706458349668": {
+          "jcr:primaryType": "nt:unstructured",
+          "cq:panelTitle": "COGNITIVE SOLUTIONS",
+          "sling:resourceType": "tonomus/components/content/components/container/v2/container"
+        },
+        "item_1706458396627": {
+          "jcr:primaryType": "nt:unstructured",
+          "cq:panelTitle": "COMPUTE",
+          "sling:resourceType": "tonomus/components/content/components/container/v2/container"
+        }
+      }
+    }
+  }
+}

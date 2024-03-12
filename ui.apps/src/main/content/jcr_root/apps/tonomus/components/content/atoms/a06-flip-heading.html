@@ -1,0 +1,22 @@
+<sly data-sly-template.flipHeading="${@
+    flipHeadingModel='Sling model for flip heading (class FlipHeadingModel)',
+    element='If present changes the wrapper DOM element for this atom - default is h2'
+    }"
+     data-sly-set.elementVal="${element || flipHeadingModel.element}">
+
+  <h2 data-sly-element="${elementVal}"
+      class="a-flipHeading
+      ${flipHeadingModel.size ? ' -{0}':'' @format=[flipHeadingModel.size], context='styleString'}
+      ${flipHeadingModel.prefix ? '':'-noPrefix' @ context='styleString'}"
+      data-component="a06-flip-heading">
+    <span data-sly-test="${flipHeadingModel.prefix}"
+        class="a-flipHeading__prefix">${flipHeadingModel.prefix @ context='html'}</span><br/>
+    <span class="a-flipHeading__labelContainer"
+          data-flip-labels
+          data-labels="${flipHeadingModel.labels @ join = ' '}">
+      <span class="a-flipHeading__flex" data-sly-list.label=${flipHeadingModel.labels}>
+        <span class="a-flipHeading__label" data-flip-label>${label @ i18n, context='text'}</span>
+      </span>
+    </span>
+  </h2>
+</sly>

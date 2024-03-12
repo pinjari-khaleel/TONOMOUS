@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          scrollComponent="{Boolean}true"
+          textIsRich="true">
+  <heading
+      jcr:primaryType="nt:unstructured"
+      text="Our &lt;strong>Leadership&lt;/strong>"/>
+  <business_card
+      cq:panelTitle="Su Le"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/components/c86-people-carousel/v1/business-card">
+    <job jcr:primaryType="nt:unstructured"/>
+    <image
+        jcr:primaryType="nt:unstructured"
+        src="/content/dam/tonomus/components/c86-people-carousel/c86-people-carousel-Su-Le.png"/>
+  </business_card>
+  <business_card_1
+      cq:panelTitle="Joseph Bradley"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/components/c86-people-carousel/v1/business-card"
+      biography="Joseph Bradley is the strategic mind behind the vision that drives Tonomus, shaping the creation of a full-scale ecosystem of cognitive technologies. By harnessing the power of artificial intelligence, the internet of things, blockchain and robotics, he and his team are bringing cognition to life.">
+    <job
+        jcr:primaryType="nt:unstructured"
+        department="NEOM Tech and Digital"
+        title="Chief Executive Officer"/>
+    <image
+        jcr:primaryType="nt:unstructured"
+        src="/content/dam/tonomus/components/c86-people-carousel/c86-people-carousel-Joseph-Bradley.png"/>
+  </business_card_1>
+  <business_card_2
+      cq:panelTitle="Beverly Rider"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/components/c86-people-carousel/v1/business-card">
+    <job jcr:primaryType="nt:unstructured"/>
+    <image
+        jcr:primaryType="nt:unstructured"
+        src="/content/dam/tonomus/components/c86-people-carousel/c86-people-carousel-Beverly-Rider.png"/>
+  </business_card_2>
+  <business_card_3
+      cq:panelTitle="Fabio Fantana"
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="tonomus/components/content/components/c86-people-carousel/v1/business-card">
+    <job jcr:primaryType="nt:unstructured"/>
+    <image
+        jcr:primaryType="nt:unstructured"
+        src="/content/dam/tonomus/components/c86-people-carousel/c86-people-carousel-Fabio-Fantana.png"/>
+  </business_card_3>
+</jcr:root>

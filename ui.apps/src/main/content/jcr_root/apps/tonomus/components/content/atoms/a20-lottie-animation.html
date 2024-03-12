@@ -1,0 +1,14 @@
+<sly data-sly-template.lottie="${ @ lottieAnimationModel}">
+  <div class="a-lottie-animation" data-component="a20-lottie-animation">
+    <div
+        class="a-lottie-animation__container"
+        aria-hidden="true"
+        data-lottie-container
+        data-sly-attribute.data-lottie-json-file-path="${lottieAnimationModel.jsonFilePath}"
+        data-sly-attribute.data-lottie-assets-folder-path="${lottieAnimationModel.assetsFolderPath}"
+        data-sly-attribute.data-lottie-autoplay="${lottieAnimationModel.autoplay ? 'true' : 'false'}"
+        data-sly-attribute.data-lottie-loop="${lottieAnimationModel.loop ? 'true' : 'false'}">
+    </div>
+    <div class="u-srOnly" data-sly-test="${lottieAnimationModel.alt}">${lottieAnimationModel.alt}</div>
+  </div>
+</sly>

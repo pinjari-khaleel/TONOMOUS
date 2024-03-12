@@ -1,0 +1,20 @@
+<sly data-sly-template.dropdownField="${ @
+  formSelectModel='instance of forms.FormSelectModel with properties',
+  blockValidation='blockValidation boolean value'}"
+     data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html"
+     data-sly-use.selectTemplate="/apps/tonomus/components/content/atoms/a15-select.html"
+     data-sly-use.formErrorTemplate="/apps/tonomus/components/content/atoms/a25-form-error.html"
+     data-sly-set.attribute="${blockValidation ? 'block-validation' : ''}">
+
+  <div class="m-dropdownField"
+       data-component="m31-dropdown-field"
+  >
+    <label class="m-dropdownField__label">
+      <div class="m-dropdownField__textLabel ${formSelectModel.required ? '-isRequired' : ''}">
+        <sly data-sly-call="${labelTemplate.label @ size='small', text=formSelectModel.label}"></sly>
+      </div>
+      <sly data-sly-call="${selectTemplate.select @ selectModel=formSelectModel, attribute=attribute}"></sly>
+      <sly data-sly-call="${formErrorTemplate.formError @ id=formSelectModel.id}"></sly>
+    </label>
+  </div>
+</sly>

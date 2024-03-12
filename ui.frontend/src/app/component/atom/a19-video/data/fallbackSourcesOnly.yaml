@@ -1,0 +1,13 @@
+autoloop: true
+props:
+  autoplay: true
+  loop: true
+  muted: true
+  playsinline: true
+  src: 'video/video-preview.mp4'
+  type: video/mp4
+  sources:
+    - src: 'video/background-video-preview.mp4'
+      type: video/mp4
+    - src: 'video/hackathon.mov'
+      type: video/mp4

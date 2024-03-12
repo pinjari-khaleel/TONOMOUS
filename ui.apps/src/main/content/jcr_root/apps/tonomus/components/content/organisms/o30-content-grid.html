@@ -1,0 +1,45 @@
+<sly data-sly-template.contentGrid="${ @
+  contentGridModel='ContentGridModel with properties',
+  paddingModel='PaddingModel with properties',
+  commonComponentStyleModel='CommonComponentStyleModel with properties'
+  }"
+     data-sly-use.listTemplate="/apps/tonomus/components/content/molecules/m17-list.html"
+     data-sly-use.paragraphTemplate="/apps/tonomus/components/content/molecules/m18-paragraph.html"
+     data-sly-use.backgroundTemplate="/apps/tonomus/components/content/molecules/m34-component-background.html"
+     data-sly-set.contentWidth="${['-', contentGridModel.contentWidth] @ join = '', context='text'}">
+
+  <p
+      data-sly-test="${wcmmode.edit && contentGridModel.itemsCount != contentGridModel.maxAllowedItemsCount}"
+      style="color: red; font-size: 20px; text-align: center">
+    WARNING: the count of items have to be equal to ${contentGridModel.maxAllowedItemsCount}.<br/>
+    Please add needed or remove extra components! Otherwise the component will be hidden fully in
+    Publish mode!
+  </p>
+
+  <div data-component="o30-content-grid" class="o-contentGrid
+      ${contentGridModel.variant ? ' -{0}' : '' @ format=[contentGridModel.variant], context='styleString'}
+      ${contentGridModel.variant == 'single' ? contentWidth : ''}
+      ${commonComponentStyleModel.mapAppliedCssClasses['Theme'] @ context='styleString'}
+      ${contentGridModel.background.hasBackground ? '-hasBackgroundImage' : '' @ context='styleString'}"
+       style="${paddingModel.styleInline @ context='styleString'}
+                ${commonComponentStyleModel.backgroundColorStyleInline @ context='styleString'}">
+
+    <sly data-sly-test="${contentGridModel.background.hasBackground}"
+        data-sly-call="${backgroundTemplate.background @ backgroundModel=contentGridModel.background,
+                                    disableTransition=true, scrollComponent=true}"></sly>
+    <div class="o-contentGrid__container">
+      <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+           data-sly-list.child="${templatedContainer.structureResources}">
+        <sly data-sly-test="${child.resourceType !='nt:unstructured'}"
+             data-sly-resource="${child.path @ resourceType=child.resourceType,
+                   decorationTagName='', decoration=wcmmode.edit, cssClassName='o-contentGrid__item'}"></sly>
+      </sly>
+      <sly data-sly-test="${contentGridModel.itemsCount < contentGridModel.maxAllowedItemsCount}"
+          data-sly-resource="${resource.path @
+           resourceType='wcm/foundation/components/responsivegrid/new', appendPath='/*',
+           decoration=wcmmode.edit,
+           decorationTagName='', cssClassName='new section aem-Grid-newComponent o-contentGrid__item'}"></sly>
+    </div>
+  </div>
+
+</sly>

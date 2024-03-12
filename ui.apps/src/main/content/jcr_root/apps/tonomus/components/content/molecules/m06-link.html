@@ -1,0 +1,29 @@
+<sly data-sly-template.link="${@
+    linkModel='Sling Model for link (class LinkModel)',
+    variant='Link variant',
+    icon='icon name',
+    size='Label size',
+    label='Link label',
+    href='Link href'
+    }"
+    data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html"
+    data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html">
+
+  <sly data-sly-set.variantVal="${' -{0}' @format=[variant], context='styleString'}"
+       data-sly-set.variantClassName="${variant ? variantVal : ''}"
+       data-sly-set.labelVal="${label || linkModel.label}"
+       data-sly-set.hrefVal="${href || linkModel.href}"
+       data-sly-set.iconVal="${icon || linkModel.icon}">
+  </sly>
+
+  <a class="m-link${variantClassName}"
+     data-component="m06-link"
+     data-sly-attribute.href="${hrefVal @ context='uri'}"
+     data-sly-attribute.target="${linkModel.target}"
+     data-sly-attribute.rel="${linkModel.target=='_blank'? 'noopener' :''}">
+    <sly data-sly-call="${labelTemplate.label @ text=labelVal, size=size, variant=variant}"></sly>
+    <sly data-sly-test="${iconVal}">
+      <sly data-sly-call="${iconTemplate.icon @ name=iconVal}"></sly>
+    </sly>
+  </a>
+</sly>

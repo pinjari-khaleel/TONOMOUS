@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured">
+  <default_0
+      jcr:primaryType="nt:unstructured"
+      text="crop-1x1"
+      value=":crop-1x1"/>
+  <default_1
+      jcr:primaryType="nt:unstructured"
+      text="crop-2x1"
+      value=":crop-2x1"/>
+  <default_2
+      jcr:primaryType="nt:unstructured"
+      text="crop-3x1"
+      value=":crop-3x1"/>
+  <default_3
+      jcr:primaryType="nt:unstructured"
+      text="crop-3x2"
+      value=":crop-3x2"/>
+  <default_4
+      jcr:primaryType="nt:unstructured"
+      text="crop-3x4"
+      value=":crop-3x4"/>
+  <default_5
+      jcr:primaryType="nt:unstructured"
+      text="crop-4x3"
+      value=":crop-4x3"/>
+  <default_6
+      jcr:primaryType="nt:unstructured"
+      text="crop-4x5"
+      value=":crop-4x5"/>
+  <default_7
+      jcr:primaryType="nt:unstructured"
+      text="crop-16x9"
+      value=":crop-16x9"/>
+  <default_8
+      jcr:primaryType="nt:unstructured"
+      text="crop-9x16"
+      value=":crop-9x16"/>
+  <no-crop
+      jcr:primaryType="nt:unstructured"
+      text="No crop, just resize"
+      value=":resize"/>
+</jcr:root>

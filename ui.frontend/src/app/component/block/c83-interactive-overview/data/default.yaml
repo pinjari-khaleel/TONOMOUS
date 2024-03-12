@@ -1,0 +1,88 @@
+scrollComponent: true
+id: 'c83-interactive-overview'
+padding:
+  start: 'large'
+  end: 'large'
+header:
+  heading:
+    text: 'Powering the<br /><strong>future</strong> through'
+
+items:
+  - content:
+      heading:
+        text: 'Energy-efficient, hyper-scale, secure data centers '
+      copy:
+        'Hyper-scale secure data centers at scale will allow us to process consent-collected
+        information in pioneering ways. Our processing capabilities will be able to support any
+        level of data need, while maintaining world-leading energy efficiency standards.'
+      image:
+        src: 'image/c83-interactive-overview/image-example-1.jpg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'Secure 5G hyperconnectivity and high-speed fiber'
+      copy:
+        '5G and high-speed fiber are essential for faster, low-latency and secure connectivity
+        within a cognitive ecosystem. By ensuring hyperconnectivity acoss NEOM and beyond, we will
+        be able to move faster in our mission to accelerate the human experience with technology.'
+      image:
+        src: 'image/c83-interactive-overview/image-example-2.jpg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'Metaverse, artificial Intelligence & advanced robotics'
+      copy:
+        "We're transcending the limits of traditional technolgy—building the world’s first
+        mixed-reality digital twin metaverse, which will decrease financial risk, reduce
+        time-to-market and accelerate revenue streams."
+      image:
+        src: 'image/c83-interactive-overview/image-example-1.jpg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'Data privacy, consent & seamless consumer experiences'
+      copy:
+        "We're creating protocols that provide users with better data transparency and at the same
+        time helping companies to obtain advanced and insightful data—with automated systems for
+        complying with data usage laws."
+      image:
+        src: 'image/c83-interactive-overview/image-example-2.jpg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'Inclusive innovation & start-up ecosystems'
+      copy:
+        'The acceleration of human progress should not leave anyone behind. Our cognitive ecosystem
+        will be accessible to all, allowing entrepreneurs and organizations to make their ideas
+        reality.'
+      image:
+        src: 'image/c83-interactive-overview/image-example-1.jpg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'Intelligent analytics & scalable systems'
+      copy:
+        'To achieve our goals, we must be able to analyze our progress. Insightful analytics and
+        flexible systems will help us capitalize on the limitless potential of cognitive technology.'
+      image:
+        src: 'image/c83-interactive-overview/image-example-2.jpg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'AI-powered large-scale situational insights'
+      copy:
+        "We’re creating the world's first real-time situational analysis and prediction platform,
+        backed by a marketplace of AI algorithms and data models."
+      image:
+        src: 'image/c83-interactive-overview/image-example-1.jpg'
+        alt: 'Photo example'
+  - content:
+      heading:
+        text: 'Powerful data discovery and sharing platforms'
+      copy:
+        'To help enterprises quickly find and purchase high-quality data, we’re developing a
+        powerful platform that enables discovery and sharing—and gives organizations a competitive
+        edge.'
+      image:
+        src: 'image/c83-interactive-overview/image-example-2.jpg'
+        alt: 'Photo example'

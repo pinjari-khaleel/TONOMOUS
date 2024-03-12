@@ -1,0 +1,46 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.header="com.tonomus.core.slingmodels.components.v2.header.HeaderModelImpl"
+     data-sly-set.navigation=${header.navigation} data-sly-set.languageNavigation=${header.languageNavigation}
+     data-sly-test.hasContent="${navigation.items.size > 0 || languageNavigation || header.link.href}">
+</sly>
+
+<header data-sly-test="${hasContent}" data-sly-use.groupTemplate="group.html">
+     <div class="cmp-header__container">
+          <div class="cmp-header__logo">
+               <a href="${header.link.href}" data-sly-attribute.target="${header.link.target @ context='attributeName'}"
+                    data-sly-attribute.rel="${header.link.target == '_blank' ? 'noopener' : '' @ context='attributeName'}"
+                    data-sly-set.logo="${header.logoImage}" data-sly-test="${logo}">
+                    <img src="${logo.src}" alt="${logo.alt || ''}" loading='lazy' />
+               </a>
+          </div>
+          <div class="cmp-header__navigation-wrapper">
+               <input type="checkbox" id="tonomus_navigation_toggle" class="cmp-header__dropdown-toggle" data-toggle-checkbox />
+               <label class="cmp-header__toggle-label" for="tonomus_navigation_toggle">
+                    <span class="cmp-icon cmp-header__search-icon">
+                         <img src="/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/icons/search.svg"/>
+                    </span>
+                    <span class="cmp-icon cmp-header__hamburger-icon">
+                         <img src="/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/icons/hamburger.svg"/>
+                    </span>
+                    <span class="cmp-icon cmp-header__close-icon">
+                         <img src="/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/icons/close.svg"/>
+                    </span>
+               </label>
+               <div class="cmp-header__dropdown-content">
+                    <nav data-sly-test="${navigation}"
+                    data-sly-call="${groupTemplate.group @ items=navigation.items, group='navigation'}" id="${navigation.id}"
+                    class="cmp-header__navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"
+                    data-cmp-data-layer="${navigation.data.json}" aria-label="${navigation.accessibilityLabel}">
+                    </nav>
+                    <span class="cmp-icon cmp-header__search-icon">
+                         <img src="/etc.clientlibs/tonomus/clientlibs/v2/clientlib-site/resources/asset/icons/search.svg"/>
+                    </span>
+                    <nav data-sly-test="${languageNavigation}"
+                         data-sly-call="${groupTemplate.group @ items=languageNavigation, group='languagenavigation'}"
+                         id="${header.idLangNav}" class="cmp-header__languagenavigation" aria-label="${header.accessibilityLabelLangNav}">
+                    </nav>
+               </div>
+          </div>
+     </div>
+</header>
+<sly data-sly-call="${template.placeholder @ isEmpty=!hasContent, classAppend='cmp-header'}"></sly>

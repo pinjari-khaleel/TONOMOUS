@@ -1,0 +1,14 @@
+.o-checkboxList {
+  @include fieldsetStyling();
+  @include type("exception", "small-description");
+  font-weight: 300;
+
+  a {
+    color: var(--color-dark-gold);
+    text-decoration: underline;
+
+    @include hover() {
+      color: var(--color-gold);
+    }
+  }
+}

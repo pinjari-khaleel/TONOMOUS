@@ -1,0 +1,36 @@
+<sly data-sly-template.pillarCta="${@ buttonModel='Sling model for button (class ButtonModel)',
+  videoJson='JSON with video data',
+  ariaLabel='Button aria label',
+  ariaControls='Button aria controls'
+}"
+     data-sly-use.imageTemplate="/apps/tonomus/components/content/atoms/a01-image.html"
+     data-sly-use.iconTemplate="/apps/tonomus/components/content/atoms/a02-icon.html"
+>
+  <sly data-sly-test="${buttonModel.eventTracking.enabled}"
+       data-sly-use.eventTrackingModel="${'com.tonomus.core.slingmodels.common.v1.JsonModel' @ input=buttonModel.eventTracking.data}"></sly>
+
+  <a class="m-pillarCta"
+     data-component="m58-pillar-cta"
+     href="${buttonModel.href}"
+     rel="${buttonModel.target == '_blank' ? 'noopener' : ''}"
+     target="${buttonModel.target @ context='text'}"
+     id="${buttonModel.id @ context='text'}"
+     aria-label="${ariaLabel}"
+     aria-controls="${ariaControls}"
+     data-event-tracking="${eventTrackingModel['json']}">
+    <div class="m-pillarCta__background"
+         data-sly-test="${buttonModel.backgroundImage}">
+      <sly data-sly-call="${imageTemplate.image @ imageModel=buttonModel.backgroundImage, disableTransition=true}"></sly>
+    </div>
+    <div class="m-pillarCta__icon" data-sly-test="${buttonModel.icon}">
+      <sly data-sly-call="${iconTemplate.icon @ name=buttonModel.icon, variant=buttonModel.variant}"></sly>
+    </div>
+    <div class="m-pillarCta__title" data-sly-test="${buttonModel.title}">
+      ${buttonModel.title}
+    </div>
+    <div class="m-pillarCta__labelWrapper">
+      <span class="m-pillarCta__label" data-sly-test="${buttonModel.label}">${buttonModel.label}</span>
+      <sly data-sly-call="${iconTemplate.icon @ name='arrow-right'}"></sly>
+    </div>
+  </a>
+</sly>

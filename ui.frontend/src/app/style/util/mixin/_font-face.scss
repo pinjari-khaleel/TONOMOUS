@@ -1,0 +1,21 @@
+/**
+ * Font Face
+ *
+ * @param {string} $family - Font family name of the font
+ * @param {string} $folderName - Subfolder inside the fonts folder
+ * @param {string} $fileName - Name of the font-file
+ * @param {string} $weight (normal) - Font weight value
+ * @param {string} $style (normal) - Font style value
+ * @param {string} $display (auto) - Font display value
+ */
+
+@mixin fontFace($family, $folderName, $fileName, $weight: normal, $style: normal, $display: auto) {
+  @font-face {
+    font-family: $family;
+    src: font("#{$folderName}/#{$fileName}.woff2") format("woff2"),
+      font("#{$folderName}/#{$fileName}.woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: $display;
+  }
+}

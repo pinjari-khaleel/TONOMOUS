@@ -1,0 +1,39 @@
+scrollComponent: true
+sitemap:
+  - label: 'Join the movement'
+    items:
+      - label: 'I want to get in touch'
+        href: '#'
+      - label: 'I want to stay up to date'
+        href: '#'
+      - label: 'I want to join the team'
+        href: '#'
+
+  - label: 'Part of neom'
+    items:
+      - label: 'Tech and Digital sector'
+        href: '#'
+      - label: 'neom.com'
+        href: '#'
+      - label: 'News'
+        href: '#'
+
+social:
+  title: 'Follow us on social'
+  items: 'import!../../../molecule/m12-social/data/tonomus.yaml'
+
+logo:
+  src: './image/logo-tonomus.png'
+marginalia:
+  items:
+    - label: 'Privacy policy'
+      href: 'privacy-policy.html'
+      target: '_blank'
+    - label: 'Terms of use'
+      href: 'terms-of-use.html'
+      target: '_blank'
+    - label: 'Cookie Policy'
+      href: 'cookie-policy.html'
+      target: '_blank'
+
+copyrightNotice: 'Ⓒ NEOM Technology & digital 2022'

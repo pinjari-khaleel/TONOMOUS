@@ -1,0 +1,18 @@
+.a-spinner {
+  @include size(var(--spinner-size, 24px));
+
+  display: inline-block;
+  position: relative;
+
+  &__asset {
+    @include size(100%);
+    @include offset();
+
+    position: absolute;
+    stroke: var(--color-dark-gold);
+  }
+
+  &.-large {
+    --spinner-size: 80px;
+  }
+}

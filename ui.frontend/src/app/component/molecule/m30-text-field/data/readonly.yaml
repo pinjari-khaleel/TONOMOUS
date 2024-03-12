@@ -1,0 +1,6 @@
+id: example-input-field-1
+label: Input field label
+name: example-input-field-1
+readonly: true
+type: text
+value: Read-only input field

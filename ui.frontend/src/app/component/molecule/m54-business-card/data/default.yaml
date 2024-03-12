@@ -1,0 +1,9 @@
+image:
+  src: 'image/c46-media-list/item1.jpg'
+  alt: ''
+name: 'This is a name'
+linkedin: '#'
+job:
+  title: 'Frontend developer'
+  department: 'Monks'
+biography: 'This is a biography'

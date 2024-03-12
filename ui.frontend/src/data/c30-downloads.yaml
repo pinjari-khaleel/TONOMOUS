@@ -1,0 +1,15 @@
+title: c30-downloads
+
+meta:
+  id: 'c30'
+  status: 'done'
+  notes: ''
+  category: 'Block'
+
+blocks:
+  - name: 'c30-downloads'
+    data: 'import!../app/component/block/c30-downloads/data/en-homepage.yaml'
+  - name: 'c30-downloads'
+    data: 'import!../app/component/block/c30-downloads/data/en-investor.yaml'
+  - name: 'c30-downloads'
+    data: 'import!../app/component/block/c30-downloads/data/example-column.yaml'

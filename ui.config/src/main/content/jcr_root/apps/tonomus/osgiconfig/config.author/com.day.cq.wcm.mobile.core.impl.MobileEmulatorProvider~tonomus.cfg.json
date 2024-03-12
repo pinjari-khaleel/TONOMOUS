@@ -1,0 +1,8 @@
+{
+  "mobile.resourceTypes": [
+    "tonomus/components/page",
+    "tonomus/components/structure/tonomus-base-page-v2",
+    "tonomus/components/structure/tonomus-base-xf-v2"
+  ],
+  "README": "Indicate which page resource types should display the mobile emulators."
+}

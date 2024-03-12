@@ -1,0 +1,15 @@
+<sly data-sly-use.container="com.adobe.cq.wcm.core.components.models.LayoutContainer"
+	 data-sly-use.container2="com.tonomus.core.slingmodels.components.v2.container.ContainerModel"
+	 data-sly-use.titleTemplate="title.html" data-sly-use.actionTemplate="action.html">
+     <div data-sly-test="${container2.title}" class="cmp-container__heading">
+          <sly data-sly-call="${titleTemplate.title @ title=container2.title}"></sly>
+          <sly data-sly-call="${actionTemplate.action @ action=container2.action, mobile=false}"></sly>
+     </div>
+    <sly data-sly-test.responsive="${container.layout == 'RESPONSIVE_GRID'}"
+         data-sly-use.responsiveGridTemplate="responsiveGrid.html"
+         data-sly-call="${responsiveGridTemplate.responsiveGrid @ container=container}"></sly>
+    <sly data-sly-test="${!responsive}"
+         data-sly-use.simpleTemplate="simple.html"
+         data-sly-call="${simpleTemplate.simple @ container=container}"></sly>
+    <sly data-sly-call="${actionTemplate.action @ action=container2.action, mobile=true}"></sly>
+</sly>

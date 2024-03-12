@@ -1,0 +1,124 @@
+.b-whatWeDoCards {
+  --card-size: 88vw;
+  
+  padding-block: var(--component-block-padding, var(--container-margin));
+  position: relative;
+  background: #521160;
+
+  &__cardContainer {
+    width: 100%;
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 24px;
+    width: 1164px;
+  }
+
+  &__cardItem {
+    gap: 24px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px 180px 0 0;
+  }
+
+  &__controls {
+    position: absolute;
+    transform: translateX(-50%);
+  
+    &.-isHidden {
+      display: none;
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    padding-inline-start: 80px;
+    &__container {
+      padding-inline: 0;
+    }
+  }
+
+  @include respond-to(SMALL) {
+    &__cardContainer {
+      overflow-x: scroll;
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__cards {
+      width: 100%;
+    }
+  }
+
+  @include respond-to(XSMALL) {
+    &__cardContainer {
+      overflow-x: scroll;
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__cards {
+      width: 100%;
+    }
+  }
+
+  @include theme("tonomus") {
+    --component-heading-color: var(--color-tonomus-purple);
+    --component-highlight-color: var(--color-tonomus-purple);
+    --grid-gap: 10px;
+    --card-spacing: 24px;
+
+    .m-button.-primary {
+      --button-background-color-hover: var(--color-tonomus-purple);
+      --button-text-color-hover: var(--color-white);
+    }
+    .m-button .ripple {
+      background: var(--color-tonomus-purple);
+    }
+
+    &__controls {
+      .o-sliderControls {
+        grid-gap: 16px;
+        width: 128px;
+        .m-button.-primary {
+          --button-size: 56px;
+          --button-icon-size: 21px;
+          --button-border-radius: 50%;
+          --button-background-color: var(--color-tonomus-purple);
+          --button-border-color: var(--color-tonomus-purple);
+          --button-text-color: var(--color-white);
+
+          &:disabled {
+            --button-background-color: var(--color-tonomus-purple);
+            --button-background-color-disabled: var(--color-tonomus-purple);
+            --button-border-color-disabled: var(--color-tonomus-purple);
+            --button-text-color-disabled: var(--color-white);
+            .m-button__container {
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

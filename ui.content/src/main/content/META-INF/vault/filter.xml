@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/tonomus/site-config" mode="merge"/>
+    <filter root="/conf/tonomus">
+        <exclude pattern="/conf/tonomus/site-config(/.*)"/>
+        <!-- Do not update cloudconfigs, as they were set up manually -->
+        <exclude pattern="/conf/tonomus/settings/cloudconfigs(/.*)?"/>
+    </filter>
+    <filter root="/content/tonomus" mode="merge"/>
+    <filter root="/content/dam/tonomus" mode="merge"/>
+    <filter root="/content/dam/tonomus/system-resources" mode="merge"/>
+    <filter root="/content/cq:tags/tonomus" mode="merge"/>
+    <filter root="/content/experience-fragments/tonomus" mode="merge"/>
+</workspaceFilter>

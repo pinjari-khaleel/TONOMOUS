@@ -1,0 +1,38 @@
+.m-list {
+  &__items {
+    margin: 0;
+    padding: 0 1.5em;
+  }
+
+  &.-definitions {
+    .m-list__items {
+      padding: 0;
+      list-style-position: inside;
+    }
+  }
+
+  &__item {
+    margin: 0 0 19px;
+
+    &::marker {
+      @include type("body", "small");
+
+      color: var(--component-highlight-color);
+      font-weight: 400;
+    }
+  }
+
+  &__title {
+    @include type("overline", "medium");
+
+    display: inline-block;
+
+    + .m-list__copy {
+      margin: 10px 0 0;
+    }
+  }
+
+  .a-heading + .m-list__description {
+    margin-block-start: 40px;
+  }
+}

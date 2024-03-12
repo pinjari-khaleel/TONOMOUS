@@ -1,0 +1,8 @@
+<template data-sly-template.icon="${@ src='src path of icon',
+                    className='Class name of element to be included'}">
+    <sly data-sly-use.iconModel="${'com.tonomus.core.slingmodels.components.v2.IconModelImpl' @ path=src}">
+        <img class="cmp-icon ${className}" data-icon-type="default" src="${iconModel.original}" />
+        <img class="cmp-icon ${className}" data-icon-type="hover" src="${iconModel.pressed}" />
+        <img class="cmp-icon ${className}" data-icon-type="pressed" src="${iconModel.hover}" />
+    </sly>
+</template>

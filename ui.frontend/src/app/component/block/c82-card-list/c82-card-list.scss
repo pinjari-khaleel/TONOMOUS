@@ -1,0 +1,148 @@
+.b-cardList {
+  padding-block: var(--component-block-padding);
+  position: relative;
+  color: var(--color-tonomus-purple-300);
+  min-height: 100vh;
+
+  .a-tonomusLine {
+    display: none;
+  }
+
+  &__container {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: var(--container-margin);
+
+    @include respond-to(XLARGE) {
+      padding-inline: var(--container-margin);
+    }
+  }
+
+  .m-componentHeader {
+    color: var(--color-tonomus-white-high-emphasis);
+  }
+
+  &__items {
+    @include list-reset();
+
+    display: flex;
+    flex-direction: column;
+    padding-block: var(--container-margin);
+  }
+
+  &__item {
+    --component-heading-color: var(--color-tonomus-purple-300);
+
+    background: var(--color-tonomus-white-high-emphasis);
+    flex-basis: 100%;
+    min-height: 400px;
+    margin-block: 16px;
+
+    @include hover {
+      .m-button__container {
+        background-color: transparent;
+      }
+
+      .a-icon {
+        visibility: hidden;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+
+    .a-heading {
+      padding: 24px 24px 16px;
+    }
+  }
+
+  .a-image {
+    height: 220px;
+
+    .a-image__img {
+      height: 100%;
+    }
+  }
+
+  .s-content {
+    color: var(--color-tonomus-black-medium-emphasis);
+    padding: 0 24px 16px;
+  }
+
+  &__buttonContainer {
+    display: flex;
+    flex-direction: row;
+    margin: auto 0 24px;
+
+    .m-button {
+      width: 100%;
+      pointer-events: none;
+
+      .m-button__container {
+        padding: 0 24px;
+      }
+
+      .a-label {
+        margin-right: auto;
+      }
+
+      @include hover {
+        .m-button__container {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  @include respond-to(MEDIUM) {
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      justify-items: center;
+      gap: 5%;
+      padding: 0;
+      align-items: start;
+    }
+
+    &__item {
+      max-inline-size: 301px;
+      margin: 0;
+      grid-column: 1 / span 4;
+      grid-row: 2 / span 10;
+
+      &:nth-of-type(2) {
+        grid-column: 5 / span 4;
+        grid-row: 4 / span 10;
+      }
+
+      &:nth-of-type(3) {
+        grid-column: 9 / span 4;
+        grid-row: 1 / span 10;
+      }
+    }
+  }
+
+  @include respond-to(XLARGE) {
+    --container-margin: 180px;
+
+    .a-tonomusLine {
+      display: block;
+      margin-inline-start: 40px;
+      margin-block-end: 40px;
+    }
+  }
+
+  @include respond-to(XXXLARGE) {
+    .a-tonomusLine {
+      display: block;
+      margin-inline-start: 80px;
+      margin-block-end: 80px;
+    }
+  }
+}

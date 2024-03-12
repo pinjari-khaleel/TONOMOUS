@@ -1,0 +1,31 @@
+<sly data-sly-template.textField="${ @
+  formTextModel='instance of forms.FormTextModel with properties',
+  blockValidation='blockValidation boolean value',
+  type='Type of text'
+  }"
+     data-sly-use.labelTemplate="/apps/tonomus/components/content/atoms/a07-label.html"
+     data-sly-use.inputTemplate="/apps/tonomus/components/content/atoms/a14-input.html"
+     data-sly-use.textareaTemplate="/apps/tonomus/components/content/atoms/a16-textarea.html"
+     data-sly-use.formErrorTemplate="/apps/tonomus/components/content/atoms/a25-form-error.html"
+     data-sly-set.charactersLabel="${formTextModel.charactersLabel}"
+     data-sly-set.typeVal="${type || formTextModel.type}"
+     data-sly-set.attribute="${blockValidation ? 'block-validation' : ''}">
+
+  <div class="m-textField -${typeVal}" data-component="m30-text-field">
+
+    <label class="m-textField__label">
+      <div class="m-textField__textLabel ${formTextModel.required ? '-isRequired' : ''}">
+        <sly data-sly-call="${labelTemplate.label @ size='small', text=formTextModel.label}"></sly>
+        <span class="m-textField__limit" data-text-field-limit
+              data-sly-test="${formTextModel.maxlength}">
+                ${formTextModel.maxlength} ${charactersLabel}</span>
+      </div>
+      <sly data-sly-test.isTextArea="${typeVal == 'textarea'}"
+           data-sly-call="${textareaTemplate.textarea @ textModel=formTextModel, attribute=attribute}"></sly>
+      <sly data-sly-test="${!isTextArea}"
+           data-sly-call="${inputTemplate.input @ textModel=formTextModel}"></sly>
+      <sly data-sly-call="${formErrorTemplate.formError @ id=formTextModel.id}"></sly>
+    </label>
+  </div>
+
+</sly>

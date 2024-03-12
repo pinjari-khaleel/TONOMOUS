@@ -1,0 +1,17 @@
+/**
+ * The ripple is applied on top of buttons and usually through the `rippleEffect` util.
+ */
+.ripple {
+  @include size(30px);
+
+  background: var(--color-black-50);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+  .theme-black & {
+    background: var(--color-white);
+  }
+}

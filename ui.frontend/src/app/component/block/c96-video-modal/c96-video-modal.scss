@@ -1,0 +1,163 @@
+.b-videoModal {
+  position: relative;
+  padding-top: 40px;
+
+  &__container {
+    @include respond-to(LARGE) {
+      --container-margin: 20px;
+    }
+  }
+
+  &__header {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    max-width: 311px;
+
+    .a-heading {
+      font-family: "Bukra Alt", Arial, sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: -0.64px;
+      text-transform: uppercase;
+
+      strong {
+        font-family: "Bukra", Arial, sans-serif;
+        letter-spacing: 3.44px;
+      }
+      @include respond-to(MEDIUM) {
+        font-size: 72px;
+        letter-spacing: -1.44px;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding-block-start: 20px;
+    @include respond-to(XLARGE) {
+      padding-inline-end: 25px;
+    }
+    @include respond-to(XXLARGE) {
+      padding-block-start: 40px;
+    }
+    @media (min-width: 1600px) {
+      padding-block-start: 100px;
+    }
+  }
+
+  &__mediaContainer {
+    position: relative;
+    @include respond-to(MEDIUM) {
+      margin-bottom: 73px;
+    }
+  }
+
+  &__mediaButton {
+    width: 100%;
+    max-width: 1164px;
+    position: relative;
+
+    .a-image {
+      display: block;
+      position: relative;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0px 0px 54px 0px rgba(89, 16, 104, 0.15);
+
+      &::after {
+        content: "";
+        background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 14.55%,
+          rgba(0, 0, 0, 0.6) 100%,
+          lightgray 50%,
+          #d9d9d9
+        );
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+    }
+    picture {
+      width: 100%;
+      max-width: 1164px;
+      height: auto;
+      display: block;
+      position: relative;
+      @include respond-to(MEDIUM) {
+        height: 504px;
+      }
+    }
+
+    .m-button {
+      position: absolute;
+      right: 24px;
+      bottom: -30px;
+    }
+
+    &[data-video] {
+      cursor: pointer;
+    }
+  }
+
+  &__shadyShape1 {
+    position: absolute;
+    left: -49px;
+    right: auto;
+    top: 0;
+    max-width: 1365px;
+    width: 120%;
+    height: auto;
+
+    @include respond-to(XXLARGE) {
+      left: -80px;
+    }
+
+    @media (min-width: 1600px) {
+      left: -100px;
+    }
+  }
+
+  &__content {
+    .a-heading {
+      color: #fff;
+      font-family: "Bukra Alt", Arial, sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      @include respond-to(MEDIUM) {
+        font-size: 28px;
+        letter-spacing: 2.24px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .s-content {
+      font-family: "Bukra Alt", Arial, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+    }
+  }
+
+  @include respond-to(LARGE) {
+    padding-top: 0;
+  }
+
+  @include respond-to(XLARGE) {
+    &__container {
+      padding-inline: 0;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<sly
+    data-sly-use.paragraphModel="com.tonomus.core.slingmodels.components.v1.contentgrid.ContentGridParagraphItemModel"
+    data-sly-use.contentGridItemTemplate="/apps/tonomus/components/content/organisms/o30-content-grid-item.html"
+    data-sly-call="${contentGridItemTemplate.contentGridItem @ partialBlock=content, partialModel=paragraphModel}"></sly>
+
+<div data-sly-test="${wcmmode.edit && !paragraphModel.content.copy}" class="cq-placeholder"
+     data-emptytext="${component.title @ i18n}"></div>
+
+<template data-sly-template.content="${@ partialModel}">
+  <sly data-sly-use.paragraphTemplate="/apps/tonomus/components/content/molecules/m18-paragraph.html"
+       data-sly-call="${paragraphTemplate.paragraph @ paragraphModel=partialModel.content}"></sly>
+</template>

@@ -1,0 +1,87 @@
+scrollComponent: true
+
+sitemap:
+  - label: 'اكتشف نيوم'
+    items:
+      - label: 'عن نيوم'
+        href: '#'
+      - label: 'فريقنا'
+        href: '#'
+
+  - label: 'المناطق'
+    items:
+      - label: 'تروجينا'
+        href: '#'
+      - label: 'أوكساجون'
+        href: '#'
+      - label: 'ذا لاين'
+        href: '#'
+
+  - label: 'القطاعات'
+    items:
+      - label: 'التصميم والبناء'
+        href: '#'
+      - label: 'التعليم'
+        href: '#'
+      - label: 'الطاقة'
+        href: '#'
+      - label: 'الترفيه والثقافة'
+        href: '#'
+      - label: 'الخدمات المالية'
+        href: '#'
+      - label: 'الغذاء'
+        href: '#'
+      - label: 'الصحة، الرفاهية والتكنولوجيا الحيوية'
+        href: '#'
+      - label: 'التصنيع'
+        href: '#'
+      - label: 'الإعلام'
+        href: '#'
+      - label: 'التنقل'
+        href: '#'
+      - label: 'الرياضة'
+        href: '#'
+      - label: 'التكنولوجيا والرقمية'
+        href: '#'
+      - label: 'السياحة'
+        href: '#'
+      - label: 'الماء'
+        href: '#'
+
+  - label: 'كن جزءًا من نيوم'
+    items:
+      - label: 'استثمار'
+        href: '#'
+      - label: 'بدء نشاط تجاري'
+        href: '#'
+      - label: 'اصبح موردا'
+        href: '#'
+      - label: 'شريك'
+        href: '#'
+      - label: 'الشغل'
+        href: '#'
+
+  - label: 'الأخبار والاجتماعية'
+    items:
+      - label: 'الأخبار'
+        href: '#'
+      - label: 'تصريحات صحفيه'
+        href: '#'
+      - label: 'معرض الصور ومقاطع الفيديو '
+        href: '#'
+social:
+  items: 'import!../../../molecule/m12-social/data/tonomus.yaml'
+
+marginalia:
+  items:
+    - label: 'سياسة الخصوصية'
+      href: 'privacy-policy.html'
+      target: '_blank'
+    - label: 'تعليمات الاستخدام'
+      href: 'terms-of-use.html'
+      target: '_blank'
+    - label: 'سياسة ملفات الارتباط'
+      href: 'cookie-policy.html'
+      target: '_blank'
+
+copyrightNotice: '© 2022 NEOM'

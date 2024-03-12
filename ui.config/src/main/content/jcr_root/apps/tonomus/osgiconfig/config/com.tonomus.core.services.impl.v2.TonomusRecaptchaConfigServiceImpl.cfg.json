@@ -1,0 +1,5 @@
+{
+    "siteVerifyURL":"$[env:TONOMUS_RECAPTCHA_SITE_VERIFY_URL;default=https://www.google.com/recaptcha/api/siteverify]",
+    "secretKey":"$[env:TONOMUS_RECAPTCHA_SECRET_KEY]",
+    "siteKey":"$[env:TONOMUS_RECAPTCHA_SITE_KEY]"
+}
